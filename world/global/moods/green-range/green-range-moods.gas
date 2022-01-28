@@ -1,0 +1,33 @@
+[mood_setting*]
+{
+	mood_name = green_range_ehb_border_start;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xFFC0C0C0;
+	  f fog_density = 1.000000;
+	  f fog_near_dist = 20.000000;
+	  f fog_far_dist = 35.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_lowdetail_far_dist = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_wind_01b;
+	  f standard_intro_delay = 4.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_king_intro;
+		room_type = rt_mountains;
+	}
+	[snow]
+	{
+	  f snow_density = 100.000000;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 8.000000;
+	}
+}
