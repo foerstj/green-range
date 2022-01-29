@@ -2,7 +2,24 @@
 {
 	[text*]
 	{
-		screen_text = "I am the guard captain of this border post";
+		choice = more;
+	  i order = 0;
+		screen_text = "So you're an adventurer who wants to travel the Klars Trail? Yeah for sure, that's what they all say. You messed up back home, that's my guess. Well, all the same to me as long as you leave the Kingdom, not enter it.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "If you want my advice, stay on the Klars Trail. The mountains are vast and wild, and you can easily get lost.
+I hope you packed plenty of provisions, as the journey to Longbourne is long and the mountains are full of trolls. If you require anything you can try your luck with that seedy Lescanzi mooching about outside the gate...
+Good luck!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[guard_office]
+{
+	[text*]
+	{
+		screen_text = "Hello, your passport please? - Thanks.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -10,7 +27,21 @@
 {
 	[text*]
 	{
-		screen_text = "Hello down there";
+		choice = more;
+	  i order = 0;
+		screen_text = "This is as good a day as any to leave the Kingdom for the Green Range. There's nothing much out there, save for Krug and Trolls. Stay on the Klars Trail, or you'll get lost and end up as Troll food. With some luck you'll meet some Rangers out there who'll help you.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "The Rangers are people who live in these mountains. They also maintain the Klars Trail, especially all its bridges.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "The Klars Trail is named after one of the renowned Agallan explorers Fedwyrr and Klars. It starts right here and leads northeast through the mountains all the way to Longbourne.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -19,15 +50,8 @@
 	[text*]
 	{
 		choice = shop;
-		screen_text = "I am the Lescanzi starter shop. Do you want to buy something?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[guard_office]
-{
-	[text*]
-	{
-		screen_text = "Passport please";
+		screen_text = "Yes, hello! You want to travel the Klars Trail? An adventurer, of course! *wink wink*
+You need good gear. Buy a bow from me, is better for you!";
 	  f scroll_rate = 10.000000;
 	}
 }
