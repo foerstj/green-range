@@ -1,6 +1,6 @@
 [mood_setting*]
 {
-	mood_name = green_range_ehb_border_start;
+	mood_name = green-range-ehb-border-start;
   f transition_time = 8.000000;
   b interior = false;
 
@@ -23,11 +23,44 @@
 	}
 	[snow]
 	{
-	  f snow_density = 100.000000;
+	  f snow_density = 150.000000;
 	}
 	[wind]
 	{
 	  f wind_direction = 4.700000;
 	  f wind_velocity = 8.000000;
+	}
+}
+[mood_setting*]
+{
+	mood_name = green-range-mountains-1-tx-ehb-border;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xFF80C080;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_wind_01;
+	  f standard_intro_delay = 4.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_TempleRuins_05;
+		room_type = rt_mountains;
+	}
+	[snow]
+	{
+	  f snow_density = 100.000000;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 4.000000;
 	}
 }
