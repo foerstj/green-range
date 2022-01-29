@@ -1,0 +1,175 @@
+[t:template,n:yadze_base]
+{
+	specializes = base_npc_fb;
+	category_name = "1W_shopkeep";
+	doc = "yadze";
+
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_yadze;
+	}
+	[aspect]
+	{
+		use_range = 1.0;
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_24;
+			1 = b_c_pos_a1_055;
+		}
+	}
+	[common]
+	{
+		screen_name = "Yadze";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+        /* omitted */
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+}
+
+[t:template,n:gr_starter_shop]
+{
+	specializes = yadze_base;
+	category_name = "1W_shopkeep";
+	doc = "Green Range starter shop";
+
+	[aspect]
+	{
+		use_range = 1.0;
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+	}
+	[common]
+	{
+		screen_name = "Starter Shop";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body/0-10;
+					max = 5;
+					min = 5;
+				}
+				[all*]
+				{
+					il_main = #gloves/0-10;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #helm/0-10;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #boots/0-10;
+					max = 3;
+					min = 3;
+				}
+			}
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/0-5;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #melee/6-10;
+					max = 3;
+					min = 3;
+				}
+
+				[all*]
+				{
+					il_main = #ranged/0-5;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #ranged/6-10;
+					max = 3;
+					min = 3;
+				}
+			}
+
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/0-10;
+					max = 3;
+					min = 3;
+				}
+			}
+			[misc]
+			{
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 3;
+					min = 3;
+				}
+                [all*]
+                {
+                    il_main = DSX_backpack_empty;
+                    max = 3;
+                    min = 2;
+                }
+			}
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+		[item_restock]
+		{
+			potion_health_small = 5;
+			potion_mana_small = 5;
+
+			scroll_resurrect = 2;
+            spell_resurrect = 2;
+            spell_revive = 2;
+            spell_healing_hands = 2;
+
+            spell_fireshot = 2;
+            spell_zap = 2;
+			
+			bw_g_d_s_s_c_avg = 1;
+			bw_g_c_s_s_r_avg = 1;
+		}
+	}
+}
