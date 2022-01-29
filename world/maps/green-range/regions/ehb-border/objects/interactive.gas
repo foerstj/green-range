@@ -22,6 +22,94 @@
 	  p position = 0.0425081,-6,0.723967,0xae0223fc;
 	}
 }
+[t:sign_glb_blank,n:0x00100026]
+{
+	[common]
+	{
+		screen_name = "You are leaving the Kingdom of Ehb";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -4.03708,-5.96308,-1.00276,0xae0223fc;
+	}
+}
+[t:lever_cav_stone_01,n:0x00100015]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 0.5;
+	  x off_scid = 0x00100024;
+	  f on_message_delay = 0.5;
+	  x on_scid = 0x00100024;
+	  f reset_time = 6;
+	  f reset_time_2 = 6;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.08234,1.68756,1.34467,0xbe263012;
+		use_point_scids = 0x0010002b,0x0010002a;
+	}
+}
+[t:lever_cav_stone_01,n:0x0010001c]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 0.5;
+	  x off_scid = 0x00100024;
+	  f on_message_delay = 0.5;
+	  x on_scid = 0x00100024;
+	  f reset_time = 6;
+	  f reset_time_2 = 6;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.30281,12.5756,1.15717,0xbe263012;
+		use_point_scids = 0x0010002a,0x00100027,0x00100029;
+	}
+}
+[t:lever_cav_stone_01,n:0x00100016]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 0.5;
+	  x off_scid = 0x00100028;
+	  f on_message_delay = 0.5;
+	  x on_scid = 0x00100028;
+	  f reset_time = 6;
+	  f reset_time_2 = 6;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.11697,1.4724,1.12883,0xd7b9400c;
+		use_point_scids = 0x0010002C,0x0010002F;
+	}
+}
+[t:lever_cav_stone_01,n:0x00100017]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 0.5;
+	  x off_scid = 0x00100028;
+	  f on_message_delay = 0.5;
+	  x on_scid = 0x00100028;
+	  f reset_time = 6;
+	  f reset_time_2 = 6;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.31223,12.5802,1.15854,0xd7b9400c;
+		use_point_scids = 0x0010002C,0x0010002D,0x0010002E;
+	}
+}
 [t:door_ice_gate,n:0x00100001]
 {
 	[aspect]
@@ -103,18 +191,6 @@
 	  p position = -2.85441,-1.40721,-0.619182,0xd9fe6470;
 	}
 }
-[t:sign_grs_town_blank,n:0x0010000f]
-{
-	[common]
-	{
-		screen_name = "Here begins the Klars Trail";
-	}
-	[placement]
-	{
-	  q orientation = 0,-5.96046e-008,0,1;
-	  p position = -3.23166,0,0.90431,0xe8b54d7b;
-	}
-}
 [t:sign_glb_blank,n:0x00100025]
 {
 	[common]
@@ -127,15 +203,15 @@
 	  p position = -1.67544,-0.521461,3.51669,0xc0c27ffe;
 	}
 }
-[t:sign_glb_blank,n:0x00100026]
+[t:sign_grs_town_blank,n:0x0010000f]
 {
 	[common]
 	{
-		screen_name = "You are leaving the Kingdom of Ehb";
+		screen_name = "Here begins the Klars Trail";
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,-1.49012e-007;
-	  p position = -4.03708,-5.96308,-1.00276,0xae0223fc;
+	  q orientation = 0,-5.96046e-008,0,1;
+	  p position = -3.23166,0,0.90431,0xe8b54d7b;
 	}
 }
