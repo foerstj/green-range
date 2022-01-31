@@ -1,12 +1,16 @@
-[t:bandit_ranged,n:0x01f00003]
+[t:gr_pm_ranger,n:0x01f00003]
 {
-	[actor]
+	[aspect]
 	{
-		alignment = aa_good;
+	  f max_life = 78.4;
+	  f max_mana = 42;
 	}
-	[mind]
+	[conversation]
 	{
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		[conversations]
+		{
+			* = pm;
+		}
 	}
 	[placement]
 	{
