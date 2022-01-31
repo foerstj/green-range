@@ -1,5 +1,14 @@
 [stitch_helper_data]
 {
 	source_region_guid = 0x0000001F;
-	source_region_name = mountains-x1z19;
+	source_region_name = mountains-x1z19-bridge;
+	[t:stitch_editor,n:mountains-x1z19]
+	{
+		dest_region = mountains-x1z19;
+		[node_ids]
+		{
+			0x000000fa = 0xF47F37D4,1;
+			0x000000fb = 0x36736811,1;
+		}
+	}
 }
