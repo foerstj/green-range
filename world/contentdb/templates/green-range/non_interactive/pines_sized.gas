@@ -1,0 +1,547 @@
+[t:template,n:tree_glb_pine_sequoia_9m]
+{
+	category_name = "trees";
+	doc = "seq_pine_9m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.2;
+		lodfi_upper = 0.5;
+		model = m_i_glb_tree-01;
+		scale_base = 0.75;
+		[textures]
+		{
+			0 = b_i_grs_tree-pine-sequoia;
+		}
+	}
+}
+[t:template,n:tree_glb_pine_sequoia_12m]
+{
+	category_name = "trees";
+	doc = "seq_pine_12m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.5;
+		model = m_i_glb_tree-01;
+		[textures]
+		{
+			0 = b_i_grs_tree-pine-sequoia;
+		}
+	}
+}
+[t:template,n:tree_glb_pine_sequoia_4m]
+{
+	category_name = "trees";
+	doc = "seq_pine_4m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.4;
+		lodfi_upper = 0.6;
+		model = m_i_glb_tree-02;
+		scale_base = 0.66;
+		[textures]
+		{
+			0 = b_i_grs_tree-pine-sequoia;
+		}
+	}
+}
+[t:template,n:tree_glb_pine_sequoia_6m]
+{
+	category_name = "trees";
+	doc = "seq_pine_6m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.3;
+		lodfi_upper = 0.4;
+		model = m_i_glb_tree-02;
+		[textures]
+		{
+			0 = b_i_grs_tree-pine-sequoia;
+		}
+	}
+}
+[t:template,n:tree_glb_sway_12m]
+{
+	category_name = "trees";
+	doc = "grs_pine_12m_sway";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.75;
+		model = m_i_glb_tree-03;
+	}
+	[body]
+	{
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = tree-03-sway;
+				}
+			}
+		}
+	}
+}
+[t:template,n:tree_glb_sway_6m]
+{
+	category_name = "trees";
+	doc = "grs_pine_6m_sway";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.75;
+		model = m_i_glb_tree-04;
+	}
+	[body]
+	{
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = tree-04-sway;
+				}
+			}
+		}
+	}
+}
+[t:template,n:tree_glb_sway_9m]
+{
+	category_name = "trees";
+	doc = "grs_pine_9m_sway";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.75;
+		model = m_i_glb_tree-03;
+		scale_base = 0.75;
+	}
+	[body]
+	{
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = tree-03-sway;
+				}
+			}
+		}
+	}
+}
+[t:template,n:tree_glb_sway_4m]
+{
+	category_name = "trees";
+	doc = "grs_pine_4m_sway";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.85;
+		model = m_i_glb_tree-04;
+		scale_base = 0.66;
+	}
+	[body]
+	{
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = tree-04-sway;
+				}
+			}
+		}
+	}
+}
+[t:template,n:tree_grs_pine_9m]
+{
+	category_name = "trees";
+	doc = "grs_pine_9m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-01;
+		scale_base = 0.75;
+	}
+}
+[t:template,n:tree_grs_pine_12m]
+{
+	category_name = "trees";
+	doc = "grs_pine_12m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.6;
+		model = m_i_glb_tree-01;
+	}
+}
+[t:template,n:tree_grs_pine_4m]
+{
+	category_name = "trees";
+	doc = "grs_pine_4m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-02;
+		scale_base = 0.66;
+	}
+}
+[t:template,n:tree_grs_pine_6m]
+{
+	category_name = "trees";
+	doc = "grs_pine_6m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-02;
+	}
+}
+[t:template,n:tree_grs_pine_9m_brown]
+{
+	category_name = "trees";
+	doc = "tree_grs_pine_9m_brown";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-03;
+		scale_base = 0.75;
+		[textures]
+		{
+			0 = b_i_grs_tree-pine-03;
+		}
+	}
+}
+[t:template,n:tree_grs_pine_12m_brown]
+{
+	category_name = "trees";
+	doc = "tree_grs_pine_12m_brown";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-03;
+		[textures]
+		{
+			0 = b_i_grs_tree-pine-03;
+		}
+	}
+}
+[t:template,n:tree_grs_pine_trunk_sm]
+{
+	category_name = "trees";
+	doc = "grs_pine_trunk_sm";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.65;
+		model = m_i_glb_tree-pine-giant;
+	}
+}
+[t:template,n:tree_grs_pine_trunk_med]
+{
+	category_name = "trees";
+	doc = "grs_pine_trunk_med";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.65;
+		model = m_i_glb_tree-pine-giant;
+		scale_base = 1.5;
+	}
+}
+[t:template,n:tree_grs_pine_trunk_lg]
+{
+	category_name = "trees";
+	doc = "grs_pine_trunk_lg";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.65;
+		model = m_i_glb_tree-pine-giant;
+		scale_base = 2;
+	}
+}
+[t:template,n:tree_ice_pine_9m]
+{
+	category_name = "trees";
+	doc = "ice_pine_9m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-01;
+		scale_base = 0.75;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine;
+		}
+	}
+}
+[t:template,n:tree_ice_pine_12m]
+{
+	category_name = "trees";
+	doc = "ice_pine_12m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-01;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine;
+		}
+	}
+}
+[t:template,n:tree_ice_pine_4m]
+{
+	category_name = "trees";
+	doc = "ice_pine_4m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-02;
+		scale_base = 0.66;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine;
+		}
+	}
+}
+[t:template,n:tree_ice_pine_6m]
+{
+	category_name = "trees";
+	doc = "ice_pine_6m";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-02;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine;
+		}
+	}
+}
+[t:template,n:tree_ice_pine_trunk_sm]
+{
+	category_name = "trees";
+	doc = "ice_pine_trunk_sm";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.6;
+		model = m_i_glb_tree-pine-giant;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine-giant;
+		}
+	}
+}
+[t:template,n:tree_ice_pine_trunk_med]
+{
+	category_name = "trees";
+	doc = "ice_pine_trunk_med";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.6;
+		model = m_i_glb_tree-pine-giant;
+		scale_base = 2;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine-giant;
+		}
+	}
+}
+[t:template,n:tree_ice_pine_trunk_lg]
+{
+	category_name = "trees";
+	doc = "ice_pine_trunk_lg";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.6;
+		model = m_i_glb_tree-pine-giant;
+		scale_base = 3;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine-giant;
+		}
+	}
+}
+[t:template,n:tree_ice_sway_12m]
+{
+	category_name = "trees";
+	doc = "ice_pine_12m_sway";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-03;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine;
+		}
+	}
+	[body]
+	{
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = tree-03-sway;
+				}
+			}
+		}
+	}
+}
+[t:template,n:tree_ice_sway_6m]
+{
+	category_name = "trees";
+	doc = "ice_pine_6m_sway";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-04;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine;
+		}
+	}
+	[body]
+	{
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = tree-04-sway;
+				}
+			}
+		}
+	}
+}
+[t:template,n:tree_ice_sway_9m]
+{
+	category_name = "trees";
+	doc = "ice_pine_9m_sway";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-03;
+		scale_base = 0.75;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine;
+		}
+	}
+	[body]
+	{
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = tree-03-sway;
+				}
+			}
+		}
+	}
+}
+[t:template,n:tree_ice_sway_4m]
+{
+	category_name = "trees";
+	doc = "ice_pine_4m_sway";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.8;
+		model = m_i_glb_tree-04;
+		scale_base = 0.66;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine;
+		}
+	}
+	[body]
+	{
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = tree-04-sway;
+				}
+			}
+		}
+	}
+}
