@@ -1,4 +1,5 @@
-[t:template,n:gr_troll_mini]
+[t:template,n:gr_troll_mini] { specializes = gr_troll_mini_base; }
+[t:template,n:gr_troll_mini_base]
 {
 	specializes = troll_base;
 	category_name = "1W_evil_d";
@@ -38,12 +39,7 @@
 		{
 			[oneof*]
 			{
-            	es_weapon_hand = cb_g_d_r_1h_low;
-			}
-			[oneof*]
-			{
-				chance = 0.2;
-				il_main = #*/4-7;
+            	es_weapon_hand = cb_g_d_r_1h_low;  // twig
 			}
 		}
 	}

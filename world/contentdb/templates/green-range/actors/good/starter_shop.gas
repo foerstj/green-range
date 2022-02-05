@@ -1,4 +1,4 @@
-[t:template,n:yadze_base]
+[t:template,n:yadze_base]  // ~= yadze
 {
 	specializes = base_npc_fb;
 	category_name = "1W_shopkeep";
@@ -39,7 +39,8 @@
 	}
 }
 
-[t:template,n:gr_starter_shop]
+[t:template,n:gr_starter_shop] { specializes = gr_starter_shop_base; }
+[t:template,n:gr_starter_shop_base]
 {
 	specializes = yadze_base;
 	category_name = "1W_shopkeep";
