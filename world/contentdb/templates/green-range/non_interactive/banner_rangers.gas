@@ -1,0 +1,39 @@
+[t:template,n:banner_glb_legion_02_base]  // = banner_glb_legion_02
+{
+	category_name = "outdoor";
+	doc = "banner_legion_tattered_sway";
+	specializes = non_interactive_blocking;
+	[aspect] 
+	{ 
+		model = m_i_glb_legion-banner-02; 
+		textures:0 = b_i_glb_legion-banner-02;
+	}
+	[body]
+	{
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = legion-banner-02-flap;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:gr_banner_rangers] { specializes = gr_banner_rangers_base; }
+[t:template,n:gr_banner_rangers_base]
+{
+	specializes = banner_glb_legion_02_base;
+	doc = "rangers banner";
+
+	[aspect] 
+	{
+		textures:0 = b_i_glb_gr_ranger_banner;
+	}
+}

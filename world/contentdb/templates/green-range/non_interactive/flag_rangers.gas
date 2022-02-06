@@ -1,0 +1,23 @@
+[t:template,n:flag_glb_legion_base]  // = flag_glb_legion
+{
+	category_name = "outdoor";
+	doc = "legion_flag";
+	specializes = non_interactive_blocking;
+	[aspect] 
+	{ 
+		model=m_i_glb_legion-flag; 
+		[textures]	{0=b_i_glb_legion-flag;}
+	}
+}
+
+[t:template,n:gr_flag_rangers] { specializes = gr_flag_rangers_base; }
+[t:template,n:gr_flag_rangers_base]
+{
+	specializes = flag_glb_legion_base;
+	doc = "rangers flag";
+
+	[aspect] 
+	{
+		textures:0 = b_i_glb_gr_ranger_flag;
+	}
+}
