@@ -1,0 +1,18 @@
+/*
+# seed factor (seeds/m²), perlin offset, perlin spread, templates, size (from, to, additional perlin factor)
+
+# krugs
+0.01,    0,     -2, krug_scavenger
+0.01,    0,     -2, krug_scout
+0.01,   -0.5,   -2, krug_grouse
+0.002,  -1,     -2, krug_grunt
+*/
+
+[perlin_plant_profile]
+{
+    // krugs
+    [*] { seed = 0.01, 0, -2; templates = krug_scavenger; }
+    [*] { seed = 0.01, 0, -2; templates = krug_scout; }
+    [*] { seed = 0.01, -0.5, -2; templates = krug_grouse; }
+    [*] { seed = 0.002, -1, -2; templates = krug_grunt; }
+}

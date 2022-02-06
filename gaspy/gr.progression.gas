@@ -1,0 +1,82 @@
+[perlin_plant_progression]
+{
+    direction = nw2se;
+    perlin = prog-tx;
+    perlin_curve_factor = 60;
+    tx_factor = 10;
+    [steps]
+    {
+        [0.4]
+        {
+            plants:profile = gr-d;
+        }
+        [0.6]
+        {
+            [perlin_plant_progression]
+            {
+                direction = sw2ne;
+                perlin = prog-tx;
+                perlin_curve_factor = 60;
+                tx_factor = 10;
+                [steps]
+                {
+                    [0.15]
+                    {
+                        [plants] { perlin = var-main; tx = blur; a:profile = gr-1a; b:profile = gr-1b; }
+                        [enemies]
+                        {
+                            perlin = var-main;
+                            tx = gap;
+                            [a]
+                            {
+                                perlin = var-sub-a;
+                                tx = gap;
+                                [a] { perlin = var-sub-b; tx = gap; a:profile = gr-1a-enemies-main; }
+                                [b] { perlin = var-sub-b; tx = gap; a:profile = gr-1a-enemies-a; b:profile = gr-1a-enemies-b; }
+                            }
+                            [b]
+                            {
+                                perlin = var-sub-a;
+                                tx = gap;
+                                [a] { perlin = var-sub-b; tx = gap; a:profile = gr-1b-enemies-a; b:profile = gr-1b-enemies-b; }
+                                [b] { perlin = var-sub-b; tx = gap; a:profile = gr-1b-enemies-main; }
+                            }
+                        }
+                    }
+                    [0.30]
+                    {
+                        [plants] { perlin = var-main; tx = blur; a:profile = gr-2a; b:profile = gr-2b; }
+                        [enemies]
+                        {
+                            perlin = var-main;
+                            tx = gap;
+                            [a]
+                            {
+                                tx = gap;
+                                perlin = var-sub-a;
+                                [a] { perlin = var-sub-b; tx = gap; a:profile = gr-2a-enemies-main; }
+                                [b] { perlin = var-sub-b; tx = gap; a:profile = gr-2a-enemies-a; b:profile = gr-2a-enemies-b; }
+                            }
+                            [b]
+                            {
+                                tx = gap;
+                                perlin = var-sub-a;
+                                [a] { perlin = var-sub-b; tx = gap; a:profile = gr-2b-enemies-a; b:profile = gr-2b-enemies-b; }
+                                [b] { perlin = var-sub-b; tx = gap; a:profile = gr-2b-enemies-main; }
+                            }
+                        }
+                    }
+                    [0.45] { plants:profile = green; }
+                    [0.60] { plants:profile = flowers; }
+                    [0.75] { plants:profile = green; }
+                    [0.90] { plants:profile = flowers; }
+                    [1.00] { plants:profile = green; }
+                }
+            }
+        }
+        [1.0]
+        {
+            plants:profile = gr-w;
+        }
+    }
+}
