@@ -1,0 +1,116 @@
+[t:template,n:bo_sh_sc_r_g_c_avg_rubber_dsx_base]  // = bo_sh_sc_r_g_c_avg_rubber_dsx
+{
+	doc = "DSX Fiber Shoes";
+	specializes = dsx_base_boot;
+	[common]
+    {
+        screen_name = "Fiber Shoes";
+        pcontent_special_type = normal;
+    }
+	[defend]
+    {
+        armor_style = 502;
+        armor_type = type1;
+      f defense = 4;
+    }
+	[gui]
+    {
+        equip_requirements = dexterity:12;
+        inventory_icon = b_gui_ig_i_a_boot_502;
+        inventory_height = 2;
+        inventory_width = 1;
+    }
+	[pcontent]
+    {
+        [base]
+        {
+          f modifier_max = 2;
+          f modifier_min = 0;
+        }
+    }
+}
+
+[t:template,n:gr_boots_rangers]
+{
+    specializes = bo_sh_sc_r_g_c_avg_rubber_dsx_base;
+    
+    [common]
+    {
+        screen_name = "Ranger Shoes";
+    }
+}
+
+
+[t:template,n:bw_g_o_c_s_4_fun_base]  // = bw_g_o_c_s_4_fun
+{
+	category_name = "weapon";
+	doc = "Weathered Bow";
+	specializes = base_bow;
+	[aspect]
+	{
+		model = m_w_bow_023;
+	}
+	[attack]
+	{
+		attack_range = 10;
+		damage_max = 14;
+		damage_min = 3;
+		reload_delay = 0;
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Shardan Bow";
+	}
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_bow_003;
+		inventory_height = 3;
+		inventory_icon = b_gui_ig_i_w_bow_010;
+		inventory_width = 1;
+	}
+}
+
+[t:template,n:gr_bow_rangers]
+{
+    specializes = bw_g_o_c_s_4_fun_base;
+    
+    [common]
+    {
+        screen_name = "Ranger Bow";
+    }
+}
+
+
+[t:template,n:bd_le_f_g_c_fun_base]  // = bd_le_f_g_c_fun
+{
+	doc = "Crude Leather";
+	specializes = base_body_armor_leather;
+	[common]
+	{
+	  b allow_modifiers = false;
+		screen_name = "Crude Leather";
+	}
+	[defend]
+	{
+		armor_style = 077;
+		armor_type = a1;
+	  f defense = 6.000000;
+	}
+	[gui]
+	{
+		inventory_height = 2;
+		inventory_icon = b_gui_ig_i_a_pos_a1_077;
+		inventory_width = 2;
+	}
+}
+
+[t:template,n:gr_leather_rangers]
+{
+    specializes = bd_le_f_g_c_fun_base;
+    
+    [common]
+    {
+        screen_name = "Ranger Leather";
+    }
+}
