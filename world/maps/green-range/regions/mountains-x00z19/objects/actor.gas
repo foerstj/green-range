@@ -230,14 +230,6 @@
 	  p position = 1.99026,0,-0.725227,0x47af0a6f;
 	}
 }
-[t:bear,n:0x022016ed]
-{
-	[placement]
-	{
-	  q orientation = 0,0.0386365,0,-0.999253;
-	  p position = 0.219794,0,-1.61434,0x944699bb;
-	}
-}
 [t:skrubb_farm,n:0x022016c3]
 {
 	[placement]
@@ -368,6 +360,14 @@
 }
 [t:krug_scout,n:0x022016be]
 {
+	[inventory]
+	{
+		[other]
+		{
+			il_main = potion_mana_small;
+			il_main = potion_mana_small;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.317943,0,0.94811;
@@ -534,14 +534,6 @@
 	  p position = 0.134174,0,-1.07424,0x390f7cbf;
 	}
 }
-[t:bear,n:0x022016ef]
-{
-	[placement]
-	{
-	  q orientation = 0,0.879444,0,-0.476003;
-	  p position = -1.91914,0,0.426855,0x390f7cbf;
-	}
-}
 [t:phrak_piercer,n:0x022016da]
 {
 	[placement]
@@ -672,6 +664,13 @@
 }
 [t:krug_scavenger,n:0x0220169d]
 {
+	[inventory]
+	{
+		[other]
+		{
+			il_main = potion_health_small;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.93847,0,-0.345361;
@@ -680,6 +679,13 @@
 }
 [t:krug_scout,n:0x022016c4]
 {
+	[inventory]
+	{
+		[other]
+		{
+			il_main = potion_health_small;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.99785,0,-0.0655456;
