@@ -139,13 +139,19 @@
         selected_active_location = il_active_ranged_weapon;
         [equipment]
         {
-            es_chest = gr_leather_rangers;
+            es_chest = gr_robe_rangers;
             es_feet = gr_boots_rangers;
             es_shield_hand = gr_bow_rangers;
+            es_weapon_hand = dg_g_d_1h_fun;  // knife
         }
         [other]
         {
+            il_active_primary_spell = spell_zap;
+            il_active_secondary_spell = spell_healing_hands;
             il_main = dg_g_d_1h_fun;  // knife
+            il_main = potion_health_small;
+            il_main = potion_health_small;
+            il_main = potion_mana_small;
         }
     }
     [mind]

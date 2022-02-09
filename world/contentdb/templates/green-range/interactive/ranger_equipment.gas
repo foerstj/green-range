@@ -36,81 +36,173 @@
     
     [common]
     {
+		is_pcontent_allowed = false;
         screen_name = "Ranger Shoes";
     }
 }
 
 
-[t:template,n:bw_g_o_c_s_4_fun_base]  // = bw_g_o_c_s_4_fun
+[t:template,n:bw_g_c_s_s_r_avg_base]  // = bw_g_c_s_s_r_avg
 {
 	category_name = "weapon";
-	doc = "Weathered Bow";
+	doc = "Short Recurve";
 	specializes = base_bow;
 	[aspect]
 	{
-		model = m_w_bow_023;
+		model = m_w_bow_013;
 	}
 	[attack]
 	{
 		attack_range = 10;
-		damage_max = 14;
-		damage_min = 3;
+	  f damage_max = 16.000000;
+	  f damage_min = 10.000000;
 		reload_delay = 0;
 	}
 	[common]
 	{
-		allow_modifiers = false;
-		screen_name = "Shardan Bow";
+		screen_name = "Short Recurve";
 	}
 	[gui]
 	{
-		active_icon = b_gui_ig_i_ic_bow_003;
 		inventory_height = 3;
-		inventory_icon = b_gui_ig_i_w_bow_010;
+		inventory_icon = b_gui_ig_i_w_bow_062;
 		inventory_width = 1;
 	}
+	[pcontent]
+	{
+		[base]
+		{
+		  f modifier_max = 1.000000;
+		  f modifier_min = 0.000000;
+		}
+        /* omitted */
+    }
 }
 
 [t:template,n:gr_bow_rangers]
 {
-    specializes = bw_g_o_c_s_4_fun_base;
+    specializes = bw_g_c_s_s_r_avg_base;
     
     [common]
     {
+		is_pcontent_allowed = false;
         screen_name = "Ranger Bow";
     }
+
+    // from bw_g_c_c_l_4_avg "Long Backed Bow"
+	[aspect]
+	{
+		model = m_w_bow_028;
+	}
+    [attack]
+    {
+		attack_range = 13;
+    }
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_bow_002;
+		inventory_height = 4;
+		inventory_icon = b_gui_ig_i_w_bow_080;
+		inventory_width = 1;
+	}
 }
 
 
-[t:template,n:bd_le_f_g_c_fun_base]  // = bd_le_f_g_c_fun
+[t:template,n:bd_bl_m_g_c_avg_base]  // = bd_bl_m_g_c_avg
 {
-	doc = "Crude Leather";
+	doc = "Waxed Leather";
 	specializes = base_body_armor_leather;
 	[common]
 	{
 	  b allow_modifiers = false;
-		screen_name = "Crude Leather";
+		screen_name = "Waxed Leather";
 	}
 	[defend]
 	{
-		armor_style = 077;
-		armor_type = a1;
-	  f defense = 6.000000;
+		armor_style = 024;
+		armor_type = a2;
+	  f defense = 33.000000;
 	}
 	[gui]
 	{
 		inventory_height = 2;
-		inventory_icon = b_gui_ig_i_a_pos_a1_077;
+		inventory_icon = b_gui_ig_i_a_pos_a2_024;
 		inventory_width = 2;
+	}
+	[pcontent]
+	{
+		[base]
+		{
+		  f modifier_max = 0.000000;
+		  f modifier_min = 0.000000;
+		}
+        /* omitted */
 	}
 }
 
 [t:template,n:gr_leather_rangers]
 {
-    specializes = bd_le_f_g_c_fun_base;
+    specializes = bd_bl_m_g_c_avg_base;
     
     [common]
     {
+		is_pcontent_allowed = false;
         screen_name = "Ranger Leather";
+    }
+	[defend]
+	{
+		armor_style = 024_ranger;
+	}
+}
+
+
+[t:template,n:bd_ro_m_d_c_077_base]  // = bd_ro_m_d_c_077
+{
+	doc = "Robe";
+	specializes = base_body_armor_cloth;
+	[common]
+	{
+		screen_name = "Robe";
+	}
+	[defend]
+	{
+		armor_style = 026;
+		armor_type = a7;
+	  f defense = 78.000000;
+	}
+	[gui]
+	{
+		equip_requirements = intelligence:53;
+		inventory_height = 2;
+		inventory_icon = b_gui_ig_i_a_pos_a7_026;
+		inventory_width = 2;
+	}
+	[pcontent]
+	{
+		[base]
+		{
+		  f modifier_max = 101.000000;
+		  f modifier_min = 48.000000;
+		}
+	}
+}
+
+[t:template,n:gr_robe_rangers]
+{
+    specializes = bd_ro_m_d_c_077_base;
+    
+    [common]
+    {
+		is_pcontent_allowed = false;
+        screen_name = "Ranger Robe";
+    }
+	[defend]
+	{
+		armor_style = 026_ranger;
+	  f defense = 33.000000;  // same as ranger leather
+	}
+    [gui]
+    {
+        equip_requirements = dexterity:13;  // reset to sth the PM can wear
     }
 }
