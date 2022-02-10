@@ -1,0 +1,98 @@
+// Progression step 1
+[t:template,n:barrel_glb_path2crypts_base]  // = barrel_glb_path2crypts
+{
+	category_name = "path2crypts";
+	doc = "1W_barrel_glb_path2crypts";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+	}
+	[attack]
+	{
+		damage_max = 9;
+		damage_min = 5;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.3;
+					max = 8;
+					min = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_barrel;
+	}
+}
+[t:template,n:gr_ctn_barrel_gr_ps1]
+{
+    specializes = barrel_glb_path2crypts_base;
+	category_name = "container";
+}
+
+[t:template,n:crate_glb_path2crypts_base]  // = crate_glb_path2crypts
+{
+	category_name = "path2crypts";
+	doc = "1W_crate_glb_path2crypts";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_crate;
+	}
+	[attack]
+	{
+		damage_max = 10;
+		damage_min = 6;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.1;
+					max = 12;
+					min = 8;
+					min_pile = 1;
+					piles = 2 - 3;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/2-7;
+					il_main = #armor/2-7;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_crate;
+	}
+}
+[t:template,n:gr_ctn_crate_gr_ps1]
+{
+    specializes = crate_glb_path2crypts_base;
+	category_name = "container";
+}
