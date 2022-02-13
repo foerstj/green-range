@@ -1,0 +1,70 @@
+[t:template,n:body_glb_mucosa_01_base]  // = body_glb_mucosa_01
+{
+	category_name = "dead";
+	doc = "body_mucosa_grey";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1;
+		model = m_i_glb_dead_mucosa-01;
+		[textures]
+		{
+			0 = b_c_edm_mu;
+		}
+	}
+}
+[t:template,n:body_glb_beta_mucosa]
+{
+    specializes = body_glb_mucosa_01_base;
+
+    aspect:textures:0 = b_c_emd_mu-beta-01;
+}
+
+[t:template,n:body_glb_mucosa_02_base]  // = body_glb_mucosa_02
+{
+	category_name = "dead";
+	doc = "body_mucosa_grn";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1;
+		model = m_i_glb_dead_mucosa-01;
+		scale_base = 0.8;
+		[textures]
+		{
+			0 = b_c_edm_mu-02;
+		}
+	}
+}
+[t:template,n:body_glb_beta_mucosa_small]
+{
+    specializes = body_glb_mucosa_02_base;
+
+    aspect:textures:0 = b_c_emd_mu-beta-02;
+}
+
+[t:template,n:body_glb_mucosa_03_base]  // = body_glb_mucosa_03
+{
+	category_name = "dead";
+	doc = "body_mucosa_red";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1;
+		model = m_i_glb_dead_mucosa-01;
+		scale_base = 1.2;
+		[textures]
+		{
+			0 = b_c_edm_mu-03;
+		}
+	}
+}
+[t:template,n:body_glb_beta_mucosa_large]
+{
+    specializes = body_glb_mucosa_03_base;
+
+    aspect:textures:0 = b_c_emd_mu-beta-03;
+}

@@ -4,6 +4,24 @@
 	specializes = mucosa_base;
 
     aspect:textures:0 = b_c_edm_mu-beta-01;
+	[generator_in_object]
+	{
+		spawn_chance = 0.5;
+		child_template_name = body_glb_beta_mucosa;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_beta_mucosa_01 = 1;
+			frag_glb_beta_mucosa_02 = 1;
+			frag_glb_beta_mucosa_03 = 2;
+			frag_glb_beta_mucosa_04 = 3;
+			frag_glb_beta_mucosa_05 = 1;
+			frag_glb_beta_mucosa_06 = 1;
+			frag_glb_beta_mucosa_07 = 3;
+		}
+	}
 }
 
 
@@ -136,6 +154,24 @@
     specializes = mucosa_small_base;
 
     aspect:textures:0 = b_c_edm_mu-beta-02;
+	[generator_in_object]
+	{
+		spawn_chance = 0.5;
+		child_template_name = body_glb_beta_mucosa_small;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_beta_mucosa_small_01 = 1;
+			frag_glb_beta_mucosa_small_02 = 1;
+			frag_glb_beta_mucosa_small_03 = 2;
+			frag_glb_beta_mucosa_small_04 = 3;
+			frag_glb_beta_mucosa_small_05 = 1;
+			frag_glb_beta_mucosa_small_06 = 1;
+			frag_glb_beta_mucosa_small_07 = 3;
+		}
+	}
 }
 
 
@@ -255,4 +291,22 @@
     specializes = mucosa_large_base;
 
     aspect:textures:0 = b_c_edm_mu-beta-03;
+	[generator_in_object]
+	{
+		spawn_chance = 0.5;
+		child_template_name = body_glb_beta_mucosa_large;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_beta_mucosa_large_01 = 1;
+			frag_glb_beta_mucosa_large_02 = 1;
+			frag_glb_beta_mucosa_large_03 = 2;
+			frag_glb_beta_mucosa_large_04 = 3;
+			frag_glb_beta_mucosa_large_05 = 1;
+			frag_glb_beta_mucosa_large_06 = 1;
+			frag_glb_beta_mucosa_large_07 = 3;
+		}
+	}
 }
