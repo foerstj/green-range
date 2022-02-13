@@ -126,7 +126,6 @@
 	  f wind_velocity = 1.000000;
 	}
 }
-
 [mood_setting*]
 {
 	mood_name = green-range-mountains-1-2;
@@ -154,5 +153,29 @@
 	{
 	  f wind_direction = 4.700000;
 	  f wind_velocity = 1.000000;
+	}
+}
+[mood_setting*]
+{
+	mood_name = green-range-mountains-1-cave;
+  f transition_time = 1.000000;
+  b interior = true;
+
+	[fog]
+	{
+	  x fog_color = 0xff000000;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_crypt;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_drums_03;
+		room_type = rt_mountains;
 	}
 }
