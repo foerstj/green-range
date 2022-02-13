@@ -19,4 +19,4 @@ call "%doc_dsloa%\Bits\build.bat"
 "%ds%\DSLOA.exe" nointro=true map=%map%
 
 :: Cleanup resources so as not to confuse Siege Editor
-del "%ds%\DSLOA\%map_cs%.dsres"
+call "%doc_dsloa%\Bits\cleanup.bat"
