@@ -68,18 +68,17 @@
                         }
                         node_set = jng01;
                     }
-                    [0.45] { plants:profile = green; }
-                    [0.55] { plants:profile = flowers; }
-                    [0.70] { plants:profile = green; }
-                    [0.85] { plants:profile = flowers; }
-                    [1.00] { plants:profile = green; }
+                    [0.50] { node_set = for01; plants:profile = flowers; }
+                    [0.70] { node_set = swp;   plants:profile = green; }
+                    [0.85] { node_set = jng01; plants:profile = flowers; }
+                    [1.00] { node_set = grs01; plants:profile = green; }
                 }
             }
         }
         [1.0]
         {
             plants:profile = gr-w;
-            node_set = jng01;
+            node_set = grs01;
         }
     }
 }
