@@ -96,3 +96,80 @@
     specializes = crate_glb_path2crypts_base;
 	category_name = "container";
 }
+
+[t:template,n:chest_csl_02_fh_r3_base]  // = chest_csl_02_fh_r3
+{
+	category_name = "fh_r3";
+	doc = "1W_chest_csl_02_fh_r3";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-02;
+	}
+	[attack]
+	{
+		damage_max = 19;
+		damage_min = 13;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_close]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-02-close;
+				}
+			}
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-02-open;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/14-16;
+					il_main = #body/32-40;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/16-19;
+					il_main = #body/-rare(1)/35-46;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:gr_ctn_chest_gr_ps1]
+{
+    specializes = chest_csl_02_fh_r3_base;
+	category_name = "container";
+}
