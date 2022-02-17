@@ -1,4 +1,4 @@
-[t:template,n:adwana_base]  // ~= adwana
+[t:template,n:adwana_base]  // = adwana
 {
 	category_name = "1W_shopkeep";
 	doc = "adwana";
@@ -99,6 +99,159 @@
         {
             es_chest = gr_robe_rangers;
         }
+
+        // add store pcontent from jonn (also stonebridge)
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body,ro/4-44;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #body/4-5;
+					max = 7;
+					min = 7;
+				}
+				[all*]
+				{
+					il_main = #body/6-29;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #body/30-44;
+					max = 5;
+					min = 5;
+				}
+
+
+				[all*]
+				{
+					il_main = #gloves/1-5;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #gloves/6-29;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #gloves/30-44;
+					max = 6;
+					min = 6;
+				}
+
+
+				[all*]
+				{
+					il_main = #helm/1-5;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #helm/6-29;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #helm/30-44;
+					max = 6;
+					min = 6;
+				}
+
+				[all*]
+				{
+					il_main = #boots/1-5;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #boots/6-29;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #boots/30-44;
+					max = 6;
+					min = 6;
+				}
+			}
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/1-5;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #shield/6-29;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #shield/30-44;
+					max = 6;
+					min = 6;
+				}
+			}
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/3-5;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #melee/6-16;
+					max = 14;
+					min = 14;
+				}
+				[all*]
+				{
+					il_main = #melee/17-22;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #ranged/3-5;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #ranged/6-16;
+					max = 14;
+					min = 14;
+				}
+				[all*]
+				{
+					il_main = #ranged/17-22;
+					max = 6;
+					min = 6;
+				}
+			}
+		}
     }
     [mind]
     {
