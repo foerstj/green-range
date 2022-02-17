@@ -173,3 +173,58 @@
     specializes = chest_csl_02_fh_r3_base;
 	category_name = "container";
 }
+
+[t:template,n:locker_glb_open_01_hc_r1_base]  // = locker_glb_open_01_hc_r1
+{
+	category_name = "hc_r1";
+	doc = "1W_locker_open hc_r1";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_locker-01;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = locker-01-open;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Locker";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[all*]
+				{
+					il_main = #weapon/7-8;
+					il_main = #body/6-12;
+				}
+				[gold*]
+				{
+					max = 45;
+					min = 40;
+					min_pile = 5;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
+}
+[t:template,n:gr_ctn_locker_gr_ps1]
+{
+    specializes = locker_glb_open_01_hc_r1_base;
+}
