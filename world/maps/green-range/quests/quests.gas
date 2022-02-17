@@ -1,0 +1,29 @@
+[chapters]
+{
+    [minibosses]
+    {
+        screen_name = "Minibosses";
+        [*]
+        {
+            description = "Minibosses";
+          i order = 0;
+        }
+    }
+}
+
+[quests]
+{
+    [phrak_ballista]
+    {
+        chapter = minibosses;
+        screen_name = "Phrak Ballista";
+		victory_sample = s_e_level_up_quest;
+
+        [*]
+        {
+            description = "Kill the Phrak Ballista";
+          i order = 0;
+          b required = true;
+        }
+    }
+}

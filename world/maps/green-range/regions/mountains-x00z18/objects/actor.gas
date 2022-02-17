@@ -134,12 +134,104 @@
 	  p position = 0.997603,0,-0.506243,0xf0111409;
 	}
 }
+[t:phrak_piercer,n:0x02500f00]
+{
+	[placement]
+	{
+	  p position = -1.79352,1.90735e-006,0.802852,0x92b6bdb1;
+	}
+}
+[t:phrak_piercer,n:0x02500f04]
+{
+	[placement]
+	{
+	  p position = 1.33122,0,-0.230714,0xe21951db;
+	}
+}
+[t:phrak_piercer,n:0x02500f05]
+{
+	[placement]
+	{
+	  p position = -0.292784,0,-1.93937,0xe21951db;
+	}
+}
 [t:phrak,n:0x02500ecf]
 {
 	[placement]
 	{
 	  q orientation = 0,0.650328,0,0.759654;
 	  p position = 0.654314,0,-1.5947,0xb31b39e6;
+	}
+}
+[t:phrak_piercer,n:0x02500f03]
+{
+	[placement]
+	{
+	  p position = 1.79353,0,-0.156651,0x197b8ac5;
+	}
+}
+[t:phrak_piercer,n:0x02500f01]
+{
+	[placement]
+	{
+	  p position = -0.88637,0,-0.282289,0x2a07300c;
+	}
+}
+[t:phrak_piercer,n:0x02500f02]
+{
+	[placement]
+	{
+	  p position = -1.28463,1.90735e-006,0.965683,0xb892dc75;
+	}
+}
+[t:phrak_piercer_boss_01,n:0x02500efe]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("phrak_ballista","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("phrak_ballista","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.861198,0,-0.436806,0x1a56c1d4;
+	}
+}
+[t:phrak_piercer,n:0x02500eff]
+{
+	[placement]
+	{
+	  p position = -1.9611,0,1.07717,0x1a56c1d4;
 	}
 }
 [t:phrak,n:0x02500ed9]
@@ -428,61 +520,5 @@
 	{
 	  q orientation = 0,0.999675,0,0.0254965;
 	  p position = -0.568818,0,1.45811,0x673c8481;
-	}
-}
-[t:phrak_piercer_boss_01,n:0x02500efe]
-{
-	[placement]
-	{
-	  p position = 0.861198,0,-0.436806,0x1a56c1d4;
-	}
-}
-[t:phrak_piercer,n:0x02500eff]
-{
-	[placement]
-	{
-	  p position = -1.9611,0,1.07717,0x1a56c1d4;
-	}
-}
-[t:phrak_piercer,n:0x02500f00]
-{
-	[placement]
-	{
-	  p position = -1.79352,1.90735e-006,0.802852,0x92b6bdb1;
-	}
-}
-[t:phrak_piercer,n:0x02500f01]
-{
-	[placement]
-	{
-	  p position = -0.88637,0,-0.282289,0x2a07300c;
-	}
-}
-[t:phrak_piercer,n:0x02500f02]
-{
-	[placement]
-	{
-	  p position = -1.28463,1.90735e-006,0.965683,0xb892dc75;
-	}
-}
-[t:phrak_piercer,n:0x02500f03]
-{
-	[placement]
-	{
-	  p position = 1.79353,0,-0.156651,0x197b8ac5;
-	}
-}
-[t:phrak_piercer,n:0x02500f04]
-{
-	[placement]
-	{
-	  p position = 1.33122,0,-0.230714,0xe21951db;
-	}
-}
-[t:phrak_piercer,n:0x02500f05]
-{
-	[placement]
-	{
-	  p position = -0.292784,0,-1.93937,0xe21951db;
 	}
 }
