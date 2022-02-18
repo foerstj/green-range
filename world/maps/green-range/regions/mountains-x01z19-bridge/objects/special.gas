@@ -1,3 +1,32 @@
+[t:trigger_generic,n:0x01f00033]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x01F0002F,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(8.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.402072,0,0.915608;
+	  p position = 0.121708,0,-0.401855,0x1db5529b;
+	}
+}
 [t:trigger_change_mood_box,n:0x01f0000c]
 {
 	[common]
