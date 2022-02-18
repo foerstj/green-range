@@ -2,8 +2,19 @@
 {
 	[text*]
 	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Well met, adventurers! On the way to Longbourne? It's just to follow the Klars Trail, you can't miss it.
+The Trail leads through a cave full of undead skeletons right over there. Don't worry, they're harmless.
+If you take a left turn in the cave and exit to the west, you'll find one of our shacks there. You can spend the night there if you want. Common sense applies: please leave the place no dirtier than you found it, and please close the door behind you to keep the Krug out.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
 		choice = shop;
-		screen_text = "Shop?";
+		screen_text = "Would you be interested in trading? You can sell to me things you don't need, and maybe I can offer some equipment as well.
+
+Sorry, the mule stays with me. The Dwarves will probably sell you one if you ask there.";
 	  f scroll_rate = 10.000000;
 	}
 }
