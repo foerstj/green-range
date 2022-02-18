@@ -1,9 +1,33 @@
-[pm]
+[pm_beginner]
 {
 	[text*]
 	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Are you an adventurer travelling the Green Range? Well so am I! Shall we go together?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
 		choice = potential_member;
-		screen_text = "PM?";
+		screen_text = "No, I want to be honest with you - I had my hands in some cookie jars, if you know what I mean, and had to leave the Kingdom for a while. Oh please let me come with you, or the Trolls will have me for breakfast!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Well met, Ehbling. Want some Snapper stew?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "My name is Svartholm, I am a Ranger. We Rangers live in these mountains and regard them as our home.
+Are you new to these parts? I can come with you if you want... for guidance and protection.";
 	  f scroll_rate = 10.000000;
 	}
 }
