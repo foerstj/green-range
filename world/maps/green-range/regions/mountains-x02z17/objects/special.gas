@@ -27,6 +27,35 @@
 	  p position = -1.49008,0,1.34755,0x72119923;
 	}
 }
+[t:trigger_change_mood_box,n:0x02c0132e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-mountains-1-2-rain");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(10.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.08725,0,0.264686,0x367d6069;
+	}
+}
 [t:trigger_change_mood_box,n:0x02c005ad]
 {
 	[common]
@@ -83,6 +112,64 @@
 	{
 	  q orientation = 0,-0.382684,0,0.92388;
 	  p position = 0.274345,0,-1.62884,0x4a750b45;
+	}
+}
+[t:trigger_change_mood_box,n:0x02c01330]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-mountains-1-2-rain");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(10.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.838284,0,-0.480595,0x1769535e;
+	}
+}
+[t:trigger_change_mood_box,n:0x02c01331]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-mountains-1-2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(20.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.63399,0,1.16484,0x2e762153;
 	}
 }
 [t:trigger_change_mood_box,n:0x02c00a08]
