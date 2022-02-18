@@ -100,8 +100,16 @@
 	{
 		[conversations]
 		{
+			* = pm_accept;
 			* = pm_beginner;
+			* = pm_disband;
+			* = pm_reject;
+			* = pm_rejoin;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\green-range\pm\job_talk_pm_beginner.skrit;
 	}
 	[placement]
 	{
@@ -124,8 +132,16 @@
 	{
 		[conversations]
 		{
+			* = pm_accept;
+			* = pm_disband;
 			* = pm_ranger;
+			* = pm_reject;
+			* = pm_rejoin;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\green-range\pm\job_talk_pm_ranger.skrit;
 	}
 	[placement]
 	{
