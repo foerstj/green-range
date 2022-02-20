@@ -1,0 +1,22 @@
+[perlin_plant_profile]
+{
+    // defaults
+    size = 0.8 1.2 0.1;
+
+    // trunks
+    // trees
+    [*] { seed = 0.1, -1, 4; templates = tree_grs_poplar_01; }
+    [*] { seed = 0.05, -0.5, 3; templates = tree_grs_deciduous_sway_01; }
+    [*] { seed = 0.02, -1, -4; templates = tree_grs_plum_01; }
+    // bushes
+    //[*] { seed = 0.2, 0, 3; templates = tree_grs_deciduous_01 tree_grs_deciduous_05 tree_grs_deciduous_09 tree_grs_deciduous_21; }
+    //[*] { seed = 0.2, 0, 3; templates = tree_grs_deciduous_02 tree_grs_deciduous_06 tree_grs_deciduous_10 tree_grs_deciduous_22; }
+    //[*] { seed = 0.2, -0.5, 3; templates = tree_grs_deciduous_03 tree_grs_deciduous_07 tree_grs_deciduous_11 tree_grs_deciduous_23; }
+    [*] { seed = 0.3, 0, 4; templates = tree_grs_deciduous_04 tree_grs_deciduous_08 tree_grs_deciduous_12 tree_grs_deciduous_24; }
+    // flowers
+    [*] { seed = 0.01, 0.5, 4; templates = flowers_grs_04; }
+    [*] { seed = 0.2, 0.5, 4; templates = flowers_grs_06; size = 0.8 2.4 1.6; }
+    // grass
+    [*] { seed = 0.04, 0.5, 3; templates = flowers_grs_08; }
+    //[*] { seed = 0.1, 1, 2; templates = grass_grs_01 grass_grs_02 grass_grs_03 grass_grs_06 grass_grs_07 grass_grs_08; }
+}
