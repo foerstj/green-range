@@ -8,11 +8,13 @@
     {
         [0.4]
         {
-            [plants] { perlin = var-main; tx = blur; a:profile = gr-da; b:profile = gr-db; }
+            // Side area towards the Aranoi Desert. Arid.
             node_set = grs02;
+            [plants] { perlin = var-main; tx = blur; a:profile = gr-da; b:profile = gr-db; }
         }
         [0.6]
         {
+            // Main line of progression from start to end of the Klars Trail.
             [perlin_plant_progression]
             {
                 direction = sw2ne;
@@ -23,6 +25,8 @@
                 {
                     [0.15]
                     {
+                        // First area: close to home. Using typical "farmland" vegetation.
+                        node_set = grs01;
                         [plants] { perlin = var-main; tx = blur; a:profile = gr-1a; b:profile = gr-1b; }
                         [enemies]
                         {
@@ -46,6 +50,8 @@
                     }
                     [0.30]
                     {
+                        // Second area: somewhat darker. Using pines; webbed ones where Mucosa live.
+                        node_set = jng01;
                         [plants] { perlin = var-main; tx = blur; a:profile = gr-2a; b:profile = gr-2b; }
                         [enemies]
                         {
@@ -66,27 +72,42 @@
                                 [b] { perlin = var-sub-b; tx = gap; a:profile = gr-2b-enemies-main; }
                             }
                         }
-                        node_set = jng01;
                     }
+                    // - Here comes the Dwarven mountain -
                     [0.50]
                     {
-                        [plants] { perlin = var-main; tx = blur; a:profile = gr-3a; b:profile = gr-3b; }
+                        // Third area, past the mountain. Using brownish pine-forest terrain texture for a change, and counteracting its barren look with bright green vegetation.
                         node_set = for01;
+                        [plants] { perlin = var-main; tx = blur; a:profile = gr-3a; b:profile = gr-3b; }
                     }
+                    // - Here comes the redwood gap -
                     [0.70]
                     {
-                        [plants] { perlin = var-main; tx = blur; a:profile = gr-4a; b:profile = gr-4b; }
+                        // Fourth area, before the second mountain. Using dark-green swamp terrain texture for a change, and counteracting its dark look with plants that have white/bright spots.
                         node_set = swp;
+                        [plants] { perlin = var-main; tx = blur; a:profile = gr-4a; b:profile = gr-4b; }
                     }
-                    [0.85] { node_set = jng01; plants:profile = gr-5; }
-                    [1.00] { node_set = grs01; plants:profile = gr-6; }
+                    // - Here comes the Trog mountain -
+                    [0.85]
+                    {
+                        // Fifth area, past the second mountain. Back on green jungle terrain, which allows for less-green vegetation - time for some autumn colors.
+                        node_set = jng01;
+                        plants:profile = gr-5;
+                    }
+                    [1.00]
+                    {
+                        // Sixth & final area. Need to think of sth here...
+                        node_set = grs01;
+                        plants:profile = gr-6;
+                    }
                 }
             }
         }
         [1.0]
         {
-            [plants] { perlin = var-main; tx = blur; a:profile = gr-wa; b:profile = gr-wb; }
+            // Side area towards the Greylin Bay. Rainy and humid.
             node_set = grs01;
+            [plants] { perlin = var-main; tx = blur; a:profile = gr-wa; b:profile = gr-wb; }
         }
     }
 }
