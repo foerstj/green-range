@@ -1,0 +1,16 @@
+// seed: factor (seeds/m²), perlin offset, perlin spread
+// templates: space-separated
+// size: from, to, additional perlin factor
+[perlin_plant_profile]
+{
+    // defaults
+    size = 0.8 1.2;
+
+    // trunks
+    // trees
+    [*] { seed = 0.1, 0, 3; templates = tree_swp_07 tree_swp_08; }
+    // bushes
+    [*] { seed = 0.2, 0, 3; templates = bush_swp_04 bush_swp_06 bush_swp_07 bush_grs_button_02 bush_grs_04; }
+    // flowers & groundcover
+    [*] { seed = 0.3, 0, 3; templates = reed_swp_04 reed_swp_05 reed_swp_07 reed_swp_08 groundcover_swp_02 foliage_grs_01 flowers_grs_04 bush_swp_01 bush_swp_02; }
+}
