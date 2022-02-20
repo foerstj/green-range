@@ -1,0 +1,59 @@
+[t:template,n:tree_jng_01_base]  // = tree_jng_01
+{
+	category_name = "trees";
+	doc = "jngl_trunk_sm";
+	specializes = base_tree;
+	[aspect]
+	{
+		//display_cost = 0.404266991;
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.45;
+		model = m_i_jng_tree-01;
+	}
+}
+[t:template,n:tree_jng_trunk_sm] { specializes = tree_jng_01_base; }
+
+[t:template,n:tree_jng_02_base]  // = tree_jng_02
+{
+	category_name = "trees";
+	doc = "jngl_trunk_lg";
+	specializes = base_tree;
+	[aspect]
+	{
+		//display_cost = 0.683769866;
+		lodfi_lower = 0.3;
+		lodfi_upper = 0.65;
+		model = m_i_jng_tree-02;
+	}
+}
+[t:template,n:tree_jng_trunk_lg] { specializes = tree_jng_02_base; }
+
+[t:template,n:tree_jng_03_base]  // = tree_jng_03
+{
+	category_name = "trees";
+	doc = "jngl_trunk_split_3";
+	specializes = base_tree;
+	[aspect]
+	{
+		//display_cost = 0.669032375;
+		lodfi_lower = 0.3;
+		lodfi_upper = 0.6;
+		model = m_i_jng_tree-03;
+	}
+}
+[t:template,n:tree_jng_trunk_split_3] { specializes = tree_jng_03_base; }
+
+[t:template,n:tree_jng_04_base]  // = tree_jng_04
+{
+	category_name = "trees";
+	doc = "jngl_trunk_split_2";
+	specializes = base_tree;
+	[aspect]
+	{
+		//display_cost = 0.574127875;
+		lodfi_lower = 0.2;
+		lodfi_upper = 0.5;
+		model = m_i_jng_tree-04;
+	}
+}
+[t:template,n:tree_jng_trunk_split_2] { specializes = tree_jng_04_base; }
