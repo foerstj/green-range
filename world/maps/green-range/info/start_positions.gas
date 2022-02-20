@@ -2,7 +2,7 @@
 {
 	[t:start_group,n:default]
 	{
-	  b default = true;
+	  b default = false;
 		description = "This is the default group.";
 	  b dev_only = false;
 	  i id = 0;
@@ -25,14 +25,14 @@
 	}
 	[t:start_group,n:demo]
 	{
-	  b default = false;
+	  b default = true;
 		description = "demo";
 	  b dev_only = false;
 	  i id = 1698464;
 		screen_name = "demo";
 		[start_position]
 		{
-		  i id = 1;
+		  i id = 2;
 			position = 0.309412,0.000000,0.439626,0x827BD870;
 			[camera]
 			{
@@ -40,6 +40,18 @@
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
 				position = 0.309412,0.000000,0.439626,0x827BD870;
+			}
+		}
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.164650,0.000000,-0.167475,0x26578225;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x26578225;
 			}
 		}
 		[world_levels]
