@@ -1,0 +1,17 @@
+[perlin_plant_profile]
+{
+    // defaults
+    size = 0.8 1.2;
+
+    // trunks
+    [*] { seed = 0.08, -0.5, 3; templates = tree_grs_pine_trunk_sm tree_grs_pine_trunk_med; }
+    // trees
+    [*] { seed = 0.06,   -0.125, 4; templates = tree_grs_pine_4m tree_grs_pine_6m; }
+    [*] { seed = 0.06,   -0.125, 4; templates = gpg_tree_glb_pine_dead_04; }
+    // bushes
+    [*] { seed = 0.4,    -0.25,  2; templates = bush_grs_03 bush_grs_08 gpg_bush_glb_rhod_dead_02 gpg_bush_glb_rhod_dead_01; }
+    // flowers
+    [*] { seed = 0.1, 0, 2; templates = flowers_grs_04 flowers_grs_06 flowers_grs_08; }
+    // grass
+    [*] { seed = 0.3, 0, 0.5; templates = fern_grs_01 fern_grs_02 fern_grs_03 fern_grs_04; }
+}
