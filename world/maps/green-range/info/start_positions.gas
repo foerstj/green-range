@@ -23,16 +23,62 @@
 		{
 		}
 	}
-	[t:start_group,n:demo]
+	[t:start_group,n:demo-1]
 	{
-	  b default = true;
-		description = "demo";
+	  b default = false;
+		description = "demo-1";
 	  b dev_only = false;
-	  i id = 1698464;
-		screen_name = "demo";
+	  i id = 1699120;
+		screen_name = "demo-1";
 		[start_position]
 		{
-		  i id = 2;
+		  i id = 1;
+			position = -0.806238,-0.000002,1.783346,0xE8A39365;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.806238,-0.000002,1.783346,0xE8A39365;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:demo-2]
+	{
+	  b default = false;
+		description = "demo-2";
+	  b dev_only = false;
+	  i id = 1699120;
+		screen_name = "demo-2";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.733056,0.000000,-0.950470,0x97731113;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.733056,0.000000,-0.950470,0x97731113;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:demo-3]
+	{
+	  b default = false;
+		description = "demo-3";
+	  b dev_only = false;
+	  i id = 0;
+		screen_name = "demo-3";
+		[start_position]
+		{
+		  i id = 1;
 			position = 0.309412,0.000000,0.439626,0x827BD870;
 			[camera]
 			{
@@ -42,33 +88,20 @@
 				position = 0.309412,0.000000,0.439626,0x827BD870;
 			}
 		}
-		[start_position]
+		[world_levels]
 		{
-		  i id = 3;
-			position = 0.164650,0.000000,-0.167475,0x26578225;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.164650,0.000000,-0.167475,0x26578225;
-			}
 		}
+	}
+	[t:start_group,n:demo-4]
+	{
+	  b default = false;
+		description = "demo-4";
+	  b dev_only = false;
+	  i id = 0;
+		screen_name = "demo-4";
 		[start_position]
 		{
-		  i id = 4;
-			position = -1.294413,0.000002,1.091611,0xB6861A16;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = -1.294413,0.000002,1.091611,0xB6861A16;
-			}
-		}
-		[start_position]
-		{
-		  i id = 5;
+		  i id = 1;
 			position = -0.930051,0.000000,1.795914,0x6403C95F;
 			[camera]
 			{
@@ -78,9 +111,20 @@
 				position = -0.930051,0.000000,1.795914,0x6403C95F;
 			}
 		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:demo-5]
+	{
+	  b default = false;
+		description = "demo-5";
+	  b dev_only = false;
+	  i id = 0;
+		screen_name = "demo-5";
 		[start_position]
 		{
-		  i id = 6;
+		  i id = 1;
 			position = -1.603661,0.000000,-0.004519,0x90531F42;
 			[camera]
 			{
@@ -90,16 +134,73 @@
 				position = -1.603661,0.000000,-0.004519,0x90531F42;
 			}
 		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:demo-6]
+	{
+	  b default = false;
+		description = "demo-6";
+	  b dev_only = false;
+	  i id = 0;
+		screen_name = "demo-6";
 		[start_position]
 		{
 		  i id = 1;
-			position = 0.032706,-0.000002,-1.999237,0xDEB9B696;
+			position = 1.422485,0.000000,-0.650364,0x6FE7971A;
 			[camera]
 			{
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xDEB9B696;
+				position = 1.422485,0.000000,-0.650364,0x6FE7971A;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:demo-d]
+	{
+	  b default = true;
+		description = "demo-d";
+	  b dev_only = false;
+	  i id = 0;
+		screen_name = "demo-d";
+		[start_position]
+		{
+		  i id = 1;
+			position = -0.108805,0.000000,-0.084487,0xA50BD4E4;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xA50BD4E4;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:demo-w]
+	{
+	  b default = false;
+		description = "demo-w";
+	  b dev_only = false;
+	  i id = 0;
+		screen_name = "demo-w";
+		[start_position]
+		{
+		  i id = 1;
+			position = -1.294413,0.000002,1.091611,0xB6861A16;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -1.294413,0.000002,1.091611,0xB6861A16;
 			}
 		}
 		[world_levels]
