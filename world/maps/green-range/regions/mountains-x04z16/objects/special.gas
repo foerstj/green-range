@@ -26,34 +26,6 @@
 	  p position = 0.0855923,-12,-3.80717,0x0acfe523;
 	}
 }
-[t:trigger_change_mood_box,n:0x0450031c]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("green-range-mountains-2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,2.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.224791,1.75051,1.98501,0x63cb3205;
-	}
-}
 [t:trigger_fade_node_box,n:0x0450035e]
 {
 	[common]
@@ -97,7 +69,7 @@
 	  p position = 0.178509,-11.9978,-1.9227,0x0acfe523;
 	}
 }
-[t:trigger_change_mood_box,n:0x0450036e]
+[t:trigger_change_mood_box,n:0x0450031c]
 {
 	[common]
 	{
@@ -105,7 +77,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-mountains-2-cave");
+				action* = mood_change("green-range-mountains-2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,2.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -122,7 +94,7 @@
 	}
 	[placement]
 	{
-	  p position = 0.23653,-11.9952,-3.74805,0x56318d16;
+	  p position = 0.224791,1.75051,1.98501,0x63cb3205;
 	}
 }
 [t:trigger_change_mood_box,n:0x04500374]
@@ -151,6 +123,34 @@
 	[placement]
 	{
 	  p position = -0.00982285,1.61091,2.21274,0x0741dc7b;
+	}
+}
+[t:trigger_change_mood_box,n:0x0450036e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-mountains-2-cave");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,2.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.23653,-11.9952,-3.74805,0x56318d16;
 	}
 }
 [t:trigger_fade_node_box,n:0x04500402]
