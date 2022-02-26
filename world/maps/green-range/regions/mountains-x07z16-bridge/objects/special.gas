@@ -1,31 +1,3 @@
-[t:trigger_change_mood_box,n:0x0610000b]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("green-range-mountains-2-2-bridge");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,4.000000,8.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.0460382,0,-0.194992,0xe9583b70;
-	}
-}
 [t:trigger_change_mood_box,n:0x0610000c]
 {
 	[common]
@@ -52,5 +24,33 @@
 	[placement]
 	{
 	  p position = 0.0289913,0,0.13361,0x4552df14;
+	}
+}
+[t:trigger_change_mood_box,n:0x0610000b]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-mountains-2-2-bridge");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,4.000000,8.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0460382,0,-0.194992,0xe9583b70;
 	}
 }
