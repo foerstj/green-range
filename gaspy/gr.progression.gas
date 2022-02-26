@@ -127,6 +127,25 @@
             // Side area towards the Greylin Bay. Rainy and humid.
             node_set = grs01;
             [plants] { perlin = var-main; tx = blur; a:profile = gr-wa; b:profile = gr-wb; }
+            [enemies]
+            {
+                perlin = var-main;
+                tx = gap;
+                [a]
+                {
+                    tx = gap;
+                    perlin = var-sub-a;
+                    [a] { perlin = var-sub-b; tx = gap; a:profile = gr-wa-enemies-main; }
+                    [b] { perlin = var-sub-b; tx = gap; a:profile = gr-wa-enemies-a; b:profile = gr-wa-enemies-b; }
+                }
+                [b]
+                {
+                    tx = gap;
+                    perlin = var-sub-a;
+                    [a] { perlin = var-sub-b; tx = gap; a:profile = gr-wb-enemies-a; b:profile = gr-wb-enemies-b; }
+                    [b] { perlin = var-sub-b; tx = gap; a:profile = gr-wb-enemies-main; }
+                }
+            }
         }
     }
 }
