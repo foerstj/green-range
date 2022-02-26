@@ -1,0 +1,133 @@
+[conversation_narrator]
+{
+	[text*]
+	{
+		sample = s_v_chapter_6;
+		nis = true;
+		screen_text = "The surrender of the Droog meant the safety of the kingdom had been secured. But a warning had to be delivered to the throne before the revenant Seck could succeed in their mysterious plot.";
+		scroll_rate = 3.5;
+	}
+}
+[conversation_nonataya]
+{
+	[text*]
+	{
+		choice = shop;
+		activate_quest* = quest_journey_castle;
+		sample = s_v_dc_nonataya1;
+		screen_text = "Peace! We are victims all of these horrid Seck! In centuries past, the Seck hunted us near to extinction. When first they reappeared, our generation of warriors was yet newly hatched, unequal to the ancient sorceries the Seck threatened to unleash. For our survival, we made an unwise alliance. We would redeem ourselves. The Seck plot to seize a secret chamber they believe to be within Castle Ehb. You must move soon should you wish to prevent this. As a symbol of our intentions, I offer an exchange of goods, the best wares we have to offer.";
+		scroll_rate = 7;
+		quest_dialog = true;
+	}
+	[goodbye*]
+	{
+		sample = s_v_dc_nonataya2;
+	}
+}
+[conversation_nonataya_two]
+{
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_dc_nonataya3;
+		screen_text = "Do you require additional supplies?";
+	}
+	[goodbye*]
+	{
+		sample = s_v_dc_nonataya2;
+	}
+}
+[conversation_ulfgrim_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_dc_ulfgrim1;
+		screen_text = "An age ago I fought with the bladdy 10th Legion in the battle o' the Plains. These days I've no more trust for king nor Legion any more than I do for Droog nor Traveler. All I trust is a handful o' gold. If you want me to fight for ye, you have ta 'earn' my trust!";
+	}
+}
+[conversation_ulfgrim_accept_no_money]
+{
+	[text*]
+	{
+		sample = s_v_dc_ulfgrim2;
+		screen_text = "Are you a fool!?! That won't even buy the trust of a gremal! Don't talk ta me until you're prepared to pay!";
+	}
+}
+[conversation_ulfgrim_accept_have_money]
+{
+	[text*]
+	{
+		sample = s_v_dc_ulfgrim3;
+		screen_text = "That's doon then. I'll fight for yer cause as long as I'm able, but doon expect me to bow and scrape to any kingdom types. The only authority I respect in this warld is my own!";
+	}
+}
+[conversation_ulfgrim_reject]
+{
+	[text*]
+	{
+		sample = s_v_dc_ulfgrim4;
+		screen_text = "Suits yourself! I just hope the other side doesn't make me a better offer!";
+	}
+}
+[conversation_ulfgrim_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_dc_ulfgrim5;
+		screen_text = "You've turned your back on Ulfgrim before. That's a considerable lack o' respect to me. You'll pay me my standard fee plus a little extra for insulting my honor! What will it be?";
+	}
+}
+[conversation_ulfgrim_disband]
+{
+	[text*]
+	{
+		sample = s_v_dc_ulfgrim6;
+		screen_text = "You're as undecided as those bladdy sods who commanded the Legion during the battle o' the Plain! If you canna see what's good far you, it's best I left anyway! I hope yer enemies use your skull for a bedpan!";
+	}
+}
+[conversation_ulfgrim_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_dc_ulfgrim7;
+		screen_text = "I'm not in the best mood thanks to you, so I'll make myself plain. It's a dangerous world out there, and I'd be a fool not to take help even from the likes of you. I'll travel with you again, but don't expect I'll go much out o' my way to protect your sorry carcass. Got it?! Good!";
+	}
+}
+[conversation_goquua]
+{
+	[text*]
+	{
+		//sample = s_v_greet_droog_hello;
+		order = 0;
+		screen_text = "My thanks for help, Goquua won't be able to keep drakes away much longer. Wish Goquua sooner realized true source of their rage.";
+		choice = more;
+	}
+	[text*]
+	{
+		order = 1;
+		screen_text = "Before we knew Seck awoke from slumber, desert drakes began to turn against us. Their attacks increased daily until our existence was threatened. In answer to our prayers for deliverance, Seck appeared with warning and proposal.";
+		choice = more;
+	}
+	[text*]
+	{
+		order = 2;
+		screen_text = "Seck warned us that king of your people had commanded Ancient Dragon of Rathe to send forth its spawn and massacre my people in Droog ancestral home. It seemed only explanation, and joining with Seck seemed only salvation against drakes. Goquua too believed these rumors until Goquua saw drakes attack patrols from Castle Ehb.";
+		choice = more;
+	}
+	[text*]
+	{
+		screen_text = "My people have begun preparing sacrifices to appease Ancient Dragon, but Goquua knows that not help. Reappearance of Seck and rage of drakes NOT... coincidence. Goquua now certain that Seck corrupted Ancient Dragon to unleash its spawn against world. My people will be first to fall if I fail to protect us, but your kingdom not far behind. If you are truly hero of your kingdom, you must slay Ancient Dragon before Seck can free him from Rathe.";
+		activate_quest* = quest_slay_dragon;
+		quest_dialog = true;
+	}
+}
+[conversation_goquua_2]
+{
+	[text*]
+	{
+		screen_text = "Goquua continue protecting his people with last ounce of strength, and call to spirits of moon in helping you put end to Seck for good.";
+	}
+}

@@ -1,0 +1,135 @@
+[t:cmd_ai_c_patrol,n:0x00a00774]
+{
+	[placement]
+	{
+	  p position = -0.152847,8,1.12481,0xe53d9707;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00a007ea]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00A007EB;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.16434,2.17445,-9.54939,0x0752cf41;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00a007eb]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00A00774;
+	}
+	[placement]
+	{
+	  p position = -5.93736,2.77171,5.88088,0x0752cf41;
+	}
+}
+[t:cmd_camera_command,n:0x00a0095e]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 1;
+	  x next_scid = 0x00A00960;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.304479,0.358656,-0.125016,0.873516;
+	  p position = 16.1186,1.18779,-1.22879,0xfe7e5a4a;
+	}
+}
+[t:cmd_camera_command,n:0x00a00960]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 16;
+	  x next_scid = 0x00A00934;
+	}
+	[placement]
+	{
+	  q orientation = 0.213937,0.387261,-0.0928825,0.891982;
+	  p position = 14.0913,12.4924,5.74854,0xe8e17d2b;
+	}
+}
+[t:cmd_auto_save,n:0x00a00796]
+{
+	[placement]
+	{
+	  p position = 34.1125,6.55,24.1856,0x4a869ef3;
+	}
+}
+[t:cmd_enter_nis,n:0x00a00918]
+{
+	[cmd_enter_nis]
+	{
+	  i music_volume = 50;
+	  x next_scid = 0x00A0095E;
+	  b select_catalyst = true;
+	}
+	[placement]
+	{
+	  p position = 28.3616,4.5935,16.9671,0x4a869ef3;
+	}
+}
+[t:cmd_leave_nis,n:0x00a00934]
+{
+	[placement]
+	{
+	  p position = 26.7433,4.4896,16.8028,0x4a869ef3;
+	}
+}
+[t:cmd_move_party,n:0x00a00963]
+{
+	[cmd_party]
+	{
+	  f aproach_distance_max = 2;
+	  f aproach_distance_min = 0.5;
+	}
+	[placement]
+	{
+	  p position = 29.4749,5.49373,19.2814,0x4a869ef3;
+	}
+}
+[t:cmd_alignment_changer,n:0x00a00770]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  b change_may_attack = true;
+	  b change_may_attacked = true;
+	  b change_selection = false;
+	  i start_state = 1;
+	  x target_actor = 0x00A0090B;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.98427,0.391964,-1.40522,0x7ea57e76;
+	}
+}
+[t:animate_elevator,n:0x00a00760]
+{
+	[nodal_tex_anim]
+	{
+	  x siege_node = 0xD6F2A031;
+	}
+	[placement]
+	{
+	  p position = -1.07745,0.138534,0.126827,0xf237258b;
+	}
+}
+[t:cmd_report_gameplay_screen_player,n:0x00a00798]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_dc_r1";
+	}
+	[placement]
+	{
+	  p position = 1.32044,9.53674e-007,1.15316,0xde59aea3;
+	}
+}
