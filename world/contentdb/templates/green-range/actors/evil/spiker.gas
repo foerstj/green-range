@@ -1,0 +1,85 @@
+[t:template,n:dsx_spiked_dweller_base]  // = dsx_spiked_dweller
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_spiked_dweller";
+	specializes = base_maw;
+	material = flesh;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		11, 0;
+			intelligence = 	7, 0;
+			dexterity = 	8, 0;
+			melee =         6, 0;
+			nature_magic =	7, 0;
+			combat_magic =  7, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 208;
+		life 			= 172;
+		max_life 		= 172;
+		mana 			= 261;
+		max_mana 		= 261;
+		[voice]
+		{
+			[cast]		{	* = s_e_attack_spiker_SED;	}
+			[die]			{ priority = high; * = s_e_die_spiked_maw; }
+			[hit_critical]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_spiked_maw_SED; }
+		}
+		
+
+		textures:0 = b_c_edm_sm-03;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 60;
+		damage_min = 45;
+	}
+	[common]
+	{
+		screen_name="Jungle Spiker";
+		membership = monster, party_spiked_dweller;
+	}
+	[defend] { defense=90; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_spiked_dweller_spikes; }
+	}
+	[mind]
+	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true
+			&actor_creates_own_party	= true
+			&party_template				= "party_spiked_dweller";
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		[break_particulate]
+		{
+			frag_glb_spiked_dweller_01 = 1;
+			frag_glb_spiked_dweller_02 = 1;
+			frag_glb_spiked_dweller_03 = 1;
+			frag_glb_spiked_dweller_04 = 6;
+			frag_glb_spiked_dweller_05 = 8;
+		}
+	}
+}
+[t:template,n:gr_spiker_green]
+{
+    specializes = dsx_spiked_dweller_base;
+
+    [common]
+    {
+        screen_name = "Green Spiker";
+    }
+}

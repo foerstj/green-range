@@ -79,6 +79,25 @@
                         // Third area, past the mountain. Using brownish pine-forest terrain texture for a change, and counteracting its barren look with bright green vegetation.
                         node_set = for01;
                         [plants] { perlin = var-main; tx = blur; a:profile = gr-3a; b:profile = gr-3b; }
+                        [enemies]
+                        {
+                            perlin = var-main;
+                            tx = gap;
+                            [a]
+                            {
+                                tx = gap;
+                                perlin = var-sub-a;
+                                [a] { perlin = var-sub-b; tx = gap; a:profile = gr-3a-enemies-main; }
+                                [b] { perlin = var-sub-b; tx = gap; a:profile = gr-3a-enemies-a; b:profile = gr-3a-enemies-b; }
+                            }
+                            [b]
+                            {
+                                tx = gap;
+                                perlin = var-sub-a;
+                                [a] { perlin = var-sub-b; tx = gap; a:profile = gr-3b-enemies-a; b:profile = gr-3b-enemies-b; }
+                                [b] { perlin = var-sub-b; tx = gap; a:profile = gr-3b-enemies-main; }
+                            }
+                        }
                     }
                     // - Here comes the redwood gap -
                     [0.70]

@@ -1,0 +1,92 @@
+[t:template,n:dsx_skrubb_jungle_base]  // = dsx_skrubb_jungle
+{
+  category_name = "1W_evil_d";
+  doc = "dsx_skrubb_jungle";
+  specializes = dsx_skrubb_base;
+	  [actor]
+	    {
+	      [skills]
+			{
+			  strength 	= 9, 0;
+			  intelligence 	= 7, 0;
+			  dexterity 	= 8, 0;
+			  ranged 	= 4, 0;
+			  combat_magic	= 4, 0;
+			  nature_magic	= 4, 0;
+			}
+	    }
+	  [aspect]
+	    {
+	      experience_value = 83;
+	      life             = 120;
+	      max_life         = 120;
+	      mana             = 23;
+	      max_mana         = 23;
+	    textures:0 = b_c_edm_sb-03;
+	      //    textures:0 = b_c_edm_ph_melee;
+	
+	      scale_base = 0.20;
+	
+	    }
+	  [attack]
+	    {
+	      attack_range = 0.5;
+	      damage_max = 19; 
+	      damage_min = 15; 
+	    }
+	  [generator_in_object]  //pop up
+	    {
+	      child_template_name = hole_grs_01;
+	      spawn_event = WE_ENEMY_SPOTTED;
+	      spawn_chance = 1.0;
+	      spawn_delay = 0.5;
+	      fade_kid = true;
+	    }
+	  [inventory]
+	    {
+	      selected_active_location = il_active_primary_spell;
+	      [other] { il_active_primary_spell=dsx_spell_skrubb_spit_farm; }
+	    }
+	  [common]
+	    {
+	      screen_name = "Jungle Skrubb"; //--
+	      membership = monster;
+	
+	      [template_triggers] //for generator
+			{
+			  [*]
+			    {
+			      action* = call_sfx_script("skrubb_goo");
+			      condition* = receive_world_message("we_anim_sfx",1);
+			    }
+			}
+	    }
+	  [defend] { defense = 35; }
+		
+//DO NOT MAKE ANY CHANGES TO THIS SECTION (MIND) WITHOUT CHECKING WITH NORDEE				
+	  [mind]
+	{
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 10;
+		personal_space_range = 1.2;
+		on_enemy_entered_ocz_attack = true;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		sight_origin_height	= 2;
+	}
+}
+[t:template,n:gr_skrubb_brown]
+{
+    specializes = dsx_skrubb_jungle_base;
+
+    [common]
+    {
+        screen_name = "Brown Skrubb";
+    }
+}

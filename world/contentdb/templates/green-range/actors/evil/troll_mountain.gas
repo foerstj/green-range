@@ -1,0 +1,113 @@
+[t:template,n:dsx_troll_forest_base]  // = dsx_troll_forest
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_troll_forest";
+	specializes = troll_forest_base;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength 		=	9, 0;
+			intelligence 	=	7, 0;
+			dexterity 		=	 7, 0;
+			melee 		=	 4,	 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 176;
+		life 			= 176;
+		max_life 		= 176;
+		mana 			= 10;
+		max_mana 		= 10;
+		textures:0 = b_c_edm_tl-03;
+		life_recovery_unit	= 1;
+		life_recovery_period = 7;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 36;
+		damage_min = 26;
+	}
+	[common] { screen_name="Troll"; }
+	[defend] { defense=56; }
+	[inventory]
+	{
+		spew_equipped_kill_count = <ignore>;
+		[pcontent]
+	{
+	/* Generated: Tue Jun 17 11:13:15 2003
+		Level 9, Strong */
+		[oneof*]
+		{
+			es_weapon_hand = cb_un_2h_troll_dsx_forest;
+			[gold*]
+			{
+				chance = 0.2;
+				min = 112;
+				max = 223;
+			}
+			[oneof*]
+			{
+				chance = 0.088888888888889;
+				il_main = potion_mana_small;
+				il_main = potion_health_small;
+			}
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #weapon/22-28;
+				il_main = #armor/10-62;
+				il_main = #*/22-28;
+			}
+			[oneof*]
+			{
+				chance = 0.01;
+				il_main = #weapon/-rare(1)/28-36;
+				il_main = #armor/-rare(1)/34-90;
+				il_main = #*/-rare(1)/28-36;
+			}
+			[oneof*]
+			{
+				chance = 0.005;
+				il_main = #weapon/-unique(2)/28-36;
+				il_main = #armor/-unique(2)/34-90;
+				il_main = #*/-unique(2)/28-36;
+			}			
+		}
+	}
+		
+	}
+	[mind]
+		{
+			jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+				?curious							= 0.75
+				&interest							= interest
+				&meander							= false
+				&still								= false;
+
+			actor_life_ratio_low_threshold = .33;
+			on_life_ratio_low_flee = true;
+			flee_count = 1;
+			flee_distance = 20;
+			melee_engage_range = 14.0;
+			personal_space_range = 0.7;
+			ranged_engage_range = 14.0;
+			sight_range = 14.0;
+		}
+}
+[t:template,n:gr_troll_mountain]
+{
+    specializes = dsx_troll_forest_base;
+
+    [aspect]
+    {
+		textures:0 = b_c_edm_tl-05;
+    }
+    [common]
+    {
+        screen_name = "Mountain Troll";
+    }
+}
