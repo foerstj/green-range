@@ -89,19 +89,6 @@
 		event_sound = "env_waterfall";
 	}
 }
-[t:emt_sound,n:0x01f0003b]
-{
-	[placement]
-	{
-	  q orientation = 0,0.931728,0,0.363157;
-	  p position = -0.415215,0.55,2.8684,0xb44d5def;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_waterfall";
-	}
-}
 [t:emt_sound,n:0x01f0003a]
 {
 	[placement]
@@ -115,5 +102,18 @@
 		event_sound = "env_fire_small";
 	  f max_dist = 25;
 	  f min_dist = 3;
+	}
+}
+[t:emt_sound,n:0x01f0003b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.931728,0,0.363157;
+	  p position = -0.415215,0.55,2.8684,0xb44d5def;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_waterfall";
 	}
 }
