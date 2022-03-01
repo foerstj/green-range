@@ -1094,107 +1094,6 @@
 	  p position = 35.3529,6.55,16.8915,0x4a869ef3;
 	}
 }
-[t:activate_chapter,n:0x00a00776]
-{
-	[activate_chapter]
-	{
-		chapter = "chapter_6";
-	  i order = 1;
-	}
-	[placement]
-	{
-	  p position = 22.2035,1.81465,17.6436,0x4a869ef3;
-	}
-}
-[t:trigger_generic,n:0x00a0078f]
-{
-	[common]
-	{
-		dev_instance_text = "AUTO SAVE";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x00A00796,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,0.500000,1.500000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 30.6648,7.51673,23.579,0x4a869ef3;
-	}
-}
-[t:trigger_generic,n:0x00a008f3]
-{
-	[common]
-	{
-		dev_instance_text = "FADE DC_R1A OUT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x8EB020A7,-1,-1,-1,"out:black"), doc("dc_r1a out");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.500000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 25.409,3.36299,19.649,0x4a869ef3;
-	}
-}
-[t:trigger_generic,n:0x00a008f5]
-{
-	[common]
-	{
-		dev_instance_text = "FADE DC_R1A IN";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x8EB020A7,-1,-1,-1,"in"), doc("dc_r1a out");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.500000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 23.4684,2.23391,19.6806,0x4a869ef3;
-	}
-}
 [t:trigger_change_mood_box,n:0x00a008f7]
 {
 	[common]
@@ -1223,56 +1122,6 @@
 	  p position = 26.318,3.70902,18.993,0x4a869ef3;
 	}
 }
-[t:trigger_generic,n:0x00a00962]
-{
-	[common]
-	{
-	  b is_multi_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_talk_begin",0x00A00761,0f,"16392","single",0), delay(2.5), doc("speech[*labelled condition (party_member_within_bounding_box)*]");
-				action* = send_world_message("we_req_activate",0x00A00918,0f,"0x4008","",0), delay(1.5), doc("nis");
-				action* = send_world_message("we_req_activate",0x00A00963,0f,"16392","party_member_within_bounding_box",0), doc("move party[*labelled condition (party_member_within_bounding_box)*]");
-				action* = send_world_message("we_friend_entered_outer_comfort_zone",0x00A007FA,0f,"16392","party_member_within_bounding_box",0), doc("make droog bow[*labelled condition (party_member_within_bounding_box)*]");
-				action* = send_world_message("we_friend_entered_outer_comfort_zone",0x00A007D1,0f,"16392","party_member_within_bounding_box",0), doc("[*labelled condition (party_member_within_bounding_box)*]");
-				action* = send_world_message("we_friend_entered_outer_comfort_zone",0x00A007D2,0f,"16392","party_member_within_bounding_box",0), doc("[*labelled condition (party_member_within_bounding_box)*]");
-				action* = send_world_message("we_friend_entered_outer_comfort_zone",0x00A007FB,0f,"16392","party_member_within_bounding_box",0), doc("[*labelled condition (party_member_within_bounding_box)*]");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,2.000000,3.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = false;
-			}
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x00A00776,0f,"default","",0), doc("activate chapter summary");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,2.000000,3.000000,"on_first_enter"), doc("[*converted to one-shot*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = false;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 22.3073,1.76041,19.2005,0x4a869ef3;
-	}
-}
 [t:trigger_change_mood_box,n:0x00a00011]
 {
 	[common]
@@ -1299,49 +1148,6 @@
 	[placement]
 	{
 	  p position = 17.5728,13.0636,23.7868,0x4274bf20;
-	}
-}
-[t:interface_fade,n:0x00a007b4]
-{
-	[interface_fade]
-	{
-	  f duration = 7;
-		interface = "chapter_7";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.608761,0,0.793353;
-	  p position = 28.2129,9.58375,24.9697,0x23689bb8;
-	}
-}
-[t:trigger_generic,n:0x00a007b6]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x00A007B4,0f,"0x4003","party_member_within_node",0), doc("[*labelled condition (party_member_within_node)*]");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.500000,1.000000,1.000000,"on_first_enter"), doc("[*multiple-boundary (trigger is one-shot)*][*multiple-boundary (trigger is one-shot)*][*multiple-boundary (trigger is one-shot)*][*multiple-boundary (trigger is one-shot)*][*multiple-boundary (trigger is one-shot)*][*multiple-boundary (trigger is one-shot)*][*multiple-boundary (trigger is one-shot)*]");
-				condition* = party_member_within_node(0xAAA60200,-1,-1,-1,"while_inside"), doc("send to trigger[*multiple-boundary (trigger is one-shot)*][*multiple-boundary (trigger is one-shot)*][*converted to one-shot*][*multiple-boundary (trigger is one-shot)*][*multiple-boundary (trigger is one-shot)*][*multiple-boundary (trigger is one-shot)*][*multiple-boundary (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = false;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.737278,0,0.67559;
-	  p position = 28.4324,8.70655,23.6829,0x23689bb8;
 	}
 }
 [t:trigger_generic,n:0x00a0077a]
@@ -1455,41 +1261,6 @@
 	[placement]
 	{
 	  p position = -7.95586,5.7,3.74016,0x65a528fe;
-	}
-}
-[t:trigger_generic,n:0x00a00907]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD FOR SPEECH";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("map_world_dc_r1_3"), doc("speech music");
-				action* = mood_change("map_world_dc_r1_2"), delay(56), doc("back to normal");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("nonataya is talking[*one-shot check (trigger is one-shot)*]");
-				condition* = party_member_within_node(0xAAA60200,1,-1,-1,"wait_for_every_message"), doc("party is within region[*message checker (trigger is non-pure )*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0.4,0,0;
-	}
-	[placement]
-	{
-	  p position = -4.68752,5.7,13.7522,0x65a528fe;
 	}
 }
 [t:trigger_generic,n:0x00a00052]
