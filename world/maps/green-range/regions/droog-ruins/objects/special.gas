@@ -1696,7 +1696,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_dc_r1_2");
+				action* = mood_change("green-range-droog-ruins-village");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1725,7 +1725,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_dc_r1_1");
+				action* = mood_change("green-range-droog-ruins");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1836,6 +1836,34 @@
 	  p position = -3.67506,0,-0.222996,0xc091f9fb;
 	}
 }
+[t:trigger_change_mood_box,n:0x00a00010]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-droog-ruins");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,4.000000,8.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0623169,6,0.0431862,0x489efc07;
+	}
+}
 [t:trigger_change_mood_box,n:0x00a008f7]
 {
 	[common]
@@ -1844,7 +1872,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_dc_r1_2");
+				action* = mood_change("green-range-droog-ruins-village");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,3.000000,7.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1861,6 +1889,34 @@
 	}
 	[placement]
 	{
-	  p position = -8.0213,2.43091,-8.55157,0x2333683e;
+	  p position = 26.318,3.70902,18.993,0x4a869ef3;
+	}
+}
+[t:trigger_change_mood_box,n:0x00a00011]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-droog-ruins");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,3.000000,7.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 17.5728,13.0636,23.7868,0x4274bf20;
 	}
 }
