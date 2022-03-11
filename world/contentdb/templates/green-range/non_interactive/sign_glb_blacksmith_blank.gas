@@ -1,4 +1,5 @@
-[t:template,n:sign_glb_blacksmith_blank_left]
+[t:template,n:sign_glb_blacksmith_blank_left] { specializes = sign_glb_blacksmith_blank_left_base; }
+[t:template,n:sign_glb_blacksmith_blank_left_base]
 {
 	doc = "blank sign_blacksmith_left";
 	specializes = base_sign_directional;
@@ -12,7 +13,9 @@
 		screen_name = "";
 	}
 }
-[t:template,n:sign_glb_blacksmith_blank_right]
+
+[t:template,n:sign_glb_blacksmith_blank_right] { specializes = sign_glb_blacksmith_blank_right_base; }
+[t:template,n:sign_glb_blacksmith_blank_right_base]
 {
 	doc = "blank sign_blacksmith_rt";
 	specializes = base_sign_directional;

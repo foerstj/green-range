@@ -1,4 +1,5 @@
-[t:template,n:sign_grs_town_blank]
+[t:template,n:sign_grs_town_blank] { specializes = sign_grs_town_blank_base; }
+[t:template,n:sign_grs_town_blank_base]
 {
 	doc = "blank directional_stonebridge";
 	specializes = base_sign_directional;
@@ -12,7 +13,9 @@
 		screen_name = "";
 	}
 }
-[t:template,n:sign_grs_town_blank_02]
+
+[t:template,n:sign_grs_town_blank_02] { specializes = sign_grs_town_blank_02_base; }
+[t:template,n:sign_grs_town_blank_02_base]
 {
 	doc = "blank directional_stonebridge_left";
 	specializes = base_sign_directional;
