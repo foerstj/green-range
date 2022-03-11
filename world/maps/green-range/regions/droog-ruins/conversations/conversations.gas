@@ -1,57 +1,74 @@
+[conversation_goquua]
+{
+	[text*]
+	{
+		choice = more;
+		order = 0;
+		screen_text = "My thanks for help, Goquua won't be able to keep drakes away much longer. Wish Goquua sooner realized true source of their rage.";
+	}
+	[text*]
+	{
+		choice = more;
+		order = 1;
+		screen_text = "Before we knew Seck awoke from slumber, desert drakes began to turn against us. Their attacks increased daily until our existence was threatened. In answer to our prayers for deliverance, Seck appeared with warning and proposal.";
+	}
+	[text*]
+	{
+		choice = more;
+		order = 2;
+		screen_text = "Seck warned us that king of your people had commanded Ancient Dragon of Rathe to send forth its spawn and massacre my people in Droog ancestral home. It seemed only explanation, and joining with Seck seemed only salvation against drakes. Goquua too believed these rumors until Goquua saw drakes attack patrols from Castle Ehb.";
+	}
+	[text*]
+	{
+		activate_quest* = quest_slay_dragon;
+		quest_dialog = true;
+		screen_text = "My people have begun preparing sacrifices to appease Ancient Dragon, but Goquua knows that not help. Reappearance of Seck and rage of drakes NOT... coincidence. Goquua now certain that Seck corrupted Ancient Dragon to unleash its spawn against world. My people will be first to fall if I fail to protect us, but your kingdom not far behind. If you are truly hero of your kingdom, you must slay Ancient Dragon before Seck can free him from Rathe.";
+	}
+}
+[conversation_goquua_2]
+{
+	[text*]
+	{
+		screen_text = "Goquua continue protecting his people with last ounce of strength, and call to spirits of moon in helping you put end to Seck for good.";
+	}
+}
 [conversation_narrator]
 {
 	[text*]
 	{
-		sample = s_v_chapter_6;
 		nis = true;
+		sample = s_v_chapter_6;
 		screen_text = "The surrender of the Droog meant the safety of the kingdom had been secured. But a warning had to be delivered to the throne before the revenant Seck could succeed in their mysterious plot.";
 		scroll_rate = 3.5;
 	}
 }
 [conversation_nonataya]
 {
-	[text*]
-	{
-		choice = shop;
-		activate_quest* = quest_journey_castle;
-		sample = s_v_dc_nonataya1;
-		screen_text = "Peace! We are victims all of these horrid Seck! In centuries past, the Seck hunted us near to extinction. When first they reappeared, our generation of warriors was yet newly hatched, unequal to the ancient sorceries the Seck threatened to unleash. For our survival, we made an unwise alliance. We would redeem ourselves. The Seck plot to seize a secret chamber they believe to be within Castle Ehb. You must move soon should you wish to prevent this. As a symbol of our intentions, I offer an exchange of goods, the best wares we have to offer.";
-		scroll_rate = 7;
-		quest_dialog = true;
-	}
 	[goodbye*]
 	{
 		sample = s_v_dc_nonataya2;
 	}
+	[text*]
+	{
+		activate_quest* = quest_journey_castle;
+		choice = shop;
+		quest_dialog = true;
+		sample = s_v_dc_nonataya1;
+		screen_text = "Peace! We are victims all of these horrid Seck! In centuries past, the Seck hunted us near to extinction. When first they reappeared, our generation of warriors was yet newly hatched, unequal to the ancient sorceries the Seck threatened to unleash. For our survival, we made an unwise alliance. We would redeem ourselves. The Seck plot to seize a secret chamber they believe to be within Castle Ehb. You must move soon should you wish to prevent this. As a symbol of our intentions, I offer an exchange of goods, the best wares we have to offer.";
+		scroll_rate = 7;
+	}
 }
 [conversation_nonataya_two]
 {
+	[goodbye*]
+	{
+		sample = s_v_dc_nonataya2;
+	}
 	[text*]
 	{
 		choice = shop;
 		sample = s_v_dc_nonataya3;
 		screen_text = "Do you require additional supplies?";
-	}
-	[goodbye*]
-	{
-		sample = s_v_dc_nonataya2;
-	}
-}
-[conversation_ulfgrim_join]
-{
-	[text*]
-	{
-		choice = potential_member;
-		sample = s_v_dc_ulfgrim1;
-		screen_text = "An age ago I fought with the bladdy 10th Legion in the battle o' the Plains. These days I've no more trust for king nor Legion any more than I do for Droog nor Traveler. All I trust is a handful o' gold. If you want me to fight for ye, you have ta 'earn' my trust!";
-	}
-}
-[conversation_ulfgrim_accept_no_money]
-{
-	[text*]
-	{
-		sample = s_v_dc_ulfgrim2;
-		screen_text = "Are you a fool!?! That won't even buy the trust of a gremal! Don't talk ta me until you're prepared to pay!";
 	}
 }
 [conversation_ulfgrim_accept_have_money]
@@ -62,21 +79,12 @@
 		screen_text = "That's doon then. I'll fight for yer cause as long as I'm able, but doon expect me to bow and scrape to any kingdom types. The only authority I respect in this warld is my own!";
 	}
 }
-[conversation_ulfgrim_reject]
+[conversation_ulfgrim_accept_no_money]
 {
 	[text*]
 	{
-		sample = s_v_dc_ulfgrim4;
-		screen_text = "Suits yourself! I just hope the other side doesn't make me a better offer!";
-	}
-}
-[conversation_ulfgrim_rejoin]
-{
-	[text*]
-	{
-		choice = potential_member;
-		sample = s_v_dc_ulfgrim5;
-		screen_text = "You've turned your back on Ulfgrim before. That's a considerable lack o' respect to me. You'll pay me my standard fee plus a little extra for insulting my honor! What will it be?";
+		sample = s_v_dc_ulfgrim2;
+		screen_text = "Are you a fool!?! That won't even buy the trust of a gremal! Don't talk ta me until you're prepared to pay!";
 	}
 }
 [conversation_ulfgrim_disband]
@@ -96,38 +104,67 @@
 		screen_text = "I'm not in the best mood thanks to you, so I'll make myself plain. It's a dangerous world out there, and I'd be a fool not to take help even from the likes of you. I'll travel with you again, but don't expect I'll go much out o' my way to protect your sorry carcass. Got it?! Good!";
 	}
 }
-[conversation_goquua]
+[conversation_ulfgrim_join]
 {
 	[text*]
 	{
-		//sample = s_v_greet_droog_hello;
-		order = 0;
-		screen_text = "My thanks for help, Goquua won't be able to keep drakes away much longer. Wish Goquua sooner realized true source of their rage.";
-		choice = more;
-	}
-	[text*]
-	{
-		order = 1;
-		screen_text = "Before we knew Seck awoke from slumber, desert drakes began to turn against us. Their attacks increased daily until our existence was threatened. In answer to our prayers for deliverance, Seck appeared with warning and proposal.";
-		choice = more;
-	}
-	[text*]
-	{
-		order = 2;
-		screen_text = "Seck warned us that king of your people had commanded Ancient Dragon of Rathe to send forth its spawn and massacre my people in Droog ancestral home. It seemed only explanation, and joining with Seck seemed only salvation against drakes. Goquua too believed these rumors until Goquua saw drakes attack patrols from Castle Ehb.";
-		choice = more;
-	}
-	[text*]
-	{
-		screen_text = "My people have begun preparing sacrifices to appease Ancient Dragon, but Goquua knows that not help. Reappearance of Seck and rage of drakes NOT... coincidence. Goquua now certain that Seck corrupted Ancient Dragon to unleash its spawn against world. My people will be first to fall if I fail to protect us, but your kingdom not far behind. If you are truly hero of your kingdom, you must slay Ancient Dragon before Seck can free him from Rathe.";
-		activate_quest* = quest_slay_dragon;
-		quest_dialog = true;
+		choice = potential_member;
+		sample = s_v_dc_ulfgrim1;
+		screen_text = "An age ago I fought with the bladdy 10th Legion in the battle o' the Plains. These days I've no more trust for king nor Legion any more than I do for Droog nor Traveler. All I trust is a handful o' gold. If you want me to fight for ye, you have ta 'earn' my trust!";
 	}
 }
-[conversation_goquua_2]
+[conversation_ulfgrim_reject]
 {
 	[text*]
 	{
-		screen_text = "Goquua continue protecting his people with last ounce of strength, and call to spirits of moon in helping you put end to Seck for good.";
+		sample = s_v_dc_ulfgrim4;
+		screen_text = "Suits yourself! I just hope the other side doesn't make me a better offer!";
+	}
+}
+[conversation_ulfgrim_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_dc_ulfgrim5;
+		screen_text = "You've turned your back on Ulfgrim before. That's a considerable lack o' respect to me. You'll pay me my standard fee plus a little extra for insulting my honor! What will it be?";
+	}
+}
+[ranger]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Well met, stranger. My name is Gottfrid, I am a Ranger.
+I come here from time to time to look after the ruins and light the ancient braziers - I like the serenity of this place...";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "The legendary explorers, Fedwyrr and Klars, encountered the Droog in their initial journey to map the lands west of the Empire of Stars, but it was not until imperial traders arrived in large numbers that the Droog truly became aware of these strange outsiders. For years, their kind had lived in relative isolation in the mountains of the Green Range, but now, men from the east sought to open trade routes between their two peoples. Etan Stonebridge was the most successful of these intrepid merchants, earning exclusive trading rights with the Droog.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 2;
+		screen_text = "By 604, the Droog elders, known as the Circle of the First, began to suspect that these outsiders were not 'passing through' their lands, but intended to stay. Seeking to rid themselves of these interlopers, the Droog devised a ploy that set their enemies against one another. For two long years, the Green Range Conflict would rage between the Humans, Goblins, and Seck. Fortress Kroth was constructed by the Seck nearby to pacify any Droog resistance that may arise in the east. Unfortunately for the Droog, the Empire of Stars came out of the war even stronger than before.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 3;
+		screen_text = "When the Empire learned of the treachery of the natives, the Droog were forced to concede enormous tracts of land in exchange for semi-autonomy. By the early 800s, all of the Droog in Ehb were either killed, or forced to relocate to the Cliffs of Fire. This was the time known as the Great Relocation.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "This dwelling here was abandoned more than 500 years ago. The Droog cursed the dwelling when they left it, so nobody can inhabit it anymore.
+Feel free to look around!";
+	  f scroll_rate = 10.000000;
 	}
 }

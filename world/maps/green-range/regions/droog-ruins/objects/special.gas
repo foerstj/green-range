@@ -958,7 +958,7 @@
 	  p position = -7.95586,5.7,3.74016,0x65a528fe;
 	}
 }
-[t:trigger_change_mood_box,n:0x00a00012]
+[t:trigger_change_mood_box,n:0x00a00011]
 {
 	[common]
 	{
@@ -968,7 +968,7 @@
 			{
 				action* = mood_change("green-range-droog-ruins");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,4.000000,8.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(4.000000,3.000000,7.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -983,7 +983,401 @@
 	}
 	[placement]
 	{
-	  p position = -0.0464973,1.11034,4.47582,0x348e62a1;
+	  p position = 17.5728,13.0636,23.7868,0x4274bf20;
+	}
+}
+[t:trigger_fade_node_group,n:0x00a0005a]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xAAA60200,1,9,-1,"out:black"), group(1);
+				action* = fade_nodes(0xAAA60200,1,9,-1,"in"), group(2);
+			  b can_self_destruct = true;
+				condition* = party_member_entered_trigger_group("dc_r1_house_9","on_every_enter"), group(1);
+				condition* = party_member_left_trigger_group("dc_r1_house_9","on_every_leave"), group(2);
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 8.81197,0.550002,15.7441,0xbc8cadbf;
+	}
+}
+[t:trigger_generic,n:0x00a0005b]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.500000,2.000000,3.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = dc_r1_house_9;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 10.3489,0.550001,15.8738,0xbc8cadbf;
+	}
+}
+[t:trigger_generic,n:0x00a00060]
+{
+	[common]
+	{
+		dev_instance_text = "FADE";
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,2.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = dc_r1_house_9;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 10.3657,0.550001,15.8478,0xbc8cadbf;
+	}
+}
+[t:trigger_fade_node_group,n:0x00a00057]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xAAA60200,1,8,-1,"out:black"), group(1);
+				action* = fade_nodes(0xAAA60200,1,8,-1,"in"), group(2);
+			  b can_self_destruct = true;
+				condition* = party_member_entered_trigger_group("dc_r1_house_8","on_every_enter"), group(1);
+				condition* = party_member_left_trigger_group("dc_r1_house_8","on_every_leave"), group(2);
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -7.84026,0.500006,18.6704,0xde852499;
+	}
+}
+[t:trigger_generic,n:0x00a00058]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.700000,2.000000,2.100000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = dc_r1_house_8;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -6.60358,0.500008,18.5334,0xde852499;
+	}
+}
+[t:trigger_generic,n:0x00a00059]
+{
+	[common]
+	{
+		dev_instance_text = "FADE";
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.500000,2.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = dc_r1_house_8;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -6.77381,0.500006,15.3736,0xde852499;
+	}
+}
+[t:trigger_fade_node_group,n:0x00a0005c]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xAAA60200,1,10,-1,"out:black"), group(1);
+				action* = fade_nodes(0xAAA60200,1,10,-1,"in"), group(2);
+			  b can_self_destruct = true;
+				condition* = party_member_entered_trigger_group("dc_r1_house_10","on_every_enter"), group(1);
+				condition* = party_member_left_trigger_group("dc_r1_house_10","on_every_leave"), group(2);
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 3.81196,0.550001,10.7441,0xe8e17d2b;
+	}
+}
+[t:trigger_generic,n:0x00a0005d]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.500000,2.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = dc_r1_house_10;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 4.30472,0.550001,9.77002,0xe8e17d2b;
+	}
+}
+[t:trigger_fade_node_group,n:0x00a0005e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xAAA60200,1,11,-1,"out:black"), group(1);
+				action* = fade_nodes(0xAAA60200,1,11,-1,"in"), group(2);
+			  b can_self_destruct = true;
+				condition* = party_member_entered_trigger_group("dc_r1_house_11","on_every_enter"), group(1);
+				condition* = party_member_left_trigger_group("dc_r1_house_11","on_every_leave"), group(2);
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 14.812,0.550003,10.7442,0xe8e17d2b;
+	}
+}
+[t:trigger_generic,n:0x00a0005f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,2.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = dc_r1_house_11;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 15.9174,0.550001,9.69113,0xe8e17d2b;
+	}
+}
+[t:trigger_generic,n:0x00a00061]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,2.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = dc_r1_house_10;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 7.75196,0.550001,9.0117,0xe8e17d2b;
+	}
+}
+[t:trigger_generic,n:0x00a00062]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,2.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = dc_r1_house_11;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 12.854,0.550001,9.09187,0xe8e17d2b;
+	}
+}
+[t:trigger_generic,n:0x00a00069]
+{
+	[common]
+	{
+		dev_instance_text = "FADE";
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,2.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = dc_r1_house_13;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 35.3529,6.55,16.8915,0x4a869ef3;
+	}
+}
+[t:trigger_change_mood_box,n:0x00a008f7]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-droog-ruins-village");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,3.000000,7.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 26.318,3.70902,18.993,0x4a869ef3;
 	}
 }
 [t:trigger_fade_node_group,n:0x00a00043]
@@ -1269,401 +1663,7 @@
 	  p position = 33.0296,0.55,6.00567,0xf7d2e9a6;
 	}
 }
-[t:trigger_fade_node_group,n:0x00a0005c]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0xAAA60200,1,10,-1,"out:black"), group(1);
-				action* = fade_nodes(0xAAA60200,1,10,-1,"in"), group(2);
-			  b can_self_destruct = true;
-				condition* = party_member_entered_trigger_group("dc_r1_house_10","on_every_enter"), group(1);
-				condition* = party_member_left_trigger_group("dc_r1_house_10","on_every_leave"), group(2);
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 3.81196,0.550001,10.7441,0xe8e17d2b;
-	}
-}
-[t:trigger_generic,n:0x00a0005d]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,2.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = dc_r1_house_10;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 4.30472,0.550001,9.77002,0xe8e17d2b;
-	}
-}
-[t:trigger_fade_node_group,n:0x00a0005e]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0xAAA60200,1,11,-1,"out:black"), group(1);
-				action* = fade_nodes(0xAAA60200,1,11,-1,"in"), group(2);
-			  b can_self_destruct = true;
-				condition* = party_member_entered_trigger_group("dc_r1_house_11","on_every_enter"), group(1);
-				condition* = party_member_left_trigger_group("dc_r1_house_11","on_every_leave"), group(2);
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 14.812,0.550003,10.7442,0xe8e17d2b;
-	}
-}
-[t:trigger_generic,n:0x00a0005f]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,2.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = dc_r1_house_11;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 15.9174,0.550001,9.69113,0xe8e17d2b;
-	}
-}
-[t:trigger_generic,n:0x00a00061]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,2.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = dc_r1_house_10;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 7.75196,0.550001,9.0117,0xe8e17d2b;
-	}
-}
-[t:trigger_generic,n:0x00a00062]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,2.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = dc_r1_house_11;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 12.854,0.550001,9.09187,0xe8e17d2b;
-	}
-}
-[t:trigger_generic,n:0x00a00069]
-{
-	[common]
-	{
-		dev_instance_text = "FADE";
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = dc_r1_house_13;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 35.3529,6.55,16.8915,0x4a869ef3;
-	}
-}
-[t:trigger_change_mood_box,n:0x00a008f7]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("green-range-droog-ruins-village");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,3.000000,7.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 26.318,3.70902,18.993,0x4a869ef3;
-	}
-}
-[t:trigger_fade_node_group,n:0x00a0005a]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0xAAA60200,1,9,-1,"out:black"), group(1);
-				action* = fade_nodes(0xAAA60200,1,9,-1,"in"), group(2);
-			  b can_self_destruct = true;
-				condition* = party_member_entered_trigger_group("dc_r1_house_9","on_every_enter"), group(1);
-				condition* = party_member_left_trigger_group("dc_r1_house_9","on_every_leave"), group(2);
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 8.81197,0.550002,15.7441,0xbc8cadbf;
-	}
-}
-[t:trigger_generic,n:0x00a0005b]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.500000,2.000000,3.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = dc_r1_house_9;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 10.3489,0.550001,15.8738,0xbc8cadbf;
-	}
-}
-[t:trigger_generic,n:0x00a00060]
-{
-	[common]
-	{
-		dev_instance_text = "FADE";
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = dc_r1_house_9;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 10.3657,0.550001,15.8478,0xbc8cadbf;
-	}
-}
-[t:trigger_fade_node_group,n:0x00a00057]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0xAAA60200,1,8,-1,"out:black"), group(1);
-				action* = fade_nodes(0xAAA60200,1,8,-1,"in"), group(2);
-			  b can_self_destruct = true;
-				condition* = party_member_entered_trigger_group("dc_r1_house_8","on_every_enter"), group(1);
-				condition* = party_member_left_trigger_group("dc_r1_house_8","on_every_leave"), group(2);
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -7.84026,0.500006,18.6704,0xde852499;
-	}
-}
-[t:trigger_generic,n:0x00a00058]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.700000,2.000000,2.100000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = dc_r1_house_8;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -6.60358,0.500008,18.5334,0xde852499;
-	}
-}
-[t:trigger_generic,n:0x00a00059]
-{
-	[common]
-	{
-		dev_instance_text = "FADE";
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.500000,2.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = dc_r1_house_8;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -6.77381,0.500006,15.3736,0xde852499;
-	}
-}
-[t:trigger_change_mood_box,n:0x00a00011]
+[t:trigger_change_mood_box,n:0x00a00012]
 {
 	[common]
 	{
@@ -1673,7 +1673,7 @@
 			{
 				action* = mood_change("green-range-droog-ruins");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,3.000000,7.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,4.000000,8.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1688,7 +1688,7 @@
 	}
 	[placement]
 	{
-	  p position = 17.5728,13.0636,23.7868,0x4274bf20;
+	  p position = -0.0464973,1.11034,4.47582,0x348e62a1;
 	}
 }
 [t:trigger_change_mood_box,n:0x00a00010]

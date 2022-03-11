@@ -1,0 +1,42 @@
+[t:template,n:gr_npc_ranger_droog_ruins]
+{
+	category_name = "1W_character";
+	doc = "guard_03";
+	specializes = base_npc_fb;
+
+	[aspect]
+	{
+		is_collidable = true;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_05;
+			1 = b_c_pos_a1_009;
+		}
+	}
+	[common]
+	{
+		screen_name = "Ranger NPC";
+	}
+	[conversation]
+	{
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = gr_leather_rangers;
+			es_feet = gr_boots_rangers;
+			es_weapon_hand = #sd_g_c_st_1h_avg:o_avg;
+		}
+	}
+    [mind]
+    {
+		actor_may_attack = true;
+        actor_may_be_attacked = true;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
