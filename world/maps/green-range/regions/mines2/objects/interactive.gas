@@ -1,0 +1,439 @@
+[t:sign_glb_01,n:0x0350027b]
+{
+	[common]
+	{
+		dev_instance_text = "sign_2";
+		screen_name = "Town of Fallraen, 94";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,-0.707107;
+	  p position = -2.88257,-0.224549,1.6487,0x4ef6fd92;
+	}
+}
+[t:sign_glb_01,n:0x0350027c]
+{
+	[common]
+	{
+		screen_name = "Town of Crystwind, 30";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.46266,-0.529508,1.47878,0x4ef6fd92;
+	}
+}
+[t:sign_glb_01,n:0x035003e1]
+{
+	[common]
+	{
+		screen_name = "Miner's Haven (North)";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-4.91738e-007;
+	  p position = -3.27439,1.90735e-006,1.45097,0x4ef6fd92;
+	}
+}
+[t:sign_glb_01,n:0x035003d4]
+{
+	[common]
+	{
+		dev_instance_text = "sign_6";
+		screen_name = "Town of Fallraen, 99";
+	}
+	[placement]
+	{
+	  q orientation = 0,-8.9407e-008,0,1;
+	  p position = 6.40764,2,1.04886,0x38bf5e05;
+	}
+}
+[t:rock_grs_breakable_01,n:0x03500283]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = -0.984154,-1.86111,-2.97397,0x9a3fd925;
+	}
+}
+[t:rock_grs_breakable_01,n:0x035003c7]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.4;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.873665,-1.86505,-0.622116,0x9a3fd925;
+	}
+}
+[t:rock_grs_breakable_01,n:0x035003c8]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.25721,-1.84971,0.05513,0x9a3fd925;
+	}
+}
+[t:rock_grs_breakable_01,n:0x035003c9]
+{
+	[placement]
+	{
+	  q orientation = 0,0.19509,0,-0.980785;
+	  p position = 1.76399,-1.828,-3.28683,0x9a3fd925;
+	}
+}
+[t:sign_glb_01,n:0x035003dd]
+{
+	[common]
+	{
+		dev_instance_text = "sign_5";
+		screen_name = "Town of Crystwind, 36";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,-0.707106;
+	  p position = 1.80296,-0.479691,0.46727,0xbe3f42a6;
+	}
+}
+[t:sign_glb_01,n:0x035003de]
+{
+	[common]
+	{
+		screen_name = "Miner's Haven (South)";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,-0.707107;
+	  p position = -3.5397,-0.224191,1.71211,0xd351ef9b;
+	}
+}
+[t:sign_glb_01,n:0x035003e0]
+{
+	[common]
+	{
+		screen_name = "Town of Fallraen, 93";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.857167,0,0.515038;
+	  p position = -3.10363,4.29153e-006,1.95187,0xd351ef9b;
+	}
+}
+[t:statue_cav_spin_02,n:0x035003ea]
+{
+	[common]
+	{
+		screen_name = "Crystwind Old Mines to Crystwind Displacer";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x035003EC;
+	  x on_scid = 0x035003EC;
+	  f reset_time = 25;
+	  f reset_time_2 = 25;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = 0.0311699,0.2,0.0108852,0x37c99856;
+		use_point_scids = 0x035003eb;
+	}
+}
+[t:wall_cav_boarded,n:0x03500015]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x03500256,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.999998,0,0;
+	  p position = 0.156433,-0.46925,-2.38068,0x1b3b9a01;
+	}
+}
+[t:respawn_statue,n:0x03500257]
+{
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 0.0570068,-0.00418401,2.47988,0x3c938ca6;
+		use_point_scids = 0x035003e9;
+	}
+}
+[t:sign_glb_01,n:0x035003d6]
+{
+	[common]
+	{
+		dev_instance_text = "sign_4";
+		screen_name = "Town of Crystwind, 37";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 2.61234,-0.422724,-0.537598,0x144918ce;
+	}
+}
+[t:sign_glb_01,n:0x035003d8]
+{
+	[common]
+	{
+		screen_name = "Town of Fallraen, 87";
+	}
+	[placement]
+	{
+	  q orientation = 0,-8.9407e-008,0,1;
+	  p position = 2.28466,9.53674e-007,-0.41457,0x144918ce;
+	}
+}
+[t:wall_cav_boarded,n:0x03500013]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x03500255,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.999998,0,0;
+	  p position = 0.003418,-0.439578,-2.37181,0x03e38c21;
+	}
+}
+[t:wall_cav_boarded,n:0x03500011]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x03500254,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.999998,0,0;
+	  p position = 0.191849,-0.463387,-2.43084,0xf585acd8;
+	}
+}
+[t:respawn_statue,n:0x03500264]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382684;
+	  p position = 3.42981,4.76837e-007,-0.571198,0x6a559ebf;
+		use_point_scids = 0x035003f6;
+	}
+}
+[t:sign_glb_01,n:0x0350026f]
+{
+	[common]
+	{
+		screen_name = "Town of Fallraen, 105";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.608762,0,0.793353;
+	  p position = -3.30175,-0.335366,2.34377,0x6a559ebf;
+	}
+}
+[t:sign_glb_01,n:0x03500270]
+{
+	[common]
+	{
+		screen_name = "Town of Crystwind, 25";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.866026,0,0.5;
+	  p position = -3.25457,-0.628731,2.00092,0x6a559ebf;
+	}
+}
+[t:sign_glb_01,n:0x035003d1]
+{
+	[common]
+	{
+		screen_name = "Town of Crystwind, 21";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,-0.707106;
+	  p position = 1.92767,-0.556211,1.02971,0x0f09f8d8;
+	}
+}
+[t:sign_glb_01,n:0x035003d2]
+{
+	[common]
+	{
+		dev_instance_text = "sign_1";
+		screen_name = "Town of Fallraen, 103";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 1.83157,9.53674e-007,0.840263,0x0f09f8d8;
+	}
+}
+[t:respawn_statue,n:0x03500374]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 3.2661,-2,-1.88704,0x0e5c2353;
+		use_point_scids = 0x035003e8;
+	}
+}
+[t:sign_glb_01,n:0x035003d9]
+{
+	[common]
+	{
+		dev_instance_text = "sign_3";
+		screen_name = "Town of Fallraen, 81";
+	}
+	[placement]
+	{
+	  q orientation = 0,-8.9407e-008,0,1;
+	  p position = -1.94248,-2,-3.94186,0xdb2b7853;
+	}
+}
+[t:lever_glb_07,n:0x0350028f]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x03500003;
+	  f on_message_delay = 1;
+	  x on_scid = 0x03500003;
+	  f reset_time = 5;
+	  f reset_time_2 = 5;
+	}
+	[placement]
+	{
+	  q orientation = 2.68221e-007,-1.49012e-007,-1.42109e-014,-1;
+	  p position = 1.5073,-1.65,-0.807617,0x0ba613e3;
+	}
+}
+[t:door_cav_gate_log,n:0x03500329]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,1.49012e-007;
+	  p position = 0.00445916,-1.65,-8.02102,0x0ba613e3;
+	}
+}
+[t:lever_glb_06,n:0x03500365]
+{
+	[aspect]
+	{
+	  f use_range = 0.7;
+	}
+	[on_off_lever]
+	{
+		on_message_4 = we_req_deactivate;
+	  x on_scid = 0x0350036B;
+	  x on_scid_3 = 0x03500329;
+	  x on_scid_4 = 0x0350036A;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = -4.72288,-0.365329,-10.8474,0x0ba613e3;
+		use_point_scids = 0x0350036c;
+	}
+}
+[t:lever_glb_06,n:0x0350036a]
+{
+	[aspect]
+	{
+	  f use_range = 0.7;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+		off_message_3 = we_req_activate;
+	  x off_scid = 0x0350036B;
+	  x off_scid_3 = 0x03500329;
+		on_message_4 = we_req_deactivate;
+	  x on_scid = 0x0350036B;
+	  x on_scid_3 = 0x03500329;
+	  x on_scid_4 = 0x03500365;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0,0,-1;
+	  p position = 4.66224,-0.365396,-5.08582,0x0ba613e3;
+		use_point_scids = 0x0350036d;
+	}
+}
+[t:lever_glb_07,n:0x0350036e]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x03500003;
+	  f on_message_delay = 1;
+	  x on_scid = 0x03500003;
+	  f reset_time = 20;
+	  f reset_time_2 = 20;
+	}
+	[placement]
+	{
+	  q orientation = -2.68221e-007,0,1.42109e-014,1;
+	  p position = 1.7282,-40.1,-0.274994,0x2c218414;
+	}
+}

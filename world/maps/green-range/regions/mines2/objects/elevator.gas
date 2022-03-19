@@ -1,0 +1,136 @@
+[t:elevator_instant_4s_1c,n:0x035003ef]
+{
+	[elevator_instant_4s_1c]
+	{
+	  i connect_door_location1_level1 = 7;
+	  i connect_door_location1_level2 = 8;
+	  i connect_door_location2_level1 = 9;
+	  i connect_door_location2_level2 = 10;
+	  x connect_node_location1 = 0xA4DD026F;
+	  x connect_node_location2 = 0xAA764DA6;
+		down_effect = "displacer_plate_down";
+	  f duration_location1_moving_to_lv1 = 16;
+	  f duration_location2_moving_to_lv1 = 16;
+	  i e2_connect_door_location1_level1 = 5;
+	  i e2_connect_door_location1_level2 = 6;
+	  i e2_connect_door_location2_level1 = 7;
+	  i e2_connect_door_location2_level2 = 8;
+	  x e2_elevator_node = 0xF9CDB7C4;
+	  i elevator_door_location1_level1 = 2;
+	  i elevator_door_location1_level2 = 2;
+	  i elevator_door_location2_level1 = 2;
+	  i elevator_door_location2_level2 = 2;
+	  x elevator_node = 0x37C99856;
+		location1_moving_to_lv1_actioninfo = "multiplayer_world_mines2_teleport";
+		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		location2_moving_to_lv1_actioninfo = "multiplayer_world_mine_town_teleport_2";
+		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		material = "hub";
+	  x other_elevator = 0x00C0041F;
+		up_effect = "displacer_plate_up";
+	}
+	[placement]
+	{
+	  p position = 0,5,0,0x37c99856;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x0350000e]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 6;
+	  x connect_node_level1 = 0x7FFE7429;
+	  x connect_node_level2 = 0xBFCE85D3;
+	  f duration = 4;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x4F66DFBD;
+		material = "dm_crane";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.0156288,-3.66319,-0.0347195,0x4f66dfbd;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x03500001]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 1;
+	  i connect_door_level2 = 2;
+	  x connect_node = 0xBF45E343;
+	  f duration = 8;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xCB734978;
+		level1_trans2_hint = ah_yaxis_positive;
+		level2_trans1_hint = ah_yaxis_negative;
+		material = "dm_crane";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,9.15524e-008;
+	  p position = 7.96358,1.188,0.0503848,0xcb734978;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x0350036b]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 23;
+	  i connect_door_level2 = 23;
+	  x connect_node = 0x0BA613E3;
+	  f duration = 5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0xDAA79A5A;
+		material = "dm_small";
+	}
+	[placement]
+	{
+	  p position = 0.0190427,2.24161,-9.34534,0x0ba613e3;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x03500003]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 21;
+	  i connect_door_level2 = 2;
+	  x connect_node_level1 = 0x0BA613E3;
+	  x connect_node_level2 = 0xB96DC826;
+	  f duration = 20;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x2C218414;
+		material = "dm_small";
+		moving1_actioninfo = "multiplayer_world_path2ice_2,20;0x13C295ED,1,-1,-1,out:black,5;0xADA20101,1,-1,-1,in,19.5;0xADA20101,2,-1,-1,in,1;0xADA20101,3,-1,-1,out:black;0xADA20101,4,-1,-1,out:alpha";
+		moving2_actioninfo = "multiplayer_world_mines2_4;0x13C295ED,1,-1,-1,in,10;0xADA20101,1,-1,-1,out:black;0xADA20101,2,-1,-1,out:black,20";
+	}
+	[placement]
+	{
+	  p position = -0.168663,-40.1,1.10725,0x2c218414;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x03500004]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 9;
+	  x connect_node_level1 = 0xDE17364F;
+	  x connect_node_level2 = 0xFE7B2F78;
+	  f duration = 4;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x95CFA64D;
+		material = "dm_crane";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,0.707107;
+	  p position = -0.0069046,-3.75838,-0.035553,0x95cfa64d;
+	}
+}
