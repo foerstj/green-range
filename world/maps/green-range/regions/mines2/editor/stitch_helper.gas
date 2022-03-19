@@ -2,14 +2,6 @@
 {
 	source_region_guid = 0x13C295ED;
 	source_region_name = mines2;
-	[t:stitch_editor,n:mine_town]
-	{
-		dest_region = mine_town;
-		[node_ids]
-		{
-			0x00000fe1 = 0xEE9EF6FA,6;
-		}
-	}
 	[t:stitch_editor,n:mines]
 	{
 		dest_region = mines;
@@ -34,6 +26,14 @@
 			0x00000e10 = 0x6697E749,5;
 			0x00000e11 = 0x6697E749,4;
 			0x00000e12 = 0xCDEFAD53,4;
+		}
+	}
+	[t:stitch_editor,n:mountains-x05z13]
+	{
+		dest_region = mountains-x05z13;
+		[node_ids]
+		{
+			0x00000fe1 = 0xEE9EF6FA,6;
 		}
 	}
 	[t:stitch_editor,n:path2ice]
