@@ -496,6 +496,52 @@
 	  p position = 0.0191542,-1.93325,2.43505,0x312f4ae0;
 	}
 }
+[t:trigger_generic,n:0x09100008]
+{
+	[common]
+	{
+		dev_instance_text = "FADE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x09100006,0f,"default","",0);
+				action* = fade_nodes_global(0x7B6BA74C,1,14,-1,"out:black");
+				action* = fade_nodes_global(0x7B6BA74C,1,2,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.703746,-1.53362,1.77633,0x8424090b;
+	}
+}
+[t:use_point,n:0x09100009]
+{
+	[placement]
+	{
+	  p position = -1.84327,-1.58932,-2.45931,0x8424090b;
+	}
+}
+[t:use_point,n:0x0910000a]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.623,-1.59757,1.95358,0x8424090b;
+	}
+}
 [t:trigger_generic,n:0x091000a2]
 {
 	[common]

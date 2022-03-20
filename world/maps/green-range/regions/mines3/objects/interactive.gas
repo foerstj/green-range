@@ -320,6 +320,44 @@
 		use_point_scids = 0x091001c5;
 	}
 }
+[t:lever_glb_06,n:0x09100005]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1;
+	}
+	[on_off_lever]
+	{
+	  x on_scid = 0x09100008;
+	  b one_shot = true;
+	  f reset_time_2 = 1;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,5.96046e-008;
+	  p position = -2.46943,-1.2064,-2.0491,0x8424090b;
+		use_point_scids = 0x09100009;
+	}
+}
+[t:lever_glb_06,n:0x09100007]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1;
+	}
+	[on_off_lever]
+	{
+	  x on_scid = 0x09100008;
+	  b one_shot = true;
+	  f reset_time_2 = 1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.56e-007,0,1;
+	  p position = 2.47224,-1.12559,2.04446,0x8424090b;
+		use_point_scids = 0x0910000a;
+	}
+}
 [t:lever_glb_06,n:0x0910007c]
 {
 	[aspect]
