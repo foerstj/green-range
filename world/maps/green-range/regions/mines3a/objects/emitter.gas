@@ -76,14 +76,6 @@
 		event_sound = "env_pipe_liquid";
 	}
 }
-[t:emitter_glb_furnace,n:0x0910005d]
-{
-	[placement]
-	{
-	  q orientation = 0,-5.96046e-008,0,1;
-	  p position = -1.82245,-0.95769,-2.57492,0xc1fa85b5;
-	}
-}
 [t:emt_sound,n:0x091001ee]
 {
 	[placement]
@@ -225,5 +217,13 @@
 	{
 	  b continual_loop = true;
 		event_sound = "env_pipe_liquid";
+	}
+}
+[t:emitter_glb_furnace,n:0x0910005d]
+{
+	[placement]
+	{
+	  q orientation = 0,-5.96046e-008,0,1;
+	  p position = -1.82245,-0.95769,-2.57492,0xc1fa85b5;
 	}
 }
