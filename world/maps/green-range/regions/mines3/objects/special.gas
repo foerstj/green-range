@@ -101,6 +101,35 @@
 	  p position = 0.0932136,-1.92899,2.52662,0xedf3e121;
 	}
 }
+[t:trigger_generic,n:0x0910000b]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_mines2_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.11429,0,-1.96448,0xf495d822;
+	}
+}
 [t:trigger_generic,n:0x091000a0]
 {
 	[common]
@@ -1087,34 +1116,5 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = 1.85821,-1.98762,2.01351,0x537c0a64;
-	}
-}
-[t:trigger_generic,n:0x0910000b]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_mines2_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.11429,0,-1.96448,0xf495d822;
 	}
 }
