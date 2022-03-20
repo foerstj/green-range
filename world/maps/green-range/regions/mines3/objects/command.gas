@@ -1,3 +1,18 @@
+[t:light_flicker,n:0x09100066]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x2169ED0F;
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = 3.54359,-2,1.52276,0x0346ecd6;
+	}
+}
 [t:animate_object,n:0x091000d1]
 {
 	[animate_object]
@@ -44,20 +59,5 @@
 	{
 	  q orientation = 0,5.96046e-008,0,1;
 	  p position = 6.88298,-2,0.15609,0xd284fd26;
-	}
-}
-[t:light_flicker,n:0x09100066]
-{
-	[light_flicker]
-	{
-	  f flicker_frequency_max = 12;
-	  f flicker_frequency_min = 10;
-	  f magnitude = 0.15;
-	  x siege_light = 0x2169ED0F;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -2.13654,-1.5,-4.86207,0x99cf560d;
 	}
 }
