@@ -1,0 +1,21 @@
+[conversation_torg]
+{
+	[text*]
+	{
+		activate_quest* = quest_torg_seek_overseer;
+		sample = s_v_path2dm_torg1;
+		screen_text = "Bravely Done! These lot aren't much of a threat, but I'd stake me mine there's someone higher up pullin' their strings. The overseer of Glacern needs to be told and soon. If yer headin that way, I'd be most appreciative if ye pass the word along. I'd go with ya but I'll have me hands full getting me lads back to work, now that ya wiped the filth outa the place. If the overseer gives ya any guff, ya can flash him me lucky amulet an he'll know I sent ya. Might as well keep it, it's the least I can do fer all the pakkin' you done down here.";
+		scroll_rate = 6.5;
+		quest_dialog = true;
+       	button_1_text = "More";
+       	button_1_value = talked_to_torg;
+	}
+}
+[conversation_torg_2]
+{
+	[text*]
+	{
+		sample = s_v_path2dm_torg2;
+		screen_text = "Don't dally about, get word to the Overseer in Glacern! We'll do well enough without you.";
+	}
+}

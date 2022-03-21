@@ -1,0 +1,80 @@
+[t:cmd_ai_c_patrol,n:0x001000f3]
+{
+	[placement]
+	{
+	  p position = -3.01913,-4e-006,-1.11671,0x8ea083e4;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x001000f4]
+{
+	[placement]
+	{
+	  p position = -3.99168,-4e-006,1.23477,0x8ea083e4;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x001000f1]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x001000F3;
+	}
+	[placement]
+	{
+	  p position = 1.60871,0,-1.59887,0x0a7ac4ab;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x001000f2]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x001000F4;
+	}
+	[placement]
+	{
+	  p position = -0.362965,-4e-006,2.49538,0x0a7ac4ab;
+	}
+}
+[t:cmd_inventory_changer,n:0x001002ec]
+{
+	[cmd_inv_changer]
+	{
+	  b go_within_sphere = true;
+		job1 = "drop";
+		template_name = "amulet_horseshoe";
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.38419e-007,0,1;
+	  p position = 3.82688,0,0.558762,0x8bb2c15b;
+	}
+}
+[t:cmd_ai_c_move,n:0x001000a2]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00100303;
+		placement = qp_clear;
+	}
+	[placement]
+	{
+	  p position = -2.00876,0.649136,-0.186392,0x6cd156e3;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00100303]
+{
+	[placement]
+	{
+	  p position = 0.138664,0.779484,3.06579,0x8f9fd7f4;
+	}
+}
+[t:cmd_report_gameplay_screen_player,n:0x001002cc]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_dm_r11";
+	}
+	[placement]
+	{
+	  p position = -1.8038,-2,-1.33012,0x2222b74a;
+	}
+}
