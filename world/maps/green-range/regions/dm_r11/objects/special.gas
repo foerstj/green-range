@@ -604,38 +604,6 @@
 	  p position = -3.02866,7.45058e-009,-0.191444,0x246b9b6e;
 	}
 }
-[t:trigger_generic,n:0x001002c9]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT - Amulet Drops";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x001002EC,0f,"16389","go_within_sphere",0), group(2), doc("drop amulet[*labelled condition (go_within_sphere)*]");
-				action* = change_quest_state("quest_free_torg","completed",0), group(1);
-				action* = change_quest_state("quest_free_torg_mp","completed",0), group(1);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(8.000000,"while_inside"), group(1), doc("[*multiple-boundary (trigger is one-shot)*]");
-				condition* = go_within_sphere(8.000000,0x00000000,"torg","while_inside"), group(2), doc("[*multiple-boundary (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = false;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 2.94624,0,0.272354,0x8bb2c15b;
-	}
-}
 [t:use_point,n:0x001002f6]
 {
 	[placement]

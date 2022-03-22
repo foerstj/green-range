@@ -661,62 +661,6 @@
 	  p position = 1.43165,-1.95145,-0.0101624,0xa48d5d5c;
 	}
 }
-[t:torg,n:0x001000a8]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x00100068,0f,"default","",0), doc("worm alive");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_talk_end",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = send_world_message("we_trigger_activate",0x001002C9,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_talk_end",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_torg;
-			* = conversation_torg_2;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_torg.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.537299,0,-0.843392;
-	  p position = 3.62917,0,-0.597029,0x8bb2c15b;
-	}
-}
 [t:rock_beast,n:0x0010023a]
 {
 	[placement]
