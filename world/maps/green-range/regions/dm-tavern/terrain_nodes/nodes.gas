@@ -6,18 +6,93 @@
   f ambient_intensity = 1.000000;
   x object_ambient_color = 0xFFFFFFFF;
   f object_ambient_intensity = 1.000000;
-  x targetnode = 0x31C01BA5;
-	[t:snode,n:0x31c01ba5]
+  x targetnode = 0xFD9AAD15;
+	[t:snode,n:0x5761424b]
 	{
 	  b bounds_camera = true;
 	  b camera_fade = false;
-	  x guid = 0x31C01BA5;
-	  x mesh_guid = 0x066006F4;
+	  x guid = 0x5761424B;
+	  x mesh_guid = 0x066003EC;
 	  x nodelevel = 0xFFFFFFFF;
 	  x nodeobject = 0xFFFFFFFF;
-	  x nodesection = 0xFFFFFFFF;
+	  x nodesection = 0x00000001;
 	  b occludes_camera = true;
 	  b occludes_light = true;
 		texsetabbr = sn02;
+		[door*]
+		{
+		  i fardoor = 22;
+		  x farguid = 0xFD9AAD15;
+		  i id = 4;
+		}
+	}
+	[t:snode,n:0x621e20b4]
+	{
+	  b bounds_camera = true;
+	  b camera_fade = false;
+	  x guid = 0x621E20B4;
+	  x mesh_guid = 0x066003E8;
+	  x nodelevel = 0xFFFFFFFF;
+	  x nodeobject = 0xFFFFFFFF;
+	  x nodesection = 0x00000001;
+	  b occludes_camera = true;
+	  b occludes_light = true;
+		texsetabbr = sn02;
+		[door*]
+		{
+		  i fardoor = 21;
+		  x farguid = 0xFD9AAD15;
+		  i id = 1;
+		}
+		[door*]
+		{
+		  i fardoor = 1;
+		  x farguid = 0xB4D35A89;
+		  i id = 3;
+		}
+	}
+	[t:snode,n:0xb4d35a89]
+	{
+	  b bounds_camera = true;
+	  b camera_fade = false;
+	  x guid = 0xB4D35A89;
+	  x mesh_guid = 0x066003EB;
+	  x nodelevel = 0xFFFFFFFF;
+	  x nodeobject = 0xFFFFFFFF;
+	  x nodesection = 0x00000001;
+	  b occludes_camera = true;
+	  b occludes_light = true;
+		texsetabbr = sn02;
+		[door*]
+		{
+		  i fardoor = 3;
+		  x farguid = 0x621E20B4;
+		  i id = 1;
+		}
+	}
+	[t:snode,n:0xfd9aad15]
+	{
+	  b bounds_camera = true;
+	  b camera_fade = false;
+	  x guid = 0xFD9AAD15;
+	  x mesh_guid = 0x066003ED;
+	  x nodelevel = 0xFFFFFFFF;
+	  x nodeobject = 0xFFFFFFFF;
+	  x nodesection = 0x00000001;
+	  b occludes_camera = true;
+	  b occludes_light = true;
+		texsetabbr = sn02;
+		[door*]
+		{
+		  i fardoor = 4;
+		  x farguid = 0x5761424B;
+		  i id = 22;
+		}
+		[door*]
+		{
+		  i fardoor = 1;
+		  x farguid = 0x621E20B4;
+		  i id = 21;
+		}
 	}
 }
