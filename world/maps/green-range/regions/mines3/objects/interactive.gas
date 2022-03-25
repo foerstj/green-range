@@ -708,3 +708,36 @@
 		use_point_scids = 0x091001c5;
 	}
 }
+[t:lever_glb_07,n:0x09100012]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x09100016;
+	  x on_scid = 0x09100016;
+	  f reset_time = 20;
+	  f reset_time_2 = 20;
+	}
+	[placement]
+	{
+	  p position = -4.98263,-0.0499992,8.6655,0x35979d4d;
+		use_point_scids = 0x09100015;
+	}
+}
+[t:lever_glb_07,n:0x09100013]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x09100016;
+	  x on_scid = 0x09100016;
+	  f reset_time = 20;
+	  f reset_time_2 = 20;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.0177722,-40.1,2.33366,0x5cd66698;
+		use_point_scids = 0x09100014;
+	}
+}
