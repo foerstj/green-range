@@ -340,6 +340,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x09100071,0f,"default","",0);
 				action* = fade_nodes_global(0x7B6BA74C,1,9,-1,"out:black");
+				action* = send_world_message("we_req_deactivate",0x0910017E,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
