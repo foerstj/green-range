@@ -556,7 +556,6 @@
 
 [mood_setting*]
 {
-// Dwarven Mines
 	mood_name				= green-range-mines3-1;
 	transition_time			= 2.0f;
 	interior				= true;
@@ -575,14 +574,13 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_07";
+		standard_track		= "s_m_besiegedtown_04";
 		room_type			= rt_stonecorridor;
 	}
 }
 [mood_setting*]
 {
-// Dwarven Mines - change of music for cavern area
-	mood_name				= green-range-mines3-2;
+	mood_name				= green-range-mines3a;
 	transition_time			= 2.0f;
 	interior				= true;
 
@@ -600,7 +598,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_03";
+		standard_track		= "s_m_besiegedtown_03";
 		room_type			= rt_cave;
 	}
 }
