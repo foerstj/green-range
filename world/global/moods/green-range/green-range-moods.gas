@@ -556,9 +556,115 @@
 
 [mood_setting*]
 {
+// Dwarven Mines
+	mood_name				= green-range-dm-west-1;
+	transition_time			= 1.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_DwarvenMines_04";
+		room_type			= rt_cave;
+	}
+}
+[mood_setting*]
+{
+// Dwarven Mines
+	mood_name				= green-range-dm-west-2;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_DwarvenMines_05";
+		room_type			= rt_cave;
+	}
+}
+[mood_setting*]
+{
+// Dwarven Mines with NO transition time (instant fog)
+	mood_name				= green-range-dm-west-3;
+	transition_time			= 0.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_DwarvenMines_03";
+		room_type			= rt_cave;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= green-range-dm-west-4;
+	transition_time			= 0.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_DwarvenMines_05";
+		room_type			= rt_cave;
+	}
+}
+
+[mood_setting*]
+{
 	mood_name				= green-range-dm-town;
 	transition_time			= 2.0f;
 	interior				= true;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 85.0f; // raising the height of the frustum to find the elevator shaft tops
+	}
 
 	[fog]
 	{
@@ -602,7 +708,6 @@
 		room_type			= rt_cave;
 	}
 }
-
 [mood_setting*]
 {
 // Dwarven Mines elevator mood (going up)
@@ -821,6 +926,57 @@
 		standard_repeat_delay = 10.0f;
 		standard_track		= "s_m_Glacern_04";
 		room_type			= rt_generic;
+	}
+}
+
+[mood_setting*]
+{
+// Dwarven Mines 
+	mood_name				= green-range-dm-east-1;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_wind_mines";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_DwarvenMines_05";
+		room_type			= rt_cave;
+	}
+}
+[mood_setting*]
+{
+// Different music for second half of region
+	mood_name				= green-range-dm-east-2;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_wind_mines";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_DwarvenMines_07";
+		room_type			= rt_cave;
 	}
 }
 
