@@ -605,6 +605,90 @@
 
 [mood_setting*]
 {
+// Dwarven Mines elevator mood (going up)
+	mood_name				= green-range-dm-ele-up;
+	transition_time			= 2.0f;
+	interior				= true;
+
+// Set the sun table early, so that there is no transition when the surface is reached
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_wind_mines";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_DwarvenMines_06";
+		room_type			= rt_cave;
+	}
+}
+[mood_setting*]
+{
+// Dwarven Mines with NO transition time (instant fog--elevator going down)
+	mood_name				= green-range-dm-ele-down;
+	transition_time			= 0.0f;
+	interior				= true;
+
+// Keep the sun table for the descent, to prevent a jarring transition
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_wind_mines";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_DwarvenMines_06";
+		room_type			= rt_cave;
+	}
+}
+[mood_setting*]
+{
 	mood_name				= green-range-dm-snowpeak-inside;
 	transition_time			= 0.5f;
 	interior				= false;
