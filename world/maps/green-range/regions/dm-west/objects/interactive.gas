@@ -3,7 +3,7 @@
 	[common]
 	{
 		dev_instance_text = "sign_2";
-		screen_name = "Town of Fallraen, 94";
+		screen_name = "South Exit";
 	}
 	[placement]
 	{
@@ -15,7 +15,7 @@
 {
 	[common]
 	{
-		screen_name = "Town of Crystwind, 30";
+		screen_name = "West Exit";
 	}
 	[placement]
 	{
@@ -27,7 +27,7 @@
 {
 	[common]
 	{
-		screen_name = "Miner's Haven (North)";
+		screen_name = "Town of Umberdeep";
 	}
 	[placement]
 	{
@@ -40,7 +40,7 @@
 	[common]
 	{
 		dev_instance_text = "sign_6";
-		screen_name = "Town of Fallraen, 99";
+		screen_name = "Town of Umberdeep";
 	}
 	[placement]
 	{
@@ -53,7 +53,7 @@
 	[common]
 	{
 		dev_instance_text = "sign_5";
-		screen_name = "Town of Crystwind, 36";
+		screen_name = "West Exit";
 	}
 	[placement]
 	{
@@ -65,7 +65,7 @@
 {
 	[common]
 	{
-		screen_name = "Miner's Haven (South)";
+		screen_name = "Town of Umberdeep";
 	}
 	[placement]
 	{
@@ -77,7 +77,7 @@
 {
 	[common]
 	{
-		screen_name = "Town of Fallraen, 93";
+		screen_name = "South Exit";
 	}
 	[placement]
 	{
@@ -128,7 +128,7 @@
 	[common]
 	{
 		dev_instance_text = "sign_4";
-		screen_name = "Town of Crystwind, 37";
+		screen_name = "Town of Umberdeep";
 	}
 	[placement]
 	{
@@ -140,7 +140,7 @@
 {
 	[common]
 	{
-		screen_name = "Town of Fallraen, 87";
+		screen_name = "South Exit";
 	}
 	[placement]
 	{
@@ -206,6 +206,30 @@
 	  p position = 0.191849,-0.463387,-2.43084,0xf585acd8;
 	}
 }
+[t:sign_glb_blank,n:0x0350001b]
+{
+	[common]
+	{
+		screen_name = "West Exit";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.627806,0,0.77837;
+	  p position = -3.69108,0,1.87548,0xa8dce888;
+	}
+}
+[t:sign_glb_blank,n:0x0350001c]
+{
+	[common]
+	{
+		screen_name = "North Exit";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.734889,0,0.678188;
+	  p position = 1.6737,-4.76837e-007,-1.51259,0x0db7246f;
+	}
+}
 [t:respawn_statue,n:0x03500264]
 {
 	[placement]
@@ -219,7 +243,7 @@
 {
 	[common]
 	{
-		screen_name = "Town of Fallraen, 105";
+		screen_name = "Town of Umberdeep";
 	}
 	[placement]
 	{
@@ -231,7 +255,7 @@
 {
 	[common]
 	{
-		screen_name = "Town of Crystwind, 25";
+		screen_name = "West Exit";
 	}
 	[placement]
 	{
@@ -243,7 +267,7 @@
 {
 	[common]
 	{
-		screen_name = "Town of Crystwind, 21";
+		screen_name = "West Exit";
 	}
 	[placement]
 	{
@@ -256,7 +280,7 @@
 	[common]
 	{
 		dev_instance_text = "sign_1";
-		screen_name = "Town of Fallraen, 103";
+		screen_name = "Town of Umberdeep";
 	}
 	[placement]
 	{
@@ -278,11 +302,71 @@
 	[common]
 	{
 		dev_instance_text = "sign_3";
-		screen_name = "Town of Fallraen, 81";
+		screen_name = "Town of Umberdeep";
 	}
 	[placement]
 	{
-	  q orientation = 0,-8.9407e-008,0,1;
-	  p position = -1.94248,-2,-3.94186,0xdb2b7853;
+	  q orientation = 0,1,0,-6.46033e-009;
+	  p position = -1.77552,-2,-3.95663,0xdb2b7853;
+	}
+}
+[t:sign_glb_blank,n:0x0350001e]
+{
+	[common]
+	{
+		screen_name = "Town of Umberdeep";
+	}
+	[placement]
+	{
+	  q orientation = 1.411e-015,-0.0513171,4.76141e-016,0.998682;
+	  p position = 1.95176,-0.05,-3.85039,0xf064d1de;
+	}
+}
+[t:sign_glb_magic_blank_left,n:0x03500019]
+{
+	[common]
+	{
+		screen_name = "Klars Trail to Ehb";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.683561,0,0.729893;
+	  p position = 3.30751,0,0.644775,0x0f09f8d8;
+	}
+}
+[t:sign_glb_magic_blank_right,n:0x03500020]
+{
+	[common]
+	{
+		screen_name = "Klars Trail to Longbourne";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.713246,0,0.700913;
+	  p position = 0.575306,0,0.98008,0x0f09f8d8;
+	}
+}
+[t:sign_glb_magic_blank_right,n:0x03500031]
+{
+	[common]
+	{
+		screen_name = "Klars Trail to Longbourne";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.9991,0,-0.0424091;
+	  p position = -2.68949,0,0.688992,0x4ef6fd92;
+	}
+}
+[t:sign_glb_magic_blank_left,n:0x0350003b]
+{
+	[common]
+	{
+		screen_name = "Klars Trail to Ehb";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.904947,0,0.425525;
+	  p position = -3.82228,-1.90735e-006,-0.496253,0x5e8da5a0;
 	}
 }
