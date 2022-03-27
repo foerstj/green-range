@@ -1,0 +1,51 @@
+[barkeep]
+{
+	[text*]
+	{
+		screen_text = "All hail, my guests! Fancy a drink?
+
+So many outsiders here today! May I introduce, these are Porg from Ehb, and Fredrike the Ranger. They both arrived today and will stay for a few days.
+
+If you are looking for companions, have a look upstairs! There are two guards on furlough, they can fight well and are free to join you!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[local]
+{
+	[text*]
+	{
+		screen_text = "Come, have a drink with us, feel at home for a while!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dwarf_from_ehb]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Hello, fellow countryman! You can see already from my hair color that I'm not from here, haha!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Have you ever been to Longbourne? It's a splendid place. The hills are purple with lupines!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ranger]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Well met! My name is Fredrike, I'm a Ranger.
+I visit this place whenever I'm passing through. It's nice ah? And they serve the best drinks between Ehb and Longbourne, so come and join us for a mug or two!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Have you ever been to Longbourne? Oh it's a beautiful place! Its waters sparkle like the stars...";
+	  f scroll_rate = 10.000000;
+	}
+}
