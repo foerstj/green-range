@@ -10,14 +10,6 @@ If you are looking for companions, have a look upstairs! There are two guards on
 	  f scroll_rate = 10.000000;
 	}
 }
-[local]
-{
-	[text*]
-	{
-		screen_text = "Come, have a drink with us, feel at home for a while!";
-	  f scroll_rate = 10.000000;
-	}
-}
 [dwarf_from_ehb]
 {
 	[text*]
@@ -30,6 +22,23 @@ If you are looking for companions, have a look upstairs! There are two guards on
 	[text*]
 	{
 		screen_text = "Have you ever been to Longbourne? It's a splendid place. The hills are purple with lupines!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[local]
+{
+	[text*]
+	{
+		screen_text = "Come, have a drink with us, feel at home for a while!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_test]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Hire?";
 	  f scroll_rate = 10.000000;
 	}
 }

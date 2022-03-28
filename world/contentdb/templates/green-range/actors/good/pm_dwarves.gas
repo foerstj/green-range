@@ -1,0 +1,149 @@
+[t:template,n:gr_base_pm_dwarf]
+{
+    specializes = base_pm_dwarf;
+
+	[common]
+	{
+		screen_name = "Hireable";
+	}
+	[conversation]
+	{
+	}
+    [mind]
+    {
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+}
+
+
+[t:template,n:gr_base_pm_dwarf_01]
+{
+    specializes = gr_base_pm_dwarf;
+
+    [aspect]
+    {
+        [textures]
+        {
+            0 = b_c_gan_df_skin_01; // blond
+            1 = b_c_pos_a1_005;
+        }
+    }
+    actor:portrait_icon = b_gui_ig_i_ic_c_df; // mp dwarf default
+}
+
+[t:template,n:gr_base_mp_dwarf_m8]
+{
+    specializes = gr_base_pm_dwarf_01;
+
+    // stats from Kroduk
+	[actor]
+	{
+		[skills]
+		{
+			dexterity 		= 2.16, 0, 10;
+			intelligence 	= 0.72, 0, 10;
+			strength 		= 5.12, 0, 10;
+			melee 			= 8, 0, 0;
+			uber 			= 8, 0, 0;
+		}
+	}
+	[aspect]
+	{
+		gold_value = 3400;
+	}
+}
+
+[t:template,n:gr_pm_dwarf_m8] { specializes = gr_pm_dwarf_m8_base; }
+[t:template,n:gr_pm_dwarf_m8_base]
+{
+    specializes = gr_base_mp_dwarf_m8;
+
+	[common]
+	{
+		screen_name = "Yxin Umberdeep";
+	}
+    // equipment from Kroduk but put in inventory
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_m_d_c_003;  // Burlap
+			es_feet = #boots/20-30;
+		}
+        [other]
+        {
+			il_main = #axe/20-23;
+            il_main = #shield/30-40;
+
+            il_main = bd_bl_f_g_c_fun;
+			il_main = #gloves/20-30;
+        }
+	}
+}
+
+
+[t:template,n:gr_base_pm_dwarf_06]
+{
+    specializes = gr_base_pm_dwarf;
+
+    [aspect]
+    {
+        [textures]
+        {
+            0 = b_c_gan_df_skin_06; // dark blond
+            1 = b_c_pos_a1_005;
+        }
+    }
+    actor:portrait_icon = b_gui_ig_i_ic_c_orkin; // conjuror orkin umberdeep
+}
+
+[t:template,n:gr_base_mp_dwarf_m9]
+{
+    specializes = gr_base_pm_dwarf_06;
+
+    // stats from Kraal
+	[actor]
+    {
+        [skills]
+        { 
+            strength		= 5.76, 0, 10;
+            dexterity		= 2.43, 0, 10;
+            intelligence	= 0.81, 0, 10;
+
+            melee			= 9, 0, 0;
+            uber			= 9, 0, 0;
+        }
+    }
+	[aspect]
+	{
+		gold_value = 3900;  // price from Lorun
+	}
+}
+
+[t:template,n:gr_pm_dwarf_m9] { specializes = gr_pm_dwarf_m9_base; }
+[t:template,n:gr_pm_dwarf_m9_base]
+{
+    specializes = gr_base_mp_dwarf_m9;
+
+	[common]
+	{
+		screen_name = "Bultin Umberdeep";
+	}
+    // equipment from Kroduk but put in inventory
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_m_d_c_004;  // Burlap
+			es_feet = #boots/20-30;
+		}
+        [other]
+        {
+			il_main = #axe/20-23;
+            il_main = #shield/30-40;
+
+            il_main = bd_bl_f_g_c_fun;
+			il_main = #gloves/20-30;
+        }
+	}
+}
