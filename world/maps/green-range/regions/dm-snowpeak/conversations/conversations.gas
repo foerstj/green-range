@@ -58,12 +58,38 @@ I visit this place whenever I'm passing through. It's nice ah? And they serve th
 	  f scroll_rate = 10.000000;
 	}
 }
-[mules_test]
+[mulekeep_first]
 {
 	[text*]
 	{
 		choice = buy_packmule;
-		screen_text = "Mules?";
+		screen_text = "Hail, strangers. Are you on a journey? You look tired from all the stuff you're carrying... Would you be interested in a sturdy mule to carry your luggage?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mulekeep_two_packmules]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		screen_text = "I can sell you Goodfella. He's a good fella. Feed him well and he'll carry your stuff all the way to Longbourne.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mulekeep_one_packmule]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		screen_text = "A mule is good, two mules are better, am I right? I still got ole Therethere, if you're interested.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mulekeep_no_packmules]
+{
+	[text*]
+	{
+		screen_text = "Good luck to you, then.";
 	  f scroll_rate = 10.000000;
 	}
 }
