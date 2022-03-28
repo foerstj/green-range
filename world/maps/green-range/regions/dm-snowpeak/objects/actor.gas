@@ -14,16 +14,27 @@
 	  p position = -1.10626,-1.25,-2.04636,0x3c20598e;
 	}
 }
-[t:blacksmith_wern_silverforge,n:0x0950032b]
+[t:gr_shop_dm_mules,n:0x0950032b]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = mules_test;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.777585,0,-0.628777;
 	  p position = 5.23481,-1.57374,1.72835,0x3c20598e;
 	}
 }
-[t:mule_nt_r1,n:0x09500328]
+[t:gr_mule_dm,n:0x09500328]
 {
+	[common]
+	{
+		screen_name = "Goodfella";
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.821257,0,0.570559;
@@ -222,8 +233,12 @@
 	  p position = 1.99126,-5.15,-5.60658,0x47b3637d;
 	}
 }
-[t:mule_nt_r1,n:0x09500329]
+[t:gr_mule_dm,n:0x09500329]
 {
+	[common]
+	{
+		screen_name = "Therethere";
+	}
 	[placement]
 	{
 	  q orientation = 0,0.0140674,0,0.999901;
