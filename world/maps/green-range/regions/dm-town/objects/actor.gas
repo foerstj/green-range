@@ -180,38 +180,52 @@
 	  p position = 1.03752,-2,-1.08311,0xca698d04;
 	}
 }
-[t:gloern,n:0x09100020]
+[t:gr_shop_dm_weaponry,n:0x09100020]
 {
-	[aspect]
+	[conversation]
 	{
-	  f max_life = 147;
-	  f max_mana = 37;
+		[conversations]
+		{
+			* = shop_test;
+		}
 	}
 	[placement]
 	{
 	  q orientation = 0,0.382684,0,0.923879;
 	  p position = 2.23262,0,-0.0416279,0x4b7b799d;
+		use_point_scids = 0x09100204;
 	}
 }
 [t:gr_shop_dm_magic,n:0x09100028]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = shop_test;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.92388,0,0.382683;
 	  p position = 3.33437,0,-0.822023,0x082a7ec4;
+		use_point_scids = 0x09100202;
 	}
 }
-[t:lorun,n:0x0910001e]
+[t:gr_shop_dm_armor,n:0x0910001e]
 {
-	[aspect]
+	[conversation]
 	{
-	  f max_life = 147;
-	  f max_mana = 185;
+		[conversations]
+		{
+			* = shop_test;
+		}
 	}
 	[placement]
 	{
 	  q orientation = 0,0.382684,0,0.923879;
 	  p position = 1.93576,0,-1.47859,0x0b03fb42;
+		use_point_scids = 0x09100203;
 	}
 }
 [t:dwarf_npc_08,n:0x09100023]

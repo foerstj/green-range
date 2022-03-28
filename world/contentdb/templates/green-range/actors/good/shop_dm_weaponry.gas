@@ -1,0 +1,110 @@
+[t:template,n:gr_base_shop_dm_weaponry]
+{
+    specializes = dwarf_npc_06_base;
+
+    // basic shop stuff
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		use_range = 1;
+	}
+    [common]
+    {
+        screen_name = "Shop";
+    }
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+    }
+
+    // shop content from Jeriah
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/10-50;
+					max = 5;
+					min = 5;
+				}
+				[all*]
+				{
+					il_main = #shield/55-104;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #shield/110-135;
+					max = 4;
+					min = 4;
+				}
+			}
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/18-30;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #melee/32-50;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #melee/52-63;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #ranged/18-30;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #ranged/32-50;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #ranged/52-63;
+					max = 6;
+					min = 6;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:gr_shop_dm_weaponry] { specializes = gr_shop_dm_weaponry_base; }
+[t:template,n:gr_shop_dm_weaponry_base]
+{
+    specializes = gr_base_shop_dm_weaponry;
+
+    [common]
+    {
+        screen_name = "Smith Smaltin Umberdeep";
+    }
+    [inventory]
+    {
+        [equipment]
+        {
+            es_chest = bd_ro_m_g_c_026;
+        }
+    }
+}

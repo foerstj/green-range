@@ -1,0 +1,137 @@
+[t:template,n:gr_base_shop_dm_armor]
+{
+    specializes = dwarf_npc_01_base;
+
+    // basic shop stuff
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		use_range = 1;
+	}
+    [common]
+    {
+        screen_name = "Shop";
+    }
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+    }
+
+    // shop content from Jeriah
+    [inventory]
+    {
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body,ro/45-135;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #body/45-55;
+					max = 7;
+					min = 7;
+				}
+				[all*]
+				{
+					il_main = #body/60-104;
+					max = 16;
+					min = 16;
+				}
+				[all*]
+				{
+					il_main = #body/105-135;
+					max = 3;
+					min = 3;
+				}
+
+
+				[all*]
+				{
+					il_main = #gloves/6-40;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/50-104;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/110-135;
+					max = 4;
+					min = 4;
+				}
+
+
+				[all*]
+				{
+					il_main = #helm/20-54;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/55-104;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/110-130;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #boots/6-40;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/50-104;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/110-135;
+					max = 4;
+					min = 4;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:gr_shop_dm_armor] { specializes = gr_shop_dm_armor_base; }
+[t:template,n:gr_shop_dm_armor_base]
+{
+    specializes = gr_base_shop_dm_armor;
+
+    [common]
+    {
+        screen_name = "Tailor Skraddin Umberdeep";
+    }
+    [inventory]
+    {
+        [equipment]
+        {
+            es_chest = bd_ro_m_g_c_024;
+        }
+    }
+}
