@@ -1,0 +1,53 @@
+[t:template,n:bd_ba_m_g_c_str_base]  // = bd_ba_m_g_c_str
+{
+	doc = "Mage Banded Armor";
+	specializes = base_body_armor_plate;
+	[common]
+	{
+		screen_name = "Mage Banded Armor";
+	}
+	[defend]
+	{
+		armor_style = 020;
+		armor_type = a2;
+	  f defense = 176.000000;
+	}
+	[gui]
+	{
+		equip_requirements = strength:15;
+		inventory_height = 2;
+		inventory_icon = b_gui_ig_i_a_pos_a2_020;
+		inventory_width = 2;
+	}
+	[pcontent]
+	{
+		[base]
+		{
+		  f modifier_max = 43.000000;
+		  f modifier_min = 24.000000;
+		}
+	}
+}
+
+[t:template,n:gr_armor_dwarves] { specializes = gr_armor_dwarves_base; }
+[t:template,n:gr_armor_dwarves_base]
+{
+    specializes = bd_ba_m_g_c_str_base;
+
+	[common]
+	{
+		screen_name = "Umberdeep Guard Armor";
+	  b allow_modifiers = false;
+		pcontent_special_type = unique;
+		is_pcontent_allowed = false;
+	}
+    // stats from bd_bl_f_g_c_fun "Worn Rigid Leather"
+	[defend]
+	{
+	  f defense = 44.000000;
+	}
+	[gui]
+	{
+		equip_requirements = strength:14;
+	}
+}
