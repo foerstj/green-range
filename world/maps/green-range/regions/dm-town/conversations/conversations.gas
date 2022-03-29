@@ -3,7 +3,8 @@
 	[text*]
 	{
 		screen_text = "Yeah this is warm and cozy, right?
-This is our central heating. Sit down if you're cold.";
+This is our central heating. Sit down if you're cold.
+Sometimes we bake bread here, and the whole of Umberdeep smells so good the Krug in the Mines go crazy, haha.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -92,6 +93,24 @@ This is our Onsen - a hot tub from a thermal spring, and a cold tub to cool down
 	  f scroll_rate = 10.000000;
 	}
 }
+[shop_armor]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Welcome, welcome! Find yourselves some robes and shoes against the cold, and protective armor against the Krug and Trolls!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[shop_magic]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "This is probably not the variety you're used to. We Dwarves of Umberdeep are not very magical creatures... we use it mainly to heal wounded miners occasionally.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [shop_test]
 {
 	[text*]
@@ -115,6 +134,15 @@ If you want to buy something, head to the Market Square.";
 	[text*]
 	{
 		screen_text = "Welcome to Umberdeep, stranger! This is our washery. Here we do the washing up and also the laundry.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[shop_weaponry]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Best axes and shields under the mountain! Offer ends when supply runs out, don't miss it!";
 	  f scroll_rate = 10.000000;
 	}
 }
