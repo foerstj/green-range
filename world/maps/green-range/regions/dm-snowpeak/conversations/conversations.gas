@@ -1,3 +1,63 @@
+[pm_m8_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "All hail! My name is Yxin Umberdeep, and this is my comrade Bultin. We are guards but currently on furlough. For a little money I will gladly join you on your journey. Are you going all the way to Longbourne? Great! From all I heard it must be beautiful!";
+	}
+}
+[pm_m9_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "All hail! My name is Bultin Umberdeep, and this is my comrade Yxin. We are guards but currently on furlough. For a little money I will gladly join you on your journey. Are you going all the way to Longbourne? Great! From all I heard it must be beautiful!";
+	}
+}
+[pm_accept_no_money]
+{
+	[text*]
+	{
+		screen_text = "I'd like to earn a little vacation money, though.";
+	}
+}
+[pm_accept_have_money]
+{
+	[text*]
+	{
+		screen_text = "Great, let's go!";
+	}
+}
+[pm_reject]
+{
+	[text*]
+	{
+		screen_text = "Alright mate, have a great trip!";
+	}
+}
+[pm_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Have you thought about it? Shall I join your company?";
+	}
+}
+[pm_disband]
+{
+	[text*]
+	{
+		screen_text = "Alright mate, farewell!";
+	}
+}
+[pm_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "All hail, we meet again. Do you wish me to rejoin your company?";
+	}
+}
 [barkeep]
 {
 	[text*]
