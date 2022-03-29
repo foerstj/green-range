@@ -51,41 +51,80 @@
 			}
 			[weapons]
 			{
+                // split melee 50:50 into melee and axe
 				[all*]
 				{
 					il_main = #melee/18-30;
-					max = 8;
-					min = 8;
+					max = 4;
+					min = 4;
 				}
 				[all*]
 				{
 					il_main = #melee/32-50;
-					max = 18;
-					min = 18;
+					max = 9;
+					min = 9;
 				}
 				[all*]
 				{
 					il_main = #melee/52-63;
-					max = 6;
-					min = 6;
+					max = 3;
+					min = 3;
 				}
 				[all*]
 				{
+					il_main = #axe/18-30;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #axe/32-50;
+					max = 9;
+					min = 9;
+				}
+				[all*]
+				{
+					il_main = #axe/52-63;
+					max = 3;
+					min = 3;
+				}
+
+                // split ranged 50:50 into ranged and minigun (=crossbow)
+				[all*]
+				{
 					il_main = #ranged/18-30;
-					max = 8;
-					min = 8;
+					max = 4;
+					min = 4;
 				}
 				[all*]
 				{
 					il_main = #ranged/32-50;
-					max = 18;
-					min = 18;
+					max = 9;
+					min = 9;
 				}
 				[all*]
 				{
 					il_main = #ranged/52-63;
-					max = 6;
-					min = 6;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #minigun/18-30;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #minigun/32-50;
+					max = 9;
+					min = 9;
+				}
+				[all*]
+				{
+					il_main = #minigun/52-63;
+					max = 3;
+					min = 3;
 				}
 			}
 		}
