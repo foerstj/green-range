@@ -64,42 +64,42 @@ state Talk$
 	{
 		m_Go$.GetConversation.RSSelectConversation( "pm_m9_join" );
 
-		if ( GameAuditor.GetDb.GetBool( "party_accept_0x950035c" ) )
+		if ( GameAuditor.GetDb.GetBool( "party_accept_0x50035c" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "pm_accept_have_money" );
-			GameAuditor.GetDb.SetBool( "party_accept_0x950035c", false );
+			GameAuditor.GetDb.SetBool( "party_accept_0x50035c", false );
 			TryAnim$('talk');
 		}
-		else if ( GameAuditor.GetDb.GetBool( "party_accept_no_money_0x950035c" ) )
+		else if ( GameAuditor.GetDb.GetBool( "party_accept_no_money_0x50035c" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "pm_accept_no_money" );
-			GameAuditor.GetDb.SetBool( "party_accept_no_money_0x950035c", false );
-			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x950035c", true );
+			GameAuditor.GetDb.SetBool( "party_accept_no_money_0x50035c", false );
+			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x50035c", true );
 			TryAnim$('talk');
 		}
-		else if ( GameAuditor.GetDb.GetBool( "party_decline_0x950035c" ) )
+		else if ( GameAuditor.GetDb.GetBool( "party_decline_0x50035c" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "pm_reject" );
-			GameAuditor.GetDb.SetBool( "party_decline_0x950035c", false );
-			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x950035c", true );
+			GameAuditor.GetDb.SetBool( "party_decline_0x50035c", false );
+			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x50035c", true );
 			TryAnim$('talk');
 		}
-		else if ( GameAuditor.GetDb.GetBool( "party_disband_0x950035c" ) )
+		else if ( GameAuditor.GetDb.GetBool( "party_disband_0x50035c" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "pm_disband" );
-			GameAuditor.GetDb.SetBool( "party_disband_0x950035c", false );
-			GameAuditor.GetDb.SetBool( "party_disbanded_0x950035c", true );
+			GameAuditor.GetDb.SetBool( "party_disband_0x50035c", false );
+			GameAuditor.GetDb.SetBool( "party_disbanded_0x50035c", true );
 			TryAnim$('talk');
 		}
-		else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0x950035c" ) )
+		else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0x50035c" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "pm_disband_rejoin" );
 			TryAnim$('talk');
 		}
-		else if ( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x950035c" ) )
+		else if ( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x50035c" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "pm_rejoin" );
-			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x950035c", false );
+			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x50035c", false );
 			TryAnim$('talk');
 		}
 		else

@@ -72,26 +72,26 @@ state Talk$
 	{
 		m_Go$.GetConversation.RSSelectConversation( "pm_beginner" );
 
-		if ( GameAuditor.GetDb.GetBool( "party_accept_0x1f00004" ) ) {
+		if ( GameAuditor.GetDb.GetBool( "party_accept_0xb2800004" ) ) {
 			m_Go$.GetConversation.RSSelectConversation( "pm_accept" );
-			GameAuditor.GetDb.SetBool( "party_accept_0x1f00004", false );
+			GameAuditor.GetDb.SetBool( "party_accept_0xb2800004", false );
 			TryAnim$('talk');
-		} else if ( GameAuditor.GetDb.GetBool( "party_decline_0x1f00004" ) ) {
+		} else if ( GameAuditor.GetDb.GetBool( "party_decline_0xb2800004" ) ) {
 			m_Go$.GetConversation.RSSelectConversation( "pm_reject" );
-			GameAuditor.GetDb.SetBool( "party_decline_0x1f00004", false );
-			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x1f00004", true );
+			GameAuditor.GetDb.SetBool( "party_decline_0xb2800004", false );
+			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0xb2800004", true );
 			TryAnim$('talk');
-		} else if ( GameAuditor.GetDb.GetBool( "party_disband_0x1f00004" ) ) {
+		} else if ( GameAuditor.GetDb.GetBool( "party_disband_0xb2800004" ) ) {
 			m_Go$.GetConversation.RSSelectConversation( "pm_disband" );
-			GameAuditor.GetDb.SetBool( "party_disband_0x1f00004", false );
-			GameAuditor.GetDb.SetBool( "party_disbanded_0x1f00004", true );
+			GameAuditor.GetDb.SetBool( "party_disband_0xb2800004", false );
+			GameAuditor.GetDb.SetBool( "party_disbanded_0xb2800004", true );
 			TryAnim$('talk');
-		} else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0x1f00004" ) ) {
+		} else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0xb2800004" ) ) {
 			m_Go$.GetConversation.RSSelectConversation( "pm_rejoin" );			
 			TryAnim$('talk');
-		} else if ( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x1f00004" ) ) {
+		} else if ( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0xb2800004" ) ) {
 			m_Go$.GetConversation.RSSelectConversation( "pm_rejoin" );
-			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x1f00004", false );
+			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0xb2800004", false );
 			TryAnim$('talk');
 		}  else {
 			TryAnim$('ulo1');
