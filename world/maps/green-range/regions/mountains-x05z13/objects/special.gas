@@ -1,4 +1,4 @@
-[t:trigger_change_mood_box,n:0x05000046]
+[t:trigger_change_mood_box,n:0x07200046]
 {
 	[common]
 	{
@@ -27,7 +27,7 @@
 	  p position = 0.0573606,-0.05,-0.0479414,0x99b9bc02;
 	}
 }
-[t:trigger_change_mood_box,n:0x05000045]
+[t:trigger_change_mood_box,n:0x07200045]
 {
 	[common]
 	{
@@ -55,7 +55,7 @@
 	  p position = -0.0431936,-6,-2.28965,0xaf76a932;
 	}
 }
-[t:trigger_change_mood_box,n:0x05000047]
+[t:trigger_change_mood_box,n:0x07200047]
 {
 	[common]
 	{
@@ -83,7 +83,7 @@
 	  p position = -0.057065,-6,-0.310373,0xaf76a932;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x05000052]
+[t:trigger_fade_nodes_box,n:0x07200052]
 {
 	[common]
 	{
@@ -91,8 +91,8 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0x00000050,1,1,-1,"out:black"), group(1);
-				action* = fade_nodes(0x00000050,1,1,-1,"in"), group(2);
+				action* = fade_nodes(0x00000072,1,1,-1,"out:black"), group(1);
+				action* = fade_nodes(0x00000072,1,1,-1,"in"), group(2);
 				action* = fade_nodes(0x13C295ED,1,1,-1,"out:black"), group(1);
 				action* = fade_nodes(0x13C295ED,1,1,-1,"in"), group(2);
 			  b can_self_destruct = true;
