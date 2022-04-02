@@ -11,6 +11,25 @@
             // Side area towards the Aranoi Desert. Arid.
             node_set = grs02;
             [plants] { perlin = var-main; tx = blur; a:profile = gr-da; b:profile = gr-db; }
+            [enemies]
+            {
+                perlin = var-main;
+                tx = gap;
+                [a]
+                {
+                    tx = gap;
+                    perlin = var-sub-a;
+                    [a] { perlin = var-sub-b; tx = gap; a:profile = gr-da-enemies-main; }
+                    [b] { perlin = var-sub-b; tx = gap; a:profile = gr-da-enemies-a; b:profile = gr-da-enemies-b; }
+                }
+                [b]
+                {
+                    tx = gap;
+                    perlin = var-sub-a;
+                    [a] { perlin = var-sub-b; tx = gap; a:profile = gr-db-enemies-a; b:profile = gr-db-enemies-b; }
+                    [b] { perlin = var-sub-b; tx = gap; a:profile = gr-db-enemies-main; }
+                }
+            }
         }
         [0.6]
         {

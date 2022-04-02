@@ -1,0 +1,15 @@
+[t:template,n:gr_troll_steppe] { specializes = gr_troll_steppe_base; }
+[t:template,n:gr_troll_steppe_base]
+{
+    specializes = gr_base_troll_dw;
+
+    [common]
+    {
+        screen_name = "Sand Troll";
+    }
+    [aspect]
+    {
+        textures:0 = b_c_edm_tl-07;
+        scale_base = 0.7;  // swamp troll is 0.6
+    }
+}
