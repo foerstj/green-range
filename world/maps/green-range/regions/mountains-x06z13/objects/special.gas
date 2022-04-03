@@ -6,7 +6,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-mountains-3");
+				action* = mood_change("green-range-mountains-3-snow");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -86,34 +86,6 @@
 	  p position = -0.00959015,-6,3.98042,0x170d066d;
 	}
 }
-[t:trigger_change_mood_box,n:0x086004b2]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("green-range-mountains-3");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.0609398,-0.05,1.46505,0x69d65810;
-	}
-}
 [t:trigger_generic,n:0x08600535]
 {
 	[common]
@@ -141,5 +113,91 @@
 	[placement]
 	{
 	  p position = -0.0237699,-6,-1.48671,0x170d066d;
+	}
+}
+[t:trigger_change_mood_box,n:0x086004b2]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-mountains-3-snow");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0609398,-0.05,1.46505,0x69d65810;
+	}
+}
+[t:trigger_change_mood_box,n:0x08600536]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-mountains-3");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.36956,1.96654,1.58941,0xbdc71456;
+	}
+}
+[t:trigger_change_mood_box,n:0x08600537]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-mountains-3");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 0.131832,0,0.450639,0x02b034c1;
 	}
 }
