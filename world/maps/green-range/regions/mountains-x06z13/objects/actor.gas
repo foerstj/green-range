@@ -2,8 +2,22 @@
 {
 	[placement]
 	{
-	  q orientation = 0,0.900194,0,-0.435489;
-	  p position = -0.0209198,0,-0.0763893,0xf4ee882c;
+	  q orientation = 0,0.435489,0,0.900194;
+	  p position = -1.55225,0,0.819664,0x8610b89d;
+	}
+}
+[t:gremal,n:0x0860054a]
+{
+	[placement]
+	{
+	  p position = 0.725106,0,2.22542,0x53f38996;
+	}
+}
+[t:gremal,n:0x08600549]
+{
+	[placement]
+	{
+	  p position = 3.1187,0,-0.866701,0xb31d1b7c;
 	}
 }
 [t:giant_rat,n:0x086004a8]
@@ -14,17 +28,18 @@
 	  p position = -0.94722,0,1.29676,0x06ba2a4d;
 	}
 }
-[t:gremal,n:0x08600549]
+[t:gr_npc_ranger_pentachoron_garden,n:0x08600515]
 {
-	[placement]
+	[conversation]
 	{
-	  p position = 3.1187,0,-0.866701,0xb31d1b7c;
+		[conversations]
+		{
+			* = pentachoron_garden;
+		}
 	}
-}
-[t:gremal,n:0x0860054a]
-{
 	[placement]
 	{
-	  p position = 0.725106,0,2.22542,0x53f38996;
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.68762,1.90735e-006,1.55223,0x6b8c0f4c;
 	}
 }
