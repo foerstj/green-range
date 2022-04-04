@@ -1,3 +1,31 @@
+[t:trigger_change_mood_box,n:0x0b000bc9]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-mountains-w");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.65997,0,0.676935,0xa537b1ca;
+	}
+}
 [t:trigger_change_mood_box,n:0x0b000bb9]
 {
 	[common]
@@ -26,7 +54,7 @@
 	  p position = 1.87988,0,0.00768343,0xdd7cfae3;
 	}
 }
-[t:trigger_change_mood_box,n:0x0b000bc9]
+[t:trigger_change_mood_box,n:0x0b000bca]
 {
 	[common]
 	{
@@ -36,7 +64,7 @@
 			{
 				action* = mood_change("green-range-mountains-w");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(16.000000,1.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -51,6 +79,36 @@
 	}
 	[placement]
 	{
-	  p position = -1.65997,0,0.676935,0xa537b1ca;
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.36334,0,-1.04198,0xd51fe1ee;
+	}
+}
+[t:trigger_change_mood_box,n:0x0b000bcb]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("green-range-mountains-3-4");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(12.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -0.133835,0,1.26785,0x2d441a16;
 	}
 }
