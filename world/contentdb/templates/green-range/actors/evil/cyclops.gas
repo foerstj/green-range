@@ -1,0 +1,87 @@
+[t:template,n:gr_base_cyclops]
+{
+	specializes = base_cyclops;
+	doc = "cyclops";
+
+	[common] { screen_name="Cyclops"; }
+	[mind]
+	{
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+
+[t:template,n:gr_cyclops] { specializes = gr_cyclops_base; }
+[t:template,n:gr_cyclops_base]
+{
+	specializes = gr_base_cyclops;
+
+    // stats & inventory from horrid
+	[actor]
+	{
+		[skills]
+		{
+			strength =  21, 0;
+			intelligence =  6, 0;
+			dexterity =  9, 0;
+			melee =  6,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 151;
+		life = 352;
+        max_life = 352;
+        mana = 12;
+		max_mana = 12;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 40;
+		damage_min = 38;
+	}
+    [defend] { defense=55; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				  es_weapon_hand = cb_un_2h_horrid;
+			}
+
+			[all*]
+			{
+				[all*]
+				{
+       				chance = 0.03;
+	                il_main = #spell/7-11;
+				}
+
+				[oneof*]
+				{
+                	il_main = #*/31-36;
+					il_main = #armor/40-73;
+	                il_main = #weapon/31-36;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/38-47;
+	                il_main = #armor/-rare(1)/84-106;
+                    il_main = #*/-rare(1)/38-47;
+                }
+				[gold*]
+				{
+					max = 80;
+					min = 41;
+					min_pile = 12;
+					piles = 2 - 3;
+				}
+			}
+		}
+	}
+}
