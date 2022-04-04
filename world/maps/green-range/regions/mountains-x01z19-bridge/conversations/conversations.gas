@@ -14,6 +14,21 @@
 	  f scroll_rate = 10.000000;
 	}
 }
+[pm_beginner_mp]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Are you an adventurer travelling the Green Range? Yes and I am the Stellar Empress! Pff.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "I can take care of myself perfectly well, thank you very much. Have a nice day!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [pm_ranger]
 {
 	[text*]
@@ -28,6 +43,22 @@
 		choice = potential_member;
 		screen_text = "My name is Svartholm, I am a Ranger. We Rangers live in these mountains and regard them as our home.
 Are you new to these parts? I can come with you if you want... for guidance and protection.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger_mp]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Well met, Ehbling. Want some Snapper stew?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "My name is Svartholm, I am a Ranger. We Rangers live in these mountains and regard them as our home.
+Are you new to these parts? Let me advise you to stay on the Klars Trail. You don't want to get lost and end up as Troll dinner...";
 	  f scroll_rate = 10.000000;
 	}
 }

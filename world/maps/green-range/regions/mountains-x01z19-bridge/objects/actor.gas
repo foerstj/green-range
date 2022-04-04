@@ -96,6 +96,11 @@
 	  f max_life = 49;
 	  f max_mana = 30;
 	}
+	[common]
+	{
+		dev_instance_text = "SP";
+	  b is_multi_player = false;
+	}
 	[conversation]
 	{
 		[conversations]
@@ -127,6 +132,8 @@
 	}
 	[common]
 	{
+		dev_instance_text = "SP";
+	  b is_multi_player = false;
 		screen_name = "Svartholm";
 	}
 	[conversation]
@@ -169,5 +176,56 @@
 	[placement]
 	{
 	  p position = 1.77732,0.35,3.3119,0xf2af5409;
+	}
+}
+[t:gr_pm_beginner,n:0xb2800055]
+{
+	[aspect]
+	{
+	  f max_life = 49;
+	  f max_mana = 30;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = pm_beginner_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 0.0244751,0,0.951409,0x1db5529b;
+	}
+}
+[t:gr_pm_ranger,n:0xb2800056]
+{
+	[aspect]
+	{
+	  f max_life = 78.4;
+	  f max_mana = 42;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Svartholm";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = pm_ranger_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 2.02951,0.55,-3.99442,0xb44d5def;
 	}
 }
