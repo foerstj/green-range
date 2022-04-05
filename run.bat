@@ -12,6 +12,7 @@ set tc=..\TankCreator
 
 :: Compile main resource file
 call "%doc_dsloa%\Bits\build.bat"
+call "%doc_dsloa%\Bits\build-music.bat"
 
 ::pause
 
