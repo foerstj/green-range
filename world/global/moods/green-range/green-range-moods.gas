@@ -88,7 +88,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_path2crypts_01;
+		standard_track = s_m_adventure_beyond; // s_m_path2crypts_01
 		room_type = rt_mountains;
 	}
 	[snow]
@@ -121,7 +121,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_path2crypts_01;
+		standard_track = s_m_adventure_beyond; // s_m_path2crypts_01
 		room_type = rt_mountains;
 	}
 	[wind]
@@ -150,7 +150,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_templeruins_05;
+		standard_track = s_m_neverland; // s_m_templeruins_05
 		room_type = rt_mountains;
 	}
 	[wind]
@@ -179,7 +179,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_templeruins_05;
+		standard_track = s_m_neverland; // s_m_templeruins_05
 		room_type = rt_mountains;
 	}
 	[wind]
@@ -239,7 +239,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_path2crypts_03;
+		standard_track = s_m_the_lone_wolf; // s_m_path2crypts_03
 		room_type = rt_mountains;
 	}
 	[wind]
@@ -292,7 +292,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_path2stonebridge_01;
+		standard_track = s_m_lullaby; // s_m_path2stonebridge_01
 		room_type = rt_mountains;
 	}
 	[wind]
@@ -321,7 +321,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_path2stonebridge_01;
+		standard_track = s_m_lullaby; // s_m_path2stonebridge_01
 		room_type = rt_mountains;
 	}
 	[snow]
@@ -582,13 +582,12 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_04";
+		standard_track		= s_m_highland_song; // s_m_DwarvenMines_04
 		room_type			= rt_cave;
 	}
 }
 [mood_setting*]
 {
-// Dwarven Mines
 	mood_name				= green-range-dm-west-2;
 	transition_time			= 2.0f;
 	interior				= true;
@@ -607,7 +606,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_05";
+		standard_track		= s_m_highland_song; // s_m_DwarvenMines_05
 		room_type			= rt_cave;
 	}
 }
@@ -632,7 +631,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_03";
+		standard_track		= s_m_highland_song; // s_m_DwarvenMines_03
 		room_type			= rt_cave;
 	}
 }
@@ -656,7 +655,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_05";
+		standard_track		= s_m_highland_song; // s_m_DwarvenMines_05
 		room_type			= rt_cave;
 	}
 }
@@ -687,8 +686,9 @@
 	[music]
 	{
 		ambient_track		= "";
+		standard_intro_delay = 5.0f;
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_besiegedtown_04";
+		standard_track		= s_m_planning; // s_m_besiegedtown_04
 		room_type			= rt_stonecorridor;
 	}
 }
@@ -838,7 +838,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_Glacern_01";
+		standard_track		= s_m_shelter_song; // s_m_Glacern_01
 		room_type			= rt_generic;
 	}
 }
@@ -890,7 +890,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_Glacern_01";
+		standard_track		= s_m_shelter_song; // s_m_Glacern_01;
 		room_type			= rt_generic;
 	}
 }
@@ -932,7 +932,7 @@
 	{
 		ambient_track		= "s_e_env_tavern";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_Glacern_04";
+		standard_track		= s_m_shelter_song; // s_m_Glacern_04;
 		room_type			= rt_generic;
 	}
 }
@@ -959,7 +959,7 @@
 	{
 		ambient_track		= "s_e_ambient_wind_mines";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_05";
+		standard_track		= s_m_mjolnir; // s_m_DwarvenMines_05
 		room_type			= rt_cave;
 	}
 }
@@ -984,7 +984,7 @@
 	{
 		ambient_track		= "s_e_ambient_wind_mines";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_07";
+		standard_track		= s_m_mjolnir; // s_m_DwarvenMines_07
 		room_type			= rt_cave;
 	}
 }
@@ -1011,7 +1011,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_templeruins_02;
+		standard_track = s_m_mountain_walk; // s_m_templeruins_02
 		room_type = rt_mountains;
 	}
 	[wind]
@@ -1040,7 +1040,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_templeruins_02;
+		standard_track = s_m_adventure; // s_m_templeruins_02
 		room_type = rt_mountains;
 	}
 	[snow]
@@ -1073,7 +1073,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_templeruins_05;
+		standard_track = s_m_mountain_walk; // s_m_templeruins_05
 		room_type = rt_mountains;
 	}
 	[wind]
@@ -1102,7 +1102,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_templeruins_05;
+		standard_track = s_m_mountain_walk; // s_m_templeruins_05
 		room_type = rt_mountains;
 	}
 	[rain]
