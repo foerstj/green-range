@@ -454,6 +454,58 @@
 	  p position = -0.847336,0,-1.37479,0x31d65b8f;
 	}
 }
+[t:gr_cyclops,n:0x09802f9d]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.830042,0,0.557701;
+	  p position = 1.43672,0,1.06285,0xb3f1980a;
+	}
+}
+[t:gr_cyclops_boss_fat,n:0x09802f9b]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("fat_cyclops","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("fat_cyclops","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.912835,0,-0.408328;
+	  p position = -1.00259,0,-0.0603409,0x640c4f6f;
+	}
+}
 [t:gr_cyclops,n:0x09802f9c]
 {
 	[placement]
@@ -516,14 +568,6 @@
 	{
 	  q orientation = 0,0.392758,0,0.919642;
 	  p position = 0.0021553,0,-0.408184,0xc7a78720;
-	}
-}
-[t:gr_cyclops,n:0x09802f9d]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.192574,0,0.981283;
-	  p position = 1.56956,0,1.17725,0x2fc6a59e;
 	}
 }
 [t:gr_bubber,n:0x09802f68]
@@ -740,49 +784,5 @@
 	{
 	  q orientation = 0,-0.861585,0,0.507613;
 	  p position = -1.63274,0,1.54244,0x479ed4ff;
-	}
-}
-[t:gr_cyclops_boss_fat,n:0x09802f9b]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("fat_cyclops","active",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(16.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = change_quest_state("fat_cyclops","completed",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.912835,0,-0.408328;
-	  p position = -1.00259,0,-0.0603409,0x640c4f6f;
 	}
 }
