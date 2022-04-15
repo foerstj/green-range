@@ -85,3 +85,21 @@
 		}
 	}
 }
+
+[t:template,n:gr_cyclops_boss_fat] { specializes = gr_cyclops_boss_fat_base; }
+[t:template,n:gr_cyclops_boss_fat_base]
+{
+    specializes = gr_cyclops_base;
+
+	[aspect]
+	{
+        scale_base = 1.4;
+
+        // values doubled
+		life = 704;
+        max_life = 704;
+        mana = 24;
+		max_mana = 24;
+	}
+	[common] { screen_name="Fat Cyclops"; }
+}
