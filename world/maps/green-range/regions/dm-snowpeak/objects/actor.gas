@@ -16,6 +16,11 @@
 }
 [t:gr_shop_dm_mules,n:0x0050032b]
 {
+	[common]
+	{
+		dev_instance_text = "SP";
+	  b is_multi_player = false;
+	}
 	[conversation]
 	{
 		[conversations]
@@ -286,18 +291,6 @@
 	  p position = 1.99126,-5.15,-5.60658,0x47b3637d;
 	}
 }
-[t:gr_mule_dm,n:0x00500329]
-{
-	[common]
-	{
-		screen_name = "Therethere";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.0140674,0,0.999901;
-	  p position = -3.73978,0,0.98572,0x31bbf901;
-	}
-}
 [t:gr_pm_dwarf_m8,n:0x0050038b]
 {
 	[aspect]
@@ -346,5 +339,37 @@
 	{
 	  q orientation = 0,0.997815,0,-0.0660695;
 	  p position = 2.40418,-3.15,4.93828,0x47b3637d;
+	}
+}
+[t:gr_mule_dm,n:0x00500329]
+{
+	[common]
+	{
+		screen_name = "Therethere";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.0140674,0,0.999901;
+	  p position = -3.73978,0,0.98572,0x31bbf901;
+	}
+}
+[t:gr_shop_dm_mules,n:0x0050038d]
+{
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = mulekeep_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.777585,0,-0.628777;
+	  p position = 5.21471,-1.52477,1.84535,0x3c20598e;
 	}
 }

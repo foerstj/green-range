@@ -1,22 +1,22 @@
-[t:trigger_fade_nodes_box,n:0x00300136]
+[t:trigger_generic,n:0x00300076]
 {
 	[common]
 	{
-		dev_instance_text = "PLAYER LOCATION";
+		dev_instance_text = "PWL";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = set_player_world_location("old_mines");
+				action* = set_player_world_location("dm_mines");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,2.000000,1.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
-			  b single_player = true;
+			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -24,7 +24,7 @@
 	}
 	[placement]
 	{
-	  p position = 0.00698966,0,-0.949661,0xccf7198f;
+	  p position = 0.0909479,0,-0.517429,0xccf7198f;
 	}
 }
 [t:trigger_fade_nodes_box,n:0x00300361]
@@ -71,25 +71,25 @@
 	  p position = 0.0878754,-1.89641,-1.78663,0x9a3fd925;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x00300154]
+[t:trigger_generic,n:0x00300078]
 {
 	[common]
 	{
-		dev_instance_text = "PLAYER LOCATION";
+		dev_instance_text = "PWL";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = set_player_world_location("old_mines");
+				action* = set_player_world_location("dm_mines");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,2.000000,1.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
-			  b single_player = true;
+			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -97,7 +97,7 @@
 	}
 	[placement]
 	{
-	  p position = -0.00478745,0,1.05862,0x6697e749;
+	  p position = -0.105585,0,0.963301,0x6697e749;
 	}
 }
 [t:trigger_generic,n:0x00300256]
@@ -407,6 +407,35 @@
 	  p position = -1.95249,-2,0.167095,0xa275537d;
 	}
 }
+[t:trigger_generic,n:0x0030005c]
+{
+	[common]
+	{
+		dev_instance_text = "PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("dm_mines");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.00364871,-6,1.51701,0xee9ef6fa;
+	}
+}
 [t:trigger_fade_nodes_box,n:0x00300017]
 {
 	[common]
@@ -621,6 +650,35 @@
 	{
 	  q orientation = -8.11631e-025,0,2.82322e-023,1;
 	  p position = 0.0514376,-6,1.03584,0x06b1b634;
+	}
+}
+[t:trigger_generic,n:0x00300057]
+{
+	[common]
+	{
+		dev_instance_text = "PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("dm_mines");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0052067,-6,1.75517,0x06b1b634;
 	}
 }
 [t:trigger_change_mood_box,n:0x00300381]
@@ -1251,93 +1309,6 @@
 	  p position = 0.321724,-6,1.77765,0xbf899a36;
 	}
 }
-[t:trigger_generic,n:0x00300002]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x00300004,0f,"default","party_member_within_node",0), delay(7);
-			  b can_self_destruct = true;
-				condition* = party_member_within_node(0x00000003,1,-1,-1,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 9.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.329475,-7.15,0.727051,0x95cfa64d;
-	}
-}
-[t:trigger_generic,n:0x00300057]
-{
-	[common]
-	{
-		dev_instance_text = "PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("dm_mines");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.0052067,-6,1.75517,0x06b1b634;
-	}
-}
-[t:trigger_generic,n:0x0030005c]
-{
-	[common]
-	{
-		dev_instance_text = "PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("dm_mines");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.00364871,-6,1.51701,0xee9ef6fa;
-	}
-}
 [t:trigger_generic,n:0x00300062]
 {
 	[common]
@@ -1367,25 +1338,24 @@
 	  p position = -0.141948,-6,1.01817,0xbf899a36;
 	}
 }
-[t:trigger_generic,n:0x00300076]
+[t:trigger_generic,n:0x00300002]
 {
 	[common]
 	{
-		dev_instance_text = "PWL";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = set_player_world_location("dm_mines");
+				action* = send_world_message("we_req_activate",0x00300004,0f,"default","party_member_within_node",0), delay(7);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
+				condition* = party_member_within_node(0x00000003,1,-1,-1,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
 			  b no_trig_bits = false;
 				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
+			  f reset_duration = 9.000000;
+			  b single_player = true;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -1393,35 +1363,7 @@
 	}
 	[placement]
 	{
-	  p position = 0.0909479,0,-0.517429,0xccf7198f;
-	}
-}
-[t:trigger_generic,n:0x00300078]
-{
-	[common]
-	{
-		dev_instance_text = "PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("dm_mines");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.105585,0,0.963301,0x6697e749;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.329475,-7.15,0.727051,0x95cfa64d;
 	}
 }
