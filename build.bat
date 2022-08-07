@@ -1,5 +1,5 @@
 :: This script is supposed to be executed from your DS installation folder.
-:: TankCreator is expected to be in a sibling dir.
+:: TankCreator and gaspy are expected to be in sibling dirs.
 
 :: name of map
 set map=green-range
@@ -11,10 +11,15 @@ set doc_dsloa=%USERPROFILE%\Documents\Dungeon Siege LoA
 set ds=.
 :: path of TankCreator
 set tc=..\TankCreator
+:: path of GasPy
+set gaspy=..\gaspy
 
 :: Compile map file
 rmdir /S /Q "%tmp%\Bits"
 robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E
+pushd %gaspy%
+venv\Scripts\python -m build.start_positions_required_levels %map% "%tmp%\Bits"
+popd
 %tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsmap" -copyright "CC-BY-SA 2022" -title "%map_cs%" -author "Johannes Förstner"
 if %errorlevel% neq 0 pause
 
