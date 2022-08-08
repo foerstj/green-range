@@ -8,7 +8,7 @@
 			{
 				action* = fade_node(0xE02D0A5B,"out:black");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,2.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,2.000000,2.500000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = true;
 			  b multi_player = true;
@@ -24,15 +24,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.185268,0,0.982688;
-	  p position = 1.78345,-1.35,0.125938,0x83f0986e;
-	}
-}
-[t:use_point,n:0x02500241]
-{
-	[placement]
-	{
-	  q orientation = 0,0.308517,0,0.951219;
-	  p position = -0.808271,-1.35,1.58927,0x83f0986e;
+	  p position = 0.0422134,-1.35,0.419341,0x83f0986e;
 	}
 }
 [t:trigger_fade_node_box,n:0x025000ab]
