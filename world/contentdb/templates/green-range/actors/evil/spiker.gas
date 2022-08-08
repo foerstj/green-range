@@ -78,6 +78,17 @@
 {
     specializes = dsx_spiked_dweller_base;
 
+	[aspect]
+	{
+		[voice]
+		{
+			[cast]		{	* = s_e_attack_spiker_SED;	}
+			[die] 			{ priority = high; * = s_e_die_spiked_maw_unmoaned_SED; }  // EDITED
+			[hit_critical]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_spiked_maw_SED; }
+		}
+    }
     [common]
     {
         screen_name = "Green Spiker";
