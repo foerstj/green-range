@@ -5,7 +5,7 @@
 	  b default = false;
 		description = "The Dwarven Town of Umberdeep";
 	  b dev_only = false;
-	  i id = 1;
+	  i id = 3;
 		screen_name = "Umberdeep";
 		[start_position]
 		{
@@ -108,6 +108,117 @@
 			[normal]
 			{
 			  i required_level = 10;
+			}
+		}
+	}
+	[t:start_group,n:droog_ruins]
+	{
+	  b default = true;
+		description = "Ruins of an ancient Droog settlement in what is now called the Webbed Forest.";
+	  b dev_only = false;
+	  i id = 2;
+		screen_name = "Droog Ruins";
+		[start_position]
+		{
+		  i id = 1;
+			position = -1.264094,-0.000004,3.952298,0x8B9E83DF;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x8B9E83DF;
+			}
+		}
+		[start_position]
+		{
+		  i id = 2;
+			position = -0.008145,0.000000,0.165581,0x8B9E83DF;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x8B9E83DF;
+			}
+		}
+		[start_position]
+		{
+		  i id = 3;
+			position = -3.528207,0.000000,1.636809,0x8B9E83DF;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x8B9E83DF;
+			}
+		}
+		[start_position]
+		{
+		  i id = 4;
+			position = -0.355055,0.000004,-0.550474,0xFFAE2F84;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xFFAE2F84;
+			}
+		}
+		[start_position]
+		{
+		  i id = 5;
+			position = 3.035234,0.000000,3.937879,0x30915ECA;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x30915ECA;
+			}
+		}
+		[start_position]
+		{
+		  i id = 6;
+			position = -0.785381,0.000004,3.435771,0x30915ECA;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x30915ECA;
+			}
+		}
+		[start_position]
+		{
+		  i id = 7;
+			position = -2.999913,0.000004,2.862555,0xC408BEA0;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xC408BEA0;
+			}
+		}
+		[start_position]
+		{
+		  i id = 8;
+			position = -3.699742,0.000000,-1.068519,0xC408BEA0;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xC408BEA0;
+			}
+		}
+		[world_levels]
+		{
+			[normal]
+			{
+			  i required_level = 7;
 			}
 		}
 	}
@@ -220,10 +331,10 @@
 	}
 	[t:start_group,n:ranger_shelter_ps1]
 	{
-	  b default = true;
+	  b default = false;
 		description = "A Ranger shelter in the Meadow Hills";
 	  b dev_only = false;
-	  i id = 2;
+	  i id = 1;
 		screen_name = "Meadow Hills Shelter";
 		[start_position]
 		{
