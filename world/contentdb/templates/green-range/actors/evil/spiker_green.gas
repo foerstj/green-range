@@ -74,7 +74,9 @@
 		}
 	}
 }
-[t:template,n:gr_spiker_green]
+
+[t:template,n:gr_spiker_green] { specializes = gr_spiker_green_base; }
+[t:template,n:gr_spiker_green_base]
 {
     specializes = dsx_spiked_dweller_base;
 

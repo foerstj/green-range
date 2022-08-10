@@ -1,0 +1,120 @@
+[t:template,n:spiked_maw_base]  // = spiked_maw
+{
+	category_name = "1W_evil_d";
+	doc = "spiked_maw";
+	specializes = base_maw;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  15, 0;
+			intelligence =  6, 0;
+			dexterity =  11, 0;
+			melee =  10,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 513;
+		life = 188;
+		max_life = 188;
+		mana = 10;
+		max_mana = 10;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 69;
+		damage_min = 60;
+	}
+	[common]
+	{
+		screen_name="Spiked Maw";
+		membership = party_spiked_maw_boss, monster;
+	}
+	[defend] { defense=90; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_spiked_maw_spikes; }
+
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #nmagic/5-15;
+	                il_main = #cmagic/5-15;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/39-52;
+					il_main = #armor/25-122;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/46-61;
+	                il_main = #armor/-rare(1)/123-179;
+                    il_main = #*/-rare(1)/46-61;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/46-61;
+	                il_main = #armor/-unique(2)/123-179;
+                    il_main = #*/-unique(2)/46-61;
+				}
+            }
+		}
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		[break_particulate]
+		{
+			frag_glb_spiked_maw_01 = 1;
+			frag_glb_spiked_maw_02 = 1;
+			frag_glb_spiked_maw_03 = 1;
+			frag_glb_spiked_maw_04 = 6;
+			frag_glb_spiked_maw_05 = 8;
+		}
+	}
+}
+
+[t:template,n:gr_spiker_steppe] { specializes = gr_spiker_steppe_base; }
+[t:template,n:gr_spiker_steppe_base]
+{
+    specializes = spiked_maw_base;
+
+	[aspect]
+	{
+		[voice]
+		{
+			[cast]		{	* = s_e_attack_spiker_SED;	}  // ADDED
+			[die] 			{ priority = high; * = s_e_die_spiked_maw_unmoaned_SED; }  // EDITED
+			[hit_critical]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_spiked_maw_SED; }
+		}
+    }
+    [common]
+    {
+        screen_name = "Sand Spiker";
+    }
+}
