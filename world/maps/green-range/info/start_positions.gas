@@ -440,9 +440,32 @@
 			}
 		}
 	}
-	[t:start_group,n:test_ps3_1]
+	[t:start_group,n:ranger_shelter_ps3]
 	{
 	  b default = true;
+		description = "A Ranger shelter in the Earthen Forest";
+	  b dev_only = false;
+	  i id = 1698464;
+		screen_name = "Earthen Forest Shelter";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.370348,-1.500000,-0.361511,0x306FE63C;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xAD8515CE;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:test_ps3_1]
+	{
+	  b default = false;
 		description = "";
 	  b dev_only = false;
 	  i id = 1698464;
