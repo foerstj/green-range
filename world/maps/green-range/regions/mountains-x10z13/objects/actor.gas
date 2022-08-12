@@ -582,15 +582,14 @@
 	  p position = 0.706453,0,1.64162,0x3faacd87;
 	}
 }
-[t:gr_troll_rain,n:0x0d6035f5]
+[t:gr_shop_troll_magic,n:0x0d6035f5]
 {
-	[actor]
+	[conversation]
 	{
-		alignment = aa_neutral;
-	}
-	[aspect]
-	{
-	  f scale_multiplier = 1.5;
+		[conversations]
+		{
+			* = troll_shop;
+		}
 	}
 	[placement]
 	{
