@@ -3,9 +3,26 @@
     specializes = gr_base_troll_dw;
 	category_name = "1W_shopkeep";
 
+    // basic NPC stuff
 	[actor]
 	{
-		alignment = aa_neutral;
+		alignment = aa_good;
+		can_level_up = false;
+	}
+	[aspect]
+	{
+		is_collidable = false;
+		is_invincible = true;
+	}
+    [mind]
+    {
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+        jat_fidget = world\ai\jobs\common\job_fidget.skrit;  // remove extra params that make him move around
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+	[conversation]
+	{
 	}
 
     // basic shop stuff
@@ -19,9 +36,6 @@
     {
         screen_name = "Shop";
     }
-	[conversation]
-	{
-	}
 	[respawn_shrine]
 	{
 	}
@@ -99,7 +113,7 @@
 
     [common]
     {
-        screen_name = "Frog Troll";
+        screen_name = "Toadskin the Frog Troll";
     }
     [aspect]
     {

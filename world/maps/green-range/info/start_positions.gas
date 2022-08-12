@@ -111,10 +111,10 @@
 			}
 		}
 	}
-	[t:start_group,n:droog_ruins]
+	[t:start_group,n:droog-ruins]
 	{
 	  b default = false;
-		description = "Ruins of an ancient Droog settlement in what is now called the Webbed Forest.";
+		description = "Ruins of an ancient Droog settlement in what is now called the Webbed Forest";
 	  b dev_only = false;
 	  i id = 2;
 		screen_name = "Droog Ruins";
@@ -329,7 +329,30 @@
 		{
 		}
 	}
-	[t:start_group,n:ranger_shelter_ps1]
+	[t:start_group,n:magic-troll-shop]
+	{
+	  b default = true;
+		description = "A mage shop in the southern Greylin Hills";
+	  b dev_only = false;
+	  i id = 5;
+		screen_name = "Le Magic Troll Shoppe";
+		[start_position]
+		{
+		  i id = 1;
+			position = -0.315458,0.000000,-1.894141,0x19596212;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.315458,0.000000,-1.894141,0x19596212;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:ranger-shelter-ps1]
 	{
 	  b default = false;
 		description = "A Ranger shelter in the Meadow Hills";
@@ -440,9 +463,9 @@
 			}
 		}
 	}
-	[t:start_group,n:ranger_shelter_ps3]
+	[t:start_group,n:ranger-shelter-ps3]
 	{
-	  b default = true;
+	  b default = false;
 		description = "A Ranger shelter in the Earthen Forest";
 	  b dev_only = false;
 	  i id = 4;
@@ -541,29 +564,6 @@
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
 				position = -0.675140,0.000000,1.007446,0x3DB1A73D;
-			}
-		}
-		[world_levels]
-		{
-		}
-	}
-	[t:start_group,n:test_ps3_1]
-	{
-	  b default = false;
-		description = "";
-	  b dev_only = false;
-	  i id = 1698464;
-		screen_name = "";
-		[start_position]
-		{
-		  i id = 1;
-			position = -0.020034,-0.050000,0.462187,0x69D65810;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = -0.020034,-0.050000,0.462187,0x69D65810;
 			}
 		}
 		[world_levels]
