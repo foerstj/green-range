@@ -1,0 +1,339 @@
+// Moods for progression step 2
+[mood_setting*]
+{
+	mood_name = green-range-mountains-2;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_the_lone_wolf; // s_m_path2crypts_03
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 2.000000;
+	}
+}
+[mood_setting*]  // Mucosa cave
+{
+	mood_name = green-range-mountains-2-cave;
+  f transition_time = 1.000000;
+  b interior = true;
+
+	[fog]
+	{
+	  x fog_color = 0xff000000;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_crypt;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 0.000000;
+		standard_track = s_m_crypts_02;
+		room_type = rt_cave;
+	}
+}
+[mood_setting*]  // music change along trail
+{
+	mood_name = green-range-mountains-2-3;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_lullaby; // s_m_path2stonebridge_01
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 2.000000;
+	}
+}
+[mood_setting*]  // snow close to DM entrance west
+{
+	mood_name = green-range-mountains-2-3-snow;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_lullaby; // s_m_path2stonebridge_01
+		room_type = rt_mountains;
+	}
+	[snow]
+	{
+	  f snow_density = 150.000000;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 2.000000;
+	}
+}
+[mood_setting*]  // east side
+{
+	mood_name = green-range-mountains-2-2-rain;
+  f transition_time = 8.000000;
+  b interior = false;
+
+    // defaults
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_path2crypts_04;
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 2.000000;
+	}
+	[rain]
+	{
+		rain_density = 200.0f;
+	}
+}
+[mood_setting*]  // east side, snow close to DM entrance south
+{
+	mood_name = green-range-mountains-2-2-snow;
+  f transition_time = 8.000000;
+  b interior = false;
+
+    // defaults
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_path2crypts_04;
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 2.000000;
+	}
+	[snow]
+	{
+	  f snow_density = 150.000000;
+	}
+}
+[mood_setting*]  // east side music change
+{
+	mood_name = green-range-mountains-2-4-rain;
+  f transition_time = 8.000000;
+  b interior = false;
+
+    // defaults
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_path2stonebridge_02;
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 2.000000;
+	}
+	[rain]
+	{
+		rain_density = 200.0f;
+	}
+}
+[mood_setting*]  // far east bridge, wider frustum
+{
+	mood_name = green-range-mountains-2-4-bridge;
+  f transition_time = 8.000000;
+  b interior = false;
+
+    // wider frustum to keep stitches always present
+	[frustum]
+	{
+		frustum_width		= 75.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_path2stonebridge_02;
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 2.000000;
+	}
+	[rain]
+	{
+		rain_density = 200.0f;
+	}
+}
+
+// droog ruins
+[mood_setting*]
+{
+	mood_name = green-range-droog-ruins;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_bird1;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_desertcanyons_03;
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 2.000000;
+	}
+	[rain]
+	{
+		rain_density = 200.0f;
+	}
+}
+[mood_setting*]
+{
+	mood_name = green-range-droog-ruins-village;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_bird2;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_desertcanyons_03;
+		room_type = rt_arena;
+	}
+	[rain]
+	{
+		rain_density = 200.0f;
+	}
+}
