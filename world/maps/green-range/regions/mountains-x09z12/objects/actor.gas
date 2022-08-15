@@ -222,12 +222,104 @@
 	  p position = -1.01458,0,1.22918,0x292f5772;
 	}
 }
-[t:gr_troll_mountain,n:0x0c1043b5]
+[t:giant_rat,n:0x0c101c65]
 {
 	[placement]
 	{
-	  q orientation = 0,0.82201,0,-0.569473;
-	  p position = -0.338817,0,-0.127232,0x6b34c7d3;
+	  q orientation = 0,0.25215,0,0.967688;
+	  p position = 0.53051,0,0.118111,0xef185a3e;
+	}
+}
+[t:giant_rat,n:0x0c101c97]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.169749,0,0.985487;
+	  p position = -0.135139,0,-1.71251,0x69ab1d13;
+	}
+}
+[t:giant_rat_boss_01,n:0x0c1043b5]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("hideous_rat","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("hideous_rat","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.983927,0,0.178571;
+	  p position = 0.73143,0,-1.28052,0x69ab1d13;
+	}
+}
+[t:giant_rat,n:0x0c101baf]
+{
+	[placement]
+	{
+	  q orientation = 0,0.973818,0,0.227327;
+	  p position = -0.238998,0,-0.696871,0xe1c836ca;
+	}
+}
+[t:giant_rat,n:0x0c101cce]
+{
+	[placement]
+	{
+	  q orientation = 0,0.677785,0,0.73526;
+	  p position = -1.36962,0,-0.401793,0xe1c836ca;
+	}
+}
+[t:giant_rat,n:0x0c101b5c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.516335,0,0.856387;
+	  p position = 1.46692,0,1.53329,0xb8927427;
+	}
+}
+[t:giant_rat,n:0x0c101cad]
+{
+	[placement]
+	{
+	  q orientation = 0,0.790468,0,0.612504;
+	  p position = 0.84605,0,0.400269,0x46b173b0;
+	}
+}
+[t:giant_rat,n:0x0c101b8c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.609244,0,0.792983;
+	  p position = -0.887136,0,-1.64174,0x6b34c7d3;
 	}
 }
 [t:gr_troll_mountain,n:0x0c104407]
