@@ -14,6 +14,10 @@ set tc=..\TankCreator
 :: path of GasPy
 set gaspy=..\gaspy
 
+:: param
+set mode=%1
+echo %mode%
+
 :: pre-build checks
 pushd %gaspy%
 venv\Scripts\python -m build.check_player_world_locations %map%
@@ -30,7 +34,7 @@ popd
 %tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsmap" -copyright "CC-BY-SA 2022" -title "%map_cs%" -author "Johannes Förstner"
 if %errorlevel% neq 0 pause
 
-:: Compile resource file
+:: Compile main resource file
 rmdir /S /Q "%tmp%\Bits"
 robocopy "%doc_dsloa%\Bits\art" "%tmp%\Bits\art" /E /xf .gitignore /xf *.psd
 robocopy "%doc_dsloa%\Bits\sound\effects" "%tmp%\Bits\sound\effects" /E
@@ -41,6 +45,10 @@ set moods_file=Bits\world\global\moods\%map%\%map%-moods.gas
 powershell -Command "(Get-Content '%doc_dsloa%\%moods_file%') -replace 'standard_track = (.*); // (.*)','standard_track = $2; // $1' | Out-File -encoding ASCII '%tmp%\%moods_file%'"
 %tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsres" -copyright "CC-BY-SA 2022" -title "%map_cs%" -author "Johannes Förstner"
 if %errorlevel% neq 0 pause
+
+if not "%mode%"=="light" (
+  call "%doc_dsloa%\Bits\build-music.bat"
+)
 
 :: Cleanup
 rmdir /S /Q "%tmp%\Bits"
