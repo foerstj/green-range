@@ -769,3 +769,107 @@
     specializes = crate_dsx_a3_r2-spec_base;
 	category_name = "container";
 }
+
+[t:template,n:barrel_glb_floating_03_dm_r10_base]  // = barrel_glb_floating_03_dm_r10
+{
+	category_name = "dm_r10";
+	doc = "1W_barrel_glb_floating_03_dm_r10";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel-03;
+	}
+	[attack]
+	{
+		damage_max = 26;
+		damage_min = 14;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 22;
+					min = 10;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_barrel;
+	}
+}
+[t:template,n:gr_ctn_barrel_floating_03_gr_ps3]
+{
+    specializes = barrel_glb_floating_03_dm_r10_base;
+    category_name = "container";
+}
+
+[t:template,n:barrel_glb_floating_04_dm_r10_base]  // = barrel_glb_floating_04_dm_r10
+{
+	category_name = "dm_r10";
+	doc = "1W_barrel_glb_floating_04_dm_r10";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel-04;
+	}
+	[attack]
+	{
+		damage_max = 26;
+		damage_min = 14;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 20;
+					min = 12;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_barrel;
+	}
+}
+[t:template,n:gr_ctn_barrel_floating_04_gr_ps3]
+{
+    specializes = barrel_glb_floating_04_dm_r10_base;
+    category_name = "container";
+}
