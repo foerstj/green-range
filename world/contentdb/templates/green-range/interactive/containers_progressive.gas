@@ -816,10 +816,25 @@
 		trap = trp_generator_arrow_barrel;
 	}
 }
-[t:template,n:gr_ctn_barrel_floating_03_gr_ps3]
+[t:template,n:gr_ctn_barrel_floating_03_gr_ps3] { specializes = gr_ctn_barrel_floating_03_gr_ps3_base; }
+[t:template,n:gr_ctn_barrel_floating_03_gr_ps3_base]
 {
     specializes = barrel_glb_floating_03_dm_r10_base;
     category_name = "container";
+
+	[body]
+	{
+		initial_chore =	chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit =	infinite_loop;
+				[anim_files] { 00=barrel-03-float; }
+			}
+		}
+	}
 }
 
 [t:template,n:barrel_glb_floating_04_dm_r10_base]  // = barrel_glb_floating_04_dm_r10
@@ -868,8 +883,23 @@
 		trap = trp_generator_explosion_barrel;
 	}
 }
-[t:template,n:gr_ctn_barrel_floating_04_gr_ps3]
+[t:template,n:gr_ctn_barrel_floating_04_gr_ps3] { specializes = gr_ctn_barrel_floating_04_gr_ps3_base; }
+[t:template,n:gr_ctn_barrel_floating_04_gr_ps3_base]
 {
     specializes = barrel_glb_floating_04_dm_r10_base;
     category_name = "container";
+
+	[body]
+	{
+		initial_chore =	chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit =	infinite_loop;
+				[anim_files] { 00=barrel-04-float; }
+			}
+		}
+	}
 }
