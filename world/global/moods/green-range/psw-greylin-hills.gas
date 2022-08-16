@@ -19,7 +19,7 @@
 		ambient_track = s_e_ambient_swamp;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_darkswamp_02;  // TODO
+		standard_track = s_m_darkswamp_02;
 		room_type = rt_mountains;
 	}
 	[wind]
@@ -30,5 +30,29 @@
 	[rain]
 	{
 		rain_density = 500.0f;
+	}
+}
+[mood_setting*]
+{
+	mood_name = green-range-mountains-w-indoor;
+  f transition_time = 1.000000;
+  b interior = true;
+
+	[fog]
+	{
+	  x fog_color = 0xff808080;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_swamp;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_darkswamp_02;
+		room_type = rt_mountains;
 	}
 }
