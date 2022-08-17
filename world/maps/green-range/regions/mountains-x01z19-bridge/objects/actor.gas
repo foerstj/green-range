@@ -123,6 +123,31 @@
 	  p position = 0.49765,0,0.669405,0x1db5529b;
 	}
 }
+[t:gr_pm_beginner,n:0xb2800055]
+{
+	[aspect]
+	{
+	  f max_life = 49;
+	  f max_mana = 30;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = pm_beginner_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 0.0244751,0,0.951409,0x1db5529b;
+	}
+}
 [t:gr_pm_ranger,n:0xb2800003]
 {
 	[aspect]
@@ -157,52 +182,6 @@
 	  p position = 2.39821,0.55,-3.88167,0xb44d5def;
 	}
 }
-[t:snapper,n:0xb2800006]
-{
-	[placement]
-	{
-	  p position = 2.83737,0.35,2.20133,0xf2af5409;
-	}
-}
-[t:snapper,n:0xb2800007]
-{
-	[placement]
-	{
-	  p position = 2.39693,0.35,3.39474,0xf2af5409;
-	}
-}
-[t:snapper,n:0xb2800008]
-{
-	[placement]
-	{
-	  p position = 1.77732,0.35,3.3119,0xf2af5409;
-	}
-}
-[t:gr_pm_beginner,n:0xb2800055]
-{
-	[aspect]
-	{
-	  f max_life = 49;
-	  f max_mana = 30;
-	}
-	[common]
-	{
-		dev_instance_text = "MP";
-	  b is_single_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = pm_beginner_mp;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.923879,0,-0.382684;
-	  p position = 0.0244751,0,0.951409,0x1db5529b;
-	}
-}
 [t:gr_pm_ranger,n:0xb2800056]
 {
 	[aspect]
@@ -227,5 +206,26 @@
 	{
 	  q orientation = 0,0.923879,0,-0.382684;
 	  p position = 2.02951,0.55,-3.99442,0xb44d5def;
+	}
+}
+[t:snapper,n:0xb2800006]
+{
+	[placement]
+	{
+	  p position = 2.83737,0.35,2.20133,0xf2af5409;
+	}
+}
+[t:snapper,n:0xb2800007]
+{
+	[placement]
+	{
+	  p position = 2.39693,0.35,3.39474,0xf2af5409;
+	}
+}
+[t:snapper,n:0xb2800008]
+{
+	[placement]
+	{
+	  p position = 1.77732,0.35,3.3119,0xf2af5409;
 	}
 }
