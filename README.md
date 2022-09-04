@@ -6,7 +6,8 @@ FOSS, CC-BY-SA.
 ## Requirements & installation
 Requires _Dungeon Siege: Legends of Aranna_.
 
-To install, put the dsmap & dsres files into the DSLOA folder of your installation directory.
+To install, put the dsmap & dsres files into the DSLOA folder of your installation directory.\
+The custom music dsres is optional.
 
 ## About
 _The Green Range is a mountain range on the continent of Aranna that marks the southeastern border of the Aranoi Desert.
