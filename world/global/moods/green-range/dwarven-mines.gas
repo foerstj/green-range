@@ -104,7 +104,7 @@
 }
 
 // town & snowpeak
-[mood_setting*]
+[mood_setting*]  // town
 {
 	mood_name				= gr-dm-town;
 	transition_time			= 2.0f;
@@ -135,7 +135,7 @@
 		room_type			= rt_stonecorridor;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // back
 {
 	mood_name				= gr-dm-back;
 	transition_time			= 2.0f;
@@ -160,7 +160,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // elevator up
 {
 // Dwarven Mines elevator mood (going up)
 	mood_name				= gr-dm-ele-up;
@@ -202,7 +202,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // elevator down
 {
 // Dwarven Mines with NO transition time (instant fog--elevator going down)
 	mood_name				= gr-dm-ele-down;
@@ -244,7 +244,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // snowpeak inside
 {
 	mood_name				= gr-dm-snowpeak-inside;
 	transition_time			= 0.5f;
@@ -287,7 +287,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // snowpeak outside
 {
 	mood_name				= gr-dm-snowpeak-outside;
 	transition_time			= 1.0f;
@@ -340,7 +340,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // snowpeak inside tavern
 {
 	mood_name				= gr-dm-snowpeak-inside-tavern;
 	transition_time			= 0.5f;

@@ -7,7 +7,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("gr-psw");
+				action* = mood_change("gr-psw-s");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,8.000000,16.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -51,7 +51,7 @@
 			[*]
 			{
 				action* = fade_node(0x19485D94,"out:black");
-				action* = mood_change("gr-psw-indoor");
+				action* = mood_change("gr-psw-s-indoor");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -80,7 +80,7 @@
 			[*]
 			{
 				action* = fade_node(0x19485D94,"in");
-				action* = mood_change("gr-psw");
+				action* = mood_change("gr-psw-s");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -109,7 +109,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("gr-psw");
+				action* = mood_change("gr-psw-s");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(8.000000,1.000000,8.000000,"on_every_enter");
 			  f delay = 0.000000;

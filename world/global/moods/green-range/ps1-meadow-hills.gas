@@ -1,6 +1,6 @@
 // Moods for progression step 1
 // Ehb border
-[mood_setting*]
+[mood_setting*]  // start
 {
 	mood_name = gr-ehb-border-start;
   f transition_time = 8.000000;
@@ -33,7 +33,7 @@
 	  f wind_velocity = 8.000000;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // tx
 {
 	mood_name = gr-ehb-border-tx-ps1;
   f transition_time = 8.000000;
@@ -68,7 +68,7 @@
 }
 
 // mountains
-[mood_setting*]
+[mood_setting*]  // tx
 {
 	mood_name = gr-ps1-tx-ehb-border;
   f transition_time = 8.000000;
@@ -101,9 +101,9 @@
 	  f wind_velocity = 2.000000;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // trail a
 {
-	mood_name = gr-ps1;
+	mood_name = gr-ps1-a;
   f transition_time = 8.000000;
   b interior = false;
 
@@ -130,9 +130,9 @@
 	  f wind_velocity = 1.000000;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // trail b
 {
-	mood_name = gr-ps1-2;
+	mood_name = gr-ps1-b;
   f transition_time = 8.000000;
   b interior = false;
 
@@ -159,9 +159,9 @@
 	  f wind_velocity = 1.000000;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // trail b, rainy
 {
-	mood_name = gr-ps1-2-rain;
+	mood_name = gr-ps1-b-rain;
   f transition_time = 8.000000;
   b interior = false;
 
