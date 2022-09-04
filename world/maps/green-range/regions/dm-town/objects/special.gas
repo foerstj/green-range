@@ -37,7 +37,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-dm-town");
+				action* = mood_change("gr-dm-town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -95,7 +95,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-dm-west-2");
+				action* = mood_change("gr-dm-west-2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.500000,1.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -124,7 +124,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-dm-town");
+				action* = mood_change("gr-dm-town");
 				action* = fade_nodes_global(0x00000004,1,1,-1,"out:black"), doc("cap");
 				action* = fade_nodes(0x00000005,1,-1,-1,"out:instant"), doc("snowpeak");
 			  b can_self_destruct = true;
@@ -308,7 +308,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-dm-town");
+				action* = mood_change("gr-dm-town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.500000,1.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -338,7 +338,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-dm-back");
+				action* = mood_change("gr-dm-back");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.500000,1.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -608,7 +608,7 @@
 			{
 				action* = fade_nodes_global(0x00000004,1,2,-1,"out:black"), doc("cap");
 				action* = fade_nodes(0x00000005,1,-1,-1,"out:instant"), doc("snowpeak");
-				action* = mood_change("green-range-dm-town");
+				action* = mood_change("gr-dm-town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(10.000000,1.000000,10.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1087,7 +1087,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-dm-town");
+				action* = mood_change("gr-dm-town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.500000,1.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1117,7 +1117,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-dm-back");
+				action* = mood_change("gr-dm-back");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.500000,1.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1192,7 +1192,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-dm-town");
+				action* = mood_change("gr-dm-town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1237,7 +1237,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("green-range-dm-west-2");
+				action* = mood_change("gr-dm-west-2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.500000,1.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
