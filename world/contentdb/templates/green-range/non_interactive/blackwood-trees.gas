@@ -1,0 +1,126 @@
+[t:template,n:base_tree_blackwood]
+{
+	category_name = "trees";
+	specializes = base_tree;
+}
+
+[t:template,n:tree_grs_blackwood_hemlock]
+{
+	specializes = base_tree_blackwood;
+	doc = "grs_hemlock";
+
+	[aspect]
+	{
+		lodfi_lower = 0.3;
+		lodfi_upper = 0.75;
+		model = m_i_glb_tree-hemlock-01;
+        textures:0 = b_i_grs_tree-hemlock-black;
+	}
+}
+
+[t:template,n:tree_grs_blackwood_sequoia_trunk_large]
+{
+	specializes = base_tree_blackwood;
+	doc = "grs_sequoia_trunk";
+
+	[aspect]
+	{
+		lodfi_lower = 0.5;
+		lodfi_upper = 0.6;
+		model = m_i_glb_tree-sequoia-01;
+        textures:0 = b_i_grs_tree-sequoia-black;
+	}
+}
+[t:template,n:tree_grs_blackwood_sequoia_trunk_roots]
+{
+	specializes = base_tree_blackwood;
+	doc = "grs_sequoia_trunk with roots";
+
+	[aspect]
+	{
+		lodfi_lower = 0.25;
+		lodfi_upper = 0.7;
+		model = m_i_glb_tree-sequoia-02;
+        textures:0 = b_i_grs_tree-sequoia-black;
+	}
+}
+[t:template,n:tree_grs_blackwood_sequoia_trunk_uproot]
+{
+	specializes = base_tree_blackwood;
+	doc = "grs_sequoia_trunk_thin";
+
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_tree-sequoia-03;
+        textures:0 = b_i_grs_tree-sequoia-black;
+	}
+}
+
+[t:template,n:tree_grs_blackwood_sequoia_9m]
+{
+	specializes = base_tree_blackwood;
+	doc = "seq_pine_9m";
+
+	[aspect]
+	{
+		lodfi_lower = 0.2;
+		lodfi_upper = 0.5;
+		model = m_i_glb_tree-01;
+		scale_base = 0.75;
+		[textures]
+		{
+			0 = b_i_grs_tree-pine-sequoia-black;
+		}
+	}
+}
+[t:template,n:tree_grs_blackwood_sequoia_12m]
+{
+	specializes = base_tree_blackwood;
+	doc = "seq_pine_12m";
+
+	[aspect]
+	{
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.5;
+		model = m_i_glb_tree-01;
+		[textures]
+		{
+			0 = b_i_grs_tree-pine-sequoia-black;
+		}
+	}
+}
+[t:template,n:tree_grs_blackwood_sequoia_4m]
+{
+	specializes = base_tree_blackwood;
+	doc = "seq_pine_4m";
+
+	[aspect]
+	{
+		lodfi_lower = 0.4;
+		lodfi_upper = 0.6;
+		model = m_i_glb_tree-02;
+		scale_base = 0.66;
+		[textures]
+		{
+			0 = b_i_grs_tree-pine-sequoia-black;
+		}
+	}
+}
+[t:template,n:tree_grs_blackwood_sequoia_6m]
+{
+	specializes = base_tree_blackwood;
+	doc = "seq_pine_6m";
+
+	[aspect]
+	{
+		lodfi_lower = 0.3;
+		lodfi_upper = 0.4;
+		model = m_i_glb_tree-02;
+		[textures]
+		{
+			0 = b_i_grs_tree-pine-sequoia-black;
+		}
+	}
+}
