@@ -1,0 +1,30 @@
+[t:light_flicker,n:0x05a0079d]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 8;
+	  f flicker_frequency_min = 6;
+	  b initially_active = false;
+	  f magnitude = 0.6;
+	  x siege_light = 0x910B3D13;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.374606,0,0.927184;
+	  p position = -3.65997,-3,3.05698,0xbf2d32b0;
+	}
+}
+[t:light_enable,n:0x05a01271]
+{
+	[light_enable]
+	{
+	  b initially_active = false;
+	  b is_toggle = true;
+	  x siege_light = 0x910B3D13;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.771624,0,-0.636078;
+	  p position = -2.43787,-3,2.50551,0xbf2d32b0;
+	}
+}

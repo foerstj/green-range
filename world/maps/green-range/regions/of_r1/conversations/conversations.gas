@@ -1,0 +1,77 @@
+[conversation_rhod]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+
+		screen_text = "Hm. I seem to have lost my way; I don't suppose you could tell me the way to Master Englemoor's cottage? Ah, well. I have a few items he was interested in, but you'd do just as well if they're to your liking.";
+	}
+	[text*]
+	{
+	        order = 1;
+		choice = shop;
+
+		screen_text = "The wolves around here are the fiercest I've seen. It's not safe for a simple scribe to be running around these woods alone. The sooner I dispose of this extra weight, the sooner I can return home to Lang.";
+	}
+
+	[text*]
+	{
+
+		choice = shop;
+
+		screen_text = "The Sanctuary Keeper passed this way not too long ago. She seemed most anxious to be out of the forest. Said there'd been rumors of undead to the southwest, and vicious creatures with terrible chittering teeth had been spotted in the old caves near that area. Makes me almost want to hide in that Abandoned Mine to the east!";
+	}
+
+}
+[conversation_rhod_red]
+{
+	[text*]
+	{
+		screen_text = "Blech, my stomach's all queasy from the stench in the air, and the sky's all aflame. This sort of thing would never have happened had the queen still been living.";
+	}
+}
+
+[conversation_keeper]
+{
+	[text*] 
+	{	
+	
+		screen_text = "Haven't you heard? The Sanctuary has been inundated with water! I overwintered in Lang and returned to find everything in disarray! Everyone's calling it the Flooded Sanctuary now. And if that wasn't enough, an entire brood of nasty creatures has taken up residence inside. What's needed is a strong, brave adventurer to put things right. Someone like you, perhaps? It's just west there, down the stairs, if you care to take a peek.";
+		activate_quest* = quest_flooded_sanctuary;
+		quest_dialog = true;
+	}
+
+}
+
+[conversation_keeper_complete]
+{
+	[text*]
+	{
+		screen_text = "Oh, thank you so much for making the Sanctuary, well, safe again! I was dreading having to beg the good citizens of Lang for help. You never know what sort of payment they would ask for in return... I don't have much, but please take this family heirloom as my thanks. If you're interested in more adventures, there's a nasty Fury Den to the south of here. You'll have to travel through it to reach Quillrabe, anyways.";
+	}
+}
+[conversation_keeper_red]
+{
+	[text*]
+	{
+		screen_text = "Brimstone's in the air, and fire's upon the wind. 'Tis ill times for us all, I'm afraid.";
+	}
+}
+
+[conversation_guard]
+{
+	[text*] 
+	{	
+	
+		screen_text = "Hail, friend. It's a fair time you've chosen for traveling, what with all the forest creatures as aggravated as they are now. I'd advise you to stay close to the path and head south to the town of Quillrabe. The Sanctuary Keeper may have more news for you, if she's survived the trip out there. There've been rumors of drakes in the vicinity!";
+	}
+
+}
+[conversation_guard_red]
+{
+	[text*]
+	{
+		screen_text = "Aug, my head is splitting something awful with this terrible lightning!";
+	}
+}
