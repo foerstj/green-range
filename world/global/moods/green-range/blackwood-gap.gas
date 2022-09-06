@@ -17,7 +17,9 @@
 	[music]
 	{
 		ambient_track = s_e_ambient_woods_01;
-		// no standard_track
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_foreverlands; // s_m_darkforest_03
 		room_type = rt_mountains;
 	}
 	[rain]
@@ -39,7 +41,7 @@
 
 	[fog]
 	{
-	  x fog_color = 0xff304050;
+	  x fog_color = 0xff384048;
 	  f fog_density = 0.5;
 	  f fog_near_dist = 30.000000;
 	  f fog_far_dist = 50.000000;
