@@ -225,53 +225,6 @@
 	  p position = 3.84526,9.53674e-007,-0.986131,0x3ccac693;
 	}
 }
-[t:trigger_generic,n:0x05a00186]
-{
-	[common]
-	{
-		dev_instance_text = "FADE";
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.500000,1.000000,3.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = of_r1_fade_2;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = fade_nodes(0xADA50100,1,5,-1,"out:black"), group(1);
-				action* = fade_nodes(0x9731111C,1,55,-1,"out:black"), group(1);
-				action* = fade_nodes(0xADA50100,1,5,-1,"in"), group(2);
-				action* = fade_nodes(0x9731111C,1,55,-1,"in"), group(2);
-			  b can_self_destruct = true;
-				condition* = party_member_entered_trigger_group("of_r1_fade_2","on_every_enter"), group(1);
-				condition* = party_member_left_trigger_group("of_r1_fade_2","on_every_leave"), group(2);
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.0765087,-11.5212,-4.67526,0xdcab0103;
-	}
-}
 [t:use_point,n:0x05a011c1]
 {
 	[placement]
