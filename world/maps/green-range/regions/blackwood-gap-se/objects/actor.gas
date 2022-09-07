@@ -502,33 +502,6 @@
 	  p position = -1.20981,0,1.56904,0x607904ac;
 	}
 }
-[t:mp_guard_03,n:0x05a00399]
-{
-	[aspect]
-	{
-	  b is_collidable = false;
-		model = m_c_gah_fb_pos_a3;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_guard;
-			* = conversation_guard_red;
-		}
-	}
-	[mind]
-	{
-	  b actor_may_attack = false;
-	  b actor_may_be_attacked = false;
-		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = 0.305458,-4.76837e-007,1.13778,0xe65defef;
-	}
-}
 [t:phrak_forest,n:0x05a0077c]
 {
 	[placement]
