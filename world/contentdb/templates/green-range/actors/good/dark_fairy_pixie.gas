@@ -1,0 +1,192 @@
+[t:template,n:fairy_base]  // = fairy
+{
+	category_name = "1W_character";
+	doc = "fairy";
+	specializes = actor_good;
+	[actor]
+	{
+		alignment			= aa_neutral;
+		[skills]
+		{
+			strength =  5, 0;
+			intelligence =  5, 0;
+			dexterity =  5, 0;
+		}
+		drops_spellbook = false;
+	}
+	[aspect]
+	{
+		experience_value = 1;
+		is_collidable		= false;
+		life = 1;
+		max_life = 1;
+		model = m_c_gbn_fy_pos_1;
+		draw_selection_indicator = false;
+		is_selectable = false;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_fidget_fairy;  }
+		}
+	}
+	[attack]
+	{
+		attack_range = 1;
+		damage_max = 1;
+		damage_min = 1;
+		reload_delay = 1;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.110000;
+		[bone_translator]
+		{
+			body_anterior = neck1;
+			body_mid = root_bone01;
+			body_posterior = spine3;
+			kill_bone = spine2;
+			shield_bone = lt.hand;
+			weapon_bone = rt.hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gbn_fy_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=fl; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=ds; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=fl; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=ds; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=fl; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Fairy";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("fairy_dust");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_heal_fairy; }
+	}
+
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+        actor_may_attack = false;
+        actor_may_be_attacked = false;
+		
+		jat_fidget = world\ai\jobs\actors\good\job_fidget_fairy.skrit;
+		on_enemy_entered_icz_flee            = true;
+		on_friend_entered_icz_flee           = true;
+		flee_count = 1000;
+
+		inner_comfort_zone_range = 2.5;
+		melee_engage_range       = 0.5;
+		ranged_engage_range      = 1.0;
+		outer_comfort_zone_range = 5.0;
+		personal_space_range     = 0.7;
+		sight_range              = 12.0;
+	}
+	[physics]
+	{
+		gib_gore_good = true;
+		break_effect = fairy_explosion;
+		explode_when_killed = true;
+	}
+}
+
+[t:template,n:fairy_dark] { specializes = fairy_dark_base; }
+[t:template,n:fairy_dark_base]
+{
+    specializes = fairy_base;
+    
+    [aspect]
+    {
+		is_selectable = true;
+        [textures]	{0=b_c_gbn_fy-dark;}
+    }
+    [common]
+	{
+		screen_name="Dark Fae";
+    }
+}
+
+[t:template,n:pixie_base]  // = pixie
+{
+	category_name = "1W_character";
+	doc = "pixie";
+	specializes = base_pixie;
+	actor:drops_spellbook = false;
+	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_heal_fairy_mana; }
+	}
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+		jat_fidget = world\ai\jobs\actors\good\job_fidget_fairy.skrit;
+	}
+}
+
+[t:template,n:pixie_dark] { specializes = pixie_dark_base; }
+[t:template,n:pixie_dark_base]
+{
+    specializes = pixie_base;
+    
+    [aspect]
+    {
+		is_selectable = true;
+        [textures]	{0=b_c_gbn_fy-dark;}
+    }
+    [common]
+	{
+		screen_name="Dark Sprite";
+    }
+}
