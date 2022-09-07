@@ -87,34 +87,7 @@
 	}
 	[placement]
 	{
-	  p position = 0.70996,4.70413,0.366917,0xb10bbda2;
-	}
-}
-[t:trigger_change_mood_box,n:0xc6500035]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("gr-ps3-b-rain");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.317051,4.73843,0.0925179,0xf3631f30;
+	  q orientation = 0,1,0,0;
+	  p position = 0.0686684,6,0.431304,0x8f4b0f49;
 	}
 }
