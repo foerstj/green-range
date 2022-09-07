@@ -1,0 +1,214 @@
+[t:template,n:butterfly_base]  // = butterfly
+{
+	category_name = "1W_ambients";
+	doc = "butterfly";
+	specializes = actor_ambient;
+	[actor] { race=other; }
+	[aspect]
+	{
+		draw_shadow = false;
+		model = m_c_na_bf_pos_1;
+		is_selectable = false;
+	}
+	[body]
+	{
+		avg_move_velocity = 1.000000;
+		terrain_movement_permissions = lf_hover;
+		[bone_translator]
+		{
+			body_anterior = Bone01;
+			body_mid = Bone01;
+			body_posterior = Bone01;
+			kill_bone = Bone01;
+			shield_bone = Bone01;
+			weapon_bone = Bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_na_bf_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = fl;
+					01 = fl-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=fl; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=fl; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = fl;
+					01 = fl-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = fl;
+					01 = fl-02;
+				}
+			}
+		}
+	}
+	[common] { screen_name="Butterfly"; }
+	[mind]
+	{
+		on_enemy_spotted_attack = false;
+		on_enemy_entered_weapon_engage_range_attack = false;
+	}
+}
+
+[t:template,n:butterfly_red] { specializes = butterfly_red_base; }
+[t:template,n:butterfly_red_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-red;
+    }
+}
+
+[t:template,n:butterfly_orange] { specializes = butterfly_orange_base; }
+[t:template,n:butterfly_orange_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-orange;
+    }
+}
+
+[t:template,n:butterfly_yellow] { specializes = butterfly_yellow_base; }
+[t:template,n:butterfly_yellow_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-yellow;
+    }
+}
+
+[t:template,n:butterfly_lime] { specializes = butterfly_lime_base; }
+[t:template,n:butterfly_lime_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-lime;
+    }
+}
+
+[t:template,n:butterfly_green] { specializes = butterfly_green_base; }
+[t:template,n:butterfly_green_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-green;
+    }
+}
+
+[t:template,n:butterfly_turquoise] { specializes = butterfly_turquoise_base; }
+[t:template,n:butterfly_turquoise_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-turquoise;
+    }
+}
+
+[t:template,n:butterfly_blue_turquoise] { specializes = butterfly_blue_turquoise_base; }
+[t:template,n:butterfly_blue_turquoise_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-blue-turquoise;
+    }
+}
+
+[t:template,n:butterfly_blue] { specializes = butterfly_blue_base; }
+[t:template,n:butterfly_blue_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-blue;
+    }
+}
+
+[t:template,n:butterfly_blue_violet] { specializes = butterfly_blue_violet_base; }
+[t:template,n:butterfly_blue_violet_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-blue-violet;
+    }
+}
+
+[t:template,n:butterfly_violet] { specializes = butterfly_violet_base; }
+[t:template,n:butterfly_violet_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-violet;
+    }
+}
+
+[t:template,n:butterfly_purple] { specializes = butterfly_purple_base; }
+[t:template,n:butterfly_purple_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-purple;
+    }
+}
+
+[t:template,n:butterfly_pink] { specializes = butterfly_pink_base; }
+[t:template,n:butterfly_pink_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-pink;
+    }
+}
+
+[t:template,n:butterfly_black] { specializes = butterfly_black_base; }
+[t:template,n:butterfly_black_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-black;
+    }
+}
+
+[t:template,n:butterfly_gray] { specializes = butterfly_gray_base; }
+[t:template,n:butterfly_gray_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-gray;
+    }
+}
+
+[t:template,n:butterfly_white] { specializes = butterfly_white_base; }
+[t:template,n:butterfly_white_base] {
+    specializes = butterfly_base;
+    [aspect]
+    {
+        textures:0 = b_c_na_bf-white;
+    }
+}
