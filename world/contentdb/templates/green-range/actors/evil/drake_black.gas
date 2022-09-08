@@ -1,0 +1,19 @@
+[t:template,n:gr_drake_black_base]
+{
+    specializes = drake_white_base;
+	category_name = "1W_evil_d";
+
+    aspect:textures:0 = b_c_edm_dk-04;
+}
+
+[t:template,n:gr_drake_black]
+{
+	specializes = gr_drake_black_base;
+}
+
+[t:template,n:gr_drake_black_reveal]
+{
+	specializes = gr_drake_black_base;
+
+	mind:jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+}

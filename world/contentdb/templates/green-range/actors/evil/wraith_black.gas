@@ -1,0 +1,176 @@
+[t:template,n:dsx_acolyte_dark_base]  // = dsx_acolyte_dark
+{
+// Balanced for level 13, medium melee
+	category_name = "1W_evil_d";
+	doc = "dsx_acolyte_dark";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength	= 13, 0;
+			intelligence	= 8, 0;
+			dexterity	= 10, 0;
+			melee 		= 9, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 210;
+		life		 = 285;
+		max_life	 = 285;
+		mana		 = 45;
+		max_mana	 = 45;
+
+		model = m_c_ecm_wr_pos_1;
+		textures:0 = b_c_ecm_dacolyte;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_acolyte_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_acolyte_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_acolyte_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_acolyte_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_acolyte_SED; }
+
+		}
+	}
+	[defend] { defense = 115; }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 58;
+		damage_min = 52;
+	}
+	[body]
+		{
+			avg_move_velocity = 2.5;
+			[bone_translator]
+				{
+					body_anterior = head_bone;
+					body_mid = mid_torso;
+					body_posterior = spine_end;
+					kill_bone = spine_02;
+					shield_bone = shield_grip;
+					weapon_bone = weapon_grip;
+				}
+			[chore_dictionary]
+				{
+					chore_prefix = a_c_ecm_wr_fs;
+					[chore_attack]
+						{
+							chore_stances = 0;
+							skrit = select_attack;
+							[anim_files]
+								{
+									00 = at;
+									01 = at-02;
+								}
+						}
+					[chore_default]
+						{
+							chore_stances = 0;
+							skrit = infinite_loop;
+							[anim_files] { 00=dfs; }
+						}
+					[chore_die]
+						{
+							chore_stances = 0;
+							skrit = select_transition;
+							[anim_files] { 00=di; }
+						}
+					[chore_misc]
+						{
+							chore_stances = ignore;
+							skrit = select_transition;
+							[anim_files]
+								{
+									slep = a_c_ecm_wr_fs3_ds;
+									wake = a_c_ecm_wr_fs3_up;
+								}
+						}
+					[chore_fidget]
+						{
+							chore_stances = 0;
+							skrit = select_fidget;
+							[anim_files]
+								{
+									00=dff;
+									01=dff-02;
+								}
+						}
+					[chore_walk]
+						{
+							chore_stances = 0;
+							skrit = select_walk;
+							[anim_files] { 00=wl; }
+						}
+				}
+		}
+	[common]
+	{
+		screen_name = "Dark Acolyte"; //--
+		membership = monster, undead; //--
+	}
+
+
+	[mind]
+		{
+			jat_brain	 = world\ai\jobs\common\brain_hero.skrit
+				? actor_joins_existing_party	= true;
+
+			jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+			melee_engage_range = 14;
+			personal_space_range = 0.7;
+			ranged_engage_range = 14.0;
+			sight_range = 14.0;
+		}
+	// @TODO - wrong level $$$
+	[inventory]
+		{
+			drop_at_use_point = true;
+			[pcontent]
+	{
+	/* Generated: Tue Jun 17 11:13:15 2003
+		Level 13, Medium */
+		[oneof*]
+		{
+			[gold*]
+			{
+				chance = 0.2;
+				min = 153;
+				max = 305;
+			}
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = potion_mana_small;
+				il_main = potion_health_small;
+			}
+			[oneof*]
+			{
+				chance = 0.15;
+				il_main = #weapon/25-36;
+				il_main = #armor/9-71;
+				il_main = #*/25-36;
+			}
+			[oneof*]
+			{
+				chance = 0.0075;
+				il_main = #weapon/-rare(1)/28-41;
+				il_main = #armor/-rare(1)/53-118;
+				il_main = #*/-rare(1)/28-41;
+			}
+			
+		}
+	}
+		}
+
+}
+
+[t:template,n:gr_wraith_black] { specializes = gr_wraith_black_base; }
+[t:template,n:gr_wraith_black_base]
+{
+    specializes = dsx_acolyte_dark_base;
+
+    common:screen_name = "Black Wraith";
+}
