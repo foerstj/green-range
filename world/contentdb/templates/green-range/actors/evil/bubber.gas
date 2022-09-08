@@ -117,3 +117,56 @@
         screen_name = "Bubber";
     }
 }
+
+[t:template,n:gr_bubber_black] { specializes = gr_bubber_black_base; }
+[t:template,n:gr_bubber_black_base]
+{
+    specializes = dsx_bubber_base;
+
+    [common]
+    {
+        screen_name = "Black Bubber";
+    }
+    [aspect]
+    {
+        model = m_c_edm_giantlizard_pos_1;
+        textures:0 = b_c_edm_gz-01;
+
+        // from dsx thunder lizard
+        [voice]
+        {
+            [die]			{ priority = high; * = s_e_die_lectar;		}
+            [enemy_spotted]	{ priority = high; * = s_e_call_thunder_lizard_SED; }
+            [hit_critical]	{ priority = low; * = s_e_hit_lectar_SED;	}
+            [hit_glance]	{ priority = low; * = s_e_hit_lectar_SED;	}
+            [hit_solid]		{ priority = low; * = s_e_hit_lectar_SED;	}
+        }
+    }
+
+    // stats from dsx_leetch
+	[actor]
+	{
+		[skills]
+		{
+		  strength     = 12, 0;
+		  intelligence = 7, 0;
+		  dexterity    = 9, 0;
+		  melee        = 8, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 120;
+		life             = 118;
+		max_life         = 118;
+		mana             = 45;
+		max_mana         = 45;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 55; 
+		damage_min = 45; 
+	}
+	[defend] { defense = 60; }
+}
