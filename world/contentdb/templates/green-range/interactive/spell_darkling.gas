@@ -1,0 +1,45 @@
+[t:template,n:spell_darkling_spark_base]  // = spell_darkling_spark
+{
+	category_name = "magic";
+	doc = "spell darkling spark";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 24;
+		damage_min = 20;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("darkling_spark");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 10;
+		cast_reload_delay = 0.5;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_default] {}
+}
+
+[t:template,n:gr_spell_darkling_spark]
+{
+	specializes = spell_darkling_spark_base;
+
+    // stats from braak iceblast
+	[attack]
+	{
+		damage_max = 63;  // numbers tripled because the braak spell fires 3 projectiles
+		damage_min = 57;
+	}
+}

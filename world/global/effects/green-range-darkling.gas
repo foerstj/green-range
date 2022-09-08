@@ -1,0 +1,23 @@
+[effect_script*]
+{
+	name = gr_darkling_eye_glow;
+
+	script =[[	
+        if ( #LODFI > 0.4 )
+        {
+            sfx create fireb #TARGET
+                "offset(.17,.1,.03)velocity(20,-15,40)scale(.2)color0(0,0.2,1)
+                alphafade(4)lower_r0(0)lower_r1(0)upper_r0(0)upper_r1(0)
+                count(30)fctrl(0,0,-.1)flamesize(1.5)bone_orient()";
+            sfx attach_point #PEEK Bip01_Head target;
+            sfx start #POP;
+            
+            sfx create fireb #TARGET
+                "offset(.17,.1,-.03)velocity(20,-15,-40)scale(.2)color0(0,0.2,1)
+                alphafade(4)lower_r0(0)lower_r1(0)upper_r0(0)upper_r1(0)
+                count(30)fctrl(0,0,-.1)flamesize(1.5)bone_orient()";
+            sfx attach_point #PEEK Bip01_Head target;
+            sfx start #POP;
+        }
+    ]];
+}
