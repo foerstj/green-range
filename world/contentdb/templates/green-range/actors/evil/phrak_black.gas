@@ -1,0 +1,197 @@
+[t:template,n:phrak_base]  // = phrak
+{
+	category_name = "1W_evil_d";
+	doc = "phrak";
+	specializes = base_phrak;
+
+	[common]
+	{
+		membership = phrak,monster;
+	}
+	[mind]
+	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&guard							= true
+			&friends						= phrak;
+	}
+
+}
+
+[t:template,n:gr_phrak_black] { specializes = gr_phrak_black_base; }
+[t:template,n:gr_phrak_black_base]
+{
+    specializes = phrak_base;
+
+    [common]
+    {
+        screen_name = "Black Phrak";
+    }
+    [aspect]
+    {
+        textures:0 = b_c_edm_ph-black;
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
+			gr_frag_phrak_black_01 = 1;
+			gr_frag_phrak_black_02 = 2;
+			gr_frag_phrak_black_03 = 2;
+			gr_frag_phrak_black_04 = 1;
+			gr_frag_phrak_black_05 = 2;
+		}
+	}
+
+    // stats from dsx_leetch
+	[actor]
+	{
+		[skills]
+		{
+		  strength     = 12, 0;
+		  intelligence = 7, 0;
+		  dexterity    = 9, 0;
+		  melee        = 8, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 120;
+		life             = 118;
+		max_life         = 118;
+		mana             = 45;
+		max_mana         = 45;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 55; 
+		damage_min = 45; 
+	}
+	[defend] { defense = 60; }
+}
+
+
+[t:template,n:phrak_piercer_base]  // = phrak_piercer
+{
+	category_name = "1W_evil_d";
+	doc = "phrak piercer";
+	specializes = base_phrak;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  1, 0;
+			intelligence =  1, 0;
+			dexterity =  10, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 4;
+		life = 4;
+        max_life = 4;
+        mana = 2;
+		max_mana = 2;
+		scale_base = 0.55;
+		textures:0 = b_c_edm_ph-02;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 6;
+		damage_min = 4;
+	}
+	[common]
+	{
+		screen_name="Phrak Piercer";
+		membership = phrak,monster;
+	}
+
+	[defend] { defense=1; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_phrak_dart; }
+	}
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&guard							= true
+			&friends						= phrak;
+	}
+		[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_phrak_piercer_01 = 1;
+			frag_glb_phrak_piercer_02 = 2;
+			frag_glb_phrak_piercer_03 = 2;
+			frag_glb_phrak_piercer_04 = 1;
+			frag_glb_phrak_piercer_05 = 2;
+		}
+	}
+}
+
+[t:template,n:gr_phrak_piercer_black] { specializes = gr_phrak_piercer_black_base; }
+[t:template,n:gr_phrak_piercer_black_base]
+{
+    specializes = phrak_piercer_base;
+
+    [common]
+    {
+        screen_name = "Black Phrak Piercer";
+    }
+    [aspect]
+    {
+        textures:0 = b_c_edm_ph-black;
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
+			gr_frag_phrak_black_01 = 1;
+			gr_frag_phrak_black_02 = 2;
+			gr_frag_phrak_black_03 = 2;
+			gr_frag_phrak_black_04 = 1;
+			gr_frag_phrak_black_05 = 2;
+		}
+	}
+
+    // stats from ice braak
+	[inventory]
+	{
+		[other] { il_active_primary_spell=gr_spell_phrak_black_dart; }
+	}
+	[actor]
+	{
+		[skills]
+		{
+			strength =  9, 0;
+			intelligence =  10, 0;
+			dexterity =  10, 0;
+            nature_magic =  7,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 85;
+		life = 137;
+        max_life = 137;
+		mana = 40;
+		max_mana = 40;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 28;
+		damage_min = 24;
+	}
+	[defend] { defense=36; }
+}

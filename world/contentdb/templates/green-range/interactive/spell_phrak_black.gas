@@ -1,0 +1,43 @@
+[t:template,n:spell_phrak_dart_base]  // = spell_phrak_dart
+{
+	category_name = "magic";
+	doc = "spell phrak dart";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		ammo_attach_bone = Nose;
+		ammo_template = phrak_dart;
+		damage_max = 5;
+		damage_min = 3;
+	}
+	[magic]
+	{
+		cast_range = 10;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 15;
+	}
+	[spell_launch]
+	{
+		number = 1;
+	}
+}
+
+[t:template,n:gr_spell_phrak_black_dart]
+{
+	specializes = spell_phrak_dart_base;
+
+    // stats from braak iceblast
+	[attack]
+	{
+		damage_max = 63;  // numbers tripled because the braak spell fires 3 projectiles
+		damage_min = 57;
+	}
+}
