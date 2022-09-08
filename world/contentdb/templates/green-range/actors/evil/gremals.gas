@@ -1,0 +1,373 @@
+[t:template,n:gremal_base]  // not to be confused with base_gremal
+{
+    // All copy&pasted for use as base template.
+	category_name = "1W_evil_d";
+	doc = "Gremal";
+	specializes = base_gremal;
+	[actor]
+	{
+		alignment			= aa_neutral;
+		[skills]
+		{
+			strength =  1, 0;
+			intelligence =  2, 0;
+			dexterity =  2, 0;
+			melee =  1,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1;
+		life = 1;
+		max_life = 1;
+		mana = 4;
+        max_mana = 4;
+		megamap_icon = <none>;
+		model = m_c_edm_gm_pos_2;
+		scale_base = 0.4;
+	}
+	[attack]
+	{
+		damage_max = 1;
+		damage_min = 1;
+        attack_range = 0.1;  // 0.5 looked weird for such a small enemy
+	}
+	[common]
+	{
+		screen_name="Gremal";
+		is_multi_player = false;
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\actors\evil\job_fidget_curious.skrit;
+		on_alert_projectile_near_missed_flee = true;
+
+		on_enemy_spotted_alert_friends       = false;
+		on_enemy_entered_ocz_flee            = true;
+		on_friend_entered_ocz_flee           = true;
+		on_enemy_entered_icz_attack          = true;
+
+		sensor_scan_period		 = 0.75;
+		flee_count				 = 1000;
+		com_range                = 7.0;
+		inner_comfort_zone_range = 0.5;
+		melee_engage_range       = 0.5;
+		ranged_engage_range      = 1.0;
+		outer_comfort_zone_range = 3.0;
+		personal_space_range     = 0.7;
+		sight_range              = 12.0;
+	}
+}
+// gremal_killer_base already exists (for summoning).
+// Small gremal but as enemy:
+[t:template,n:gremal_enemy_base]
+{
+	category_name = "1W_evil_d";
+	doc = "Gremal (enemy)";
+	specializes = gremal_base;
+
+	[actor]
+	{
+		alignment			= aa_evil;
+    }
+    [common] { is_multi_player = true; }
+    // behavior of killer gremal
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social = 0.30
+			&wander = 0.50
+			&approach_dist = 2.50
+			&still	= false;
+
+		on_enemy_spotted_alert_friends = false;
+		on_enemy_entered_ocz_flee      = true;
+		on_enemy_entered_icz_attack    = true;
+
+		inner_comfort_zone_range = 2;
+		melee_engage_range = 14.0;
+		ranged_engage_range = 14.0;
+		outer_comfort_zone_range = 5;
+		personal_space_range = 0.7;
+		sight_range = 14.0;
+        
+        // Make the little critters fearnaughts
+        flee_count = 0;
+	}
+}
+// Big gremal but as ambient:
+[t:template,n:gremal_killer_ambient_base]
+{
+	category_name = "1W_evil_d";
+	doc = "Gremal Killer (ambient)";
+	specializes = gremal_killer_base;
+
+	[actor]
+	{
+		alignment			= aa_neutral;
+    }
+    [common] { is_multi_player = false; }
+    // behavior of small gremal
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\actors\evil\job_fidget_curious.skrit;
+		on_alert_projectile_near_missed_flee = true;
+
+		on_enemy_spotted_alert_friends       = false;
+		on_enemy_entered_ocz_flee            = true;
+		on_friend_entered_ocz_flee           = true;
+		on_enemy_entered_icz_attack          = true;
+
+		sensor_scan_period		 = 0.75;
+		flee_count				 = 1000;
+		com_range                = 7.0;
+		inner_comfort_zone_range = 0.5;
+		melee_engage_range       = 0.5;
+		ranged_engage_range      = 1.0;
+		outer_comfort_zone_range = 3.0;
+		personal_space_range     = 0.7;
+		sight_range              = 12.0;
+	}
+}
+
+[t:template,n:gremal_beige]
+{
+	doc = "Gremal beige";
+	specializes = gremal_base;
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm; }
+    }
+}
+[t:template,n:gremal_killer_beige]  // just renaming for sake of consistency
+{
+	category_name = "1W_evil_d";
+	doc = "Killer Gremal";
+	specializes = gremal_killer_base;
+}
+[t:template,n:gremal_white]
+{
+	doc = "Gremal white";
+	specializes = gremal_base;
+    [common]
+    {
+        screen_name = "Snow Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-white; }
+    }
+}
+[t:template,n:gremal_enemy_white]
+{
+	doc = "Gremal white (enemy)";
+	specializes = gremal_enemy_base;
+    [common]
+    {
+        screen_name = "Snow Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-white; }
+    }
+}
+[t:template,n:gremal_killer_white]
+{
+	doc = "Gremal white";
+	specializes = gremal_killer_base;
+    [common]
+    {
+        screen_name = "Killer Snow Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-white; }
+    }
+}
+[t:template,n:gremal_gray]
+{
+	doc = "Gremal gray";
+	specializes = gremal_base;
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-gray; }
+    }
+}
+[t:template,n:gremal_killer_gray]
+{
+	doc = "Gremal gray";
+	specializes = gremal_killer_base;
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-gray; }
+    }
+}
+[t:template,n:gremal_killer_ambient_gray]
+{
+	doc = "Gremal gray";
+	specializes = gremal_killer_ambient_base;
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-gray; }
+    }
+    [common]
+    {
+        screen_name = "Peaceful Killer Gremal";
+    }
+}
+[t:template,n:gremal_black]
+{
+	doc = "Gremal black";
+	specializes = gremal_base;
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-black; }
+    }
+}
+[t:template,n:gremal_killer_black]
+{
+	doc = "Gremal black";
+	specializes = gremal_killer_base;
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-black; }
+    }
+}
+[t:template,n:gremal_brown]
+{
+	doc = "Gremal brown";
+	specializes = gremal_base;
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-brown; }
+    }
+}
+[t:template,n:gremal_killer_brown]
+{
+	doc = "Gremal brown";
+	specializes = gremal_killer_base;
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-brown; }
+    }
+}
+
+// Up-stats
+[t:template,n:gremal_black_forest]
+{
+	// black gremal with stats of forest phrak
+	doc = "Gremal black";
+	specializes = gremal_base;
+    [common]
+    {
+        screen_name = "Forest Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-black; }
+    }
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	6, 0;
+			intelligence =  2, 0;
+			dexterity =  	17, 0;
+            melee = 		12, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2000;
+		life = 180;
+        max_life = 180;
+        mana = 2;
+		max_mana = 2;
+		scale_base = 0.40;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 105;
+		damage_min = 95;
+	}
+    [defend] { defense=100; }
+}
+[t:template,n:gremal_killer_black_forest]
+{
+	// black gremal with stats of black wolf
+	doc = "Gremal black";
+	specializes = gremal_killer_base;
+    [common]
+    {
+        screen_name = "Killer Forest Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-black; }
+    }
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  14, 0;
+			intelligence =  8, 0;
+			dexterity =  15, 0;
+            melee =  11,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 758;
+		life = 270;
+        max_life = 270;
+        mana = 16;
+        max_mana = 16;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 74;
+		damage_min = 70;
+	}
+	[defend] { defense=150; }
+}
+
+
+// Just testin'
+[t:template,n:gremal_ktest]
+{
+	doc = "Gremal beige";
+	specializes = gremal_base;
+	[actor]
+	{
+		alignment			= aa_evil;
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02; }
+    }
+    [common]
+    {
+        screen_name = "Gremal as evil";
+    }
+}
+[t:template,n:gremal_ktest2]
+{
+	doc = "Gremal brown";
+	specializes = gremal_killer_base;
+	[actor]
+	{
+		alignment			= aa_neutral;
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm; }
+    }
+    [common]
+    {
+        screen_name = "Killer Gremal as neutral/ambient";
+    }
+}
