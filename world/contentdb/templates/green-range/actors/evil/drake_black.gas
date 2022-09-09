@@ -5,6 +5,68 @@
 
     common:screen_name = "Black Drake";
     aspect:textures:0 = b_c_edm_dk-04;
+
+    // stats&loot from klaw boss; keeping original ranged attack tho
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  14, 0;
+			intelligence =  9, 0;
+			dexterity 	=  12, 0;
+            melee 		=  9,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 190;
+		life = 240;
+        max_life = 240;
+        mana = 18;
+		max_mana = 18;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 54;
+		damage_min = 46;
+	}
+    [defend] { defense=154; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[all*]
+			{
+				[all*]
+				{
+					il_main = #armor,f/100-115;
+	                il_main = #weapon/33-37;
+				}
+				[oneof*]
+				{
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/44-53;
+	                   il_main = #armor/-rare(1)/112-119;
+                       il_main = #*/-rare(1)/44-53;
+                }
+				[oneof*]
+				{
+                       chance = 0.002;
+	                   il_main = #weapon/-unique(2)/44-53;
+	                   il_main = #armor/-unique(2)/112-119;
+                       il_main = #*/-unique(2)/44-53;
+	            }
+				[gold*]
+				{
+					max = 384;
+					min = 241;
+					min_pile = 41;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
 }
 
 [t:template,n:gr_drake_black]
