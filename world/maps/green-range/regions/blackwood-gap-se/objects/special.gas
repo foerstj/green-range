@@ -305,52 +305,6 @@
 	  p position = 0.902467,0,3.45068,0xc52d2dfb;
 	}
 }
-[t:trigger_generic,n:0x05a00194]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.300000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = of_r1_fade_3;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = fade_nodes(0xADA50100,1,2,-1,"out:black"), group(1);
-				action* = fade_nodes(0xAAA80400,1,2,-1,"out:black"), group(1);
-				action* = fade_nodes(0xADA50100,1,2,-1,"in"), group(2);
-				action* = fade_nodes(0xAAA80400,1,2,-1,"in"), group(2);
-			  b can_self_destruct = true;
-				condition* = party_member_entered_trigger_group("of_r1_fade_3","on_every_enter"), group(1);
-				condition* = party_member_left_trigger_group("of_r1_fade_3","on_every_leave"), group(2);
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.0312185,-11.7585,-4.46716,0xdb469748;
-	}
-}
 [t:use_point,n:0x05a011db]
 {
 	[placement]

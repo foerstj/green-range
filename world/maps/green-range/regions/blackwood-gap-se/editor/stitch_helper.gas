@@ -2,6 +2,15 @@
 {
 	source_region_guid = 0xADA50100;
 	source_region_name = blackwood-gap-se;
+	[t:stitch_editor,n:blackwood-gap-center]
+	{
+		dest_region = blackwood-gap-center;
+		[node_ids]
+		{
+			0x10122021 = 0x51697558,4;
+			0x10122022 = 0x51697558,3;
+		}
+	}
 	[t:stitch_editor,n:blackwood-gap-climb-s]
 	{
 		dest_region = blackwood-gap-climb-s;
