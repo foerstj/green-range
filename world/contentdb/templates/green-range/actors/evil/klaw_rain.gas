@@ -87,7 +87,9 @@
 			?actor_joins_existing_party			= true;
 	}
 }
-[t:template,n:gr_klaw_rain]
+
+[t:template,n:gr_klaw_rain] { specializes = gr_klaw_rain_base; }
+[t:template,n:gr_klaw_rain_base]
 {
     specializes = klaw_base;
 
