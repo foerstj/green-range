@@ -903,3 +903,239 @@
 		}
 	}
 }
+
+
+// Blackwood Gap
+
+[t:template,n:crate_dsx_a4_r1-03_base]  // = crate_dsx_a4_r1-03
+{
+	category_name = "dsx_a4";
+	doc = "dsx_a4_r1-03 barrel";
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.3;
+					max = 150;
+					min = 100;
+				}
+				[oneof*]
+					{
+						chance = 0.2;
+						il_main = potion_mana_small;
+						il_main = potion_health_small;
+					}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/28-36;
+					il_main = #armor/13-81;
+					il_main = #*/28-36;
+					max = 1;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.03;
+					il_main = #weapon/-rare(1)/36-44;
+					il_main = #armor/-rare(1)/53-118;
+				}
+			}
+		}
+	}
+	
+	//everything from here is copied:
+	specializes		= base_container_barrel;
+	
+	
+	[aspect]
+	{
+		model	= m_i_swp_barrel-01;
+		[textures]	{0=b_i_swp_barrel-01;}
+	}
+}
+[t:template,n:gr_ctn_barrel_gr_bwg]
+{
+    specializes = crate_dsx_a4_r1-03_base;
+	category_name = "container";
+}
+
+[t:template,n:crate_dsx_a4_r4-02_base]  // = crate_dsx_a4_r4-02
+{
+	category_name = "dsx_a4";
+	doc = "dsx_a4_r4-02 crate";
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.4;
+					max = 180;
+					min = 120;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/30-41;
+					il_main = #armor/15-90;
+					il_main = #*/30-41;
+					max = 1;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #*/-rare(1)/41-49;
+				}
+			}
+		}
+	}
+	
+	//everything from here is copied:
+	specializes		= base_container_wood;
+	[aspect]
+	{
+		model	= m_i_glb_crate-krug;
+		[textures]	{0=b_i_swp_crate-01;}
+	}
+}
+[t:template,n:gr_ctn_crate_gr_bwg]
+{
+    specializes = crate_dsx_a4_r4-02_base;
+	category_name = "container";
+}
+
+[t:template,n:crate_dsx_a4_r2-spec_base]  // = crate_dsx_a4_r2-spec
+{
+	category_name = "dsx_a4";
+	doc = "dsx_a4_r2-0spec chest";
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 1;
+					max = 240;
+					min = 160;
+				}
+				[oneof*]
+				{
+					chance = 1;
+					il_main = #weapon/28-36;
+					il_main = #armor/13-81;
+					il_main = #*/28-36;
+					max = 3;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 1;
+					il_main = #*/-rare(1)/36-44;
+				}
+				[all*]
+				{
+					il_main = #spell/11-13;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
+	
+	//everything from here is copied:
+	specializes = base_chest;
+	[common] { screen_name="Chest"; }
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-04;
+		[textures]							{ 0 = b_i_glb_chest-open-02; }
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+}
+[t:template,n:gr_ctn_chest_gr_bwg]
+{
+    specializes = crate_dsx_a4_r2-spec_base;
+	category_name = "container";
+}
+
+[t:template,n:crate_dsx_a4_r3-spec-krakemaw_base]  // = crate_dsx_a4_r3-spec-krakemaw
+{
+	category_name = "dsx_a4";
+	doc = "dsx_a4_r3-03 krakemaw";
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+		{
+				[gold*]
+				{
+					max = 345;
+					min = 245;
+				}
+				[all*]
+				{
+					il_main = potion_health_small;
+					il_main = potion_mana_small;
+					il_main = #weapon/28-39;
+					il_main = #armor/13-81;
+					il_main = #*/-rare(1)/39-47;
+				}
+		}
+		}
+	}
+	
+	//everything from here is copied:
+	//	specializes = non_interactive_blocking;
+	specializes = base_chest;
+	[common] { screen_name="Chest"; }
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-03;
+textures:0 = b_i_glb_chest-01;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+}
+[t:template,n:gr_ctn_chest_un_gr_bwg]
+{
+    specializes = crate_dsx_a4_r3-spec-krakemaw_base;
+	category_name = "container";
+}
