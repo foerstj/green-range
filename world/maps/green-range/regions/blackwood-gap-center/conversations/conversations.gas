@@ -46,7 +46,6 @@
 	{
 		choice = potential_member;
 		screen_text = "Ey zhere! Are you on ze vay to beautiful Longbourne? I'm going zhere, too - shall ve go togezher? I haf a fire spell and I know how to uze it! Deal?";
-		scroll_rate = 5.2;
 	}
 }
 [pm_traveler_accept_no_money]
@@ -94,7 +93,7 @@
 	}
 }
 
-[tent2_activate]
+[campfire_activate]
 {
 	[text*]
 	{
@@ -107,7 +106,6 @@
 		order = 1;
 		screen_text = "Ze Dwarfs of Umberdeep haf a little gold mine just vest of here - zat is, zey had one, because it'z been overrun by zome stray Dumbtrolls zhat came down from ze Earthen Forest. Ze Dwarfs don't trust us any more zan anyone else, but zey know ve keep ze Trail safe as much as ze Rangers, and so ve vere always allowed passage through zeir mines and city and to haf a beer there...";
 		choice = more;
-		scroll_rate = 6.8;
 	}
 	[text*]
 	{
@@ -116,7 +114,7 @@
 		screen_text = "Ze Dwarfs of Umberdeep serfe the best beer between Ehb and Longbourne. Zey may not welcome us anymore if ve can't keep zeir mine safe. Zis vud be devastating! Pleaze help us, no?";
 	}
 }
-[tent2_complete]
+[campfire_complete]
 {
 	[text*]
 	{
@@ -135,20 +133,20 @@
 {
 	[text*]
 	{
-		screen_text = "Haf you ever been to Longbourne? It's a marvelous place. Its meadows are full of vild apple trees!";
+		screen_text = "Granted, zis place is dark, but it could be vorse. Zere's nice warmth coming down from ze Aranoi Desert. Up southeast in ze Greylin Hills you'll be drownded by rain!";
 	}
 }
 [conversation_tent4_b]
 {
 	[text*]
 	{
-		screen_text = "Granted, zis place is dark, but it could be vorse. Zere's nice warmth coming down from ze Aranoi Desert. Up southeast in ze Greylin Hills you'll be drownded by rain!";
+		screen_text = "Haf you ever been to Longbourne? It's a vondrous place. Ze smell of ze lupines is just overvhelming!";
 	}
 }
-[conversation_campfire]
+[conversation_tent2]
 {
 	[text*]
 	{
-		screen_text = "Haf you ever been to Longbourne? It's a vondrous place. Ze smell of ze lupines is just overvhelming!";
+		screen_text = "Haf you ever been to Longbourne? It's a marvelous place. Its meadows are full of vild apple trees!";
 	}
 }

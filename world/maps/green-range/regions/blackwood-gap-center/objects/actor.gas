@@ -316,18 +316,23 @@
 }
 [t:mp_gypsy_male_02,n:0x058002c7]
 {
+	[common]
+	{
+		screen_name = "Rhishi";
+	}
 	[conversation]
 	{
 		[conversations]
 		{
-			* = conversation_campfire;
+			* = campfire_activate;
+            * = campfire_complete;
 		}
 	}
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
 		jat_face = jat_none;
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
+		jat_talk = world\ai\jobs\green-range\job_talk_quest.skrit?namespace=campfire&quest=dumbtroll_captain;
 	}
 	[placement]
 	{
@@ -422,10 +427,6 @@
 }
 [t:mp_gypsy_male_03,n:0x058002c8]
 {
-	[common]
-	{
-		screen_name = "Rhishi";
-	}
 	[conversation]
 	{
 		[conversations]
@@ -436,7 +437,7 @@
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\green-range\job_talk_quest.skrit?namespace=tent2&quest=dumbtroll_captain;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
