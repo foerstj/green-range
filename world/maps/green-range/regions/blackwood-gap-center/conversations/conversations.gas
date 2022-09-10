@@ -1,3 +1,16 @@
+[conversation_leader]
+{
+	[text*]
+	{
+		order = 0;
+		screen_text = "Greetings, stranger, welcome to the shelter, and welcome to our little camp. We are Lescanzi Travelers, passing through this way and that. This place is dark, but usually safe.";
+	}
+	[text*]
+	{
+		screen_text = "Fate has been kind to bring you back. Speak with Grurez. Perhaps he can interest you in some trinket from his stock.";
+	}
+}
+
 [conversation_shop_smith]
 {
 	[text*]
@@ -26,24 +39,13 @@
 		screen_text = "If you haf returned for potions or spells, I still haf a few items zhat may be of interest.";
 	}
 }
-[conversation_leader]
-{
-	[text*]
-	{
-		order = 0;
-		screen_text = "Greetings, stranger, welcome to the shelter, and welcome to our little camp. We are Lescanzi Travelers, passing through this way and that. This place is dark, but usually safe.";
-	}
-	[text*]
-	{
-		screen_text = "Fate has been kind to bring you back. Speak with Grurez. Perhaps he can interest you in some trinket from his stock.";
-	}
-}
+
 [pm_traveler_join]
 {
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "Ey zhere! Are you on ze vay to Longbourne? I'm going zhere, too - shall ve go togezher? I haf a fire spell and I know how to uze it! Deal?";
+		screen_text = "Ey zhere! Are you on ze vay to beautiful Longbourne? I'm going zhere, too - shall ve go togezher? I haf a fire spell and I know how to uze it! Deal?";
 		scroll_rate = 5.2;
 	}
 }
@@ -91,26 +93,27 @@
 		screen_text = "Curious, I had not thought ve vould meet again. Do you vish me to rejoin your company?";
 	}
 }
+
 [tent2_activate]
 {
 	[text*]
 	{
 		order = 0;
-		screen_text = "Vord travels fast of a hero braving ze perils of Fedwyrr's Vay despite ze Legion's withdrawal. Perhaps zhat hero is you? If so, ze Dark Sister would bid me tell you of our great peril, but you must promise not to vhisper a vord to any of ze vomen in our camp.";
+		screen_text = "Ze birds told me of an Ehbling braving ze perils of the Klars Trail. Perhaps zhat is you? If so, ze Dark Sister would bid me tell you of a peril...";
 		choice = more;
 	}
 	[text*]
 	{
 		order = 1;
-		screen_text = "In ze past, ze bandits tolerated us, as ve provided zhem with needed supplies, but since ze legion withdrew zheir patrols, ze bandits haf turned from robbing and pilfering caravans to murdering and plundering zhem. Zhis morning ve caught vone of zhem stealing from Grurez's tent. He stated zhat ze Bandit Boss now claims ownership of ze vomen and vares of our camp, and zhey will return zis evening in force to accept zheir payment. Zhe thought sickens me. Ve haf our backs against ze Green Range, but cannot brave Fedwyrr's Vay without Sikra and Boryev. If you are truly a hero, you must haf ze courage to confront ze Bandit Boss on our behalf. I have no bounty to offer in return, but he vill surely have amassed a fortune by now inside his bandit lair.";
+		screen_text = "Ze Dwarfs of Umberdeep haf a little gold mine just vest of here - zat is, zey had one, because it'z been overrun by zome stray Dumbtrolls zhat came down from ze Earthen Forest. Ze Dwarfs don't trust us any more zan anyone else, but zey know ve keep ze Trail safe as much as ze Rangers, and so ve vere always allowed passage through zeir mines and city and to haf a beer there...";
 		choice = more;
 		scroll_rate = 6.8;
-		activate_quest* = dumbtroll_captain;
-		quest_dialog = true;
 	}
 	[text*]
 	{
-		screen_text = "You are sworn to silence until you haf confronted ze Bandit Boss.";
+		activate_quest* = dumbtroll_captain;
+		quest_dialog = true;
+		screen_text = "Ze Dwarfs of Umberdeep serfe the best beer between Ehb and Longbourne. Zey may not welcome us anymore if ve can't keep zeir mine safe. Zis vud be devastating! Pleaze help us, no?";
 	}
 }
 [tent2_complete]
@@ -120,54 +123,32 @@
 		screen_text = "Your actions haf saved us from a fate vorse zhen death. On behalf of ze Travelers, ve are in your debt. May ze Dark Sister protect you in ze journeys ahead.";
 	}
 }
+
 [conversation_tent3]
 {
 	[text*]
 	{
-		order = 0;
-		screen_text = "It must be our lot in life to suffer cruel fate.";
-		choice = more;
-	}
-	[text*]
-	{
-		order = 1;
-		screen_text = "Ze men of our camp concern themselves with ze bravado of ze harmless bandits, but I have foreseen dark visions far greater zhen ze bandits could ever be. Be warned if you are heading into ze swamps.";
-		choice = more;
-	}
-	[text*]
-	{
-		screen_text = "For more zhen a month, my sisters and I haf been haunted by nightmares of a great army of goblins without souls. Zey bow before a great dark power zhat grows with every passing moment and feeds on ze vengeance and hatred of demons from ze abyss. I fear zhat ze goblin thirst for power may someday unleash terrors beyond zheir control.";
+		screen_text = "Granted, zis place is dark, but it could be vorse. Zere's nice rain coming up from ze Greylin Bay. Up northvest in ze Aranoi Hills you'll be gagging for a drink!";
 	}
 }
 [conversation_tent4_a]
 {
 	[text*]
 	{
-		order = 0;
-		screen_text = "Zrian is so overvhelmed with grief about losing Sikra, he von't even acknowledge ze growing threat from ze bandits and goblins to ze east.";
-		choice = more;
-	}
-	[text*]
-	{
-		screen_text = "Ve haf made too many concessions to zhem ven all zhey vant is more. If ve still had Sikra and Boryev vith us ve could surely make a stand, but vithout zhem, zhey may kill us all.";
+		screen_text = "Haf you ever been to Longbourne? It's a marvelous place. Its meadows are full of vild apple trees!";
 	}
 }
 [conversation_tent4_b]
 {
 	[text*]
 	{
-		screen_text = "It is true ze bandits are using us for personal gain, but zey haf not openly attacked us. Ve are Travelers, not barbarians. Ve do not start fights, and zey would not dare to attack us.";
+		screen_text = "Granted, zis place is dark, but it could be vorse. Zere's nice warmth coming down from ze Aranoi Desert. Up southeast in ze Greylin Hills you'll be drownded by rain!";
 	}
 }
 [conversation_campfire]
 {
 	[text*]
 	{
-		order = 0;
-		screen_text = "Ve are indeed beset by hard times. First sister Sikra is taken from us, and now ze bandits threaten us with bloodshed.";
-	}
-	[text*]
-	{
-		screen_text = "Ve had thought ze Legion patrols to be unfair in zheir delivery of justice. But now zhat zey are gone, ze bandits who once harbored us now greet us vith veiled threats.";
+		screen_text = "Haf you ever been to Longbourne? It's a vondrous place. Ze smell of ze lupines is just overvhelming!";
 	}
 }
