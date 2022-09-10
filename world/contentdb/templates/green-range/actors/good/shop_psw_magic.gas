@@ -37,6 +37,10 @@
     {
         screen_name = "Shop";
     }
+	[inventory]
+	{
+        [pcontent] {}  // make sure loot of base template doesn't end up for sale
+    }
 	[respawn_shrine]
 	{
 	}
@@ -44,12 +48,25 @@
 	{
 		item_markup = 2;
     }
+}
+
+[t:template,n:gr_shop_troll_magic] { specializes = gr_shop_troll_magic_base; }
+[t:template,n:gr_shop_troll_magic_base]
+{
+    specializes = gr_base_shop_troll_magic;
+
+    [common]
+    {
+        screen_name = "Toadskin the Frog Troll";
+    }
+    [aspect]
+    {
+        scale_base = 0.8;  // swamp troll is 0.6
+    }
 
     // shop content from Jeriah the Mountain Man
 	[inventory]
 	{
-        [pcontent] {}  // make sure loot of base template doesn't end up for sale
-
 		[store_pcontent]
 		{
 			full_ratio = 0;
@@ -107,19 +124,4 @@
             spell_zap = 2;
 		}
 	}
-}
-
-[t:template,n:gr_shop_troll_magic] { specializes = gr_shop_troll_magic_base; }
-[t:template,n:gr_shop_troll_magic_base]
-{
-    specializes = gr_base_shop_troll_magic;
-
-    [common]
-    {
-        screen_name = "Toadskin the Frog Troll";
-    }
-    [aspect]
-    {
-        scale_base = 0.8;  // swamp troll is 0.6
-    }
 }
