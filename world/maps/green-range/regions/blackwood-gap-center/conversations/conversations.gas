@@ -150,3 +150,19 @@
 		screen_text = "Haf you ever been to Longbourne? It's a marvelous place. Its meadows are full of vild apple trees!";
 	}
 }
+
+[mule_merchant_bwg_has_packmules]
+{
+	[text*]
+	{
+		screen_text = "Are you in need of a packmule? Ve could spare one of zem, for a good price.";
+        choice = buy_packmule;
+	}
+}
+[mule_merchant_bwg_no_packmules]
+{
+	[text*]
+	{
+		screen_text = "Ve can't spare any more of our packmules, zorry.";
+	}
+}

@@ -325,7 +325,7 @@
 		[conversations]
 		{
 			* = campfire_activate;
-            * = campfire_complete;
+			* = campfire_complete;
 		}
 	}
 	[mind]
@@ -431,8 +431,7 @@
 	{
 		[conversations]
 		{
-			* = tent2_activate;
-			* = tent2_complete;
+			* = conversation_tent2;
 		}
 	}
 	[mind]
@@ -509,6 +508,34 @@
 	  p position = -1.84708,0.3,0.870087,0x05e099f7;
 	}
 }
+[t:gr_shop_bwg_mule,n:0x058004f8]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = mule_merchant_bwg_no_packmules;
+			* = mule_merchant_bwg_has_packmules;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ra_ro_m_g_c_065;
+			es_feet = bo_bo_le_light;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\green-range\job_talk_mule_merchant.skrit?namespace=mule_merchant_bwg;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.504482,0,0.863422;
+	  p position = -1.47581,0,-1.97284,0xf5451ae0;
+	}
+}
 [t:butterfly_black,n:0x05800aaa]
 {
 	[placement]
@@ -525,16 +552,24 @@
 	  p position = -0.749748,0,1.38461,0xd4deb42d;
 	}
 }
-[t:mule_df_r0,n:0x05800ac9]
+[t:gr_mule_bwg,n:0x05800ac9]
 {
+    [common]
+    {
+        screen_name = "Blezzhya";
+    }
 	[placement]
 	{
 	  q orientation = 0,-0.92388,0,0.382683;
 	  p position = -0.491486,0,1.52103,0xd4deb42d;
 	}
 }
-[t:mule_df_r0,n:0x05800aca]
+[t:gr_mule_bwg,n:0x05800aca]
 {
+    [common]
+    {
+        screen_name = "Sheerz";
+    }
 	[placement]
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
