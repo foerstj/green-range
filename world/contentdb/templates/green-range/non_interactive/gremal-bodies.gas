@@ -1,0 +1,37 @@
+[t:template,n:body_glb_gremal_01_base]  // = body_glb_gremal_01
+{
+	category_name = "dead";
+	doc = "body_gremal";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1;
+		model = m_i_glb_dead_gremal-01;
+	}
+}
+
+[t:template,n:body_glb_gremal_beige]  // just renaming for sake of consistency
+{
+    specializes = body_glb_gremal_01_base;
+}
+[t:template,n:body_glb_gremal_white]
+{
+    specializes = body_glb_gremal_01_base;
+    aspect:textures:0 = b_c_edm_gm-white;
+}
+[t:template,n:body_glb_gremal_gray]
+{
+    specializes = body_glb_gremal_01_base;
+    aspect:textures:0 = b_c_edm_gm-gray;
+}
+[t:template,n:body_glb_gremal_black]
+{
+    specializes = body_glb_gremal_01_base;
+    aspect:textures:0 = b_c_edm_gm-black;
+}
+[t:template,n:body_glb_gremal_brown]
+{
+    specializes = body_glb_gremal_01_base;
+    aspect:textures:0 = b_c_edm_gm-brown;
+}
