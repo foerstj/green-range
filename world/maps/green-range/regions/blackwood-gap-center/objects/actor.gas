@@ -430,13 +430,13 @@
 	{
 		[conversations]
 		{
-			* = conversation_tent2_a;
-			* = conversation_tent2_quest_complete;
+			* = tent2_activate;
+			* = tent2_complete;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_traveler_bandit.skrit;
+		jat_talk = world\ai\jobs\green-range\job_talk_quest.skrit?namespace=tent2&quest=dumbtroll_captain;
 	}
 	[placement]
 	{

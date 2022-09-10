@@ -1,0 +1,73 @@
+Go		m_Go$;
+GoMind	m_Mind$;
+GoBody  m_Body$;
+Job		m_Job$;
+Goid	m_Target$;
+
+#include "k_job_c_mcp_fidget_utils"
+#include "k_job_c_talk_utils"
+
+property    string  namespace$  = "quest"   doc = "Namespace for conversations and flags";
+property    string  quest$                  doc = "Name of the quest";
+
+startup state STARTUP$
+{
+}
+
+event OnJobInitPointers$( Job job$ )
+{
+	m_Job$		= job$;
+	m_Go$		= job$.Go;
+	m_Mind$		= job$.Go.Mind;
+	m_Body$		= job$.Go.Body;
+}
+
+event OnJobInit$( Job job$ )
+{
+	OnJobInitPointers$( job$ );
+
+	m_Target$	= job$.GoalObject;
+
+	SetState Talk$;
+}
+
+state Talk$
+{
+	transition
+	{
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
+		{
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+	}
+	
+	trigger OnWorldMessage$( WE_ANIM_DONE )
+	{
+		TryAnim$('talk');
+	}
+
+	event OnEnterState$
+	{
+		if ( Victory.IsQuestCompleted( quest$ ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_complete", namespace$ ) );
+		}
+        else
+        {
+			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_activate", namespace$ ) );
+		}
+		TryAnim$('talk');
+		m_Go$.GetConversation.RSActivateDialogue();
+	}
+}
+
+state Exiting$
+{
+	event OnEnterState$
+	{
+		m_Job$.MarkForDeletion();
+	}
+}

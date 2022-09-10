@@ -18,7 +18,7 @@
 	{
 		order = 0;
 		choice = shop;
-		screen_text = "I shall come to ze point with zhee, child, for I am old and zhere are zhings vich must be done. Your kingdom dances with an evil beyond imaginik. Ze events you face vere set in motion long ago by foolish men who toyed vith zhings zhey should have let be. If I haf any potions or magical goods you require, they shall be yours for a fair price.";
+		screen_text = "I shall come to ze point with zhee, child, for I am old and zhere are zhings vich must be done. Zhis mountains dance with trollz beyond imaginik. If I haf any potions or magical goods you require, they shall be yours for a fair price.";
 	}
 	[text*]
 	{
@@ -31,11 +31,11 @@
 	[text*]
 	{
 		order = 0;
-		screen_text = "Creatures, with eyes like devils... zhey come and zhey take my Sikra. Zhey look as ze evil Seck of legend, but how can zhat be? Ze Seck were destroyed, exterminated three hundred years ago by the first king of your land. Whoever zhey be, zhey shall find my daughter difficult. She is... Traveler.";
+		screen_text = "Greetings, stranger, welcome to the shelter, and welcome to our little camp. We are Lescanzi Travelers, passing through this way and that. This place is dark, but usually safe.";
 	}
 	[text*]
 	{
-		screen_text = "Fate has been kind to bring you back. Speak with Yadze. Perhaps he can interest you in some trinket from his stock.";
+		screen_text = "Fate has been kind to bring you back. Speak with Grurez. Perhaps he can interest you in some trinket from his stock.";
 	}
 }
 [pm_traveler_join]
@@ -43,7 +43,7 @@
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "I am ruined, most horribly ruined! For six years I have poured all my wealth and labors into planning a contest of skill, a challenge to find the greatest living archer in the known lands. But on the very eve of our contest, disaster! Our treasury stolen by Goblins! Our finest prizes seized! My bow and skills are all I have left in the world to redeem my tarnished name and reputation. I have followed the Goblins this far, but cannot go further without funds to replenish my supplies. If you might spare some gold, I should be glad to lend you my talents while I search for my lost treasures.";
+		screen_text = "Ey zhere! Are you on ze vay to Longbourne? I'm going zhere, too - shall ve go togezher? I haf a fire spell and I know how to uze it! Deal?";
 		scroll_rate = 5.2;
 	}
 }
@@ -51,21 +51,21 @@
 {
 	[text*]
 	{
-		screen_text = "With supplies short, and more battles ahead before we reach another town, I would be in a sorry state indeed if I joined you for less. Once you have the sum I require, I shall be glad to accompany you.";
+		screen_text = "Vith supplies short, and more battles ahead before ve reach Longbourne, I vould be in a zorry state indeed if I joined you for less. Once you haf the sum I require, I shall be glad to accompany you.";
 	}
 }
 [pm_traveler_accept_have_money]
 {
 	[text*]
 	{
-		screen_text = "The bow and honor of Phaedriel are yours to command, good friend. I am glad to join your fellowship.";
+		screen_text = "The spellz and honor of Raven are yourz to command, good friend. I am glad to join your fellowship.";
 	}
 }
 [pm_traveler_reject]
 {
 	[text*]
 	{
-		screen_text = "Forgive the abruptness of my request. I should have realized your fortunes might be as diminished as my own. Farewell then, and better fortunes to us both!";
+		screen_text = "Forgive zhe abruptness of my request. I should haf realized your fortunes might be az diminished az my own. Farewell zhen, and better fortunes to us both!";
 	}
 }
 [pm_traveler_rejoin]
@@ -73,14 +73,14 @@
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "I have a bow and the will to help, if you need a superb archer in your company. All I ask is a small fee of gold.";
+		screen_text = "I have spellz and the vill to help, if you need a superb mage in your company. All I ask iz a small fee of gold.";
 	}
 }
 [pm_traveler_disband]
 {
 	[text*]
 	{
-		screen_text = "Perhaps this shall be best for us. I seek one goal, and I believe you are on the trail of another. A parting of ways may serve us both well.";
+		screen_text = "Perhaps zhis shall be best for us. I seek one goal, and I beliefe you are on zhe trail of another. A parting of vays may serfe us both vell.";
 	}
 }
 [pm_traveler_disband_rejoin]
@@ -88,10 +88,10 @@
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "Curious, I had not thought we would meet again. Do you wish me to rejoin your company?";
+		screen_text = "Curious, I had not thought ve vould meet again. Do you vish me to rejoin your company?";
 	}
 }
-[conversation_tent2_a]
+[tent2_activate]
 {
 	[text*]
 	{
@@ -102,10 +102,10 @@
 	[text*]
 	{
 		order = 1;
-		screen_text = "In ze past, ze bandits tolerated us, as ve provided zhem with needed supplies, but since ze legion withdrew zheir patrols, ze bandits haf turned from robbing and pilfering caravans to murdering and plundering zhem. Zhis morning ve caught vone of zhem stealing from Yadze's tent. He stated zhat ze Bandit Boss now claims ownership of ze vomen and vares of our camp, and zhey will return zis evening in force to accept zheir payment. Zhe thought sickens me. Ve haf our backs against ze Green Range, but cannot brave Fedwyrr's Vay without Sikra and Boryev. If you are truly a hero, you must haf ze courage to confront ze Bandit Boss on our behalf. I have no bounty to offer in return, but he vill surely have amassed a fortune by now inside his bandit lair.";
+		screen_text = "In ze past, ze bandits tolerated us, as ve provided zhem with needed supplies, but since ze legion withdrew zheir patrols, ze bandits haf turned from robbing and pilfering caravans to murdering and plundering zhem. Zhis morning ve caught vone of zhem stealing from Grurez's tent. He stated zhat ze Bandit Boss now claims ownership of ze vomen and vares of our camp, and zhey will return zis evening in force to accept zheir payment. Zhe thought sickens me. Ve haf our backs against ze Green Range, but cannot brave Fedwyrr's Vay without Sikra and Boryev. If you are truly a hero, you must haf ze courage to confront ze Bandit Boss on our behalf. I have no bounty to offer in return, but he vill surely have amassed a fortune by now inside his bandit lair.";
 		choice = more;
 		scroll_rate = 6.8;
-		activate_quest* = quest_kill_bandits;
+		activate_quest* = dumbtroll_captain;
 		quest_dialog = true;
 	}
 	[text*]
@@ -113,7 +113,7 @@
 		screen_text = "You are sworn to silence until you haf confronted ze Bandit Boss.";
 	}
 }
-[conversation_tent2_quest_complete]
+[tent2_complete]
 {
 	[text*]
 	{
