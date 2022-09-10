@@ -221,7 +221,7 @@
 			{
 				action* = mood_change("gr-bwg-camp");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(15.000000,2.000000,10.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(32.000000,4.000000,32.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -269,35 +269,6 @@
 	  p position = -1.12557,0,-1.89253,0xc3160f07;
 	}
 }
-[t:trigger_change_mood_box,n:0x05800e49]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("gr-bwg-se");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(30.000000,2.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-5.96046e-008;
-	  p position = -0.10482,-0.0421385,-1.59875,0x7f19aa63;
-	}
-}
 [t:trigger_change_mood_box,n:0x05800e4a]
 {
 	[common]
@@ -324,7 +295,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.998513,0,0.0545145;
-	  p position = 0.134979,0,-1.63615,0xbcc79b8e;
+	  p position = 0.700859,0,-1.89316,0x37771655;
 	}
 }
 [t:trigger_generic,n:0x05800109]
@@ -503,37 +474,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -3.12059,0,1.2069,0xd8e5be2a;
-	}
-}
-[t:trigger_change_mood_box,n:0x05800e43]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("gr-bwg-se");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(27.000000,2.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.108867,0,0.994056;
-	  p position = -3.27773,0,-1.37928,0x2c19cc01;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.412094,-0.05,1.22009,0xb9b93583;
 	}
 }
 [t:use_point,n:0x05800b04]
