@@ -462,18 +462,18 @@
 	{
 		[conversations]
 		{
-			* = conversation_pm_accept_have_money;
-			* = conversation_pm_accept_no_money;
-			* = conversation_pm_disband;
-			* = conversation_pm_disband_rejoin;
-			* = conversation_pm_join;
-			* = conversation_pm_reject;
-			* = conversation_pm_rejoin;
+			* = pm_traveler_accept_have_money;
+			* = pm_traveler_accept_no_money;
+			* = pm_traveler_disband;
+			* = pm_traveler_disband_rejoin;
+			* = pm_traveler_join;
+			* = pm_traveler_reject;
+			* = pm_traveler_rejoin;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_phaedriel.skrit;
+		jat_talk = world\ai\jobs\green-range\job_talk_companion.skrit?namespace=pm_traveler&oid=0x5800ad0;
 	}
 	[placement]
 	{

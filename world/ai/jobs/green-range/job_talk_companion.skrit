@@ -1,0 +1,137 @@
+Go			m_Go$;
+GoMind		m_Mind$;
+GoBody  	m_Body$;
+Job			m_Job$;
+Goid		m_Target$;
+
+#include "k_job_c_mcp_fidget_utils"
+#include "k_job_c_talk_utils"
+
+property    string  namespace$  = "companion"   doc = "Namespace for conversations and flags";
+property    string  oid$                        doc = "Object ID, lower-case hex, no leading zeroes, e.g. 0x17001af";
+property    int     more_gold$  = 0             doc = "Demand more gold to rejoin after being disbanded";
+property    int     more_gold2$ = 0             doc = "Demand more gold to join when asked twice";
+property    bool    first$      = false         doc = "Whether to have a first conversation";
+
+startup state STARTUP$
+{
+}
+
+event OnJobInit$( Job job$ )
+{
+	m_Job$		= job$;
+	m_Go$		= job$.Go;
+	m_Mind$		= job$.Go.Mind;
+	m_Body$		= job$.Go.Body;
+	m_Target$	= job$.GoalObject;
+
+	SetState Face$;
+}
+
+state Face$
+{
+	transition
+	{
+		-> Talk$:	OnWorldMessage( WE_MCP_FACING_LOCKEDON );
+	}
+
+	event OnEnterState$
+	{
+		if( !m_Go$.HasConversation )
+		{
+			report.errorf( "Actor '%s', scid:0x%08x was told to run job_talk but he doesn't have a conversation component.",
+							m_Go$.GetTemplateName,
+							m_Go$.Goid );
+			SetState Exiting$;
+		}
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
+	}
+}
+
+state Talk$
+{
+	transition
+	{
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
+		{
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+	}
+	
+	trigger OnWorldMessage$( WE_ANIM_DONE )
+	{
+		TryAnim$('talk');
+	}
+
+	event OnEnterState$
+	{
+		if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_accept_%s", oid$ ) ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_accept_have_money", namespace$ ) );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_accept_%s", oid$ ), false );
+		}
+		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_accept_no_money_%s", oid$ ) ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_accept_no_money", namespace$ ) );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_accept_no_money_%s", oid$ ), false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_allow_rejoin_%s", oid$ ), true );
+		}
+		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_decline_%s", oid$ ) ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_reject", namespace$ ) );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_decline_%s", oid$ ), false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_allow_rejoin_%s", oid$ ), true );
+		}
+		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_disband_%s", oid$ ) ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_disband", namespace$ ) );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_disband_%s", oid$ ), false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_disbanded_%s", oid$ ), true );
+		}
+		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_disbanded_%s", oid$ ) ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_disband_rejoin", namespace$ ) );
+            if ( more_gold$ > 0 )
+            {
+                m_Go$.Aspect.SetGoldValue( more_gold$ );
+            }
+		} 
+		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_allow_rejoin_%s", oid$ ) ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_rejoin", namespace$ ) );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_allow_rejoin_%s", oid$ ), false );
+            if ( more_gold2$ > 0 )
+            {
+                m_Go$.Aspect.SetGoldValue( more_gold2$ );
+            }
+		}
+		else
+		{
+            if ( first$ && !GameAuditor.GetDb.GetBool( MakeStringF( "%s_talked_to", namespace$ ) ) )
+            {
+                GameAuditor.GetDb.SetBool( MakeStringF( "%s_talked_to", namespace$ ), true );
+                m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_first", namespace$ ) );
+            }
+            else
+            {
+                m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_join", namespace$ ) );
+            }
+        }
+        TryAnim$('talk');
+
+		m_Go$.GetConversation.RSActivateDialogue();
+	}
+}
+
+state Exiting$
+{
+	event OnEnterState$
+	{
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+
+		m_Job$.MarkForDeletion();
+	}
+}
