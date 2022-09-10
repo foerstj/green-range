@@ -85,7 +85,8 @@
 	}
 }
 
-[t:template,n:gr_shop_ps1end]
+[t:template,n:gr_shop_ps1end] { specializes = gr_shop_ps1end_base; }
+[t:template,n:gr_shop_ps1end_base]
 {
     specializes = adwana_base;
     
@@ -101,10 +102,11 @@
             es_feet = gr_boots_rangers;
         }
 
-        // add store pcontent from jonn (also stonebridge)
 		[store_pcontent]
 		{
 			full_ratio = 0;
+
+            // add store pcontent from jonn (also stonebridge)
 			[armor]
 			{
 				[all*]
@@ -250,6 +252,32 @@
 					il_main = #ranged/17-22;
 					max = 6;
 					min = 6;
+				}
+			}
+
+            // adwana content
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/1-7;
+					max = 40;
+					min = 40;
+				}
+			}
+			[misc]
+			{
+                [all*]
+				{
+					il_main = #spellbook/16-19;
+					max = 6;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 5;
+					min = 5;
 				}
 			}
 		}
