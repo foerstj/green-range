@@ -2,7 +2,21 @@
 {
 	[text*]
 	{
-		screen_text = "Welcome to the Blackwood Gap!";
+        order = 0;
+        choice = more;
+		screen_text = "What do we have here, an Ehbling on the way to Longbourne? Welcome to the Blackwood Gap!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+        order = 1;
+        choice = more;
+		screen_text = "This is the darkest place in the whole Green Range - barely a sunray makes it down here into this deep cut. You're certainly safe from sunburn here, haha!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "You're basically half way between Ehb and Longbourne. Just a few minutes further there is a shelter and campsite where you'll almost always meet Traveler people going one way or another.";
 	  f scroll_rate = 10.000000;
 	}
 }
