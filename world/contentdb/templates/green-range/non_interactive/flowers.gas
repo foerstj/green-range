@@ -1,0 +1,66 @@
+[t:template,n:flowers_grs_04_base]  // = flowers_grs_04
+{
+	category_name = "foliage";
+	doc = "grs_flr_lupine_violet";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.7;
+		model = m_i_grs_flowers-04;
+	}
+}
+[t:template,n:flowers_grs_05_base]  // = flowers_grs_05
+{
+	category_name = "foliage";
+	doc = "grs_flr_iris_violet";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.25;
+		lodfi_upper = 0.8;
+		model = m_i_grs_flowers-05;
+	}
+}
+[t:template,n:flowers_grs_06_base]  // = flowers_grs_06
+{
+	category_name = "foliage";
+	doc = "grs_flr_aster_blue";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.15;
+		lodfi_upper = 0.75;
+		model = m_i_grs_flowers-06;
+	}
+}
+[t:template,n:flowers_grs_07_base]  // = flowers_grs_07
+{
+	category_name = "foliage";
+	doc = "grs_flr_pansy_orange";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.4;
+		model = m_i_grs_flowers-07;
+	}
+}
+[t:template,n:flowers_grs_08_base]  // = flowers_grs_08
+{
+	category_name = "foliage";
+	doc = "grs_flr_dandelion_yllw";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.5;
+		lodfi_upper = 0.8;
+		model = m_i_grs_flowers-08;
+	}
+}
+
+[t:template,n:flowers_grs_04_lg] { specializes = flowers_grs_04_base; aspect:scale_base = 1.2; }
+[t:template,n:flowers_grs_05_lg] { specializes = flowers_grs_05_base; aspect:scale_base = 1.2; }
+[t:template,n:flowers_grs_06_lg] { specializes = flowers_grs_06_base; aspect:scale_base = 1.2; }
+[t:template,n:flowers_grs_07_lg] { specializes = flowers_grs_07_base; aspect:scale_base = 1.2; }
+[t:template,n:flowers_grs_08_lg] { specializes = flowers_grs_08_base; aspect:scale_base = 1.2; }

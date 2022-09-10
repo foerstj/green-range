@@ -1,0 +1,19 @@
+[t:template,n:grass_sea_01_base]  // = grass_sea_01
+{
+	category_name = "grass";
+	doc = "beach_wheat_long_sparse";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		//display_cost = 0.719358545;
+		lodfi_lower = 0.1;
+		lodfi_upper = 0.5;
+		model = m_i_sea_grass-01;
+	}
+}
+
+[t:template,n:grass_sea_01_sm]
+{
+    specializes = grass_sea_01_base;
+    aspect:scale_base = 0.75;
+}
