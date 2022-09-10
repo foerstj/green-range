@@ -54,6 +54,20 @@
 	  f repeat_rate = 40;
 	}
 }
+[t:emt_sound,n:0x05800ac0]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.052336,0,0.99863;
+	  p position = -2.73545,0.0264162,-0.981117,0x67f403b1;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds";
+	  f max_repeat_rate = 60;
+	  f repeat_rate = 40;
+	}
+}
 [t:emt_sound,n:0x05800abf]
 {
 	[placement]
@@ -68,18 +82,18 @@
 	  f repeat_rate = 40;
 	}
 }
-[t:emt_sound,n:0x05800ac0]
+[t:emt_sound,n:0x05800ab0]
 {
 	[placement]
 	{
 	  q orientation = 0,-0.052336,0,0.99863;
-	  p position = -2.73545,0.0264162,-0.981117,0x67f403b1;
+	  p position = 2.57396,0,-1.21396,0xa70644b8;
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_birds";
-	  f max_repeat_rate = 60;
-	  f repeat_rate = 40;
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 50;
+	  f repeat_rate = 20;
 	}
 }
 [t:emt_sound,n:0x05800de1]
@@ -209,19 +223,5 @@
 		event_sound = "env_wolf_howl";
 	  f max_repeat_rate = 60;
 	  f repeat_rate = 35;
-	}
-}
-[t:emt_sound,n:0x05800ab0]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.052336,0,0.99863;
-	  p position = 2.57396,0,-1.21396,0xa70644b8;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 50;
-	  f repeat_rate = 20;
 	}
 }
