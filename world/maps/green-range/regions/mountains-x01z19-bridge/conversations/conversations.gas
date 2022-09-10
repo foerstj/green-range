@@ -1,4 +1,4 @@
-[pm_beginner]
+[pm_beginner_join]
 {
 	[text*]
 	{
@@ -11,6 +11,48 @@
 	{
 		choice = potential_member;
 		screen_text = "No, I want to be honest with you - I had my hands in some cookie jars, if you know what I mean, and had to leave the Kingdom for a while. Oh please let me come with you, or the Trolls will have me for breakfast!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_beginner_accept_have_money]
+{
+	[text*]
+	{
+		screen_text = "Yay let's go!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_beginner_disband]
+{
+	[text*]
+	{
+		screen_text = "Wait, what?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_beginner_reject]
+{
+	[text*]
+	{
+		screen_text = "Pff then not!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_beginner_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Wanna go together?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_beginner_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "No hard feelings mate... Wanna go together again?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -29,7 +71,8 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[pm_ranger]
+
+[pm_ranger_join]
 {
 	[text*]
 	{
@@ -46,6 +89,48 @@ Are you new to these parts? I can come with you if you want... for guidance and 
 	  f scroll_rate = 10.000000;
 	}
 }
+[pm_ranger_accept_have_money]
+{
+	[text*]
+	{
+		screen_text = "Yay let's go!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger_disband]
+{
+	[text*]
+	{
+		screen_text = "Wait, what?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger_reject]
+{
+	[text*]
+	{
+		screen_text = "Pff then not!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Wanna go together?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "No hard feelings mate... Wanna go together again?";
+	  f scroll_rate = 10.000000;
+	}
+}
 [pm_ranger_mp]
 {
 	[text*]
@@ -59,39 +144,6 @@ Are you new to these parts? I can come with you if you want... for guidance and 
 	{
 		screen_text = "My name is Svartholm, I am a Ranger. We Rangers live in these mountains and regard them as our home.
 Are you new to these parts? Let me advise you to stay on the Klars Trail. You don't want to get lost and end up as Troll dinner...";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_accept]
-{
-	[text*]
-	{
-		screen_text = "Yay let's go!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_disband]
-{
-	[text*]
-	{
-		screen_text = "Wait, what?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_reject]
-{
-	[text*]
-	{
-		screen_text = "Pff then not!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_rejoin]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "No hard feelings mate... Wanna go together again?";
 	  f scroll_rate = 10.000000;
 	}
 }
