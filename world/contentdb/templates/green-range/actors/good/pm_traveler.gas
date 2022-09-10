@@ -1,0 +1,102 @@
+[t:template,n:sikra_base]  // = sikra
+{
+	doc = "sikra";
+	specializes = base_pm_fg;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_si;
+		[skills]
+		{
+			strength 		=  4.99, 0, 10;
+			intelligence 	=  26.89, 0, 10;
+			dexterity 		=  6.53, 0, 10;
+            combat_magic 	=  38,0, 0;
+            nature_magic 	=  20, 0, 0;
+            uber 			=  38.42, 0, 0;
+		}
+	}
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_a1;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_15;
+			1 = b_c_pos_a1_038;
+		}
+	}
+	[common] { screen_name="Sikra"; }
+	[conversation] { }
+
+   	[inventory]
+	{
+ /*
+		[other] //$$$ commented to fix RAID#5152 "NPC'S: Sikra is an armed prisoner."
+		{
+			il_active_primary_spell = #cmagic/12-13;
+            il_main = #nmagic/2-3;
+            il_main = #cmagic/9-11;
+            il_main = #cmagic/11-12;
+            il_main = #cmagic/12-13;
+            il_main = #cmagic/12-13;
+		}*/
+		[equipment]
+		{
+//			es_weapon_hand = #Staff/9-11;
+            es_chest = #body,m/200-230;
+            es_feet = #boots/30-35;
+		}
+		[other]
+        {
+			il_main = book_glb_lore_dragon;
+        }
+	}
+
+}
+
+[t:template,n:gr_pm_traveler_c13n4] { specializes = gr_pm_traveler_c13n4_base; }
+[t:template,n:gr_pm_traveler_c13n4_base]
+{
+    specializes = sikra_base;
+
+    // stats from Merik, CM/NM swapped
+	[actor]
+	{
+		[skills]
+		{
+			dexterity	 = 2.27, 0, 10;
+			intelligence = 9.33, 0, 10;
+			strength 	 = 1.73, 0, 10;
+			combat_magic = 13,0, 0;
+			nature_magic = 4, 0, 0;
+			uber 		 = 13.33,0, 0;
+		}
+	}
+
+    [common]
+    {
+        screen_name = "Raven";
+    }
+    [aspect]
+    {
+        gold_value = 10000;
+    }
+   	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_fireshot;
+
+			il_main = #cmagic/3-7;
+			il_main = #cmagic/5-9;
+			il_main = #cmagic/7-11;
+			il_main = #cmagic/9-13;
+			il_main = #staff/23-27;
+		}
+		[equipment]
+		{
+            es_chest = #body,ro/52-60;
+            es_feet = #boots,m/52-60;
+		}
+	}
+}

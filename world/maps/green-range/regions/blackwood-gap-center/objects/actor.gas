@@ -240,7 +240,7 @@
 	{
 		[conversations]
 		{
-			* = conversation_yadze;
+			* = conversation_shop_equipment;
 		}
 	}
 	[mind]
@@ -314,31 +314,6 @@
 	  p position = 0.247726,0.294783,-1.30638,0x12726d2c;
 	}
 }
-[t:nong,n:0x0580027c]
-{
-	[common]
-	{
-	  b is_multi_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_nong_first_meeting;
-			* = conversation_nong_no_sikra;
-			* = conversation_nong_with_sikra;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_nong.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.99863,0,-0.052336;
-	  p position = -3.04705,0,1.89726,0x0344784a;
-	}
-}
 [t:mp_gypsy_male_02,n:0x058002c7]
 {
 	[conversation]
@@ -361,15 +336,11 @@
 }
 [t:nong,n:0x05800815]
 {
-	[common]
-	{
-	  b is_single_player = false;
-	}
 	[conversation]
 	{
 		[conversations]
 		{
-			* = conversation_nong_multiplayer;
+			* = conversation_leader;
 		}
 	}
 	[mind]
@@ -477,7 +448,7 @@
 	  p position = -2.47461,0,1.68025,0x02670991;
 	}
 }
-[t:phaedriel,n:0x05800ad0]
+[t:gr_pm_traveler_c13n4,n:0x05800ad0]
 {
 	[common]
 	{
@@ -487,13 +458,13 @@
 	{
 		[conversations]
 		{
-			* = conversation_phaedriel_accept_have_money;
-			* = conversation_phaedriel_accept_no_money;
-			* = conversation_phaedriel_disband;
-			* = conversation_phaedriel_disband_rejoin;
-			* = conversation_phaedriel_join;
-			* = conversation_phaedriel_reject;
-			* = conversation_phaedriel_rejoin;
+			* = conversation_pm_accept_have_money;
+			* = conversation_pm_accept_no_money;
+			* = conversation_pm_disband;
+			* = conversation_pm_disband_rejoin;
+			* = conversation_pm_join;
+			* = conversation_pm_reject;
+			* = conversation_pm_rejoin;
 		}
 	}
 	[mind]
@@ -520,7 +491,7 @@
 	{
 		[conversations]
 		{
-			* = conversation_zaod;
+			* = conversation_shop_mage;
 		}
 	}
 	[mind]

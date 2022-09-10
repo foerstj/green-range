@@ -1,154 +1,93 @@
-[conversation_yadze]
+[conversation_shop_equipment]
 {
 	[text*]
 	{
 		order = 0;
 		choice = shop;
-		sample = s_v_df_yadze1;
 		screen_text = "Far und vide haf ve traveled with Nong across Aranna. Vherever ve haf traveled, ve brought back vondrous, beautiful things. Perhaps you should like to see vat ve haf?";
 	}
 	[text*]
 	{
 		choice = shop;
-		sample = s_v_df_yadze3;
 		screen_text = "Ve haf enticed you beck to our camp? Very good. Vat may I do for you today?";
 	}
-	[goodbye*]
-	{
-		sample = s_v_df_yadze2;
-	}
 }
-[conversation_zaod]
+[conversation_shop_mage]
 {
 	[text*]
 	{
 		order = 0;
 		choice = shop;
-		sample = s_v_df_zaod1;
 		screen_text = "I shall come to ze point with zhee, child, for I am old and zhere are zhings vich must be done. Your kingdom dances with an evil beyond imaginik. Ze events you face vere set in motion long ago by foolish men who toyed vith zhings zhey should have let be. If I haf any potions or magical goods you require, they shall be yours for a fair price.";
 	}
 	[text*]
 	{
 		choice = shop;
-		sample = s_v_df_zaod3;
 		screen_text = "If you haf returned for potions or spells, I still haf a few items zhat may be of interest.";
 	}
-	[goodbye*]
-	{
-		sample = s_v_df_zaod2;
-	}
 }
-[conversation_nong_multiplayer]
+[conversation_leader]
 {
 	[text*]
 	{
 		order = 0;
-		sample = s_v_df_nong1;
 		screen_text = "Creatures, with eyes like devils... zhey come and zhey take my Sikra. Zhey look as ze evil Seck of legend, but how can zhat be? Ze Seck were destroyed, exterminated three hundred years ago by the first king of your land. Whoever zhey be, zhey shall find my daughter difficult. She is... Traveler.";
-	}
-	[goodbye*]
-	{
-		sample = s_v_df_nong2;
 	}
 	[text*]
 	{
-		sample = s_v_df_nong3;
 		screen_text = "Fate has been kind to bring you back. Speak with Yadze. Perhaps he can interest you in some trinket from his stock.";
 	}
 }
-[conversation_nong_first_meeting]
-{
-	[text*]
-	{
-		sample = s_v_df_nong1;
-		screen_text = "Creatures, with eyes like devils... zhey come and zhey take my Sikra. Zhey look as ze evil Seck of legend, but how can zhat be? Ze Seck were destroyed, exterminated three hundred years ago by the first king of your land. Whoever zhey be, zhey shall find my daughter difficult. She is... Traveler.";
-	}
-	[goodbye*]
-	{
-		sample = s_v_df_nong2;
-	}
-}
-[conversation_nong_no_sikra]
-{
-	[text*]
-	{
-		sample = s_v_df_nong3;
-		screen_text = "Fate has been kind to bring you back. Speak with Yadze. Perhaps he can interest you in some trinket from his stock.";
-	}
-	[goodbye*]
-	{
-		sample = s_v_df_nong2;
-	}
-}
-[conversation_nong_with_sikra]
-{
-	[text*]
-	{
-		sample = s_v_df_nong4;
-		screen_text = "I see you haf met my daughter, Sikra. I am pleased. I hope she has done proudly by ze Travelers while in your company.";
-	}
-	[goodbye*]
-	{
-		sample = s_v_df_nong2;
-	}
-}
-[conversation_phaedriel_join]
+[conversation_pm_join]
 {
 	[text*]
 	{
 		choice = potential_member;
-		sample = s_v_ds_phaedriel1;
 		screen_text = "I am ruined, most horribly ruined! For six years I have poured all my wealth and labors into planning a contest of skill, a challenge to find the greatest living archer in the known lands. But on the very eve of our contest, disaster! Our treasury stolen by Goblins! Our finest prizes seized! My bow and skills are all I have left in the world to redeem my tarnished name and reputation. I have followed the Goblins this far, but cannot go further without funds to replenish my supplies. If you might spare some gold, I should be glad to lend you my talents while I search for my lost treasures.";
 		scroll_rate = 5.2;
 	}
 }
-[conversation_phaedriel_accept_no_money]
+[conversation_pm_accept_no_money]
 {
 	[text*]
 	{
-		sample = s_v_ds_phaedriel2;
 		screen_text = "With supplies short, and more battles ahead before we reach another town, I would be in a sorry state indeed if I joined you for less. Once you have the sum I require, I shall be glad to accompany you.";
 	}
 }
-[conversation_phaedriel_accept_have_money]
+[conversation_pm_accept_have_money]
 {
 	[text*]
 	{
-		sample = s_v_ds_phaedriel3;
 		screen_text = "The bow and honor of Phaedriel are yours to command, good friend. I am glad to join your fellowship.";
 	}
 }
-[conversation_phaedriel_reject]
+[conversation_pm_reject]
 {
 	[text*]
 	{
-		sample = s_v_ds_phaedriel4;
 		screen_text = "Forgive the abruptness of my request. I should have realized your fortunes might be as diminished as my own. Farewell then, and better fortunes to us both!";
 	}
 }
-[conversation_phaedriel_rejoin]
+[conversation_pm_rejoin]
 {
 	[text*]
 	{
 		choice = potential_member;
-		sample = s_v_ds_phaedriel5;
 		screen_text = "I have a bow and the will to help, if you need a superb archer in your company. All I ask is a small fee of gold.";
 	}
 }
-[conversation_phaedriel_disband]
+[conversation_pm_disband]
 {
 	[text*]
 	{
-		sample = s_v_ds_phaedriel6;
 		screen_text = "Perhaps this shall be best for us. I seek one goal, and I believe you are on the trail of another. A parting of ways may serve us both well.";
 	}
 }
-[conversation_phaedriel_disband_rejoin]
+[conversation_pm_disband_rejoin]
 {
 	[text*]
 	{
 		choice = potential_member;
-		sample = s_v_ds_phaedriel7;
 		screen_text = "Curious, I had not thought we would meet again. Do you wish me to rejoin your company?";
 	}
 }
@@ -157,7 +96,6 @@
 	[text*]
 	{
 		order = 0;
-		//sample = s_v_greet_male_traveler;
 		screen_text = "Vord travels fast of a hero braving ze perils of Fedwyrr's Vay despite ze Legion's withdrawal. Perhaps zhat hero is you? If so, ze Dark Sister would bid me tell you of our great peril, but you must promise not to vhisper a vord to any of ze vomen in our camp.";
 		choice = more;
 	}
@@ -186,7 +124,6 @@
 {
 	[text*]
 	{
-		//sample = s_v_greet_female_traveler;
 		order = 0;
 		screen_text = "It must be our lot in life to suffer cruel fate.";
 		choice = more;
@@ -206,7 +143,6 @@
 {
 	[text*]
 	{
-		//sample = s_v_greet_male_traveler;
 		order = 0;
 		screen_text = "Nong is so overvhelmed with grief about losing Sikra, he von't even acknowledge ze growing threat from ze bandits and goblins to ze east.";
 		choice = more;
@@ -220,7 +156,6 @@
 {
 	[text*]
 	{
-		//sample = s_v_greet_female_traveler;
 		screen_text = "It is true ze bandits are using us for personal gain, but zey haf not openly attacked us. Ve are Travelers, not barbarians. Ve do not start fights, and zey would not dare to attack us.";
 	}
 }
@@ -229,7 +164,6 @@
 	[text*]
 	{
 		order = 0;
-		//sample = s_v_greet_male_traveler;
 		screen_text = "Ve are indeed beset by hard times. First sister Sikra is taken from us, and now ze bandits threaten us with bloodshed.";
 	}
 	[text*]
