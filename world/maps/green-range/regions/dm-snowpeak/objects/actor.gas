@@ -25,20 +25,40 @@
 	{
 		[conversations]
 		{
-			* = mulekeep_first;
-			* = mulekeep_no_packmules;
-			* = mulekeep_one_packmule;
-			* = mulekeep_two_packmules;
+			* = dm_mulekeep_1_packmules;
+			* = dm_mulekeep_2_packmules;
+			* = dm_mulekeep_first;
+			* = dm_mulekeep_no_packmules;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\green-range\mules\job_talk_dm_mulery.skrit;
+		jat_talk = world\ai\jobs\green-range\job_talk_mule_merchant.skrit?namespace=dm_mulekeep&first=true&numeric=true;
 	}
 	[placement]
 	{
 	  q orientation = 0,-0.777585,0,-0.628777;
 	  p position = 5.23481,-1.57374,1.72835,0x3c20598e;
+	}
+}
+[t:gr_shop_dm_mules,n:0x0050038d]
+{
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = dm_mulekeep_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.777585,0,-0.628777;
+	  p position = 5.21471,-1.52477,1.84535,0x3c20598e;
 	}
 }
 [t:gr_mule_dm,n:0x00500328]
@@ -351,25 +371,5 @@
 	{
 	  q orientation = 0,0.0140674,0,0.999901;
 	  p position = -3.73978,0,0.98572,0x31bbf901;
-	}
-}
-[t:gr_shop_dm_mules,n:0x0050038d]
-{
-	[common]
-	{
-		dev_instance_text = "MP";
-	  b is_single_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = mulekeep_mp;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.777585,0,-0.628777;
-	  p position = 5.21471,-1.52477,1.84535,0x3c20598e;
 	}
 }

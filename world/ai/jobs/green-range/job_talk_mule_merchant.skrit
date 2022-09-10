@@ -7,6 +7,10 @@ Goid		m_Target$;
 #include "k_job_c_mcp_fidget_utils"
 #include "k_job_c_talk_utils"
 
+property    string  namespace$  = "mule_merchant"   doc = "Namespace for conversations and flags";
+property    bool    first$      = false             doc = "Whether to have a first conversation";
+property    bool    numeric$    = false             doc = "Different conversation for each mule count";
+
 startup state STARTUP$
 {
 }
@@ -59,29 +63,35 @@ state Talk$
 	{
 		TryAnim$('talk');
 	}
-	
+
 	event OnEnterState$
 	{
-		if ( GameAuditor.GetDb.GetBool( "mulekeep_dm_talked_to" ) )
+		if ( first$ && !GameAuditor.GetDb.GetBool( namespace$ + "_talked_to" ) )		
 		{
-			if ( m_Go$.GetStore().GetNumHires() == 2 )
-			{
-				m_Go$.GetConversation.RSSelectConversation( "mulekeep_two_packmules" );
-			}
-			else if ( m_Go$.GetStore().GetNumHires() == 1 )
-			{
-				m_Go$.GetConversation.RSSelectConversation( "mulekeep_one_packmule" );
-			}
-			else
-			{
-				m_Go$.GetConversation.RSSelectConversation( "mulekeep_no_packmules" );
-			}
+			GameAuditor.GetDb.SetBool( namespace$ + "_talked_to", true );
+			m_Go$.GetConversation.RSSelectConversation( namespace$ + "_first" );
 		}
 		else
 		{
-			m_Go$.GetConversation.RSSelectConversation( "mulekeep_first" );
-			GameAuditor.GetDb.SetBool( "mulekeep_dm_talked_to", true );
-		}
+            int numMules$ = m_Go$.GetStore().GetNumHires();
+			if ( numMules$ == 0 )
+			{
+				m_Go$.GetConversation.RSSelectConversation( namespace$ + "_no_packmules" );
+			}
+			else
+			{
+                if ( numeric$ )
+                {
+                    string muleConversation$;
+                    StringTool.AssignF(muleConversation$, "%s_%d_packmules", namespace$, numMules$);
+                    m_Go$.GetConversation.RSSelectConversation( muleConversation$ );
+                }
+                else
+                {
+                    m_Go$.GetConversation.RSSelectConversation( namespace$ + "_has_packmules" );
+                }
+			}
+		}	
         TryAnim$('talk');
 
 		m_Go$.GetConversation.RSActivateDialogue();
