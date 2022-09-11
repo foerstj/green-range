@@ -1,11 +1,63 @@
 [t:template,n:gr_spider_white]
 {
     specializes = spider_arakun_white_base;
-    // TODO stats
+
+    // stats from frostnid
+	[actor]
+	{
+		[skills]
+		{
+			strength =  10, 0;
+			intelligence =  4, 0;
+			dexterity =  15, 0;
+            melee =  8,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 228;
+		life = 177;
+        max_life = 177;
+        mana = 8;
+		max_mana = 8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 36;
+		damage_min = 30;
+	}
+    [defend] { defense=60; }
 }
 
 [t:template,n:gr_spider_white_baby]
 {
     specializes = spider_arakun_baby_white_base;
-    // TODO stats
+
+    // stats from ice fly
+	[actor]
+	{
+		[skills]
+		{
+			strength = 6,0;
+			intelligence = 1,0;
+			dexterity = 15,0;
+            melee =  3,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 115;
+		life = 97;
+		max_life = 97;
+		mana = 2;
+		max_mana = 2;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 22;
+		damage_min = 14;
+	}
+    [defend] { defense=78; }
 }
