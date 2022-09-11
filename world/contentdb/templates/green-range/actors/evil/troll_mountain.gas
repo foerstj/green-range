@@ -235,6 +235,97 @@
 }
 
 
+[t:template,n:gr_troll_mountain_large] { specializes = gr_troll_mountain_large_base; }
+[t:template,n:gr_troll_mountain_large_base]
+{
+    specializes = gr_troll_mountain_base;
+
+    [aspect]
+    {
+        scale_base = 1.3;
+    }
+    [common]
+    {
+        screen_name = "Enormous Dumbtroll";
+    }
+
+    // stats & loot from ice archer
+	[actor]
+	{
+		[skills]
+		{
+			strength =  13, 0;
+			intelligence =  5, 0;
+			dexterity =  16, 0;
+            ranged =  6,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 261;
+		life = 243;
+        max_life = 243;
+        mana = 10;
+		max_mana = 10;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 51;
+		damage_min = 48;
+	}
+    [defend] { defense=75; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/10-14;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/6-11;
+					il_main = #armor/18-91;
+	                il_main = #weapon/36-43;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/41-51;
+	                il_main = #armor/-rare(1)/110-143;
+                    il_main = #*/-rare(1)/41-51;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/41-51;
+	                il_main = #armor/-unique(2)/110-143;
+                    il_main = #*/-unique(2)/41-51;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 398;
+					min = 266;
+				}
+			}
+		}
+	}
+
+}
+
+
 [t:template,n:gr_troll_mountain_giant] { specializes = gr_troll_mountain_giant_base; }
 [t:template,n:gr_troll_mountain_giant_base]
 {
@@ -242,11 +333,11 @@
 
     [aspect]
     {
-        scale_base = 2;
+        scale_base = 1.8;
     }
     [common]
     {
-        screen_name = "Giant Dumbtroll";
+        screen_name = "Gigantic Dumbtroll";
     }
     [inventory]
     {
