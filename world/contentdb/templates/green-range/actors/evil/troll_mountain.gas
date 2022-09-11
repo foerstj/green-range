@@ -342,7 +342,10 @@
     [inventory]
     {
 		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
-        es_hand = cb_un_2h_cyclops;  // TODO
+        [equipment]
+        {
+            es_weapon_hand = cb_un_2h_cyclops;  // TODO
+        }
     }
 
     // stats & loot from ice warrior boss
