@@ -49,13 +49,25 @@
 	}
 }
 
-[t:template,n:gr_skull_mini]
+[t:template,n:gr_skull_mini] { specializes = gr_skull_mini_base; }
+[t:template,n:gr_skull_mini_base]
 {
     specializes = dsx_possessed_skull_base;
 
     [aspect]
     {
         scale_base = 0.5;
-        textures:0 = b_c_edm_rt-02;
+        textures:0 = b_c_edm_rt-02;  // simple white skull
     }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_gr_skull_mini_01 = 1;
+			frag_gr_skull_mini_02 = 1;
+			frag_gr_skull_mini_03 = 1;
+			frag_gr_skull_mini_04 = 1;
+			frag_gr_skull_mini_05 = 1;
+		}
+	}
 }
