@@ -235,7 +235,8 @@
 }
 
 
-[t:template,n:gr_troll_mountain_giant]
+[t:template,n:gr_troll_mountain_giant] { specializes = gr_troll_mountain_giant_base; }
+[t:template,n:gr_troll_mountain_giant_base]
 {
     specializes = gr_troll_mountain_base;
 
@@ -247,4 +248,68 @@
     {
         screen_name = "Giant Dumbtroll";
     }
+    [inventory]
+    {
+		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
+        es_hand = cb_un_2h_cyclops;  // TODO
+    }
+
+    // stats & loot from ice warrior boss
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  18, 0;
+			intelligence =  5, 0;
+			dexterity 	=  11, 0;
+            melee 		=  13,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 550;
+		life = 327;
+        max_life = 327;
+        mana = 8;
+		max_mana = 8;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 33;
+		damage_min = 29;
+	}
+    [defend] { defense=202; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+            [oneof*]
+            {
+                il_main = #armor,f/130-145;
+                il_main = #weapon/44-48;
+            }
+            [oneof*]
+            {
+                chance = 0.004;
+                il_main = #weapon/-rare(1)/51-59;
+                il_main = #armor/-rare(1)/155-172;
+                il_main = #*/-rare(1)/51-59;
+            }
+            [oneof*]
+            {
+                chance = 0.002;
+                il_main = #weapon/-unique(2)/51-59;
+                il_main = #armor/-unique(2)/155-172;
+                il_main = #*/-unique(2)/51-59;
+            }
+            [gold*]
+            {
+                max = 484;
+                min = 241;
+                min_pile = 41;
+                piles = 2 - 4;
+            }
+		}
+	}
 }
