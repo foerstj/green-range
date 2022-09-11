@@ -1,0 +1,53 @@
+[t:template,n:dsx_spell_possessed_skull_burn_base]  // = dsx_spell_possessed_skull_burn
+{
+	category_name = "magic";
+	doc = "spell rector burn";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 78;
+		damage_min = 64;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rector_burn");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 1;
+		effect_duration = 8;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+		magic_class = mc_combat_magic;
+		skill_class = "Combat Magic";
+	}
+	[spell_default] {}
+}
+
+[t:template,n:spell_skull_mini_fireshot]
+{
+    specializes = dsx_spell_possessed_skull_burn_base;
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("fireshot");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+}

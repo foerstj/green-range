@@ -59,6 +59,10 @@
         scale_base = 0.5;
         textures:0 = b_c_edm_rt-02;  // simple white skull
     }
+    [common]
+    {
+        [template_triggers] { /* no rector_eye_glow thx */ }
+    }
 	[physics]
 	{
 		[break_particulate]
@@ -69,5 +73,9 @@
 			frag_gr_skull_mini_04 = 1;
 			frag_gr_skull_mini_05 = 1;
 		}
+	}
+	[inventory]
+	{
+		[other] { il_active_primary_spell = spell_skull_mini_fireshot; }
 	}
 }
