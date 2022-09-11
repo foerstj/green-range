@@ -5,6 +5,8 @@
 set map=green-range
 :: name of map, case-sensitive
 set map_cs=Green Range
+:: namespace of resources
+set res=%map%
 :: path of DSLOA documents dir (where Bits are)
 set doc_dsloa=%USERPROFILE%\Documents\Dungeon Siege LoA
 :: path of DS installation
@@ -40,13 +42,13 @@ if %errorlevel% neq 0 pause
 rmdir /S /Q "%tmp%\Bits"
 robocopy "%doc_dsloa%\Bits\art" "%tmp%\Bits\art" /E /xf .gitignore /xf *.psd
 robocopy "%doc_dsloa%\Bits\sound\effects" "%tmp%\Bits\sound\effects" /E
-robocopy "%doc_dsloa%\Bits\world\ai\jobs\%map%" "%tmp%\Bits\world\ai\jobs\%map%" /E
-robocopy "%doc_dsloa%\Bits\world\contentdb\templates\%map%" "%tmp%\Bits\world\contentdb\templates\%map%" /E
-robocopy "%doc_dsloa%\Bits\world\global\moods\%map%" "%tmp%\Bits\world\global\moods\%map%" /E
-robocopy "%doc_dsloa%\Bits\world\global\effects" "%tmp%\Bits\world\global\effects" %map%-* /S
+robocopy "%doc_dsloa%\Bits\world\ai\jobs\%res%" "%tmp%\Bits\world\ai\jobs\%res%" /E
+robocopy "%doc_dsloa%\Bits\world\contentdb\templates\%res%" "%tmp%\Bits\world\contentdb\templates\%res%" /E
+robocopy "%doc_dsloa%\Bits\world\global\moods\%res%" "%tmp%\Bits\world\global\moods\%res%" /E
+robocopy "%doc_dsloa%\Bits\world\global\effects" "%tmp%\Bits\world\global\effects" %res%-* /S
 SETLOCAL EnableDelayedExpansion
-for /f %%f in ('dir /b %tmp%\Bits\world\global\moods\%map%') do (
-  set moods_file=Bits\world\global\moods\%map%\%%f
+for /f %%f in ('dir /b %tmp%\Bits\world\global\moods\%res%') do (
+  set moods_file=Bits\world\global\moods\%res%\%%f
   powershell -Command "(Get-Content '%doc_dsloa%\!moods_file!') -replace 'standard_track = (.*); // (.*)','standard_track = $2; // $1' | Out-File -encoding ASCII '%tmp%\!moods_file!'"
   if %errorlevel% neq 0 pause
 )
