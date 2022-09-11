@@ -1,0 +1,201 @@
+[t:template,n:spider_adolescent_white_base]
+{
+	category_name = "1W_evil_d";
+	doc = "spider_sm_yllw";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  4, 0;
+			intelligence =  1, 0;
+			dexterity =  6, 0;
+			melee =  3, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 5;
+		life = 2;
+		max_life = 2;
+		mana = 2;
+		max_mana = 2;
+		model = m_c_edm_as_pos_1;
+		scale_base = 0.4;
+		[textures] { 0=b_c_edm_as-wht; }
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_spider; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_spider_small_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 1;
+		damage_min = 1;
+	}
+	[body]
+	{
+		min_move_velocity = 2.0;
+		avg_move_velocity = 4.430000;
+
+		terrain_movement_permissions = lf_dirt;
+
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_as_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+					02 = di-03;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] { screen_name="White Spider"; }
+	[defend] { defense=5; }
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?social		= 0.35
+			&still		= false;
+
+		melee_engage_range = 14.0;
+		personal_space_range = 0.1;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = spider_guts_yellow;
+		break_sound = ;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_adolescent_spider_wht_01 = 1;
+			frag_glb_adolescent_spider_wht_02 = 1;
+			frag_glb_adolescent_spider_wht_03 = 1;
+			frag_glb_adolescent_spider_wht_04 = 1;
+			frag_glb_adolescent_spider_wht_05 = 2;
+		}
+	}
+}
+
+[t:template,n:spider_adolescent_white]
+{
+	category_name = "1W_evil_d";
+	doc = "spider_sm_yllw";
+	specializes = spider_adolescent_white_base;
+}
+
+// white baby spider with stats of dsx_spider_stalagnid_island
+[t:template,n:spider_adolescent_white_2]
+{
+	category_name = "1W_evil_d";
+	doc = "spider_sm_yllw";
+	specializes = spider_adolescent_white_base;
+
+	[common] { screen_name="White Spider"; }
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  13, 0;
+			intelligence =  8, 0;
+			dexterity = 9, 0;
+			melee =  10,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 196;
+		life = 130;
+		max_life = 130;
+		mana = 12;
+		max_mana = 12;
+	}
+	[attack]
+	{
+		damage_max = 46;
+		damage_min = 40;
+	}
+	[defend] { defense=70; }
+    [inventory]
+    {
+        drop_at_use_point = true;
+        [pcontent]
+        {
+        /* Generated: Tue Jun 17 11:13:15 2003
+            Level 4, Medium */
+            [oneof*]
+            {
+                [gold*]
+                {
+                    chance = 0.2;
+                    min = 18;
+                    max = 35;
+                }
+                [oneof*]
+                {
+                    chance = 0.088888888888889;
+                    il_main = potion_mana_small;
+                    il_main = potion_health_small;
+                }
+                [oneof*]
+                {
+                    chance = 0.15;
+                    il_main = #weapon/11-11;
+                    il_main = #armor/2-25;
+                    il_main = #*/11-11;
+                }
+            }
+        }
+    }
+}
