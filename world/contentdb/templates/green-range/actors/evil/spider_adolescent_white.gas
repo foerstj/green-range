@@ -1,4 +1,4 @@
-[t:template,n:spider_adolescent_white_base]
+[t:template,n:spider_adolescent_yellow_base]  // = spider_adolescent_yellow
 {
 	category_name = "1W_evil_d";
 	doc = "spider_sm_yllw";
@@ -21,8 +21,8 @@
 		mana = 2;
 		max_mana = 2;
 		model = m_c_edm_as_pos_1;
-		scale_base = 0.4;
-		[textures] { 0=b_c_edm_as-wht; }
+		scale_base = 0.5;
+		[textures] { 0=b_c_edm_as-yel; }
 		[voice]
 		{
 			[die]			{ priority = high; * = s_e_die_spider; }
@@ -96,7 +96,7 @@
 			}
 		}
 	}
-	[common] { screen_name="White Spider"; }
+	[common] { screen_name="Yellow Spider"; }
 	[defend] { defense=5; }
 	[mind]
 	{
@@ -118,6 +118,30 @@
 		gib_gore_good = true;
 		[break_particulate]
 		{
+			frag_glb_adolescent_spider_yel_01 = 1;
+			frag_glb_adolescent_spider_yel_02 = 1;
+			frag_glb_adolescent_spider_yel_03 = 1;
+			frag_glb_adolescent_spider_yel_04 = 1;
+			frag_glb_adolescent_spider_yel_05 = 2;
+		}
+	}
+}
+
+[t:template,n:spider_adolescent_white] { specializes = spider_adolescent_white_base; }
+[t:template,n:spider_adolescent_white_base]
+{
+	specializes = spider_adolescent_yellow_base;
+
+	[aspect]
+	{
+		scale_base = 0.4;
+		[textures] { 0=b_c_edm_as-wht; }
+	}
+	[common] { screen_name="White Spider"; }
+	[physics]
+	{
+		[break_particulate]
+		{
 			frag_glb_adolescent_spider_wht_01 = 1;
 			frag_glb_adolescent_spider_wht_02 = 1;
 			frag_glb_adolescent_spider_wht_03 = 1;
@@ -127,21 +151,18 @@
 	}
 }
 
-[t:template,n:spider_adolescent_white]
+// just renaming to arakun_baby
+[t:template,n:spider_arakun_baby_white] { specializes = spider_arakun_baby_white_base; }
+[t:template,n:spider_arakun_baby_white_base]
 {
-	category_name = "1W_evil_d";
-	doc = "spider_sm_yllw";
-	specializes = spider_adolescent_white_base;
+    specializes = spider_adolescent_white_base;
 }
+
 
 // white baby spider with stats of dsx_spider_stalagnid_island
 [t:template,n:spider_adolescent_white_2]
 {
-	category_name = "1W_evil_d";
-	doc = "spider_sm_yllw";
 	specializes = spider_adolescent_white_base;
-
-	[common] { screen_name="White Spider"; }
 
 	[actor]
 	{
