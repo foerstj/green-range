@@ -1,0 +1,44 @@
+[t:template,n:butterfly_mp_base]  // = butterfly_mp
+{
+	category_name = "1w_ambients";
+	doc = "MP butterfly";
+	specializes = base_ambient;
+	[aspect]
+	{
+		model = m_c_na_bf_pos_1;
+	}
+	[body]
+	{
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_na_bf_fs0;
+			[chore_default]
+			{
+				skrit = random_infinite_loop;
+				[anim_files]
+				{
+					00 = fl;
+					01 = fl-02;
+				}
+			}
+		}
+	}
+	[common] { screen_name="butterfly"; }
+}
+
+[t:template,n:butterfly_red_mp]             { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-red; }
+[t:template,n:butterfly_orange_mp]          { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-orange; }
+[t:template,n:butterfly_yellow_mp]          { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-yellow; }
+[t:template,n:butterfly_lime_mp]            { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-lime; }
+[t:template,n:butterfly_green_mp]           { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-green; }
+[t:template,n:butterfly_turquoise_mp]       { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-turquoise; }
+[t:template,n:butterfly_blue_turquoise_mp]  { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-blue-turquoise; }
+[t:template,n:butterfly_blue_mp]            { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-blue; }
+[t:template,n:butterfly_blue_violet_mp]     { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-blue-violet; }
+[t:template,n:butterfly_violet_mp]          { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-violet; }
+[t:template,n:butterfly_purple_mp]          { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-purple; }
+[t:template,n:butterfly_pink_mp]            { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-pink; }
+[t:template,n:butterfly_black_mp]           { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-black; }
+[t:template,n:butterfly_gray_mp]            { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-gray; }
+[t:template,n:butterfly_white_mp]           { specializes = butterfly_mp_base; aspect:textures:0 = b_c_na_bf-white; }
