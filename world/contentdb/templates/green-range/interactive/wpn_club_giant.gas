@@ -1,0 +1,57 @@
+[t:template,n:cb_g_c_dsx_tet_avg_base]  // = cb_g_c_dsx_tet_avg
+{
+	specializes = dsx_base_club;
+	doc = "DSX Knobbed Club";
+	[aspect]
+		{
+			model = m_w_clb_303;
+		}
+	[attack]
+		{
+			damage_max = 21.0;
+			damage_min = 19.0;
+			is_two_handed = false;
+		}
+	[common]
+		{
+			screen_name = "Knobbed Club";
+		}
+	[gui]
+		{
+			equip_requirements = strength:13;
+			inventory_icon = b_gui_ig_i_w_clb_303;
+			inventory_height = 2;
+			inventory_width = 1;
+		}
+	[pcontent]
+		{
+			[base]
+				{
+					f modifier_max = 6;
+					f modifier_min = 0;
+				}
+		}
+}
+
+[t:template,n:cb_un_gr_giant]
+{
+    specializes = cb_g_c_dsx_tet_avg_base;
+
+	[common]
+	{
+		is_pcontent_allowed = false;
+        screen_name = "Mountain Giant Club";
+	}
+
+    // stats from ice sword
+	[attack]
+	{
+		damage_max = 48;
+		damage_min = 40;
+	}
+	[gui]
+	{
+		equip_requirements = strength:19;
+	}
+    [pcontent] { /* no modifiers */}
+}
