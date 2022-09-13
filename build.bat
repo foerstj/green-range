@@ -6,7 +6,7 @@ set map=green-range
 :: name of map, case-sensitive
 set map_cs=Green Range
 :: namespace of resources
-set res=%map%
+set res=green-range
 :: path of DSLOA documents dir (where Bits are)
 set doc_dsloa=%USERPROFILE%\Documents\Dungeon Siege LoA
 :: path of DS installation
