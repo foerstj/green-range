@@ -110,3 +110,115 @@
 		}
     }
 }
+
+
+[t:template,n:klaw_boss_01_base]  // = klaw_boss_01
+{
+	category_name = "1W_evil_d";
+	doc = "klaw boss 01";
+	specializes = base_klaw;
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  14, 0;
+			intelligence =  9, 0;
+			dexterity 	=  12, 0;
+            melee 		=  9,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 190;
+		life = 240;
+        max_life = 240;
+        mana = 18;
+		max_mana = 18;
+		textures:0 = b_c_edm_kw-03;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 54;
+		damage_min = 46;
+	}
+	[common]
+	{
+		screen_name="Dark Klaw";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+		}
+	}
+    [defend] { defense=154; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[all*]
+			{
+				[all*]
+				{
+					il_main = #armor,f/100-115;
+	                il_main = #weapon/33-37;
+				}
+				[oneof*]
+				{
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/44-53;
+	                   il_main = #armor/-rare(1)/112-119;
+                       il_main = #*/-rare(1)/44-53;
+                }
+				[oneof*]
+				{
+                       chance = 0.002;
+	                   il_main = #weapon/-unique(2)/44-53;
+	                   il_main = #armor/-unique(2)/112-119;
+                       il_main = #*/-unique(2)/44-53;
+	            }
+				[gold*]
+				{
+					max = 384;
+					min = 241;
+					min_pile = 41;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.8
+			&approach_dist		= 2.5
+			&friend_template	= false
+			&friends			= party_klaw_boss
+			&still				= false;
+
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_klaw_boss";
+	}
+}
+
+[t:template,n:gr_klaw_rain_boss] { specializes = gr_klaw_rain_boss_base; }
+[t:template,n:gr_klaw_rain_boss_base]
+{
+    specializes = klaw_boss_01_base;
+
+    [common]
+    {
+        screen_name = "Dark Rain Klaw";
+    }
+    [aspect]
+    {
+        scale_base = 0.8;
+    }
+}
