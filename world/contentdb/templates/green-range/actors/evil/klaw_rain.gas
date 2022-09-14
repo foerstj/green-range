@@ -100,5 +100,13 @@
     [aspect]
     {
         scale_base = 0.7;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_klaw_small_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_klaw_small_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_klaw_small_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_klaw_small_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_klaw_small_SED; }
+		}
     }
 }
