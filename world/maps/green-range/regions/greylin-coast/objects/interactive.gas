@@ -1,54 +1,3 @@
-[t:sign_glb_01,n:0xc570076e]
-{
-	[common]
-	{
-		dev_instance_text = "sign_1";
-		screen_name = "Town of Meren, 21";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.793353,0,0.608761;
-	  p position = 3.98199,1.90735e-006,0.50103,0xe093aaae;
-	}
-}
-[t:sign_glb_01,n:0xc570076f]
-{
-	[common]
-	{
-		screen_name = "Town of Fallraen";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.793353,0,0.608762;
-	  p position = 1.84564,9.53674e-007,-0.941284,0x8835204a;
-	}
-}
-[t:sign_glb_01,n:0xc57005f9]
-{
-	[common]
-	{
-		dev_instance_text = "sign_3";
-		screen_name = "Town of Meren";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.659345,0,0.75184;
-	  p position = 0.402985,0,0.228579,0x2a356c27;
-	}
-}
-[t:sign_glb_01,n:0xc5700771]
-{
-	[common]
-	{
-		dev_instance_text = "sign_2";
-		screen_name = "Town of Meren";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.659345,0,0.75184;
-	  p position = -1.80341,1,0.20369,0xac137195;
-	}
-}
 [t:sign_glb_01,n:0xc57005fc]
 {
 	[common]
@@ -62,51 +11,17 @@
 	  p position = -0.173359,0,1.85455,0x7a939401;
 	}
 }
-[t:sign_glb_01,n:0xc5700610]
+[t:sign_glb_01,n:0xc5700609]
 {
 	[common]
 	{
-		dev_instance_text = "sign_6";
+		dev_instance_text = "sign_5";
 		screen_name = "Town of Lang, 226";
 	}
 	[placement]
 	{
-	  q orientation = 0,0.965926,0,0.25882;
-	  p position = 0.696762,0,-0.673067,0x1d633dcd;
-	}
-}
-[t:lever_des_01,n:0xc57004cd]
-{
-	[aspect]
-	{
-	  f use_range = 3;
-	}
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0xC5700003,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_use",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -2.11678,9.53674e-007,1.51817,0x60251e1e;
-		use_point_scids = 0xc5700597,0xc570073c;
+	  q orientation = 0,-0.75184,0,0.659346;
+	  p position = -0.469334,0,1.94403,0x6330d3be;
 	}
 }
 [t:lever_des_01,n:0xc57004e0]
@@ -143,17 +58,51 @@
 		use_point_scids = 0xc5700597,0xc570073b;
 	}
 }
-[t:sign_glb_01,n:0xc5700609]
+[t:lever_des_01,n:0xc57004cd]
+{
+	[aspect]
+	{
+	  f use_range = 3;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0xC5700003,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -2.11678,9.53674e-007,1.51817,0x60251e1e;
+		use_point_scids = 0xc5700597,0xc570073c;
+	}
+}
+[t:sign_glb_01,n:0xc5700610]
 {
 	[common]
 	{
-		dev_instance_text = "sign_5";
+		dev_instance_text = "sign_6";
 		screen_name = "Town of Lang, 226";
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.75184,0,0.659346;
-	  p position = -0.469334,0,1.94403,0x6330d3be;
+	  q orientation = 0,0.965926,0,0.25882;
+	  p position = 0.696762,0,-0.673067,0x1d633dcd;
 	}
 }
 [t:sign_glb_01,n:0xc570061b]
@@ -205,5 +154,56 @@
 	{
 	  q orientation = 0,0.130526,0,0.991445;
 	  p position = -0.772276,-0.706205,-1.12302,0x59dfa1cf;
+	}
+}
+[t:sign_glb_01,n:0xc570076e]
+{
+	[common]
+	{
+		dev_instance_text = "sign_1";
+		screen_name = "Town of Meren, 21";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.793353,0,0.608761;
+	  p position = 3.98199,1.90735e-006,0.50103,0xe093aaae;
+	}
+}
+[t:sign_glb_01,n:0xc570076f]
+{
+	[common]
+	{
+		screen_name = "Town of Fallraen";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.793353,0,0.608762;
+	  p position = 1.84564,9.53674e-007,-0.941284,0x8835204a;
+	}
+}
+[t:sign_glb_01,n:0xc57005f9]
+{
+	[common]
+	{
+		dev_instance_text = "sign_3";
+		screen_name = "Town of Meren";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.659345,0,0.75184;
+	  p position = 0.402985,0,0.228579,0x2a356c27;
+	}
+}
+[t:sign_glb_01,n:0xc5700771]
+{
+	[common]
+	{
+		dev_instance_text = "sign_2";
+		screen_name = "Town of Meren";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.659345,0,0.75184;
+	  p position = -1.80341,1,0.20369,0xac137195;
 	}
 }

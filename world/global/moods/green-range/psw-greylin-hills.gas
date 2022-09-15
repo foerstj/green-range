@@ -92,15 +92,50 @@
 	}
 }
 
-[mood_setting*]  // coast
+// Greylin Coast
+[mood_setting*]  // coast: cliff (tx mood between climb & beach)
 {
-	mood_name = gr-psw-coast;
+	mood_name = gr-psw-coast-cliff;
   f transition_time = 8.000000;
   b interior = false;
 
 	[fog]
 	{
-	  x fog_color = 0xffa0a0a0;
+	  x fog_color = 0xff808080;  // greylin hills shade
+	  f fog_density = 0.5;
+        // meren fog-dists
+		fog_near_dist = 5.0f;
+		fog_far_dist = 35.0f;
+		fog_lowdetail_near_dist = 5.0f;
+		fog_lowdetail_far_dist = 30.0f;
+	}
+	[music]
+	{
+		ambient_track = "";
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_BesiegedTown_03;  // beach music
+		room_type = rt_generic;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 2.000000;  // normal hills wind
+	}
+	[rain]
+	{
+		rain_density = 1000.0f;  // humongous amounts of rain
+	}
+}
+[mood_setting*]  // coast: beach (out in the open)
+{
+	mood_name = gr-psw-coast-beach;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xffa0a0a0;  // bright shade
 	  f fog_density = 0.5;
 		fog_near_dist = 5.0f;
 		fog_far_dist = 35.0f;
@@ -118,7 +153,7 @@
 	[wind]
 	{
 	  f wind_direction = 4.700000;
-	  f wind_velocity = 5.000000;
+	  f wind_velocity = 5.000000;  // strong wind
 	}
 	[rain]
 	{
