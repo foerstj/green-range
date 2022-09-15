@@ -751,34 +751,6 @@
 	  p position = 1.12518,-0.949973,-1.47675,0xafbdaa34;
 	}
 }
-[t:up_mule_merchant_meren,n:0xc5700232]
-{
-	[common]
-	{
-		dev_instance_text = "SP";
-	  b is_multi_player = false;
-		screen_name = "Eliar Helmsvor";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_mule_merchant_meren_1_packmules;
-			* = conversation_mule_merchant_meren_2_packmules;
-			* = conversation_mule_merchant_meren_first;
-			* = conversation_mule_merchant_meren_no_packmules;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\utraean-peninsula\job_talk_mule_merchant.skrit?namespace=mule_merchant_meren&first=true&numeric=true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.942641,0,-0.333807;
-	  p position = -1.93028,-0.85,-1.71026,0x951e9074;
-	}
-}
 [t:mp_farmer_male_old,n:0xc57005fe]
 {
 	[common]
@@ -1121,39 +1093,5 @@
 	{
 	  q orientation = 0,2.98023e-008,0,1;
 	  p position = 2.54655,0,1.3193,0x4763bfcd;
-	}
-}
-[t:up_phaedriel,n:0xc5700242]
-{
-	[aspect]
-	{
-	  f max_life = 284.2;
-	  f max_mana = 124;
-	}
-	[common]
-	{
-	  b is_multi_player = false;
-    }
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_phaedriel_join;
-			* = conversation_phaedriel_accept_have_money;
-			* = conversation_phaedriel_accept_no_money;
-			* = conversation_phaedriel_reject;
-			* = conversation_phaedriel_disband;
-			* = conversation_phaedriel_rejoin;
-			* = conversation_phaedriel_disband_rejoin;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\utraean-peninsula\job_talk_companion.skrit?namespace=phaedriel&oid=0x4d00242;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.815352,0,-0.578965;
-	  p position = 3.42834,3.9,2.60034,0x4b270955;
 	}
 }
