@@ -91,3 +91,37 @@
 		rain_density = 500.0f;
 	}
 }
+
+[mood_setting*]  // coast
+{
+	mood_name = gr-psw-coast;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xffa0a0a0;
+	  f fog_density = 0.5;
+		fog_near_dist = 5.0f;
+		fog_far_dist = 35.0f;
+		fog_lowdetail_near_dist = 5.0f;
+		fog_lowdetail_far_dist = 30.0f;
+	}
+	[music]
+	{
+		ambient_track = "";
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_BesiegedTown_03;
+		room_type = rt_generic;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 5.000000;
+	}
+	[rain]
+	{
+		rain_density = 1000.0f;
+	}
+}

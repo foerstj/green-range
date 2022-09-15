@@ -1107,36 +1107,6 @@
 	  p position = -1.89584,0,3.60837,0xac545aed;
 	}
 }
-[t:trigger_change_mood_box,n:0xc5700642]
-{
-	[common]
-	{
-	  b is_single_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("meren");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,1.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 20.1858,0.4,-5.62792,0xf68002e1;
-	}
-}
 [t:trigger_change_mood_box,n:0xc5700726]
 {
 	[common]
@@ -1426,138 +1396,6 @@
 	  p position = 0.755607,-3.7,-2.65928,0x6db5a4cb;
 	}
 }
-[t:trigger_change_mood_box,n:0xc570077e]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_ocean_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("meren");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -5.07632,-4.7,-4.86375,0x6db5a4cb;
-	}
-}
-[t:trigger_change_mood_box,n:0xc570077d]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_ocean_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("meren");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.935808,0,0.881508,0xb7ada355;
-	}
-}
-[t:trigger_change_mood_box,n:0xc570077f]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_ocean_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("meren");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.57136,0,-1.20987,0x1c9cb2c8;
-	}
-}
 [t:trigger_change_mood_box,n:0xc5700780]
 {
 	[common]
@@ -1566,7 +1404,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_ocean_1");
+				action* = mood_change("gr-psw-coast");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1581,7 +1419,7 @@
 			}
 			[*]
 			{
-				action* = set_player_world_location("meren");
+				action* = set_player_world_location("psw_coast");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1600,50 +1438,6 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -0.530136,0,0.825003,0x63e436bb;
-	}
-}
-[t:trigger_change_mood_box,n:0xc5700781]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_ocean_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("meren");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.08978,0,0.942332,0x14b85436;
 	}
 }
 [t:trigger_fade_nodes_box,n:0xc570001a]
@@ -1812,50 +1606,6 @@
 	  p position = 0.983408,-3.65,-2.69656,0x986a4bc2;
 	}
 }
-[t:trigger_change_mood_box,n:0xc5700782]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_ocean_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("meren");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 3.00375,0,-0.555606,0x56b34d04;
-	}
-}
 [t:use_point,n:0xc57004c7]
 {
 	[placement]
@@ -1916,94 +1666,6 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = -0.538567,-0.850004,-0.431784,0x8b69eb6a;
-	}
-}
-[t:trigger_change_mood_box,n:0xc5700736]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_ocean_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("meren");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.01176,0,1.03273,0x3097f50a;
-	}
-}
-[t:trigger_change_mood_box,n:0xc570077c]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_ocean_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("meren");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -3.08452,0,1.53849,0xadcf134a;
 	}
 }
 [t:use_point,n:0xc5700223]
