@@ -1,0 +1,85 @@
+[t:template,n:mangler_sea_base]  // = mangler_sea
+{
+	doc = "mangler_sea";
+	specializes = base_mangler;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		18, 0;
+			intelligence = 	4, 0;
+			dexterity = 	11, 0;
+			melee =  		20, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 8000;
+		life = 720;
+		max_life = 720;
+		mana = 4;
+		material = teeth;
+		max_mana = 4;
+		//scale_base = 0.60; // $$ What should his scale be? -CarlosN
+		[textures]	{0=b_c_edm_mn-03;}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 118;
+		damage_min = 104;
+	}
+	[common] { screen_name="Sea Mangler"; }
+	[defend] { defense=380; }
+	[mind]
+	{
+		jat_attack_object_melee	= world\ai\jobs\common\job_attack_object_melee.skrit
+			?cautious_chance	= 0.75
+			&min_cautious_distance = 3.00
+			&cautious_approach_distance = 1.0
+			&cautious_down_time = 1.1;
+
+
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social 		= 0.35
+			&approach_dist 	= 2.00
+			&move_distance 	= 4.00
+			&min_distance 	= 2.00
+			&still 			= false;
+	}
+}
+
+[t:template,n:gr_mangler_greylin_coast]
+{
+    specializes = mangler_sea_base;
+
+	[common] { screen_name="Greylin Mangler"; }
+    [aspect] { scale_base = 2; }
+
+    // stats from dsx_angler_shadow
+	[actor]
+	{
+		[skills]
+		{
+			strength = 	15, 0;
+			intelligence = 	8, 0;
+			dexterity = 	11, 0;
+			melee =  	13,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 400;
+		life = 600;  // originally 184
+		max_life = 600;  // originally 184
+		mana = 10;
+		max_mana = 10;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 61;
+		damage_min = 55;
+	}
+	[defend] { defense=96; }
+}
