@@ -160,6 +160,30 @@
 		rain_density = 1000.0f;
 	}
 }
+[mood_setting*]  // coast: beach shelter
+{
+	mood_name = gr-psw-coast-shelter;
+  f transition_time = 1.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xffa0a0a0;
+	  f fog_density = 0.5;
+		fog_near_dist = 5.0f;
+		fog_far_dist = 35.0f;
+		fog_lowdetail_near_dist = 5.0f;
+		fog_lowdetail_far_dist = 30.0f;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_rain1;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_BesiegedTown_03;
+		room_type = rt_generic;
+	}
+}
 [mood_setting*]  // coast climb south (tx mood)
 {
 	mood_name = gr-psw-coast-climb-s;
