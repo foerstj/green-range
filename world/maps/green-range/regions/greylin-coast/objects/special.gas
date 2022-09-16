@@ -126,12 +126,11 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD   PLAYER LOCATION";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_ocean_4");
+				action* = mood_change("gr-psw-coast-climb-s");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(22.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -141,21 +140,6 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("cloud_forest");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(22.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -282,7 +266,7 @@
 			{
 				action* = mood_change("gr-psw-coast-cliff");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.500000,1.000000,0.700000,"on_every_enter");
+				condition* = party_member_within_bounding_box(16.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -297,7 +281,7 @@
 			{
 				action* = set_player_world_location("psw_coast");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.500000,1.000000,0.700000,"on_every_enter");
+				condition* = party_member_within_bounding_box(16.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -312,68 +296,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-1.04308e-007,0,0.999999;
-	  p position = -1.06577,-11.4802,7.34345,0x4f968310;
-	}
-}
-[t:trigger_change_mood_box,n:0xc570061e]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_sr_r5_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.000000,0.700000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.04308e-007,0,0.999999;
-	  p position = -0.992867,-11.1254,5.84855,0x4f968310;
-	}
-}
-[t:trigger_change_mood_box,n:0xc5700643]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-	  b is_single_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("crystal_caverns");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.000000,0.700000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.04308e-007,0,0.999999;
-	  p position = -0.177025,-11.8239,0.23542,0x4f968310;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.0740433,0.519802,1.11784,0x14f96e14;
 	}
 }
 [t:trigger_change_mood_box,n:0xc5700721]
