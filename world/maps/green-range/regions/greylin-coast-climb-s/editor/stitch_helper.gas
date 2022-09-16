@@ -2,4 +2,21 @@
 {
 	source_region_guid = 0x00000C67;
 	source_region_name = greylin-coast-climb-s;
+	[t:stitch_editor,n:greylin-coast]
+	{
+		dest_region = greylin-coast;
+		[node_ids]
+		{
+			0x12132010 = 0x2A14616C,5;
+			0x12132011 = 0x2A14616C,4;
+		}
+	}
+	[t:stitch_editor,n:mountains-x12z13]
+	{
+		dest_region = mountains-x12z13;
+		[node_ids]
+		{
+			0x12132001 = 0x59470823,2;
+		}
+	}
 }
