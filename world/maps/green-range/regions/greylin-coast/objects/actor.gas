@@ -14,6 +14,25 @@
 	  p position = 2.67264,0,1.42792,0x4f746c8a;
 	}
 }
+[t:gr_npc_ranger_greylin_coast,n:0xc57010f7]
+{
+	[common]
+	{
+		screen_name = "Ranger Roger";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = ranger;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.642788,0,-0.766044;
+	  p position = 3.16172,0,-0.266711,0x26648ac6;
+	}
+}
 [t:gr_klaw_rain,n:0xc5700810]
 {
 	[placement]
@@ -704,5 +723,17 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 3.17915,0,-0.807831,0xf5867eee;
+	}
+}
+[t:bear,n:0xc57010d8]
+{
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.782143,0,0.623099;
+	  p position = -0.382814,0,0.00203955,0x26648ac6;
 	}
 }
