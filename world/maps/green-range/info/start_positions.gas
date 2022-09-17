@@ -2,7 +2,7 @@
 {
 	[t:start_group,n:blackwood-gap]
 	{
-	  b default = true;
+	  b default = false;
 		description = "Travelers Camp at the sunless bottom of the Green Range's deepest canyon";
 	  b dev_only = false;
 	  i id = 7;
@@ -109,89 +109,6 @@
 			{
 			  i required_level = 18;
 			}
-		}
-	}
-	[t:start_group,n:dev]
-	{
-	  b default = false;
-		description = "";
-	  b dev_only = false;
-	  i id = 1698464;
-		screen_name = "";
-		[start_position]
-		{
-		  i id = 1;
-			position = 0.012007,6.000000,1.299896,0x8F4B0F49;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.012007,6.000000,1.299896,0x8F4B0F49;
-			}
-		}
-		[start_position]
-		{
-		  i id = 2;
-			position = 3.545723,0.000000,1.038306,0xB4F31CE8;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 3.545723,0.000000,1.038306,0xB4F31CE8;
-			}
-		}
-		[start_position]
-		{
-		  i id = 4;
-			position = -0.084101,6.000000,-0.688195,0x8F4B0F4A;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = -0.084101,6.000000,-0.688195,0x8F4B0F4A;
-			}
-		}
-		[start_position]
-		{
-		  i id = 5;
-			position = 0.000000,0.000000,0.000000,0x3411FDC2;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x3411FDC2;
-			}
-		}
-		[start_position]
-		{
-		  i id = 6;
-			position = 0.002824,6.000000,-0.192541,0x8604E1BE;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.002824,6.000000,-0.192541,0x8604E1BE;
-			}
-		}
-		[start_position]
-		{
-		  i id = 7;
-			position = -0.649237,5.967373,0.239149,0x8604E1BF;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = -0.649237,5.967373,0.239149,0x8604E1BF;
-			}
-		}
-		[world_levels]
-		{
 		}
 	}
 	[t:start_group,n:dm-town]
@@ -418,7 +335,7 @@
 	}
 	[t:start_group,n:ehb]
 	{
-	  b default = false;
+	  b default = true;
 		description = "Kingdom of Ehb border post";
 	  b dev_only = false;
 	  i id = 0;
