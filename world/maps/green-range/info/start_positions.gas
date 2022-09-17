@@ -1,5 +1,116 @@
 [start_positions]
 {
+	[t:start_group,n:blackwood-gap]
+	{
+	  b default = true;
+		description = "Travelers Camp at the sunless bottom of the Green Range's deepest canyon";
+	  b dev_only = false;
+	  i id = 7;
+		screen_name = "Blackwood Gap Shelter & Camp";
+		[start_position]
+		{
+		  i id = 1;
+			position = 1.369562,0.000000,-0.239993,0xCDF150F2;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xCDF150F2;
+			}
+		}
+		[start_position]
+		{
+		  i id = 2;
+			position = 1.837578,-0.000004,0.654369,0x2783B708;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x2783B708;
+			}
+		}
+		[start_position]
+		{
+		  i id = 3;
+			position = 0.685047,0.000000,2.942290,0x0344784A;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x0344784A;
+			}
+		}
+		[start_position]
+		{
+		  i id = 4;
+			position = 2.696358,0.000000,-3.623891,0x0344784A;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x0344784A;
+			}
+		}
+		[start_position]
+		{
+		  i id = 5;
+			position = -2.559498,0.000000,-0.453894,0xC89BE168;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xC89BE168;
+			}
+		}
+		[start_position]
+		{
+		  i id = 6;
+			position = -3.305445,0.000004,-1.651135,0xCDF150F2;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xCDF150F2;
+			}
+		}
+		[start_position]
+		{
+		  i id = 7;
+			position = -2.456673,0.000000,1.657891,0xDAA424D2;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xDAA424D2;
+			}
+		}
+		[start_position]
+		{
+		  i id = 8;
+			position = 3.017487,0.000000,1.002533,0xC3160F07;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xC3160F07;
+			}
+		}
+		[world_levels]
+		{
+			[normal]
+			{
+			  i required_level = 18;
+			}
+		}
+	}
 	[t:start_group,n:dev]
 	{
 	  b default = false;
@@ -29,18 +140,6 @@
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
 				position = 3.545723,0.000000,1.038306,0xB4F31CE8;
-			}
-		}
-		[start_position]
-		{
-		  i id = 3;
-			position = 2.310114,0.000000,-1.534626,0xCDF150F2;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 2.310114,0.000000,-1.534626,0xCDF150F2;
 			}
 		}
 		[start_position]
@@ -426,10 +525,10 @@
 	}
 	[t:start_group,n:greylin-coast]
 	{
-	  b default = true;
+	  b default = false;
 		description = "A Ranger shelter on the Greylin Coast";
 	  b dev_only = false;
-	  i id = 1698464;
+	  i id = 6;
 		screen_name = "Greylin Coast Shelter";
 		[start_position]
 		{
@@ -440,7 +539,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xA0097B95;
+				position = -0.532886,-1.250001,-1.308601,0xA0097B95;
 			}
 		}
 		[start_position]
@@ -452,7 +551,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xA0097B95;
+				position = 1.683832,-1.250001,-1.047707,0xA0097B95;
 			}
 		}
 		[start_position]
@@ -464,7 +563,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xA0097B95;
+				position = -0.885191,-1.249999,0.043960,0xA0097B95;
 			}
 		}
 		[start_position]
@@ -476,7 +575,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xA0097B95;
+				position = 0.667796,-1.250000,-1.068142,0xA0097B95;
 			}
 		}
 		[start_position]
@@ -488,7 +587,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x14B85436;
+				position = -2.230141,0.000000,-0.094218,0x14B85436;
 			}
 		}
 		[start_position]
@@ -500,7 +599,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x56B34D04;
+				position = 3.692389,0.000000,1.759780,0x56B34D04;
 			}
 		}
 		[start_position]
@@ -512,7 +611,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x7A939401;
+				position = 0.800369,0.000000,-0.279142,0x7A939401;
 			}
 		}
 		[start_position]
@@ -524,7 +623,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xBE4BA83E;
+				position = 1.904402,0.000000,0.963965,0xBE4BA83E;
 			}
 		}
 		[world_levels]
