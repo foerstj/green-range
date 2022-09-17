@@ -53,8 +53,14 @@
 {
     specializes = mangler_sea_base;
 
-	[common] { screen_name="Greylin Mangler"; }
-    [aspect] { scale_base = 2; }
+	[common]
+    {
+        screen_name="Greylin Mangler";
+    }
+    [aspect]
+    {
+        scale_base = 2;
+    }
 
     // stats from dsx_angler_shadow
 	[actor]
@@ -69,15 +75,14 @@
 	}
 	[aspect]
 	{
-		experience_value = 400;
-		life = 600;  // originally 184
-		max_life = 600;  // originally 184
+		experience_value = 800;  // 400
+		life = 736;  // 184
+		max_life = 736;  // 184
 		mana = 10;
 		max_mana = 10;
 	}
 	[attack]
 	{
-		attack_range = 0.5;
 		damage_max = 61;
 		damage_min = 55;
 	}
