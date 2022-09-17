@@ -2,14 +2,14 @@
 {
 	[t:start_group,n:dev]
 	{
-	  b default = true;
+	  b default = false;
 		description = "";
 	  b dev_only = false;
 	  i id = 1698464;
 		screen_name = "";
 		[start_position]
 		{
-		  i id = 7;
+		  i id = 1;
 			position = 0.012007,6.000000,1.299896,0x8F4B0F49;
 			[camera]
 			{
@@ -81,19 +81,7 @@
 		}
 		[start_position]
 		{
-		  i id = 1;
-			position = 0.591079,0.000000,1.568047,0x63E436BB;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.591079,0.000000,1.568047,0x63E436BB;
-			}
-		}
-		[start_position]
-		{
-		  i id = 8;
+		  i id = 7;
 			position = -0.649237,5.967373,0.239149,0x8604E1BF;
 			[camera]
 			{
@@ -434,6 +422,117 @@
 		}
 		[world_levels]
 		{
+		}
+	}
+	[t:start_group,n:greylin-coast]
+	{
+	  b default = true;
+		description = "A Ranger shelter on the Greylin Coast";
+	  b dev_only = false;
+	  i id = 1698464;
+		screen_name = "Greylin Coast Shelter";
+		[start_position]
+		{
+		  i id = 1;
+			position = -0.532886,-1.250001,-1.308601,0xA0097B95;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xA0097B95;
+			}
+		}
+		[start_position]
+		{
+		  i id = 2;
+			position = 1.683832,-1.250001,-1.047707,0xA0097B95;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xA0097B95;
+			}
+		}
+		[start_position]
+		{
+		  i id = 3;
+			position = -0.885191,-1.249999,0.043960,0xA0097B95;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xA0097B95;
+			}
+		}
+		[start_position]
+		{
+		  i id = 4;
+			position = 0.667796,-1.250000,-1.068142,0xA0097B95;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xA0097B95;
+			}
+		}
+		[start_position]
+		{
+		  i id = 5;
+			position = -2.230141,0.000000,-0.094218,0x14B85436;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x14B85436;
+			}
+		}
+		[start_position]
+		{
+		  i id = 6;
+			position = 3.692389,0.000000,1.759780,0x56B34D04;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x56B34D04;
+			}
+		}
+		[start_position]
+		{
+		  i id = 7;
+			position = 0.800369,0.000000,-0.279142,0x7A939401;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x7A939401;
+			}
+		}
+		[start_position]
+		{
+		  i id = 8;
+			position = 1.904402,0.000000,0.963965,0xBE4BA83E;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xBE4BA83E;
+			}
+		}
+		[world_levels]
+		{
+			[normal]
+			{
+			  i required_level = 18;
+			}
 		}
 	}
 	[t:start_group,n:magic-troll-shop]

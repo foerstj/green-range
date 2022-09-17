@@ -64,7 +64,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE + MOOD";
+		dev_instance_text = "FADE MOOD PWL";
 		[instance_triggers]
 		{
 			[*]
@@ -80,6 +80,21 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("psw_coast");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,2.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -101,7 +116,7 @@
 			{
 				action* = mood_change("gr-psw-coast-beach");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
+				condition* = party_member_within_sphere(8.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -116,7 +131,7 @@
 			{
 				action* = set_player_world_location("psw_coast");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
+				condition* = party_member_within_sphere(8.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -131,8 +146,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.530136,0,0.825003,0x63e436bb;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.39666,0,1.14509,0x7a939401;
 	}
 }
 [t:trigger_health_shrine,n:0xc57004d2]
