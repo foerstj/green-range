@@ -1279,3 +1279,32 @@
 	  p position = 1.1499,-17.5,-4.88159,0x4a2c51f9;
 	}
 }
+[t:gr_pm_traveler_c13n4,n:0x05800958]
+{
+	[aspect]
+	{
+	  f max_life = 186.2;
+	  f max_mana = 264;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = pm_traveler_mp;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.061821,0,0.206985,0xa5195f15;
+	}
+}
