@@ -202,11 +202,46 @@
 	}
 	[music]
 	{
-        // mountains ambience & music
+        // mountains ambience & south music
 		ambient_track = s_e_ambient_swamp;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
 		standard_track = s_m_darkswamp_02;
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 2.000000;
+	}
+	[rain]
+	{
+		rain_density = 500.0f;  // mountains rainfall
+	}
+}
+[mood_setting*]  // coast climb north (tx mood)
+{
+	mood_name = gr-psw-coast-climb-n;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff808080;
+	  f fog_density = 0.5;
+        // meren fog-dists
+		fog_near_dist = 5.0f;
+		fog_far_dist = 35.0f;
+		fog_lowdetail_near_dist = 5.0f;
+		fog_lowdetail_far_dist = 30.0f;
+	}
+	[music]
+	{
+        // mountains ambience & middle music
+		ambient_track = s_e_ambient_swamp;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_darkswamp_03;
 		room_type = rt_mountains;
 	}
 	[wind]
