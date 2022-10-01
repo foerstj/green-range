@@ -102,9 +102,9 @@
 	  f wind_velocity = 2.000000;
 	}
 }
-[mood_setting*]  // blackwood gap south-east, indoor
+[mood_setting*]  // blackwood gap south-east, cave
 {
-    mood_name = gr-bwg-se-indoor;
+    mood_name = gr-bwg-se-cave;
   f transition_time = 1.000000;
   b interior = true;
 
@@ -123,7 +123,7 @@
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
 		standard_track = s_m_foreverlands; // s_m_darkforest_03
-		room_type = rt_generic;
+		room_type = rt_cave;
 	}
 }
 
@@ -215,9 +215,9 @@
 	  f wind_velocity = 2.000000;
 	}
 }
-[mood_setting*]  // blackwood gap north-west, indoor
+[mood_setting*]  // blackwood gap north-west, cave
 {
-    mood_name = gr-bwg-nw-indoor;
+    mood_name = gr-bwg-nw-cave;
   f transition_time = 1.000000;
   b interior = true;
 
@@ -236,6 +236,30 @@
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
 		standard_track = s_m_stormpath; // s_m_darkforest_02
-		room_type = rt_generic;
+		room_type = rt_cave;
+	}
+}
+[mood_setting*]  // blackwood gap north-west, keep
+{
+    mood_name = gr-bwg-nw-keep;
+  f transition_time = 1.000000;
+  b interior = true;
+
+	[fog]
+	{
+	  x fog_color = 0xff384048;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = "";
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_stormpath; // s_m_darkforest_02
+		room_type = rt_stoneroom;
 	}
 }

@@ -123,7 +123,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("gr-bwg-nw-indoor");
+				action* = mood_change("gr-bwg-nw-cave");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -341,7 +341,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("gr-bwg-nw-indoor");
+				action* = mood_change("gr-bwg-nw-keep");
 				action* = fade_nodes(0xABA40200,1,2,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,2.000000,1.000000,"on_every_enter");
