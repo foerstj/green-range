@@ -64,7 +64,7 @@
         scale_base = 0.8;  // swamp troll is 0.6
     }
 
-    // shop content from Jeriah the Mountain Man
+    // shop content from Jeriah the Mountain Man, -smith, +backpacks
 	[inventory]
 	{
 		[store_pcontent]
@@ -101,6 +101,12 @@
 					max = 3;
 					min = 3;
 				}
+                [all*]
+                {
+                    il_main = DSX_backpack_empty;
+                    max = 3;
+                    min = 2;
+                }
 			}
 		}
 	}

@@ -22,7 +22,7 @@
 		item_markup = 2;
     }
 
-    // shop content from Onoc in Glacern
+    // shop content from Onoc in Glacern, +backpacks
 	[inventory]
 	{
 		[store_pcontent]
@@ -57,11 +57,18 @@
 					max = 5;
 					min = 5;
 				}
+                [all*]
+                {
+                    il_main = DSX_backpack_empty;
+                    max = 3;
+                    min = 2;
+                }
 			}
 		}
 	}
 	[store]
 	{
+		item_markup = 2;
 		[item_restock]
 		{
 			potion_health_small = 20;

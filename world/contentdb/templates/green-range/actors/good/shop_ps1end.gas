@@ -101,7 +101,14 @@
             es_chest = gr_robe_rangers;
             es_feet = gr_boots_rangers;
         }
+    }
+    [mind]
+    {
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
 
+    [inventory]
+    {
 		[store_pcontent]
 		{
 			full_ratio = 0;
@@ -255,7 +262,7 @@
 				}
 			}
 
-            // adwana content
+            // adwana content, +backpacks
 			[magic]
 			{
 				[all*]
@@ -279,11 +286,13 @@
 					max = 5;
 					min = 5;
 				}
+                [all*]
+                {
+                    il_main = DSX_backpack_empty;
+                    max = 3;
+                    min = 2;
+                }
 			}
 		}
-    }
-    [mind]
-    {
-        jat_talk = world\ai\jobs\common\job_talk.skrit;
     }
 }

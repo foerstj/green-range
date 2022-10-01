@@ -84,7 +84,7 @@
 	category_name = "1W_shopkeep";
     [common] { screen_name="Mother Gayat"; }
 
-    // shop content from Jeriah the Mountain Man
+    // shop content from Jeriah the Mountain Man, -smith, +backpacks
 	[inventory]
 	{
 		[store_pcontent]
@@ -121,11 +121,18 @@
 					max = 3;
 					min = 3;
 				}
+                [all*]
+                {
+                    il_main = DSX_backpack_empty;
+                    max = 3;
+                    min = 2;
+                }
 			}
 		}
 	}
 	[store]
 	{
+		item_markup = 2;
 		[item_restock]
 		{
 			potion_health_small = 9;

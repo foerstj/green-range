@@ -46,19 +46,15 @@
 	category_name = "1W_shopkeep";
 	doc = "gr starter shop";
 
-	[aspect]
-	{
-		use_range = 1.0;
-		draw_selection_indicator = TRUE;
-		is_ghost_usable = TRUE;
-	}
 	[common]
 	{
 		screen_name = "Starter Shop";
 	}
-	[conversation]
+	[mind]
 	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
+
 	[inventory]
 	{
 		[store_pcontent]
@@ -145,13 +141,6 @@
                 }
 			}
 		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[respawn_shrine]
-	{
 	}
 	[store]
 	{
