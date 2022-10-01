@@ -852,34 +852,6 @@
 	  p position = -32.8108,0.55,17.4814,0x0f8bca89;
 	}
 }
-[t:trigger_generic,n:0x0020077a]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("quest_subdue_village","completed",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -7.83198,5.7,4.75533,0x65a528fe;
-	}
-}
 [t:trigger_fade_node_group,n:0x0020079d]
 {
 	[common]
