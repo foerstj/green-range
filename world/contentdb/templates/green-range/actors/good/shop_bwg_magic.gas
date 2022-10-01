@@ -82,7 +82,14 @@
     specializes = mother_zaod_base;
 
 	category_name = "1W_shopkeep";
-    [common] { screen_name="Mother Gayat"; }
+    [common]
+    {
+        screen_name="Mother Gayat";
+    }
+    [mind]
+    {
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
 
     // shop content from Jeriah the Mountain Man, -smith, +backpacks
 	[inventory]

@@ -243,10 +243,6 @@
 			* = conversation_shop_smith;
 		}
 	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.66262,0,0.748956;
@@ -403,6 +399,34 @@
 	  p position = -3.03287,0,1.9347,0x0344784a;
 	}
 }
+[t:gr_shop_bwg_mule,n:0x0580095a]
+{
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = mule_merchant_bwg_mp;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_m_g_c_avg_hewoven_dsx;
+			es_feet = bo_bo_le_light;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.504482,0,0.863422;
+	  p position = 0.345749,0,-1.03518,0x0344784a;
+	}
+}
 [t:butterfly_black,n:0x05800aa6]
 {
 	[placement]
@@ -512,10 +536,6 @@
 			* = pm_traveler_mp;
 		}
 	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
@@ -568,10 +588,6 @@
 		{
 			* = conversation_shop_magic;
 		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
@@ -1312,37 +1328,5 @@
 	[placement]
 	{
 	  p position = 1.1499,-17.5,-4.88159,0x4a2c51f9;
-	}
-}
-[t:gr_shop_bwg_mule,n:0x0580095a]
-{
-	[common]
-	{
-		dev_instance_text = "MP";
-	  b is_single_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = mule_merchant_bwg_mp;
-		}
-	}
-	[inventory]
-	{
-		[equipment]
-		{
-			es_chest = bd_ro_m_g_c_avg_hewoven_dsx;
-			es_feet = bo_bo_le_light;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.504482,0,0.863422;
-	  p position = 0.345749,0,-1.03518,0x0344784a;
 	}
 }
