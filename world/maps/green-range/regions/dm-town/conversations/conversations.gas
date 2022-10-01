@@ -76,6 +76,31 @@ We also have dorms and a dining hall, and more. Be our guests.";
 	  f scroll_rate = 10.000000;
 	}
 }
+[guard_captain_mp]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "All hail, Humans! Welcome to Umberdeep.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "You are following the Klars Trail? The signs here will guide you to East Gate A, where the Trail continues through the Mines to the East Exit.
+You are also welcome to stay a while, if you wish...";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "You can stack up supplies and exchange gear right here on our market square.
+
+We also have dorms and a dining hall, and more. Be our guests.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [hungry]
 {
 	[text*]
@@ -120,6 +145,15 @@ This is our Onsen - a hot tub from a thermal spring, and a cold tub to cool down
 	  f scroll_rate = 10.000000;
 	}
 }
+[shop_weaponry]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Best axes and shields under the mountain! Offer ends when supply runs out, don't miss it!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [smith]
 {
 	[text*]
@@ -134,15 +168,6 @@ If you want to buy something, head to the Market Square.";
 	[text*]
 	{
 		screen_text = "Welcome to Umberdeep, stranger! This is our washery. Here we do the washing up and also the laundry.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[shop_weaponry]
-{
-	[text*]
-	{
-		choice = shop;
-		screen_text = "Best axes and shields under the mountain! Offer ends when supply runs out, don't miss it!";
 	  f scroll_rate = 10.000000;
 	}
 }

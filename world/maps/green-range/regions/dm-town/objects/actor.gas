@@ -155,6 +155,8 @@
 {
 	[common]
 	{
+		dev_instance_text = "SP";
+	  b is_multi_player = false;
 		screen_name = "Guard Captain";
 	}
 	[conversation]
@@ -178,6 +180,37 @@
 	{
 	  q orientation = 3.2898e-008,-0.994522,6.33906e-008,0.104528;
 	  p position = 1.03752,-2,-1.08311,0xca698d04;
+	}
+}
+[t:gr_dwarf_guard_06,n:0x00400556]
+{
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Guard Captain";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = guard_captain_mp;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ba_m_g_c_str;
+			es_feet = bo_bo_ch_f_g_c_avg;
+			es_head = he_op_bigwings_02;
+			es_weapon_hand = ax_g_c_2h1b_avg;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 3.2898e-008,-0.994522,6.33906e-008,0.104528;
+	  p position = 0.966677,-2,-0.97192,0xca698d04;
 	}
 }
 [t:gr_shop_dm_weaponry,n:0x00400020]
