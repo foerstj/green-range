@@ -193,6 +193,35 @@
 		lightning = false;
 	}
 }
+[mood_setting*]  // trail b, shopping
+{
+	mood_name = gr-ps1-b-shop;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff7e8c9b;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 16.000000;
+	  f standard_repeat_delay = 32.000000;  // longer delay for more quiet time while shopping
+		standard_track = s_m_neverland; // s_m_templeruins_05
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 4.700000;
+	  f wind_velocity = 1.000000;
+	}
+}
 [mood_setting*]  // skeleton cave
 {
 	mood_name = gr-ps1-cave;
