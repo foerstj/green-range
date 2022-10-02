@@ -721,7 +721,7 @@
 	  p position = 1.63773,0,-0.891083,0x840e070f;
 	}
 }
-[t:gr_bubber_black,n:0x0590067a]
+[t:gr_giant_dog,n:0x0590067a]
 {
 	[placement]
 	{
@@ -729,7 +729,7 @@
 	  p position = 1.8783,-9.53674e-007,-0.0891571,0x9077c8d4;
 	}
 }
-[t:gr_bubber_black,n:0x0590067b]
+[t:gr_giant_dog,n:0x0590067b]
 {
 	[placement]
 	{
@@ -737,7 +737,7 @@
 	  p position = 0.912857,0,0.137253,0x8286e072;
 	}
 }
-[t:gr_phrak_piercer_black,n:0x05900676]
+[t:gr_giant_dog,n:0x05900676]
 {
 	[placement]
 	{
@@ -745,7 +745,7 @@
 	  p position = -1.68476,0,-0.822769,0x5bc114f3;
 	}
 }
-[t:gr_phrak_piercer_black,n:0x05900677]
+[t:gr_giant_dog,n:0x05900677]
 {
 	[placement]
 	{
@@ -753,7 +753,7 @@
 	  p position = -0.943562,0,-1.56319,0x5bc114f3;
 	}
 }
-[t:gr_phrak_black,n:0x05900678]
+[t:gr_giant_dog,n:0x05900678]
 {
 	[placement]
 	{
@@ -761,30 +761,8 @@
 	  p position = -0.37204,-9.53674e-007,0.177322,0x5bc114f3;
 	}
 }
-[t:bandit_boss,n:0x059008a9]
+[t:gr_giant,n:0x059008a9]
 {
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x05900B0D,0f,"default","",0);
-				action* = change_quest_state("quest_kill_bandits","completed",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
 	[placement]
 	{
 	  q orientation = 0,0.317305,0,0.948324;
@@ -1102,7 +1080,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.422618,0,0.906308;
-	  p position = -0.680525,9.53674e-007,1.18883,0x584905ee;
+	  p position = -0.680527,9.53674e-007,1.18883,0x584905ee;
 	}
 }
 [t:gr_darkling_reveal,n:0x0590088f]
@@ -1110,7 +1088,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.5,0,0.866025;
-	  p position = 0.725744,0,1.47144,0x584905ee;
+	  p position = 0.725739,0,1.47144,0x584905ee;
 	}
 }
 [t:gr_darkling_reveal,n:0x05900890]
@@ -1133,7 +1111,7 @@
 {
 	[placement]
 	{
-	  p position = -5.05061,-0.0188612,0.119019,0x1ba3c257;
+	  p position = -5.05061,-0.0188608,0.119019,0x1ba3c257;
 	}
 }
 [t:gr_wraith_black,n:0x05900b2f]
@@ -1141,7 +1119,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.173648,0,0.984808;
-	  p position = -2.47362,0.0709326,0.301514,0x1ba3c257;
+	  p position = -2.47362,0.0709324,0.301514,0x1ba3c257;
 	}
 }
 [t:gr_darkling_reveal,n:0x05900b3f]
@@ -1157,7 +1135,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.939693,0,-0.34202;
-	  p position = 0.283688,4.76837e-007,-0.701128,0x57a630ca;
+	  p position = 0.283691,0,-0.701126,0x57a630ca;
 	}
 }
 [t:gr_darkling_reveal,n:0x05900b39]
@@ -1213,7 +1191,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.34202,0,0.939693;
-	  p position = -1.46193,0,1.7958,0x801fc89a;
+	  p position = -1.46193,0,1.79581,0x801fc89a;
 	}
 }
 [t:gr_darkling_reveal,n:0x05900b46]
@@ -1221,7 +1199,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.0852766,0,-0.432078,0xccef065a;
+	  p position = 0.0852661,0,-0.432083,0xccef065a;
 	}
 }
 [t:gr_wraith_black,n:0x05900b49]
@@ -1229,7 +1207,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.258819,0,0.965926;
-	  p position = -1.08787,0,-1.6291,0xccef065a;
+	  p position = -1.08786,0,-1.6291,0xccef065a;
 	}
 }
 [t:gr_darkling_reveal,n:0x05900b45]
@@ -1237,7 +1215,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.642788,0,0.766045;
-	  p position = 0.210129,0,-0.416392,0x5364d2da;
+	  p position = 0.210144,0,-0.416397,0x5364d2da;
 	}
 }
 [t:gr_darkling_reveal,n:0x05900b44]
@@ -1253,7 +1231,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.422618,0,0.906308;
-	  p position = 0.535963,0,0.858457,0xbb2667fb;
+	  p position = 0.53595,0,0.858459,0xbb2667fb;
 	}
 }
 [t:gr_wraith_black,n:0x05900b34]
@@ -1261,7 +1239,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.422618,0,0.906308;
-	  p position = -4.92471,-0.031623,0.585236,0x0cf9c5e4;
+	  p position = -4.92471,-0.0316229,0.585236,0x0cf9c5e4;
 	}
 }
 [t:gr_wraith_black,n:0x05900b36]
@@ -1269,7 +1247,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.422618,0,0.906308;
-	  p position = -5.2532,-0.05,-1.18845,0x0cf9c5e4;
+	  p position = -5.2532,-0.0500002,-1.18845,0x0cf9c5e4;
 	}
 }
 [t:gr_darkling_reveal,n:0x0590088d]
@@ -1285,7 +1263,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.996195,0,0.0871557;
-	  p position = -1.17041,2,-0.94064,0xe5605c90;
+	  p position = -1.17041,2,-0.940643,0xe5605c90;
 	}
 }
 [t:gr_darkling_reveal,n:0x05900b41]
@@ -1293,7 +1271,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.258819,0,0.965926;
-	  p position = 1.08094,0,-0.550946,0x4091131d;
+	  p position = 1.08093,0,-0.550949,0x4091131d;
 	}
 }
 [t:gr_darkling_reveal,n:0x05900b42]
@@ -1301,7 +1279,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.258819,0,0.965926;
-	  p position = 1.2025,0,0.802836,0x4091131d;
+	  p position = 1.20251,0,0.802841,0x4091131d;
 	}
 }
 [t:gr_darkling_reveal,n:0x05900892]
