@@ -1,0 +1,164 @@
+[t:template,n:wraith_lesser_base]  // = wraith_lesser
+{
+	category_name = "1W_evil_c";
+	doc = "wraith_lesser";
+	specializes = base_wraith;
+	[actor]
+	{
+		[skills]
+		{
+			strength =		17, 0;
+			intelligence = 	9, 0;
+			dexterity = 	9, 0;
+            melee =  		33,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 13885;
+		life = 740;
+		max_life = 740;
+		mana = 16;
+		max_mana = 16;
+		model = m_c_ecm_wr_pos_2;
+		[textures] { 0=b_c_ecm_wr; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 76;
+		damage_min = 72;
+	}
+	[common]
+	{
+		screen_name="Wraith";
+		membership = monster, party_wraith;
+	}
+   	[defend] { defense=350; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_weapon_hand = ax_g_c_2h1b_avg;
+			}
+
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.35;
+					il_main = #*/49-104;
+					il_main = #armor/50-247;
+	                il_main = #spell/30-40;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/95-115;
+	                il_main = #armor/-rare(1)/324-366;
+                    il_main = #*/-rare(1)/95-115;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/95-115;
+	                il_main = #armor/-unique(2)/324-366;
+                    il_main = #*/-unique(2)/95-115;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 8288;
+					min = 6999;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party  = true;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_wraith_01 = 1;
+			frag_glb_wraith_02 = 1;
+			frag_glb_wraith_03 = 2;
+			frag_glb_wraith_04 = 1;
+			frag_glb_wraith_05 = 3;
+			frag_glb_wraith_07 = 1;
+		}
+	}
+}
+
+[t:template,n:gr_wraith_steppe] { specializes = gr_wraith_steppe_base; }
+[t:template,n:gr_wraith_steppe_base]
+{
+    specializes = wraith_lesser_base;
+
+    // stats & loot from dsx_acolyte_dark
+	[actor]
+	{
+		[skills]
+		{
+			strength	= 13, 0;
+			intelligence	= 8, 0;
+			dexterity	= 10, 0;
+			melee 		= 9, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 210;
+		life		 = 285;
+		max_life	 = 285;
+		mana		 = 45;
+		max_mana	 = 45;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 58;
+		damage_min = 52;
+	}
+	[defend] { defense = 115; }
+	[inventory]
+    {
+        [pcontent]
+        {
+            [oneof*]
+            {
+                [gold*]
+                {
+                    chance = 0.2;
+                    min = 153;
+                    max = 305;
+                }
+                [oneof*]
+                {
+                    chance = 0.2;
+                    il_main = potion_mana_small;
+                    il_main = potion_health_small;
+                }
+                [oneof*]
+                {
+                    chance = 0.15;
+                    il_main = #weapon/25-36;
+                    il_main = #armor/9-71;
+                    il_main = #*/25-36;
+                }
+                [oneof*]
+                {
+                    chance = 0.0075;
+                    il_main = #weapon/-rare(1)/28-41;
+                    il_main = #armor/-rare(1)/53-118;
+                    il_main = #*/-rare(1)/28-41;
+                }
+            }
+        }
+    }
+}
