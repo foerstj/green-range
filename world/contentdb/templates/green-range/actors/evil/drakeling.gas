@@ -112,8 +112,50 @@
 {
     specializes = soul_stinger_base;
 
+	[common]
+	{
+		screen_name = "Feathered Drakeling";
+	}
     [aspect]
     {
+		model = m_c_edm_FLDRKLNG_pos_1;
 		[textures]	{ 0 = b_c_edm_feathered_drakeling; }
     }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_gr_drakeling_01 = 1;
+			frag_gr_drakeling_02 = 1;
+			frag_gr_drakeling_03 = 3;
+			frag_gr_drakeling_04 = 1;
+			frag_gr_drakeling_05 = 1;
+		}
+	}
+
+    // stats from dsx_wasped
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	13, 0;
+			intelligence =  8, 0;
+			dexterity =  	10, 0;
+			melee =  	11, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 224;
+		life = 145;
+		max_life = 145;
+		mana = 12;
+		max_mana = 12;
+    }
+	[attack]
+	{
+		damage_max = 49;
+		damage_min = 43;
+	}
+	[defend] { defense=75; }
 }
