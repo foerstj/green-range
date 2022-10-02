@@ -180,6 +180,18 @@
 {
     specializes = dsx_acolyte_dark_base;
 
+    [aspect]
+    {
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_wraith_black_boss_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_wraith_black_boss_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_wraith_black_boss_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_wraith_black_boss_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_wraith_black_boss_SED; }
+		}
+        scale_base = 1.2;
+    }
 	[common]
 	{
         screen_name = "Black Horror";
@@ -190,7 +202,7 @@
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
 				no_trig_bits = true;
-				action* = call_sfx_script("unique_ray_cyan(sgx)");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
 			}
 		}
 	}
