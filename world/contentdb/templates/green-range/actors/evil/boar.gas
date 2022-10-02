@@ -1,0 +1,40 @@
+[t:template,n:gr_boar_black] { specializes = gr_boar_black_base; }
+[t:template,n:gr_boar_black_base]
+{
+	specializes = hell_boar_base;
+
+    [aspect]
+    {
+        textures:0 = b_c_edm_hb-black;
+    }
+	[common]
+    {
+        screen_name = "Black Boar";
+    }
+
+    // stats from frost golem
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		19, 0;
+			intelligence = 	5, 0;
+			dexterity =		7, 0;
+            melee =         6, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 198;
+		life = 195;
+		max_life = 195;
+		mana = 10;
+        max_mana = 10;
+	}
+	[attack]
+	{
+		damage_max = 56;
+		damage_min = 50;
+	}
+    [defend] { defense=92; }
+}
