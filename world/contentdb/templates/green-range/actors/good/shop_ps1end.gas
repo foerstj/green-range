@@ -107,6 +107,7 @@
         jat_talk = world\ai\jobs\common\job_talk.skrit;
     }
 
+    // original adwana content + jonn content (both from stonebridge), +backpacks, +light-spell
     [inventory]
     {
 		[store_pcontent]
@@ -295,4 +296,25 @@
 			}
 		}
     }
+	[store]
+	{
+		// adwana restock, +light-spell
+		[item_restock]
+		{
+			potion_health_small = 30;
+			potion_mana_small = 30;
+			potion_rejuvenation_small = 5;
+
+			scroll_resurrect = 10;
+            spell_resurrect = 10;
+            spell_revive = 10;
+            spell_healing_hands = 10;
+
+            spell_fireshot = 4;
+            spell_zap = 4;
+
+            // added for green-range
+            spell_light = 1;
+		}
+	}
 }

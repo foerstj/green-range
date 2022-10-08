@@ -91,7 +91,7 @@
         jat_talk = world\ai\jobs\common\job_talk.skrit;
     }
 
-    // shop content from Jeriah the Mountain Man, -smith, +backpacks
+    // shop content from Jeriah the Mountain Man, -smith, +backpacks, +light-spell
 	[inventory]
 	{
 		[store_pcontent]
@@ -156,6 +156,9 @@
 
             spell_fireshot = 2;
             spell_zap = 2;
+
+            // added for green-range
+            spell_light = 1;
 		}
 	}
 }
