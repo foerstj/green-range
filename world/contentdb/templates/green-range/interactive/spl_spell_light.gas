@@ -36,24 +36,8 @@
         require_state_check = false;  // can re-enchant an already enchanted actor
 
 		effect_duration = (#magic+1)*30;
-		apply_enchantments = false;  // the spell skrit will apply the enchantments instead
-		[enchantments]
-		{
-			[*]
-			{
-				description = "Light";
-				duration = (#magic+1)*30;
-				is_single_instance = false;  // can re-enchant an already enchanted actor
-
-                // dummy alteration with minimal impact
-				alteration = alter_mana;
-                frequency = 1000;
-				value = -1;
-			}
-		}
 	}
-    // I have no idea what I'm doing
-	[spell_status_effect]
+	[spell_special_effect]
 	{
 		description = "Light";  // this one's actually shown when hovering the enchanted actor
 		effect_script = light;  // sfx effect name

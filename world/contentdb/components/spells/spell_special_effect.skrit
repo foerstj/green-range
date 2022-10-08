@@ -1,0 +1,192 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  spell_special_effect.skrit
+// Author(s):  Starfall
+//
+//----------------------------------------------------------------------------
+//  Revision: 1.0              Date: 2022-10-08
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+// Creates a special effect around the target. Based on spell_status_effect
+
+property string effect_script$		= ""	doc = "Name of the SiegeFx script that will be providing the visual.";
+property string effect_params$		= ""   	doc = "Parameters to send to SiegeFx script";
+property string description$		= ""	doc = "Description of enchantment being applied";
+
+owner = GoSkritComponent;
+#include "k_inc_spl_utils"
+
+Goid target$;
+Goid caster$;
+float alt_time$;
+
+startup state CastBegin$
+{
+ 	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		if( e$ == WE_REQ_CAST )
+		{
+		
+			/////////////////////////////
+			// Normal Go
+			
+			caster$ = msg$.GetSendFrom();
+			target$ = MakeGoid( msg$.GetData1() );
+			
+			if( !target$.IsValid || !caster$.IsValid )
+			{
+				SetState Finished$;
+				return;
+			}
+			
+			if( Owner.go.Parent != NULL )
+			{
+				// Create an Omni version of the spell.
+				GoCloneReq cloneReq$ = MakeGoCloneReq( Owner.go.Parent.Goid, owner.goid );
+				cloneReq$.Omni = true;
+				Goid new_spell$ = GoDb.SCloneGo( cloneReq$ );
+				
+				// Send a message to the omni version of the Spell to get it started.
+				PostWorldMessage( WE_REQ_ACTIVATE, caster$, new_spell$, msg$.GetData1(), 0 );
+			}
+			
+			// Delete Normal version of the spell.
+			SetState Finished$;
+			
+		}
+		else if ( e$ == WE_REQ_ACTIVATE )
+		{
+			
+			/////////////////////////////
+			// Omni Go
+			
+			target$ = MakeGoid( msg$.GetData1() );
+			caster$ = msg$.GetSendFrom();
+
+			if( !target$.IsValid || !caster$.Isvalid )
+			{
+				SetState RestoreState$;
+				return;
+			}
+			
+			// Check to see if the effect has already been cast on this go
+			if( target$.Go.Actor.HasGenericState( owner.Go.Magic.StateName ) )
+			{
+				Goid old_spell$ = target$.Go.Actor.GetGenericStateSpellGoid ( owner.Go.Magic.StateName );
+				
+				alt_time$ = owner.Go.Magic.EvaluateEffectDuration( caster$.Go, caster$.Go );
+
+				int packed_speed$ = Math.Round( alt_time$ * 1000 );
+				SendWorldMessage( WE_SPELL_EXPIRATION_TIMER_RESET, owner.Goid, old_spell$, packed_speed$);
+
+				SetState InActive$;
+				return;
+			}
+
+			alt_time$ = owner.Go.Magic.EvaluateEffectDuration( caster$.Go, caster$.Go );
+
+			// Add the effected state so this can only happen once
+			target$.Go.Actor.SAddGenericState( owner.Go.Magic.StateName, description$, alt_time$, caster$, owner.goid, owner.go.magic.GetMagicLevel( caster$.go ) );
+			
+			// Start the visual
+			if( effect_script$ != "" )
+			{
+				SiegeFx.SRunMpScript( effect_script$, target$, caster$, effect_params$, owner.Goid, e$ );
+			}
+
+			GoDb.StartWatching( owner.Goid, target$);
+			
+			this.CreateTimer( 1, alt_time$ + 0.33 );
+		
+		}
+		else if ( e$ == WE_SPELL_EXPIRATION_TIMER_RESET )
+		{
+			/////////////////////////////
+			// Omni Go
+			
+			if(target$.IsValid)
+			{
+				if( msg$.GetData1() == -1)
+				{
+					SetState RestoreState$;
+				}
+				else
+				{
+					// remove stale state...
+					target$.Go.Actor.SRemoveGenericState( owner.Go.Magic.StateName );
+					
+					float unpacked_duration$ = msg$.GetData1() / 1000.0;
+					float new_duration$ = this.AddTimerSeconds( 1, unpacked_duration$ );
+					
+					// Add the effected state so this can only happen once
+					target$.Go.Actor.SAddGenericState( owner.Go.Magic.StateName, description$, new_duration$, caster$, owner.goid, owner.go.magic.GetMagicLevel( caster$.go ) );
+				}
+			}
+		}
+		
+	}
+	transition -> RestoreState$: OnTimer( 1 );
+	transition -> RestoreState$: OnGoHandleCCMessage( WE_KILLED );
+}
+
+state RestoreState$
+{
+	/////////////////////////////
+	// Omni Go
+	
+	event OnEnterState$
+	{
+		// If the go is still alive then restore his state
+		if( target$.IsValid )
+		{
+			GoDb.StopWatching( owner.Goid, target$);
+			
+			// remove the state so this can be affected again
+			target$.Go.Actor.SRemoveGenericState( owner.Go.Magic.StateName );
+		}
+		
+		SetState( StopEffect$ );
+	}
+}
+
+state InActive$
+{
+	/////////////////////////////
+	// Omni Go
+	
+	trigger OnTimer$(1)
+	{
+		SetState( StopEffect$ );
+	}
+	
+	event OnEnterState$
+	{
+		this.CreateTimer( 1, alt_time$ );
+	}
+}
+
+state StopEffect$
+{
+	/////////////////////////////
+	// Omni Go
+	
+	event OnEnterState$
+	{
+		if( target$.IsValid )
+		{
+			SiegeFx.SStopScript( target$, effect_script$ );
+		}
+		
+		SetState Finished$;
+	}
+}
+
+state Finished$
+{
+	event OnEnterState$
+	{
+		// Delete this skrit
+		PostWorldMessage( WE_REQ_DELETE, owner.Goid, owner.Goid, 1 );
+	}
+}
