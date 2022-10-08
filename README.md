@@ -33,15 +33,21 @@ based on Perlin noise. I then add things like bridges and caves, NPCs and minibo
 
 This means that the pacing / balancing and the level design are not meticulously hand-crafted.
 Please keep that in mind.
-The terrain structure will contain dead ends, and I will try to close them off,
-but do not expect a reward chest at each dead end.
+The terrain structure will contain dead ends, and I will not bother to close them all off,
+also do not expect a reward chest at each dead end.
 Chances are you will simply have to walk all the way back to the Klars Trail empty-handed.
 
 Another note, the nights are quite dark out there in the mountains.
 They are not scripted for particular areas, but are based on the day-night cycle of DS,
 which takes about 38 minutes (1.6 real minutes per world hour).
-So if it bothers you and hinders exploration, you can simply wait a while.
-(Depending on playtester feedback I might also try to implement a light spell, but let's see.)
+So if it bothers you and hinders exploration, you can simply wait a while.\
+Alternatively, you can make use of a light spell, which are available in shops and also pcontent.
+
+## Compatibility
+
+No known incompatibilities.
+
+The light spell is available via pcontent in all maps, but its effect is purely visual.
 
 ## Attribution
 Textures of Fox and beta Mucosa courtesy of Eksevis.\
