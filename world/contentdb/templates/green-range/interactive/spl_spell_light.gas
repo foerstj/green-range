@@ -1,0 +1,61 @@
+[t:template,n:spell_light] { specializes = spell_light_base; }
+[t:template,n:spell_light_base]
+{
+	specializes = base_spell_good;  // nature magic
+
+	category_name = "magic";
+	doc = "spell light";
+	[aspect]
+	{
+		gold_value = 10;
+	}
+	[common]
+	{
+		screen_name = "Light";
+		description = "Shines a Light.";
+	}
+	[gui]
+	{
+        // icon of flash spell
+		active_icon = b_gui_ig_i_ic_sp_156;
+		inventory_icon = b_gui_ig_i_ic_sp_156_inv;
+	}
+	[magic]
+	{
+		target_type_flags = tt_self;
+		is_one_shot = true;  // actor won't continue casting by itself
+		cast_reload_delay = 1;
+
+		mana_cost = 0;
+		mana_cost_modifier = (#magic+1)*2;
+
+		required_level = 1;
+		max_level = 100;
+
+		state_name = "Light";
+        require_state_check = false;  // can re-enchant an already enchanted actor
+
+		effect_duration = (#magic+1)*30;
+		apply_enchantments = false;  // the spell skrit will apply the enchantments instead
+		[enchantments]
+		{
+			[*]
+			{
+				description = "Light";
+				duration = (#magic+1)*30;
+				is_single_instance = false;  // can re-enchant an already enchanted actor
+
+                // dummy alteration with minimal impact
+				alteration = alter_mana;
+                frequency = 1000;
+				value = -1;
+			}
+		}
+	}
+    // I have no idea what I'm doing
+	[spell_status_effect]
+	{
+		description = "Light";  // this one's actually shown when hovering the enchanted actor
+		effect_script = light;  // sfx effect name
+	}
+}

@@ -1,0 +1,10 @@
+[effect_script*]
+{
+	name = light;
+
+	script = [[
+        sfx create lightsource #TARGET 
+            "color0(1,1,1)iradius(8)radius(24)offset(0,1.1,0)";
+        sfx start #POP;
+    ]];
+}
