@@ -556,7 +556,7 @@
 	  b default = false;
 		description = "Grumpy hermit living on a mountain top in the arid Aranoi Hills";
 	  b dev_only = false;
-	  i id = 1698464;
+	  i id = 8;
 		screen_name = "Aranoi Hills Hermit";
 		[start_position]
 		{
@@ -656,6 +656,10 @@
 		}
 		[world_levels]
 		{
+			[normal]
+			{
+			  i required_level = 18;
+			}
 		}
 	}
 	[t:start_group,n:magic-troll-shop]
