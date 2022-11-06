@@ -8,42 +8,30 @@
 		[other] { il_active_primary_spell = spell_gr_giant_skrubb_spit; }
     }
 
-    // stats & loot from drake_white
+    // stats from rock_golem
 	[actor]
 	{
 		[skills]
 		{
-			strength =  21, 0;
-			intelligence =  13, 0;
-			dexterity =  12, 0;
-            melee =  20,  0;
-            combat_magic = 20, 0;
+			strength = 		47, 0;
+			intelligence = 	12, 0;
+			dexterity = 		16, 0;
+            melee =         48, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 370;
-		life = 936;
-		max_life = 936;
-		mana = 26;
-        max_mana = 26;
+		experience_value = 1000;
+		life = 1040;
+		max_life = 1040;
+		mana = 990;
+        max_mana = 990;
 	}
 	[attack]
 	{
-		damage_max = 120;
-		damage_min = 100;
+		attack_range = 0.5;
+		damage_max = 230;
+		damage_min = 200;
 	}
-   	[defend] { defense=102; }
-
-	[inventory]
-	{
-		[pcontent]
-		{
-			[oneof*]
-			{
-				chance = 0.8;
-				il_main = #*/38-42;
-			}
-		}
-	}
+    [defend] { defense=548; }
 }
