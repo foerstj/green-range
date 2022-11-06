@@ -1,0 +1,73 @@
+[t:template,n:bush_grs_05_base]  // = bush_grs_05
+{
+	category_name = "foliage";
+	doc = "grs_bush_barberry_pink";
+	specializes = base_bush;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 0.9;
+		model = m_i_grs_bush-05;
+	}
+}
+[t:template,n:bush_grs_05_x2]
+{
+    specializes = bush_grs_05_base;
+
+    [aspect]
+    {
+        scale_base = 2;
+    }
+}
+
+[t:template,n:bush_grs_rhod_03_base]  // = bush_grs_rhod_03
+{
+	category_name = "foliage";
+	doc = "grs_bush_rhod_med";
+	specializes = base_bush;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_bush-02;
+		[textures]
+		{
+			0 = b_i_grs_bush-rhod;
+		}
+	}
+}
+[t:template,n:bush_grs_rhod_03_x2]
+{
+    specializes = bush_grs_rhod_03_base;
+
+    [aspect]
+    {
+        scale_base = 2;
+    }
+}
+
+[t:template,n:bush_grs_rhod_04_base]  // = bush_grs_rhod_04
+{
+	category_name = "foliage";
+	doc = "grs_bush_rhod_sm";
+	specializes = base_bush;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_bush-03;
+		[textures]
+		{
+			0 = b_i_grs_bush-rhod;
+		}
+	}
+}
+[t:template,n:bush_grs_rhod_04_x2]
+{
+    specializes = bush_grs_rhod_04_base;
+
+    [aspect]
+    {
+        scale_base = 2;
+    }
+}
