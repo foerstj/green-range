@@ -150,6 +150,25 @@
                         // Fifth area, past the second mountain. Back on green jungle terrain, which allows for less-green vegetation - time for some autumn colors.
                         node_set = jng01;
                         [plants] { perlin = var-main; tx = blur; a:profile = gr-5a; b:profile = gr-5b; }
+                        [enemies]
+                        {
+                            perlin = var-main;
+                            tx = gap;
+                            [a]
+                            {
+                                tx = gap;
+                                perlin = var-sub-a;
+                                [a] { perlin = var-sub-b; tx = gap; a:profile = gr-5a-enemies-main; }
+                                [b] { perlin = var-sub-b; tx = gap; a:profile = gr-5a-enemies-a; b:profile = gr-5a-enemies-b; }
+                            }
+                            [b]
+                            {
+                                tx = gap;
+                                perlin = var-sub-a;
+                                [a] { perlin = var-sub-b; tx = gap; a:profile = gr-5b-enemies-a; b:profile = gr-5b-enemies-b; }
+                                [b] { perlin = var-sub-b; tx = gap; a:profile = gr-5b-enemies-main; }
+                            }
+                        }
                     }
                     [1.00]
                     {
