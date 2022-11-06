@@ -382,14 +382,6 @@
 	  p position = 1.29768,0,1.32137,0x1a06eed9;
 	}
 }
-[t:braak_magic,n:0x10c00e3f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.999016,0,-0.044349;
-	  p position = -1.86488,2,1.61589,0x66a04b9d;
-	}
-}
 [t:dsx_mhulliq_two,n:0x10c00e35]
 {
 	[placement]
@@ -412,5 +404,97 @@
 	{
 	  q orientation = 0,0.448554,0,0.893756;
 	  p position = -3.51703,2,2.43031,0xe5c10d80;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00e9d]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.721925,0,0.691972;
+	  p position = -1.39038,0.591606,-3.02473,0x81bd6825;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00e9e]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.979072,0,0.203515;
+	  p position = -1.63684,-1,-2.70241,0x1ecd0350;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00e9f]
+{
+	[placement]
+	{
+	  q orientation = 0,0.915774,0,-0.401695;
+	  p position = 0.640266,0.15,-1.02912,0x76ca0029;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00ea0]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.474352,0,0.880335;
+	  p position = 1.70488,-1,-2.74119,0xaa12b117;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00ea1]
+{
+	[placement]
+	{
+	  q orientation = 0,0.996121,0,0.087995;
+	  p position = -1.31128,0,1.17318,0xbef27ed2;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00ea2]
+{
+	[placement]
+	{
+	  q orientation = 0,0.560429,0,0.828203;
+	  p position = -1.37201,0,-1.66561,0x3a73361a;
+	}
+}
+[t:braak_boss_01,n:0x10c00ea3]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("pitiful_braak","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("pitiful_braak","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.906857,0,0.421439;
+	  p position = -1.6401,0.15,1.56933,0x76ca0029;
 	}
 }
