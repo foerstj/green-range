@@ -1,0 +1,31 @@
+[t:template,n:gen_bush_grass-gr_robber_melee]
+{
+	specializes = generator_base_generic_bush;
+	doc = "generator_bush_grass-gr_robber_melee";
+
+	[aspect]
+	{
+	    [textures] { 0=b_i_grs_bush-rhod; }
+	}
+
+	[generator_advanced_a2]
+	{
+        child_template_name = gr_robber_melee;
+	}
+}
+
+[t:template,n:gen_bush_grass-gr_robber_ranged]
+{
+	specializes = generator_base_generic_bush;
+	doc = "generator_bush_grass-gr_robber_ranged";
+
+	[aspect]
+	{
+	    [textures] { 0=b_i_grs_bush-rhod; }
+	}
+
+	[generator_advanced_a2]
+	{
+        child_template_name = gr_robber_ranged;
+	}
+}

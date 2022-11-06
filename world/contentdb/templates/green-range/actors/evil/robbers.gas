@@ -1,0 +1,433 @@
+[t:template,n:bandit_melee_base]  // = bandit_melee
+{
+	doc = "bandit_melee";
+	specializes = base_bandit;
+	[actor]
+	{
+		[skills]
+		{
+			strength =   15, 0;
+			intelligence =  10, 0;
+			dexterity =   11, 0;
+			melee =  15,  0;
+		}
+	}
+	[aspect]
+	{
+		life = 360;
+		max_life = 360;
+		mana = 20;
+		max_mana = 20;
+   		experience_value = 1300;
+
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_34;
+			1 = b_c_pos_a3_032;
+		}
+	}
+	[common]
+	{
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = bo_bo_le_light;
+                es_weapon_hand = sd_g_c_gl_1h_avg;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/8-12;
+				}
+				[oneof*]
+				{
+					chance = 0.22;
+					il_main = #*/50-66;
+					il_main = #armor/29-147;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/60-78;
+	                il_main = #armor/-rare(1)/144-225;
+                    il_main = #*/-rare(1)/60-78;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/60-78;
+	                il_main = #armor/-unique(2)/144-225;
+                    il_main = #*/-unique(2)/60-78;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 1744;
+					min = 1456;
+				}
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 42;
+		damage_min = 37;
+	}
+   	[defend] { defense=175; }
+   	[mind]
+   	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true;
+		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+			?curious		= 0.75
+			&interest		= interest
+			&meander		= true
+			&still			= false;
+	}
+}
+
+[t:template,n:bandit_melee_boss_01_base]  // = bandit_melee_boss_01
+{
+	doc = "bandit_melee_boss_01";
+	specializes = base_bandit;
+	[actor]
+	{
+		[skills]
+		{
+			strength =   16, 0;
+			intelligence =  11, 0;
+			dexterity =   13, 0;
+			melee =  19,  0;
+		}
+	}
+	[aspect]
+	{
+		life = 420;
+		max_life = 420;
+		mana = 20;
+		max_mana = 20;
+   		experience_value = 2230;
+		model = m_c_gah_fb_pos_a1;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_34;
+			1 = b_c_pos_a1_041;
+		}
+	}
+	[common]
+	{
+		membership = monster, party_bandit_ranged, bandit;
+        screen_name = "Rogue Bandit";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			}
+		}
+	}
+
+	[inventory]
+	{
+
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = bo_bo_le_light;
+                es_weapon_hand = sd_g_c_gl_1h_avg;
+			}
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #*/66-70;
+					il_main = #armor/200-250;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/75-89;
+	                il_main = #armor/-rare(1)/226-287;
+                    il_main = #*/-rare(1)/75-89;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/75-89;
+	                il_main = #armor/-unique(2)/226-287;
+                    il_main = #*/-unique(2)/75-89;
+	            }
+				[gold*]
+				{
+					max = 3488;
+					min = 2560;
+					min_pile = 397;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 65;
+		damage_min = 60;
+	}
+   	[defend] { defense=305; }
+   	[mind]
+   	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true
+			&actor_creates_own_party			= true
+			&form_party_on_friend_entered_ICZ	= true
+			&form_party_on_friend_entered_ICZ	= true
+			&party_template						= "party_bandit_ranged";
+
+		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+			?curious		= 0.75
+			&interest		= interest
+			&meander		= true
+			&still			= false;
+	}
+}
+
+[t:template,n:bandit_ranged_base]  // = bandit_ranged
+{
+	doc = "bandit_ranged";
+	specializes = base_bandit;
+	[actor]
+	{
+		[skills]
+		{
+			strength =   14, 0;
+			intelligence = 10, 0;
+			dexterity =   12, 0;
+			ranged =  14,  0;
+		}
+	}
+	[aspect]
+	{
+		life = 315;
+		max_life = 315;
+		mana = 20;
+		max_mana = 20;
+   		experience_value = 1138;
+
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_34;
+			1 = b_c_pos_a3_033;
+		}
+	}
+	[common]
+	{
+		screen_name="Bandit Archer";
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[inventory]
+	{
+        custom_head = m_c_gah_fb_hlmt_head-05;
+    	selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = bo_bo_le_light;
+                es_shield_hand = bw_g_c_s_l_c_avg;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				}
+				[all*]
+				{
+	   				chance = 0.02;
+	                il_main = #spell/8-12;
+				}
+				[oneof*]
+				{
+					chance = 0.22;
+					il_main = #*/50-66;
+					il_main = #armor/29-141;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/60-78;
+	                il_main = #armor/-rare(1)/140-225;
+                    il_main = #*/-rare(1)/60-78;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/60-78;
+	                il_main = #armor/-unique(2)/140-225;
+                    il_main = #*/-unique(2)/60-78;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 1744;
+					min = 1456;
+				}
+            }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 60;
+		damage_min = 50;
+	}
+	[defend] { defense=150; }
+	[mind]
+    {
+  		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		= true
+			&actor_joins_existing_party		= true
+			&party_template					= "party_bandit_ranged";
+
+    	jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+    		?social							= 0.35
+    		&still							= false;
+    }
+}
+
+[t:template,n:bandit_boss_base]  // = bandit_boss
+{
+	doc = "bandit_boss";
+	specializes = base_bandit;
+	[actor]
+	{
+		[skills]
+		{
+			strength =   21, 0;
+			intelligence = 15, 0;
+			dexterity =   14, 0;
+			melee =  25,  0;
+		}
+	}
+
+	[common]
+	{
+		screen_name = "Bandit Boss";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+		}
+	}
+	[aspect]
+	{
+		life = 950;
+		max_life = 950;
+		mana = 600;
+		max_mana = 600;
+		experience_value = 3700;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_35;
+			1 = b_c_pos_a3_034;
+		}
+	}
+	[inventory]
+	{
+        custom_head = m_c_gah_fb_hlmt_head-04;
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = bo_bo_le_light;
+                es_weapon_hand = ax_g_c_1h2b_avg;
+			}
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #*/66-70;
+					il_main = #armor/200-250;
+				}
+                [oneof*]
+				{
+	                il_main = #weapon/-rare(1)/75-89;
+	                il_main = #armor/-rare(1)/226-287;
+                    il_main = #*/-rare(1)/75-89;
+                }
+				[oneof*]
+				{
+	                il_main = #weapon/-unique(2)/75-89;
+	                il_main = #armor/-unique(2)/226-287;
+                    il_main = #*/-unique(2)/75-89;
+	            }
+				[gold*]
+				{
+					max = 2588;
+					min = 2060;
+					piles = 2 - 3;
+				}
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 71;
+		damage_min = 69;
+	}
+	[defend] { defense=450; }
+}
+
+[t:template,n:gr_robber_melee]
+{
+    specializes = bandit_melee_base;
+
+    common:screen_name = "Robber";
+}
+
+[t:template,n:gr_robber_ranged]
+{
+    specializes = bandit_ranged_base;
+
+    common:screen_name = "Robber Archer";
+}
+
+[t:template,n:gr_robber_boss_rogue]
+{
+    specializes = bandit_melee_boss_01_base;
+
+    common:screen_name = "Rogue Robber";
+}
+
+[t:template,n:gr_robber_boss_chief]
+{
+    specializes = bandit_boss_base;
+
+    common:screen_name = "Robber Boss";
+}
