@@ -1,0 +1,82 @@
+[t:template,n:skrubb_base]  // = skrubb
+{
+	category_name = "1W_evil_d";
+	doc = "skrubb";
+	specializes = base_skrubb;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  15, 0;
+			intelligence =  3, 0;
+			dexterity =  2, 0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 100;
+		life = 30;
+		max_life = 30;
+		mana = 10;
+		max_mana = 10;
+		model = m_c_edm_sb_pos_1;
+		[voice]
+		{
+			[cast]			{ * = s_e_attack_skrubb; }
+			[die]			{ priority = high; * = s_e_die_skrubb_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_skrubb_small_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_skrubb; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 3;
+		damage_max = 1;
+		damage_min = 1;
+		reload_delay = 1;
+	}
+    [defend] { defense=21; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_skrubb_spit; }
+	}
+	[common]
+	{
+		screen_name="Skrubb";
+		membership = monster,immune_freeze;
+	}
+	[mind]
+	{
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 10;
+		personal_space_range = 4.7;
+		on_enemy_entered_ocz_attack = true;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		sight_origin_height	= 2;
+	}
+}
+
+[t:template,n:giant_skrubb] { specializes = giant_skrubb_base; }
+[t:template,n:giant_skrubb_base]
+{
+    specializes = skrubb_base;
+
+	doc = "giant_skrubb";
+	[common]
+	{
+		screen_name = "Giant Skrubb";
+	}
+    [inventory]
+    {
+		[other] { il_active_primary_spell = spell_giant_skrubb_spit; }
+    }
+}

@@ -1,0 +1,37 @@
+[t:template,n:spell_skrubb_spit_base]  // = spell_skrubb_spit
+{
+	category_name = "magic";
+	doc = "spell skrubb spit";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		ammo_attach_bone = lowerjawBone10;
+		ammo_template = skrub_spit;
+		damage_max = 10;
+		damage_min = 4;
+		ammo_appears_jit = true;
+	}
+	[magic]
+	{
+		cast_range = 10;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 10;
+	}
+	[spell_launch]
+	{
+		number = 1;
+	}
+}
+
+[t:template,n:spell_giant_skrubb_spit]
+{
+    specializes = spell_skrubb_spit_base;
+}
