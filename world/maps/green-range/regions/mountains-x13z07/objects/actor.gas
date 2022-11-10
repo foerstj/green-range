@@ -46,6 +46,14 @@
 	  p position = -0.805537,2,1.87724,0xda2d584a;
 	}
 }
+[t:gr_furok,n:0x10c00e24]
+{
+	[placement]
+	{
+	  q orientation = 0,0.448554,0,0.893756;
+	  p position = -3.51703,2,2.43031,0xe5c10d80;
+	}
+}
 [t:dsx_mhulliq_two,n:0x10c00e2e]
 {
 	[placement]
@@ -54,12 +62,104 @@
 	  p position = 1.57229,0,1.69301,0xf3c33cc9;
 	}
 }
-[t:dsx_mhulliq_two,n:0x10c00e31]
+[t:dsx_mhulliq_two,n:0x10c00e35]
 {
 	[placement]
 	{
-	  q orientation = 0,0.999846,0,-0.017528;
-	  p position = 1.84467,0,0.0956191,0xc0915cd8;
+	  q orientation = 0,-0.959843,0,-0.280537;
+	  p position = 0.910035,0,0.542733,0xe53e508e;
+	}
+}
+[t:dsx_mhulliq_two,n:0x10c00e2a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.461136,0,0.887329;
+	  p position = 1.59197,0,0.475776,0xd7dfa779;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00ea1]
+{
+	[placement]
+	{
+	  q orientation = 0,0.996121,0,0.087995;
+	  p position = -1.31128,0,1.17318,0xbef27ed2;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00e9e]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.979072,0,0.203515;
+	  p position = -1.63684,-1,-2.70241,0x1ecd0350;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00e9f]
+{
+	[placement]
+	{
+	  q orientation = 0,0.915774,0,-0.401695;
+	  p position = 0.640266,0.15,-1.02912,0x76ca0029;
+	}
+}
+[t:braak_boss_01,n:0x10c00ea3]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("pitiful_braak","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("pitiful_braak","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.906857,0,0.421439;
+	  p position = -1.6401,0.15,1.56933,0x76ca0029;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00ea0]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.474352,0,0.880335;
+	  p position = 1.70488,-1,-2.74119,0xaa12b117;
+	}
+}
+[t:braak_magic_reveal,n:0x10c00e9d]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.721925,0,0.691972;
+	  p position = -1.39038,0.591606,-3.02473,0x81bd6825;
 	}
 }
 [t:gr_spider_white_baby,n:0x10c00e51]
@@ -68,6 +168,14 @@
 	{
 	  q orientation = 0,0.936452,0,-0.350795;
 	  p position = -1.74599,0,0.55998,0x5629a59b;
+	}
+}
+[t:dsx_mhulliq_two,n:0x10c00e31]
+{
+	[placement]
+	{
+	  q orientation = 0,0.999846,0,-0.017528;
+	  p position = 1.84467,0,0.0956191,0xc0915cd8;
 	}
 }
 [t:braak,n:0x10c00e27]
@@ -150,38 +258,6 @@
 	  p position = 1.54407,0,0.272965,0x44f0bccd;
 	}
 }
-[t:dsx_mhulliq_two,n:0x10c00e2c]
-{
-	[placement]
-	{
-	  q orientation = 0,0.816216,0,0.577747;
-	  p position = 0.331267,0,-0.851234,0xcb9e54fd;
-	}
-}
-[t:dsx_midge_swirling,n:0x10c00e38]
-{
-	[placement]
-	{
-	  q orientation = 0,0.990983,0,0.133985;
-	  p position = -0.701681,0,-0.536257,0x3c6e7736;
-	}
-}
-[t:dsx_mhulliq_two,n:0x10c00e33]
-{
-	[placement]
-	{
-	  q orientation = 0,0.901467,0,0.432848;
-	  p position = 1.95752,0,1.40249,0xdb36acc5;
-	}
-}
-[t:dsx_mhulliq_two,n:0x10c00e36]
-{
-	[placement]
-	{
-	  q orientation = 0,0.990161,0,0.13993;
-	  p position = -0.400031,0,0.475868,0xdb36acc5;
-	}
-}
 [t:gr_spider_white_baby,n:0x10c00e4c]
 {
 	[placement]
@@ -214,12 +290,44 @@
 	  p position = 0.0318464,0,-0.196686,0x929d7948;
 	}
 }
+[t:dsx_midge_swirling,n:0x10c00e38]
+{
+	[placement]
+	{
+	  q orientation = 0,0.990983,0,0.133985;
+	  p position = -0.701681,0,-0.536257,0x3c6e7736;
+	}
+}
 [t:gr_furok,n:0x10c00e29]
 {
 	[placement]
 	{
 	  q orientation = 0,-0.873203,0,-0.487356;
 	  p position = -1.62543,0,-0.771084,0xe60b50f3;
+	}
+}
+[t:dsx_mhulliq_two,n:0x10c00e2c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.816216,0,0.577747;
+	  p position = 0.331267,0,-0.851234,0xcb9e54fd;
+	}
+}
+[t:dsx_mhulliq_two,n:0x10c00e33]
+{
+	[placement]
+	{
+	  q orientation = 0,0.901467,0,0.432848;
+	  p position = 1.95752,0,1.40249,0xdb36acc5;
+	}
+}
+[t:dsx_mhulliq_two,n:0x10c00e36]
+{
+	[placement]
+	{
+	  q orientation = 0,0.990161,0,0.13993;
+	  p position = -0.400031,0,0.475868,0xdb36acc5;
 	}
 }
 [t:dsx_mhulliq_two,n:0x10c00e2d]
@@ -350,14 +458,6 @@
 	  p position = 1.93171,0,1.40627,0xe434adaa;
 	}
 }
-[t:gr_giant_dog,n:0x10c00e39]
-{
-	[placement]
-	{
-	  q orientation = 0,0.990233,0,0.139423;
-	  p position = 1.7321,0,-0.952159,0xe45b4328;
-	}
-}
 [t:gr_spider_white_baby,n:0x10c00e4a]
 {
 	[placement]
@@ -382,70 +482,6 @@
 	  p position = 1.29768,0,1.32137,0x1a06eed9;
 	}
 }
-[t:dsx_mhulliq_two,n:0x10c00e35]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.959843,0,-0.280537;
-	  p position = 0.910035,0,0.542733,0xe53e508e;
-	}
-}
-[t:dsx_mhulliq_two,n:0x10c00e2a]
-{
-	[placement]
-	{
-	  q orientation = 0,0.461136,0,0.887329;
-	  p position = 1.59197,0,0.475776,0xd7dfa779;
-	}
-}
-[t:gr_furok,n:0x10c00e24]
-{
-	[placement]
-	{
-	  q orientation = 0,0.448554,0,0.893756;
-	  p position = -3.51703,2,2.43031,0xe5c10d80;
-	}
-}
-[t:braak_magic_reveal,n:0x10c00e9d]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.721925,0,0.691972;
-	  p position = -1.39038,0.591606,-3.02473,0x81bd6825;
-	}
-}
-[t:braak_magic_reveal,n:0x10c00e9e]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.979072,0,0.203515;
-	  p position = -1.63684,-1,-2.70241,0x1ecd0350;
-	}
-}
-[t:braak_magic_reveal,n:0x10c00e9f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.915774,0,-0.401695;
-	  p position = 0.640266,0.15,-1.02912,0x76ca0029;
-	}
-}
-[t:braak_magic_reveal,n:0x10c00ea0]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.474352,0,0.880335;
-	  p position = 1.70488,-1,-2.74119,0xaa12b117;
-	}
-}
-[t:braak_magic_reveal,n:0x10c00ea1]
-{
-	[placement]
-	{
-	  q orientation = 0,0.996121,0,0.087995;
-	  p position = -1.31128,0,1.17318,0xbef27ed2;
-	}
-}
 [t:braak_magic_reveal,n:0x10c00ea2]
 {
 	[placement]
@@ -454,47 +490,11 @@
 	  p position = -1.37201,0,-1.66561,0x3a73361a;
 	}
 }
-[t:braak_boss_01,n:0x10c00ea3]
+[t:gr_giant_dog,n:0x10c00e39]
 {
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("pitiful_braak","active",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(16.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = change_quest_state("pitiful_braak","completed",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
 	[placement]
 	{
-	  q orientation = 0,0.906857,0,0.421439;
-	  p position = -1.6401,0.15,1.56933,0x76ca0029;
+	  q orientation = 0,0.990233,0,0.139423;
+	  p position = 1.7321,0,-0.952159,0xe45b4328;
 	}
 }
