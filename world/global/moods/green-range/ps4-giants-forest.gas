@@ -118,6 +118,35 @@
 	  f wind_velocity = 2.000000;
 	}
 }
+[mood_setting*]  // middle mountains (at sweven grotto) (no rain)
+{
+	mood_name = gr-ps4-m-sg;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff647381;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_spiderdungeon_02;  // ele down music
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
+	}
+}
 [mood_setting*]  // middle mountains (rainy)
 {
 	mood_name = gr-ps4-m-rain;
