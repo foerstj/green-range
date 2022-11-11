@@ -26,3 +26,60 @@
 	  p position = 0.629906,0,-0.799797,0xe6b286db;
 	}
 }
+[t:trigger_change_mood_box,n:0x0e301a79]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps4-a");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(16.000000,6.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.87641,0,-1.45791,0x4ef9bb59;
+	}
+}
+[t:trigger_change_mood_box,n:0x0e301a7b]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps4-b");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(16.000000,6.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.354393,0,0.568882,0x88e07310;
+	}
+}
