@@ -1,0 +1,135 @@
+[t:trigger_change_mood_box,n:0x13500602]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD+PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-psw-n");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,6.000000,20.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("psw");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,6.000000,20.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.0815964,0,-1.35827,0xb8ca8a26;
+	}
+}
+[t:trigger_change_mood_box,n:0x1350060f]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD+PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps4-e");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,6.000000,20.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("ps4");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,6.000000,20.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.36893,0,-1.35355,0x6d5c635a;
+	}
+}
+[t:trigger_change_mood_box,n:0x13500615]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD+PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps4-e");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,6.000000,20.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("ps4");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,6.000000,20.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.12872,0,-1.84386,0x0361a4a4;
+	}
+}

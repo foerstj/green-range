@@ -1,0 +1,90 @@
+[t:trigger_change_mood_box,n:0x122006fa]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD+PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps4-e");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("ps4");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -1.21098,0,-1.4242,0x0fccf52d;
+	}
+}
+[t:trigger_change_mood_box,n:0x1220070a]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD+PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-psw-n");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("psw");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 1.08515,2.86102e-006,0.81345,0xe9e1ddb3;
+	}
+}
