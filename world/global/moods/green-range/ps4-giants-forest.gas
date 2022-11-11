@@ -273,6 +273,54 @@
   f transition_time = 8.000000;
   b interior = false;
 
+    // defaults
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xff647381;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_spiderdungeon_03;
+		room_type = rt_mountains;
+	}
+	[rain]
+	{
+		rain_density = 300.0f;
+		lightning = false;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
+	}
+}
+[mood_setting*]  // east mountain bridge (rainy)
+{
+	mood_name = gr-ps4-e-bridge;
+  f transition_time = 8.000000;
+  b interior = false;
+
+    // wider frustum to keep stitches always present
+	[frustum]
+	{
+		frustum_width		= 75.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
 	  x fog_color = 0xff647381;
