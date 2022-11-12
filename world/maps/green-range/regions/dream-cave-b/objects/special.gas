@@ -197,7 +197,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x53a00095,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
+				action* = send_world_message("we_req_activate",0x53A00095,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(1.400000,"on_every_enter");
 			  f delay = 0.000000;
@@ -212,7 +212,7 @@
 			}
 			[*]
 			{
-				action* = when_false send_world_message("we_req_deactivate",0x53a00095,0f,"default","",0);
+				action* = when_false send_world_message("we_req_deactivate",0x53A00095,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x53A0008F,0f,"default","",0);
 				action* = when_false send_world_message("we_req_deactivate",0x53A0008F,0f,"default","",0);
 			  b can_self_destruct = true;
