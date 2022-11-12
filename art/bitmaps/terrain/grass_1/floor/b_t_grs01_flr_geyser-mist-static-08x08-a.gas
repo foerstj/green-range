@@ -1,0 +1,52 @@
+[t:tsd,n:b_t_grs01_flr_geyser-mist-static-08x08-a]
+{
+  b hasalpha = true;
+	layer1alphaarg1 = texture;
+	layer1alphaarg2 = diffuse;
+	layer1alphaop = arg1;
+	layer1colorarg1 = texture;
+	layer1colorarg2 = diffuse;
+	layer1colorop = modulate;
+  i layer1numframes = 1;
+  f layer1secondsperframe = 0.0;
+	layer1texture1 = b_t_grs01_flr_geyser-mist-static-08x08-a;
+  f layer1ushiftpersecond = 0.0;
+  b layer1uwrap = true;
+  f layer1vshiftpersecond = 0.0;
+  b layer1vwrap = true;
+	layer2alphaarg1 = texture;
+	layer2alphaarg2 = current;
+	layer2alphaop = arg2;
+	layer2colorarg1 = texture;
+	layer2colorarg2 = current;
+	layer2colorop = modulate2x;
+  i layer2numframes = 1;
+  f layer2rotationpersecond = 0.2;
+  f layer2rotationucenter = 0.5;
+  f layer2rotationvcenter = 0.5;
+  f layer2secondsperframe = 0.0;
+	layer2texture1 = b_t_grs01_flr_geyser-mist-dynamic;
+  f layer2ushiftpersecond = 0.00;
+  b layer2uwrap = true;
+  f layer2vshiftpersecond = 0.00;
+  b layer2vwrap = true;
+	noalphasort = true;
+  i numlayers = 2;
+  i texturedetail = 2;
+  b timesyncanimation = true;
+}
+[t:tsd,n:b_t_grs01_flr_geyser-mist-static-08x08-a-simple]
+{
+	dither = false;
+  b hasalpha = true;
+	layer1rotationpersecond = 0.2;
+	layer1rotationucenter = 0.5;
+	layer1texture1 = b_t_grs01_flr_geyser-mist-static-08x08-a;
+	layer1ushiftpersecond = 0.0;
+	layer1uwrap = true;
+	layer1vwrap = true;
+	noalphasort = true;
+	numlayers = 1;
+  i texturedetail = 2;
+	timesyncanimation = true;
+}
