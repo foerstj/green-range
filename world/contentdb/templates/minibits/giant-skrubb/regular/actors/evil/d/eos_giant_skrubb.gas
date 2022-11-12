@@ -1,0 +1,50 @@
+// Giant Skrubb, stats from white drake
+[t:template,n:eos_giant_skrubb]
+{
+    specializes = giant_skrubb_base;
+
+	doc = "eos_giant_skrubb";
+    [inventory]
+    {
+		[other] { il_active_primary_spell = spell_eos_giant_skrubb_spit; }
+    }
+
+    // stats & loot from drake_white
+	[actor]
+	{
+		[skills]
+		{
+			strength =  21, 0;
+			intelligence =  13, 0;
+			dexterity =  12, 0;
+            melee =  20,  0;
+            combat_magic = 20, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 370;
+		life = 936;
+		max_life = 936;
+		mana = 26;
+        max_mana = 26;
+	}
+	[attack]
+	{
+		damage_max = 120;
+		damage_min = 100;
+	}
+   	[defend] { defense=102; }
+
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.8;
+				il_main = #*/38-42;
+			}
+		}
+	}
+}

@@ -1,0 +1,117 @@
+// widow spider (red_blk) with white texture and stats of stalagnid
+[t:template,n:spider_white]
+{
+	category_name = "1W_evil_d";
+	doc = "spider_white";
+	specializes = actor_evil;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  10, 0;
+			intelligence =  6, 0;
+			dexterity =  18, 0;
+			melee =  3,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 391;
+		life = 294;
+		max_life = 294;
+		mana = 12;
+		max_mana = 12;
+
+		model = m_c_edm_sp_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_spider; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_spider; }
+		}
+
+		[textures] { 0=b_c_edm_as-wht; }
+	}
+	[attack]
+	{
+		attack_range = 1;
+		reload_delay = 1;
+
+		damage_max = 62;
+		damage_min = 54;
+	}
+	[defend] { defense=85; }
+
+	[body]
+	{
+		avg_move_velocity = 2.350000;
+		[bone_translator]
+		{
+			body_anterior = bone02;
+			body_mid = bone04;
+			body_posterior = bone04;
+			kill_bone = bone04;
+			shield_bone = bone01;
+			weapon_bone = bone02;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_sp_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+
+	[common] { screen_name="White Spider"; }
+
+	[mind]
+	{
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = spider_guts_black;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_spider_white_01 = 1;
+			frag_glb_spider_white_02 = 3;
+			frag_glb_spider_white_03 = 5;
+			frag_glb_spider_white_04 = 5;
+			frag_glb_spider_white_05 = 1;
+		}
+	}
+}
