@@ -1,4 +1,4 @@
-[t:trigger_change_mood_box,n:0x06b0010f]
+[t:trigger_change_mood_box,n:0x5390010f]
 {
 	[common]
 	{
@@ -32,7 +32,7 @@
 	  p position = -0.235037,-12.0537,-0.558743,0x2e88bca1;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b003e8]
+[t:trigger_change_mood_box,n:0x539003e8]
 {
 	[common]
 	{
@@ -61,7 +61,7 @@
 	  p position = -2.15095,0,0.57296,0xf8523d1b;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b000e8]
+[t:trigger_fade_nodes_box,n:0x539000e8]
 {
 	[common]
 	{
@@ -88,7 +88,7 @@
 	  p position = -0.242967,-5.98056,1.98009,0xb4a7f9c8;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b003e5]
+[t:trigger_fade_nodes_box,n:0x539003e5]
 {
 	[common]
 	{
@@ -118,7 +118,7 @@
 	  p position = -1.30301,-5.89093,2.0791,0xb4a7f9c8;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b0042c]
+[t:trigger_change_mood_box,n:0x5390042c]
 {
 	[common]
 	{
@@ -147,7 +147,7 @@
 	  p position = -0.0776131,-5.99491,-0.392517,0xb4a7f9c8;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b003e7]
+[t:trigger_change_mood_box,n:0x539003e7]
 {
 	[common]
 	{
@@ -176,7 +176,7 @@
 	  p position = 3.66809,0,-0.327937,0x44202aea;
 	}
 }
-[t:life_shrine,n:0x06b00095]
+[t:life_shrine,n:0x53900095]
 {
 	[fountain]
 	{
@@ -189,7 +189,7 @@
 	  p position = -0.0279999,-0.465333,0.015811,0x78b439c6;
 	}
 }
-[t:trigger_health_shrine,n:0x06b00102]
+[t:trigger_health_shrine,n:0x53900102]
 {
 	[common]
 	{
@@ -197,7 +197,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x06B00095,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
+				action* = send_world_message("we_req_activate",0x53900095,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(1.400000,"on_every_enter");
 			  f delay = 0.000000;
@@ -212,9 +212,9 @@
 			}
 			[*]
 			{
-				action* = when_false send_world_message("we_req_deactivate",0x06B00095,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x06B0008F,0f,"default","",0);
-				action* = when_false send_world_message("we_req_deactivate",0x06B0008F,0f,"default","",0);
+				action* = when_false send_world_message("we_req_deactivate",0x53900095,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x5390008F,0f,"default","",0);
+				action* = when_false send_world_message("we_req_deactivate",0x5390008F,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(1.400000,"while_inside");
 			  f delay = 0.000000;
@@ -234,7 +234,7 @@
 	  p position = 0.00160217,-1.28307,-0.00390387,0x78b439c6;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b00118]
+[t:trigger_change_mood_box,n:0x53900118]
 {
 	[common]
 	{
@@ -268,7 +268,7 @@
 	  p position = -0.395166,-1.81095,-1.91176,0x8145238b;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b0011c]
+[t:trigger_change_mood_box,n:0x5390011c]
 {
 	[common]
 	{
@@ -302,7 +302,7 @@
 	  p position = -0.236176,0.547705,1.03695,0x8145238b;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b0042e]
+[t:trigger_change_mood_box,n:0x5390042e]
 {
 	[common]
 	{
@@ -331,7 +331,7 @@
 	  p position = -5.76539,-3.31662,-1.82902,0x07bf05fa;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b0042f]
+[t:trigger_change_mood_box,n:0x5390042f]
 {
 	[common]
 	{
@@ -360,7 +360,7 @@
 	  p position = 5.71197,3.51077,1.18562,0x07bf05fa;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b003ea]
+[t:trigger_change_mood_box,n:0x539003ea]
 {
 	[common]
 	{
@@ -389,7 +389,7 @@
 	  p position = -0.532364,4,0.882011,0x7eddd637;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b00431]
+[t:trigger_change_mood_box,n:0x53900431]
 {
 	[common]
 	{
@@ -418,7 +418,7 @@
 	  p position = -0.159332,0,-1.37404,0x1f3c483d;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b00430]
+[t:trigger_change_mood_box,n:0x53900430]
 {
 	[common]
 	{
@@ -447,7 +447,7 @@
 	  p position = -0.348495,6,0.391136,0xe4509f46;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b000e4]
+[t:trigger_fade_nodes_box,n:0x539000e4]
 {
 	[common]
 	{
@@ -474,7 +474,7 @@
 	  p position = 0.00743109,-6,1.95409,0x901c2f68;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b003e3]
+[t:trigger_fade_nodes_box,n:0x539003e3]
 {
 	[common]
 	{
@@ -504,7 +504,7 @@
 	  p position = -1.02074,-5.91423,1.69836,0x901c2f68;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b0046c]
+[t:trigger_change_mood_box,n:0x5390046c]
 {
 	[common]
 	{
@@ -533,7 +533,7 @@
 	  p position = -0.530737,0,-0.276276,0xbfd641cc;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b000e5]
+[t:trigger_fade_nodes_box,n:0x539000e5]
 {
 	[common]
 	{
@@ -560,7 +560,7 @@
 	  p position = 0.0650939,-3.96089,-2.52757,0xec3eadb7;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b003e4]
+[t:trigger_fade_nodes_box,n:0x539003e4]
 {
 	[common]
 	{
@@ -590,7 +590,7 @@
 	  p position = 0.927688,-3.91037,-3.16545,0xec3eadb7;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b000e6]
+[t:trigger_fade_nodes_box,n:0x539000e6]
 {
 	[common]
 	{
@@ -617,7 +617,7 @@
 	  p position = 0.136581,-6,1.98885,0xbb53ad42;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b003e2]
+[t:trigger_fade_nodes_box,n:0x539003e2]
 {
 	[common]
 	{
@@ -647,7 +647,7 @@
 	  p position = -0.894287,-5.92523,1.64783,0xbb53ad42;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b003eb]
+[t:trigger_change_mood_box,n:0x539003eb]
 {
 	[common]
 	{
@@ -676,7 +676,7 @@
 	  p position = 3.0008,0,0.113037,0xaeabb2eb;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b000e7]
+[t:trigger_fade_nodes_box,n:0x539000e7]
 {
 	[common]
 	{
@@ -703,7 +703,7 @@
 	  p position = 0.0891266,-6,1.85494,0xa19196d8;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b003e1]
+[t:trigger_fade_nodes_box,n:0x539003e1]
 {
 	[common]
 	{
@@ -733,7 +733,7 @@
 	  p position = 1.20232,-5.94265,1.74794,0xa19196d8;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b000e3]
+[t:trigger_fade_nodes_box,n:0x539000e3]
 {
 	[common]
 	{
@@ -760,7 +760,7 @@
 	  p position = 0.138115,-3.97466,-1.69749,0x543d366b;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x06b003e0]
+[t:trigger_fade_nodes_box,n:0x539003e0]
 {
 	[common]
 	{
@@ -790,7 +790,7 @@
 	  p position = -1.08947,-3.89772,-1.65529,0x543d366b;
 	}
 }
-[t:trigger_change_mood_box,n:0x06b003e9]
+[t:trigger_change_mood_box,n:0x539003e9]
 {
 	[common]
 	{
