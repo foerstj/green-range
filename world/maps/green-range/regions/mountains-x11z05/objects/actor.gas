@@ -270,14 +270,6 @@
 	  p position = 0.02088,0,0.25627,0x59fd2aed;
 	}
 }
-[t:gr_giant_dog,n:0x0e200b4f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.851769,0,-0.523918;
-	  p position = -1.30121,0,1.74576,0xd146e476;
-	}
-}
 [t:gr_spider_white_baby,n:0x0e200b61]
 {
 	[placement]
@@ -302,11 +294,91 @@
 	  p position = -1.3455,-2,-1.90147,0xd6d61d3b;
 	}
 }
-[t:gr_giant_dog,n:0x0e200b4e]
+[t:gr_furok,n:0x0e200b4f]
+{
+	[placement]
+	{
+	  q orientation = 0,0.851769,0,-0.523918;
+	  p position = -1.30121,0,1.74576,0xd146e476;
+	}
+}
+[t:gr_furok,n:0x0e200b4e]
 {
 	[placement]
 	{
 	  q orientation = 0,0.983878,0,0.178842;
 	  p position = 1.03998,0,1.48374,0xe6e2e386;
+	}
+}
+[t:gr_furok,n:0x0e200bb9]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.978952,0,0.204092;
+	  p position = 0.947527,0,0.439671,0xfb6a58cd;
+	}
+}
+[t:gr_furok,n:0x0e200bba]
+{
+	[placement]
+	{
+	  q orientation = 0,0.200895,0,0.979613;
+	  p position = -1.18415,0,-0.944359,0x9326bfb6;
+	}
+}
+[t:gr_furok,n:0x0e200bbb]
+{
+	[placement]
+	{
+	  q orientation = 0,0.944258,0,-0.329206;
+	  p position = -1.57845,0,-0.853554,0xb883ea15;
+	}
+}
+[t:furok_boss_01,n:0x0e200bbc]
+{
+	[aspect]
+	{
+	  f scale_base = 1.2;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("grizzly_furok","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("grizzly_furok","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.29338,0,0.955996;
+	  p position = 0.229026,3.8147e-006,-0.607776,0xe1ec9eb0;
 	}
 }
