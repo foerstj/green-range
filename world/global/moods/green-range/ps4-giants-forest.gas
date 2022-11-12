@@ -403,3 +403,77 @@
 	  f wind_velocity = 2.000000;
 	}
 }
+
+// Sweven Grotto
+[mood_setting*]
+{
+	mood_name				= gr-ps4-sg-1;
+	transition_time			= 3.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 35.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 30.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 0.0f;
+		standard_track		= "s_m_GoblinInventor_06";
+		room_type			= rt_cave;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= gr-ps4-sg-2;
+	transition_time			= 3.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 35.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 30.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 5.0f;
+		standard_track		= "s_m_GoblinInventor_08";
+		room_type			= rt_arena;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= gr-ps4-sg-3;
+	transition_time			= 3.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 35.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 30.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 5.0f;
+		standard_track		= "s_m_GoblinInventor_02";
+		room_type			= rt_arena;
+	}
+}
