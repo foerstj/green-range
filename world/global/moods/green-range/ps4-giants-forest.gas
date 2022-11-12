@@ -89,7 +89,7 @@
 	}
 }
 
-[mood_setting*]  // middle mountains (no rain) (also giant's shop)
+[mood_setting*]  // middle mountains (no rain)
 {
 	mood_name = gr-ps4-m;
   f transition_time = 8.000000;
@@ -124,6 +124,60 @@
 	  f wind_direction = 0.7854;  // NW
 	  f wind_velocity = 2.000000;
 	}
+}
+[mood_setting*]  // giant's shop, middle mountains (no rain)
+{
+	mood_name = gr-ps4-m-shop;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff647381;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 32.000000;  // double delay for more quiet shopping
+		standard_track = s_m_spiderdungeon_03;
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
+	}
+}
+[mood_setting*]  // giant's shop indoor, middle mountains (no rain)
+{
+	mood_name = gr-ps4-m-shop-indoor;
+  f transition_time = 8.000000;
+  b interior = true;
+
+	[fog]
+	{
+	  x fog_color = 0xff647381;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 32.000000;  // double delay for more quiet shopping
+		standard_track = s_m_spiderdungeon_03;
+		room_type = rt_generic;
+	}
+	// no wind
 }
 [mood_setting*]  // middle mountains bridge (no rain)
 {
