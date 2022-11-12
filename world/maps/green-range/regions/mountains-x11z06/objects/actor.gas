@@ -126,6 +126,125 @@
 	  p position = 1.29931,0,-0.909265,0xecb6e211;
 	}
 }
+[t:gr_shop_giant_smith,n:0x0e3019e9]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = giant_shop;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.986076,0,0.166293;
+	  p position = -1.53542,-4.64838,-5.58707,0x0b2f2380;
+	}
+}
+[t:gr_chicken_red_giant,n:0x0e301a5a]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.0721932,0,0.997391;
+	  p position = -6.70117,-4.7,2.03791,0x0b2f2380;
+	}
+}
+[t:gr_chicken_red_giant,n:0x0e301a63]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.99714,0,0.0755761;
+	  p position = -5.38148,-4.7,-5.32059,0x0b2f2380;
+	}
+}
+[t:gr_chicken_red_giant,n:0x0e301a66]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.193554,0,0.98109;
+	  p position = 0.447166,-4.7,5.94728,0x0b2f2380;
+	}
+}
+[t:gr_chicken_red_giant,n:0x0e301a67]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.962687,0,0.270619;
+	  p position = 1.70077,-4.7,5.60157,0x0b2f2380;
+	}
+}
+[t:gr_giant_dog,n:0x0e301a05]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[common]
+	{
+		screen_name = "Waldi";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.931085,0,0.364803;
+	  p position = -3.07154,2,2.15496,0x7ad33e24;
+	}
+}
+[t:gr_chicken_red_giant,n:0x0e301a62]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.991223,0,0.132204;
+	  p position = 3.3615,1.8404,2.03578,0x7ad33e24;
+	}
+}
+[t:gr_chicken_red_giant,n:0x0e301a65]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.856396,0,0.51632;
+	  p position = 1.87599,0,0.982422,0x388a070a;
+	}
+}
+[t:gr_chicken_red_giant,n:0x0e301a64]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.517824,0,0.855487;
+	  p position = -0.444157,0,0.275534,0x02a4926d;
+	}
+}
 [t:braak_magic,n:0x0e301a1c]
 {
 	[placement]
@@ -294,14 +413,6 @@
 	  p position = 0.206512,0,-0.523672,0x41b6df4f;
 	}
 }
-[t:gr_giant,n:0x0e3019e9]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.166293,0,0.986076;
-	  p position = -1.96734,0,0.272914,0x9999035b;
-	}
-}
 [t:braak_magic,n:0x0e301a24]
 {
 	[placement]
@@ -340,14 +451,6 @@
 	{
 	  q orientation = 0,-0.684944,0,0.728596;
 	  p position = 0.188208,0,1.06981,0xaaaf13cd;
-	}
-}
-[t:gr_giant_dog,n:0x0e301a05]
-{
-	[placement]
-	{
-	  q orientation = 0,0.720606,0,0.693345;
-	  p position = -0.742315,0,1.59633,0x08ae03f6;
 	}
 }
 [t:dsx_skeleton_03,n:0x0e3019e0]
@@ -716,89 +819,5 @@
 	{
 	  q orientation = 0,0.417942,0,0.908474;
 	  p position = 1.30384,0,1.34614,0x1593afca;
-	}
-}
-[t:gr_chicken_red_giant,n:0x0e301a5a]
-{
-	[mind]
-	{
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.0721932,0,0.997391;
-	  p position = -2.43212,2,3.6968,0x7ad33e24;
-	}
-}
-[t:gr_chicken_red_giant,n:0x0e301a62]
-{
-	[mind]
-	{
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.991223,0,0.132204;
-	  p position = 3.3615,1.8404,2.03578,0x7ad33e24;
-	}
-}
-[t:gr_chicken_red_giant,n:0x0e301a63]
-{
-	[mind]
-	{
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.99714,0,0.0755761;
-	  p position = -5.38148,-4.7,-5.32059,0x0b2f2380;
-	}
-}
-[t:gr_chicken_red_giant,n:0x0e301a64]
-{
-	[mind]
-	{
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.517824,0,0.855487;
-	  p position = -0.444157,0,0.275534,0x02a4926d;
-	}
-}
-[t:gr_chicken_red_giant,n:0x0e301a65]
-{
-	[mind]
-	{
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.856396,0,0.51632;
-	  p position = 1.87599,0,0.982422,0x388a070a;
-	}
-}
-[t:gr_chicken_red_giant,n:0x0e301a66]
-{
-	[mind]
-	{
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.193554,0,0.98109;
-	  p position = 0.447166,-4.7,5.94728,0x0b2f2380;
-	}
-}
-[t:gr_chicken_red_giant,n:0x0e301a67]
-{
-	[mind]
-	{
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.962687,0,0.270619;
-	  p position = 1.70077,-4.7,5.60157,0x0b2f2380;
 	}
 }
