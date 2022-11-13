@@ -429,7 +429,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // dramatic
 {
 	mood_name				= gr-ps4-sg-2;
 	transition_time			= 3.0f;
@@ -453,7 +453,7 @@
 		room_type			= rt_arena;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // mysterious
 {
 	mood_name				= gr-ps4-sg-3;
 	transition_time			= 3.0f;
@@ -474,6 +474,54 @@
 		ambient_track		= "";
 		standard_repeat_delay = 5.0f;
 		standard_track		= "s_m_GoblinInventor_02";
+		room_type			= rt_arena;
+	}
+}
+[mood_setting*]  // obnoxious
+{
+	mood_name				= gr-ps4-sg-4;
+	transition_time			= 3.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 35.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 30.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 5.0f;
+		standard_track		= "s_m_subriver_04";
+		room_type			= rt_arena;
+	}
+}
+[mood_setting*]  // calm bottom music
+{
+	mood_name				= gr-ps4-sg-bottom;
+	transition_time			= 3.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 35.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 30.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 5.0f;
+		standard_track		= "s_m_subriver_03";
 		room_type			= rt_arena;
 	}
 }
