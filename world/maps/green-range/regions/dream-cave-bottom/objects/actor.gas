@@ -77,12 +77,26 @@
 	  f max_life = 49;
 	  f max_mana = 30;
 	}
+	[common]
+	{
+		dev_instance_text = "SP";
+	  b is_multi_player = false;
+	}
 	[conversation]
 	{
 		[conversations]
 		{
-			* = born_yesterday;
+			* = pm_beginner_join;
+			* = pm_beginner_accept_have_money;
+			* = pm_beginner_reject;
+			* = pm_beginner_rejoin;
+			* = pm_beginner_disband;
+			* = pm_beginner_disband_rejoin;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\green-range\job_talk_companion.skrit?namespace=pm_born_yesterday&oid=0xc6f00071;
 	}
 	[placement]
 	{

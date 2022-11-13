@@ -1,9 +1,51 @@
-[born_yesterday]
+[pm_born_yesterday_join]
 {
 	[text*]
 	{
 		choice = potential_member;
 		screen_text = "Hi, my name is Born Yesterday. I was born yesterday.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_born_yesterday_accept_have_money]
+{
+	[text*]
+	{
+		screen_text = "Yay let's go!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_born_yesterday_disband]
+{
+	[text*]
+	{
+		screen_text = "Wait, what?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_born_yesterday_reject]
+{
+	[text*]
+	{
+		screen_text = "Pff then not!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_born_yesterday_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Wanna go together?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_born_yesterday_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "No hard feelings mate... Wanna go together again?";
 	  f scroll_rate = 10.000000;
 	}
 }
