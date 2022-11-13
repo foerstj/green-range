@@ -259,6 +259,183 @@
 	  p position = -1.98596,0,1.69591,0x84b40751;
 	}
 }
+[t:trigger_fade_nodes_box,n:0x0e500c19]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x000000E5,1,3,-1,"in");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(10.000000,2.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.1886,0,-3.82921,0xd90bde23;
+	}
+}
+[t:trigger_change_mood_box,n:0x0e500c18]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD+PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps4-m-sg");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("ps4");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.21284,0,3.86403,0x034060f0;
+	}
+}
+[t:trigger_fade_nodes_box,n:0x0e500c1a]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x000000E5,1,3,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,2.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-5.96046e-008;
+	  p position = -0.280296,-5.97547,1.57784,0x5843d9c2;
+	}
+}
+[t:trigger_fade_nodes_box,n:0x0e500c16]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x000000E5,1,3,-1,"in");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,2.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,8.9407e-008,0,1;
+	  p position = -0.191383,0,2.19416,0x956a404f;
+	}
+}
+[t:trigger_change_mood_box,n:0x0e500c17]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD+PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps4-sg-tx");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,1.000000,8.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("ps4_sg");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,1.000000,8.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,5.96046e-008;
+	  p position = 0.107658,0,2.3041,0x956a404f;
+	}
+}
 [t:trigger_change_mood_box,n:0x0e500bec]
 {
 	[common]
