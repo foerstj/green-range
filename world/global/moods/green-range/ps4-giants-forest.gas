@@ -215,7 +215,7 @@
 	  f wind_velocity = 2.000000;
 	}
 }
-[mood_setting*]  // middle mountains (at sweven grotto) (no rain)
+[mood_setting*]  // middle mountains (outside sweven grotto) (no rain)
 {
 	mood_name = gr-ps4-m-sg;
   f transition_time = 8.000000;
@@ -475,5 +475,30 @@
 		standard_repeat_delay = 5.0f;
 		standard_track		= "s_m_GoblinInventor_02";
 		room_type			= rt_arena;
+	}
+}
+[mood_setting*]  // tx: cave fog, outside music
+{
+	mood_name				= gr-ps4-sg-tx;
+	transition_time			= 3.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 35.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 30.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		//ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_spiderdungeon_02;  // ele down music
+		room_type = rt_mountains;
 	}
 }
