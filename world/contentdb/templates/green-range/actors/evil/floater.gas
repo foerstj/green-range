@@ -1,0 +1,117 @@
+[t:template,n:shrack_base]  // = shrack
+{
+	category_name = "1W_evil_d";
+	doc = "shrack";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		7, 0;
+			intelligence = 	3, 0;
+			dexterity = 	13, 0;
+			melee =  		8,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 4000;
+		life = 316;
+		max_life = 316;
+		mana = 10;
+		max_mana = 10;
+		model = m_c_edm_shk_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_shrack;  }
+			[hit_critical]	{ priority = low; * = s_e_hit_shrack_SED;  }
+			[hit_glance]	{ priority = low; * = s_e_hit_shrack_SED;  }
+			[hit_solid]		{ priority = low; * = s_e_hit_shrack_SED;  }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 200;
+		damage_min = 180;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.980000;
+        terrain_movement_permissions = lf_size2_mover;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_shk_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+				 	 00 = at;
+				 	 01 = at-02;
+				 }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] { screen_name="Shrack"; }
+	[defend] { defense=190; }
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?meander	= false
+			&still		= false;
+
+		melee_engage_range = 11;
+		personal_space_range = 0.7;
+		ranged_engage_range = 11.0;
+		sight_range = 11.0;
+        sight_origin_height	= 2.5;
+	}
+}
+
+[t:template,n:gr_floater] { specializes = gr_floater_base; }
+[t:template,n:gr_floater_base]
+{
+    specializes = shrack_base;
+
+    [aspect] { scale_base = 3; }
+    [common] { screen_name="Shrack"; }
+}
