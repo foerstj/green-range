@@ -1,0 +1,27 @@
+[t:template,n:gr_npc_troll_mountain_large] { specializes = gr_npc_troll_mountain_large_base; }
+[t:template,n:gr_npc_troll_mountain_large_base]
+{
+    specializes = gr_troll_mountain_large_base;
+
+	category_name = "1W_character";
+	[actor]
+	{
+		alignment = aa_neutral;
+		can_level_up = false;
+	}
+	[aspect]
+	{
+		is_collidable = false;
+		is_invincible = true;
+	}
+    [mind]
+    {
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+        //jat_fidget = world\ai\jobs\common\job_fidget.skrit;  // remove extra params that make him move around
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+	[conversation]
+	{
+	}
+}
