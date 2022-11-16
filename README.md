@@ -51,4 +51,5 @@ The light spell is available via pcontent in all maps, but its effect is purely 
 
 ## Attribution
 Textures of Fox and beta Mucosa courtesy of Eksevis.\
+Hi-res texture of Shrack (Floaters) courtesy of AntonioR.\
 Custom music by Alexander Nakarada.
