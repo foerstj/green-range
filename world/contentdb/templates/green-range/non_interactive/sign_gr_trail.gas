@@ -1,0 +1,31 @@
+[t:template,n:sign_gr_trail_right] { specializes = sign_gr_trail_right_base; }
+[t:template,n:sign_gr_trail_right_base]
+{
+    specializes = sign_grs_town_blank_base;
+
+	doc = "directional klars trail right";
+	[aspect]
+	{
+        textures:0 = b_i_grs_sign-klarstrail-entr-right;
+	}
+	[common]
+	{
+		screen_name = "Here begins the Klars Trail";
+	}
+}
+
+[t:template,n:sign_gr_trail_left] { specializes = sign_gr_trail_left_base; }
+[t:template,n:sign_gr_trail_left_base]
+{
+    specializes = sign_grs_town_blank_02_base;
+
+	doc = "directional klars trail left";
+	[aspect]
+	{
+        textures:0 = b_i_grs_sign-klarstrail-entr-left;
+	}
+	[common]
+	{
+		screen_name = "Here begins the Klars Trail";
+	}
+}

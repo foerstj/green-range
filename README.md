@@ -50,6 +50,6 @@ No known incompatibilities.
 The light spell is available via pcontent in all maps, but its effect is purely visual.
 
 ## Attribution
-Textures of Fox and beta Mucosa courtesy of Eksevis.\
+Textures of Fox and beta Mucosa as well as the big Klars Trail sign courtesy of Eksevis.\
 Hi-res texture of Shrack (Floaters) courtesy of AntonioR.\
 Custom music by Alexander Nakarada.
