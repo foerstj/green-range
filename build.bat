@@ -58,12 +58,11 @@ robocopy "%doc_dsloa%\Bits\world\contentdb\templates\minibits" "%tmp%\Bits\world
 robocopy "%doc_dsloa%\Bits\world\global\moods\%res%" "%tmp%\Bits\world\global\moods\%res%" /E
 robocopy "%doc_dsloa%\Bits\world\global\effects" "%tmp%\Bits\world\global\effects" %res%-* /S
 robocopy "%doc_dsloa%\Bits\world\global\effects" "%tmp%\Bits\world\global\effects" minibits-* /S
-SETLOCAL EnableDelayedExpansion
-for /f %%f in ('dir /b %tmp%\Bits\world\global\moods\%res%') do (
-  set moods_file=Bits\world\global\moods\%res%\%%f
-  powershell -Command "(Get-Content '%doc_dsloa%\!moods_file!') -replace 'standard_track = (.*); // (.*)','standard_track = $2; // $1' | Out-File -encoding ASCII '%tmp%\!moods_file!'"
-  if %errorlevel% neq 0 pause
-)
+pushd %gaspy%
+venv\Scripts\python -m build.swap_music_tracks "%tmp%\Bits"
+if %errorlevel% neq 0 pause
+popd
+pause
 %tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsres" -copyright "CC-BY-SA 2022" -title "%map_cs%" -author "Johannes Förstner"
 if %errorlevel% neq 0 pause
 
