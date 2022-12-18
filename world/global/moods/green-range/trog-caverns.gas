@@ -1,4 +1,5 @@
-[mood_setting*]
+// Dripstone Caverns
+[mood_setting*]  // dsc west 1
 {
 	mood_name				= gr-dsc-west-1;
 	transition_time			= 2.0f;
@@ -29,9 +30,8 @@
 		standard_track		= "s_m_SubRiver_05";
 		room_type			= rt_auditorium;
 	}
-
 }
-[mood_setting*]
+[mood_setting*]  // dsc west 2
 {
 	mood_name				= gr-dsc-west-2;
 	transition_time			= 2.0f;
@@ -62,9 +62,8 @@
 		standard_track		= "s_m_SubRiver_03";
 		room_type			= rt_auditorium;
 	}
-
 }
-[mood_setting*]
+[mood_setting*]  // dsc west 3
 {
 	mood_name				= gr-dsc-west-3;
 	transition_time			= 2.0f;
@@ -95,42 +94,9 @@
 		standard_track		= "s_m_SubRiver_02";
 		room_type			= rt_auditorium;
 	}
-
 }
-[mood_setting*]
-{
-	mood_name				= gr-dsc-west-teleport;
-	transition_time			= 20.0f;
-	interior				= true;
 
-	[fog]
-	{
-		fog_near_dist		= 10.0f;
-		fog_far_dist		= 40.0f;
-		fog_lowdetail_near_dist		= 10.0f;
-		fog_lowdetail_far_dist		= 35.0f;
-		fog_color			= 0xff122619;
-		fog_density			= 0.5f;
-	}
-
-	[frustum]
-	{
-		frustum_width		= 45.0f;
-		frustum_height		= 60.0f;
-	}
-
-	[rain] {} // empty [rain] block for lightning manipulation
-
-	[music]
-	{
-		ambient_track		= "";
-		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_SubRiver_03";
-		room_type			= rt_auditorium;
-	}
-
-}
-[mood_setting*]
+[mood_setting*]  // dsc east 1 (black / exits)
 {
     //black quick transition mood
     mood_name				= gr-dsc-east-1;
@@ -163,7 +129,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // dsc east 2 (purple hue)
 {
     //purple hued mood
 	mood_name				= gr-dsc-east-2;
@@ -196,7 +162,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // dsc east 3 (blue hue)
 {
     //blue hued mood
 	mood_name				= gr-dsc-east-3;
@@ -229,7 +195,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // dsc east 4 (end arena)
 {
     // this is for the area near the end of the level where you are in an
     // arena-like circular cavern
