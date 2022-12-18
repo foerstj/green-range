@@ -1,0 +1,36 @@
+[t:elevator_instant_4s_1c,n:0x7060038a]
+{
+	[elevator_instant_4s_1c]
+	{
+	  i connect_door_location1_level1 = 7;
+	  i connect_door_location1_level2 = 8;
+	  i connect_door_location2_level1 = 13;
+	  i connect_door_location2_level2 = 14;
+	  x connect_node_location1 = 0x2457CFA3;
+	  x connect_node_location2 = 0xDD8694B5;
+		down_effect = "displacer_plate_down";
+	  f duration_location1_moving_to_lv1 = 16;
+	  f duration_location2_moving_to_lv1 = 16;
+	  i e2_connect_door_location1_level1 = 5;
+	  i e2_connect_door_location1_level2 = 6;
+	  i e2_connect_door_location2_level1 = 11;
+	  i e2_connect_door_location2_level2 = 12;
+	  x e2_elevator_node = 0xCB99DC32;
+	  i elevator_door_location1_level1 = 2;
+	  i elevator_door_location1_level2 = 2;
+	  i elevator_door_location2_level1 = 2;
+	  i elevator_door_location2_level2 = 2;
+	  x elevator_node = 0xB548B8B6;
+		location1_moving_to_lv1_actioninfo = "multiplayer_world_sno_r1_teleport";
+		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		location2_moving_to_lv1_actioninfo = "multiplayer_world_snow_town_teleport_2";
+		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		material = "hub";
+	  x other_elevator = 0x0270043F;
+		up_effect = "displacer_plate_up";
+	}
+	[placement]
+	{
+	  p position = 0,5,0,0xb548b8b6;
+	}
+}
