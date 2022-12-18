@@ -329,7 +329,7 @@
 			{
 				action* = mood_change("gr-dsc-west-1");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,2.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,2.000000,10.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -344,7 +344,7 @@
 			{
 				action* = set_player_world_location("dsc");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,2.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,2.000000,10.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -359,6 +359,6 @@
 	}
 	[placement]
 	{
-	  p position = -1.37328,1.90735e-006,-0.649155,0x7a3498e3;
+	  p position = 1.7475,1.90735e-006,-3.77428,0xec0a6a06;
 	}
 }
