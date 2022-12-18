@@ -268,6 +268,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD PWL";
 		[instance_triggers]
 		{
 			[*]
@@ -285,23 +286,9 @@
 			  b single_shot = false;
 			  b start_active = true;
 			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-5.96046e-008,0,1;
-	  p position = -0.384048,-3.99999,1.66656,0x01c45edf;
-	}
-}
-[t:trigger_change_mood_box,n:0x042002cc]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_sr_r5_1");
+				action* = set_player_world_location("dsc");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.500000,1.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -310,7 +297,7 @@
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
-			  b single_player = true;
+			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -319,7 +306,7 @@
 	[placement]
 	{
 	  q orientation = 0,-5.96046e-008,0,1;
-	  p position = -0.505615,-3.99999,-1.00934,0x01c45edf;
+	  p position = -0.384048,-3.99999,1.66656,0x01c45edf;
 	}
 }
 [t:trigger_fade_nodes_box,n:0x04200021]
@@ -417,5 +404,34 @@
 	[placement]
 	{
 	  p position = -0.585571,0,-1.12884,0x2462b811;
+	}
+}
+[t:trigger_change_mood_box,n:0x042002cc]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_sr_r5_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.500000,1.000000,0.700000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.96046e-008,0,1;
+	  p position = -0.505615,-3.99999,-1.00934,0x01c45edf;
 	}
 }

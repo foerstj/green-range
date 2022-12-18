@@ -180,17 +180,6 @@
 	  p position = -1.56869,0,-1.12505,0x140efc86;
 	}
 }
-[t:set_quest_bits,n:0x70600388]
-{
-	[placement]
-	{
-	  p position = 2.40981,-9.53674e-007,-2.91609,0x9987d309;
-	}
-	[set_quest_bits]
-	{
-		bool_variable = "teleporter_snow_town_sno_r1_active";
-	}
-}
 [t:trigger_change_mood_box,n:0x7060004b]
 {
 	[common]
@@ -285,117 +274,6 @@
 	  p position = 0.999978,0,-1.73721,0xe1e56987;
 	}
 }
-[t:tutorial_tip,n:0x7060038b]
-{
-	[common]
-	{
-		dev_instance_text = "DISPLACER TIP no-elite";
-	}
-	[placement]
-	{
-	  p position = -1.34154,-9.53674e-007,-3.73187,0x94245cc5;
-	}
-	[tip]
-	{
-		tip = "tip_5";
-	}
-}
-[t:trigger_generic,n:0x7060038c]
-{
-	[common]
-	{
-		dev_instance_text = "TIP TRIGGER no-elite";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x7060038B,0f,"0x4002","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_node(0xBEF28C5D,1,99,-1,"on_unique_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -2.30584,0,-3.66813,0x94245cc5;
-	}
-}
-[t:trigger_generic,n:0x70600389]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT,PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x70600388,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,2.000000,5.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("crystal_caverns");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,0.500000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.0059213,0.384623,1.44942,0x2457cfa3;
-	}
-}
-[t:use_point,n:0x70600386]
-{
-	[placement]
-	{
-	  p position = -0.599228,0.2,0.476875,0xb548b8b6;
-	}
-}
-[t:check_quest_bits,n:0x70600387]
-{
-	[check_quest_bits]
-	{
-		bool_variable = "teleporter_snow_town_sno_r1_active";
-	  i level = 1;
-	  i object = -1;
-	  i region = -1091400611;
-	  i section = 8;
-	  x send_to_scid = 0x7060038A;
-	}
-	[placement]
-	{
-	  p position = -0.0331726,2.83855,-0.0161057,0xb548b8b6;
-	}
-}
 [t:trigger_change_mood_box,n:0x70600476]
 {
 	[common]
@@ -440,38 +318,11 @@
 	  p position = 0.404835,0,-0.937149,0x01ec00de;
 	}
 }
-[t:trigger_change_mood_box,n:0x7060004a]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_sr_r5_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.135773,0,-1.73598,0xfc78757c;
-	}
-}
 [t:trigger_change_mood_box,n:0x70600049]
 {
 	[common]
 	{
+		dev_instance_text = "MOOD PWL";
 		[instance_triggers]
 		{
 			[*]
@@ -489,10 +340,25 @@
 			  b single_shot = false;
 			  b start_active = true;
 			}
+			[*]
+			{
+				action* = set_player_world_location("dsc");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
 		}
 	}
 	[placement]
 	{
-	  p position = 1.85921,0,2.51686,0x81abfbf7;
+	  p position = -1.37328,1.90735e-006,-0.649155,0x7a3498e3;
 	}
 }
