@@ -111,6 +111,29 @@
 			}
 		}
 	}
+	[t:start_group,n:dev]
+	{
+	  b default = true;
+		description = "DEV";
+	  b dev_only = false;
+	  i id = 99;
+		screen_name = "DEV";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.000000,0.000000,0.000000,0xEC0A6A06;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xEC0A6A06;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
 	[t:start_group,n:dm-town]
 	{
 	  b default = false;
@@ -775,7 +798,7 @@
 	}
 	[t:start_group,n:mountain-giant-shop]
 	{
-	  b default = true;
+	  b default = false;
 		description = "A smith shop in the central Giants Forest";
 	  b dev_only = false;
 	  i id = 9;
