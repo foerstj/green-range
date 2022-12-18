@@ -2,14 +2,6 @@
 {
 	source_region_guid = 0xBEF28C5D;
 	source_region_name = dripstone-cavern-west;
-	[t:stitch_editor,n:sf_r1]
-	{
-		dest_region = sf_r1;
-		[node_ids]
-		{
-			0x00000df1 = 0x87B4BB2D,8;
-		}
-	}
 	[t:stitch_editor,n:dripstone-cavern-east]
 	{
 		dest_region = dripstone-cavern-east;
@@ -17,6 +9,14 @@
 		{
 			0x00000df2 = 0xC3EB9282,5;
 			0x00000df3 = 0xC3EB9282,6;
+		}
+	}
+	[t:stitch_editor,n:sf_r1]
+	{
+		dest_region = sf_r1;
+		[node_ids]
+		{
+			0x00000df1 = 0x87B4BB2D,8;
 		}
 	}
 }
