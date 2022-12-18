@@ -36,10 +36,7 @@ popd
 rmdir /S /Q "%tmp%\Bits"
 robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E
 ::robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xd regions
-::robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\dream-cave-a" "%tmp%\Bits\world\maps\%map%\regions\dream-cave-a" /E
-::robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\dream-cave-b" "%tmp%\Bits\world\maps\%map%\regions\dream-cave-b" /E
-::robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\dream-cave-bottom" "%tmp%\Bits\world\maps\%map%\regions\dream-cave-bottom" /E
-::robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\mountains-x11z08" "%tmp%\Bits\world\maps\%map%\regions\mountains-x11z08" /E
+::robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\example" "%tmp%\Bits\world\maps\%map%\regions\example" /E
 pushd %gaspy%
 venv\Scripts\python -m build.fix_start_positions_required_levels %map% "%tmp%\Bits"
 if %errorlevel% neq 0 pause
@@ -62,7 +59,6 @@ pushd %gaspy%
 venv\Scripts\python -m build.swap_music_tracks "%tmp%\Bits"
 if %errorlevel% neq 0 pause
 popd
-pause
 %tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsres" -copyright "CC-BY-SA 2022" -title "%map_cs%" -author "Johannes Förstner"
 if %errorlevel% neq 0 pause
 
