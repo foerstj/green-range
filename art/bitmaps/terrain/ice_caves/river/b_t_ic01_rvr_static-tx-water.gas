@@ -1,0 +1,49 @@
+[t:tsd,n:b_t_ic01_rvr_static-tx-water]
+{
+	hasalpha = true;
+	layer1alphaarg1 = texture;
+	layer1alphaarg2 = diffuse;
+	layer1alphaop = modulate;
+	layer1colorarg1 = texture;
+	layer1colorarg2 = diffuse;
+	layer1colorop = modulate2x;
+	layer1numframes = 1;
+	layer1secondsperframe = 0.0;
+	layer1texture1 = b_t_ic01_rvr_static-tx-water;
+	layer1ushiftpersecond = 0.0;
+	layer1uwrap = true;
+	layer1vshiftpersecond = 0.0;
+	layer1vwrap = true;
+	layer2alphaarg1 = texture;
+	layer2alphaarg2 = current;
+	layer2alphaop = arg2;
+	layer2colorarg1 = texture;
+	layer2colorarg2 = current;
+	layer2colorop = modulate;
+	layer2numframes = 1;
+	layer2secondsperframe = 0.0;
+	layer2texture1 = b_t_ic01_rvr_dynamic;
+	layer2ushiftpersecond = 0.0;
+	layer2uwrap = true;
+	layer2vshiftpersecond = 0.5;
+	layer2vwrap = true;
+	numlayers = 2;
+	texturedetail = 1;
+	timesyncanimation = true;
+	dither = false;
+}
+
+[t:tsd,n:b_t_ic01_rvr_static-tx-water-simple]
+{
+	hasalpha = true;
+	noalphasort = true;
+	layer1texture1 = b_t_ic01_rvr_simple;
+	layer1ushiftpersecond = 0.0;
+	layer1uwrap = true;
+	layer1vshiftpersecond = -0.5;
+	layer1vwrap = true;
+	numlayers = 1;
+	texturedetail = 1;
+	timesyncanimation = true;
+	dither = false;
+}

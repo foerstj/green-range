@@ -1,0 +1,44 @@
+[t:tsd,n:b_t_ic01_rvr_fall-mist-08x08-static]
+{
+  b hasalpha = true;
+	layer1alphaarg1 = texture;
+	layer1alphaarg2 = diffuse;
+	layer1alphaop = modulate;
+	layer1colorarg1 = texture;
+	layer1colorarg2 = diffuse;
+	layer1colorop = modulate;
+  i layer1numframes = 1;
+  f layer1secondsperframe = 0.0;
+	layer1texture1 = b_t_ic01_rvr_fall-mist-08x08-static;
+  f layer1ushiftpersecond = 0.0;
+  b layer1uwrap = true;
+  f layer1vshiftpersecond = 0.0;
+  b layer1vwrap = true;
+	layer2alphaarg1 = texture;
+	layer2alphaarg2 = current;
+	layer2alphaop = arg2;
+	layer2colorarg1 = texture;
+	layer2colorarg2 = current;
+	layer2colorop = modulate2x;
+  i layer2numframes = 1;
+  f layer2secondsperframe = 0.0;
+	layer2texture1 = b_t_ic01_rvr_fall-mist-08x08-dynamic;
+  f layer2ushiftpersecond = 0.00;
+  b layer2uwrap = true;
+  f layer2vshiftpersecond = -0.20;
+  b layer2vwrap = true;
+  i numlayers = 2;
+  i texturedetail = 2;
+  b timesyncanimation = true;
+}
+[t:tsd,n:b_t_ic01_rvr_fall-mist-08x08-static-simple]
+{
+  b hasalpha = true;
+	layer1texture1 = b_t_alpha;
+	layer1uwrap = true;
+	layer1vshiftpersecond = 0.0;
+	layer1vwrap = true;
+	numlayers = 1;
+  i texturedetail = 2;
+	timesyncanimation = true;
+}
