@@ -36,7 +36,7 @@ popd
 rmdir /S /Q "%tmp%\Bits"
 ::robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E
 robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xd regions
-robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\glacier-cavern-north" "%tmp%\Bits\world\maps\%map%\regions\glacier-cavern-north" /E
+robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\glacier-cavern-river" "%tmp%\Bits\world\maps\%map%\regions\glacier-cavern-river" /E
 pushd %gaspy%
 venv\Scripts\python -m build.fix_start_positions_required_levels %map% "%tmp%\Bits"
 if %errorlevel% neq 0 pause
