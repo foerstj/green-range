@@ -231,3 +231,29 @@
 		room_type			= rt_arena;
 	}
 }
+
+// Glacier Caverns
+[mood_setting*]
+{
+	mood_name				= gr-gc-north;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF202028;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_wind_ice_cavern";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_ArcticCaverns_02";
+		room_type			= rt_cave;
+	}
+}
