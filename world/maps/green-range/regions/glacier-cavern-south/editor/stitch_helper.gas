@@ -1,0 +1,31 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0xAAA40400;
+	source_region_name = glacier-cavern-south;
+	[t:stitch_editor,n:df_r0]
+	{
+		dest_region = df_r0;
+		[node_ids]
+		{
+			0xaaa40016 = 0x55CEF3D9,8;
+		}
+	}
+	[t:stitch_editor,n:glacier-cavern-bridge]
+	{
+		dest_region = glacier-cavern-bridge;
+		[node_ids]
+		{
+			0xaaa40009 = 0x7D481E9D,1;
+		}
+	}
+	[t:stitch_editor,n:sr_side]
+	{
+		dest_region = sr_side;
+		[node_ids]
+		{
+			0xaaa40012 = 0xC69420E0,6;
+			0xaaa40013 = 0xC69420E0,7;
+			0xaaa40014 = 0xC69420E0,8;
+		}
+	}
+}
