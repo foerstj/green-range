@@ -133,14 +133,6 @@
 	  p position = -2.41048,0.754724,3.56204,0xaeb4ad35;
 	}
 }
-[t:dsx_chitterskrag_boss,n:0x04200141]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.87365,0.991454,3.45727,0xb21945e4;
-	}
-}
 [t:lectar,n:0x042001d2]
 {
 	[placement]
@@ -615,6 +607,50 @@
 	{
 	  q orientation = 0,0.980785,0,-0.19509;
 	  p position = -1.89624,-1.01038,-3.1239,0xc6fdf522;
+	}
+}
+[t:dsx_chitterskrag_boss,n:0x04200141]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("giant_chitterskrag","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("giant_chitterskrag","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,8.9407e-008;
+	  p position = 3.63571,0,1.52643,0x3cd4ac89;
 	}
 }
 [t:spider_stalagnid,n:0x04200434]
@@ -1436,12 +1472,12 @@
 	  p position = -1.35896,0,-1.39376,0x98c72ecd;
 	}
 }
-[t:trog_warrior_boss_01,n:0x042001d0]
+[t:trog_knight,n:0x042001d0]
 {
 	[placement]
 	{
 	  q orientation = 0,-0.923879,0,-0.382684;
-	  p position = 2.10685,1.90735e-006,-0.626194,0x22c22047;
+	  p position = 2.10685,1.90735e-006,-0.62619,0x22c22047;
 	}
 }
 [t:spiked_maw,n:0x042001d5]
