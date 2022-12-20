@@ -27,11 +27,12 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 0.0f;
-		standard_track		= "s_m_SubRiver_05";
+		standard_track		= s_m_wonderland;
+		battle_track		= s_m_SubRiver_05;
 		room_type			= rt_auditorium;
 	}
 }
-[mood_setting*]  // dsc west 2
+[mood_setting*]  // dsc west 2 (around caverns crossroads)
 {
 	mood_name				= gr-dsc-west-2;
 	transition_time			= 2.0f;
@@ -59,7 +60,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_SubRiver_03";
+		standard_track		= s_m_SubRiver_03;  // calm original music around caverns crossroads
 		room_type			= rt_auditorium;
 	}
 }
@@ -91,12 +92,13 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_SubRiver_02";
+		standard_track		= s_m_wonderland;
+		battle_track		= s_m_SubRiver_02;
 		room_type			= rt_auditorium;
 	}
 }
 
-[mood_setting*]  // dsc east 1 (black / exits)
+[mood_setting*]  // dsc east 1 (black / exit)
 {
     //black quick transition mood
     mood_name				= gr-dsc-east-1;
@@ -125,7 +127,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_SubRiver_04";
+		standard_track		= "s_m_SubRiver_04";  // the psychotic track
 		room_type			= rt_cave;
 	}
 }
