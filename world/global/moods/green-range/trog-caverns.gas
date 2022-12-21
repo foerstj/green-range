@@ -233,10 +233,10 @@
 }
 
 // Glacier Caverns
-[mood_setting*]
+[mood_setting*]  // north / trail
 {
 	mood_name				= gr-gc-north;
-	transition_time			= 2.0f;
+	transition_time			= 1.0f;  // quick exit transition
 	interior				= true;
 
 	[fog]
@@ -251,9 +251,108 @@
 
 	[music]
 	{
-		ambient_track		= "s_e_ambient_wind_ice_cavern";
+		ambient_track		= s_e_ambient_wind_ice_cavern;
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_ArcticCaverns_02";
+		standard_track		= s_m_ArcticCaverns_06;  // the long one
+		room_type			= rt_cave;
+	}
+}
+[mood_setting*]  // river north / trail
+{
+	mood_name				= gr-gc-river-north;
+	transition_time			= 4.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 10.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 10.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+		fog_color			= 0xFF1b1b23;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= s_e_ambient_wind_ice_cavern;
+		standard_repeat_delay	= 10.0f;
+		standard_track		= s_m_ArcticCaverns_07;  // magical/mysterious
+		room_type			= rt_cave;
+	}
+
+}
+[mood_setting*]  // river south / off-trail
+{
+	mood_name				= gr-gc-river-south;
+	transition_time			= 4.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 10.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 10.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+		fog_color			= 0xFF202028;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= s_e_ambient_wind_ice_cavern;
+		standard_repeat_delay	= 10.0f;
+		standard_track		= s_m_ArcticCaverns_03;
+		room_type			= rt_cave;
+	}
+
+}
+[mood_setting*]  // south bridge / off-trail
+{
+	mood_name				= gr-gc-bridge;
+	transition_time			= 4.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 10.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 10.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+		fog_color			= 0xFF282830;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= s_e_ambient_wind_ice_cavern;
+		standard_repeat_delay	= 10.0f;
+		standard_track		= s_m_ArcticCaverns_02;
+		room_type			= rt_cave;
+	}
+
+}
+[mood_setting*]  // south / off-trail
+{
+	mood_name				= gr-gc-south;
+	transition_time			= 1.0f;  // quick exit transition
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 10.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 10.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+		fog_color			= 0xff121926;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= s_e_ambient_wind_ice_cavern;
+		standard_repeat_delay	= 10.0f;
+		standard_track		= s_m_ArcticCaverns_01;
 		room_type			= rt_cave;
 	}
 }
