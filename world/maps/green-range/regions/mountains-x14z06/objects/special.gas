@@ -1,17 +1,17 @@
-[t:trigger_change_mood_box,n:0x11f005cb]
+[t:trigger_fade_nodes_box,n:0x11f005ce]
 {
 	[common]
 	{
-		dev_instance_text = "MOOD PWL";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("gr-ps5-s");
+				action* = fade_nodes(0x0000011F,1,1,-1,"in");
+				action* = fade_nodes(0xAAA40500,1,1,-1,"in");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,2.000000,6.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(12.000000,2.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
-			  b flip_flop = false;
+			  b flip_flop = true;
 			  b multi_player = true;
 			  b no_trig_bits = false;
 				occupants_group = ;
@@ -20,27 +20,12 @@
 			  b single_shot = false;
 			  b start_active = true;
 			}
-			[*]
-			{
-				action* = set_player_world_location("ps5");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,2.000000,6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
 		}
 	}
 	[placement]
 	{
-	  q orientation = 0,-8.9407e-008,0,1;
-	  p position = -1.47928,0,-1.70613,0xdf372a9e;
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = 1.76515,0,-1.28088,0x788ccf00;
 	}
 }
 [t:trigger_fade_nodes_box,n:0x11f005cc]
@@ -101,36 +86,6 @@
 	  p position = 0.00521851,-12,-2.04132,0xecff3d4e;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x11f005ce]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x0000011F,1,1,-1,"in");
-				action* = fade_nodes(0xAAA40500,1,1,-1,"in");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(12.000000,2.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = true;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = 1.76515,0,-1.28088,0x788ccf00;
-	}
-}
 [t:trigger_fade_nodes_box,n:0x11f005cf]
 {
 	[common]
@@ -159,5 +114,50 @@
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
 	  p position = 1.67997,0,1.27716,0xac26326a;
+	}
+}
+[t:trigger_change_mood_box,n:0x11f005cb]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps5-s");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,2.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("ps5");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,2.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-8.9407e-008,0,1;
+	  p position = -1.47928,0,-1.70613,0xdf372a9e;
 	}
 }
