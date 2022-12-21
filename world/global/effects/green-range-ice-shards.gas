@@ -1,0 +1,36 @@
+[effect_script*]
+{
+	name	=shard_zap_ice_sm;
+
+	script	=[[
+			call shard_zap_base s<color0(0.5,0.75,1)> s<model(frag_glb_gr_shard_ice_sm_03)>;
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*]
+{
+	name	=shard_zap_ice_md;
+
+	script	=[[
+			call shard_zap_base s<color0(0.5,0.75,1)> s<model(frag_glb_gr_shard_ice_md_03)>;
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*]
+{
+	name	=shard_zap_ice_lg;
+
+	script	=[[
+			call shard_zap_base s<color0(0.5,0.75,1)> s<model(frag_glb_gr_shard_ice_lg_03)>;
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*]
+{
+	name	=shard_zap_ice_xl;
+
+	script	=[[
+			call shard_zap_base s<color0(0.5,0.75,1)> s<model(frag_glb_gr_shard_ice_xl_03)>;
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
