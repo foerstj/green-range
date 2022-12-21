@@ -26,3 +26,32 @@
 	  p position = 0.175725,5.8,0.71506,0x1042412e;
 	}
 }
+[t:trigger_fade_nodes_box,n:0x121022d9]
+{
+	[common]
+	{
+		dev_instance_text = "FADE LIGHTBLOCK";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000121,1,99,-1,"out:instant");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(42.000000,42.000000,42.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.502144,-1.90735e-006,-1.82718,0xf39666e2;
+	}
+}
