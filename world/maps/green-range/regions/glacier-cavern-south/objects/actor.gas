@@ -22,6 +22,42 @@
 }
 [t:spiked_maw_boss_01,n:0x04100317]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("rabid_spiked_maw","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("rabid_spiked_maw","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.0871558,0,0.996195;
@@ -536,14 +572,6 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -0.801476,0,0.47911,0x0d6ff72a;
-	}
-}
-[t:dark_lunger_boss_01,n:0x0410034a]
-{
-	[placement]
-	{
-	  q orientation = 0,0.866025,0,0.5;
-	  p position = 0.326035,0,-0.416727,0x0d6ff72a;
 	}
 }
 [t:spider_stalagnid,n:0x041000c5]
@@ -1117,5 +1145,13 @@
 	{
 	  q orientation = 0,1,0,3.22342e-007;
 	  p position = 0.217178,2.3317,3.1765,0x5e5b86aa;
+	}
+}
+[t:dark_lunger,n:0x0410034a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.866025,0,0.5;
+	  p position = 0.326035,0,-0.416727,0x0d6ff72a;
 	}
 }

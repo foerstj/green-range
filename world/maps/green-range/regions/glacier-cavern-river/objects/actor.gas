@@ -497,32 +497,68 @@
 {
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.24106,0,-1.41421,0xc02d5187;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.11029,1.32712,3.05164,0xe9081877;
 	}
 }
 [t:trog,n:0x03f00152]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.5993,0,-1.19187,0xc02d5187;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.247948,1.41969,2.8293,0xe9081877;
 	}
 }
 [t:trog_warrior,n:0x03f00299]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.766045,0,0.642788;
-	  p position = 1.41094,0,0.246577,0xc02d5187;
+	  q orientation = 0,0.642788,0,0.766044;
+	  p position = 0.940407,1.67655,1.39085,0xe9081877;
 	}
 }
 [t:trog_warrior_boss_01,n:0x03f0029c]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("great_trog_warrior","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("great_trog_warrior","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
 	[placement]
 	{
-	  q orientation = 0,-0.819152,0,0.573577;
-	  p position = 3.26828,0,-0.305384,0xc02d5187;
+	  q orientation = 0,0.573577,0,0.819152;
+	  p position = -0.916924,1.54024,1.94281,0xe9081877;
 	}
 }
 [t:gr_shard_ice_md,n:0x03f00151]
@@ -632,16 +668,16 @@
 {
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -3.80286,0,-1.20291,0x2e6b2022;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 10.3128,1.62026,5.03732,0x9a89706f;
 	}
 }
 [t:trog_warrior,n:0x03f0029b]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.766045,0,0.642788;
-	  p position = -2.707,0,-1.42915,0x2e6b2022;
+	  q orientation = 0,0.642788,0,0.766044;
+	  p position = 9.21696,1.53325,5.26356,0x9a89706f;
 	}
 }
 [t:dark_lunger,n:0x03f0013a]
