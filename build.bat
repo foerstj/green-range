@@ -40,6 +40,8 @@ robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\glacier-cavern-north" "%tmp%
 robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\glacier-cavern-river" "%tmp%\Bits\world\maps\%map%\regions\glacier-cavern-river" /E
 robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\glacier-cavern-bridge" "%tmp%\Bits\world\maps\%map%\regions\glacier-cavern-bridge" /E
 robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\glacier-cavern-south" "%tmp%\Bits\world\maps\%map%\regions\glacier-cavern-south" /E
+robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\dripstone-cavern-west" "%tmp%\Bits\world\maps\%map%\regions\dripstone-cavern-west" /E
+robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\dripstone-cavern-east" "%tmp%\Bits\world\maps\%map%\regions\dripstone-cavern-east" /E
 pushd %gaspy%
 venv\Scripts\python -m build.fix_start_positions_required_levels %map% "%tmp%\Bits"
 if %errorlevel% neq 0 pause
