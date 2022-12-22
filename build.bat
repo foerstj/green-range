@@ -36,12 +36,9 @@ popd
 rmdir /S /Q "%tmp%\Bits"
 ::robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E
 robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xd regions
-robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\glacier-cavern-north" "%tmp%\Bits\world\maps\%map%\regions\glacier-cavern-north" /E
-robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\glacier-cavern-river" "%tmp%\Bits\world\maps\%map%\regions\glacier-cavern-river" /E
-robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\glacier-cavern-bridge" "%tmp%\Bits\world\maps\%map%\regions\glacier-cavern-bridge" /E
-robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\glacier-cavern-south" "%tmp%\Bits\world\maps\%map%\regions\glacier-cavern-south" /E
-robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\dripstone-cavern-west" "%tmp%\Bits\world\maps\%map%\regions\dripstone-cavern-west" /E
-robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\dripstone-cavern-east" "%tmp%\Bits\world\maps\%map%\regions\dripstone-cavern-east" /E
+for %%r in (glacier-cavern-north glacier-cavern-river glacier-cavern-bridge glacier-cavern-south dripstone-cavern-west dripstone-cavern-east) do (
+  robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\%%r" "%tmp%\Bits\world\maps\%map%\regions\%%r" /E
+)
 pushd %gaspy%
 venv\Scripts\python -m build.fix_start_positions_required_levels %map% "%tmp%\Bits"
 if %errorlevel% neq 0 pause
