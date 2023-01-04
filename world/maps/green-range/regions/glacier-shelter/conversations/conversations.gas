@@ -4,14 +4,21 @@
 	{
 		choice = more;
 	  i order = 0;
-		screen_text = "Well met, Ehbling. Want some Snapper stew?";
+		screen_text = "Well met, Ehbling. On your way to Longbourne?";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "My name is Svartholm, I am a Ranger. We Rangers live in these mountains and regard them as our home.
-Are you new to these parts? I can come with you if you want... for guidance and protection.";
+		screen_text = "I am Ranger Annemiek. If you want, I can accompany you for guidance and protection. For a modest price.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_accept_no_money]
+{
+	[text*]
+	{
+		screen_text = "I'm afraid you'd need to pay a little more.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -19,7 +26,7 @@ Are you new to these parts? I can come with you if you want... for guidance and 
 {
 	[text*]
 	{
-		screen_text = "Yay let's go!";
+		screen_text = "After you!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -27,7 +34,7 @@ Are you new to these parts? I can come with you if you want... for guidance and 
 {
 	[text*]
 	{
-		screen_text = "Wait, what?";
+		screen_text = "Very well. See you in Longbourne some day.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -35,7 +42,7 @@ Are you new to these parts? I can come with you if you want... for guidance and 
 {
 	[text*]
 	{
-		screen_text = "Pff then not!";
+		screen_text = "No problem.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -53,7 +60,7 @@ Are you new to these parts? I can come with you if you want... for guidance and 
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "No hard feelings mate... Wanna go together again?";
+		screen_text = "Well met again... Want to go together once more?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -63,13 +70,12 @@ Are you new to these parts? I can come with you if you want... for guidance and 
 	{
 		choice = more;
 	  i order = 0;
-		screen_text = "Well met, Ehbling. Want some Snapper stew?";
+		screen_text = "Well met, Ehbling. On your way to Longbourne?";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
 	{
-		screen_text = "My name is Svartholm, I am a Ranger. We Rangers live in these mountains and regard them as our home.
-Are you new to these parts? Let me advise you to stay on the Klars Trail. You don't want to get lost and end up as Troll dinner...";
+		screen_text = "I am Ranger Annemiek. Let me advise you to stay on the Klars Trail. You don't want to get lost and end up as a Robber ashtray...";
 	  f scroll_rate = 10.000000;
 	}
 }

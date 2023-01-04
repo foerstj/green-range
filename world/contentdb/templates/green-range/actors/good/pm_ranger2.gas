@@ -5,18 +5,27 @@
 	category_name = "1W_character";
 	doc = "pm ranger2";
 
+    // stats & price from Phaedriel
+	[actor]
+    { 
+		[skills]
+		{
+			strength 		=   4.25, 0, 10;
+			intelligence 	=  	2.21, 0, 10;
+			dexterity 		=   10.54, 0, 10;
+            ranged 			= 	17,0, 0;
+            uber 			= 	17,0, 0;
+		}
+    }	
+	[aspect]
+    {
+        gold_value = 38400;
+    }
+
+    // looks & die-voice from Lyssa
 	[actor]
     { 
 		portrait_icon = b_gui_ig_i_ic_c_lyssa;
-        [skills]
-        { 
-			strength 		=   0.50, 0, 10;
-			dexterity 		=   3, 0, 10;
-			intelligence 	=  	0.26, 0, 10;
-			
-			Ranged 			= 	2, 0, 0;
-			uber 			= 	2, 0, 0;
-        }
     }	
 	[aspect]
     {
@@ -30,6 +39,7 @@
             [die]		{ priority = high; * = s_v_lyssa_die; }
         }
     }
+
 	[common]
     {
         screen_name = "Ranger";
@@ -39,19 +49,17 @@
         selected_active_location = il_active_ranged_weapon;
         [equipment]
         {
-            es_chest = gr_robe_rangers;
+            es_chest = bd_un_bl_r_leaf;  // Woodland Leather, 72, 14 str
             es_feet = gr_boots_rangers;
-            es_shield_hand = gr_bow_rangers;
+            es_shield_hand = bw_g_c_c_m_r_avg;  // Backed Bow, from Phaedriel
             es_weapon_hand = dg_g_d_1h_fun;  // knife
         }
         [other]
         {
-            il_active_primary_spell = spell_zap;
             il_active_secondary_spell = spell_healing_hands;
-            il_main = dg_g_d_1h_fun;  // knife
-            il_main = potion_health_small;
-            il_main = potion_health_small;
-            il_main = potion_mana_small;
+            il_main = potion_health_medium;
+            il_main = potion_health_medium;
+            il_main = potion_mana_medium;
         }
     }
     [mind]
