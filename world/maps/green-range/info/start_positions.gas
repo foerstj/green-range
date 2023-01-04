@@ -335,7 +335,7 @@
 	}
 	[t:start_group,n:ehb]
 	{
-	  b default = true;
+	  b default = false;
 		description = "Kingdom of Ehb border post";
 	  b dev_only = false;
 	  i id = 0;
@@ -1103,6 +1103,33 @@
 			[normal]
 			{
 			  i required_level = 13;
+			}
+		}
+	}
+	[t:start_group,n:ranger-shelter-tm]
+	{
+	  b default = true;
+		description = "A Ranger shelter on the flank of the Trog Mountain";
+	  b dev_only = false;
+	  i id = 10;
+		screen_name = "Trog Mountain Ranger Shelter";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.000000,0.000000,0.000000,0x28464260;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x28464260;
+			}
+		}
+		[world_levels]
+		{
+			[normal]
+			{
+			  i required_level = 26;
 			}
 		}
 	}
