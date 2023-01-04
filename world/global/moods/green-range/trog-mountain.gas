@@ -278,7 +278,8 @@
 	{
 		ambient_track		= s_e_ambient_wind_ice_cavern;  // ambient from glacier caverns
 		standard_repeat_delay	= 10.0f;
-		standard_track		= s_m_SubRiver_03;  // calm original music around caverns crossroads
+		standard_track		= s_m_shelter_song;  // TBD
+        battle_track = s_m_SubRiver_03;  // the calm track
 		room_type			= rt_auditorium;
 	}
 }
@@ -327,7 +328,8 @@
 	{
 		ambient_track		= s_e_ambient_wind_ice_cavern;  // ambient from glacier caverns
 		standard_repeat_delay	= 10.0f;
-		standard_track		= s_m_SubRiver_03;  // calm original music around caverns crossroads
+		standard_track		= s_m_shelter_song;  // TBD
+        battle_track = s_m_SubRiver_03;  // the calm track
 		room_type			= rt_auditorium;
 	}
 }
@@ -356,13 +358,13 @@
 
 	[frustum]
 	{
-		frustum_width		= 45.0f;
+		frustum_width		= 60.0f;  // wider frustum to see further
 		frustum_height		= 60.0f;
 	}
 
 	[fog]
 	{
-		fog_color			= 0xFFc0c0c8;
+		fog_color			= 0xFFA0A8B0;
 		fog_density			= 0.5f;
 	  f fog_near_dist = 40.000000;
 	  f fog_far_dist = 60.000000;
@@ -388,7 +390,7 @@
 	  f standard_intro_delay = 4.000000;
 	  f standard_repeat_delay = 16.000000;
 		standard_track		= s_m_shelter_song;  // TBD
-        battle_track = s_m_SubRiver_03;
+        battle_track = s_m_SubRiver_03;  // the calm track
 		room_type			= rt_generic;
 	}
 }
@@ -433,7 +435,7 @@
 	  f standard_intro_delay = 4.000000;
 	  f standard_repeat_delay = 16.000000;
 		standard_track		= s_m_shelter_song;  // TBD
-        battle_track = s_m_SubRiver_03;
+        battle_track = s_m_SubRiver_03;  // the calm track
 		room_type			= rt_generic;
 	}
 }
