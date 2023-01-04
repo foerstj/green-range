@@ -272,7 +272,7 @@
 				action* = fade_nodes(0xBEF28C5D,-1,-1,-1,"out:instant"), doc("dsc west");
 				action* = fade_nodes(0xAAA40500,-1,-1,-1,"out:instant"), doc("dsc east");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,1.000000,4.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(6.000000,2.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -287,7 +287,7 @@
 			{
 				action* = set_player_world_location("tms");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,1.000000,4.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(6.000000,2.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -302,7 +302,8 @@
 	}
 	[placement]
 	{
-	  p position = 3.51329,0,-1.50556,0xc109c26c;
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 1.32942,0,-1.46492,0x28464260;
 	}
 }
 [t:trigger_fade_nodes_box,n:0xc7000058]
