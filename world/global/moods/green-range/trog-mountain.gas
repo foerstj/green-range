@@ -232,7 +232,7 @@
 	}
 }
 
-// Stairs
+// Stairs & Shelter
 [mood_setting*]  // dsc/gc stairs tx
 {
 	mood_name				= gr-tm-stairs;
@@ -263,6 +263,104 @@
 		standard_repeat_delay	= 10.0f;
 		standard_track		= s_m_SubRiver_03;  // calm original music around caverns crossroads
 		room_type			= rt_auditorium;
+	}
+}
+[mood_setting*]  // dsc/gc stairs tx (quick)
+{
+	mood_name				= gr-tm-stairs-quick;
+	transition_time			= 1.0f;  // quick transition when entering from shelter
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 10.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 10.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+		fog_color			= 0xFF1b1b23;  // fog color from glacier caverns
+		fog_density			= 0.5f;
+	}
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= s_e_ambient_wind_ice_cavern;  // ambient from glacier caverns
+		standard_repeat_delay	= 10.0f;
+		standard_track		= s_m_SubRiver_03;  // calm original music around caverns crossroads
+		room_type			= rt_auditorium;
+	}
+}
+[mood_setting*]  // tm shelter (outside)
+{
+	mood_name				= gr-tm-shelter-outside;
+	transition_time			= 1.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_color			= 0xFFc0c0c8;
+		fog_density			= 0.5f;
+	  f fog_near_dist = 40.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
+	}
+
+	[wind]
+	{
+		wind_velocity		= 2.0f;
+		wind_direction		= 3.14f;
+	}
+
+	// Snowing
+	[snow]
+	{
+		snow_density		= 250;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+	  f standard_intro_delay = 4.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track		= s_m_shelter_song;
+        battle_track = s_m_Glacern_01;
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]  // tm shelter (inside)
+{
+	mood_name				= gr-tm-shelter-inside;
+	transition_time			= 0.5f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_color			= 0xFFc0c0c8;
+		fog_density			= 0.5f;
+	  f fog_near_dist = 40.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
+	}
+
+	// No snow while in buildings
+
+	[music]
+	{
+		ambient_track		= "";
+	  f standard_intro_delay = 4.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track		= s_m_shelter_song;
+        battle_track = s_m_Glacern_01;
+		room_type			= rt_generic;
 	}
 }
 
