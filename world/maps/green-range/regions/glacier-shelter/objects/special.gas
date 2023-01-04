@@ -107,13 +107,15 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE TOP";
+		dev_instance_text = "FADE TOP & DSC";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0x00000C70,1,1,-1,"in");
 				action* = fade_nodes(0xAAA40200,1,1,-1,"in");
+				action* = fade_nodes(0xBEF28C5D,-1,-1,-1,"out:instant"), doc("dsc west");
+				action* = fade_nodes(0xAAA40500,-1,-1,-1,"out:instant"), doc("dsc east");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -138,13 +140,15 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE TOP";
+		dev_instance_text = "FADE TOP & DSC";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0x00000C70,1,1,-1,"in");
 				action* = fade_nodes(0xAAA40200,1,1,-1,"in");
+				action* = fade_nodes(0xBEF28C5D,-1,-1,-1,"out:instant"), doc("dsc west");
+				action* = fade_nodes(0xAAA40500,-1,-1,-1,"out:instant"), doc("dsc east");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -163,6 +167,36 @@
 	{
 	  q orientation = 0,1,0,-1.66939e-007;
 	  p position = -3.60857,-2.00225,-8.07988,0x98aacadd;
+	}
+}
+[t:trigger_fade_nodes_box,n:0xc700005a]
+{
+	[common]
+	{
+		dev_instance_text = "FADE DSC";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xBEF28C5D,-1,-1,-1,"in:instant"), doc("dsc west");
+				action* = fade_nodes(0xAAA40500,-1,-1,-1,"in:instant"), doc("dsc east");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,2.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -8.84585,-2.03834,-5.99187,0x98aacadd;
 	}
 }
 [t:trigger_fade_nodes_box,n:0xc7000055]
@@ -229,12 +263,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD PWL";
+		dev_instance_text = "STARTPOS MOOD PWL FADE";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("gr-tm-shelter-outside");
+				action* = fade_nodes(0xBEF28C5D,-1,-1,-1,"out:instant"), doc("dsc west");
+				action* = fade_nodes(0xAAA40500,-1,-1,-1,"out:instant"), doc("dsc east");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,1.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -273,13 +309,15 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE TOP";
+		dev_instance_text = "FADE TOP & DSC";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0x00000C70,1,1,-1,"in");
 				action* = fade_nodes(0xAAA40200,1,1,-1,"in");
+				action* = fade_nodes(0xBEF28C5D,-1,-1,-1,"out:instant"), doc("dsc west");
+				action* = fade_nodes(0xAAA40500,-1,-1,-1,"out:instant"), doc("dsc east");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
