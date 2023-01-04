@@ -1,0 +1,61 @@
+[t:gr_pm_ranger2,n:0xc7000062]
+{
+	[aspect]
+	{
+	  f max_life = 78.4;
+	  f max_mana = 42;
+	}
+	[common]
+	{
+		dev_instance_text = "SP";
+	  b is_multi_player = false;
+		screen_name = "Annemiek";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = pm_ranger2_join;
+			* = pm_ranger2_accept_have_money;
+			* = pm_ranger2_disband;
+			* = pm_ranger2_reject;
+			* = pm_ranger2_rejoin;
+			* = pm_ranger2_disband_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\green-range\job_talk_companion.skrit?namespace=pm_ranger2&oid=0xc7000062;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.809017,0,-0.587786;
+	  p position = 5.30928,-1.5,-2.70035,0x98aacadd;
+	}
+}
+[t:gr_pm_ranger2,n:0xc7000063]
+{
+	[aspect]
+	{
+	  f max_life = 78.4;
+	  f max_mana = 42;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Annemiek";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = pm_ranger2_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.809017,0,-0.587786;
+	  p position = 5.42943,-1.5,-2.84063,0x98aacadd;
+	}
+}

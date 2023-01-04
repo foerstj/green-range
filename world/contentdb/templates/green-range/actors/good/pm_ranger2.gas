@@ -1,0 +1,62 @@
+[t:template,n:gr_pm_ranger2] { specializes = gr_pm_ranger2_base; }
+[t:template,n:gr_pm_ranger2_base]
+{
+	specializes = base_pm_fg;
+	category_name = "1W_character";
+	doc = "pm ranger2";
+
+	[actor]
+    { 
+		portrait_icon = b_gui_ig_i_ic_c_lyssa;
+        [skills]
+        { 
+			strength 		=   0.50, 0, 10;
+			dexterity 		=   3, 0, 10;
+			intelligence 	=  	0.26, 0, 10;
+			
+			Ranged 			= 	2, 0, 0;
+			uber 			= 	2, 0, 0;
+        }
+    }	
+	[aspect]
+    {
+        [textures]
+        {
+			0 = b_c_gan_fg_skin_lyssa;
+			1 = b_c_pos_a1_lyssa;
+        }
+        [voice]
+        {
+            [die]		{ priority = high; * = s_v_lyssa_die; }
+        }
+    }
+	[common]
+    {
+        screen_name = "Ranger";
+    }
+	[inventory]
+    {
+        selected_active_location = il_active_ranged_weapon;
+        [equipment]
+        {
+            es_chest = gr_robe_rangers;
+            es_feet = gr_boots_rangers;
+            es_shield_hand = gr_bow_rangers;
+            es_weapon_hand = dg_g_d_1h_fun;  // knife
+        }
+        [other]
+        {
+            il_active_primary_spell = spell_zap;
+            il_active_secondary_spell = spell_healing_hands;
+            il_main = dg_g_d_1h_fun;  // knife
+            il_main = potion_health_small;
+            il_main = potion_health_small;
+            il_main = potion_mana_small;
+        }
+    }
+    [mind]
+    {
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+}
+

@@ -1,0 +1,75 @@
+[pm_ranger2_join]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Well met, Ehbling. Want some Snapper stew?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "My name is Svartholm, I am a Ranger. We Rangers live in these mountains and regard them as our home.
+Are you new to these parts? I can come with you if you want... for guidance and protection.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_accept_have_money]
+{
+	[text*]
+	{
+		screen_text = "Yay let's go!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_disband]
+{
+	[text*]
+	{
+		screen_text = "Wait, what?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_reject]
+{
+	[text*]
+	{
+		screen_text = "Pff then not!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Wanna go together?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "No hard feelings mate... Wanna go together again?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_mp]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Well met, Ehbling. Want some Snapper stew?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "My name is Svartholm, I am a Ranger. We Rangers live in these mountains and regard them as our home.
+Are you new to these parts? Let me advise you to stay on the Klars Trail. You don't want to get lost and end up as Troll dinner...";
+	  f scroll_rate = 10.000000;
+	}
+}
