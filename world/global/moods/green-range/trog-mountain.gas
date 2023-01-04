@@ -239,6 +239,23 @@
 	transition_time			= 8.0f;
 	interior				= true;
 
+    // snow sun
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+
 	[fog]
 	{
 		fog_near_dist		= 10.0f;
@@ -270,6 +287,23 @@
 	mood_name				= gr-tm-stairs-quick;
 	transition_time			= 1.0f;  // quick transition when entering from shelter
 	interior				= true;
+
+    // snow sun
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
 
 	[fog]
 	{
@@ -303,6 +337,29 @@
 	transition_time			= 1.0f;
 	interior				= true;
 
+    // snow sun
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
 		fog_color			= 0xFFc0c0c8;
@@ -330,8 +387,8 @@
 		ambient_track		= "";
 	  f standard_intro_delay = 4.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track		= s_m_shelter_song;
-        battle_track = s_m_Glacern_01;
+		standard_track		= s_m_shelter_song;  // TBD
+        battle_track = s_m_SubRiver_03;
 		room_type			= rt_generic;
 	}
 }
@@ -340,6 +397,23 @@
 	mood_name				= gr-tm-shelter-inside;
 	transition_time			= 0.5f;
 	interior				= false;
+
+    // snow sun
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
 
 	[fog]
 	{
@@ -358,8 +432,8 @@
 		ambient_track		= "";
 	  f standard_intro_delay = 4.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track		= s_m_shelter_song;
-        battle_track = s_m_Glacern_01;
+		standard_track		= s_m_shelter_song;  // TBD
+        battle_track = s_m_SubRiver_03;
 		room_type			= rt_generic;
 	}
 }
