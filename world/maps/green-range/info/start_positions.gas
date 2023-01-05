@@ -111,6 +111,29 @@
 			}
 		}
 	}
+	[t:start_group,n:dev]
+	{
+	  b default = true;
+		description = "dev";
+	  b dev_only = false;
+	  i id = 1698464;
+		screen_name = "dev";
+		[start_position]
+		{
+		  i id = 1;
+			position = -2.882247,0.000000,-1.287234,0x066E4E88;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x066E4E88;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
 	[t:start_group,n:dm-town]
 	{
 	  b default = false;
@@ -1108,7 +1131,7 @@
 	}
 	[t:start_group,n:ranger-shelter-tm]
 	{
-	  b default = true;
+	  b default = false;
 		description = "A Ranger shelter on the flank of the Trog Mountain";
 	  b dev_only = false;
 	  i id = 10;
