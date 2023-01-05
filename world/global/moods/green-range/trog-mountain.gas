@@ -26,7 +26,7 @@
 	[music]
 	{
 		ambient_track		= "";
-		standard_repeat_delay	= 0.0f;
+		standard_repeat_delay	= 10.0f;
 		standard_track		= s_m_wonderland;
 		battle_track		= s_m_SubRiver_05;
 		room_type			= rt_auditorium;
@@ -60,7 +60,8 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= s_m_SubRiver_03;  // calm original music around caverns crossroads
+		standard_track		= s_m_wonderland;
+		battle_track		= s_m_SubRiver_01;
 		room_type			= rt_auditorium;
 	}
 }
@@ -277,8 +278,9 @@
 	[music]
 	{
 		ambient_track		= s_e_ambient_wind_ice_cavern;  // ambient from glacier caverns
-		standard_repeat_delay	= 10.0f;
-		standard_track		= s_m_shelter_song;  // TBD
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track		= s_m_gates_of_glory;
         battle_track = s_m_SubRiver_03;  // the calm track
 		room_type			= rt_auditorium;
 	}
@@ -327,8 +329,9 @@
 	[music]
 	{
 		ambient_track		= s_e_ambient_wind_ice_cavern;  // ambient from glacier caverns
-		standard_repeat_delay	= 10.0f;
-		standard_track		= s_m_shelter_song;  // TBD
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track		= s_m_gates_of_glory;
         battle_track = s_m_SubRiver_03;  // the calm track
 		room_type			= rt_auditorium;
 	}
@@ -387,9 +390,9 @@
 	[music]
 	{
 		ambient_track		= "";
-	  f standard_intro_delay = 4.000000;
+	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track		= s_m_shelter_song;  // TBD
+		standard_track		= s_m_gates_of_glory;
         battle_track = s_m_SubRiver_03;  // the calm track
 		room_type			= rt_generic;
 	}
@@ -432,9 +435,9 @@
 	[music]
 	{
 		ambient_track		= "";
-	  f standard_intro_delay = 4.000000;
+	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track		= s_m_shelter_song;  // TBD
+		standard_track		= s_m_gates_of_glory;
         battle_track = s_m_SubRiver_03;  // the calm track
 		room_type			= rt_generic;
 	}
