@@ -47,13 +47,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD FADE";
+		dev_instance_text = "MOOD FADE SOUND";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("gr-tm-shelter-outside");
 				action* = fade_nodes(0x00000C70,1,2,-1,"in");
+				action* = send_world_message("we_req_deactivate",0xC700007B,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -77,13 +78,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD FADE";
+		dev_instance_text = "MOOD FADE SOUND";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("gr-tm-shelter-inside");
 				action* = fade_nodes(0x00000C70,1,2,-1,"out:black");
+				action* = send_world_message("we_req_activate",0xC700007B,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;

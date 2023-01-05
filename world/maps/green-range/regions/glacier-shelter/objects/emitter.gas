@@ -1,3 +1,33 @@
+[t:emt_sound_act,n:0xc700007b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.420391,0,0.907343;
+	  p position = -1.77496,-1.5,0.719523,0x98aacadd;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "env_fire_small";
+	  f max_dist = 16;
+	  f min_dist = 1;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0xc700007c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.420391,0,0.907343;
+	  p position = 7.37273,-0.847826,0.00882816,0x98aacadd;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_fire_small";
+	  f max_dist = 16;
+	  f min_dist = 1;
+	}
+}
 [t:emitter_glb_smoke_01,n:0xc7000064]
 {
 	[placement]
