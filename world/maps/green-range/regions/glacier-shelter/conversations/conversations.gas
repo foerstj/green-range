@@ -1,3 +1,89 @@
+[chief]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Well met, wanderer.
+My name is Kolmis, I am Chief of the Rangers of Trog Mountian.
+Welcome to the shelter. Glad you found it - the Caverns are brimming with Trog these days.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "Are you going to Ehb or Longbourne? Ask around, one of my people will surely accompany you if you so wish; they might take a price.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 2;
+		screen_text = "It's a few more days to Longbourne, but you've made most of the way. You follow the Glacier Caverns north, then the Klars Trail leads through the Robbers Forest. Once you reach the Lupine Hills, it's a walk in the park.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 3;
+		screen_text = "Be careful in the Robbers Forest - these Robbers are gruesome brutes, barely human. Their death cult is plagueing the Klars Trail unduly. You look like hardy fighters. I advise against confronting them, but if you could take out their leader, that would help Travelers a lot.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "I wish you a good arrival at Longbourne! It is a beautiful place, that's for sure.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[old_man]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "There's no such thing as retirement for Rangers, hehe. But I can't keep fighting Trog much longer. Time for old Ragnar to learn logistics 'n' maintenance 'n' knick-knack like that.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Have you ever been to Longbourne? Oh it's a lovely place. The nights are full of glowworms!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_accept_have_money]
+{
+	[text*]
+	{
+		screen_text = "After you!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_accept_no_money]
+{
+	[text*]
+	{
+		screen_text = "I'm afraid you'd need to pay a little more.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_disband]
+{
+	[text*]
+	{
+		screen_text = "Very well. See you in Longbourne some day.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_ranger2_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Well met again... Want to go together once more?";
+	  f scroll_rate = 10.000000;
+	}
+}
 [pm_ranger2_join]
 {
 	[text*]
@@ -14,27 +100,18 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[pm_ranger2_accept_no_money]
+[pm_ranger2_mp]
 {
 	[text*]
 	{
-		screen_text = "I'm afraid you'd need to pay a little more.";
+		choice = more;
+	  i order = 0;
+		screen_text = "Well met, Ehbling. On your way to Longbourne?";
 	  f scroll_rate = 10.000000;
 	}
-}
-[pm_ranger2_accept_have_money]
-{
 	[text*]
 	{
-		screen_text = "After you!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_ranger2_disband]
-{
-	[text*]
-	{
-		screen_text = "Very well. See you in Longbourne some day.";
+		screen_text = "I am Ranger Annemiek. Let me advise you to stay on the Klars Trail. You don't want to get lost and end up as a Robber ashtray...";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -55,27 +132,18 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[pm_ranger2_disband_rejoin]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "Well met again... Want to go together once more?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_ranger2_mp]
+[porch]
 {
 	[text*]
 	{
 		choice = more;
 	  i order = 0;
-		screen_text = "Well met, Ehbling. On your way to Longbourne?";
+		screen_text = "Welcome to the Trog Mountain Shelter, wanderer. Have some calm and rest before you head back into the Caverns...";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
 	{
-		screen_text = "I am Ranger Annemiek. Let me advise you to stay on the Klars Trail. You don't want to get lost and end up as a Robber ashtray...";
+		screen_text = "Have you ever been to Longbourne? It's such a gorgeous place! You meet people from half of Aranna, and the hosts are so dear.";
 	  f scroll_rate = 10.000000;
 	}
 }
