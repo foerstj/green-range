@@ -48,8 +48,7 @@ if %errorlevel% neq 0 pause
 
 :: Compile main resource file
 rmdir /S /Q "%tmp%\Bits"
-robocopy "%doc_dsloa%\Bits\art" "%tmp%\Bits\art" /E /xd terrain /xf .gitignore /xf *.psd /xf mdkey.nnk /xf namingkey.nnk /xf namingkey101.nnk
-robocopy "%doc_dsloa%\Bits\art\terrain\generic\droog" "%tmp%\Bits\art\terrain\generic\droog" /E /xd terrain /xf .gitignore /xf *.psd
+robocopy "%doc_dsloa%\Bits\art" "%tmp%\Bits\art" /E /xf .gitignore /xf *.psd
 robocopy "%doc_dsloa%\Bits\sound\effects" "%tmp%\Bits\sound\effects" /E
 robocopy "%doc_dsloa%\Bits\world\ai\jobs\%res%" "%tmp%\Bits\world\ai\jobs\%res%" /E
 robocopy "%doc_dsloa%\Bits\world\contentdb\components" "%tmp%\Bits\world\contentdb\components" /E
