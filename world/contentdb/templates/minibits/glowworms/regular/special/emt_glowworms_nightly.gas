@@ -1,0 +1,13 @@
+[t:template,n:emt_glowworms_nightly]
+{
+	specializes		= emitter_lightweight;
+    category_name	= "emitter";
+	doc				= "glowworms at night";
+
+	[sfx_emitter_timed]
+    {
+		effect = "glowworms";
+	  i start_hour = 20;
+	  i stop_hour = 3;
+    }
+}

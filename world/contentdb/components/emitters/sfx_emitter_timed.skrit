@@ -1,0 +1,101 @@
+property string _doc$                = "A timed SFX emitter";
+property string _required_component$ = "placement";
+property bool	_server_only$		 = false;
+
+property string effect$					        doc = "Name of SFX to play";
+property string params$             = ""        doc = "Params of SFX to play";
+property int 	start_hour$			= 0			doc = "Starting hour 0 - 23 inclusive";
+property int  	stop_hour$			= 23		doc = "Stoppin hour 0 - 23 inclusive, Note: stop time can be sooner then start, and it will do what you want.";
+
+owner = GoSkritComponent;
+SFxSID active_script_id$ = 0;
+int prev_hour$ = -1;
+bool prev_active$ = false;
+
+void StartEmitter$()
+{
+	if ( active_script_id$ == 0 )
+	{
+		// Run the effect script
+		active_script_id$ =	SiegeFx.RunScript( effect$, owner.Goid, owner.Goid, params$, owner.Goid, WE_REQ_ACTIVATE );
+	}
+}
+
+void StopEmitter$()
+{
+	if( active_script_id$ != 0 )
+	{
+		// Let the effect know that it should finish what it is doing and not spawn anything else
+		SiegeFx.FinishScript( active_script_id$ );
+	
+		// Clear the script id
+		active_script_id$ = null;
+	}
+}
+
+void OnHourChange$(int hour$)
+{
+    bool active$ = false;
+    if( ( ( start_hour$ <= stop_hour$ ) && ( start_hour$ <= hour$ ) && ( stop_hour$ >= hour$ ) ) ||
+        ( ( start_hour$ > stop_hour$ ) && ( ( start_hour$ <= hour$ ) || ( stop_hour$ >= hour$ ) ) ) )
+    {
+        active$ = true;
+    }
+
+    if (active$ != prev_active$)
+    {
+        prev_active$ = active$;
+        if (active$)
+        {
+            StartEmitter$();
+        }
+        else
+        {
+            StopEmitter$();
+        }
+    }
+}
+
+
+startup state Idle$
+{
+	trigger OnGoHandleMessage$( WE_ENTERED_WORLD )
+	{
+		if ( !StringTool.IsEmpty( effect$ ) )
+		{
+			SetState Active$;
+		}
+		else
+		{
+			Report.ErrorF( "Effect emitter used in '%s' has no effect configured!", owner.Go.TemplateName );
+		}
+	}
+}
+
+
+state Active$
+{
+	event OnEnterState$
+	{
+		this.CreateTimer( 1, 1 );  // timer 1 in 1s
+	}
+
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage /*msg$*/ )
+	{
+		if( e$ == WE_LEFT_WORLD )
+		{
+            StopEmitter$();
+		}
+	}
+
+	trigger OnTimer$( 1 )
+	{
+		int hour$ = TimeOfDay.Hour;
+        if (hour$ != prev_hour$)
+        {
+            prev_hour$ = hour$;
+            OnHourChange$(hour$);
+        }
+		this.CreateTimer( 1, 1 );  // timer 1 in 1s
+	}
+}
