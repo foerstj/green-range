@@ -1,0 +1,69 @@
+[t:template,n:dsx_elemental_water_minion_base]  // = dsx_elemental_water_minion
+{
+// Balanced to level 28, hard melee
+	category_name = "1W_evil_d";
+	doc = "dsx_elemental_water_minion";
+	specializes = dsx_angler_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =     19, 0;
+			intelligence = 8, 0;
+			dexterity =    12, 0;
+			melee =        20, 0;
+			nature_magic = 20, 0;
+			combat_magic = 20, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2732;
+		life             = 848;
+		max_life         = 848;
+		mana             = 399;
+		max_mana         = 399;
+		model = m_c_edm_mn_pos_1;
+		[textures]
+		{	
+			0 = b_c_edm_mele;
+		}		
+		[voice]
+		{
+			[attack]		{	* = s_e_attack_water_elemental_SED;	}			
+			[enemy_spotted]	{ priority = high; * = s_e_call_water_elemental; }
+			[die]			{ priority = high;	* = s_e_die_water_elemental;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_elemental_water_SED;		}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 170; 
+		damage_min = 160;
+	}
+	
+	[common]
+	{
+		screen_name = "Water Elemental Minion";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
+	[defend] { defense = 270; }
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= true;
+		
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+
+[t:template,n:gr_water_spirit_fish]
+{
+    specializes = dsx_elemental_water_minion_base;
+}

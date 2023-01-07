@@ -1,0 +1,149 @@
+[t:template,n:dsx_elemental_water_base]  // = dsx_elemental_water
+{
+// Balanced to level 28++, hard melee
+	category_name = "1W_evil_d";
+	doc = "dsx_elemental_water";
+	specializes = dsx_elemental_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =     30, 0;
+			intelligence = 8, 0;
+			dexterity =    20, 0;
+			melee =        33, 0;
+			nature_magic = 30, 0;
+			combat_magic = 30, 0;
+		}
+	}
+	[aspect]
+	{
+		life_recovery_period = 5;
+		life_recovery_unit   = 0;
+		experience_value = 2732;
+		life             = 1417;
+		max_life         = 1417;
+		mana             = 399;
+		max_mana         = 399;
+		model = m_c_edm_we;
+		textures:0 = b_c_edm_we-static;		
+		[voice]
+		{
+			[attack]		{	* = s_e_attack_water_elemental_SED;	}			
+			[enemy_spotted]	{ priority = high; * = s_e_call_water_elemental; }
+			[die]			{ priority = high;	* = s_e_die_water_elemental;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_elemental_water_SED;		}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 480; 
+		damage_min = 425;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.5;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 1.5, 1.5, 1.5;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_la_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=mg; }
+			}		
+		}
+	}
+	[common]
+	{
+		screen_name = "Water Elemental"; //--
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode; //--
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_blue");
+			}
+		}
+	}
+	[defend] { defense = 420; }
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= false;
+		
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[water_elemental_manager]
+	{
+		sphere_radius = 13.5;
+	}
+}
+
+[t:template,n:gr_water_spirit_sm]
+{
+    specializes = dsx_elemental_water_base;
+
+    [aspect] { scale_base = 0.7; }
+}
+[t:template,n:gr_water_spirit_lg]
+{
+    specializes = dsx_elemental_water_base;
+
+    [aspect] { scale_base = 1.0; }
+}

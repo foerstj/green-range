@@ -1,0 +1,351 @@
+[t:template,n:dsx_elemental_air_base]  // = dsx_elemental_air
+{
+// Balanced for level 28++, hard melee
+	category_name = "1W_evil_d";
+	doc = "dsx_elemental_air";
+	specializes = dsx_elemental_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =     20, 0;
+			intelligence = 20, 0;
+			dexterity =    20, 0;
+			melee =        30, 0;
+			nature_magic = 30, 0;
+			combat_magic = 30, 0;			
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2732;
+		life             = 1324;
+		max_life         = 1324;
+		mana             = 399;
+		max_mana         = 399;
+		model = m_c_edm_ae;
+		scale_multiplier = 1.5;
+		textures:0 = b_c_edm_ae-test;
+		[voice]
+		{
+
+			[attack]		{	* = s_e_attack_air_elemental_SED;	}			
+			[enemy_spotted]	{ priority = high; * = s_e_call_fury; }
+			[die]			{ priority = high;	* = s_e_die_boss_air_elemental;		}
+			[hit_critical]	{ priority = low;	* = s_e_hit_elemental_air_SED;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_elemental_air_SED;		}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 350; 
+		damage_min = 300;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.5;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 1.5, 1.5, 1.5;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_ae_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] 
+				{ 
+					00=mg; 
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds-02;
+					wake = rv;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}	
+	}
+	[common]
+	{
+		screen_name = "Air Elemental"; //--
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_air");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_air_die");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_cyan");
+			}
+		}
+	}
+	[defend] { defense = 300; }	
+	[effect_aftereffect]
+	{
+		effect=dsx_elemental_air_die2;
+		effectDelay=.25;
+
+		lifeSpan=6;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_air_elemental_blast; }
+
+	}
+	[mind]
+	{		
+		jat_startup			= world\ai\jobs\common\job_startup_reveal.skrit;
+		jat_die 						= world\ai\jobs\common\job_die_fade.skrit;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= true;
+
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+		jat_attack_object_melee	 		= world\ai\jobs\common\job_attack_object_melee.skrit
+			?persistence				= 0.0
+			&hit_multiple				= true;
+
+		on_enemy_entered_icz_switch_to_melee = true;
+
+		actor_weapon_preference		= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= true;
+		actor_auto_switches_to_melee	= true;
+
+		sight_origin_height		= 1;
+		melee_engage_range 		= 7.0;
+		personal_space_range 		= 1.0;
+		ranged_engage_range 		= 14.0;
+		sight_range 			= 14.0;
+	}
+}
+
+[t:template,n:gr_wind_spirit_lg]
+{
+    specializes = dsx_elemental_air_base;
+}
+
+[t:template,n:dsx_elemental_air_minion_base]  // = dsx_elemental_air_minion
+{
+// Balanced for level 28, hard melee
+	category_name = "1W_evil_d";
+	doc = "dsx_elemental_air_minion";
+	specializes = dsx_elemental_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 19, 0;
+			intelligence 	=  8, 0;
+			dexterity 		= 12, 0;
+			melee 			= 20, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2732;
+		life             = 802;
+		max_life         = 802;
+		mana             = 10;
+		max_mana         = 10;
+		model = m_c_edm_ae;
+		textures:0 = b_c_edm_ae-test;
+		//b_c_edm_ae-static;
+		[voice]
+		{
+
+			[attack]		{	* = s_e_attack_air_elemental_SED;	}			
+			[enemy_spotted]	{ priority = high; * = s_e_call_air_elemental_SED; }
+			[die]			{ priority = high;	* = s_e_die_air_elemental_SED;		}
+			[hit_critical]	{ priority = low;	* = s_e_hit_elemental_air_SED;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_elemental_air_SED;		}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 140; 
+		damage_min = 120;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.5;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 1.5, 1.5, 1.5;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_ae_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=mg; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds-02;
+					wake = rv;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}	
+	}
+	[common]
+	{
+		screen_name = "Air Elemental Minion"; //--
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_air_minion");
+				action* = call_sfx_script("dsx_elemental_air_minion_spawn");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_air_minion_die");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+		}
+	}
+	[defend] { defense = 219; }	
+	[effect_aftereffect]
+	{
+		effect=dsx_elemental_air_minion_die2;
+		effectDelay=.25;
+
+		lifeSpan=6;
+	}
+	[mind]
+	{
+		jat_startup			= world\ai\jobs\common\job_startup_reveal.skrit;
+		jat_die 						= world\ai\jobs\common\job_die_fade.skrit;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= true;
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+
+		sight_origin_height		= 1;
+		melee_engage_range 		= 20.0;
+		personal_space_range 		= 0.7;
+		ranged_engage_range 		= 20.0;
+		sight_range 			= 20.0;
+	}
+}
+
+[t:template,n:gr_wind_spirit_sm]
+{
+    specializes = dsx_elemental_air_minion_base;
+}

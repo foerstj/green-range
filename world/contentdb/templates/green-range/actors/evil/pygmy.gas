@@ -1,0 +1,87 @@
+[t:template,n:dsx_pygmy_base]  // = dsx_pygmy
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_pygmy";
+	specializes = dsx_base_pygmy;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 10,0;
+			intelligence 	= 7,0;
+			dexterity 		= 8,0;
+			melee 			= 6,0;
+		}
+	}
+	[aspect]
+	{
+		scale_base = 1.4;
+		experience_value = 88;
+		life = 86;
+		max_life = 86;
+		mana = 6;
+		max_mana = 6;
+		model = m_c_edm_PYGMY_pos_1;
+		[textures] { 0=b_c_edm_pygmy; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 37;
+		damage_min = 34;
+	}
+	[common]
+	{
+		screen_name="Gulik";
+		membership = monster, party_lava_imp_02;
+	}
+	[defend] { defense=60; }
+	[inventory]
+	{
+		[pcontent]
+	{
+	/* Generated: Tue Jun 17 11:13:15 2003
+		Level 10, Weak */
+		[oneof*]
+		{
+			[gold*]
+			{
+				chance = 0.2;
+				min = 115;
+				max = 229;
+			}
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = potion_mana_small;
+				il_main = potion_health_small;
+			}
+			[oneof*]
+			{
+				chance = 0.1;
+				il_main = #weapon/17-28;
+				il_main = #armor/6-53;
+				il_main = #*/17-28;
+			}
+			[oneof*]
+			{
+				chance = 0.005;
+				il_main = #weapon/-rare(1)/17-30;
+				il_main = #armor/-rare(1)/34-53;
+				il_main = #*/-rare(1)/17-30;
+			}
+			
+		}
+	}
+	}
+}
+
+[t:template,n:gr_pygmy]
+{
+    specializes = dsx_pygmy_base;
+
+    [common]
+    {
+        screen_name = "Pygmy";
+    }
+}

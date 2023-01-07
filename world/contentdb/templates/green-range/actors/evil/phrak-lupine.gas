@@ -1,0 +1,139 @@
+[t:template,n:swamp_stinger_base]  // = swamp_stinger
+{
+	category_name = "1W_evil_d";
+	doc = "swamp_stinger";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		8, 0;
+			intelligence = 	4, 0;
+			dexterity = 	13, 0;
+			melee =  		5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 800;
+		life = 180;
+		max_life = 180;
+		mana = 8;
+		max_mana = 8;
+		model = m_c_edm_st_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_swamp_stinger; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 85;
+		damage_min = 75;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.930000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_st_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=fl; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Swamp Stinger";
+		//[template_triggers]
+		//{
+		//	[*]
+		//	{
+		//		action* = call_sfx_script("swamp_stinger_butt_propulsion");
+		//		condition* = receive_world_message("WE_ENTERED_WORLD");
+		//		single_shot = true;
+		//	}
+		//	[*]
+		//	{
+		//		action* = call_sfx_script("swamp_stinger_butt_puffs");
+		//		condition* = receive_world_message("we_anim_sfx",1);
+		//	}
+		//}
+	}
+	[defend] { defense=150; }
+	[mind]
+	{
+		melee_engage_range = 14;
+		personal_space_range = 0.5;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			frag_glb_swamp_stinger_01 = 1;
+			frag_glb_swamp_stinger_02 = 2;
+			frag_glb_swamp_stinger_03 = 2;
+			frag_glb_swamp_stinger_04 = 1;
+			frag_glb_swamp_stinger_05 = 2;
+		}
+	}
+}
+
+[t:template,n:gr_phrak_lupine_base]
+{
+    specializes = swamp_stinger_base;
+
+    [aspect]
+    {
+        textures:0 = b_c_edm_ph-03;
+    }
+}
+[t:template,n:gr_phrak_lupine] { specializes = gr_phrak_lupine_base; }
+[t:template,n:gr_phrak_piercer_lupine] { specializes = gr_phrak_lupine_base; }
