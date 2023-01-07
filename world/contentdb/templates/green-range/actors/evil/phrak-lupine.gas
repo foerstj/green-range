@@ -74,6 +74,17 @@
     {
         textures:0 = b_c_edm_ph-03;
     }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_gr_phrak_lupine_01 = 1;
+			frag_gr_phrak_lupine_02 = 2;
+			frag_gr_phrak_lupine_03 = 2;
+			frag_gr_phrak_lupine_04 = 1;
+			frag_gr_phrak_lupine_05 = 2;
+		}
+	}
 }
 
 [t:template,n:gr_phrak_lupine]
@@ -91,7 +102,7 @@
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_phrak_dart; }
+		[other] { il_active_primary_spell = gr_spell_phrak_lupine_dart; }
     }
 	[mind]
 	{
