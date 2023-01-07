@@ -186,6 +186,27 @@
 [t:template,n:gr_wind_spirit_lg]
 {
     specializes = dsx_elemental_air_base;
+
+    [common]
+    {
+        screen_name = "Wind Spirit";
+        [template_triggers]
+        {
+            // remove rays
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_air");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_air_die");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+        }
+    }
 }
 
 [t:template,n:dsx_elemental_air_minion_base]  // = dsx_elemental_air_minion
@@ -348,4 +369,6 @@
 [t:template,n:gr_wind_spirit_sm]
 {
     specializes = dsx_elemental_air_minion_base;
+
+    [common] { screen_name = "Small Wind Spirit"; }
 }

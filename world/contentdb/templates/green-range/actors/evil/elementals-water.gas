@@ -139,11 +139,21 @@
 {
     specializes = dsx_elemental_water_base;
 
+    [common]
+    {
+        screen_name = "Small Water Spirit";
+        [template_triggers] {}  // remove rays
+    }
     [aspect] { scale_base = 0.7; }
 }
 [t:template,n:gr_water_spirit_lg]
 {
     specializes = dsx_elemental_water_base;
 
+    [common]
+    {
+        screen_name = "Water Spirit";
+        [template_triggers] {}  // remove rays
+    }
     [aspect] { scale_base = 1.0; }
 }
