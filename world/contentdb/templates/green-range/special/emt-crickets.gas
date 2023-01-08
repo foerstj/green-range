@@ -1,0 +1,14 @@
+[t:template,n:emt_sound_crickets_nightly]
+{
+	specializes		= emitter_lightweight;
+    category_name	= "emitter";
+
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 12;
+	  f repeat_rate = 10;
+	  i start_hour = 20;
+	  i stop_hour = 1;
+	}
+}
