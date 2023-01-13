@@ -715,105 +715,12 @@
 	  p position = -0.0754852,-2,5.52797,0xea4581ec;
 	}
 }
-[t:trigger_plane_box,n:0x70700145]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT - prep sikra wiring.";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x70700141,0f,"default","",0), delay(0.3), doc("sikra huddles");
-				action* = send_world_message("we_req_use",0x70700142,0f,"default","",0), doc("sikra dumb");
-				action* = send_world_message("we_req_activate",0x70700144,0f,"default","",0), doc("sikra non-selectable");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(13.000000,3.000000,7.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 5.03347,-1.99999,4.14318,0xea4581ec;
-	}
-}
-[t:trigger_change_mood_box,n:0x7070013a]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("gr-ps5-dgn"), doc("match sikra to party");
-				action* = fade_nodes(0x6A6737D8,1,6,-1,"out:black"), doc("match sikra to party");
-				action* = fade_nodes(0x6A6737D8,1,11,-1,"out:black"), doc("match sikra to party");
-				action* = fade_nodes(0x6A6737D8,1,8,-1,"out:black"), doc("match sikra to party");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,1.000000,5.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.190933,0.14476,0.291027,0x3fd88b01;
-	}
-}
-[t:trigger_change_mood_box,n:0x70700140]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD and SCRIPTED EVENT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_deactivate",0x70700141,0f,"default","",0), delay(0.15), doc("sikra gets up");
-				action* = send_world_message("we_req_activate",0x70700142,0f,"default","",0), doc("sikra == smaat");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(5.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.192429,0.577785,0.350893,0x3fd88b01;
-	}
-}
 [t:use_point,n:0x707001b4]
 {
 	[placement]
 	{
-	  q orientation = 0,-2.98023e-008,0,1;
-	  p position = -1.94949,0,-0.111913,0xdc600747;
+	  q orientation = 0,1,0,8.9407e-008;
+	  p position = -1.1613,0,0.230591,0x3fd88b01;
 	}
 }
 [t:use_point,n:0x707001b5]
