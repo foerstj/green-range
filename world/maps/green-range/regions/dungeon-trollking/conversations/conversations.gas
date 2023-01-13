@@ -1,0 +1,79 @@
+[conversation_sikra_multiplayer]
+{
+	[text*]
+	{
+		order = 0;
+		sample = s_v_path2dc_sikra1;
+		screen_text = "Ah, I have forseen your arrival. The Droog have been instructed to hold me here, but I don't think they even know why. They seem to fear me for reasons I cannot fathom, but then again I am Sikra, the daughter of Nong. I am... Traveler.";
+		choice = more;
+	}
+	[text*]
+	{
+		sample = s_v_path2dc_sikraMP2;
+		screen_text = "On behalf of my father Nong, the Brotherhood of Travelers for which we toil, and the Great Road upon which we journey, I offer humble thanks for my rescue.";
+	}
+}
+[conversation_sikra_first_sight]
+{
+	[text*]
+	{
+		sample = s_v_path2dc_sikra1;
+		screen_text = "Ah, I have forseen your arrival. The Droog have been instructed to hold me here, but I don't think they even know why. They seem to fear me for reasons I cannot fathom, but then again I am Sikra, the daughter of Nong. I am... Traveler.";
+		choice = more;
+		scroll_rate = 7.0;
+	}
+}
+[conversation_sikra_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_path2dc_sikra2;
+		screen_text = "On behalf of my father Nong, the Brotherhood of Travelers for which we toil, and the Great Road upon which we journey, I offer humble thanks for my rescue. I have naught else to offer except my skills, but I shall pledge them til the completion of your quest, if you so desire. May I join you?";
+		scroll_rate = 7.0;
+	}
+}
+[conversation_sikra_accept]
+{
+	[text*]
+	{
+		sample = s_v_path2dc_sikra3;
+		screen_text = "To the completion of your quest, to the ends of the world, I now vow my loyalty to you, servant of Ehb! Let us begin our sacred work.";
+		//activate_quest 	= ;
+	}
+}
+[conversation_sikra_reject]
+{
+	[text*]
+	{
+		sample = s_v_path2dc_sikra4;
+		screen_text = "I shall abide by your will, and hold your kindness in my heart. May the road you follow be pleasant, and your vengeance complete.";
+	}
+}
+[conversation_sikra_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_path2dc_sikra5;
+		screen_text = "I have not forgotten your generosity. I am glad to assist you, should you desire my help. Would you have one born with the blood of the Travelers fighting at your side?";
+		choice = potential_member;
+	}
+}
+[conversation_sikra_disband]
+{
+	[text*]
+	{
+		sample = s_v_path2dc_sikra6;
+		screen_text = "As you wish, but my loyalty remains yours. Should you need me again, I shall be glad to assist you. Fare well.";
+	}
+}
+[conversation_sikra_disband_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_path2dc_sikra7;
+		screen_text = "You have need of Sikra again? The honor would be mine if I might serve you further.";
+		choice = potential_member;
+	}
+}
+
