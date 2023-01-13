@@ -36,7 +36,7 @@ popd
 rmdir /S /Q "%tmp%\Bits"
 ::robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E
 robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xd regions
-for %%r in (mountains-x15z02 dungeon-trollking) do (
+for %%r in (mountains-x15z02 dungeon-trollking mountains-x15z03) do (
   robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\%%r" "%tmp%\Bits\world\maps\%map%\regions\%%r" /E
 )
 pushd %gaspy%
