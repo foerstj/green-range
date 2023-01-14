@@ -108,7 +108,8 @@
 	}
 }
 
-[t:template,n:gr_troll_dgn]
+[t:template,n:gr_troll_dgn] { specializes = gr_troll_dgn_base; }
+[t:template,n:gr_troll_dgn_base]
 {
     specializes = dsx_troll_mountain_base;
 
@@ -121,5 +122,64 @@
 			[enemy_spotted]	{ priority = high; * = s_e_call_troll_SED;	}
             [hit_glance]	{ priority = low; * = s_e_hit_troll_SED;	}
 		}
+	}
+}
+[t:template,n:gr_troll_dgn_throw]
+{
+    specializes = gr_troll_dgn_base;
+
+    [common] { screen_name = "Troll Chucker"; }
+	[inventory]
+	{
+		selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+            es_shield_hand = rock_troll_dgn;
+		}
+		[pcontent]
+        {
+            // same as base, but without es_weapon_hand
+            [oneof*]
+            {
+                //es_weapon_hand = cb_un_dsx_2h_troll;
+                [gold*]
+                {
+                    chance = 0.2;
+                    min = 1945;
+                    max = 3861;
+                }
+                [oneof*]
+                {
+                    chance = 0.088888888888889;
+                    il_main = potion_mana_small;
+                    il_main = potion_health_small;
+                }
+                [oneof*]
+                {
+                    chance = 0.111111111111111;
+                    il_main = potion_mana_medium;
+                    il_main = potion_health_medium;
+                }
+                [oneof*]
+                {
+                    chance = 0.15;
+                    il_main = #weapon/55-71;
+                    il_main = #armor/23-174;
+                    il_main = #*/55-71;
+                }
+                [oneof*]
+                {
+                    chance = 0.0075;
+                    il_main = #weapon/-rare(1)/58-77;
+                    il_main = #armor/-rare(1)/137-240;
+                    il_main = #*/-rare(1)/58-77;
+                }
+            }
+        }
+    }
+	[mind]
+	{
+		actor_weapon_preference			= WP_RANGED;
+		actor_auto_switches_to_ranged	= true;
 	}
 }
