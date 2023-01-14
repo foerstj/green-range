@@ -247,3 +247,61 @@
 		lightning = false;
 	}
 }
+[mood_setting*]  // robbers castle indoor
+{
+	mood_name = gr-ps5-rc-indoor;
+  f transition_time = 2.000000;
+  b interior = true;
+
+	[fog]
+	{
+	  x fog_color = 0xff606060;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 40.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		//ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_path2crypts_03;  // TODO
+		room_type = rt_mountains;
+	}
+}
+[mood_setting*]  // robbers castle roof (outdoor, rainy)
+{
+	mood_name = gr-ps5-rc-roof;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff647381;  // PS4 to make it a bit darker for looking down into roof window
+	  f fog_density = 0.5;
+	  f fog_near_dist = 50.000000;
+	  f fog_far_dist = 70.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_path2crypts_03;  // TODO
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
+	}
+	[rain]
+	{
+		rain_density = 200.0f;
+		lightning = false;
+	}
+}

@@ -1,0 +1,39 @@
+[t:elevator_2s_4c_2n,n:0xc7200065]
+{
+	[elevator_2s_4c_2n]
+	{
+	  i connect1_door_level1 = 9;
+	  i connect1_door_level2 = 9;
+	  x connect1_node_level1 = 0x3894CA76;
+	  x connect1_node_level2 = 0x7AAF91E4;
+	  i connect2_door_level1 = 10;
+	  i connect2_door_level2 = 10;
+	  x connect2_node_level1 = 0x3894CA76;
+	  x connect2_node_level2 = 0x7AAF91E4;
+	  i connect3_door_level1 = 11;
+	  i connect3_door_level2 = 11;
+	  x connect3_node_level1 = 0x3894CA76;
+	  x connect3_node_level2 = 0x7AAF91E4;
+	  i connect4_door_level1 = 12;
+	  i connect4_door_level2 = 12;
+	  x connect4_node_level1 = 0x3894CA76;
+	  x connect4_node_level2 = 0x7AAF91E4;
+	  f duration = 5;
+	  i elevator_connect1_door_level1 = 1;
+	  i elevator_connect1_door_level2 = 1;
+	  i elevator_connect2_door_level1 = 2;
+	  i elevator_connect2_door_level2 = 2;
+	  i elevator_connect3_door_level1 = 3;
+	  i elevator_connect3_door_level2 = 3;
+	  i elevator_connect4_door_level1 = 4;
+	  i elevator_connect4_door_level2 = 4;
+	  x elevator_node = 0xCB6FA699;
+		material = "dm_small";
+		moving1_actioninfo = "0x6A6737DA,1,2,-1,in,4.5;gr-ps5-rc-roof,4";
+		moving2_actioninfo = "0x6A6737DA,1,2,-1,out:black,0.5;gr-ps5-rc-indoor";
+	}
+	[placement]
+	{
+	  p position = 0.883569,0.15,-0.110054,0xcb6fa699;
+	}
+}
