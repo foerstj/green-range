@@ -238,6 +238,14 @@
 	  p position = -1.44465,0,-0.413584,0x0ba78d76;
 	}
 }
+[t:hell_boar,n:0x12f02e28]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.060408,0,0.998174;
+	  p position = 0.0108643,0,0.602406,0x0c4623ba;
+	}
+}
 [t:spiked_maw,n:0x12f02e38]
 {
 	[placement]
@@ -729,12 +737,84 @@
 	  p position = -1.5078,0,0.903606,0xf485ccbd;
 	}
 }
+[t:wolf_black,n:0x12f02e9a]
+{
+	[placement]
+	{
+	  p position = -1.32641,0,-1.48012,0xff5c34f3;
+	}
+}
 [t:dsx_kikclaw_2,n:0x12f02e59]
 {
 	[placement]
 	{
 	  q orientation = 0,0.047412,0,0.998875;
 	  p position = 0.634205,0,-0.943047,0x0d5baa8c;
+	}
+}
+[t:wolf_black,n:0x12f02e99]
+{
+	[placement]
+	{
+	  p position = 0.145903,0,0.055295,0x41593ed1;
+	}
+}
+[t:wolf_black_boss_01,n:0x12f02e1b]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("dark_wolf","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("dark_wolf","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.424467,0,0.905443;
+	  p position = -0.133011,0,1.8175,0x25c16dab;
+	}
+}
+[t:wolf_black,n:0x12f02e9b]
+{
+	[placement]
+	{
+	  p position = 1.47698,0,1.47798,0x424bf5dd;
+	}
+}
+[t:wolf_black,n:0x12f02e97]
+{
+	[placement]
+	{
+	  p position = 0.839504,0,0.607932,0x958ee93a;
 	}
 }
 [t:spiked_maw,n:0x12f02e37]
@@ -745,12 +825,11 @@
 	  p position = -1.66823,0,1.15807,0xe6353685;
 	}
 }
-[t:hell_boar,n:0x12f02e28]
+[t:wolf_black,n:0x12f02e98]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.060408,0,0.998174;
-	  p position = 0.0108643,0,0.602406,0x0c4623ba;
+	  p position = -1.94623,0,0.174234,0x8b698eda;
 	}
 }
 [t:gorack,n:0x12f02dfe]
@@ -871,84 +950,5 @@
 	{
 	  q orientation = 0,1,0,0.000854;
 	  p position = 0.0919441,0,-1.56743,0x7a95aff6;
-	}
-}
-[t:wolf_black_boss_01,n:0x12f02e1b]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("dark_wolf","active",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(16.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = change_quest_state("dark_wolf","completed",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.424467,0,0.905443;
-	  p position = -0.133011,0,1.8175,0x25c16dab;
-	}
-}
-[t:wolf_black,n:0x12f02e97]
-{
-	[placement]
-	{
-	  p position = 0.839504,0,0.607932,0x958ee93a;
-	}
-}
-[t:wolf_black,n:0x12f02e98]
-{
-	[placement]
-	{
-	  p position = -1.94623,0,0.174234,0x8b698eda;
-	}
-}
-[t:wolf_black,n:0x12f02e99]
-{
-	[placement]
-	{
-	  p position = 0.145903,0,0.055295,0x41593ed1;
-	}
-}
-[t:wolf_black,n:0x12f02e9a]
-{
-	[placement]
-	{
-	  p position = -1.32641,0,-1.48012,0xff5c34f3;
-	}
-}
-[t:wolf_black,n:0x12f02e9b]
-{
-	[placement]
-	{
-	  p position = 1.47698,0,1.47798,0x424bf5dd;
 	}
 }
