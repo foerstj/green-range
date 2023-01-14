@@ -190,14 +190,6 @@
 	  p position = -0.654117,0,-1.31788,0xe312d981;
 	}
 }
-[t:hell_boar,n:0x15901527]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.766469,0,0.642281;
-	  p position = -1.62441,0,0.325703,0x20ed1f79;
-	}
-}
 [t:dsx_kikclaw,n:0x15901535]
 {
 	[placement]
@@ -220,6 +212,14 @@
 	{
 	  q orientation = 0,0.999524,0,0.030864;
 	  p position = 1.34305,0,0.751831,0x7f97897e;
+	}
+}
+[t:hell_boar,n:0x15901527]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.766469,0,0.642281;
+	  p position = -1.62441,0,0.325703,0x20ed1f79;
 	}
 }
 [t:dsx_kikclaw,n:0x15901537]
@@ -260,5 +260,69 @@
 	{
 	  q orientation = 0,0.984506,0,0.175351;
 	  p position = -0.687449,0,0.352706,0x9bb8ddde;
+	}
+}
+[t:gorack,n:0x1590158f]
+{
+	[placement]
+	{
+	  p position = 1.44072,6,1.4871,0x03d829b8;
+	}
+}
+[t:gorack,n:0x15901590]
+{
+	[placement]
+	{
+	  p position = 3.06987,1.97901,0.470985,0x516ae0dd;
+	}
+}
+[t:gorack,n:0x15901591]
+{
+	[placement]
+	{
+	  p position = 0.119488,4,0.373107,0x0a8ee8cd;
+	}
+}
+[t:gorack_boss_01,n:0x15901592]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("enraged_gorack","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("enraged_gorack","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.02655,0.826187,0.445511,0x516ae0dd;
 	}
 }

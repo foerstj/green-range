@@ -58,6 +58,19 @@
 	  p position = 0.607906,0,-1.30678,0xa4251871;
 	}
 }
+[t:emt_sound,n:0x12f02e96]
+{
+	[placement]
+	{
+	  p position = 9.57575,2.66114,-0.300907,0x89e5953e;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_01b";
+	  f min_dist = 12;
+	}
+}
 [t:emt_sound_crickets_nightly,n:0x12f02dd1]
 {
 	[aspect]
@@ -164,18 +177,5 @@
 	{
 	  q orientation = 0,0.527241,0,0.849716;
 	  p position = -0.070079,0,-1.40577,0xb5cf9093;
-	}
-}
-[t:emt_sound,n:0x12f02e96]
-{
-	[placement]
-	{
-	  p position = 9.57575,2.66114,-0.300907,0x89e5953e;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "amb_wind_01b";
-	  f min_dist = 12;
 	}
 }
