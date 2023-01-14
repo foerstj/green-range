@@ -1,0 +1,85 @@
+[t:trigger_fade_nodes_box,n:0x14400c01]
+{
+	[common]
+	{
+		dev_instance_text = "FADE LIGHTBLOCK";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000144,1,99,-1,"out:instant");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(32.000000,32.000000,32.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -15.8531,-12,-20.1924,0xd8d70735;
+	}
+}
+[t:trigger_change_mood_box,n:0x14400c02]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps5-b");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.458313,1.61465,2.30094,0xd841a8ff;
+	}
+}
+[t:trigger_change_mood_box,n:0x14400c03]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps5-cave");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.325546,-11.992,-3.40425,0xe97073db;
+	}
+}
