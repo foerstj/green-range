@@ -113,7 +113,7 @@
 	}
 	[t:start_group,n:dev]
 	{
-	  b default = true;
+	  b default = false;
 		description = "dev";
 	  b dev_only = false;
 	  i id = 1698464;
@@ -1211,6 +1211,29 @@
 			{
 			  i required_level = 13;
 			}
+		}
+	}
+	[t:start_group,n:ranger-shelter-ps5]
+	{
+	  b default = true;
+		description = "A Ranger shelter in the Robbers Forest";
+	  b dev_only = false;
+	  i id = 1698464;
+		screen_name = "Robbers Forest Shelter";
+		[start_position]
+		{
+		  i id = 1;
+			position = -0.897618,0.000002,-0.789675,0x76F39DAF;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x76F39DAF;
+			}
+		}
+		[world_levels]
+		{
 		}
 	}
 	[t:start_group,n:ranger-shelter-tm]

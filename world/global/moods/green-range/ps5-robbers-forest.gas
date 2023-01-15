@@ -5,6 +5,13 @@
   f transition_time = 8.000000;
   b interior = false;
 
+    // defaults
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
 	  x fog_color = 0xff708090;
@@ -34,12 +41,19 @@
   f transition_time = 8.000000;
   b interior = false;
 
+    // wider frustum to allow seeing further
+	[frustum]
+	{
+		frustum_width		= 75.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
 	  x fog_color = 0xff708090;
 	  f fog_density = 0.5;
 	  f fog_near_dist = 40.000000;
-	  f fog_far_dist = 60.000000;
+	  f fog_far_dist = 70.000000;
 	  f fog_lowdetail_near_dist = 25.000000;
 	  f fog_lowdetail_far_dist = 40.000000;
 	}
@@ -55,6 +69,36 @@
 	{
 	  f wind_direction = 0.7854;  // NW
 	  f wind_velocity = 4.000000;
+	}
+}
+[mood_setting*]  // shelter on highpoint
+{
+	mood_name = gr-ps5-shelter;
+  f transition_time = 1.000000;
+  b interior = true;
+
+    // wider frustum to allow seeing further
+	[frustum]
+	{
+		frustum_width		= 75.0f;
+		frustum_height		= 60.0f;
+	}
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 40.000000;
+	  f fog_far_dist = 70.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		//ambient_track = s_e_ambient_wind_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_path2crypts_03;  // TODO
+		room_type = rt_generic;
 	}
 }
 [mood_setting*]  // lost witch
@@ -297,7 +341,7 @@
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
 		standard_track = s_m_path2crypts_03;  // TODO
-		room_type = rt_mountains;
+		room_type = rt_stonecorridor;
 	}
 }
 [mood_setting*]  // robbers castle roof (outdoor, rainy)
