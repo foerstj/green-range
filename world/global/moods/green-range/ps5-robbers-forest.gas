@@ -26,7 +26,8 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_path2crypts_03;  // TODO
+		standard_track = s_m_dragonquest;
+        battle_track = s_m_goblininventor_08;
 		room_type = rt_mountains;
 	}
 	[wind]
@@ -62,13 +63,14 @@
 		ambient_track = s_e_ambient_wind_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_path2crypts_03;  // TODO
+		standard_track = s_m_dragonquest;
+        battle_track = s_m_goblininventor_08;
 		room_type = rt_mountains;
 	}
 	[wind]
 	{
 	  f wind_direction = 0.7854;  // NW
-	  f wind_velocity = 4.000000;
+	  f wind_velocity = 4.000000;  // doubled
 	}
 }
 [mood_setting*]  // shelter on highpoint
@@ -97,7 +99,8 @@
 		//ambient_track = s_e_ambient_wind_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_path2crypts_03;  // TODO
+		standard_track = s_m_dragonquest;
+        battle_track = s_m_goblininventor_08;
 		room_type = rt_generic;
 	}
 }
@@ -121,10 +124,11 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_path2crypts_03;  // TODO
+		standard_track = s_m_dragonquest;
+        battle_track = s_m_goblininventor_08;
 		room_type = rt_mountains;
 	}
-	[rain]
+	[rain]  // because witch I guess
 	{
 		rain_density = 200.0f;
 		lightning = false;
