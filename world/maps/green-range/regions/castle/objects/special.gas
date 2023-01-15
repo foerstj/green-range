@@ -123,7 +123,7 @@
 	  p position = 0.0271564,-3.5,-1.39334,0x9a3da197;
 	}
 }
-[t:trigger_change_mood_box,n:0xc7200001]
+[t:trigger_change_mood_box,n:0xc72000a1]
 {
 	[common]
 	{
@@ -148,7 +148,7 @@
 	}
 	[placement]
 	{
-	  p position = -0.0801315,1.1809,3.52402,0x956a8fad;
+	  p position = 0.110764,16,-1.00011,0x189e42b3;
 	}
 }
 [t:trigger_change_mood_box,n:0xc720009c]
@@ -179,7 +179,7 @@
 	  p position = 0.127204,1.18047,3.54924,0x1e169022;
 	}
 }
-[t:trigger_change_mood_box,n:0xc72000a1]
+[t:trigger_change_mood_box,n:0xc7200001]
 {
 	[common]
 	{
@@ -204,6 +204,66 @@
 	}
 	[placement]
 	{
-	  p position = 0.110764,16,-1.00011,0x189e42b3;
+	  p position = -0.0801315,1.1809,3.52402,0x956a8fad;
+	}
+}
+[t:trigger_generic,n:0xc720012f]
+{
+	[common]
+	{
+		dev_instance_text = "PWL";
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("ps5_rc");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.14535,0,-0.788351,0x64e56750;
+	}
+}
+[t:trigger_generic,n:0xc7200130]
+{
+	[common]
+	{
+		dev_instance_text = "PWL";
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("ps5_rc");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.160216,16,0.14455,0x189e42b3;
 	}
 }

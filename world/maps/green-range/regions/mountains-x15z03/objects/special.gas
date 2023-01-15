@@ -203,3 +203,33 @@
 	  p position = 0.804981,-1.35,0.529785,0x5b8a7696;
 	}
 }
+[t:trigger_generic,n:0x13001014]
+{
+	[common]
+	{
+		dev_instance_text = "PWL";
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("ps5");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.3126,0,1.06288,0x4a13e327;
+	}
+}
