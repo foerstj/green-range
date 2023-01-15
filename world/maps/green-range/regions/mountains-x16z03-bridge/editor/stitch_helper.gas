@@ -2,4 +2,21 @@
 {
 	source_region_guid = 0x6A6737DB;
 	source_region_name = mountains-x16z03-bridge;
+	[t:stitch_editor,n:castle]
+	{
+		dest_region = castle;
+		[node_ids]
+		{
+			0x16032011 = 0x0DB7D955,5;
+			0x16032012 = 0x9B6C49D8,5;
+		}
+	}
+	[t:stitch_editor,n:mountains-x16z03]
+	{
+		dest_region = mountains-x16z03;
+		[node_ids]
+		{
+			0x16032001 = 0xB73D578F,2;
+		}
+	}
 }
