@@ -8,7 +8,7 @@
 		[other] { il_active_primary_spell = spell_gr_giant_skrubb_spit; }
     }
 
-    // stats from rock_golem
+    // stats from rock_golem, edited
 	[actor]
 	{
 		[skills]
@@ -33,5 +33,8 @@
 		damage_max = 230;
 		damage_min = 200;
 	}
-    [defend] { defense=548; }
+    [defend]
+    {
+        defense = 274;  // halved - was 548
+    }
 }
