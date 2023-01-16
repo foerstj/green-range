@@ -1,0 +1,348 @@
+// Progression step 3
+
+[t:template,n:crate_dsx_a3_r3-03_base]  // = crate_dsx_a3_r3-03
+{
+	category_name = "dsx_a3";
+	doc = "dsx_a3_r3-03";
+	
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.3;
+					max = 115;
+					min = 77;
+					min_pile = 20;
+				}
+				[oneof*]
+					{
+						chance = 0.15;
+						il_main = potion_mana_medium;
+						il_main = potion_health_medium;
+					}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/22-30;
+					il_main = #armor/10-62;
+					il_main = #*/22-30;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.03;
+					il_main = #weapon/-rare(1)/30-39;
+					il_main = #armor/-rare(1)/43-100;
+				}
+			}
+		}
+	}
+	[attack]
+	{
+		damage_max = 25;
+		damage_min = 25;
+	}
+	[trapped]
+	{
+		trap = trp_dsx_generator_arrow_crate;
+	}
+	
+	//everything from here is copied:
+	specializes		= base_container_wood;
+	[aspect]
+	{
+		model	= m_i_glb_crate-krug;
+		[textures]	{0=b_i_swp_crate-01;}
+	}
+}
+[t:template,n:gr_ctn_crate_gr_ps3]
+{
+    specializes = crate_dsx_a3_r3-03_base;
+	category_name = "container";
+}
+
+[t:template,n:crate_dsx_a3_r3-03a_base]  // = crate_dsx_a3_r3-03a
+{
+	category_name = "dsx_a3";
+	doc = "dsx_a3_r3-03a barrel";
+	
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.3;
+					max = 115;
+					min = 77;
+					min_pile = 20;
+				}
+				[oneof*]
+					{
+						chance = 0.15;
+						il_main = potion_mana_medium;
+						il_main = potion_health_medium;
+					}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/22-30;
+					il_main = #armor/10-62;
+					il_main = #*/22-30;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.03;
+					il_main = #weapon/-rare(1)/30-39;
+					il_main = #armor/-rare(1)/43-100;
+				}
+			}
+		}
+	}
+	[attack]
+	{
+		damage_max = 25;
+		damage_min = 25;
+	}
+	[trapped]
+	{
+		trap = trp_dsx_generator_arrow_barrel;
+	}
+	
+	//everything from here is copied:
+	specializes							= base_container_barrel;
+	
+	[aspect]
+	{
+		model		= m_i_swp_barrel-01;
+		[textures]			{0=b_i_swp_barrel-01;}
+	}
+}
+[t:template,n:gr_ctn_barrel_gr_ps3]
+{
+    specializes = crate_dsx_a3_r3-03a_base;
+	category_name = "container";
+}
+
+[t:template,n:crate_dsx_a3_r2-spec_base]  // = crate_dsx_a3_r2-spec
+{
+	category_name = "dsx_a3";
+	doc = "dsx_a3_r2-spec chest";
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 184;
+					min = 123;
+					min_pile = 20;
+				}
+				[oneof*]
+					{
+						il_main = potion_mana_medium;
+						il_main = potion_health_medium;
+					}
+				[oneof*]
+				{
+					il_main = #weapon/22-30;
+					il_main = #armor/10-62;
+					il_main = #*/22-30;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/30-39;
+					il_main = #armor/-rare(1)/43-100;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-unique(2)/30-39;
+					il_main = #armor/-unique(2)/43-100;
+				}
+				[oneof*]
+				{
+					il_main = #spell/9-11;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
+	
+	//everything from here is copied:
+	specializes = base_chest;
+	[common] { screen_name="Chest"; }
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-04;
+		[textures]							{ 0 = b_i_glb_chest-open-02; }
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+}
+[t:template,n:gr_ctn_chest_gr_ps3]
+{
+    specializes = crate_dsx_a3_r2-spec_base;
+	category_name = "container";
+}
+
+[t:template,n:barrel_glb_floating_03_dm_r10_base]  // = barrel_glb_floating_03_dm_r10
+{
+	category_name = "dm_r10";
+	doc = "1W_barrel_glb_floating_03_dm_r10";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel-03;
+	}
+	[attack]
+	{
+		damage_max = 26;
+		damage_min = 14;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 22;
+					min = 10;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_barrel;
+	}
+}
+[t:template,n:gr_ctn_barrel_floating_03_gr_ps3] { specializes = gr_ctn_barrel_floating_03_gr_ps3_base; }
+[t:template,n:gr_ctn_barrel_floating_03_gr_ps3_base]
+{
+    specializes = barrel_glb_floating_03_dm_r10_base;
+    category_name = "container";
+
+	[body]
+	{
+		initial_chore =	chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit =	infinite_loop;
+				[anim_files] { 00=barrel-03-float; }
+			}
+		}
+	}
+}
+
+[t:template,n:barrel_glb_floating_04_dm_r10_base]  // = barrel_glb_floating_04_dm_r10
+{
+	category_name = "dm_r10";
+	doc = "1W_barrel_glb_floating_04_dm_r10";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel-04;
+	}
+	[attack]
+	{
+		damage_max = 26;
+		damage_min = 14;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 20;
+					min = 12;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_barrel;
+	}
+}
+[t:template,n:gr_ctn_barrel_floating_04_gr_ps3] { specializes = gr_ctn_barrel_floating_04_gr_ps3_base; }
+[t:template,n:gr_ctn_barrel_floating_04_gr_ps3_base]
+{
+    specializes = barrel_glb_floating_04_dm_r10_base;
+    category_name = "container";
+
+	[body]
+	{
+		initial_chore =	chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit =	infinite_loop;
+				[anim_files] { 00=barrel-04-float; }
+			}
+		}
+	}
+}

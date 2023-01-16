@@ -1,0 +1,190 @@
+// Progression step 4
+
+[t:template,n:barrel_swp_01_sr_r1_base]  // = barrel_swp_01_sr_r1
+{
+	category_name = "sr_r1";
+	doc = "1W_barrel_swp_01_sr_r1";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_swp_barrel-01;
+		[textures]
+		{
+			0 = b_i_swp_barrel-01;
+		}
+	}
+	[attack]
+	{
+		damage_max = 44;
+		damage_min = 24;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 320;
+					min = 126;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_barrel;
+	}
+}
+[t:template,n:gr_ctn_barrel_gr_ps4]
+{
+    specializes = barrel_swp_01_sr_r1_base;
+	category_name = "container";
+}
+
+[t:template,n:chest_grs_02_sr_r1_base]  // = chest_grs_02_sr_r1
+{
+	category_name = "sr_r1";
+	doc = "1W_chest_grs_02_sr_r1";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-04;
+		[textures]
+		{
+			0 = b_i_glb_chest-open-02;
+		}
+	}
+	[attack]
+	{
+		damage_max = 50;
+		damage_min = 34;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 435;
+					min = 317;
+					min_pile = 78;
+					piles = 2 - 3;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/14-36;
+					il_main = #armor/20-90;
+					il_main = #*/14-36;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/34-42;
+					il_main = #armor/-rare(1)/89-104;
+					il_main = #*/-rare(1)/34-42;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/34-42;
+					il_main = #armor/-unique(2)/89-104;
+					il_main = #*/-unique(2)/34-42;
+				}
+				[oneof*]
+				{
+					chance = 0.6;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:gr_ctn_chest_gr_ps4]
+{
+    specializes = chest_grs_02_sr_r1_base;
+	category_name = "container";
+}
+
+[t:template,n:crate_grs_03_sr_r1_base]  // = crate_grs_03_sr_r1
+{
+	category_name = "sr_r1";
+	doc = "1W_crate_grs_03_sr_r1";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_crate-krug;
+		[textures]
+		{
+			0 = b_i_glb_crate-02;
+		}
+	}
+	[attack]
+	{
+		damage_max = 48;
+		damage_min = 29;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 415;
+					min = 375;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/14-40;
+					il_main = #armor/20-90;
+					il_main = #*/14-40;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_crate;
+	}
+}
+[t:template,n:gr_ctn_crate_gr_ps4]
+{
+    specializes = crate_grs_03_sr_r1_base;
+	category_name = "container";
+}
