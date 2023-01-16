@@ -52,4 +52,7 @@ The light spell is available via pcontent in all maps, but its effect is purely 
 ## Attribution
 Textures of Fox and beta Mucosa as well as the big Klars Trail sign courtesy of Eksevis.\
 Hi-res texture of Shrack (Floaters) and Giant Skrubb courtesy of AntonioR.\
+Dark Sprite courtesy of Bare Elf.\
+Light Spell made with help from Starfall.\
+Webbed trees and bushes are from Yesterhaven.\
 Custom music by Alexander Nakarada.
