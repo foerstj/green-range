@@ -335,6 +335,13 @@
   f transition_time = 8.000000;
   b interior = false;
 
+    // defaults
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
 	  x fog_color = 0xff708090;
@@ -370,6 +377,13 @@
   f transition_time = 2.000000;
   b interior = true;
 
+    // wider frustum to allow seeing further
+	[frustum]
+	{
+		frustum_width		= 75.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
 	  x fog_color = 0xff606060;
@@ -394,6 +408,13 @@
 	mood_name = gr-ps5-rc-roof;
   f transition_time = 8.000000;
   b interior = false;
+
+    // wider frustum to allow seeing further
+	[frustum]
+	{
+		frustum_width		= 75.0f;
+		frustum_height		= 60.0f;
+	}
 
 	[fog]
 	{
