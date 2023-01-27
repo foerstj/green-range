@@ -10,7 +10,7 @@ set ds=.
 :: path of TankCreator
 set tc=..\TankCreator
 
-:: Compile main resource file
+:: Compile map & resource files
 call "%doc_dsloa%\Bits\build.bat" %*
 
 ::pause
