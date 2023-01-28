@@ -4,7 +4,7 @@
   b hasalpha = false;
 	layer1alphaarg1 = texture;
 	layer1alphaarg2 = diffuse;
-	layer1alphaop = modulate;
+	layer1alphaop = arg1;
 	layer1colorarg1 = texture;
 	layer1colorarg2 = diffuse;
 	layer1colorop = modulate2x;
@@ -37,6 +37,7 @@
 	dither = false;
   b hasalpha = true;
 	layer1texture1 = b_t_ic01_rvr_simple;
+	layer1ushiftpersecond = 0.0;
 	layer1uwrap = true;
 	layer1vshiftpersecond = 0.5;
 	layer1vwrap = true;

@@ -1,5 +1,20 @@
 [t:tsd,n:b_t_ic01_rvr_bridge-boards-a]
 {
+  b dither = false;
+  b hasalpha = false;
+	layer1alphaarg1 = texture;
+	layer1alphaarg2 = diffuse;
+	layer1alphaop = arg1;
+	layer1colorarg1 = texture;
+	layer1colorarg2 = diffuse;
+	layer1colorop = modulate;
+  i layer1numframes = 1;
+  f layer1secondsperframe = 0.0;
 	layer1texture1 = b_t_ic01_rvr_bridge-boards-a;
+  f layer1ushiftpersecond = 0.0;
+  b layer1uwrap = true;
+  f layer1vshiftpersecond = 0.0;
+  b layer1vwrap = true;
+  i numlayers = 1;
   i texturedetail = 2;
 }
