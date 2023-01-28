@@ -7,8 +7,6 @@ set map=green-range
 set doc_dsloa=%USERPROFILE%\Documents\Dungeon Siege LoA
 :: path of DS installation
 set ds=.
-:: path of TankCreator
-set tc=..\TankCreator
 
 :: Compile map & resource files
 call "%doc_dsloa%\Bits\build.bat" %*
