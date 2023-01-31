@@ -7,7 +7,7 @@
             set $velocity 0,1.5,50;
 			set $accel 0,-15,-5;
 
-			set $flames 100;
+			set $flames 50;
 
 			set $width1 20;
 			set $width2 40;
@@ -18,25 +18,24 @@
 
 			sfx create fireb #SOURCE 
 				"must_update()dark()fctrl(0,1,10)flamesize(4)alphafade($fade)dur($dur)
-				color0(.4,1,0)cvel(1)lower_r0(0)velocity($velocity)cvel(1)accel($accel)
-				lower_r1(0)upper_r0($width1)upper_r1($width2)count($flames)";
+				color0(.4,.4,1)cvel(1)velocity($velocity)cvel(1)accel($accel)
+				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($flames)";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
 
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,0,1)flamesize(.3)alphafade($fade)dur($dur)
-				color0(1,1,0)cvel(1)lower_r0(0)velocity($velocity)cvel(1)accel($accel)
-				lower_r1(0)upper_r0($width1)upper_r1($width2)count($flames)";
+				color0(1,1,1)cvel(1)velocity($velocity)cvel(1)accel($accel)
+				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($flames)";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
 
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize(1)alphafade($fade)dur($dur)
-				color0(.6,.8,0)cvel(1)velocity($velocity)cvel(1)accel($accel)
-				lower_r0(3)lower_r1(5)upper_r0($width1)upper_r1(60)
-				count($flames)";
+				color0(.6,.6,.8)cvel(1)velocity($velocity)cvel(1)accel($accel)
+				lower_r0(3)lower_r1(5)upper_r0($width1)upper_r1(60)count($flames)";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
