@@ -2,19 +2,19 @@
 {
 	name	=gr_skatwyrm_gas;
 
-    // This is "dsx_skatwyrm_gas"
+    // This is "dsx_skatwyrm_gas" just with less obnoxious sound
 	script	=[[
-                      	set $velocity 0,3,100;
-			set $accel 0,-30,-10;         		
-            		
+            set $velocity 0,3,100;
+			set $accel 0,-30,-10;
+
 			set $flames1 100;
 			set $flames2 100;
 
 			set $width1 20;
 			set $width2 40;
 
-			sound play s_e_spell_fury_gas_cast at #TARGET_POSITION dist 3 20;
-			
+			sound play s_e_attack_skrubb_farm_sed at #TARGET_POSITION dist 1 10;
+
 			sfx create fireb #SOURCE 
 				"must_update()dark()fctrl(0,1,10)flamesize(4)alphafade(.5)dur(.7)
 				color0(.4,1,0)cvel(1)lower_r0(0)velocity($velocity)cvel(1)accel($accel)
@@ -41,6 +41,5 @@
 			sfx start #POP;
 
 			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
-
-           	]];
+        ]];
 }
