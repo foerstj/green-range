@@ -1,0 +1,40 @@
+[t:template,n:dsx_spell_skatwyrm_gas_base]  // = dsx_spell_skatwyrm_gas
+{
+	category_name = "magic";
+	doc = "Skatwyrm Gas";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 72;
+		damage_min = 68;
+	}
+	[magic]
+	{
+		cast_range = 8;
+		cast_reload_delay = 0;
+		effect_duration = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+		magic_class = mc_combat_magic;
+		skill_class = "Combat Magic";
+	}
+	[spell_fire]
+	{
+		effect_script = dsx_skatwyrm_gas;
+		particle_fit = 0.2;
+		watch_caster = true;
+	}
+}
+
+[t:template,n:gr_spell_skatwyrm_gas]
+{
+	specializes = dsx_spell_skatwyrm_gas_base;
+
+	[spell_fire]
+	{
+		effect_script = gr_skatwyrm_gas;
+	}
+}

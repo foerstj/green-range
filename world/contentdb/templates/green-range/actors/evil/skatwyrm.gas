@@ -80,6 +80,33 @@
     specializes = dsx_skatwyrm_base;
 
     [common] { screen_name = "Skatwyrm Picker"; }
+
+    // stats from swamp_stinger
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		8, 0;
+			intelligence = 	4, 0;
+			dexterity = 	13, 0;
+			melee =  		5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 800;
+		life = 180;
+		max_life = 180;
+		mana = 8;
+		max_mana = 8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 85;
+		damage_min = 75;
+	}
+	[defend] { defense=150; }
 }
 
 [t:template,n:dsx_skatwyrm_r_base]  // = dsx_skatwyrm_r
@@ -249,4 +276,35 @@
     specializes = dsx_skatwyrm_r_base;
 
     [common] { screen_name = "Skatwyrm Spitter"; }
+	[inventory]
+	{
+		[other] { il_active_primary_spell = gr_spell_skatwyrm_gas; }
+	}
+
+    // stats from swamp_stinger
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		8, 0;
+			intelligence = 	4, 0;
+			dexterity = 	13, 0;
+			melee =  		5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 800;
+		life = 180;
+		max_life = 180;
+		mana = 8;
+		max_mana = 8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 85;
+		damage_min = 75;
+	}
+	[defend] { defense=150; }
 }
