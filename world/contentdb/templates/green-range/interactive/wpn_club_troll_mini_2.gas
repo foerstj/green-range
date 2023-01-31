@@ -1,0 +1,31 @@
+[t:template,n:cb_un_2h_troll_swamp_base]  // = cb_un_2h_troll_swamp
+{
+	specializes = base_club;
+	doc = "swamp_club";
+	[aspect]
+	{
+		model = m_w_clb_009;
+	}
+	[attack]
+	{
+		damage_max = 85;
+		damage_min = 75;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Swamp Club";
+	}
+	[gui]
+	{
+		equip_requirements = strength:28;
+		inventory_height = 3;
+		inventory_icon = b_gui_ig_i_w_clb_009;
+		inventory_width = 1;
+	}
+}
+[t:template,n:cb_un_2h_gr_troll_mini_2]
+{
+    specializes = cb_un_2h_troll_swamp_base;
+    common:screen_name = "Wee-Wee Club";
+}
