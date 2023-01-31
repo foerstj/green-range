@@ -1,0 +1,221 @@
+[effect_script*]
+{
+	name	=gr_witch_attack;
+
+    // This is "ice_mage_balls" (used by swamp_witch), just with different color
+	script	=[[
+            set $color 0,.4,.5;
+            set $color2 .2,.48,.6;  // on collision
+			
+			sfx create orbiter #SOURCE 
+				"dur(1.3)scale(.3)radius(1)iphi(18)color0($color)";
+			sfx attach_point #PEEK @shield_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"dur(1.3)scale(.3)radius(1)iphi(18)color0($color)";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"dur(1.3)scale(.3)radius(1)iphi(18)color0($color)";
+			sfx attach_point #PEEK @shield_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"dur(1.3)scale(.3)radius(1)iphi(18)color0($color)";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"dur(1.3)scale(.3)radius(1)iphi(18)color0($color)";
+			sfx attach_point #PEEK @shield_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create trackball #TARGET_KB 
+				"invisible()velocity(10)texture(b_sfx_sparkle_02)scale(.4)
+				color0($color)dur(6)afterlife(0)";
+			sfx position_at #PEEK @weapon_bone source;
+			sfx friendly party #PEEK;
+			set $trackball #PEEK;
+			sfx start $trackball;
+			
+			get target_position $trackball target;
+			sound play s_e_spell_acid_cloud_cast at #POP dist 10 30;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(1)radius(0)phi(0)iphi(8)color0($color)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.8)radius(.5)phi(.7)iphi(8)color0($color)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.6)radius(1.25)phi(1)iphi(8)color0($color)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+
+			if( #LODFI > .5 )
+			{			
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.4)radius(2.5)phi(1.3)iphi(8)color0($color)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+				
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.2)radius(6)phi(1.6)iphi(8)color0($color)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+			}
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.8)radius(.5)phi(3.84)iphi(8)color0($color)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.6)radius(1.25)phi(4.14)iphi(8)
+				color0($color)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			if( #LODFI > .5 )
+			{
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.4)radius(2.5)phi(4.44)iphi(8)color0($color)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+				
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.2)radius(6)phi(4.74)iphi(8)color0($color)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+			}
+			////
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.8)radius(.5)phi(2.27)iphi(8)color0($color)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.6)radius(1.25)phi(2.57)iphi(8)
+				color0($color)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			if( #LODFI > .5 )
+			{
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.4)radius(2.5)phi(2.87)iphi(8)color0($color)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+				
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.2)radius(6)phi(3.17)iphi(8)color0($color)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+			}
+				
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.8)radius(.5)phi(5.41)iphi(8)color0($color)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.6)radius(1.25)phi(5.71)iphi(8)
+				color0($color)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			if( #LODFI > .5 )
+			{		
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.4)radius(2.5)phi(6.01)iphi(8)color0($color)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+				
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.2)radius(6)phi(6.31)iphi(8)color0($color)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+				
+				sfx create orbiter #SOURCE 
+					"must_update()dur(1.3)scale(.3)radius(1)iphi(18)color0($color)";
+				sfx attach_point #PEEK @weapon_bone target;
+				sfx start #POP;
+			}
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()dur(1.3)scale(.3)radius(1)iphi(18)color0($color)";
+			sfx attach_point #PEEK @shield_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()dur(1.3)scale(.3)radius(1)iphi(18)color0($color)";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx start #POP;
+			
+			waitfor collision $trackball #DEFAULT_TIMEOUT;
+
+			set $collision_type #POP;
+
+			if ( $collision_type != #NO_COLLISION )
+			{
+				get collision point $trackball;
+
+				sfx create spe #POP 
+					"tin(1)tout(1)ts(1)color0($color2)radius(.6)scale(.2)
+					count(20)dur(1)index0(0,-1.57,1.57)index1(0,-1.57,1.57)
+					speed0(11,0,11)speed1(10,0,10)space0(.5,.1,.5)space1(.5,.1,.5)";
+				sfx freeze_targets #PEEK;
+				sfx start #POP;
+
+				get collision point $trackball;
+
+				sfx create explosion #POP 
+					"texture(b_sfx_sparkle01)color0($color2)radius(0)dur(2)
+					omni_dir()";
+				sfx start #POP;
+
+			}
+
+			sfx destroy $trackball;
+
+			pause 2;
+			
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+        ]];
+}

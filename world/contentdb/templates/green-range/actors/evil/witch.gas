@@ -11,6 +11,22 @@
     {
         screen_name = "Mist Witch";
     }
+    [inventory]
+    {
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_gr_witch_attack;
+			il_spell_1 = spell_swamp_witch_summon;
+		}
+    }
+	[mind]
+	{
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true
+			&spell_chances				= "0.5,                   0.5"
+			&spells						= "spell_gr_witch_attack, spell_swamp_witch_summon";
+    }
 }
 
 [t:template,n:gr_witch_boss]
@@ -31,15 +47,6 @@
 			}
 		}
 	}
-    [inventory]
-    {
-		selected_active_location = il_active_primary_spell;
-		[other]
-		{
-			il_active_primary_spell=spell_ice_mage_balls;
-			il_spell_1=spell_swamp_witch_summon;
-		}
-    }
 
     // stats & loot from swamp_witch_boss_02 Lost Witch
 	[actor]
