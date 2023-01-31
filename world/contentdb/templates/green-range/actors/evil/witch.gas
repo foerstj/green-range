@@ -1,4 +1,5 @@
-[t:template,n:gr_witch]
+[t:template,n:gr_witch] { specializes = gr_witch_base; }
+[t:template,n:gr_witch_base]
 {
 	specializes = swamp_witch_base;
 
@@ -6,4 +7,92 @@
 	{
 		textures:0 = b_c_edm_sw-03;
     }
+    [common]
+    {
+        screen_name = "Mist Witch";
+    }
+}
+
+[t:template,n:gr_witch_boss]
+{
+	specializes = gr_witch_base;
+
+	[common]
+	{
+		screen_name="The Lost Mist Witch";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			}
+		}
+	}
+    [inventory]
+    {
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell=spell_ice_mage_balls;
+			il_spell_1=spell_swamp_witch_summon;
+		}
+    }
+
+    // stats & loot from swamp_witch_boss_02 Lost Witch
+	[actor]
+	{
+		[skills]
+		{
+			strength =  9, 0;
+			intelligence =  25, 0;
+			dexterity =  10, 0;
+			combat_magic =  25,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 4050;
+		life = 650;
+		max_life = 650;
+		mana = 856;
+		max_mana = 856;
+	}
+	[attack]
+	{
+		damage_max = 109;
+		damage_min = 99;
+	}
+    [defend] { defense=224; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #*/76-83;
+					il_main = #armor/255-299;
+                    il_main = #body,ro/255-299;
+				}
+	            [oneof*]
+				{
+		        	chance = 0.004;
+		            il_main = #weapon/-rare(1)/87-99;
+		            il_main = #armor/-rare(1)/271-329;
+	                il_main = #*/-rare(1)/87-99;
+	            }
+				[oneof*]
+				{
+	            	chance = 0.002;
+		            il_main = #weapon/-unique(2)/87-99;
+		            il_main = #armor/-unique(2)/271-329;
+	                il_main = #*/-unique(2)/87-99;
+				}
+            }
+		}
+	}
 }
