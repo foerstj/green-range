@@ -1,79 +1,87 @@
-[t:template,n:dsx_rock_beast_base]  // = dsx_rock_beast
+[t:template,n:dsx_golem_cobbleman_base]  // = dsx_golem_cobbleman
 //balanced to Level 17
 {
 	category_name = "1W_evil_d";
-	doc = "dsx_rock_beast";
+	doc = "dsx_golem_cobbleman";
 	specializes = base_rock_beast;
 	[actor]
 	{
 		[skills]
 		{
-			strength 		= 17,0;
-			intelligence 	=  8,0;
-			dexterity 		= 11,0;
-            melee 			= 16,0;
-            nature_magic 	= 16,0;
-            combat_magic 	= 16,0;
+			strength 		= 14, 0;
+			intelligence 	= 10, 0;
+			dexterity 		= 12, 0;
+			melee 			= 14, 0;
+			nature_magic	= 13, 0;
+			combat_magic 	= 13, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 1044;
-		life = 431;
-		material = stone;
-		max_life = 431;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 486;
+		life 			= 435;
+		max_life 		= 435;
+		mana 			= 100;
+		max_mana 		= 100;
+		textures:0 = b_c_edm_rb-05;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 104;
-		damage_min = 95;
+		damage_max 	= 119;
+		damage_min 	= 100;
+		reload_delay = 0;
 	}
 	[common] 
 	{ 
-		screen_name="Rock Beast"; 
+		screen_name = "Cobble Man"; 
 		membership = monster;	
 	}
-	[defend] { defense=280; }
+	[defend] { defense = 260; }
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
 		[other] { il_active_primary_spell=spell_rock_beast_blast_dsx; }
-		[pcontent]
-		{
-			/* Generated: Tue Jun 17 11:13:15 2003
-			Level 24, Medium */
-			[oneof*]
+			[pcontent]
 			{
-				[gold*]
-				{
-					chance = 0.2;
-					min = 1671;
-					max = 3318;
-				}
+				/* Generated: Tue Jun 17 11:13:15 2003
+				Level 16, Strong */
 				[oneof*]
 				{
-					chance = 0.2;
-					il_main = potion_mana_small;
-					il_main = potion_health_small;
+					[gold*]
+					{
+						chance = 0.2;
+						min = 331;
+						max = 658;
+					}
+					[oneof*]
+					{
+						chance = 0.2;
+						il_main = potion_mana_small;
+						il_main = potion_health_small;
+					}
+					[oneof*]
+					{
+						chance = 0.2;
+						il_main = #weapon/36-47;
+						il_main = #armor/19-109;
+						il_main = #*/36-47;
+					}
+					[oneof*]
+					{
+						chance = 0.01;
+						il_main = #weapon/-rare(1)/47-55;
+						il_main = #armor/-rare(1)/71-156;
+						il_main = #*/-rare(1)/47-55;
+					}
+					[oneof*]
+					{
+						chance = 0.005;
+						il_main = #weapon/-unique(2)/47-55;
+						il_main = #armor/-unique(2)/71-156;
+						il_main = #*/-unique(2)/47-55;
+					}			
 				}
-				[oneof*]
-				{
-					chance = 0.15;
-					il_main = #weapon/49-66;
-					il_main = #armor/21-156;
-					il_main = #*/49-66;
-				}
-				[oneof*]
-				{
-					chance = 0.0075;
-					il_main = #weapon/-rare(1)/52-71;
-					il_main = #armor/-rare(1)/118-221;
-					il_main = #*/-rare(1)/52-71;
-				}
-				
 			}
 		}
 	}
@@ -81,15 +89,43 @@
 
 [t:template,n:gr_rock_beast]
 {
-    specializes = dsx_rock_beast_base;
+    specializes = dsx_golem_cobbleman_base;
 
     [aspect]
     {
-		model = m_c_edm_ee;
-		textures:0 = b_c_edm_rb-05;
+		model = m_c_edm_ee;  // from earth elemental, with extra spikes on shoulders
     }
     [common]
     {
         screen_name = "Cobbler";
     }
+
+    // stats from dsx_elemental_earth_minion (keeping loot from cobbleman)
+	[actor]
+	{
+		[skills]
+		{
+			strength =     19, 0;
+			intelligence = 8, 0;
+			dexterity =    12, 0;
+			melee =        20, 0;
+			nature_magic = 20, 0;
+			combat_magic = 20, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2732;
+		life             = 872;
+		max_life         = 872;
+		mana             = 399;
+		max_mana         = 399;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 185; 
+		damage_min = 175;
+	}
+	[defend] { defense = 275; }	
 }
