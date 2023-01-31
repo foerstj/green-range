@@ -135,7 +135,8 @@
 	}
 }
 
-[t:template,n:gr_water_spirit_sm]
+[t:template,n:gr_water_spirit_sm] { specializes = gr_water_spirit_sm_base; }
+[t:template,n:gr_water_spirit_sm_base]
 {
     specializes = dsx_elemental_water_base;
 
@@ -146,7 +147,14 @@
     }
     [aspect] { scale_base = 0.6; }
 }
-[t:template,n:gr_water_spirit_lg]
+[t:template,n:gr_water_spirit_sm_summon]
+{
+	specializes = gr_water_spirit_sm_base;
+	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
+}
+
+[t:template,n:gr_water_spirit_lg] { specializes = gr_water_spirit_lg_base; }
+[t:template,n:gr_water_spirit_lg_base]
 {
     specializes = dsx_elemental_water_base;
 

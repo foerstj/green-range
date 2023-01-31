@@ -183,7 +183,8 @@
 	}
 }
 
-[t:template,n:gr_wind_spirit_lg]
+[t:template,n:gr_wind_spirit_lg] { specializes = gr_wind_spirit_lg_base; }
+[t:template,n:gr_wind_spirit_lg_base]
 {
     specializes = dsx_elemental_air_base;
 
@@ -371,7 +372,8 @@
 	}
 }
 
-[t:template,n:gr_wind_spirit_sm]
+[t:template,n:gr_wind_spirit_sm] { specializes = gr_wind_spirit_sm_base; }
+[t:template,n:gr_wind_spirit_sm_base]
 {
     specializes = dsx_elemental_air_minion_base;
 
@@ -380,4 +382,9 @@
         scale_base = 0.8;
     }
     [common] { screen_name = "Small Wind Spirit"; }
+}
+[t:template,n:gr_wind_spirit_sm_summon]
+{
+	specializes = gr_wind_spirit_sm_base;
+	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
 }
