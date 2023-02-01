@@ -382,6 +382,20 @@
         scale_base = 0.8;
     }
     [common] { screen_name = "Small Wind Spirit"; }
+    // make ranged/mage enemy as well
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_air_elemental_blast; }
+	}
+    [mind]
+    {
+		on_enemy_entered_icz_switch_to_melee = true;
+		actor_weapon_preference		= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= true;
+		actor_auto_switches_to_melee	= true;
+    }
 }
 [t:template,n:gr_wind_spirit_sm_summon]
 {
