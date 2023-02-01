@@ -135,15 +135,28 @@
 	}
 }
 
-[t:template,n:gr_water_spirit_sm] { specializes = gr_water_spirit_sm_base; }
-[t:template,n:gr_water_spirit_sm_base]
+[t:template,n:gr_base_water_spirit]
 {
     specializes = dsx_elemental_water_base;
 
     [common]
     {
-        screen_name = "Small Water Spirit";
         [template_triggers] {}  // remove rays
+    }
+    [mind]
+    {
+		jat_die = world\ai\jobs\common\job_die_fade.skrit;
+    }
+}
+
+[t:template,n:gr_water_spirit_sm] { specializes = gr_water_spirit_sm_base; }
+[t:template,n:gr_water_spirit_sm_base]
+{
+    specializes = gr_base_water_spirit;
+
+    [common]
+    {
+        screen_name = "Small Water Spirit";
     }
     [aspect] { scale_base = 0.6; }
 
@@ -164,12 +177,11 @@
 [t:template,n:gr_water_spirit_lg] { specializes = gr_water_spirit_lg_base; }
 [t:template,n:gr_water_spirit_lg_base]
 {
-    specializes = dsx_elemental_water_base;
+    specializes = gr_base_water_spirit;
 
     [common]
     {
         screen_name = "Water Spirit";
-        [template_triggers] {}  // remove rays
     }
     [aspect] { scale_base = 1.0; }
 }
