@@ -141,8 +141,24 @@
 
     [common]
     {
-        [template_triggers] {}  // remove rays
+        [template_triggers]
+        {
+            // remove rays
+
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_water_reveal");  // kinda fountain
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+        }
     }
+	[effect_aftereffect]
+	{
+		effect = dsx_elemental_water_hide;  // kinda splash
+		effectDelay = 1.0;
+		lifeSpan = 6;
+	}
     [mind]
     {
 		jat_die = world\ai\jobs\common\job_die_fade.skrit;
