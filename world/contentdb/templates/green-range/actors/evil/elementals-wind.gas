@@ -382,6 +382,7 @@
         scale_base = 0.8;
     }
     [common] { screen_name = "Small Wind Spirit"; }
+
     // make ranged/mage enemy as well
 	[inventory]
 	{
@@ -395,6 +396,14 @@
 		actor_auto_switches_to_magic	= true;
 		actor_auto_switches_to_karate	= true;
 		actor_auto_switches_to_melee	= true;
+    }
+
+	[aspect]
+	{
+        // HALVED
+		experience_value = 1466;
+		life             = 401;
+		max_life         = 401;
     }
 }
 [t:template,n:gr_wind_spirit_sm_summon]
