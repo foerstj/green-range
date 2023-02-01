@@ -68,4 +68,12 @@
     specializes = dsx_elemental_water_minion_base;
 
     [common] { screen_name = "Water Spirit's Pet"; }
+    [aspect]
+    {
+        // voice from mangler
+		voice:die:			* = s_e_die_mangler;
+		voice:hit_glance:	* = s_e_hit_mangler_SED;
+		voice:hit_solid:	* = s_e_hit_mangler_SED;
+		voice:hit_critical:	* = s_e_hit_mangler_SED;
+    }
 }
