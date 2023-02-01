@@ -1,0 +1,249 @@
+[effect_script*]
+{
+	name	=gr_water_elem_die_sm;
+
+    // This is "dsx_elemental_water_hide" just different color
+	script	=[[
+            set $color .1,.6,.8;  // was 0,.3,1
+            set $scale 3;
+            set $vmin .5;
+            set $vmax 2;
+            set $count 5;
+
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)offset(0,2,0)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)offset(.2,1.8,.2)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)offset(.2,1.8,-.2)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)offset(-.2,1.8,-.2)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)offset(-.2,1.8,.2)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.4,1.5,.4)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.4,1.5,.4)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.4,1.5,-.4)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.4,1.5,-.4)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.5,1.1,.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.5,1.1,.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.5,1.1,-.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.5,1.1,-.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.5,1.1,0)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(0,1.1,.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.5,1.1,0)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(0,1.1,-.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.5,.7,.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.5,.7,.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.5,.7,-.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.5,.7,-.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+
+        ]];
+}
+
+[effect_script*]
+{
+	name	=gr_water_elem_die_lg;
+
+    // This is "gr_water_elem_die_sm" just a bit bigger
+	script	=[[
+            set $color .1,.6,.8;  // was 0,.3,1
+            set $scale 3;
+            set $vmin 1;  // was .5
+            set $vmax 4;  // was 2
+            set $count 10;  // was 5
+
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)offset(0,2,0)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)offset(.2,1.8,.2)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)offset(.2,1.8,-.2)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)offset(-.2,1.8,-.2)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)offset(-.2,1.8,.2)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.4,1.5,.4)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.4,1.5,.4)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.4,1.5,-.4)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.4,1.5,-.4)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.5,1.1,.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.5,1.1,.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.5,1.1,-.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.5,1.1,-.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.5,1.1,0)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(0,1.1,.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.5,1.1,0)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(0,1.1,-.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.5,.7,.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.5,.7,.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(-.5,.7,-.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+			sfx create explosion #TARGET
+				"dark()color0($color)color1(0,0,0)bone_orient()offset(.5,.7,-.5)
+				vmin($vmin)vmax($vmax)omni_dir()scale($scale)radius(0)count($count)";
+			sfx snap_to_ground #PEEK;
+			sfx start #PEEK;
+
+        ]];
+}
