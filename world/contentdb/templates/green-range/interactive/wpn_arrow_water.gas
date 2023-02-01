@@ -1,0 +1,71 @@
+[t:template,n:swamp_slinger_moss_base]  // = swamp_slinger_moss
+{
+	specializes = base_arrow;
+	[aspect]
+	{
+		material = stone;
+		model=m_w_misc_018; // $$ using a rock until I can get a moss ball. -ET
+		is_selectable	= false;
+		force_no_render = true;
+	}
+	[attack]
+	{
+		damage_max = 2;
+		damage_min = 2;
+		skill_class = "Combat Magic";
+	}
+	[common]
+	{
+		is_pcontent_allowed = FALSE;
+		screen_name = "Moss";
+
+		[template_triggers]
+		{
+			[*]
+			{
+				  action* = call_sfx_script("moss_goo");
+				  condition* = receive_world_message("WE_ENTERED_WORLD");
+				  single_shot = true;
+			}
+		}
+	}
+
+	[physics]
+	{
+		angular_velocity = 8,8,8;
+		randomize_velocity = TRUE;
+		elasticity = 0.9;
+		deflection_angle = 1;
+		orient_to_trajectory = FALSE;
+		break_effect = moss_explosion;
+		break_sound = s_e_hit_woodblunt_med2;
+		explode_if_hit_go = true;
+		explode_if_hit_terrain = true;
+		explode_when_expired = false;
+		explosion_magnitude = 3.5;
+		fire_resistance = 1;
+	}
+}
+
+[t:template,n:gr_water_spirit_water]
+{
+    specializes = swamp_slinger_moss_base;
+
+	[common]
+	{
+		screen_name = "Water";
+		[template_triggers]
+		{
+			[*]
+			{
+				  action* = call_sfx_script("water_goo");
+				  condition* = receive_world_message("WE_ENTERED_WORLD");
+				  single_shot = true;
+			}
+		}
+	}
+    [physics]
+    {
+		break_effect = water_explosion;
+    }
+}

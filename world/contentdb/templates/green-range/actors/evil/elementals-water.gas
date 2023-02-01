@@ -139,9 +139,54 @@
 {
     specializes = dsx_elemental_water_base;
 
+    [body]
+    {
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_la_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=mg; }  // EDITED: switched with magic
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=at; }  // EDITED: switched with attack
+			}		
+		}
+    }
+
     [common]
     {
         [template_triggers] {}  // remove rays
+        membership = monster;  // remove immune_xy
     }
     [guts_manager]
     {
@@ -150,6 +195,18 @@
     [mind]
     {
 		jat_die = world\ai\jobs\common\job_die_fade.skrit;
+
+		on_enemy_entered_icz_switch_to_melee = true;
+		actor_weapon_preference		= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= true;
+		actor_auto_switches_to_melee	= true;
+		on_enemy_entered_ocz_attack = true;
+    }
+    [inventory]
+    {
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell = spell_gr_water_spirit_attack; }
     }
 }
 

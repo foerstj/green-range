@@ -1,0 +1,44 @@
+[t:template,n:spell_swamp_slinger_ball_base]  // = spell_swamp_slinger_ball
+{
+	category_name = "magic";
+	doc = "spell swamp slinger ball";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		aiming_error_range_x = 2;
+		aiming_error_range_y = 2;
+		ammo_attach_bone = weapon_grip;
+		ammo_template = swamp_slinger_moss;
+		damage_max = 67;
+		damage_min = 65;
+		use_aiming_error = true;
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 10;
+	}
+	[spell_launch]
+	{
+		number = 1;
+	}
+}
+
+[t:template,n:spell_gr_water_spirit_attack]
+{
+    specializes = spell_swamp_slinger_ball_base;
+
+	[attack]
+	{
+        ammo_template = gr_water_spirit_water;
+	}
+}
