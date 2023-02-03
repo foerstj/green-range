@@ -250,42 +250,6 @@
 	  p position = 1.13442,0,-1.17828,0xdbde3c00;
 	}
 }
-[t:emt_glowworms_nightly,n:0x16b01444]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.931341;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.999637,0,-0.026955;
-	  p position = -0.919636,0,0.116299,0xe786bf8f;
-	}
-}
-[t:emt_glowworms_nightly,n:0x16b0144c]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.811163;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.470709,0,0.882289;
-	  p position = -0.281272,0,-0.340954,0x5f70f25d;
-	}
-}
-[t:emt_sound_crickets_nightly,n:0x16b0146b]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.10101;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.86733,0,-0.497734;
-	  p position = -0.455261,0,-1.36148,0x5f70f25d;
-	}
-}
 [t:emt_sound_crickets_nightly,n:0x16b0146c]
 {
 	[aspect]
@@ -344,6 +308,42 @@
 	{
 	  q orientation = 0,0.87789,0,0.478862;
 	  p position = 1.62298,0,-1.48598,0x0e7a3b2e;
+	}
+}
+[t:emt_glowworms_nightly,n:0x16b0144c]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.811163;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.470709,0,0.882289;
+	  p position = -0.281272,0,-0.340954,0x5f70f25d;
+	}
+}
+[t:emt_sound_crickets_nightly,n:0x16b0146b]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.10101;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.86733,0,-0.497734;
+	  p position = -0.455261,0,-1.36148,0x5f70f25d;
+	}
+}
+[t:emt_glowworms_nightly,n:0x16b01444]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.931341;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.999637,0,-0.026955;
+	  p position = -0.919636,0,0.116299,0xe786bf8f;
 	}
 }
 [t:emt_sound_crickets_nightly,n:0x16b0146d]
@@ -414,8 +414,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.752699,0,-0.658365;
-	  p position = 0.236133,0,1.93164,0x984c707d;
+	  q orientation = 0,0.997773,0,-0.0667042;
+	  p position = -1.65046,0,-0.27483,0x7cf31b67;
 	}
 }
 [t:emt_glowworms_nightly,n:0x16b01437]
@@ -572,5 +572,18 @@
 	{
 	  q orientation = 0,-0.997944,0,0.064086;
 	  p position = -0.022109,6,1.03681,0xf0030c9d;
+	}
+}
+[t:emt_sound,n:0x16b01539]
+{
+	[placement]
+	{
+	  p position = 0.128657,1.745,0.00939846,0x7e04714b;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_waterfall";
+	  f min_dist = 16;
 	}
 }
