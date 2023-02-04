@@ -2,13 +2,14 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD PWL";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("gr-ps6-a");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -19,10 +20,25 @@
 			  b single_shot = false;
 			  b start_active = true;
 			}
+			[*]
+			{
+				action* = set_player_world_location("ps6");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
 		}
 	}
 	[placement]
 	{
-	  p position = 1.15491,0,0.944006,0x711165ba;
+	  p position = 1.13677,0,1.89599,0x711165ba;
 	}
 }

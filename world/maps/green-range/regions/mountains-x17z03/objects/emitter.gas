@@ -1,3 +1,16 @@
+[t:emt_sound,n:0x158012a2]
+{
+	[placement]
+	{
+	  p position = -0.203119,0.741352,3.91227,0x1d7c3519;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_waterfall";
+	  f min_dist = 16;
+	}
+}
 [t:emt_glowworms_nightly,n:0x158011c4]
 {
 	[aspect]
@@ -236,18 +249,5 @@
 	{
 	  q orientation = 0,-0.59047,0,0.80706;
 	  p position = -1.61478,4,1.93145,0xbb0d479e;
-	}
-}
-[t:emt_sound,n:0x158012a2]
-{
-	[placement]
-	{
-	  p position = -0.203119,0.741352,3.91227,0x1d7c3519;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_waterfall";
-	  f min_dist = 16;
 	}
 }
