@@ -46,6 +46,31 @@
 	  p position = 1.02368,-6,-1.0577,0x6f54703c;
 	}
 }
+[t:emt_sound,n:0x17e00abd]
+{
+	[placement]
+	{
+	  p position = -1.11499,5.95,-11.5786,0xc442ea96;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_waterfall";
+	  f min_dist = 16;
+	}
+}
+[t:emt_glowworms_nightly,n:0x17e00a09]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.94199;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.964819,0,-0.262916;
+	  p position = 0.772743,-1.99898,-1.98981,0xd853674d;
+	}
+}
 [t:emt_sound_crickets_nightly,n:0x17e00a1a]
 {
 	[aspect]
@@ -70,18 +95,6 @@
 	  p position = -0.754621,6,0.4935,0xe06b9153;
 	}
 }
-[t:emt_glowworms_nightly,n:0x17e00a09]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.94199;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.964819,0,-0.262916;
-	  p position = 0.772743,-1.99898,-1.98981,0xd853674d;
-	}
-}
 [t:emt_sound_crickets_nightly,n:0x17e00a13]
 {
 	[aspect]
@@ -92,6 +105,20 @@
 	{
 	  q orientation = 0,-0.96216,0,0.272484;
 	  p position = 1.80598,-6,-1.41085,0x9e77a7bd;
+	}
+}
+[t:emt_sound,n:0x17e00aba]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.878868,8.05,1.00338,0xdb7cec0b;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_waterfall";
+	  f min_dist = 16;
 	}
 }
 [t:emt_sound_crickets_nightly,n:0x17e00a0d]
@@ -200,32 +227,5 @@
 	{
 	  q orientation = 0,0.717856,0,-0.696191;
 	  p position = 1.8071,-2,-1.75023,0x3b6b2f09;
-	}
-}
-[t:emt_sound,n:0x17e00aba]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.878868,8.05,1.00338,0xdb7cec0b;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_waterfall";
-	  f min_dist = 16;
-	}
-}
-[t:emt_sound,n:0x17e00abd]
-{
-	[placement]
-	{
-	  p position = -1.11499,5.95,-11.5786,0xc442ea96;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_waterfall";
-	  f min_dist = 16;
 	}
 }
