@@ -99,6 +99,42 @@
     [common]
     {
         screen_name = "Cobbler";
+
+        // Override to remove the eye glow, which looks off at scale != 1
+		[template_triggers]
+		{
+			//[*]
+			//{
+			//	condition* = receive_world_message("WE_ENTERED_WORLD");
+			//	single_shot = true;
+			//	action* = call_sfx_script("rock_beast_eye_glow");
+			//}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_r_foot");
+				condition* = receive_world_message("we_anim_other",'rfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_l_foot");
+				condition* = receive_world_message("we_anim_other",'lfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_smash");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_yell");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust_hands");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+		}
     }
 
     // stats from dsx_elemental_earth_minion (keeping loot from cobbleman)
