@@ -215,6 +215,7 @@
 				single_shot = true;
 			}
         }
+        membership = monster;  // removed immune_xy
     }
     // Start the sfx on either job_startup_reveal trigger
     [msg_switch2]
@@ -412,6 +413,7 @@
 				single_shot = true;
 			}
 		}
+        membership = monster;  // removed immune_xy
     }
     // Start the sfx on either job_startup_reveal trigger
     [msg_switch2]
