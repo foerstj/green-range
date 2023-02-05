@@ -3,57 +3,58 @@
 	name	=gr_skatwyrm_gas;
 
 	script	=[[
-            set $velocity 0,5,50;
-			set $accel 0,-5,-5;
+            set $vy 10;
+            set $vz 50;
+			set $accel 0,-10,-5;
 
 			set $count 50;
 
 			set $width1 10;
 			set $width2 20;
-            set $dur 2.0;
-            set $fade 0.4;
-            set $fsize 0.4;
+            set $dur 3.0;
+            set $fade 0.3;
+            set $fsize 0.35;
 
-			sound play s_e_attack_skrubb_farm_sed at #TARGET_POSITION dist 1 9;
+			sound play s_e_attack_skrubb_farm_sed at #TARGET_POSITION dist 0.5 16;
 
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
-				color0(1,0,0)cvel(1)velocity(-5,5,50)cvel(1)accel($accel)
+				color0(1,0,0)cvel(1)velocity(-5,$vy,$vz)cvel(1)accel($accel)
 				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
-				color0(1,1,0)cvel(1)velocity(-3,5,50)cvel(1)accel($accel)
+				color0(1,1,0)cvel(1)velocity(-3,$vy,$vz)cvel(1)accel($accel)
 				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
-				color0(0,1,0)cvel(1)velocity(-1,5,50)cvel(1)accel($accel)
+				color0(0,1,0)cvel(1)velocity(-1,$vy,$vz)cvel(1)accel($accel)
 				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
-				color0(0,1,1)cvel(1)velocity(1,5,50)cvel(1)accel($accel)
+				color0(0,1,1)cvel(1)velocity(1,$vy,$vz)cvel(1)accel($accel)
 				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
-				color0(0,0,1)cvel(1)velocity(3,5,50)cvel(1)accel($accel)
+				color0(0,0,1)cvel(1)velocity(3,$vy,$vz)cvel(1)accel($accel)
 				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
-				color0(1,0,1)cvel(1)velocity(5,5,50)cvel(1)accel($accel)
+				color0(1,0,1)cvel(1)velocity(5,$vy,$vz)cvel(1)accel($accel)
 				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
