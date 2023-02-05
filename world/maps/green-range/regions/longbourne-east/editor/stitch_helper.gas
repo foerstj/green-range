@@ -2,6 +2,16 @@
 {
 	source_region_guid = 0xAAA10200;
 	source_region_name = longbourne-east;
+	[t:stitch_editor,n:cr_r1]
+	{
+		dest_region = cr_r1;
+		[node_ids]
+		{
+			0xaca10001 = 0xB5F40E4F,4;
+			0xaca10002 = 0xB5F40E4F,3;
+			0xaca10003 = 0xB5F40E4F,2;
+		}
+	}
 	[t:stitch_editor,n:longbourne-main]
 	{
 		dest_region = longbourne-main;
@@ -11,16 +21,6 @@
 			0xaaa10008 = 0x001FB947,2;
 			0xaaa10009 = 0x001FB947,1;
 			0xaaa10010 = 0x61EC16BE,3;
-		}
-	}
-	[t:stitch_editor,n:cr_r1]
-	{
-		dest_region = cr_r1;
-		[node_ids]
-		{
-			0xaca10001 = 0xB5F40E4F,4;
-			0xaca10002 = 0xB5F40E4F,3;
-			0xaca10003 = 0xB5F40E4F,2;
 		}
 	}
 }
