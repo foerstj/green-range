@@ -1,0 +1,176 @@
+[t:sign_glb_wesrins_cross,n:0x02a00064]
+{
+	[placement]
+	{
+	  q orientation = 0,0.999962,0,0.008726;
+	  p position = -2.5388,-1.9,-6.89386,0x3f7fe379;
+	}
+}
+[t:sign_glb_01,n:0x02a0068f]
+{
+	[common]
+	{
+		screen_name = "Town of Stonebridge";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.130526,0,0.991445;
+	  p position = 0.156427,-0.163483,-1.78879,0x5016cb3f;
+	}
+}
+[t:sign_glb_01,n:0x02a00690]
+{
+	[common]
+	{
+		screen_name = "Town of Glitterdelve";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.32127,-0.163483,0.0779037,0xa7a9ad98;
+	}
+}
+[t:sign_glb_01,n:0x02a00691]
+{
+	[common]
+	{
+		screen_name = "Town of Glacern";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.32506,-0.391678,0.069458,0xa7a9ad98;
+	}
+}
+[t:sign_glb_01,n:0x02a00692]
+{
+	[common]
+	{
+		screen_name = "Wesrin Cross - Eastern Tower";
+	}
+	[placement]
+	{
+	  q orientation = 0.130526,0,0,0.991445;
+	  p position = -3.94225,0.066103,-0.0601368,0xa7a9ad98;
+	}
+}
+[t:door_grs_dwarvengate_use_toggle,n:0x02a00668]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT - Use Toggle Door";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02A0067C,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_mousehover",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02A006C3,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = -0.00132942,-3.9,0.02771,0xb43a6167;
+		use_point_scids = 0x02a00667,0x02a0067b;
+	}
+}
+[t:rock_grs_breakable_01,n:0x02a00685]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.4;
+	}
+	[placement]
+	{
+	  p position = -1.61866,-3.74784,0.92955,0xb43a6167;
+	}
+}
+[t:rock_grs_breakable_01,n:0x02a00686]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.92388;
+	  p position = -0.586056,-3.74784,0.739059,0xb43a6167;
+	}
+}
+[t:rock_grs_breakable_01,n:0x02a00687]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.3;
+	}
+	[placement]
+	{
+	  q orientation = 5.70243e-009,-0.923879,1.37669e-008,-0.382684;
+	  p position = -1.10814,-3.8627,1.47525,0xb43a6167;
+	}
+}
+[t:rock_grs_breakable_01,n:0x02a00688]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.3;
+	}
+	[placement]
+	{
+	  q orientation = 1.37669e-008,-0.92388,5.70243e-009,0.382683;
+	  p position = -1.22733,-3.47354,0.828491,0xb43a6167;
+	}
+}
+[t:respawn_statue,n:0x02a006d6]
+{
+	[placement]
+	{
+	  q orientation = 0,-5.66244e-007,0,1;
+	  p position = -1.21983,0.0606194,-1.29827,0xa69917b4;
+		use_point_scids = 0x02a006d1;
+	}
+}
+[t:lever_cav_stone_01,n:0x02a0009b]
+{
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x02A0009A;
+	  x on_scid = 0x02A0009A;
+	}
+	[placement]
+	{
+	  q orientation = -0.5,0.5,0.5,0.5;
+	  p position = 0.0340424,4,1.98888,0xb5d25bdb;
+	}
+}

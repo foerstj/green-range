@@ -1,0 +1,108 @@
+[t:crate_des_01_path2sd,n:0x02a00545]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.3775;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.292372,0,0.956305;
+	  p position = -4.24622,-1.85,3.53977,0x589c6d0e;
+		use_point_scids = 0x02a006d9;
+	}
+}
+[t:crate_des_01_path2sd,n:0x02a00548]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.38052;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.469471,0,-0.882948;
+	  p position = -3.11023,-1.85,4.32954,0x589c6d0e;
+		use_point_scids = 0x02a006d8;
+	}
+}
+[t:barrel_glb_path2sd,n:0x02a0054a]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.10621;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.878817,0,0.477159;
+	  p position = -4.57784,-1.85,1.96789,0x589c6d0e;
+		use_point_scids = 0x02a006da;
+	}
+}
+[t:barrel_glb_path2sd,n:0x02a0054b]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.977889;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.998135,0,0.0610489;
+	  p position = 1.61129,-1.85,4.54978,0x589c6d0e;
+		use_point_scids = 0x02a006d7;
+	}
+}
+[t:footlocker_glb_01_path2sd,n:0x02a00550]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.992924;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.71934,0,-0.694659;
+	  p position = -0.632134,-1.82099,-0.410217,0x1cc91824;
+	}
+}
+[t:barrel_glb_powder_keg_nice,n:0x02a00689]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02A00686,0f,"default","every",0), doc("rock");
+				action* = send_world_message("we_req_activate",0x02A00685,0f,"default","every",0), doc("rock");
+				action* = send_world_message("we_req_activate",0x02A00687,0f,"default","every",0), doc("rock");
+				action* = send_world_message("we_req_activate",0x02A00688,0f,"default","every",0), doc("rock");
+				action* = send_world_message("we_req_activate",0x02A00668,0f,"default","every",0), doc("door");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.499758,-3.94623,1.60692,0xb43a6167;
+	}
+}
+[t:footlocker_glb_01_path2sd,n:0x02a0054c]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.48092;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.350207,0,0.936672;
+	  p position = 3.91579,-1.15,3.74421,0x1d1c0222;
+	}
+}

@@ -1,0 +1,326 @@
+[t:cmd_report_gameplay_screen_player,n:0x42000496]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_bt_r1";
+	}
+	[placement]
+	{
+	  p position = -4.63509,-4.05,-3.78785,0x957f484f;
+	}
+}
+[t:cmd_camera_command,n:0x4200049e]
+{
+	[cmd_camera_command]
+	{
+	  x next_scid = 0x42000514;
+	}
+	[placement]
+	{
+	  q orientation = -0.0583779,0.935578,-0.185173,-0.294951;
+	  p position = 1.87521,2.22434,3.20339,0x957f484f;
+	}
+}
+[t:cmd_camera_command,n:0x42000514]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 6;
+	  x next_scid = 0x42000513;
+	}
+	[placement]
+	{
+	  q orientation = -0.0340094,0.981292,-0.150507,-0.115142;
+	  p position = 0.726898,2.09503,3.40446,0x957f484f;
+	}
+}
+[t:cmd_camera_command,n:0x42000513]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x42000515;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.00465799,0.973373,-0.228318,0.019858;
+	  p position = 3.19236,3.90061,-0.518547,0x787a9d23;
+	}
+}
+[t:cmd_ai_c_animate,n:0x42000387]
+{
+	[cmd_ai_dojob]
+	{
+	  i int1 = 1952541803;
+	  x next_scid = 0x4200038F;
+	  b setjobtraitinterruptable = true;
+	}
+	[placement]
+	{
+	  p position = -7.86097,-1.44233,-6.38944,0xa36f74f1;
+	}
+}
+[t:cmd_ai_c_animate,n:0x4200038f]
+{
+	[cmd_ai_dojob]
+	{
+	  i int1 = 2003398757;
+	  x next_scid = 0x42000388;
+	  b setjobtraitinterruptable = true;
+	}
+	[placement]
+	{
+	  p position = -7.96806,-1.44234,-5.13141,0xa36f74f1;
+	}
+}
+[t:cmd_camera_move,n:0x4200049a]
+{
+	[placement]
+	{
+	  q orientation = 0.165071,-0.687569,0.165071,0.687569;
+	  p position = 17.7471,4.60189,0.411071,0xa36f74f1;
+	}
+}
+[t:light_flicker,n:0x42000486]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x23E5695B;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.406737,0,0.913545;
+	  p position = 2.13267,-2.55866,0.72213,0x459c058d;
+	}
+}
+[t:cmd_auto_save,n:0x42000464]
+{
+	[common]
+	{
+		dev_instance_text = "Auto save after Stonebridge";
+	}
+	[placement]
+	{
+	  p position = 3.48218,-4.05,-1.24902,0x50ada26d;
+	}
+}
+[t:cmd_alignment_changer,n:0x4200052b]
+{
+	[cmd_dumb_guy]
+	{
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_visibility = true;
+	  b collide_spawn = false;
+	  b invincible_spawn = true;
+	  x target_actor = 0x42000105;
+	  b update_anim_spawn = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 2.49322,-4.05,-3.47819,0x50ada26d;
+	}
+}
+[t:cmd_alignment_changer,n:0x4200052f]
+{
+	[cmd_dumb_guy]
+	{
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_visibility = true;
+	  b collide_spawn = false;
+	  b invincible_spawn = true;
+	  x target_actor = 0x42000106;
+	  b update_anim_spawn = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.46163,-4.05,-3.71423,0x50ada26d;
+	}
+}
+[t:light_flicker,n:0x42000487]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0xC3D6C9E6;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.93358,0,-0.358368;
+	  p position = 0.402092,0.403517,2.40833,0x3e33c8ba;
+	}
+}
+[t:light_flicker,n:0x42000488]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x73BC5216;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.93358,0,-0.358368;
+	  p position = -0.766228,0.403518,-2.19168,0x3e33c8ba;
+	}
+}
+[t:cmd_alignment_changer,n:0x42000530]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_deactivated = aa_neutral;
+	  b change_collide = true;
+	  b change_selection = false;
+	  b collide_deactivated = false;
+	  b invincible_deactivated = true;
+		life_state_deactivated = ls_ignore;
+	  x target_actor = 0x42000108;
+	  b update_anim_deactivated = false;
+	}
+	[placement]
+	{
+	  p position = -9.28839,-0.55,-2.61968,0x750a906e;
+	}
+}
+[t:cmd_selection_toggle,n:0x42000531]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x42000108;
+	  b toggle_usability = true;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  p position = -9.27785,-0.55,-3.83307,0x750a906e;
+	}
+}
+[t:cmd_alignment_changer,n:0x42000532]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_deactivated = aa_neutral;
+	  b change_collide = true;
+	  b change_selection = false;
+	  b collide_deactivated = false;
+	  b invincible_deactivated = true;
+		life_state_deactivated = ls_ignore;
+	  x target_actor = 0x42000107;
+	  b update_anim_deactivated = false;
+	}
+	[placement]
+	{
+	  p position = -6.94257,-4.55,-6.08401,0x3f721326;
+	}
+}
+[t:cmd_selection_toggle,n:0x42000533]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x42000107;
+	  b toggle_usability = true;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  p position = -6.93394,-4.55,-7.13993,0x3f721326;
+	}
+}
+[t:cmd_animation_command,n:0x4200031d]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1952541803;
+	  x client_scid = 0x420000FB;
+	  b start_fidget = true;
+	}
+	[placement]
+	{
+	  p position = -2.35091,-1.9,0.715674,0xbb6e3d4d;
+	}
+}
+[t:cmd_camera_command,n:0x42000515]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 10;
+	  x next_scid = 0x01E006D4;
+	}
+	[placement]
+	{
+	  q orientation = 0.128709,-0.685401,0.125004,0.705715;
+	  p position = -3.81535,4.47436,1.37332,0x2f85c166;
+	}
+}
+[t:cmd_ai_c_animate,n:0x42000388]
+{
+	[cmd_ai_dojob]
+	{
+	  i int1 = 1819242347;
+	  x next_scid = 0x42000387;
+	  b setjobtraitinterruptable = true;
+	}
+	[placement]
+	{
+	  q orientation = -2.18557e-008,4.37114e-008,-9.55343e-016,1;
+	  p position = -8.34557,-6.79233,-5.52508,0xfe992c5b;
+	}
+}
+[t:cmd_animation_command,n:0x42000468]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811954;
+	  x client_scid = 0x420000DF;
+	  b hold_animation = true;
+	  x next_scid = 0x4200046B;
+	}
+	[placement]
+	{
+	  p position = -8.24052,-1.48495,-3.46272,0xfe992c5b;
+	}
+}
+[t:cmd_alignment_changer,n:0x42000469]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  x target_actor = 0x420000DF;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.7,0,0;
+	}
+	[placement]
+	{
+	  p position = -8.09423,-1.6523,-4.62354,0xfe992c5b;
+	}
+}
+[t:cmd_animation_command,n:0x4200046b]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811955;
+	  x client_scid = 0x420000DF;
+	  b repeat_animation = false;
+	  b start_fidget = true;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,0,0.4;
+	}
+	[placement]
+	{
+	  p position = -6.21936,-1.48495,-3.38486,0xfe992c5b;
+	}
+}

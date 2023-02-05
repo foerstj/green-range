@@ -1,0 +1,842 @@
+[t:guard,n:0x42000100]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		screen_name = "Town Guard";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.923879;
+	  p position = -1.35067,0,-0.0661783,0xe6461693;
+	}
+}
+[t:guard,n:0x42000104]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		screen_name = "Town Guard";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard2;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.0451131,5.72205e-006,-0.740976,0x71e3ff41;
+	}
+}
+[t:gyorn,n:0x42000047]
+{
+	[common]
+	{
+		dev_instance_text = "Multiplayer ";
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("quest_for_gyorn","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_talk_begin",0,"on_first_message"), doc("multiplayer npc[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_gyorn_multiplayer;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.56553,1.43051e-006,-1.41653,0x26c1513c;
+	}
+}
+[t:gyorn,n:0x42000144]
+{
+	[common]
+	{
+		dev_instance_text = "Singleplayer";
+	  b is_multi_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("quest_for_gyorn","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_talk_begin",0,"on_first_message"), doc("singleplayer npc[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_gyorn_accept;
+			* = conversation_gyorn_disband;
+			* = conversation_gyorn_disband_rejoin;
+			* = conversation_gyorn_join;
+			* = conversation_gyorn_reject;
+			* = conversation_gyorn_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_gyorn.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.58525,1.43051e-006,-1.63099,0x26c1513c;
+	}
+}
+[t:mp_townfolk_female_05,n:0x420004ba]
+{
+	[common]
+	{
+		screen_name = "Kalice";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_kalice;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.78814e-007,0,1;
+	  p position = -7.3912,-4.6,-2.81674,0xe940973a;
+	}
+}
+[t:mule_bt_r1,n:0x420004dd]
+{
+	[common]
+	{
+		screen_name = "Flower";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.19209e-007;
+	  p position = -7.45155,-4.6,0.118755,0xe940973a;
+	}
+}
+[t:skrubb_small,n:0x420004d0]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x420004D3,0f,"default","",0), doc("send to accum");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.5,0,0.866026;
+	  p position = -0.00239563,-0.217892,1.33946,0xdc795d5a;
+	}
+}
+[t:zed,n:0x4200012c]
+{
+	[aspect]
+	{
+	  f use_range = 2;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_zed_accept_have_money;
+			* = conversation_zed_accept_no_money;
+			* = conversation_zed_disband;
+			* = conversation_zed_disband_rejoin;
+			* = conversation_zed_join;
+			* = conversation_zed_reject;
+			* = conversation_zed_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_zed.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.798635,0,0.601815;
+	  p position = -9.02309,-1.49999,5.07278,0xa36f74f1;
+		use_point_scids = 0x4200045f;
+	}
+}
+[t:zed,n:0x420001a0]
+{
+	[common]
+	{
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_zed_multiplayer;
+		}
+	}
+	[mind]
+	{
+	  x initial_command = 0x00600380;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.798635,0,0.601815;
+	  p position = -9.02309,-1.49999,5.07278,0xa36f74f1;
+	}
+}
+[t:merchant_barkeep,n:0x42000240]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_izen;
+		}
+	}
+	[mind]
+	{
+	  f com_range = 5;
+	  x initial_command = 0x4200038F;
+	  f inner_comfort_zone_range = 3;
+	  f melee_engage_range = 4;
+	  f outer_comfort_zone_range = 5;
+	  f ranged_engage_range = 4;
+	  f sight_range = 5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -7.71815,-1.49998,-3.89748,0xa36f74f1;
+	}
+}
+[t:guard,n:0x42000105]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		screen_name = "Town Guard";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_use",0x4200052B,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard3;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 1.94063,-4.05,-3.74877,0x50ada26d;
+	}
+}
+[t:guard,n:0x42000106]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_use",0x4200052F,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.9559,-4.05,-3.44581,0x50ada26d;
+	}
+}
+[t:mp_townfolk_male_01,n:0x420004b3]
+{
+	[common]
+	{
+		screen_name = "Ordus Jarrell";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x42000540,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_talk_begin",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_ordus;
+			* = conversation_ordus_2;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ordus.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.866026,0,0.5;
+	  p position = 4.11028,-1.17907,-2.65742,0x3e33c8ba;
+	}
+}
+[t:merchant_blacksmith,n:0x420000b4]
+{
+	[common]
+	{
+		screen_name = "Blacksmith Rhone";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_blacksmith;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_merchant_blacksmith;
+	}
+	[placement]
+	{
+	  p position = -4.50403,-3.06003,-2.3162,0x3ad3f46d;
+	}
+}
+[t:jonn,n:0x420000b8]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_blacksmith_clerk;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.996195,0,0.087156;
+	  p position = 3.5645,-3.1,-1.20925,0x3ad3f46d;
+	}
+}
+[t:guard,n:0x42000107]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		dev_instance_text = "CONTAINS TRIGGER";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x42000532,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x42000533,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -8.57556,-0.55,-6.7425,0x750a906e;
+	}
+}
+[t:guard_captain,n:0x42000108]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		dev_instance_text = "CONTAINS TRIGGER";
+		screen_name = "Guard Captain";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x42000530,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x42000531,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_captain;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,0.382684;
+	  p position = -8.70251,-0.55,-5.07973,0x750a906e;
+	}
+}
+[t:mp_townfolk_f_03,n:0x420004d8]
+{
+	[common]
+	{
+		screen_name = "Mara";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_mara;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -5.25364,0.9,-5.07675,0xec8af72d;
+	}
+}
+[t:mp_townfolk_female_03,n:0x4200023d]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_alanna;
+			* = conversation_alanna_skrubb_dead;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_alanna.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -3.95664,2,2.68231,0x2dd51fe0;
+	}
+}
+[t:merchant_packmule,n:0x42000049]
+{
+	[common]
+	{
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_owen_multiplayer;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.087155,0,0.996195;
+	  p position = -0.79768,-1.9,0.784049,0xbb6e3d4d;
+	}
+}
+[t:mule_bt_r1,n:0x420000e9]
+{
+	[common]
+	{
+		screen_name = "Flare";
+	}
+	[placement]
+	{
+	  p position = -5.81242,-1.9,5.65818,0xbb6e3d4d;
+	}
+}
+[t:mule_bt_r1,n:0x420000fa]
+{
+	[common]
+	{
+		screen_name = "Silverhoof";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.782608,0,0.622515;
+	  p position = -7.16446,-1.9,-0.894435,0xbb6e3d4d;
+	}
+}
+[t:merchant_packmule,n:0x420000fb]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x4200031D,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_constructed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_owen_first;
+			* = conversation_owen_no_packmules;
+			* = conversation_owen_one_packmule;
+			* = conversation_owen_two_packmules;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_owen.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.087155,0,0.996195;
+	  p position = -0.775902,-1.9,0.795736,0xbb6e3d4d;
+	}
+}
+[t:lame_mare,n:0x42000492]
+{
+	[placement]
+	{
+	  q orientation = 0,0.833886,0,0.551937;
+	  p position = -1.30499,-1.9,-1.36897,0xbb6e3d4d;
+	}
+}
+[t:skrubb_small,n:0x420004d2]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x420004D3,0f,"default","",0), doc("send to accum");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -0.177347,-0.297792,0.199486,0xa1111752;
+	}
+}
+[t:adwana,n:0x420000d3]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_adwana;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.939693,0,0.34202;
+	  p position = -6.19979,-2.9,3.35261,0x51d490ef;
+	}
+}
+[t:naidi,n:0x42000137]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_naidi_accept_have_money;
+			* = conversation_naidi_accept_no_money;
+			* = conversation_naidi_disband;
+			* = conversation_naidi_disband_rejoin;
+			* = conversation_naidi_join;
+			* = conversation_naidi_reject;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_naidi.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.798636,0,0.601815;
+	  p position = -10.0251,-2.9,1.97276,0x51d490ef;
+	}
+}
+[t:naidi,n:0x420001b4]
+{
+	[common]
+	{
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_naidi_multiplayer;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.798636,0,0.601815;
+	  p position = -10.0251,-2.9,1.97276,0x51d490ef;
+	}
+}
+[t:rusk,n:0x420000df]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_rusk_accept_have_money;
+			* = conversation_rusk_accept_no_money;
+			* = conversation_rusk_disband;
+			* = conversation_rusk_disband_rejoin;
+			* = conversation_rusk_join;
+			* = conversation_rusk_reject;
+			* = conversation_rusk_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_rusk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.719341,0,0.694657;
+	  p position = -11.1913,-2.65,-2.81169,0xfe992c5b;
+	}
+}
+[t:rusk,n:0x420001dd]
+{
+	[common]
+	{
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_rusk_multiplayer;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.852641,0,0.522498;
+	  p position = -10.2125,-2.68398,-2.08866,0xfe992c5b;
+	}
+}
+[t:mp_townfolk_female_01,n:0x4200023c]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_ella;
+			* = conversation_ella_2;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ella.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.92388;
+	  p position = 8.53554,-2.59267,0.46701,0xfe992c5b;
+	}
+}

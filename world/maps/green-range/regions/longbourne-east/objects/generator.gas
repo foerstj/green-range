@@ -1,0 +1,58 @@
+[t:generator_bush_01,n:0x01e001e9]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "wolf_gray";
+	  x initial_command = 0x01E001F5;
+	  x spawnpoint = 0x01E001EB;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 3.10091,0,1.99662,0x45c97454;
+	}
+}
+[t:generator_bush_01,n:0x01e001ea]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "wolf_gray";
+	  x initial_command = 0x01E001F5;
+	  x spawnpoint = 0x01E001EC;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.55557,0,0.83147;
+	  p position = 2.4986,-2e-006,-0.637314,0xe08ffd67;
+	}
+}
+[t:gen_bush_grass-krug_scout,n:0x01e006da]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-2.08616e-007;
+	  p position = -1.16662,-3.87989,-1.3961,0x530f9f8f;
+	}
+}
+[t:gen_tent_flap-krug_scout,n:0x01e006d1]
+{
+	[placement]
+	{
+	  p position = 2.21828,0,1.80081,0x0c922bac;
+	}
+}
+[t:generator_alignment_changer,n:0x01e001fe]
+{
+	[generator_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  b change_visibility = true;
+		child_template_name = "phrak";
+	  x initial_command_activated = 0x01E001F6;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.980785,0,-0.19509;
+	  p position = -1.70803,-9.53674e-007,1.13775,0xd5ea58d4;
+	}
+}

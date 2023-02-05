@@ -1,0 +1,29 @@
+[conversation_ilandro]
+{
+	[text*]
+	{
+		order = 0;
+		screen_text = "Oh how wonderful to see another human again! My troupe and I tried to flee from those Krug when they overran Glitterdelve, but with the pass to Stonebridge blocked, our only option was to use the Wesrin Crossing. What a horrible mistake that was.";
+		//sample = s_v_greet_male_startled;
+		choice = more;
+	}
+	[text*]
+	{
+		screen_text = "We made it more than halfway, but those eight-legged horrors started pouring out of their tunnels behind the walls. We all ran as fast as we could, but... but... oh their screams were deafening. Why is this happening to me, why?";
+	}
+}
+[conversation_guard_captain]
+{
+	[text*]
+	{
+		order = 0;
+        	complete_quest* = quest_open_gate;
+		screen_text = "Well, we were just trying to figure out how to get the door open. You must be the foolhardy farmer my guards spoke of. I wouldn't have believed it if I hadn't seen it with my own eyes. Did you really kill all those Krug back there?";
+		//sample = s_v_greet_male_hi;
+		choice = more;
+	}
+	[text*]
+	{
+		screen_text = "The town of Stonebridge owes you a debt of thanks, friend. We will do our best to hold the ground you took for us.";
+	}
+}

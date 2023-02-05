@@ -1,0 +1,23 @@
+[t:elevator_2s_1c_2n,n:0x02a0009a]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 5;
+	  i connect_door_level2 = 5;
+	  x connect_node_level1 = 0xB5D25BDB;
+	  x connect_node_level2 = 0x13D70CF0;
+	  f duration = 8;
+	  i elevator_door_level1 = 3;
+	  i elevator_door_level2 = 3;
+	  x elevator_node = 0xF3B016E7;
+	  x level1_scid = 0x02A00683;
+	  x level2_scid = 0x02A00684;
+		moving1_actioninfo = "map_world_path2sd_a_1;0xADA10100,1,-1,-1,out:black;0xADA10100,2,-1,-1,out:black;0x0A8441F4,1,-1,-1,in;0x0A8441F4,2,-1,-1,out:black";
+		moving2_actioninfo = "map_world_path2sd_2,8;0xADA10100,1,-1,-1,in,7.5;0xADA10100,2,-1,-1,in,7.5;0x0A8441F4,1,-1,-1,out:black,7.5;0x0A8441F4,2,-1,-1,in,7.5";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.0154419,8.03383,-0.110804,0xf3b016e7;
+	}
+}

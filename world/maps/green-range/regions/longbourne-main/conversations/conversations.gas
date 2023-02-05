@@ -1,0 +1,499 @@
+[conversation_adwana]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+		sample = s_v_bt_adwana1;
+		screen_text = "The god's fire is in you, child. If you have need of potions, I have a few that may be of use and can be bought cheaply. Do you wish to see them?";
+	}
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_bt_adwana3;
+		screen_text = "How may this servant of Azunai assist you today?";
+	}
+	[goodbye*]
+	{
+		sample = s_v_bt_adwana2;
+	}
+}
+[conversation_blacksmith]
+{
+	[text*]
+	{
+		sample = s_v_bt_rhone1;
+		screen_text = "Too much fuss and bother, this talk about the Krug. True, they've made a mess of things, but you need look no further than old-fashioned greed to understand why they attacked. They only wanted a good bit of well-forged metal, just like you. Speaking of which, my son Jonn may be able to replace any equipment you lost in the raid. Check with him inside.";
+	}
+}
+[conversation_blacksmith_clerk]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+		sample = s_v_bt_jonn1;
+		screen_text = "Welcome to the Blackhammer Forge. The Krug stole most of our wares, but you won't get a better deal on what we've got left. What can I show you today?";
+	}
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_bt_jonn3;
+		screen_text = "What can I show you today?";
+	}
+	[goodbye*]
+	{
+		sample = s_v_bt_jonn2;
+	}
+}
+[conversation_guard]
+{
+	[text*]
+	{
+		//sample = s_v_greet_male_heythere;
+		screen_text = "Welcome to Stonebridge, stranger. You fought your way past all those Krug? I guess the mob that blew through here last night must have moved on to the farmlands.";
+	}
+}
+[conversation_guard2]
+{
+	[text*]
+	{
+		//sample = s_v_greet_male_hello;
+		screen_text = "You'll have to forgive the mess; we're still recovering from the last wave of Krug that broke through the gates. I think most of the shops are still open for business, but they won't have much left after the looting.";
+	}
+}
+[conversation_guard3]
+{
+	[text*]
+	{
+		//sample = s_v_greet_male_hailmyfriend;
+        	activate_quest* = quest_open_gate;
+		screen_text = "If you're headed north, we haven't seen anything but Krug come from that direction since the attack last night. If you manage to clear Glitterdelve Pass, it's gonna be a lot easier for us to secure the road when Cap'n gives the word.";
+		quest_dialog = true;
+	}
+}
+[conversation_guard_captain]
+{
+	[text*]
+	{
+		//sample = s_v_greet_male_hi;
+		screen_text = "You're safe enough here for now; I think the Krug have a bad taste for us after the slaughter we handed them last night.";
+	}
+}
+[conversation_izen]
+{
+	[text*]
+	{
+		sample = s_v_bt_izen1;
+		screen_text = "We've naught much to offer after the Krug raid. Who knows what them filthy creatures thought they'd find in poor old Etan's Roost? Thankfully, they're gone now.";
+	}
+	[goodbye*]
+	{
+		sample = s_v_bt_izen2;
+		screen_text = "Go if you must, but remember: Etan's Roost is always open, rain or shine.";
+	}
+}
+[conversation_owen_multiplayer]
+{
+	[text*]
+	{
+		sample = s_v_bt_owenMP1;
+		screen_text = "Krug. You ask me, we should'a run the bastards outta these hills when we settled here. All those dung eaters left me were a pair of Jacks and a half lame mare.";
+	}
+}
+[conversation_owen_first]
+{
+	[text*]
+	{
+		sample = s_v_bt_owen1;
+		screen_text = "Krug. You ask me, we should'a run the bastards outta these hills when we settled here. All those dung eaters left me were a pair of Jacks and a half lame mare. The Jacks I can part with for a price, though not for half as much I could've a week ago. You interested?";
+		choice = buy_packmule;
+	}
+}
+[conversation_owen_two_packmules]
+{
+	[text*]
+	{
+		sample = s_v_bt_owen3;
+		screen_text = "I still got ole Silverhoof and Flare, if you're interested.";
+		choice = buy_packmule;
+	}
+}
+[conversation_owen_one_packmule]
+{
+	[text*]
+	{
+		sample = s_v_bt_owen4;
+		screen_text = "I hope Flare hasn't given you too much trouble. How 'bout making it a pair? I still got Silverhoof, if you're interested.";
+		choice = buy_packmule;
+	}
+}
+[conversation_owen_no_packmules]
+{
+	[text*]
+	{
+		sample = s_v_bt_owen2;
+		screen_text = "Good luck to you, then.";
+	}
+}
+[conversation_gyorn_multiplayer]
+{
+	[text*]
+	{
+		activate_quest* = quest_gyorn_seek_overseer_mp;
+		sample = s_v_bt_gyornMP1;
+		screen_text = "If you've come looking for help, you'll not get much here. What the Krug couldn't carry off in a wagon, they smashed up or burned. They even put Gravemaker, my blessed ole catapult, to the torch, even though that beauty hasn't thrown a stone since I was a pup. It don't take a wizard to smell the Goblins behind this Krug raid, but the Overseer of Glacern needs to be told what happened here nonetheless.";
+		scroll_rate = 6.5;
+		quest_dialog = true;
+	}
+}
+[conversation_gyorn_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		activate_quest* = quest_gyorn_seek_overseer;
+		sample = s_v_bt_gyorn1;
+		screen_text = "If you've come looking for help, you'll not get much here. What the Krug couldn't carry off in a wagon, they smashed up or burned. They even put Gravemaker, my blessed ole catapult, to the torch, even though that beauty hasn't thrown a stone since I was a pup. It don't take a wizard to smell the Goblins behind this Krug raid, but the Overseer of Glacern needs to be told what happened here nonetheless. If you're up for the task, can I come along?";
+		scroll_rate = 6.5;
+		quest_dialog = true;
+	}
+}
+[conversation_gyorn_accept]
+{
+	[text*]
+	{
+		sample = s_v_bt_gyorn2;
+		screen_text = "Aye, I knew you'd be the right sort for this trek! Well met, friend!";
+	}
+}
+[conversation_gyorn_reject]
+{
+	[text*]
+	{
+		sample = s_v_bt_gyorn3;
+		screen_text = "Bah, just as well. It's heroics that's called for now, and I've no business dragging you into Stonebridge's mess. Good luck to ye.";
+	}
+}
+[conversation_gyorn_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_bt_gyorn4;
+		screen_text = "If you could use an extra body to discourage trouble, I'd be more than glad to travel with ye. Can an old soldier like Gyorn take up with ye?";
+		choice = potential_member;
+	}
+}
+[conversation_gyorn_disband]
+{
+	[text*]
+	{
+		sample = s_v_bt_gyorn5;
+		screen_text = "Ah well, I suppose I'll find someone else to travel with.";
+	}
+}
+[conversation_gyorn_disband_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_bt_gyorn6;
+		screen_text = "Back for Gyorn are ya? I'd be glad to follow ya, if you'd like the company. Nothing worse than following a long road and not having a soul to talk to. Shall we?";
+		choice = potential_member;
+	}
+}
+[conversation_rusk_multiplayer]
+{
+	[text*]
+	{
+		sample = s_v_bt_ruskMP1;
+		screen_text = "Hey! Watch who you're kickin'! I've got a sword and a mind to use it--and I would, too, if I didn't have this bloody hangover. Ach. People keep waking me up with some damn nonsense about saving the village.";
+	}
+}
+[conversation_rusk_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_bt_rusk1;
+		screen_text = "Hey! Watch who you're kickin'! I've got a sword and a mind to use it--and I would, too, if I didn't have this bloody hangover. Ach. People keep waking me up with some damn nonsense about saving the village. But you look the sort that'll pay for my services. For a clink of gold you'll have the best sword slinger around. Deal?";
+	}
+}
+[conversation_rusk_accept_have_money]
+{
+	[text*]
+	{
+		sample = s_v_bt_rusk2;
+		screen_text = "You'll not regret it. I'm the best there is. And now that I'm working for you, I just want you to know that my drinking won't be a problem. You pay, I drink, and we'll have no troubles a'tall.";
+	}
+}
+[conversation_rusk_accept_no_money]
+{
+	[text*]
+	{
+		sample = s_v_bt_rusk3;
+		screen_text = "Well, your head was in the right place, but it doesn't appear you've got enough gold on you. You just come find old Rusk when you need the best swordsman in Ehb.";
+	}
+}
+[conversation_rusk_reject]
+{
+	[text*]
+	{
+		sample = s_v_bt_rusk4;
+		screen_text = "Errrr...bothersome, stinking, plow-pushing, dirt-eating farm rat...";
+	}
+}
+[conversation_rusk_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_bt_rusk5;
+		screen_text = "So, the farm rat is back. I've still got a sword and the skill to use it. Same price and I'm yours.";
+		choice = potential_member;
+	}
+}
+[conversation_rusk_disband]
+{
+	[text*]
+	{
+		sample = s_v_bt_rusk6;
+		screen_text = "You wanna cut me loose, fine by me. That just leaves me free to find somebody who'll pay me what I'm worth.";
+	}
+}
+[conversation_rusk_disband_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_bt_rusk7;
+		screen_text = "You're just the luckiest sod on earth that someone hasn't come along and hired me. You want me back, I'll come along. But you'd best learn to show more appreciation to ole Rusk this time around!";
+		choice = potential_member;
+	}
+}
+[conversation_mara]
+{
+	[text*]
+	{
+		order = 0;
+		//sample = s_v_greet_female_hithere;
+		screen_text = "Why the Krug thought they would find magical artifacts in Stonebridge is beyond me. They came through breaking everything that didn't look magical and stealing everything that did. It was horrible!";
+		choice = more;
+	}
+	[text*]
+	{
+		order = 1;
+		screen_text = "A few pitchforks and rake handles aren't reason enough to put all of Stonebridge to the Tenstone!";
+		choice = more;
+	}
+	[text*]
+	{
+		screen_text = "Gresh say burn! Gresh say smash! If ever I find out who Gresh is, there will be some smashing and burning alright.";
+	}
+}
+[conversation_naidi_multiplayer]
+{
+	[text*]
+	{
+		sample = s_v_bt_naidiMP1;
+		screen_text = "Sorry for looking such a mess. I took an arrow in last night's battle, but I'm not really all that injured. Adwana's got me patched up, and I'm ready to get back into the fight again if someone would just believe in me.";
+	}
+}
+[conversation_naidi_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_bt_naidi1;
+		screen_text = "Sorry for looking such a mess. I took an arrow in last night's battle, but I'm not really all that injured. Adwana's got me patched up, and I'm ready to get back into the fight again if someone will just believe in me. If you need a good archer to escort you through the mess beyond Stonebridge, I'd be glad to help. I just need some gold to settle my healing bill. Interested?";
+	}
+}
+[conversation_naidi_accept_have_money]
+{
+	[text*]
+	{
+		sample = s_v_bt_naidi2;
+		screen_text = "Naidi the archer is at your service. You just tell me where we're going, and I'll do everything I can to get us there alive!";
+	}
+}
+[conversation_naidi_accept_no_money]
+{
+	[text*]
+	{
+		sample = s_v_bt_naidi3;
+		screen_text = "I appreciate your vote of confidence, but I can't go until I settle my accounts. You come find me when you've got enough money.";
+	}
+}
+[conversation_naidi_reject]
+{
+	[text*]
+	{
+		sample = s_v_bt_naidi4;
+		screen_text = "A lady has to try, doesn't she? If you change your mind, you'll know where to find me.";
+	}
+}
+[conversation_naidi_disband]
+{
+	[text*]
+	{
+		sample = s_v_bt_naidi5;
+		screen_text = "Oh... Have I given offense, or fallen short of expectations? I know I'm not yet fully myself after my injuries, but perhaps if I practice in your absence, I can once again be worthy of escorting you. Be well, friend.";
+	}
+}
+[conversation_naidi_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_bt_naidi6;
+		screen_text = "I know we parted badly before, but I wish to make amends! I shall be glad to serve again, if you'll have me.";
+	}
+}
+[conversation_zed_multiplayer]
+{
+	[text*]
+	{
+		sample = s_v_bt_zedMP1;
+		screen_text = "Greetings! I am Zed the sorcerer, and as of late, Zed the bored. I arrived, I am told, just in time to miss the biggest thing that's ever happened in this wretched village.";
+	}
+}
+[conversation_zed_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_bt_zed1;
+		screen_text = "Greetings! I am Zed the sorcerer, and as of late, Zed the bored. I arrived, I am told, just in time to miss the biggest thing that's ever happened in this wretched village. If you can use a sorcerer, take me with you. I'd certainly like to see some excitement somewhere in this kingdom. Normally, I charge a fortune for my services, but I'd be willing to take somewhat less just to get out of this putrid place. Is my fee acceptable?";
+	}
+}
+[conversation_zed_accept_have_money]
+{
+	[text*]
+	{
+		sample = s_v_bt_zed2;
+		screen_text = "Salvation at last! Let's see what kind of trouble we can get into!";
+	}
+}
+[conversation_zed_accept_no_money]
+{
+	[text*]
+	{
+		sample = s_v_bt_zed3;
+		screen_text = "Well, I see my luck hasn't changed. You're out of gold my friend. Come back when you've got enough coins in your pouch. I can't afford to wander about without money for necessities!";
+	}
+}
+[conversation_zed_reject]
+{
+	[text*]
+	{
+		sample = s_v_bt_zed4;
+		screen_text = "Oh, very well. Condemn me to stay here. I suppose I can go tip over a sleeping cow for fun. I hear that's positively a hoot in these parts.";
+	}
+}
+[conversation_zed_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_bt_zed5;
+		screen_text = "Are you ready to pay the price? If so, I'm ready to leave.";
+		choice = potential_member;
+	}
+}
+[conversation_zed_disband]
+{
+	[text*]
+	{
+		sample = s_v_bt_zed6;
+		screen_text = "It's because I'm a sorcerer, isn't it? Well let me tell you we don't eat children, we don't spoil milk, and we most especially don't turn people into newts! Though if I had such a spell right now, I'd be sorely tempted to use it! Begone!";
+	}
+}
+[conversation_zed_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_bt_zed7;
+		screen_text = "Gloating, are you? I'm not having any fun standing around here if that's what you're worried about. Still, I'd be glad to lend you a hand if you want.";
+	}
+}
+[conversation_ella]
+{
+	[text*]
+	{
+		//sample = s_v_greet_female_young;	
+		screen_text = "The raid last night was terrible! I barely escaped with my life. When my sister hears about what the Krug did to us here, she'll be furious! Oh! but she'll be worried that I was hurt. She's an archer in the Legion, stationed at Glacern. If you're going that way, could you tell her I'm all right? I'm sure she'll make it worth your while; her name is Ada.";
+		activate_quest* = quest_sister_message;
+		quest_dialog = true;
+       	button_1_text = "More";
+       	button_1_value = talked_to_ella;
+	}
+}
+[conversation_ella_2]
+{
+	[text*]
+	{
+		screen_text = "Oh, I hope Ada's not worried about me.";
+	}
+}
+[conversation_kalice]
+{
+	[text*]
+	{
+		order = 0;
+		//sample = s_v_greet_female_howyadoin;	
+		screen_text = "Whoever taught those stupid Krug how to raise skeletons and set fire to good people's homes should be put to the Tenstone for what they have done.";
+		choice = more;
+	}
+	[text*]
+	{
+		screen_text = "As if the raid weren't bad enough, those Krug vermin have brought those terrible insects from the mountains!";
+	}
+}
+[conversation_ordus]
+{
+	[text*]
+	{
+		//sample = s_v_greet_male_howdy2;	
+		screen_text = "I was stationed at the northern guard tower when the Krug started hitting us in waves. If I hadn't been so blasted stubborn, I would have made it back in time to keep them from burning me out of my home. I'm sure the tower is overrun by now, but they might not have figured out the mechanism to enter the armory downstairs. I would hate to have any of our remaining weapons fall into Krug hands; if you are up to the task, you are welcome to them.";
+       	button_1_text = "More";
+       	button_1_value = talked_to_ordus;
+		quest_dialog = true;
+	}
+}
+[conversation_ordus_2]
+{
+	[text*]
+	{
+		screen_text = "As soon as I salvage what I can from my house, I'll be heading back to the tower.";
+	}
+}
+[conversation_alanna]
+{
+	[text*]
+	{
+		order = 0;
+		//sample = s_v_greet_female_newintown;	
+		screen_text = "You're the first farmer to come to our mill since those horrible Krug started their rampage. Oh, but you aren't coming to deliver grain, are you? If it is as bad as they say in the farmlands, we are in for hard times ahead.";
+		choice = more;
+	}
+	[text*]
+	{
+		order = 1;
+		screen_text = "Since the Krug made off with most of our food stores, and the farmers aren't delivering their grain to the mill, we won't be able to feed ourselves for more than a week at best.";
+		choice = more;
+	}
+	[text*]
+	{
+		order = 2;
+		screen_text = "I tried to get to the beach to catch some fish, but it looks like the Krug left behind some of those terrible skrubbs. I petitioned the Guard Captain to help clear the beach, but he doesn't seem to understand how much trouble we are in and he doesn't want to remove any guards from the gates until they are repaired.";
+		choice = more;
+		}
+	[text*]
+	{
+		screen_text = "I could never do it, but if you are brave, and think you can clear off the beach, it would mean a lot to the townspeople.";
+	}
+}
+[conversation_alanna_skrubb_dead]
+{
+	[text*]
+	{
+		screen_text = "Oh, thank you very much for clearing those horrible skrubb. At least now I can offer some help to my less fortunate neighbors.";
+	}
+}

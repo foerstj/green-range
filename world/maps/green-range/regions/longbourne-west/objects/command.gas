@@ -1,0 +1,219 @@
+[t:cmd_report_gameplay_screen_player,n:0x02a006d4]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_path2sd";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.54031,0,1.88667,0xcb0caf1e;
+	}
+}
+[t:cmd_alignment_changer,n:0x02a006bb]
+{
+	[cmd_dumb_guy]
+	{
+	  b change_visibility = true;
+	  b collide_spawn = false;
+	  x target_actor = 0x02A00165;
+	  b update_anim_spawn = false;
+	}
+	[placement]
+	{
+	  p position = -2.15945,0,1.31511,0x5c4ba1e3;
+	}
+}
+[t:cmd_selection_toggle,n:0x02a00693]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02A00689;
+	  i start_state = 1;
+	  b toggle_invincibility = true;
+	}
+	[placement]
+	{
+	  p position = 0.601524,-3.80537,3.62286,0xb43a6167;
+	}
+}
+[t:cmd_alignment_changer,n:0x02a0065f]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_visibility = true;
+	  b collide_spawn = false;
+	  b invincible_activated = true;
+	  b invincible_spawn = true;
+	  i start_state = 1;
+	  x target_actor = 0x02A00661;
+	  b update_anim_spawn = false;
+	}
+	[placement]
+	{
+	  p position = 0.285416,0,1.07715,0x4a9d0f84;
+	}
+}
+[t:cmd_alignment_changer,n:0x02a00660]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_visibility = true;
+	  b collide_spawn = false;
+	  b invincible_activated = true;
+	  b invincible_spawn = true;
+	  i start_state = 1;
+	  x target_actor = 0x02A00662;
+	  b update_anim_spawn = false;
+	}
+	[placement]
+	{
+	  p position = -0.657806,0,-1.94468,0x4a9d0f84;
+	}
+}
+[t:cmd_alignment_changer,n:0x02a00665]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_visibility = true;
+	  b collide_spawn = false;
+	  b invincible_activated = true;
+	  b invincible_spawn = true;
+	  i start_state = 1;
+	  x target_actor = 0x02A00664;
+	  b update_anim_spawn = false;
+	}
+	[placement]
+	{
+	  p position = 0.860489,0,-0.785807,0x4a9d0f84;
+	}
+}
+[t:cmd_alignment_changer,n:0x02a006dc]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_visibility = true;
+	  b collide_spawn = false;
+	  b invincible_activated = true;
+	  b invincible_spawn = true;
+	  i start_state = 1;
+	  x target_actor = 0x02A00663;
+	  b update_anim_spawn = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.75962,0,0.96373,0xbf371ae2;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a000f5]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A000FA;
+	}
+	[placement]
+	{
+	  p position = 2.31573,2e-006,-1.89137,0xdf175482;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a0010a]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A0010C;
+	}
+	[placement]
+	{
+	  p position = 0.238258,0,-0.279316,0x162585c5;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a000fa]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A00100;
+	}
+	[placement]
+	{
+	  p position = 0.266481,-2e-006,0.716431,0xeccb9ff1;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a00100]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A00101;
+	}
+	[placement]
+	{
+	  p position = -0.361616,1.95,3.99768,0x5bd25833;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a00105]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A000F5;
+	}
+	[placement]
+	{
+	  p position = -0.53615,-4e-006,0.103657,0x2764ed86;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a0010e]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A0010A;
+	}
+	[placement]
+	{
+	  p position = -1.88549,-2e-006,0.865929,0x2764ed86;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a00101]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A00105;
+	}
+	[placement]
+	{
+	  p position = -0.481941,-2e-006,-1.9637,0xbf34436a;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a0010d]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A0010E;
+	}
+	[placement]
+	{
+	  p position = 1.18431,0,-1.53117,0xbf34436a;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a0010c]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A0010D;
+	}
+	[placement]
+	{
+	  p position = -1.1191,0,1.6299,0x0c4dfa35;
+	}
+}
