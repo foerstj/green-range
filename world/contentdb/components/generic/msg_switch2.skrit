@@ -1,0 +1,21 @@
+property eWorldEvent 	trigger_msg$		= WE_REQ_USE			doc = "Trigger message";
+property eWorldEvent 	send_msg$			= WE_REQ_ACTIVATE		doc = "Message to send";
+property eWorldEvent 	trigger_msg2$		= WE_REQ_USE			doc = "2nd Trigger message";
+property eWorldEvent 	send_msg2$			= WE_REQ_ACTIVATE		doc = "2nd Message to send";
+
+owner = GoSkritComponent;
+
+startup state Startup$
+{
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage /*msg$*/ )
+	{
+		if( e$ == trigger_msg$ )
+		{
+			SendWorldMessage( send_msg$, owner.Goid, owner.goid );
+		}
+		if( e$ == trigger_msg2$ )
+		{
+			SendWorldMessage( send_msg2$, owner.Goid, owner.goid );
+		}
+	}
+}

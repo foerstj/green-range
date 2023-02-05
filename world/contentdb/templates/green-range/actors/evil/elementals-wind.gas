@@ -198,13 +198,16 @@
         screen_name = "Wind Spirit";
         [template_triggers]
         {
-            // remove rays
+            // removed rays
+
 			[*]
 			{
 				action* = call_sfx_script("dsx_elemental_air");
-				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("dsx_elemental_air_minion_spawn");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");  // EDITED
 				single_shot = true;
 			}
+
 			[*]
 			{
 				action* = call_sfx_script("dsx_elemental_air_die");
@@ -212,6 +215,14 @@
 				single_shot = true;
 			}
         }
+    }
+    // Start the sfx on either job_startup_reveal trigger
+    [msg_switch2]
+    {
+        trigger_msg = WE_ENEMY_SPOTTED;
+        send_msg = WE_REQ_ACTIVATE;
+        trigger_msg2 = WE_DAMAGED;
+        send_msg2 = WE_REQ_ACTIVATE;
     }
 }
 
@@ -381,9 +392,37 @@
     {
         scale_base = 0.8;
     }
-    [common] { screen_name = "Small Wind Spirit"; }
+    [common]
+    {
+        screen_name = "Small Wind Spirit";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_air_minion");
+				action* = call_sfx_script("dsx_elemental_air_minion_spawn");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");  // EDITED
+				single_shot = true;
+			}
 
-    // make ranged/mage enemy as well
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_air_minion_die");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+		}
+    }
+    // Start the sfx on either job_startup_reveal trigger
+    [msg_switch2]
+    {
+        trigger_msg = WE_ENEMY_SPOTTED;
+        send_msg = WE_REQ_ACTIVATE;
+        trigger_msg2 = WE_DAMAGED;
+        send_msg2 = WE_REQ_ACTIVATE;
+    }
+
+    // make ranged/mage-only enemy
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
