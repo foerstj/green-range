@@ -1527,34 +1527,6 @@
 	  p position = -0.0682316,-0.0154386,-0.30529,0x7caf7b78;
 	}
 }
-[t:set_bool,n:0x420004da]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 2.96684,1.37411,2.32929,0x6d48cc60;
-	}
-	[set_bool]
-	{
-		bool_variable = "bt_r1_skrubbs_killed";
-	}
-}
-[t:accumulate_trigger,n:0x420004d3]
-{
-	[common]
-	{
-		dev_instance_text = "accum for skrubbs";
-	}
-	[generic_accumtrigger]
-	{
-	  i num_til_send = 2;
-	  x send_to_scid = 0x420004DA;
-	}
-	[placement]
-	{
-	  p position = -0.306915,1.58686,1.71057,0x7736a756;
-	}
-}
 [t:trigger_generic,n:0x42000099]
 {
 	[common]
