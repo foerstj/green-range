@@ -36,6 +36,43 @@
 	  f wind_velocity = 1.000000;
 	}
 }
+[mood_setting*]  // main trail b
+{
+	mood_name = gr-ps6-b;
+  f transition_time = 8.000000;
+  b interior = false;
+
+    // defaults
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xff7e8c9b;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+        standard_track = s_m_the_wizard;
+		battle_track = s_m_jungle_2_theme;
+		room_type = rt_mountains;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 1.000000;
+	}
+}
 [mood_setting*]  // bridge
 {
 	mood_name = gr-ps6-bridge;
@@ -64,7 +101,7 @@
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
         standard_track = s_m_the_wizard;
-		battle_track = s_m_jungle_battle;
+		battle_track = s_m_jungle_2_theme;
 		room_type = rt_mountains;
 	}
 	[wind]
@@ -100,7 +137,7 @@
 		ambient_track = s_e_ambient_woods_01;
 	  f standard_intro_delay = 8.000000;
 	  f standard_repeat_delay = 16.000000;
-		standard_track = s_m_jungle_2_theme;
+		standard_track = s_m_light_jungle_theme;
 		room_type = rt_mountains;
 	}
 	[wind]
