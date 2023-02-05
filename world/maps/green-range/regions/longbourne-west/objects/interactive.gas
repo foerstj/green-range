@@ -59,39 +59,6 @@
 	[common]
 	{
 		dev_instance_text = "SCRIPTED EVENT - Use Toggle Door";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02A0067C,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_mousehover",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02A006C3,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_use",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
 	}
 	[placement]
 	{

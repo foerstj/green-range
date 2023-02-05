@@ -365,70 +365,6 @@
 	  p position = -0.527054,0,0.254502,0x3e874165;
 	}
 }
-[t:trigger_plane_box,n:0x01e0018c]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01E00389,0f,"default","",0), doc("center wolf move");
-				action* = send_world_message("we_req_activate",0x01E001CA,0f,"default","",0), doc("wolf is neutral");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(18.000000,3.000000,5.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.53843,0,0.117739,0xd262b12f;
-	}
-}
-[t:trigger_plane_box,n:0x01e0038c]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01E00202,0f,"default","",0), doc("center wolf patrol");
-				action* = send_world_message("we_req_activate",0x01E001CA,0f,"default","",0), doc("center wolf bad");
-				action* = send_world_message("we_req_activate",0x01E001EA,0f,"default","",0), doc("right bush wolf");
-				action* = send_world_message("we_req_activate",0x01E001E9,0f,"default","",0), doc("left bush wolf");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(18.000000,3.000000,5.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 3.04331,0,-1.42307,0xbc69f937;
-	}
-}
 [t:use_point,n:0x01e005d7]
 {
 	[placement]
@@ -606,110 +542,6 @@
 	{
 	  q orientation = 0,0.857167,0,0.515038;
 	  p position = 2.55386,0,0.455818,0x6cecbc9c;
-	}
-}
-[t:trigger_generic,n:0x01e0063b]
-{
-	[common]
-	{
-		dev_instance_text = "TIP ACTIVATOR";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01E0063C,0f,"16386","party_member_within_bounding_box",0), doc("[*labelled condition (party_member_within_bounding_box)*]");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,0.500000,9.500000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.999848,0,0.0174517;
-	  p position = 3.32835,9.53674e-007,0.620258,0x3989924a;
-	}
-}
-[t:tutorial_tip,n:0x01e0063c]
-{
-	[common]
-	{
-		dev_instance_text = "TIP_9";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 3.26964,-2.86102e-006,-1.0491,0x3989924a;
-	}
-	[tip]
-	{
-		tip = "tip_9";
-	}
-}
-[t:trigger_plane_box,n:0x01e001ff]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT - phrak script - Disabled";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01E001FE,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(16.000000,4.000000,4.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-7.7486e-007,0,1;
-	  p position = -0.0231247,-1.65001,-5.11361,0xe112d5bb;
-	}
-}
-[t:trigger_generic,n:0x01e00619]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01E00618,0f,"16386","party_member_within_bounding_box",0), doc("[*labelled condition (party_member_within_bounding_box)*]");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.000000,2.000000,"on_unique_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 60.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.0603065,-1.21472,-4.70122,0xe112d5bb;
 	}
 }
 [t:trigger_fade_nodes_box,n:0x01e003fa]
@@ -1119,20 +951,6 @@
 	  p position = 3.68173,-1.15,-0.542995,0xecf15c9d;
 	}
 }
-[t:accumulate_trigger,n:0x01e005f7]
-{
-	[generic_accumtrigger]
-	{
-		message_when_active = we_req_deactivate;
-		message_when_inactive = we_invalid;
-	  i num_til_send = 3;
-	  x send_to_scid = 0x01E001FE;
-	}
-	[placement]
-	{
-	  p position = -0.235888,-9.53674e-007,-0.320892,0xded325a5;
-	}
-}
 [t:use_point,n:0x01e005d6]
 {
 	[placement]
@@ -1200,19 +1018,6 @@
 	  p position = 2.15286,-1.25,-1.34961,0x5c6c6732;
 	}
 }
-[t:activate_chapter,n:0x01e005dd]
-{
-	[activate_chapter]
-	{
-		chapter = "chapter_1";
-	  i order = 1;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.37168,0,-0.850967,0x46bb96ae;
-	}
-}
 [t:trigger_generic,n:0x01e006bf]
 {
 	[common]
@@ -1238,131 +1043,11 @@
 			  b single_shot = true;
 			  b start_active = true;
 			}
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01E005DD,0f,"default","every",0), doc("journal update");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,0.500000,5.000000,"on_first_enter"), doc("[*converted to one-shot*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
 		}
 	}
 	[placement]
 	{
 	  q orientation = 0,0.350208,0,0.936672;
 	  p position = 0.536359,-3.05176e-005,-0.755554,0x46bb96ae;
-	}
-}
-[t:trigger_generic,n:0x01e00255]
-{
-	[common]
-	{
-		dev_instance_text = "INTEREST RADIUS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_interest_radius(2f,"party_member_within_bounding_box");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(10.000000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.595222,0.317987,1.37563,0x48fcb2af;
-	}
-}
-[t:trigger_generic,n:0x01e00639]
-{
-	[common]
-	{
-		dev_instance_text = "TIP ACTIVATOR";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01E0063F,0f,"16386","party_member_within_bounding_box",0), doc("[*labelled condition (party_member_within_bounding_box)*]");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,0.500000,6.000000,"on_unique_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.615662,0,0.788011;
-	  p position = 1.36265,0,-1.38617,0x8b3a1e65;
-	}
-}
-[t:tutorial_tip,n:0x01e0063f]
-{
-	[common]
-	{
-		dev_instance_text = "TIP_10";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.467384,0,-1.10324,0x8b3a1e65;
-	}
-	[tip]
-	{
-		tip = "tip_10";
-	}
-}
-[t:trigger_generic,n:0x01e00256]
-{
-	[common]
-	{
-		dev_instance_text = "INTEREST RADIUS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_interest_radius(10f,"party_member_within_bounding_box");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(14.000000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = 0.438766,1.02886,-1.93351,0xea493d13;
 	}
 }
