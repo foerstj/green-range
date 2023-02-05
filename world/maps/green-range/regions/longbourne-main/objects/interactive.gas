@@ -1,29 +1,33 @@
-[t:sign_glb_inn_01,n:0x42000115]
+[t:door_grs_peasant_right,n:0x420001ac]
 {
-	[placement]
+	[aspect]
 	{
-	  p position = 11.0464,2.2872,0.623864,0xa36f74f1;
+	  f use_range = 3;
 	}
-}
-[t:door_grs_peasant_right,n:0x4200019e]
-{
 	[door_basic]
 	{
-	  x msg_scid_open = 0x42000377;
+	  x msg_scid_open = 0x4200036A;
 		msg_type_open = we_trigger_activate;
 	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 9.24859,-1.49998,-0.096178,0xa36f74f1;
+	  p position = 4.22188,2,-1.70722,0x2dd51fe0;
+		use_point_scids = 0x42000495;
 	}
 }
-[t:sign_glb_stonebridge_gate,n:0x4200045e]
+[t:door_grs_peasant_left,n:0x420001a8]
 {
+	[door_basic]
+	{
+	  x msg_scid_open = 0x4200036B;
+		msg_type_open = we_trigger_activate;
+	}
 	[placement]
 	{
-	  q orientation = 0,-0.017452,0,0.999848;
-	  p position = 0.2,-1.2,0.2,0x5eec6ca5;
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -3.56115,-4.25,-3.54031,0x3f721326;
+		use_point_scids = 0x4200045a,0x4200045b;
 	}
 }
 [t:door_grs_peasant_right,n:0x42000102]
@@ -45,20 +49,6 @@
 	{
 	  q orientation = 0,0.573577,0,0.819152;
 	  p position = 4.80921,0.404604,-7.80676,0x3ad3f46d;
-	}
-}
-[t:door_grs_peasant_left,n:0x420001a8]
-{
-	[door_basic]
-	{
-	  x msg_scid_open = 0x4200036B;
-		msg_type_open = we_trigger_activate;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = -3.56115,-4.25,-3.54031,0x3f721326;
-		use_point_scids = 0x4200045a,0x4200045b;
 	}
 }
 [t:sign_glb_01,n:0x420004cf]
@@ -95,62 +85,6 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -12.6274,-0.233461,-1.16451,0xec8af72d;
-	}
-}
-[t:door_grs_peasant_right,n:0x420001ac]
-{
-	[aspect]
-	{
-	  f use_range = 3;
-	}
-	[door_basic]
-	{
-	  x msg_scid_open = 0x4200036A;
-		msg_type_open = we_trigger_activate;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 4.22188,2,-1.70722,0x2dd51fe0;
-		use_point_scids = 0x42000495;
-	}
-}
-[t:sign_glb_barn_01,n:0x42000114]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.636078,0,0.771625;
-	  p position = 7.21792,1.65492,8.47681,0xbb6e3d4d;
-	}
-}
-[t:door_grs_barn_left,n:0x420001a1]
-{
-	[door_basic]
-	{
-	  x msg_scid_open = 0x42000143;
-		msg_type_open = we_trigger_activate;
-	  x second_door = 0x420001A5;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.087156,0,0.996195;
-	  p position = 5.50714,-1.89063,7.2067,0xbb6e3d4d;
-		use_point_scids = 0x4200052a, 0x42000529;
-	}
-}
-[t:door_grs_barn_right,n:0x420001a5]
-{
-	[door_basic]
-	{
-	  x msg_scid_open = 0x42000143;
-		msg_type_open = we_trigger_activate;
-	  x second_door = 0x420001A1;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.087156,0,0.996195;
-	  p position = 8.28018,-1.86865,6.7145,0xbb6e3d4d;
-		use_point_scids = 0x4200052a, 0x42000529;
 	}
 }
 [t:door_grs_ornate_left,n:0x420000c2]
@@ -209,6 +143,64 @@
 		use_point_scids = 0x420004b4;
 	}
 }
+[t:sign_glb_inn_01,n:0x42000115]
+{
+	[placement]
+	{
+	  p position = 11.0464,2.2872,0.623864,0xa36f74f1;
+	}
+}
+[t:door_grs_peasant_right,n:0x4200019e]
+{
+	[door_basic]
+	{
+	  x msg_scid_open = 0x42000377;
+		msg_type_open = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 9.24859,-1.49998,-0.096178,0xa36f74f1;
+	}
+}
+[t:sign_glb_barn_01,n:0x42000114]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.636078,0,0.771625;
+	  p position = 7.21792,1.65492,8.47681,0xbb6e3d4d;
+	}
+}
+[t:door_grs_barn_left,n:0x420001a1]
+{
+	[door_basic]
+	{
+	  x msg_scid_open = 0x42000143;
+		msg_type_open = we_trigger_activate;
+	  x second_door = 0x420001A5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.087156,0,0.996195;
+	  p position = 5.50714,-1.89063,7.2067,0xbb6e3d4d;
+		use_point_scids = 0x4200052a, 0x42000529;
+	}
+}
+[t:door_grs_barn_right,n:0x420001a5]
+{
+	[door_basic]
+	{
+	  x msg_scid_open = 0x42000143;
+		msg_type_open = we_trigger_activate;
+	  x second_door = 0x420001A1;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.087156,0,0.996195;
+	  p position = 8.28018,-1.86865,6.7145,0xbb6e3d4d;
+		use_point_scids = 0x4200052a, 0x42000529;
+	}
+}
 [t:door_grs_peasant_right,n:0x42000103]
 {
 	[placement]
@@ -229,13 +221,5 @@
 	[placement]
 	{
 	  p position = 4.50768,-2.64998,-0.886477,0xfe992c5b;
-	}
-}
-[t:sign_glb_stonebridge_gate,n:0x4200045d]
-{
-	[placement]
-	{
-	  q orientation = 0,0,-0.130526,0.991445;
-	  p position = -0.3,-1.6,0.2,0x89bcee23;
 	}
 }
