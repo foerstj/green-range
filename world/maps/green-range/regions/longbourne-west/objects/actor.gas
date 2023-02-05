@@ -13,46 +13,6 @@
 	  p position = 1.5081,0,-0.282654,0x2416f6b1;
 	}
 }
-[t:ilandro,n:0x02a00165]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("quest_avenge_ilandro","active",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_talk_begin",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_ilandro;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.608761,0,0.793353;
-	  p position = -1.56711,5.72205e-006,0.704056,0x97868d9f;
-	}
-}
 [t:skrubb_small,n:0x02a00078]
 {
 	[placement]
