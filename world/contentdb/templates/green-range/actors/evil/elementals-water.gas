@@ -179,14 +179,37 @@
 				chore_stances = 0;
 				skrit = select_transition;
 				[anim_files] { 00=at; }  // EDITED: switched with attack
-			}		
+			}
+            // ADDED for reveal
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+                    // using braak anims because it reveals basically instantly
+					slep = a_c_ecm_bk_fs0_dfs;
+					wake = a_c_ecm_bk_fs0_ds; 
+				}
+			}
 		}
     }
 
     [common]
     {
-        [template_triggers] {}  // remove rays
-        membership = monster;  // remove immune_xy
+        [template_triggers]
+        {
+            // removed rays
+
+            // ADDED
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_water_reveal");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");
+				single_shot = true;
+			}
+        }
+        membership = monster;  // removed immune_xy
     }
     [guts_manager]
     {
@@ -194,6 +217,8 @@
     }
     [mind]
     {
+		sight_origin_height = 1;
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit?invisible=true;
 		jat_die = world\ai\jobs\common\job_die_fade.skrit;
 
 		on_enemy_entered_icz_switch_to_melee = true;
@@ -202,6 +227,14 @@
 		actor_auto_switches_to_karate	= true;
 		actor_auto_switches_to_melee	= true;
 		on_enemy_entered_ocz_attack = true;
+    }
+    // Start the sfx on either job_startup_reveal trigger
+    [msg_switch2]
+    {
+        trigger_msg = WE_ENEMY_SPOTTED;
+        send_msg = WE_REQ_ACTIVATE;
+        trigger_msg2 = WE_DAMAGED;
+        send_msg2 = WE_REQ_ACTIVATE;
     }
     [inventory]
     {
