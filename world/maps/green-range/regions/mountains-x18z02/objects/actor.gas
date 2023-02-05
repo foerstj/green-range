@@ -62,12 +62,48 @@
 	  p position = 0.692892,0,0.123713,0xa36ea917;
 	}
 }
-[t:gr_wind_spirit_lg,n:0x16b014cc]
+[t:gr_wind_spirit_boss,n:0x16b014cc]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("great_wind_spirit","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("great_wind_spirit","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.621945,0,0.783061;
-	  p position = -0.120463,0,-1.65411,0x21998534;
+	  p position = -0.120464,-1.90156e-025,-1.65411,0x21998534;
 	}
 }
 [t:gr_wind_spirit_lg,n:0x16b014d0]

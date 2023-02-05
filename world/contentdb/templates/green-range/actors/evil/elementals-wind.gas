@@ -452,3 +452,56 @@
 	specializes = gr_wind_spirit_sm_base;
 	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
 }
+
+[t:template,n:gr_wind_spirit_boss] { specializes = gr_wind_spirit_boss_base; }
+[t:template,n:gr_wind_spirit_boss_base]
+{
+    specializes = gr_wind_spirit_lg_base;
+
+    aspect:scale_base = 1.8;  // base is 1.5
+    [common]
+    {
+        screen_name = "Great Wind Spirit";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+        [template_triggers]
+        {
+            // re-add rays
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_cyan");
+			}
+
+            // from base
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_air");
+				action* = call_sfx_script("dsx_elemental_air_minion_spawn");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");  // EDITED
+				single_shot = true;
+			}
+
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_air_die");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+        }
+        membership = monster;  // removed immune_xy
+    }
+    [aspect]
+	{
+		life             = 1700;  // was 1324
+		max_life         = 1700;  // was 1324
+		mana             = 500;  // was 399
+		max_mana         = 500;  // was 399
+	}
+	[attack]
+	{
+		damage_max = 500;  // was 350
+		damage_min = 400;  // was 300
+	}
+}

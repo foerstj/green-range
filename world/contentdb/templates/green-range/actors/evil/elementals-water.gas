@@ -291,3 +291,47 @@
 		lifeSpan = 6;
 	}
 }
+
+[t:template,n:gr_water_spirit_boss] { specializes = gr_water_spirit_boss_base; }
+[t:template,n:gr_water_spirit_boss_base]
+{
+    specializes = gr_water_spirit_lg_base;
+
+    [common]
+    {
+        screen_name = "Great Water Spirit";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+            // re-added rays
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_blue");
+			}
+
+            // from base
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_water_reveal");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");
+				single_shot = true;
+			}
+		}
+    }
+    [aspect] { scale_base = 1.2; }
+    [aspect]
+	{
+		life             = 2000;  // was 1417
+		max_life         = 2000;  // was 1417
+		mana             = 500;  // was 399
+		max_mana         = 500;  // was 399
+	}
+	[attack]
+	{
+		damage_max = 600;  // was 480
+		damage_min = 500;  // was 425
+	}
+}
