@@ -62,38 +62,6 @@
 	  p position = -0.632134,-1.82099,-0.410217,0x1cc91824;
 	}
 }
-[t:barrel_glb_powder_keg_nice,n:0x02a00689]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02A00686,0f,"default","every",0), doc("rock");
-				action* = send_world_message("we_req_activate",0x02A00685,0f,"default","every",0), doc("rock");
-				action* = send_world_message("we_req_activate",0x02A00687,0f,"default","every",0), doc("rock");
-				action* = send_world_message("we_req_activate",0x02A00688,0f,"default","every",0), doc("rock");
-				action* = send_world_message("we_req_activate",0x02A00668,0f,"default","every",0), doc("door");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.499758,-3.94623,1.60692,0xb43a6167;
-	}
-}
 [t:footlocker_glb_01_path2sd,n:0x02a0054c]
 {
 	[aspect]
