@@ -282,6 +282,14 @@
 	{
 		[other] { il_active_primary_spell = gr_spell_skatwyrm_gas; }
 	}
+    [mind]
+    {
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+		on_enemy_entered_icz_switch_to_melee = false;
+    }
 
     // stats from swamp_stinger
 	[actor]
