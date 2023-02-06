@@ -1,5 +1,13 @@
 [t:gremal_killer,n:0x02a0000d]
 {
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[common]
+	{
+		screen_name = "Papa Gremal";
+	}
 	[placement]
 	{
 	  p position = -1.93681,0,-0.005709,0xb1ce8a09;
@@ -10,13 +18,6 @@
 	[placement]
 	{
 	  p position = 1.11697,-0.00968742,-3.23405,0xddcf8a8c;
-	}
-}
-[t:gremal_boss_01,n:0x02a0067e]
-{
-	[placement]
-	{
-	  p position = -3.18331,1.7,2.95778,0x2ed161de;
 	}
 }
 [t:gremal,n:0x02a00682]
@@ -60,5 +61,20 @@
 	{
 	  q orientation = 0,0.92388,0,0.382683;
 	  p position = -2.16248,0.87888,2.60673,0xc085fe4d;
+	}
+}
+[t:gremal_killer,n:0x02a0067e]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[common]
+	{
+		screen_name = "Mama Gremal";
+	}
+	[placement]
+	{
+	  p position = -3.18331,1.7,2.95778,0x2ed161de;
 	}
 }

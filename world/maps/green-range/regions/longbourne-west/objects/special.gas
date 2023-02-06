@@ -84,19 +84,18 @@
 	  p position = -3.00771,-1.85,2.08157,0x589c6d0e;
 	}
 }
-[t:trigger_generic,n:0x02a00683]
+[t:trigger_generic,n:0x02a0067c]
 {
 	[common]
 	{
-		dev_instance_text = "PATH2SDA - SOUND ON";
+		dev_instance_text = "FADE";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x02A006A8,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x02A006C7,0f,"default","",0);
+				action* = fade_nodes(0xABA10100,-1,-1,-1,"in");
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = party_member_within_bounding_box(1.000000,1.000000,2.500000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -109,29 +108,23 @@
 			}
 		}
 	}
-	[gizmo]
-	{
-	  v diffuse_color = 0,1,0;
-	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707106;
-	  p position = 0.109982,-3.8147e-006,-1.77669,0x0c11abf1;
+	  p position = -1.00089,-0.723859,-0.85376,0x944ba867;
 	}
 }
-[t:trigger_generic,n:0x02a00684]
+[t:trigger_generic,n:0x02a0067d]
 {
 	[common]
 	{
-		dev_instance_text = "PATH2SDA - SOUND OFF";
+		dev_instance_text = "FADE";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_deactivate",0x02A006A8,0f,"default","",0);
-				action* = send_world_message("we_req_deactivate",0x02A006C7,0f,"default","",0);
+				action* = fade_nodes(0xABA10100,-1,-1,-1,"out:black");
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = party_member_within_bounding_box(1.000000,1.000000,2.500000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -144,14 +137,46 @@
 			}
 		}
 	}
-	[gizmo]
+	[placement]
 	{
-	  v diffuse_color = 1,0,0;
+	  p position = 1.42819,1.29295,-0.356018,0x944ba867;
+	}
+}
+[t:trigger_fade_nodes_box,n:0x02a0028e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x0A8441F4,1,-1,-1,"out:black"), doc("fade out path2sd_a");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707106;
-	  p position = 0.967173,-3.8147e-006,-1.79328,0x0c11abf1;
+	  q orientation = -3.33491e-016,1.77636e-015,1.44287e-015,1;
+	  p position = -1.98412,-0.743502,-1.66661,0x8b3e4868;
+	}
+}
+[t:use_point,n:0x02a006d1]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.923879;
+	  p position = -1.7163,-0.321631,-0.402157,0xa69917b4;
 	}
 }
 [t:trigger_fade_nodes_box,n:0x02a0069a]
@@ -280,18 +305,19 @@
 	  p position = -0.292419,-3.72529e-008,-1.07388,0x8ea81c73;
 	}
 }
-[t:trigger_generic,n:0x02a0067c]
+[t:trigger_generic,n:0x02a00683]
 {
 	[common]
 	{
-		dev_instance_text = "FADE";
+		dev_instance_text = "PATH2SDA - SOUND ON";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0xABA10100,-1,-1,-1,"in");
+				action* = send_world_message("we_req_activate",0x02A006A8,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x02A006C7,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.000000,2.500000,"on_every_enter");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -304,23 +330,29 @@
 			}
 		}
 	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
 	[placement]
 	{
-	  p position = -1.00089,-0.723859,-0.85376,0x944ba867;
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = 0.109982,-3.8147e-006,-1.77669,0x0c11abf1;
 	}
 }
-[t:trigger_generic,n:0x02a0067d]
+[t:trigger_generic,n:0x02a00684]
 {
 	[common]
 	{
-		dev_instance_text = "FADE";
+		dev_instance_text = "PATH2SDA - SOUND OFF";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0xABA10100,-1,-1,-1,"out:black");
+				action* = send_world_message("we_req_deactivate",0x02A006A8,0f,"default","",0);
+				action* = send_world_message("we_req_deactivate",0x02A006C7,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.000000,2.500000,"on_every_enter");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -333,46 +365,14 @@
 			}
 		}
 	}
-	[placement]
+	[gizmo]
 	{
-	  p position = 1.42819,1.29295,-0.356018,0x944ba867;
-	}
-}
-[t:trigger_fade_nodes_box,n:0x02a0028e]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x0A8441F4,1,-1,-1,"out:black"), doc("fade out path2sd_a");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
+	  v diffuse_color = 1,0,0;
 	}
 	[placement]
 	{
-	  q orientation = -3.33491e-016,1.77636e-015,1.44287e-015,1;
-	  p position = -1.98412,-0.743502,-1.66661,0x8b3e4868;
-	}
-}
-[t:use_point,n:0x02a006d1]
-{
-	[placement]
-	{
-	  q orientation = 0,0.382684,0,0.923879;
-	  p position = -1.7163,-0.321631,-0.402157,0xa69917b4;
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = 0.967173,-3.8147e-006,-1.79328,0x0c11abf1;
 	}
 }
 [t:trigger_change_mood_box,n:0x02a00698]
