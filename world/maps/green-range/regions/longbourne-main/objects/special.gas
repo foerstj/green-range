@@ -685,48 +685,6 @@
 	  p position = -3.45031,1.95,6.49331,0x904aa2fe;
 	}
 }
-[t:trigger_generic,n:0x4200053f]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("quest_drunkard_tower","active",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*][*converted to one-shot*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 5.42096,-1.35173,-4.25726,0x3e33c8ba;
-	}
-}
-[t:check_bool,n:0x42000540]
-{
-	[check_bool]
-	{
-		bool_variable = "path2sd_a_axe_taken";
-		message_if_false = we_req_activate;
-		message_if_true = we_req_deactivate;
-	  x send_to_scid = 0x4200053F;
-	}
-	[placement]
-	{
-	  p position = 5.44053,-1.4,-3.42122,0x3e33c8ba;
-	}
-}
 [t:trigger_generic,n:0x420000ce]
 {
 	[common]

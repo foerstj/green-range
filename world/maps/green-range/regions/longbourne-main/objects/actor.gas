@@ -214,48 +214,6 @@
 	  p position = -5.25364,0.9,-5.07675,0xec8af72d;
 	}
 }
-[t:mp_townfolk_male_01,n:0x420004b3]
-{
-	[common]
-	{
-		screen_name = "Ordus Jarrell";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x42000540,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_talk_begin",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_ordus;
-			* = conversation_ordus_2;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_ordus.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.866026,0,0.5;
-	  p position = 4.11028,-1.17907,-2.65742,0x3e33c8ba;
-	}
-}
 [t:adwana,n:0x420000d3]
 {
 	[aspect]
@@ -539,41 +497,6 @@
 	{
 	  q orientation = 0,-0.382684,0,0.923879;
 	  p position = -3.23711,9.53674e-007,-0.0666914,0xae7e53df;
-	}
-}
-[t:mp_townfolk_female_05,n:0x420004ba]
-{
-	[common]
-	{
-		screen_name = "Kalice";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_kalice;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.78814e-007,0,1;
-	  p position = -7.3912,-4.6,-2.81674,0xe940973a;
-	}
-}
-[t:mule_bt_r1,n:0x420004dd]
-{
-	[common]
-	{
-		screen_name = "Flower";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.19209e-007;
-	  p position = -7.45155,-4.6,0.118755,0xe940973a;
 	}
 }
 [t:guard,n:0x42000105]
