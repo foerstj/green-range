@@ -7,7 +7,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_1");
+				action* = mood_change("gr-lb-m-1");
 				action* = fade_nodes(0xABA10100,2,2,-1,"in"), doc("bt_r1 2,2 lakefront in");
 				action* = fade_nodes(0xAAA10200,1,2,-1,"out:black"), doc("fh_r3 1,2 overlap out");
 			  b can_self_destruct = true;
@@ -39,7 +39,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_fh_r3_2");
+				action* = mood_change("gr-lb-e-2");
 				action* = fade_nodes(0xABA10100,2,2,-1,"out:black"), doc("bt_r1 lakeshore 2,2's");
 				action* = fade_nodes(0xAAA10200,1,2,-1,"in"), doc("fh_r3 1,2 overlap in");
 			  b can_self_destruct = true;
@@ -619,7 +619,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_1");
+				action* = mood_change("gr-lb-m-1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(30.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -878,7 +878,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_1");
+				action* = mood_change("gr-lb-m-1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1081,7 +1081,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_tavern");
+				action* = mood_change("gr-lb-m-tavern");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,2.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1109,7 +1109,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_tavern");
+				action* = mood_change("gr-lb-m-tavern");
 				action* = fade_nodes(0xAAA10200,1,1,-1,"out:black");
 				action* = fade_nodes(0xAAA10200,1,2,-1,"out:black");
 			  b can_self_destruct = true;
@@ -1139,7 +1139,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_1");
+				action* = mood_change("gr-lb-m-1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,2.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1392,7 +1392,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_1");
+				action* = mood_change("gr-lb-m-1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,2.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1435,7 +1435,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_1");
+				action* = mood_change("gr-lb-m-1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(11.500000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1464,7 +1464,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_2"), doc("this should change to beach music");
+				action* = mood_change("gr-lb-m-2"), doc("this should change to beach music");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(9.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1494,7 +1494,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_1");
+				action* = mood_change("gr-lb-m-1");
 				action* = fade_nodes(0xAAA10200,1,1,-1,"out:black"), doc("fh_r3 overlap out");
 				action* = fade_nodes(0xAAA10200,1,2,-1,"out:black");
 				action* = set_interest_radius(2f,"party_member_within_bounding_box");
@@ -1527,7 +1527,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_path2sd_1");
+				action* = mood_change("gr-lb-w-1");
 				action* = fade_nodes(0xAAA10200,1,1,-1,"in"), doc("fh_r3 overlap in");
 				action* = fade_nodes(0xAAA10200,1,2,-1,"in");
 				action* = set_interest_radius(10f,"party_member_within_bounding_box");
@@ -1559,7 +1559,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_1");
+				action* = mood_change("gr-lb-m-1");
 				action* = fade_nodes(0xAAA10200,1,2,-1,"out:black");
 				action* = fade_nodes(0xABA10100,2,1,-1,"out:black");
 			  b can_self_destruct = true;
@@ -1691,7 +1691,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_bt_r1_tavern");
+				action* = mood_change("gr-lb-m-tavern");
 				action* = fade_nodes(0xAAA10200,1,1,-1,"out:black");
 				action* = fade_nodes(0xAAA10200,1,2,-1,"out:black");
 			  b can_self_destruct = true;
