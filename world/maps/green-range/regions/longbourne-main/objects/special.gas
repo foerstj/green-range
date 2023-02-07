@@ -1427,64 +1427,6 @@
 	  p position = 6.87306,-1.9,5.72029,0xbb6e3d4d;
 	}
 }
-[t:trigger_change_mood_box,n:0x420000e0]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("gr-lb-m-1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(11.500000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.649448,0,0.760406;
-	  p position = -1.73777,0.763489,2.57159,0x7caf7b78;
-	}
-}
-[t:trigger_change_mood_box,n:0x420000e8]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("gr-lb-m-2"), doc("this should change to beach music");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(9.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.649448,0,0.760406;
-	  p position = -0.0682316,-0.0154386,-0.30529,0x7caf7b78;
-	}
-}
 [t:trigger_generic,n:0x42000099]
 {
 	[common]
@@ -1549,6 +1491,64 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -1.62007,0,-1.262,0xdecf90d5;
+	}
+}
+[t:trigger_change_mood_box,n:0x420000e0]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-lb-m-1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(11.500000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.649448,0,0.760406;
+	  p position = -1.73777,0.763489,2.57159,0x7caf7b78;
+	}
+}
+[t:trigger_change_mood_box,n:0x420000e8]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-lb-m-2"), doc("this should change to beach music");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(9.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.649448,0,0.760406;
+	  p position = -0.0682316,-0.0154386,-0.30529,0x7caf7b78;
 	}
 }
 [t:trigger_change_mood_box,n:0x42000455]
