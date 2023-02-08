@@ -243,60 +243,6 @@
 	  p position = -4.31931,-2.15,-11.617,0x750a906e;
 	}
 }
-[t:check_bool,n:0x42000537]
-{
-	[check_bool]
-	{
-		bool_variable = "sd_r2_bt_quest_checkpoint";
-	  x send_to_scid = 0x42000107;
-	}
-	[placement]
-	{
-	  p position = -8.07318,-0.55,-7.2915,0x750a906e;
-	}
-}
-[t:trigger_generic,n:0x42000538]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x42000539,1.75f,"default","",0);
-				action* = send_world_message("we_req_activate",0x42000537,1.75f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_node(0xABA10100,-1,-1,-1,"on_every_enter"), doc("party member in bt_r1?");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 1.100000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -9.90499,-0.55,-6.65244,0x750a906e;
-	}
-}
-[t:check_bool,n:0x42000539]
-{
-	[check_bool]
-	{
-		bool_variable = "sd_r2_bt_quest_checkpoint";
-	  x send_to_scid = 0x42000108;
-	}
-	[placement]
-	{
-	  p position = -9.74534,-0.55,-4.82423,0x750a906e;
-	}
-}
 [t:trigger_generic,n:0x420000cd]
 {
 	[common]

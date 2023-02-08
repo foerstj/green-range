@@ -66,10 +66,7 @@
 {
 	[text*]
 	{
-		//sample = s_v_greet_male_hailmyfriend;
-        	activate_quest* = quest_open_gate;
 		screen_text = "If you're headed north, we haven't seen anything but Krug come from that direction since the attack last night. If you manage to clear Glitterdelve Pass, it's gonna be a lot easier for us to secure the road when Cap'n gives the word.";
-		quest_dialog = true;
 	}
 }
 [conversation_guard_captain]
@@ -140,11 +137,9 @@
 {
 	[text*]
 	{
-		activate_quest* = quest_gyorn_seek_overseer_mp;
 		sample = s_v_bt_gyornMP1;
 		screen_text = "If you've come looking for help, you'll not get much here. What the Krug couldn't carry off in a wagon, they smashed up or burned. They even put Gravemaker, my blessed ole catapult, to the torch, even though that beauty hasn't thrown a stone since I was a pup. It don't take a wizard to smell the Goblins behind this Krug raid, but the Overseer of Glacern needs to be told what happened here nonetheless.";
 		scroll_rate = 6.5;
-		quest_dialog = true;
 	}
 }
 [conversation_gyorn_join]
@@ -152,11 +147,9 @@
 	[text*]
 	{
 		choice = potential_member;
-		activate_quest* = quest_gyorn_seek_overseer;
 		sample = s_v_bt_gyorn1;
 		screen_text = "If you've come looking for help, you'll not get much here. What the Krug couldn't carry off in a wagon, they smashed up or burned. They even put Gravemaker, my blessed ole catapult, to the torch, even though that beauty hasn't thrown a stone since I was a pup. It don't take a wizard to smell the Goblins behind this Krug raid, but the Overseer of Glacern needs to be told what happened here nonetheless. If you're up for the task, can I come along?";
 		scroll_rate = 6.5;
-		quest_dialog = true;
 	}
 }
 [conversation_gyorn_accept]
@@ -419,8 +412,6 @@
 	{
 		//sample = s_v_greet_female_young;	
 		screen_text = "The raid last night was terrible! I barely escaped with my life. When my sister hears about what the Krug did to us here, she'll be furious! Oh! but she'll be worried that I was hurt. She's an archer in the Legion, stationed at Glacern. If you're going that way, could you tell her I'm all right? I'm sure she'll make it worth your while; her name is Ada.";
-		activate_quest* = quest_sister_message;
-		quest_dialog = true;
        	button_1_text = "More";
        	button_1_value = talked_to_ella;
 	}
@@ -454,7 +445,6 @@
 		screen_text = "I was stationed at the northern guard tower when the Krug started hitting us in waves. If I hadn't been so blasted stubborn, I would have made it back in time to keep them from burning me out of my home. I'm sure the tower is overrun by now, but they might not have figured out the mechanism to enter the armory downstairs. I would hate to have any of our remaining weapons fall into Krug hands; if you are up to the task, you are welcome to them.";
        	button_1_text = "More";
        	button_1_value = talked_to_ordus;
-		quest_dialog = true;
 	}
 }
 [conversation_ordus_2]
