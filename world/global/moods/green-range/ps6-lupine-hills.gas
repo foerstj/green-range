@@ -526,6 +526,61 @@
 		room_type			= rt_generic;
 	}
 }
+[mood_setting*]  // tower inside
+{
+	mood_name				= gr-lb-w-tower-inside;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF747484;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+        standard_track      = "s_m_elysium";
+		battle_track		= "s_m_credits";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]  // tower roof
+{
+	mood_name				= gr-lb-w-tower-roof;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xff8c99a6;  // brighter
+		fog_density			= 0.5f;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 4.000000;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+        standard_track      = "s_m_elysium";
+		battle_track		= "s_m_credits";
+		room_type			= rt_generic;
+	}
+}
 [mood_setting*]  // a_1 (tower cellar)
 {
 	mood_name				= gr-lb-w-a_1;
