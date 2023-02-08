@@ -149,10 +149,10 @@
 
 
 // Longbourne east
-[mood_setting*]  // 1
+[mood_setting*]  // 1 (upper area, including around tower)
 {
 	mood_name				= gr-lb-e-1;
-	transition_time			= 2.0f;
+	transition_time			= 10.0f;
 	interior				= false;
 
 	[fog]
@@ -161,13 +161,19 @@
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF646464;
+		fog_color			= 0xFF747484;  // Longbourne color
 		fog_density			= 0.5f;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
 	}
 
 	[music]
 	{
 		ambient_track		= "";
+		standard_intro_delay = 10.0f;
 		standard_repeat_delay = 10.0f;
         standard_track      = "s_m_elysium";
 		battle_track		= "s_m_credits";
@@ -176,10 +182,10 @@
 }
 [mood_setting*]  // tower 1
 {
-// The bottom floor has the same fog as before, but a longer transition time
+    // The bottom floor has the same fog as outside, but a longer transition time
 	mood_name				= gr-lb-e-tower_1;
 	transition_time			= 5.0f;
-	interior				= false;
+	interior				= true;
 
 	[fog]
 	{
@@ -187,14 +193,8 @@
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF646464;
+		fog_color			= 0xFF747484;
 		fog_density			= 0.5f;
-	}
-
-	[wind]
-	{
-		wind_velocity		= 1.5f;
-		wind_direction		= 4.7f;
 	}
 
 	[music]
@@ -210,7 +210,7 @@
 {
 	mood_name				= gr-lb-e-tower_2;
 	transition_time			= 5.0f;
-	interior				= false;
+	interior				= true;
 
 	[fog]
 	{
@@ -218,7 +218,7 @@
 		fog_far_dist		= 44.0f;
 		fog_lowdetail_near_dist		= 25.0f;
 		fog_lowdetail_far_dist		= 39.0f;
-		fog_color			= 0xFF696969;
+		fog_color			= 0xFF747484;
 		fog_density			= 0.5f;
 	}
 
@@ -235,7 +235,7 @@
 {
 	mood_name				= gr-lb-e-tower_3;
 	transition_time			= 5.0f;
-	interior				= false;
+	interior				= true;
 
 	[fog]
 	{
@@ -243,7 +243,7 @@
 		fog_far_dist		= 42.0f;
 		fog_lowdetail_near_dist		= 20.0f;
 		fog_lowdetail_far_dist		= 37.0f;
-		fog_color			= 0xFF6d6d6e;
+		fog_color			= 0xFF747484;
 		fog_density			= 0.5f;
 	}
 
@@ -260,7 +260,7 @@
 {
 	mood_name				= gr-lb-e-tower_4;
 	transition_time			= 5.0f;
-	interior				= false;
+	interior				= true;
 
 	[fog]
 	{
@@ -268,7 +268,7 @@
 		fog_far_dist		= 40.0f;
 		fog_lowdetail_near_dist		= 20.0f;
 		fog_lowdetail_far_dist		= 35.0f;
-		fog_color			= 0xFF727274;
+		fog_color			= 0xFF747484;
 		fog_density			= 0.5f;
 	}
 
@@ -293,14 +293,14 @@
 		fog_far_dist		= 38.0f;
 		fog_lowdetail_near_dist		= 20.0f;
 		fog_lowdetail_far_dist		= 33.0f;
-		fog_color			= 0xFF77777b;
+		fog_color			= 0xff8c99a6;  // brighter
 		fog_density			= 0.5f;
 	}
 
 	[wind]
 	{
-		wind_velocity		= 3.5f;
-		wind_direction		= 4.7f;
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 4.000000;
 	}
 
 	[music]
@@ -312,7 +312,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]  // 2
+[mood_setting*]  // 2 (lower area, except beach)
 {
 	mood_name				= gr-lb-e-2;
 	transition_time			= 4.0f;
@@ -324,14 +324,14 @@
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF646464;
+		fog_color			= 0xFF747484;
 		fog_density			= 0.5f;
 	}
 
 	[wind]
 	{
-		wind_velocity		= 1.5f;
-		wind_direction		= 4.7f;
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
 	}
 
 	[music]
@@ -343,7 +343,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]  // 3
+[mood_setting*]  // 3 (beach)
 {
 	mood_name				= gr-lb-e-3;
 	transition_time			= 4.0f;
@@ -361,8 +361,8 @@
 
 	[wind]
 	{
-		wind_velocity		= 3.0f;
-		wind_direction		= 4.7f;
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 4.000000;
 	}
 
 	[music]
@@ -388,8 +388,13 @@
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF646464;
+		fog_color			= 0xFF747484;
 		fog_density			= 0.5f;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
 	}
 
 	[music]
@@ -413,13 +418,14 @@
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF646464;
+		fog_color			= 0xFF747484;
 		fog_density			= 0.5f;
 	}
 
 	[music]
 	{
 		ambient_track		= "s_e_env_tavern";
+		standard_intro_delay = 6.0f;
 		standard_repeat_delay = 10.0f;
         standard_track      = "s_m_the_streets_of_prague";
 		battle_track		= "s_m_fortkroth_02";
@@ -428,7 +434,6 @@
 }
 [mood_setting*]  // 2 (beach)
 {
-	//This should kick in when they visit the beach in the besieged town
 	mood_name				= gr-lb-m-2;
 	transition_time			= 10.0f;
 	interior				= false;
@@ -439,21 +444,14 @@
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF545464;
+		fog_color			= 0xFF747484;
 		fog_density			= 0.5f;
 	}
 
-	// Rain near the beach got vetoed
-	//[rain]
-	//{
-	//	rain_density		= 50.0f;
-	//	lightning			= false;
-	//}
-
 	[wind]
 	{
-		wind_velocity		= 1.5f;
-		wind_direction		= 4.7f;
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 4.000000;
 	}
 
 	[music]
@@ -467,7 +465,7 @@
 }
 
 // Longbourne west
-[mood_setting*]  // 1
+[mood_setting*]  // 1 (only first few steps)
 {
 	mood_name				= gr-lb-w-1;
 	transition_time			= 2.0f;
@@ -479,14 +477,14 @@
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF646464;
+		fog_color			= 0xFF747484;
 		fog_density			= 0.5f;
 	}
 
 	[wind]
 	{
-		wind_velocity		= 0.5f;
-		wind_direction		= 3.14f;
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
 	}
 
 	[music]
@@ -510,8 +508,13 @@
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF646464;
+		fog_color			= 0xFF747484;
 		fog_density			= 0.5f;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
 	}
 
 	[music]
