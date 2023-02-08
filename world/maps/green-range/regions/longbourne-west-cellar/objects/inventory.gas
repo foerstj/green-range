@@ -1,34 +1,3 @@
-[t:ax_g_o_1h1b_low,n:0x815000ff]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("quest_drunkard_tower","completed",0);
-				action* = send_world_message("we_req_activate",0x81500137,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.258819,0,0.965926;
-	  p position = 6.39874,-1.48154,2.62101,0xbefe863e;
-		use_point_scids = 0x81500133,0x81500134;
-	}
-}
 [t:book_glb_lore_ibsen,n:0x81500100]
 {
 	[placement]
@@ -36,5 +5,14 @@
 	  q orientation = 0,0.866025,0,-0.5;
 	  p position = -1.38614,0.562249,1.3462,0x989a0956;
 		use_point_scids = 0x81500135,0x81500136;
+	}
+}
+[t:ax_g_o_1h1b_low,n:0x815000ff]
+{
+	[placement]
+	{
+	  q orientation = 0,0.258819,0,0.965926;
+	  p position = 6.39874,-1.48154,2.62101,0xbefe863e;
+		use_point_scids = 0x81500133,0x81500134;
 	}
 }
