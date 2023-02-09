@@ -3,7 +3,41 @@
 	[text*]
 	{
 		nis = true;
-        screen_text = "After a long and often perilous journey across the Green Range mountains, our hero at last reached the warm hearth and soft beds of Longbourne.";
+		screen_text = "After a long and often perilous journey across the Green Range mountains, our hero at last reached the warm hearth and soft beds of Longbourne.";
 		scroll_rate = 3.0;
+	}
+}
+[east_tower_guard]
+{
+	[text*]
+	{
+		screen_text = "The guard captain is in the Lodge enjoying mead and roastbeef. Why shouldn't we have some fun as well? Longbourne is the most boring place to guard anyway. Nobody's attacking this place.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ranger_bbq]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "You look like an Ehbling, am I right? Well met!
+Yes, you've finally reached Longbourne. The Wayfarer's Lodge and other buildings are just a few more steps along the Trail.
+The west bridge is broken, and the next ferry across Lake Longbourne is not due for another few days, so book yourselves a nice clean room in the Lodge, and just enjoy your time here for a while!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "This whole place is run by Werner and Erna, the hosts of the Wayfarer's Lodge. This is a traveler hub, and strictly neutral ground. Everybody is allowed to visit, as long as they can behave themselves decently and don't disturb other guests. Even some Krug are sometimes allowed in.
+Respect everyone's right to be here, and don't start any political discussions. I wish you a great stay! Here you can meet people from all over Aranna.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[west_tower_guard]
+{
+	[text*]
+	{
+		screen_text = "The west bridge is broken and probably won't be repaired until next month. Really no reason to stand guard at the west tower today. Here, have some pork!";
+	  f scroll_rate = 10.000000;
 	}
 }

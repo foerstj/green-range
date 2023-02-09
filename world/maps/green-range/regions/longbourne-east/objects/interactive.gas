@@ -1,24 +1,3 @@
-[t:sign_glb_blacksmith_blank_right,n:0x01e005d5]
-{
-	[common]
-	{
-		screen_name = "Klars Trail to Ehb";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.677016,0,-1.48377,0x4bbff9bb;
-	}
-}
-[t:respawn_statue,n:0x01e00629]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.92388,0,0.382684;
-	  p position = 1.23115,0,1.04443,0x2ebb6b53;
-		use_point_scids = 0x01e005d7;
-	}
-}
 [t:sign_glb_blacksmith_blank_left,n:0x01e0034b]
 {
 	[common]
@@ -31,13 +10,32 @@
 	  p position = 0.10144,0,-1.07749,0x1773c76b;
 	}
 }
-[t:respawn_statue,n:0x01e005fc]
+[t:sign_glb_blacksmith_blank_right,n:0x01e005d5]
 {
+	[common]
+	{
+		screen_name = "Klars Trail to Ehb";
+	}
 	[placement]
 	{
-	  q orientation = 0,-0.382684,0,-0.92388;
-	  p position = -0.392303,0,-0.0801964,0x28e6ac0e;
-		use_point_scids = 0x01e005d6;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.677016,0,-1.48377,0x4bbff9bb;
+	}
+}
+[t:sign_glb_blank,n:0x01e00f81]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.8;
+	}
+	[common]
+	{
+		screen_name = "Dear Troll horde, in case you wish to raid Longbourne please find me at the campfire down at the beach. Thank you & have a nice one! - The Guard.";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.978767,0,0.204978;
+	  p position = -0.211969,0,1.83807,0x9306efe2;
 	}
 }
 [t:sign_glb_blacksmith_blank_left,n:0x01e0034a]
@@ -50,5 +48,14 @@
 	{
 	  q orientation = 0,0.980785,0,-0.19509;
 	  p position = 3.31594,0,-1.97811,0x620d616b;
+	}
+}
+[t:respawn_statue,n:0x01e005fc]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,-0.92388;
+	  p position = -0.392303,0,-0.0801964,0x28e6ac0e;
+		use_point_scids = 0x01e005d6;
 	}
 }
