@@ -1,0 +1,13 @@
+[t:template,n:emt_watersparkle_byday]
+{
+	specializes		= emitter_lightweight;
+    category_name	= "emitter";
+	doc				= "water sparkle by day";
+
+	[sfx_emitter_timed]
+    {
+		effect = "watersparkle";
+	  i start_hour = 6;
+	  i stop_hour = 20;
+    }
+}

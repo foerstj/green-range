@@ -1,0 +1,29 @@
+[effect_script*]
+{
+    name = watersparkle;
+
+    // White sparkles across a water surface of ~24x24m (width of a seashore node)
+    script =[[
+        set $color 1,1,1;
+        set $n 1;
+        set $s .4;
+        set $r 4;
+        set $ts 2;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset(-9,0,-9)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset(-9,0,-3)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset(-9,0, 3)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset(-9,0, 9)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset(-3,0,-9)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset(-3,0,-3)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset(-3,0, 3)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset(-3,0, 9)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset( 3,0,-9)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset( 3,0,-3)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset( 3,0, 3)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset( 3,0, 9)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset( 9,0,-9)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset( 9,0,-3)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset( 9,0, 3)"; sfx start #POP;
+        sfx create sparkles #TARGET "color0($color)count($n)psize($s)radius($r)ts($ts)offset( 9,0, 9)"; sfx start #POP;
+    ]];
+}
