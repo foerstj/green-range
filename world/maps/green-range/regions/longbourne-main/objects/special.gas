@@ -66,45 +66,16 @@
 {
 	[common]
 	{
-		dev_instance_text = "START LOCATION FADE";
+		dev_instance_text = "START LOCATION FADE & MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0xABA10100,2,1,-1,"out:black");
 				action* = fade_nodes(0xAAA10200,1,2,-1,"out:black");
+				action* = mood_change("gr-lb-m-1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -2.81224,0,-0.481145,0x62716554;
-	}
-}
-[t:trigger_change_mood_box,n:0x42000455]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("gr-lb-m-1");
-				action* = fade_nodes(0xAAA10200,1,2,-1,"out:black");
-				action* = fade_nodes(0xABA10100,2,1,-1,"out:black");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -119,8 +90,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.59518,-4.76837e-007,-1.71145,0x26c1513c;
+	  p position = -2.81224,0,-0.481145,0x62716554;
 	}
 }
 [t:trigger_generic,n:0x42000367]
@@ -264,36 +234,6 @@
 	  p position = 8.72033,-1.5,0.405404,0x442e91a7;
 	}
 }
-[t:trigger_change_mood_box,n:0x42000452]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("gr-lb-m-tavern");
-				action* = fade_nodes(0xAAA10200,1,1,-1,"out:black");
-				action* = fade_nodes(0xAAA10200,1,2,-1,"out:black");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.900000,3.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -7.61438,-1.5,3.91912,0x442e91a7;
-	}
-}
 [t:trigger_change_mood_box,n:0x42000453]
 {
 	[common]
@@ -320,13 +260,6 @@
 	[placement]
 	{
 	  p position = 10.4132,-1.5,0.384957,0x442e91a7;
-	}
-}
-[t:use_point,n:0x4200045f]
-{
-	[placement]
-	{
-	  p position = -8.1095,-1.5,3.67898,0x442e91a7;
 	}
 }
 [t:trigger_fade_nodes_box,n:0x420000cb]
@@ -456,7 +389,7 @@
 			{
 				action* = mood_change("gr-lb-m-1");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(30.000000,"on_every_enter");
+				condition* = party_member_within_sphere(11.500000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -488,7 +421,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.90055,-4.76837e-007,0.562794,0xcdd33c07;
+	  p position = -0.226475,-2.38419e-007,-2.01963,0xcdd33c07;
 	}
 }
 [t:trigger_generic,n:0x4200050d]
@@ -615,13 +548,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "START LOCATION FADE";
+		dev_instance_text = "START LOCATION MOOD & FADE";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0xAAA10200,1,2,-1,"out:black");
 				action* = fade_nodes(0xAAA10200,1,1,-1,"out:black");
+				action* = mood_change("gr-lb-m-1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.200000,1.000000,3.200000,"on_every_enter");
 			  f delay = 0.000000;
@@ -630,7 +564,7 @@
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
-			  b single_player = false;
+			  b single_player = true;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -850,36 +784,6 @@
 	[placement]
 	{
 	  p position = 4.12406,-2.64998,1.75001,0xfa16ecc3;
-	}
-}
-[t:trigger_change_mood_box,n:0x42000493]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("gr-lb-m-tavern");
-				action* = fade_nodes(0xAAA10200,1,1,-1,"out:black");
-				action* = fade_nodes(0xAAA10200,1,2,-1,"out:black");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.000000,3.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -9.76977,-2.58613,-1.73313,0xfa16ecc3;
 	}
 }
 [t:trigger_fade_nodes_box,n:0x420000de]
