@@ -84,103 +84,6 @@
 	  p position = -1.6533,0,0.882902,0x04df4f5e;
 	}
 }
-[t:mp_townfolk_f_03,n:0x420004d8]
-{
-	[common]
-	{
-		screen_name = "Mara";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_mara;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = -5.25364,0.9,-5.07675,0xec8af72d;
-	}
-}
-[t:adwana,n:0x420000d3]
-{
-	[aspect]
-	{
-	  b interest_only = true;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_adwana;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.939693,0,0.34202;
-	  p position = -6.19979,-2.9,3.35261,0x51d490ef;
-	}
-}
-[t:naidi,n:0x42000137]
-{
-	[common]
-	{
-	  b is_multi_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_naidi_accept_have_money;
-			* = conversation_naidi_accept_no_money;
-			* = conversation_naidi_disband;
-			* = conversation_naidi_disband_rejoin;
-			* = conversation_naidi_join;
-			* = conversation_naidi_reject;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_naidi.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.798636,0,0.601815;
-	  p position = -10.0251,-2.9,1.97276,0x51d490ef;
-	}
-}
-[t:naidi,n:0x420001b4]
-{
-	[common]
-	{
-	  b is_single_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_naidi_multiplayer;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.798636,0,0.601815;
-	  p position = -10.0251,-2.9,1.97276,0x51d490ef;
-	}
-}
 [t:zed,n:0x4200012c]
 {
 	[aspect]
@@ -280,7 +183,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.087155,0,0.996195;
-	  p position = -0.79768,-1.9,0.784049,0xbb6e3d4d;
+	  p position = 0.883965,0,-2.35883,0xed649ab2;
 	}
 }
 [t:mule_bt_r1,n:0x420000e9]
@@ -291,7 +194,8 @@
 	}
 	[placement]
 	{
-	  p position = -5.81242,-1.9,5.65818,0xbb6e3d4d;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.5153,0,3.86922,0x36d0f749;
 	}
 }
 [t:mule_bt_r1,n:0x420000fa]
@@ -302,8 +206,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.782608,0,0.622515;
-	  p position = -7.16446,-1.9,-0.894435,0xbb6e3d4d;
+	  q orientation = 0,-0.113203,0,0.993572;
+	  p position = 3.96269,0,1.48281,0xef13390d;
 	}
 }
 [t:merchant_packmule,n:0x420000fb]
@@ -347,15 +251,15 @@
 	[placement]
 	{
 	  q orientation = 0,-0.087155,0,0.996195;
-	  p position = -0.775902,-1.9,0.795736,0xbb6e3d4d;
+	  p position = 0.905743,0,-2.34714,0xed649ab2;
 	}
 }
 [t:lame_mare,n:0x42000492]
 {
 	[placement]
 	{
-	  q orientation = 0,0.833886,0,0.551937;
-	  p position = -1.30499,-1.9,-1.36897,0xbb6e3d4d;
+	  q orientation = 0,0.199368,0,0.979925;
+	  p position = -1.48816,0,-1.62335,0xfdf51cb7;
 	}
 }
 [t:guard,n:0x42000106]
