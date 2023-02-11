@@ -90,14 +90,6 @@
 	  p position = -7.95553,-1.44234,-5.16832,0x442e91a7;
 	}
 }
-[t:cmd_camera_move,n:0x4200049a]
-{
-	[placement]
-	{
-	  q orientation = 0.233446,0,-3.83115e-009,0.97237;
-	  p position = -1.64352,7.10189,0.264427,0xe9a19c66;
-	}
-}
 [t:cmd_animation_command,n:0x42000317]
 {
 	[cmd_animation_command]
@@ -122,53 +114,5 @@
 	[placement]
 	{
 	  p position = -0.669266,0,-2.4272,0xed649ab2;
-	}
-}
-[t:cmd_animation_command,n:0x42000468]
-{
-	[cmd_animation_command]
-	{
-	  i animation = 1650811954;
-	  x client_scid = 0x420000DF;
-	  b hold_animation = true;
-	  x next_scid = 0x4200046B;
-	}
-	[placement]
-	{
-	  p position = -8.22797,-1.48495,-3.49963,0xfa16ecc3;
-	}
-}
-[t:cmd_alignment_changer,n:0x42000469]
-{
-	[cmd_dumb_guy]
-	{
-		alignment_activated = aa_good;
-	  x target_actor = 0x420000DF;
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0.7,0,0;
-	}
-	[placement]
-	{
-	  p position = -8.08169,-1.6523,-4.66045,0xfa16ecc3;
-	}
-}
-[t:cmd_animation_command,n:0x4200046b]
-{
-	[cmd_animation_command]
-	{
-	  i animation = 1650811955;
-	  x client_scid = 0x420000DF;
-	  b repeat_animation = false;
-	  b start_fidget = true;
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0,0,0.4;
-	}
-	[placement]
-	{
-	  p position = -6.20683,-1.48495,-3.42177,0xfa16ecc3;
 	}
 }

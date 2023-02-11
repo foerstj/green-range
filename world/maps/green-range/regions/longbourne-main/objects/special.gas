@@ -229,22 +229,6 @@
 			  b single_shot = false;
 			  b start_active = false;
 			}
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x42000468,0f,"default","",0);
-				action* = send_world_message("we_req_use",0x42000469,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
 		}
 	}
 	[placement]
@@ -307,7 +291,7 @@
 	}
 	[placement]
 	{
-	  p position = -7.59177,-1.5,3.9071,0x442e91a7;
+	  p position = -7.61438,-1.5,3.91912,0x442e91a7;
 	}
 }
 [t:trigger_change_mood_box,n:0x42000453]
@@ -343,36 +327,6 @@
 	[placement]
 	{
 	  p position = -8.1095,-1.5,3.67898,0x442e91a7;
-	}
-}
-[t:trigger_generic,n:0x42000498]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT - Camera Move";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x4200049A,0f,"16386","party_member_within_bounding_box",0), doc("[*labelled condition (party_member_within_bounding_box)*]");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.000000,2.000000,"on_unique_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 60.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 9.35838,-1.5,0.614177,0x442e91a7;
 	}
 }
 [t:trigger_generic,n:0x42000470]
@@ -723,36 +677,6 @@
 	[placement]
 	{
 	  p position = 4.12406,-2.64998,1.75001,0xfa16ecc3;
-	}
-}
-[t:trigger_snd_msg_activate,n:0x4200046a]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x42000469,0f,"default","",0), delay(6), doc("change alignment to normal");
-				action* = send_world_message("we_req_deactivate",0x42000468,0f,"default","",0), doc("make him fall out of bed");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -7.40409,-2.44422,-3.05111,0xfa16ecc3;
 	}
 }
 [t:trigger_change_mood_box,n:0x42000493]
