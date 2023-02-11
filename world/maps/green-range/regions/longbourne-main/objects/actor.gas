@@ -44,30 +44,6 @@
 	  p position = -0.0451131,5.72205e-006,-0.740976,0x71e3ff41;
 	}
 }
-[t:mp_townfolk_female_03,n:0x4200023d]
-{
-	[aspect]
-	{
-	  b interest_only = true;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_alanna;
-			* = conversation_alanna_skrubb_dead;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_alanna.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -3.95664,2,2.68231,0x2dd51fe0;
-	}
-}
 [t:guard,n:0x42000107]
 {
 	[aspect]
@@ -81,7 +57,7 @@
 	}
 	[placement]
 	{
-	  p position = -8.57556,-0.55,-6.7425,0x750a906e;
+	  p position = -1.52636,0,-0.779875,0x04df4f5e;
 	}
 }
 [t:guard_captain,n:0x42000108]
@@ -105,52 +81,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.923879,0,0.382684;
-	  p position = -8.70251,-0.55,-5.07973,0x750a906e;
-	}
-}
-[t:merchant_blacksmith,n:0x420000b4]
-{
-	[common]
-	{
-		screen_name = "Blacksmith Rhone";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_blacksmith;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_merchant_blacksmith;
-	}
-	[placement]
-	{
-	  p position = -4.50403,-3.06003,-2.3162,0x3ad3f46d;
-	}
-}
-[t:jonn,n:0x420000b8]
-{
-	[aspect]
-	{
-	  b interest_only = true;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_blacksmith_clerk;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.996195,0,0.087156;
-	  p position = 3.5645,-3.1,-1.20925,0x3ad3f46d;
+	  p position = -1.6533,0,0.882902,0x04df4f5e;
 	}
 }
 [t:mp_townfolk_f_03,n:0x420004d8]
