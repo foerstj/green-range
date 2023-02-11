@@ -44,44 +44,57 @@
 	  p position = -0.0451131,5.72205e-006,-0.740976,0x71e3ff41;
 	}
 }
-[t:guard,n:0x42000107]
+[t:gyorn,n:0x42000047]
 {
-	[aspect]
-	{
-	  b is_selectable = false;
-		model = m_c_gah_fb_pos_a3;
-	}
 	[common]
 	{
-		dev_instance_text = "CONTAINS TRIGGER";
-	}
-	[placement]
-	{
-	  p position = -1.52636,0,-0.779875,0x04df4f5e;
-	}
-}
-[t:guard_captain,n:0x42000108]
-{
-	[aspect]
-	{
-		model = m_c_gah_fb_pos_a3;
-	}
-	[common]
-	{
-		dev_instance_text = "CONTAINS TRIGGER";
-		screen_name = "Guard Captain";
+		dev_instance_text = "Multiplayer ";
+	  b is_single_player = false;
 	}
 	[conversation]
 	{
 		[conversations]
 		{
-			* = conversation_guard_captain;
+			* = conversation_gyorn_multiplayer;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.923879,0,0.382684;
-	  p position = -1.6533,0,0.882902,0x04df4f5e;
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.56553,1.43051e-006,-1.41653,0x26c1513c;
+	}
+}
+[t:gyorn,n:0x42000144]
+{
+	[common]
+	{
+		dev_instance_text = "Singleplayer";
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_gyorn_accept;
+			* = conversation_gyorn_disband;
+			* = conversation_gyorn_disband_rejoin;
+			* = conversation_gyorn_join;
+			* = conversation_gyorn_reject;
+			* = conversation_gyorn_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_gyorn.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.58525,1.43051e-006,-1.63099,0x26c1513c;
 	}
 }
 [t:zed,n:0x4200012c]
@@ -167,6 +180,78 @@
 	  p position = -7.7056,-1.49998,-3.93439,0x442e91a7;
 	}
 }
+[t:blacksmith_acha,n:0x42000316]
+{
+	[common]
+	{
+		screen_name = "Afa";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = half_giant;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.948323,0,-0.317305;
+	  p position = 2.96885,1,1.64497,0x6d48cc60;
+	}
+}
+[t:guard,n:0x42000105]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		screen_name = "Town Guard";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard3;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -2.81577,0,0.242495,0xdecf90d5;
+	}
+}
+[t:guard,n:0x42000106]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+		model = m_c_gah_fb_pos_a3;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.923879;
+	  p position = -3.23711,9.53674e-007,-0.0666914,0xae7e53df;
+	}
+}
+[t:mule_bt_r1,n:0x420000e9]
+{
+	[common]
+	{
+		screen_name = "Flare";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.5153,0,3.86922,0x36d0f749;
+	}
+}
 [t:merchant_packmule,n:0x42000049]
 {
 	[common]
@@ -184,30 +269,6 @@
 	{
 	  q orientation = 0,-0.087155,0,0.996195;
 	  p position = 0.883965,0,-2.35883,0xed649ab2;
-	}
-}
-[t:mule_bt_r1,n:0x420000e9]
-{
-	[common]
-	{
-		screen_name = "Flare";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -2.5153,0,3.86922,0x36d0f749;
-	}
-}
-[t:mule_bt_r1,n:0x420000fa]
-{
-	[common]
-	{
-		screen_name = "Silverhoof";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.113203,0,0.993572;
-	  p position = 3.96269,0,1.48281,0xef13390d;
 	}
 }
 [t:merchant_packmule,n:0x420000fb]
@@ -254,15 +315,7 @@
 	  p position = 0.905743,0,-2.34714,0xed649ab2;
 	}
 }
-[t:lame_mare,n:0x42000492]
-{
-	[placement]
-	{
-	  q orientation = 0,0.199368,0,0.979925;
-	  p position = -1.48816,0,-1.62335,0xfdf51cb7;
-	}
-}
-[t:guard,n:0x42000106]
+[t:guard,n:0x42000107]
 {
 	[aspect]
 	{
@@ -271,32 +324,14 @@
 	}
 	[common]
 	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_use",0x4200052F,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
+		dev_instance_text = "CONTAINS TRIGGER";
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.382684,0,0.923879;
-	  p position = -3.23711,9.53674e-007,-0.0666914,0xae7e53df;
+	  p position = -1.52636,0,-0.779875,0x04df4f5e;
 	}
 }
-[t:guard,n:0x42000105]
+[t:guard_captain,n:0x42000108]
 {
 	[aspect]
 	{
@@ -304,114 +339,40 @@
 	}
 	[common]
 	{
-		screen_name = "Town Guard";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_use",0x4200052B,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
+		dev_instance_text = "CONTAINS TRIGGER";
+		screen_name = "Guard Captain";
 	}
 	[conversation]
 	{
 		[conversations]
 		{
-			* = conversation_guard3;
+			* = conversation_guard_captain;
 		}
 	}
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -2.81577,0,0.242495,0xdecf90d5;
+	  q orientation = 0,0.923879,0,0.382684;
+	  p position = -1.6533,0,0.882902,0x04df4f5e;
 	}
 }
-[t:blacksmith_acha,n:0x42000316]
+[t:mule_bt_r1,n:0x420000fa]
 {
 	[common]
 	{
-		screen_name = "Afa";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = half_giant;
-		}
-	}
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
+		screen_name = "Silverhoof";
 	}
 	[placement]
 	{
-	  q orientation = 0,0.948323,0,-0.317305;
-	  p position = 2.96885,1,1.64497,0x6d48cc60;
+	  q orientation = 0,-0.113203,0,0.993572;
+	  p position = 3.96269,0,1.48281,0xef13390d;
 	}
 }
-[t:gyorn,n:0x42000047]
+[t:lame_mare,n:0x42000492]
 {
-	[common]
-	{
-		dev_instance_text = "Multiplayer ";
-	  b is_single_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_gyorn_multiplayer;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = -1.56553,1.43051e-006,-1.41653,0x26c1513c;
-	}
-}
-[t:gyorn,n:0x42000144]
-{
-	[common]
-	{
-		dev_instance_text = "Singleplayer";
-	  b is_multi_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_gyorn_accept;
-			* = conversation_gyorn_disband;
-			* = conversation_gyorn_disband_rejoin;
-			* = conversation_gyorn_join;
-			* = conversation_gyorn_reject;
-			* = conversation_gyorn_rejoin;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_gyorn.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = -1.58525,1.43051e-006,-1.63099,0x26c1513c;
+	  q orientation = 0,0.199368,0,0.979925;
+	  p position = -1.48816,0,-1.62335,0xfdf51cb7;
 	}
 }
 [t:rusk,n:0x420000df]
