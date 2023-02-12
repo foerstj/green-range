@@ -38,6 +38,24 @@ I'm very happy to live here. My start in life was a bit troublesome - my strengt
 	  f scroll_rate = 10.000000;
 	}
 }
+[mule_merchant_1_packmules]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		sample = s_v_bt_owen4;
+		screen_text = "I hope Flare hasn't given you too much trouble. How 'bout making it a pair? I still got Silverhoof, if you're interested.";
+	}
+}
+[mule_merchant_2_packmules]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		sample = s_v_bt_owen3;
+		screen_text = "I still got ole Silverhoof and Flare, if you're interested.";
+	}
+}
 [mule_merchant_first]
 {
 	[text*]
@@ -63,21 +81,55 @@ I'm very happy to live here. My start in life was a bit troublesome - my strengt
 		screen_text = "Good luck to you, then.";
 	}
 }
-[mule_merchant_1_packmules]
+[priestess]
 {
 	[text*]
 	{
-		choice = buy_packmule;
-		sample = s_v_bt_owen4;
-		screen_text = "I hope Flare hasn't given you too much trouble. How 'bout making it a pair? I still got Silverhoof, if you're interested.";
+		choice = more;
+	  i order = 0;
+		screen_text = "Welcome to the Hallelujah Chapel. This is an oecumenical place of worship - you are welcome to sing Hallelujah here to whatever Gods you wish. All that is asked of you is to respect other people's faith and traditions as they respect yours.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "The Hallelujah Chapel was of course built as an Azunite Shrine of Passion, and I am an Azunite Priestess. But Longbourne's strict neutrality, as well as the colorful mix of people who come to this place, commands us to be open and inclusive, and I like it a lot. My service as a Priestess here is very inspiring, and never boring.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 2;
+		screen_text = "Last night, when it was raining, a Krug Shaman came in here to do a sacrifice. I had to air the chapel for hours afterwards, haha!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "May the blessings of Azunai the Defender follow you wherever you go.
+Sing Hallelujah!";
+	  f scroll_rate = 10.000000;
 	}
 }
-[mule_merchant_2_packmules]
+[chapel_guest]
 {
 	[text*]
 	{
-		choice = buy_packmule;
-		sample = s_v_bt_owen3;
-		screen_text = "I still got ole Silverhoof and Flare, if you're interested.";
+		choice = more;
+	  i order = 0;
+		screen_text = "Nice to meet you, vayfarer. I am Zora, I am Traveler. Lescanzi.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "Zis is nice place. Ze priestess she very kind. I am Lescanzi, I pray to Dark Sister. She pray viz me.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "May ze Dark Sister protect you in ze journeys ahead.";
+	  f scroll_rate = 10.000000;
 	}
 }

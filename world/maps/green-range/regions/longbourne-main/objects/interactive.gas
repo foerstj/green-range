@@ -6,6 +6,25 @@
 	  p position = 0.428543,0,1.34556,0x6a401ade;
 	}
 }
+[t:sign_glb_generalstore_01,n:0x42000aba]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.889918,0,0.456121;
+	  p position = -3.55938,-4.55,-6.26917,0x4c2e939a;
+	}
+}
+[t:sign_glb_inn_02,n:0x42000115]
+{
+	[common]
+	{
+		screen_name = "Wayfarers' Lodge";
+	}
+	[placement]
+	{
+	  p position = 11.0679,2.2872,0.61118,0x442e91a7;
+	}
+}
 [t:door_grs_peasant_right,n:0x4200019e]
 {
 	[door_basic]
@@ -85,8 +104,31 @@
 	  p position = -7.90679,1,-5.62296,0x1ed1b194;
 	}
 }
+[t:sign_glb_shrine_of_passion,n:0x42000abb]
+{
+	[placement]
+	{
+	  p position = -5.90578,5.98643,9.15014,0x1ed1b194;
+	}
+}
+[t:sign_glb_blank,n:0x42000ac7]
+{
+	[common]
+	{
+		screen_name = "Longbourne oecumenical Hallelujah Chapel - Everyone is welcome";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.198024,0,0.980197;
+	  p position = -3.1155,0.276558,9.56961,0x1ed1b194;
+	}
+}
 [t:door_glb_chapel_left,n:0x42000af8]
 {
+	[common]
+	{
+		screen_name = "Hallelujah Chapel";
+	}
 	[door_basic]
 	{
 	  x second_door = 0x42000AF9;
@@ -99,6 +141,10 @@
 }
 [t:door_glb_chapel_right,n:0x42000af9]
 {
+	[common]
+	{
+		screen_name = "Hallelujah Chapel";
+	}
 	[door_basic]
 	{
 	  x second_door = 0x42000AF8;
@@ -163,13 +209,6 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -4.63111,-2.64998,1.05747,0xfa16ecc3;
-	}
-}
-[t:sign_glb_inn_01,n:0x42000115]
-{
-	[placement]
-	{
-	  p position = 12.2679,-3.0628,0.661181,0xfa16ecc3;
 	}
 }
 [t:door_grs_peasant_left,n:0x42000148]

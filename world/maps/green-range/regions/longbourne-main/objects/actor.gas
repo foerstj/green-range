@@ -77,6 +77,70 @@
 	  p position = -1.82269,-1.75,2.76725,0xe6bce6a4;
 	}
 }
+[t:peasant_female_big,n:0x42000aa4]
+{
+	[common]
+	{
+		screen_name = "Azunite Priestess Kati";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = priestess;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\green-range\job_talk_npc.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.518828,0,0.854879;
+	  p position = -6.12117,0.499998,-1.82836,0x1ed1b194;
+	}
+}
+[t:mheagan,n:0x42000ab2]
+{
+	[aspect]
+	{
+	  f max_life = 176.4;
+	  f max_mana = 81;
+	}
+	[common]
+	{
+		screen_name = "Zora";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = chapel_guest;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = gr_boots_rangers;
+			es_spellbook = book_glb_magic_01;
+		}
+		[other]
+		{
+			il_main = spell_resurrect;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.540771,0,0.84117;
+	  p position = -4.25164,0.5,-0.202148,0x1ed1b194;
+	}
+}
 [t:blacksmith_acha,n:0x42000316]
 {
 	[common]
