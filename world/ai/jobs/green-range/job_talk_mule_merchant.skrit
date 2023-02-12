@@ -10,6 +10,31 @@ Goid		m_Target$;
 property    string  namespace$  = "mule_merchant"   doc = "Namespace for conversations and flags";
 property    bool    first$      = false             doc = "Whether to have a first conversation";
 property    bool    numeric$    = false             doc = "Different conversation for each mule count";
+property    bool    face_player$    = true                  doc = "Face player when starting to talk";
+property    string  talk_anim$      = ""                    doc = "Animation during convo: talk or look";
+
+
+void animate$()
+{
+    if ( !StringTool.IsEmpty( talk_anim$ ) )
+    {
+        if ( StringTool.SameNoCase( talk_anim$, "talk" ) )
+        {
+            TryAnim$('talk');
+        }
+        if ( StringTool.SameNoCase( talk_anim$, "look" ) )
+        {
+            TryAnim$('look');
+        }
+    }
+    else
+    {
+        if ( m_Go$.Mind.ActorAutoFidgets )
+        {
+            StartFidgetIfRequired$();
+        }
+    }
+}
 
 startup state STARTUP$
 {
@@ -23,7 +48,14 @@ event OnJobInit$( Job job$ )
 	m_Body$		= job$.Go.Body;
 	m_Target$	= job$.GoalObject;
 
-	SetState Face$;
+    if ( face_player$ )
+    {
+        SetState Face$;
+    }
+    else
+    {
+        SetState Talk$;
+    }
 }
 
 state Face$
@@ -35,13 +67,6 @@ state Face$
 
 	event OnEnterState$
 	{
-		if( !m_Go$.HasConversation )
-		{
-			report.errorf( "Actor '%s', scid:0x%08x was told to run job_talk but he doesn't have a conversation component.",
-							m_Go$.GetTemplateName,
-							m_Go$.Goid );
-			SetState Exiting$;
-		}
 		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
 	}
 }
@@ -58,10 +83,10 @@ state Talk$
 			}
 		}
 	}
-	
+
 	trigger OnWorldMessage$( WE_ANIM_DONE )
 	{
-		TryAnim$('talk');
+        animate$();
 	}
 
 	event OnEnterState$
@@ -91,10 +116,11 @@ state Talk$
                     m_Go$.GetConversation.RSSelectConversation( namespace$ + "_has_packmules" );
                 }
 			}
-		}	
-        TryAnim$('talk');
+		}
 
 		m_Go$.GetConversation.RSActivateDialogue();
+
+        animate$();
 	}
 }
 
@@ -102,9 +128,11 @@ state Exiting$
 {
 	event OnEnterState$
 	{
-		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+        if ( face_player$ )
+        {
+            MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+        }
 
 		m_Job$.MarkForDeletion();
 	}
 }
-
