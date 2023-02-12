@@ -1,8 +1,9 @@
-[t:merchant_packmule,n:0x42000049]
+[t:gr_shop_lb_mules,n:0x42000049]
 {
 	[common]
 	{
 	  b is_single_player = false;
+		screen_name = "Barbs";
 	}
 	[conversation]
 	{
@@ -41,38 +42,21 @@
 	  p position = 2.47129,-1.75,-0.930016,0xe6bce6a4;
 	}
 }
-[t:merchant_packmule,n:0x420000fb]
+[t:gr_shop_lb_mules,n:0x420000fb]
 {
 	[common]
 	{
 	  b is_multi_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x4200031D,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_constructed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
+		screen_name = "Barbs";
 	}
 	[conversation]
 	{
 		[conversations]
 		{
-			* = mule_merchant_first;
-			* = mule_merchant_no_packmules;
 			* = mule_merchant_1_packmules;
 			* = mule_merchant_2_packmules;
+			* = mule_merchant_first;
+			* = mule_merchant_no_packmules;
 		}
 	}
 	[mind]
