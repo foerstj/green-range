@@ -1,3 +1,25 @@
+[chapel_guest]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Nice to meet you, vayfarer. I am Zora, I am Traveler. Lescanzi.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "Zis is nice place. Ze priestess she very kind. I am Lescanzi, I pray to Dark Sister. She pray viz me.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "May ze Dark Sister protect you in ze journeys ahead.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [half_giant]
 {
 	[text*]
@@ -106,25 +128,20 @@ Sing Hallelujah!";
 	  f scroll_rate = 10.000000;
 	}
 }
-[chapel_guest]
+[shop]
 {
 	[text*]
 	{
-		choice = more;
-	  i order = 0;
-		screen_text = "Nice to meet you, vayfarer. I am Zora, I am Traveler. Lescanzi.";
+		choice = shop;
+		screen_text = "Welcome, welcome! Come on in!
+Merchants from all across Aranna pass through Longbourne, and wherever they come from, they carry wares to sell. I buy everything, I sell everything.";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
 	{
-		choice = more;
-	  i order = 1;
-		screen_text = "Zis is nice place. Ze priestess she very kind. I am Lescanzi, I pray to Dark Sister. She pray viz me.";
-	  f scroll_rate = 10.000000;
-	}
-	[text*]
-	{
-		screen_text = "May ze Dark Sister protect you in ze journeys ahead.";
+		choice = shop;
+		screen_text = "Welcome, welcome! Come on in!
+You're coming down from the Green Range? Plenty of loot from Robbers and Trog, I suppose. Lay it all on me. I make you a good price.";
 	  f scroll_rate = 10.000000;
 	}
 }
