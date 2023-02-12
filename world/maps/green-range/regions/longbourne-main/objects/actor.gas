@@ -8,7 +8,7 @@
 	{
 		[conversations]
 		{
-			* = conversation_owen_multiplayer;
+			* = mule_merchant_multiplayer;
 		}
 	}
 	[placement]
@@ -69,15 +69,15 @@
 	{
 		[conversations]
 		{
-			* = conversation_owen_first;
-			* = conversation_owen_no_packmules;
-			* = conversation_owen_one_packmule;
-			* = conversation_owen_two_packmules;
+			* = mule_merchant_first;
+			* = mule_merchant_no_packmules;
+			* = mule_merchant_1_packmules;
+			* = mule_merchant_2_packmules;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_owen.skrit;
+		jat_talk = world\ai\jobs\green-range\job_talk_mule_merchant.skrit?first=true&numeric=true;
 	}
 	[placement]
 	{
