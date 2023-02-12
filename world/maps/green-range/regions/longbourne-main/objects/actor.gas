@@ -188,47 +188,7 @@
 	  p position = 2.96885,1,1.64497,0x6d48cc60;
 	}
 }
-[t:andiemus,n:0x42000b33]
-{
-	[aspect]
-	{
-	  f max_life = 333.2;
-	  f max_mana = 449;
-	}
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,-5.28297e-008,0,1;
-	  p position = -11.1788,-2.65,-2.81911,0xfa16ecc3;
-	}
-}
-[t:dsx_ashley_wicket,n:0x42000b38]
-{
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -4.41019,-2.65,-6.36156,0xfa16ecc3;
-	}
-}
-[t:fretch,n:0x42000b3a]
-{
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
-	}
-	[placement]
-	{
-	  p position = -8.25778,-2.65,-6.43793,0xfa16ecc3;
-	}
-}
-[t:mp_townfolk_female_02,n:0x42000b31]
+[t:gr_lb_host_daughter,n:0x42000b31]
 {
 	[common]
 	{
@@ -249,5 +209,121 @@
 	{
 	  q orientation = 0,-0.433591,0,0.90111;
 	  p position = 7.66166,-2.65,1.5099,0xfa16ecc3;
+	}
+}
+[t:andiemus,n:0x42000b33]
+{
+	[aspect]
+	{
+	  b draw_selection_indicator = false;
+	  f max_life = 333.2;
+	  f max_mana = 449;
+	}
+	[common]
+	{
+		screen_name = "Sleeping Guard";
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_avg;
+		}
+		[other]
+		{
+			il_main = book_glb_lore_castle;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.28297e-008,0,1;
+	  p position = -11.1788,-2.65,-2.81911,0xfa16ecc3;
+	}
+}
+[t:dsx_ashley_wicket,n:0x42000b38]
+{
+	[common]
+	{
+		screen_name = "Sleeping Guard";
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -4.41019,-2.65,-6.36156,0xfa16ecc3;
+	}
+}
+[t:fretch,n:0x42000b3a]
+{
+	[common]
+	{
+		screen_name = "Sleeping Guard";
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  p position = -8.25778,-2.65,-6.43793,0xfa16ecc3;
+	}
+}
+[t:neener,n:0x42000b32]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_invincible = true;
+	}
+	[common]
+	{
+		screen_name = "Wrink";
+	}
+	[mind]
+	{
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.148197,0,0.988958;
+	  p position = 4.42503,-2.65,-5.70354,0xfa16ecc3;
+	}
+}
+[t:neener,n:0x42000b34]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_invincible = true;
+	}
+	[common]
+	{
+		screen_name = "Glander";
+	}
+	[mind]
+	{
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.982338,0,0.187114;
+	  p position = 3.95562,-2.65,-3.73213,0xfa16ecc3;
 	}
 }

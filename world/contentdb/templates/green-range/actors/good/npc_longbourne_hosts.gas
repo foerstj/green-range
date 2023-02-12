@@ -1,0 +1,98 @@
+[t:template,n:mp_townfolk_female_02_base]  // = mp_townfolk_female_02
+{
+	category_name = "1W_townsperson";
+	doc = "mp_townfolk_female_02";
+	specializes = base_npc_fg_multiplayer;
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_b1;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_03;
+			1 = b_c_pos_b1_002;
+		}
+	}
+	[common]
+	{
+		screen_name = "Fwynn Gilverstych";
+	}
+	[inventory]
+	{
+		custom_head = m_c_gah_fg_hlmt_head-03;
+		[equipment]
+		{
+			[other]
+			{
+			}
+		}
+	}
+}
+
+[t:template,n:gr_lb_host_daughter]
+{
+    specializes = mp_townfolk_female_02_base;
+
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fg_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+					//01 = dsf-02;  // REMOVED
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					sit1 = a_c_gah_fg_fs0_dsf-08;
+					talk = a_c_gah_fg_fs0_dsf-02;  // ADDED
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+}

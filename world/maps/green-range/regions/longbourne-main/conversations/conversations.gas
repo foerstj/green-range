@@ -51,7 +51,7 @@ Maybe one day our race will go extinct. Maybe it's for the better.";
 		choice = more;
 	  i order = 3;
 		screen_text = "My name is Afa, I work as a farmhand for the Wayfarers' Lodge.
-I'm very happy to live here. My start in life was a bit troublesome - my strength came in handy in raids and battles. Now it comes in handy for carrying provisions and firewood, for pulling the ferry on shore, or for lifting carts for the occasional unlucky traveling salesman to repair a wheel. The hosts of the Lodge treat me very well, and their daughter takes to me like a brother.";
+I'm very happy to live here. My start in life was a bit troublesome - my strength came in handy in raids and battles. Now it comes in handy for carrying provisions and firewood, for pulling the ferry on shore, or for lifting carts for the occasional unlucky traveling salesman to repair a wheel. The hosts of the Lodge treat me very well, and their granddaughter takes to me like a brother.";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
@@ -149,7 +149,21 @@ You're coming down from the Green Range? Plenty of loot from Robbers and Trog, I
 {
 	[text*]
 	{
-		screen_text = "Ey yo!";
+        choice = more;
+      i order = 0;
+		screen_text = "Ah, new guests! I just finished making the beds in room three. If you want, you can stay there tonight. The other rooms are taken; one belongs to the Legion Guards, one is rented by a group of Goblins.";
 	  f scroll_rate = 10.000000;
 	}
+    [text*]
+    {
+        choice = more;
+      i order = 1;
+        screen_text = "Welcome to the Wayfarers' Lodge, nice to meet you. My name is Annylene, I am the granddaughter of the hosts. I will one day inherit the Lodge, but as of now, my grandparents are poised to run this place forever.";
+	  f scroll_rate = 10.000000;
+    }
+    [text*]
+    {
+        screen_text = "Have a good stay at the Lodge. If you need anything, don't hesitate to tell me, and I'll organize it.";
+	  f scroll_rate = 10.000000;
+    }
 }
