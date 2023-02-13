@@ -20,6 +20,47 @@
 	  f scroll_rate = 10.000000;
 	}
 }
+[guard_captain]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Hello there! I am *hick* the Guard Captain of Longbourne! In person! *hick*";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "Don't you worry, Longbourne is the safest *hick* place there is. We got a guard tower on both sides, manned twenty-four *hick* seven. Or sometimes not manned, but womaned. Hahaha! Get it? Or *snork* dwarfed! Hahahaha!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 2;
+		screen_text = "I hope you know the rules!
+Rule one: *hick* this is a neutral place! Everybody is allowed to pass thru as long as they don't make trouble. T'is a good rule cause else how are *hick* Werner and Erna gonna make money, right? Right.
+Rule two:...
+...no I think that's *hick* it.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 3;
+		screen_text = "And take care! Rule number one means this place is full of shady *hick* people. In a proper country I'd be happy to expell them all, but this is Longbourne. Let those Lescanzi and Droog mind their own business, and es*hick*specially them Goblins, and Krug, see them over there? Yeah just ignore it and don't go over there, is *hick* best for all. And if any of them make you trouble, you just tell me, allright?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Now I wish you a safe and pleasant stay. Have a good one, mate!
+*burp*
+Hey Werner, another Phrak wine, be so good!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [half_giant]
 {
 	[text*]
@@ -57,6 +98,36 @@ I'm very happy to live here. My start in life was a bit troublesome - my strengt
 	[text*]
 	{
 		screen_text = "I'm sure you'll have a pleasant stay here in Longbourne. If you need help carrying some heavy loads, don't hesitate to ask me. See you around!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[host_daughter]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Ah, new guests! I just finished making the beds in room three. If you want, you can stay there tonight. The other rooms are taken; one belongs to the Legion Guards, one is rented by a group of Goblins.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "Welcome to the Wayfarers' Lodge, nice to meet you. My name is Annylene, I am the granddaughter of the hosts. I will one day inherit the Lodge, but as of now, my grandparents are poised to run this place forever.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Have a good stay at the Lodge. If you need anything, don't hesitate to tell me, and I'll organize it.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[host_woman]
+{
+	[text*]
+	{
+		screen_text = "Welcome, dear, welcome to Longbourne! Come on in, get yourselves comfortable! Do you want to register a tent or rent a room? Let me fix up everything for you. Welcome, welcome!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -145,25 +216,12 @@ You're coming down from the Green Range? Plenty of loot from Robbers and Trog, I
 	  f scroll_rate = 10.000000;
 	}
 }
-[host_daughter]
+[host_man]
 {
 	[text*]
 	{
-        choice = more;
-      i order = 0;
-		screen_text = "Ah, new guests! I just finished making the beds in room three. If you want, you can stay there tonight. The other rooms are taken; one belongs to the Legion Guards, one is rented by a group of Goblins.";
+		screen_text = "Welcome to Longbourne, strangers! I guess you'll want to stay here a while and take the ferry next week? Or are you planning to continue westward when the bridge is mended? In any case, for camping see my wife and for a room see our granddaughter upstairs, she should just be finished with room three.
+Meanwhile, can I get you something to eat and drink? We've got Gremal and veggies from the oven today. With some lupine juice or Phrak wine?";
 	  f scroll_rate = 10.000000;
 	}
-    [text*]
-    {
-        choice = more;
-      i order = 1;
-        screen_text = "Welcome to the Wayfarers' Lodge, nice to meet you. My name is Annylene, I am the granddaughter of the hosts. I will one day inherit the Lodge, but as of now, my grandparents are poised to run this place forever.";
-	  f scroll_rate = 10.000000;
-    }
-    [text*]
-    {
-        screen_text = "Have a good stay at the Lodge. If you need anything, don't hesitate to tell me, and I'll organize it.";
-	  f scroll_rate = 10.000000;
-    }
 }

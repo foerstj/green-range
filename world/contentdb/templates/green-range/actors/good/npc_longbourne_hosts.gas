@@ -96,3 +96,77 @@
 		}
 	}
 }
+
+
+[t:template,n:base_verma]  // verma without shop
+{
+	category_name = "1W_character";
+	doc = "verma";
+	specializes = base_npc_pmo;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_verma;
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		model = m_c_gbn_pmo_pos_2;
+		is_ghost_usable = TRUE;
+		use_range = 1;
+		[textures]
+		{
+			0 = b_c_gbn_pmo-05;
+		}
+	}
+	[common]
+	{
+		screen_name = "Verma";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+}
+
+[t:template,n:gr_lb_host_woman]
+{
+    specializes = base_verma;
+}
+
+
+[t:template,n:gr_lb_host_man]
+{
+	category_name = "1W_character";
+	doc = "peasant_male_old";
+	specializes = base_npc_pmo;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_pmo;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gbn_pmo;
+		}
+	}
+	[common]
+	{
+		screen_name = "Peasant";
+	}
+	[conversation]
+	{
+	}
+	[respawn_shrine]
+	{
+	}
+}
