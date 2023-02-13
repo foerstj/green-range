@@ -123,11 +123,38 @@ I'm very happy to live here. My start in life was a bit troublesome - my strengt
 	  f scroll_rate = 10.000000;
 	}
 }
+[host_man]
+{
+	[text*]
+	{
+		screen_text = "Welcome to Longbourne, strangers! I guess you'll want to stay here a while and take the ferry next week? Or are you planning to continue westward when the bridge is mended? In any case, for camping see my wife and for a room see our granddaughter upstairs, she should just be finished with room three.
+Meanwhile, can I get you something to eat and drink? We've got Gremal and veggies from the oven today. With some lupine juice or Phrak wine maybe?";
+	  f scroll_rate = 10.000000;
+	}
+}
 [host_woman]
 {
 	[text*]
 	{
 		screen_text = "Welcome, dear, welcome to Longbourne! Come on in, get yourselves comfortable! Do you want to register a tent or rent a room? Let me fix up everything for you. Welcome, welcome!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[krug_shaman]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Hello Human.
+Yeah hahaha. You not attack us here. You not allowed!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Me Klankard, this Bratak.
+We messengers. Messengers. Kingdom of Humpen. Great Kingdom. Far away. Northern Reaches. Long way, yeah.
+Tomorrow we go. Green Range. Ehb. Meet Krug tribes. Bring messages. We important!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -216,12 +243,20 @@ You're coming down from the Green Range? Plenty of loot from Robbers and Trog, I
 	  f scroll_rate = 10.000000;
 	}
 }
-[host_man]
+[krug_grunt]
 {
 	[text*]
 	{
-		screen_text = "Welcome to Longbourne, strangers! I guess you'll want to stay here a while and take the ferry next week? Or are you planning to continue westward when the bridge is mended? In any case, for camping see my wife and for a room see our granddaughter upstairs, she should just be finished with room three.
-Meanwhile, can I get you something to eat and drink? We've got Gremal and veggies from the oven today. With some lupine juice or Phrak wine?";
+		choice = more;
+	  i order = 0;
+		screen_text = "Ey yo! Human. Give me beer? No?
+Baah, no allowed. Yeah I know. No beer for Krug. Is disciri... dicsimi... is not fair.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Me Bratak. This Klankard. We from Humpen kingdom. In Northern Reaches. Big kingdom. King strong, yeah.
+Humpen good land. Forests, yeah. Hills. Lakes. Winter snow. Summer Phrak. Mmh.";
 	  f scroll_rate = 10.000000;
 	}
 }

@@ -171,6 +171,59 @@
 	  p position = -5.10622,-1.5,-2.7988,0x442e91a7;
 	}
 }
+[t:gr_npc_krug_grunt,n:0x42000b3e]
+{
+	[common]
+	{
+		screen_name = "Bratak of Humpen";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = krug_grunt;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_weapon_hand = meat_bone;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.840718,0,-0.541472;
+	  p position = 0.373451,-1.5,-4.52487,0x442e91a7;
+	}
+}
+[t:gr_npc_krug_shaman,n:0x42000b3f]
+{
+	[common]
+	{
+		screen_name = "Klankard of Humpen";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = krug_shaman;
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_melee_weapon;
+		[equipment]
+		{
+			es_weapon_hand = meat_bone;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.840572,0,-0.541699;
+	  p position = -1.31241,-1.5,-4.32433,0x442e91a7;
+	}
+}
 [t:peasant_female_big,n:0x42000aa4]
 {
 	[common]
