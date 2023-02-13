@@ -140,6 +140,23 @@ Meanwhile, can I get you something to eat and drink? We've got Gremal and veggie
 	  f scroll_rate = 10.000000;
 	}
 }
+[krug_grunt]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Ey yo! Human. Give me beer? No?
+Baah, no allowed. Yeah I know. No beer for Krug. Is disciri... dicsimi... is not fair.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Me Bratak. This Klankard. We from Humpen kingdom. In Northern Reaches. Big kingdom. King strong, yeah.
+Humpen good land. Forests, yeah. Hills. Lakes. Winter snow. Summer Phrak. Mmh.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [krug_shaman]
 {
 	[text*]
@@ -226,6 +243,14 @@ Sing Hallelujah!";
 	  f scroll_rate = 10.000000;
 	}
 }
+[ranger]
+{
+	[text*]
+	{
+		screen_text = "Nevermind the Krug at the fireside. They smell, but they know how to behave. They're envoys from one of these Krug 'kingdoms' (read clans) of the Northern Reaches. The Krug there are a smarter breed than what you get in Ehb.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [shop]
 {
 	[text*]
@@ -243,20 +268,12 @@ You're coming down from the Green Range? Plenty of loot from Robbers and Trog, I
 	  f scroll_rate = 10.000000;
 	}
 }
-[krug_grunt]
+[dwarf]
 {
 	[text*]
 	{
-		choice = more;
-	  i order = 0;
-		screen_text = "Ey yo! Human. Give me beer? No?
-Baah, no allowed. Yeah I know. No beer for Krug. Is disciri... dicsimi... is not fair.";
-	  f scroll_rate = 10.000000;
-	}
-	[text*]
-	{
-		screen_text = "Me Bratak. This Klankard. We from Humpen kingdom. In Northern Reaches. Big kingdom. King strong, yeah.
-Humpen good land. Forests, yeah. Hills. Lakes. Winter snow. Summer Phrak. Mmh.";
+		screen_text = "It's been a long way from Umberdeep, my home town. You come the same way? Did you visit Umberdeep on the way? It's nice ah?
+I gotta admit tho, the roasted Gremal here is superb, and the beer is also almost as good as at home. But only almost.";
 	  f scroll_rate = 10.000000;
 	}
 }

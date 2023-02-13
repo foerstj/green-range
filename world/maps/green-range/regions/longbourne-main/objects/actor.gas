@@ -212,7 +212,6 @@
 	}
 	[inventory]
 	{
-		selected_active_location = il_active_melee_weapon;
 		[equipment]
 		{
 			es_weapon_hand = meat_bone;
@@ -429,5 +428,43 @@
 	[placement]
 	{
 	  p position = -8.25778,-2.65,-6.43793,0xfa16ecc3;
+	}
+}
+[t:dwarf_npc_04,n:0x42000b39]
+{
+	[common]
+	{
+		screen_name = "Njutin Umberdeep";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = dwarf;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.812806,0,-0.582534;
+	  p position = 5.53269,-1.5,6.58364,0x442e91a7;
+	}
+}
+[t:gr_npc_ranger_longbourne_tavern,n:0x42000b40]
+{
+	[common]
+	{
+		screen_name = "Ranger Anke";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = ranger;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.700909,0,0.713251;
+	  p position = 3.97252,-1.5,5.61548,0x442e91a7;
 	}
 }
