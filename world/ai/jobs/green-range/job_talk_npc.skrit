@@ -7,8 +7,16 @@ Goid		m_Target$;
 #include "k_job_c_mcp_fidget_utils"
 #include "k_job_c_talk_utils"
 
+
 property    bool    face_player$    = true                  doc = "Face player when starting to talk";
 property    string  talk_anim$      = "talk"                doc = "Animation during convo: talk or look";
+property    bool    face_back$      = false                 doc = "Face back when talk is finished";
+
+
+float actor_X$;
+float actor_Y$;
+float actor_Z$;
+float actor_W$;
 
 
 void animate$()
@@ -47,7 +55,12 @@ event OnJobInit$( Job job$ )
 
     if ( face_player$ )
     {
-        SetState Face$;
+        actor_X$ = m_go$.Placement.Orientation.x;
+		actor_Y$ = m_go$.Placement.Orientation.y;
+		actor_Z$ = m_go$.Placement.Orientation.z;
+		actor_W$ = m_go$.Placement.Orientation.w;
+
+		SetState Face$;
     }
     else
     {
@@ -101,6 +114,11 @@ state Exiting$
         if ( face_player$ )
         {
             MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+
+            if ( face_back$ )
+            {
+                m_go$.Placement.SSetOrientation( MakeQuat( actor_X$, actor_Y$, actor_Z$, actor_W$));
+            }
         }
 
 		m_Job$.MarkForDeletion();
