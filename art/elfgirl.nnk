@@ -1,0 +1,58 @@
+#############################################################################
+#
+# File     : elfgirl.nnk
+# Author(s): Witness (Lisa Hui)
+# Purpose  : elfgirl naming key
+#
+# Versions : v1.2 [November 1, 2004]
+#	     - altered nnk to use separate keys for the different elfgirl heads
+#	     - commented out nnk for general utility skrits
+#
+#	     v1.1 [August 17, 2004]
+#	     - added naming key entry for general utility skrits
+#
+#	     v1.0 [August 16, 2004]
+#	     - added naming key entries for the elfgirl
+#
+#----------------------------------------------------------------------------
+#  Version: 1.2              Date: November 1, 2004
+#----------------------------------------------------------------------------
+#############################################################################
+
+##############################
+# Animation Tree Additions
+##############################
+
+TREE = A_C_GAH_EG ,	Elfgirl ,		"Elfgirl Animations", fs0, fs1, fs2, fs3, fs4, fs5, fs6, fs7, fs8
+
+
+##############################
+# Bitmap Tree Additions
+##############################
+
+TREE = B_C_GAH_EG ,	Elfgirl ,		"Elfgirl"
+TREE = B_C_POS_A0 ,	Type0 ,			"Armor Type 0"
+TREE = B_C_POS_A2B ,	Type2B ,		"Armor Type 2B"
+TREE = B_C_POS_A7B ,	Type7B ,		"Armor Type 7B"
+
+
+##############################
+# Mesh Tree Additions
+##############################
+
+TREE = M_C_GAH_EG 		, Elfgirl , 		"Elfgirl"
+
+TREE = M_C_GAH_EG_H1		, Head1 ,		"Elfgirl (Head 1) Meshes"
+TREE = M_C_GAH_EG_H1_BOOT 	, Boots ,               "Elfgirl (Head 1) Boots"
+TREE = M_C_GAH_EG_H1_GNTL 	, Gauntlets ,           "Elfgirl (Head 1) Gloves"
+TREE = M_C_GAH_EG_H1_HLMT 	, Helmets ,             "Elfgirl (Head 1) Helmets"
+
+TREE = M_C_GAH_EG_H2 		, Head2 , 		"Elfgirl (Head 2) Meshes"
+TREE = M_C_GAH_EG_H2_BOOT 	, Boots ,               "Elfgirl (Head 2) Boots"
+TREE = M_C_GAH_EG_H2_GNTL 	, Gauntlets ,           "Elfgirl (Head 2) Gloves"
+TREE = M_C_GAH_EG_H2_HLMT 	, Helmets ,             "Elfgirl (Head 2) Helmets"
+
+TREE = M_C_GAH_EG_H3 		, Head3 , 		"Elfgirl (Head 3) Meshes"
+TREE = M_C_GAH_EG_H3_BOOT 	, Boots ,               "Elfgirl (Head 3) Boots"
+TREE = M_C_GAH_EG_H3_GNTL 	, Gauntlets ,           "Elfgirl (Head 3) Gloves"
+TREE = M_C_GAH_EG_H3_HLMT 	, Helmets ,             "Elfgirl (Head 3) Helmets"

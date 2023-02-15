@@ -1,0 +1,137 @@
+[t:template,n:base_npc_elfgirl]
+{
+	specializes = npc;
+
+    category_name = "1W_townsperson";
+	doc = "Elf girl base template";
+	[actor]
+	{
+		is_male = false;
+		race = elf;
+	}
+	[aspect]
+	{
+		life_recovery_unit   = 1;
+		life_recovery_period = 5;
+		mana_recovery_unit   = 2;
+		mana_recovery_period = 2;
+		model = m_c_gah_eg_h1_pos_a0;
+		voice:die:* = s_e_die_female;
+	}
+	[body]
+	{
+		armor_version = gah_eg_h1;
+		avg_move_velocity = 5.80000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_single_melee		= 0.8, 0.8, 0.8;
+			as_two_handed_melee	= 0.8, 0.8, 0.8;
+			as_two_handed_sword	= 0.8, 0.8, 0.8;
+			as_staff		= 1.0, 1.0, 1.0;
+			as_bow_and_arrow	= 0.8, 0.8, 0.8;
+			as_minigun		= 0.8, 0.8, 0.8;
+			as_shield_only		= 0.8, 0.8, 0.8;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_eg_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_attack;
+				[anim_files]
+				{
+                    00 = at;
+				}
+		 	  	[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = infinite_loop;
+				[anim_files] 
+				{ 
+					00=dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					drnk = a_c_gah_eg_fs1_dk;
+					gtup = a_c_gah_eg_fs0_up;
+					look = a_c_gah_eg_fs0_dsf;
+					talk = a_c_gah_eg_fs0_dsf-02;
+					wyme = a_c_gah_eg_fs0_dsf-03;
+					ulor = a_c_gah_eg_fs0_dsf-04;
+					hddl = a_c_gah_eg_fs0_dsf-05;
+					hdup = a_c_gah_eg_fs0_dsf-06;
+					knee = a_c_gah_eg_fs1_dsf-03;
+					lstn = a_c_gah_eg_fs1_dsf-04;
+                    frtd = a_c_gah_eg_fs0_dsf-03;
+                    ulo1 = a_c_gah_eg_fs0_dsf-04;
+                    sit1 = a_c_gah_eg_fs0_dsf-08;
+					hoe1 = a_c_gah_eg_fs5_dsf-03;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_walk;
+				[anim_files] 
+				{ 
+					00 = rl;
+				}
+			}
+		}
+	}
+	[common] { screen_name = "Elf Girl"; }
+    [conversation]
+    {
+    }
+	[mind] 
+	{
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
