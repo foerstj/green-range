@@ -30,20 +30,67 @@ I just wish I could transport them all the way to Quillrabe. These Travelers dem
 	  f scroll_rate = 10.000000;
 	}
 }
-[dummy]
-{
-	[text*]
-	{
-		screen_text = "Dummy convo.";
-	  f scroll_rate = 10.000000;
-	}
-}
 [dwarf]
 {
 	[text*]
 	{
 		screen_text = "It's been a long way from Umberdeep, my home town. You come the same way? Did you visit Umberdeep on the way? It's nice ah?
 I gotta admit tho, the roasted Gremal here is superb, and the beer is also almost as good as at home. But only almost.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[elf_dark]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Suilad!
+No, I'm not a Dryad, haha! I'm just a Dark Elf!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "Last time we were here, we met two Dryads. As you may know, they almost all live on Greylin Isle, and rarely visit the mainland. Did you know that in ancient times Greylin Isle was inhabited by Sea Elves? They have died out long since, but their ruins still dot the Isle, and the Dryads now live among them.
+Meeting the Dryads was very interesting. And they really have leaves for hair!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 2;
+		screen_text = "What the difference between Light and Dark Elves is? Well, you may have heared all sorts of stories, in which case I'm sorry to disappoint you, but the biggest difference is the skin color.
+We are just two different tribes, with different customs and dialects and so on. The Dark Elves live mostly out in the Vai'lutra forest, while the town of Aman'lu is mainly inhabited by Light Elves. That's why most people from outside only know Light Elves.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Well, now you know a Dark Elf! Cool huh. Pleased to meet you!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[elf_light_3]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Suilad, Mellonamin.
+Yes, we are Elves - the pointy ears gave it away, right?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "We are three friends since childhood, and we visit Longbourne every year as a getaway. Home sweet Vai'lutra is of course the most beautiful place in all of Aranna, but once in a while it's good to get out of your comfort zone and stay in touch with the outside world, am I right?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Every time we come here, I need at least a day or two to acclimatize. Elven taverns are so nice and clean and calm. But that's all part of the adventure, right? Haha. Just wish those Krug were able to eat with their mouths closed!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -218,6 +265,14 @@ Tomorrow we go. Green Range. Ehb. Meet Krug tribes. Bring messages. We important
 	  f scroll_rate = 10.000000;
 	}
 }
+[lescanzi_woman]
+{
+	[text*]
+	{
+		screen_text = "Ze food here is good ah? Yesterday zey had fresh trout from ze lake, today roast Gremal. And I have to admit I vas very sceptic vhen I heared 'Phrak vine' - but do try it! It's very refreshing.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [mule_merchant_1_packmules]
 {
 	[text*]
@@ -312,11 +367,41 @@ You're coming down from the Green Range? Plenty of loot from Robbers and Trog, I
 	  f scroll_rate = 10.000000;
 	}
 }
-[lescanzi_woman]
+[elf_light_1]
 {
 	[text*]
 	{
-		screen_text = "Ze food here is good ah? Yesterday zey had fresh trout from ze lake, today roast Gremal. And I have to admit I vas very sceptic vhen I heared 'Phrak vine' - but do try it! It's very refreshing.";
+		choice = more;
+	  i order = 0;
+		screen_text = "Suilad!
+It means hello in Elvish.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "I really like the rustic atmosphere of this place. The lively noise from all those people from all over Aranna mingling here - it is a welcome diversion from orderly Aman'lu. It even makes up for the odour. Though I have to admit, every year I'm just as glad to return home as I was to leave it. And that's the whole purpose of a vacation, of course!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 2;
+		screen_text = "And the hosts here, Erna and Werner, are such dear people. And they make delicious food! Simple, but delicious. Try the oven veggies. And the lupine juice! Wish I could take it home, but it's only good for a few hours after extracting.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 3;
+		screen_text = "Please nevermind the Krug, They smack and they smell, but let's be glad a few of them are 'civilized' enough at all to be permitted here, let's hope they serve as good examples for their peers.
+No, the Krug are simply as dumb as they were created. And the Droog and Lescanzi cannot be trusted for three meters, but their peoples have been through really tough times. The only ones worth worrying about are the Goblins, if you ask me. They are cunning, but shady. Trust me, if it weren't for their constant infighting, they'd rule this continent. Something to keep an eye on.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "I's been nice meeting you, Mellonamin! Come visit Aman'lu one day!";
 	  f scroll_rate = 10.000000;
 	}
 }
