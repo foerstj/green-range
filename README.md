@@ -54,5 +54,7 @@ Textures of Fox and beta Mucosa as well as the big Klars Trail sign courtesy of 
 Hi-res texture of Shrack (Floaters) and Giant Skrubb courtesy of AntonioR.\
 Dark Sprite courtesy of Bare Elf.\
 Light Spell made with help from Starfall.\
+Chapel courtesy of Sadowson.\
+Elfgirls by Witness (Lisa Hui).\
 Webbed trees and bushes are from Yesterhaven.\
 Custom music by Alexander Nakarada.
