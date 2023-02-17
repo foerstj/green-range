@@ -77,11 +77,41 @@
 		voice:hit_critical:	* = s_e_hit_mangler_SED;
     }
 
-    // make weaker
-    [aspect]
-    {
-		experience_value = 1366;  // halved, was 2732
-		life             = 424;  // halved, was 848
-		max_life         = 424;  // halved, was 848
-    }
+    // stats & loot from mangler
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		16, 0;
+			intelligence = 	5, 0;
+			dexterity = 	9, 0;
+			melee =  		12,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1300;
+		life = 360;
+		max_life = 360;
+		mana = 10;
+		max_mana = 10;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 100;
+		damage_min = 90;
+	}
+	[defend] { defense=173; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #*/59-71;
+			}
+		}
+	}
 }

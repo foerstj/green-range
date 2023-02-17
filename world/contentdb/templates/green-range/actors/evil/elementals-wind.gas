@@ -225,6 +225,81 @@
         trigger_msg2 = WE_DAMAGED;
         send_msg2 = WE_REQ_ACTIVATE;
     }
+
+    // stats & loot from swamp_creature
+	[actor]
+	{
+		[skills]
+		{
+			strength =  22, 0;
+			intelligence =  8, 0;
+			dexterity =  7, 0;
+            melee =  	12,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2500;
+		life = 1040;
+		max_life = 1040;
+		mana = 10;
+		max_mana = 10;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 145;
+		damage_min = 135;
+		reload_delay = 0;
+	}
+   	[defend] { defense=140; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				}
+				[all*]
+				{
+	   				chance = 0.02;
+	                il_main = #spell/12-18;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/60-75;
+					il_main = #armor/34-172;
+	                il_main = #weapon/60-75;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/68-86;
+	                il_main = #armor/-rare(1)/196-272;
+                    il_main = #*/-rare(1)/68-86;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/68-86;
+	                il_main = #armor/-unique(2)/196-272;
+                    il_main = #*/-unique(2)/68-86;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 2355;
+					min = 1987;
+				}
+			}
+		}
+	}
 }
 
 [t:template,n:dsx_elemental_air_minion_base]  // = dsx_elemental_air_minion
@@ -439,13 +514,79 @@
 		actor_auto_switches_to_melee	= false;
     }
 
+    // stats & loot from swamp_slinger
+	[actor]
+	{
+		[skills]
+		{
+			strength =  17, 0;
+			intelligence =  9, 0;
+			dexterity =  8, 0;
+			combat_magic =  9,  0;
+		}
+	}
 	[aspect]
 	{
-        // HALVED
-		experience_value = 1466;
-		life             = 401;
-		max_life         = 401;
-    }
+		experience_value = 1500;
+		life = 280;
+		max_life = 280;
+		mana = 16;
+		max_mana = 16;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 104;
+		damage_min = 90;
+	}
+   	[defend] { defense=120; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				}
+				[all*]
+				{
+	   				chance = 0.02;
+	                il_main = #spell/12-18;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/60-73;
+					il_main = #armor/34-166;
+	                il_main = #weapon/60-73;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/71-83;
+	                il_main = #armor/-rare(1)/152-246;
+                    il_main = #*/-rare(1)/71-83;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/71-83;
+	                il_main = #armor/-unique(2)/152-246;
+                    il_main = #*/-unique(2)/71-83;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 2696;
+					min = 2489;
+				}
+			}
+		}
+	}
 }
 [t:template,n:gr_wind_spirit_sm_summon]
 {
@@ -492,16 +633,68 @@
         }
         membership = monster;  // removed immune_xy
     }
-    [aspect]
+
+    // stats & loot from swamp_creature_boss_01
+	[actor]
 	{
-		life             = 1700;  // was 1324
-		max_life         = 1700;  // was 1324
-		mana             = 500;  // was 399
-		max_mana         = 500;  // was 399
+		[skills]
+		{
+			strength =  24, 0;
+			intelligence =  9, 0;
+			dexterity =  9, 0;
+            melee =  	20,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 4852;
+		life = 1152;
+		max_life = 1152;
+		mana = 10;
+		max_mana = 10;
 	}
 	[attack]
 	{
-		damage_max = 500;  // was 350
-		damage_min = 400;  // was 300
+		attack_range = 0.5;
+		damage_max = 145;
+		damage_min = 135;
+		reload_delay = 0;
+	}
+   	[defend] { defense=312; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #*/75-80;
+					il_main = #armor/255-290;
+	                il_main = #weapon/75-80;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/82-96;
+	                il_main = #armor/-rare(1)/266-310;
+                    il_main = #*/-rare(1)/82-96;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/82-96;
+	                il_main = #armor/-unique(2)/266-310;
+                    il_main = #*/-unique(2)/82-96;
+	            }
+				[gold*]
+				{
+					max = 4655;
+					min = 2211;
+					min_pile = 225;
+					piles = 5 - 7;
+				}
+			}
+		}
 	}
 }
