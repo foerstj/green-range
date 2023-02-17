@@ -266,7 +266,12 @@
 		experience_value = 1466;
 		life             = 708;
 		max_life         = 708;
-    }        
+    }
+	[attack]
+	{
+		damage_max = 300;  // was 480
+		damage_min = 200;  // was 425
+	}
 }
 [t:template,n:gr_water_spirit_sm_summon]
 {
@@ -289,6 +294,12 @@
 		effect = gr_water_elem_die_lg;  // kinda bigger splash
 		effectDelay = 0.6;
 		lifeSpan = 6;
+	}
+
+	[attack]
+	{
+		damage_max = 400;  // was 480
+		damage_min = 300;  // was 425
 	}
 }
 
@@ -331,7 +342,7 @@
 	}
 	[attack]
 	{
-		damage_max = 600;  // was 480
-		damage_min = 500;  // was 425
+		damage_max = 480;  // back to original
+		damage_min = 425;  // back to original
 	}
 }

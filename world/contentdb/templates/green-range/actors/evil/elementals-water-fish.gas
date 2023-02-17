@@ -76,4 +76,12 @@
 		voice:hit_solid:	* = s_e_hit_mangler_SED;
 		voice:hit_critical:	* = s_e_hit_mangler_SED;
     }
+
+    // make weaker
+    [aspect]
+    {
+		experience_value = 1366;  // halved, was 2732
+		life             = 424;  // halved, was 848
+		max_life         = 424;  // halved, was 848
+    }
 }
