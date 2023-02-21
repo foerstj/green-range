@@ -12,6 +12,32 @@ property    string  oid$                        doc = "Object ID, lower-case hex
 property    int     more_gold$  = 0             doc = "Demand more gold to rejoin after being disbanded";
 property    int     more_gold2$ = 0             doc = "Demand more gold to join when asked twice";
 property    bool    first$      = false         doc = "Whether to have a first conversation";
+property    string  condition$                  doc = "Only hireable when this bool is true";
+property    bool    face_player$    = true      doc = "Face player when starting to talk";
+property    string  talk_anim$      = "talk"    doc = "Animation during convo: talk or look, or empty string";
+
+
+void animate$()
+{
+    if ( !StringTool.IsEmpty( talk_anim$ ) )
+    {
+        if ( StringTool.SameNoCase( talk_anim$, "talk" ) )
+        {
+            TryAnim$('talk');
+        }
+        if ( StringTool.SameNoCase( talk_anim$, "look" ) )
+        {
+            TryAnim$('look');
+        }
+    }
+    else
+    {
+        if ( m_Go$.Mind.ActorAutoFidgets )
+        {
+            StartFidgetIfRequired$();
+        }
+    }
+}
 
 startup state STARTUP$
 {
@@ -25,7 +51,14 @@ event OnJobInit$( Job job$ )
 	m_Body$		= job$.Go.Body;
 	m_Target$	= job$.GoalObject;
 
-	SetState Face$;
+    if ( face_player$ )
+    {
+        SetState Face$;
+    }
+    else
+    {
+        SetState Talk$;
+    }
 }
 
 state Face$
@@ -63,7 +96,7 @@ state Talk$
 	
 	trigger OnWorldMessage$( WE_ANIM_DONE )
 	{
-		TryAnim$('talk');
+        animate$();
 	}
 
 	event OnEnterState$
@@ -115,14 +148,19 @@ state Talk$
                 GameAuditor.GetDb.SetBool( MakeStringF( "%s_talked_to", namespace$ ), true );
                 m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_first", namespace$ ) );
             }
+            else if ( !StringTool.IsEmpty( condition$ ) && !GameAuditor.GetDb.GetBool( condition$ ) )
+            {
+                m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_before_condition", namespace$ ) );
+            }
             else
             {
                 m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_join", namespace$ ) );
             }
         }
-        TryAnim$('talk');
 
 		m_Go$.GetConversation.RSActivateDialogue();
+
+        animate$();
 	}
 }
 
@@ -130,7 +168,10 @@ state Exiting$
 {
 	event OnEnterState$
 	{
-		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+        if ( face_player$ )
+        {
+            MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+        }
 
 		m_Job$.MarkForDeletion();
 	}
