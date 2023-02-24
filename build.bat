@@ -32,10 +32,12 @@ venv\Scripts\python -m build.check_dupe_node_ids %map%
 if %errorlevel% neq 0 pause
 venv\Scripts\python -m build.check_tips %map%
 if %errorlevel% neq 0 pause
-::if not "%mode%"=="light" (
-::  venv\Scripts\python -m build.check_cam_blocks %map%
-::  if !errorlevel! neq 0 pause
-::)
+setlocal EnableDelayedExpansion
+if "%mode%"=="release" (
+  venv\Scripts\python -m build.check_cam_blocks %map%
+  if !errorlevel! neq 0 pause
+)
+endlocal
 popd
 
 :: Compile map file
