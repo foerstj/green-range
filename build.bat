@@ -76,6 +76,7 @@ if %errorlevel% neq 0 pause
 
 if not "%mode%"=="light" (
   call "%doc_dsloa%\Bits\build-music.bat"
+  call "%doc_dsloa%\Bits\build-de.bat"
 )
 
 :: Cleanup
