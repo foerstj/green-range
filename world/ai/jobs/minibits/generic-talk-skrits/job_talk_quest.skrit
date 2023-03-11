@@ -7,8 +7,11 @@ Goid	m_Target$;
 #include "k_job_c_mcp_fidget_utils"
 #include "k_job_c_talk_utils"
 
+
 property    string  namespace$  = "quest"   doc = "Namespace for conversations and flags";
 property    string  quest$                  doc = "Name of the quest";
+property    bool    face_player$    = true  doc = "Face player when starting to talk";
+
 
 startup state STARTUP$
 {
@@ -28,7 +31,27 @@ event OnJobInit$( Job job$ )
 
 	m_Target$	= job$.GoalObject;
 
-	SetState Talk$;
+    if ( face_player$ )
+    {
+        SetState Face$;
+    }
+    else
+    {
+        SetState Talk$;
+    }
+}
+
+state Face$
+{
+	transition
+	{
+		-> Talk$:	OnWorldMessage( WE_MCP_FACING_LOCKEDON );
+	}
+
+	event OnEnterState$
+	{
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
+	}
 }
 
 state Talk$
@@ -68,6 +91,11 @@ state Exiting$
 {
 	event OnEnterState$
 	{
+        if ( face_player$ )
+        {
+            MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+        }
+
 		m_Job$.MarkForDeletion();
 	}
 }
