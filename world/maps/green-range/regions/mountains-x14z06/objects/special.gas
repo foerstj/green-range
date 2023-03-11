@@ -125,7 +125,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("gr-ps5-s");
+				action* = mood_change("gr-ps5-s-snow");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,2.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -159,5 +159,34 @@
 	{
 	  q orientation = 0,-8.9407e-008,0,1;
 	  p position = -1.47928,0,-1.70613,0xdf372a9e;
+	}
+}
+[t:trigger_change_mood_box,n:0x11f005ee]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps5-s");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.92388;
+	  p position = -0.884861,5.94485,0.587402,0x0c1d2fc4;
 	}
 }

@@ -36,6 +36,47 @@
 	  f wind_velocity = 2.000000;
 	}
 }
+[mood_setting*]  // main trail a snowy (trog mt exit)
+{
+	mood_name = gr-ps5-a-snow;
+  f transition_time = 8.000000;
+  b interior = false;
+
+    // defaults
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 8.000000;
+		standard_track = s_m_dragonquest;
+        battle_track = s_m_goblininventor_08;
+		room_type = rt_mountains;
+	}
+	[snow]
+	{
+	  f snow_density = 150.000000;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
+	}
+}
 [mood_setting*]  // highpoint
 {
 	mood_name = gr-ps5-highpoint;
@@ -228,6 +269,39 @@
 	{
 		rain_density = 200.0f;
 		lightning = false;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.7854;  // NW
+	  f wind_velocity = 2.000000;
+	}
+}
+[mood_setting*]  // south snowy (directly at dripstone caverns east exit)
+{
+	mood_name = gr-ps5-s-snow;
+  f transition_time = 8.000000;
+  b interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xff708090;
+	  f fog_density = 0.5;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[music]
+	{
+		ambient_track = s_e_ambient_woods_01;
+	  f standard_intro_delay = 8.000000;
+	  f standard_repeat_delay = 16.000000;
+		standard_track = s_m_goblininventor_01;
+		room_type = rt_mountains;
+	}
+	[snow]
+	{
+	  f snow_density = 150.000000;
 	}
 	[wind]
 	{

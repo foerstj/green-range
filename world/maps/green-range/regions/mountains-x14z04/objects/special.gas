@@ -36,7 +36,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("gr-ps5-a");
+				action* = mood_change("gr-ps5-a-snow");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,1.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -128,5 +128,63 @@
 	[placement]
 	{
 	  p position = 0.0632324,0,0.984619,0x8930ae58;
+	}
+}
+[t:trigger_change_mood_box,n:0x11d00705]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps5-a");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,6.46033e-009,0,1;
+	  p position = -0.123108,0,-0.841869,0xcc7886fd;
+	}
+}
+[t:trigger_change_mood_box,n:0x11d00706]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("gr-ps5-a");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,6.46033e-009,0,1;
+	  p position = -0.0734253,0,-0.0122375,0x27082542;
 	}
 }
