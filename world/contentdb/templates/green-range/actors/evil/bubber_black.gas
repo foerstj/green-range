@@ -1,0 +1,163 @@
+[t:template,n:dsx_bubber_base]  // = dsx_bubber
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_bubber";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	9, 0;
+			intelligence =  7, 0;
+			dexterity =  	8, 0;
+            melee =         4, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 33;
+		life = 50;
+		max_life = 50;
+		mana = 10;
+        	max_mana = 10;
+		model = m_c_edm_gz_pos_1;
+		scale_base = .55;
+		[voice]
+		{
+			[die] { * = s_e_die_lizard_SED; }
+			[hit_glance] { * = s_e_hit_lizard_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 30;
+		damage_min = 22;
+		reload_delay = 0;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.090000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = root_bone;
+			body_posterior = bone01;
+			kill_bone = bone09;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_gz_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] 
+	{ 
+		screen_name="Island Lizard"; 
+		membership = bubber, monster;	
+	}
+   	[defend] { defense=30; }
+	[mind]
+	{
+		on_enemy_spotted_alert_friends 		= true;
+		jat_brain				= world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party		= true
+		&actor_creates_own_party		= true
+		&party_template				= "party_dsx_bubber";
+		com_channels				= dyn_party, bubber;
+		com_range				= 14.0;
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?social			= 0.35
+			&meander		= false
+			&approach_dist	= 3.00
+			&still			= false;
+	}
+}
+
+[t:template,n:gr_bubber_black] { specializes = gr_bubber_black_base; }
+[t:template,n:gr_bubber_black_base]
+{
+    specializes = dsx_bubber_base;
+
+    [common]
+    {
+        screen_name = "Black Bubber";
+    }
+    [aspect]
+    {
+        model = m_c_edm_giantlizard_pos_1;
+        textures:0 = b_c_edm_gz-01;
+
+        // from dsx thunder lizard
+        [voice]
+        {
+            [die]			{ priority = high; * = s_e_die_lectar;		}
+            [enemy_spotted]	{ priority = high; * = s_e_call_thunder_lizard_SED; }
+            [hit_critical]	{ priority = low; * = s_e_hit_lectar_SED;	}
+            [hit_glance]	{ priority = low; * = s_e_hit_lectar_SED;	}
+            [hit_solid]		{ priority = low; * = s_e_hit_lectar_SED;	}
+        }
+    }
+
+    // stats from dsx_leetch
+	[actor]
+	{
+		[skills]
+		{
+		  strength     = 12, 0;
+		  intelligence = 7, 0;
+		  dexterity    = 9, 0;
+		  melee        = 8, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 120;
+		life             = 118;
+		max_life         = 118;
+		mana             = 45;
+		max_mana         = 45;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 55; 
+		damage_min = 45; 
+	}
+	[defend] { defense = 60; }
+}
