@@ -106,7 +106,11 @@
 	{
 		alignment			= aa_neutral;
     }
-    [common] { is_multi_player = false; }
+    [common]
+    {
+        is_multi_player = false;
+        screen_name = "Peaceful Killer Gremal";
+    }
     // behavior of small gremal
 	[mind]
 	{
@@ -210,10 +214,6 @@
     {
 		[textures] { 0=b_c_edm_gm-02-gray; }
     }
-    [common]
-    {
-        screen_name = "Peaceful Killer Gremal";
-    }
 }
 [t:template,n:gremal_black]
 {
@@ -228,6 +228,15 @@
 {
 	doc = "Gremal black";
 	specializes = gremal_killer_base;
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-black; }
+    }
+}
+[t:template,n:gremal_killer_ambient_black]
+{
+	doc = "Gremal black";
+	specializes = gremal_killer_ambient_base;
     [aspect]
     {
 		[textures] { 0=b_c_edm_gm-02-black; }
