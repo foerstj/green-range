@@ -1,47 +1,38 @@
-// widow spider (red_blk) with white texture and stats of stalagnid
-[t:template,n:spider_white]
+[t:template,n:spider_base]  // = spider
 {
 	category_name = "1W_evil_d";
-	doc = "spider_white";
+	doc = "spider_red_blck";
 	specializes = actor_evil;
-
 	[actor]
 	{
 		[skills]
 		{
-			strength =  10, 0;
-			intelligence =  6, 0;
-			dexterity =  18, 0;
-			melee =  3,  0;
+			strength =  5, 0;
+			intelligence =  5, 0;
+			dexterity =  5, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 391;
-		life = 294;
-		max_life = 294;
-		mana = 12;
-		max_mana = 12;
-
+		experience_value = 1;
+		life = 1;
+		max_life = 1;
+		mana = 10;
+		max_mana = 10;
 		model = m_c_edm_sp_pos_1;
 		[voice]
 		{
 			[die]			{ priority = high; * = s_e_die_spider; }
 			[enemy_spotted]	{ priority = high; * = s_e_call_spider; }
 		}
-
-		[textures] { 0=b_c_edm_as-wht; }
 	}
 	[attack]
 	{
 		attack_range = 1;
+		damage_max = 1;
+		damage_min = 1;
 		reload_delay = 1;
-
-		damage_max = 62;
-		damage_min = 54;
 	}
-	[defend] { defense=85; }
-
 	[body]
 	{
 		avg_move_velocity = 2.350000;
@@ -89,9 +80,7 @@
 			}
 		}
 	}
-
-	[common] { screen_name="White Spider"; }
-
+	[common] { screen_name="Spider"; }
 	[mind]
 	{
 		melee_engage_range = 14.0;
@@ -107,6 +96,30 @@
 		gib_gore_good = true;
 		[break_particulate]
 		{
+			frag_glb_spider_01 = 1;
+			frag_glb_spider_02 = 3;
+			frag_glb_spider_03 = 5;
+			frag_glb_spider_04 = 5;
+			frag_glb_spider_05 = 1;
+		}
+	}
+}
+
+// widow spider (spider_red_blck) with white texture
+[t:template,n:base_spider_white]
+{
+    specializes = spider_base;
+
+	doc = "spider_white";
+	[common] { screen_name="White Spider"; }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_as-wht; }
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
 			frag_glb_spider_white_01 = 1;
 			frag_glb_spider_white_02 = 3;
 			frag_glb_spider_white_03 = 5;
@@ -114,4 +127,39 @@
 			frag_glb_spider_white_05 = 1;
 		}
 	}
+}
+
+// widow spider (spider_red_blck) with white texture and stats of stalagnid
+[t:template,n:spider_white] { specializes = spider_white_base; }
+[t:template,n:spider_white_base]
+{
+    specializes = base_spider_white;
+
+    // stats of stalagnid
+	[actor]
+	{
+		[skills]
+		{
+			strength =  10, 0;
+			intelligence =  6, 0;
+			dexterity =  18, 0;
+			melee =  3,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 391;
+		life = 294;
+		max_life = 294;
+		mana = 12;
+		max_mana = 12;
+
+		[textures] { 0=b_c_edm_as-wht; }
+	}
+	[attack]
+	{
+		damage_max = 62;
+		damage_min = 54;
+	}
+	[defend] { defense=85; }
 }
