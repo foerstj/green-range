@@ -7,7 +7,7 @@ FOSS, CC-BY-SA.
 Requires _Dungeon Siege: Legends of Aranna_.
 
 To install, put the dsmap & dsres files into the DSLOA folder of your installation directory.\
-The custom music dsres is optional.
+The custom music dsres and the German translation dsres are optional.
 
 ## About
 _The Green Range is a mountain range on the continent of Aranna that marks the southeastern border of the Aranoi Desert.
@@ -17,10 +17,12 @@ are located within the bounds of the Green Range.\
 The Droog inhabited the Green Range for centuries, but following the Green Range Conflict in 604,
 they were driven from the region by colonists from the Empire of Stars, and forced into the Cliffs of Fire to the south._
 
-Beyond the borders of Ehb, the Green Range extends far north-east, and the Klars Trail leads all the way through them to distant Longbourne.
+Beyond the borders of Ehb, the Green Range extends far north-east,
+and the Klars Trail leads all the way through them to distant Longbourne.
 To the south-east side lies the Greylin Bay, to the north-west side the Aranoi Desert.\
 Out in this rugged, forested wilderness, there's no king and no country.
-Only the hardy Rangers and the Dwarves of Umberdeep call these mountains their home. So do Krug, Robbers, Giants, and hordes of Trolls.
+Only the hardy Rangers and the Dwarves of Umberdeep call these mountains their home.
+So do Krug, Robbers, Giants, and hordes of Trolls.
 
 This is a casual, atmospheric map for both singleplayer and multiplayer.
 It provides a variety of forest biomes, and lots of branching paths and side areas to wander around in and explore.\
@@ -29,7 +31,7 @@ Enjoy playing and don't get lost!
 ## Notes
 This map is in large parts auto-generated.
 The algorithm generates the mountain terrain and automatically places plants and enemies,
-based on Perlin noise. I then add things like bridges and caves, NPCs and minibosses.
+based on Perlin noise. I then added things like bridges and caves, NPCs and minibosses.
 
 This means that the pacing / balancing and the level design are not meticulously hand-crafted.
 Please keep that in mind.
@@ -41,20 +43,19 @@ Another note, the nights are quite dark out there in the mountains.
 They are not scripted for particular areas, but are based on the day-night cycle of DS,
 which takes about 38 minutes (1.6 real minutes per world hour).
 So if it bothers you and hinders exploration, you can simply wait a while.\
-Alternatively, you can make use of a light spell, which are available in shops and also pcontent.
+Alternatively, you can make use of the Light spell, which is available in shops.
 
 ## Compatibility
-
 No known incompatibilities.
 
-The light spell is available via pcontent in all maps, but its effect is purely visual.
+The Light spell is available via pcontent in all maps, but it occurs only rarely, and its effect is purely visual.
 
 ## Attribution
-Textures of Fox and beta Mucosa as well as the big Klars Trail sign courtesy of Eksevis.\
-Hi-res texture of Shrack (Floaters) and Giant Skrubb courtesy of AntonioR.\
-Dark Sprite courtesy of Bare Elf.\
-Light Spell made with help from Starfall.\
-Chapel courtesy of Sadowson.\
-Elfgirls by Witness (Lisa Hui).\
-Webbed trees and bushes are from Yesterhaven.\
-Custom music by Alexander Nakarada.
+Textures of Fox and beta Mucosa as well as the big Klars Trail sign: courtesy of Eksevis.\
+Hi-res texture of Shrack (Floaters) and Giant Skrubb: courtesy of AntonioR.\
+Dark Sprite: courtesy of Bare Elf.\
+Light Spell: made with help from Starfall.\
+Chapel: courtesy of Sadowson.\
+Elfgirls: by Witness (Lisa Hui).\
+Webbed trees and bushes: from Yesterhaven.\
+Custom music: by Alexander Nakarada.
