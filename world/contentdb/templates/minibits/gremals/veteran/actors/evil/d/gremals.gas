@@ -1,0 +1,387 @@
+// not to be confused with 2W_base_gremal
+[t:template,n:2W_gremal_base]  // = 2W_gremal
+{
+	category_name = "2W_evil_d";
+	doc = "2W_Gremal";
+	specializes = 2W_base_gremal;
+	[actor]
+	{
+		alignment			= aa_neutral;
+		[skills]
+		{
+			strength =  4.2, 0;
+			intelligence =  2.9, 0;
+			dexterity =  4.8, 0;
+			melee =  54,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2022;
+		life = 54;
+		max_life = 54;
+		mana = 216;
+        max_mana = 216;
+		megamap_icon = <none>;
+		model = m_c_edm_gm_pos_2;
+		scale_base = 0.4;
+	}
+	[attack]
+	{
+		damage_max = 59.4;
+		damage_min = 48.6;
+	}
+	[common]
+	{
+		screen_name="Gremal";
+		is_multi_player = false;
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\actors\evil\job_fidget_curious.skrit;
+		on_alert_projectile_near_missed_flee = true;
+
+		on_enemy_spotted_alert_friends       = false;
+		on_enemy_entered_ocz_flee            = true;
+		on_friend_entered_ocz_flee           = true;
+		on_enemy_entered_icz_attack          = true;
+
+		sensor_scan_period		 = 0.75;
+		flee_count				 = 1000;
+		com_range                = 7.0;
+		inner_comfort_zone_range = 0.5;
+		melee_engage_range       = 0.5;
+		ranged_engage_range      = 1.0;
+		outer_comfort_zone_range = 3.0;
+		personal_space_range     = 0.7;
+		sight_range              = 12.0;
+	}
+}
+
+// 2W_gremal_killer_base already exists (for summoning).
+
+// Small gremal but as enemy:
+[t:template,n:2W_gremal_enemy_base]
+{
+	specializes = 2W_gremal_base;
+
+	category_name = "2W_evil_d";
+	doc = "Gremal (enemy)";
+
+	[actor]
+	{
+		alignment			= aa_evil;
+    }
+    [common] { is_multi_player = true; }
+    // behavior of killer gremal
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social = 0.30
+			&wander = 0.50
+			&approach_dist = 2.50
+			&still	= false;
+
+		on_enemy_spotted_alert_friends = false;
+		on_enemy_entered_ocz_flee      = true;
+		on_enemy_entered_icz_attack    = true;
+
+		inner_comfort_zone_range = 2;
+		melee_engage_range = 14.0;
+		ranged_engage_range = 14.0;
+		outer_comfort_zone_range = 5;
+		personal_space_range = 0.7;
+		sight_range = 14.0;
+        
+        // Make the little critters fearnaughts
+        flee_count = 0;
+	}
+}
+
+// Big gremal but as ambient:
+[t:template,n:2W_gremal_killer_ambient_base]
+{
+	specializes = 2W_gremal_killer_base;
+
+	category_name = "2W_evil_d";
+	doc = "Gremal Killer (ambient)";
+
+	[actor]
+	{
+		alignment			= aa_neutral;
+    }
+    [common]
+    {
+        is_multi_player = false;
+        screen_name = "Peaceful Killer Gremal";
+    }
+    // behavior of small gremal
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\actors\evil\job_fidget_curious.skrit;
+		on_alert_projectile_near_missed_flee = true;
+
+		on_enemy_spotted_alert_friends       = false;
+		on_enemy_entered_ocz_flee            = true;
+		on_friend_entered_ocz_flee           = true;
+		on_enemy_entered_icz_attack          = true;
+
+		sensor_scan_period		 = 0.75;
+		flee_count				 = 1000;
+		com_range                = 7.0;
+		inner_comfort_zone_range = 0.5;
+		melee_engage_range       = 0.5;
+		ranged_engage_range      = 1.0;
+		outer_comfort_zone_range = 3.0;
+		personal_space_range     = 0.7;
+		sight_range              = 12.0;
+	}
+}
+
+
+[t:template,n:2W_gremal_beige] { specializes = 2W_gremal_beige_base; }
+[t:template,n:2W_gremal_beige_base]
+{
+	specializes = 2W_gremal_base;
+
+	doc = "Gremal beige";
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm; }
+    }
+}
+[t:template,n:2W_gremal_killer_beige] { specializes = 2W_gremal_killer_beige_base; }
+[t:template,n:2W_gremal_killer_beige_base]  // just renaming for sake of consistency
+{
+	specializes = 2W_gremal_killer_base;
+
+	category_name = "2W_evil_d";
+	doc = "Killer Gremal";
+}
+
+[t:template,n:2W_gremal_white] { specializes = 2W_gremal_white_base; }
+[t:template,n:2W_gremal_white_base]
+{
+	specializes = 2W_gremal_base;
+
+	doc = "Gremal white";
+    [common]
+    {
+        screen_name = "Snow Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-white; }
+    }
+}
+[t:template,n:2W_gremal_enemy_white] { specializes = 2W_gremal_enemy_white_base; }
+[t:template,n:2W_gremal_enemy_white_base]
+{
+	specializes = 2W_gremal_enemy_base;
+
+	doc = "Gremal white (enemy)";
+    [common]
+    {
+        screen_name = "Snow Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-white; }
+    }
+}
+[t:template,n:2W_gremal_killer_white] { specializes = 2W_gremal_killer_white_base; }
+[t:template,n:2W_gremal_killer_white_base]
+{
+	specializes = 2W_gremal_killer_base;
+
+	doc = "Gremal white";
+    [common]
+    {
+        screen_name = "Killer Snow Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-white; }
+    }
+}
+
+[t:template,n:2W_gremal_gray] { specializes = 2W_gremal_gray_base; }
+[t:template,n:2W_gremal_gray_base]
+{
+	specializes = 2W_gremal_base;
+
+	doc = "Gremal gray";
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-gray; }
+    }
+}
+[t:template,n:2W_gremal_killer_gray] { specializes = 2W_gremal_killer_gray_base; }
+[t:template,n:2W_gremal_killer_gray_base]
+{
+	specializes = 2W_gremal_killer_base;
+
+	doc = "Gremal gray";
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-gray; }
+    }
+}
+[t:template,n:2W_gremal_killer_ambient_gray] { specializes = 2W_gremal_killer_ambient_gray_base; }
+[t:template,n:2W_gremal_killer_ambient_gray_base]
+{
+	specializes = 2W_gremal_killer_ambient_base;
+
+	doc = "Gremal gray";
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-gray; }
+    }
+}
+
+[t:template,n:2W_gremal_black] { specializes = 2W_gremal_black_base; }
+[t:template,n:2W_gremal_black_base]
+{
+	specializes = 2W_gremal_base;
+
+	doc = "Gremal black";
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-black; }
+    }
+}
+[t:template,n:2W_gremal_killer_black] { specializes = 2W_gremal_killer_black_base; }
+[t:template,n:2W_gremal_killer_black_base]
+{
+	specializes = 2W_gremal_killer_base;
+
+	doc = "Gremal black";
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-black; }
+    }
+}
+[t:template,n:2W_gremal_killer_ambient_black] { specializes = 2W_gremal_killer_ambient_black_base; }
+[t:template,n:2W_gremal_killer_ambient_black_base]
+{
+	doc = "Gremal black";
+	specializes = 2W_gremal_killer_ambient_base;
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-black; }
+    }
+}
+
+[t:template,n:2W_gremal_brown] { specializes = 2W_gremal_brown_base; }
+[t:template,n:2W_gremal_brown_base]
+{
+	specializes = 2W_gremal_base;
+
+	doc = "Gremal brown";
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-brown; }
+    }
+}
+[t:template,n:2W_gremal_killer_brown] { specializes = 2W_gremal_killer_brown_base; }
+[t:template,n:2W_gremal_killer_brown_base]
+{
+	specializes = 2W_gremal_killer_base;
+
+	doc = "Gremal brown";
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-brown; }
+    }
+}
+
+
+// Up-stats
+
+// black gremal with stats of forest phrak
+[t:template,n:2W_gremal_black_forest] { specializes = 2W_gremal_black_forest_base; }
+[t:template,n:2W_gremal_black_forest_base]
+{
+	specializes = 2W_gremal_base;
+
+	doc = "Gremal black";
+    [common]
+    {
+        screen_name = "Forest Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-black; }
+    }
+
+    // stats from 2W_phrak_forest
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	11.1, 0;
+			intelligence =  2.6, 0;
+			dexterity =  	27.2, 0;
+            melee = 		56, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 78000;
+		life = 400;
+        max_life = 400;
+        mana = 4.4;
+		max_mana = 4.4;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 256.7;
+		damage_min = 190;
+	}
+    [defend] { defense=296.7; }
+}
+
+// black gremal with stats of black wolf
+[t:template,n:2W_gremal_killer_black_forest] { specializes = 2W_gremal_killer_black_forest_base; }
+[t:template,n:2W_gremal_killer_black_forest_base]
+{
+	specializes = 2W_gremal_killer_base;
+
+	doc = "Gremal black";
+    [common]
+    {
+        screen_name = "Killer Forest Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-black; }
+    }
+
+    // stats from 2W_wolf_black
+	[actor]
+	{
+		[skills]
+		{
+			strength =  32.1, 0;
+			intelligence =  11, 0;
+			dexterity =  27.5, 0;
+            melee =  61,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 52302;
+		life = 857;
+        max_life = 857;
+        mana = 50.8;
+        max_mana = 50.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 258.4;
+		damage_min = 200;
+	}
+	[defend] { defense=560.2; }
+}

@@ -1,0 +1,163 @@
+[t:template,n:2W_spider_base]  // = 2W_spider
+{
+	category_name = "2W_evil_d";
+	doc = "2W_spider_red_blck";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  17.5, 0;
+			intelligence =  7.3, 0;
+			dexterity =  11.3, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2022;
+		life = 10;
+		max_life = 10;
+		mana = 100;
+		max_mana = 100;
+		model = m_c_edm_sp_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_spider; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_spider; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 1;
+		damage_max = 11;
+		damage_min = 9;
+		reload_delay = 1;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.350000;
+		[bone_translator]
+		{
+			body_anterior = bone02;
+			body_mid = bone04;
+			body_posterior = bone04;
+			kill_bone = bone04;
+			shield_bone = bone01;
+			weapon_bone = bone02;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_sp_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] { screen_name="Spider"; }
+	[mind]
+	{
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = spider_guts_black;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_spider_01 = 1;
+			frag_glb_spider_02 = 3;
+			frag_glb_spider_03 = 5;
+			frag_glb_spider_04 = 5;
+			frag_glb_spider_05 = 1;
+		}
+	}
+}
+
+// widow spider (spider_red_blck) with white texture
+[t:template,n:2W_base_spider_white]
+{
+    specializes = 2W_spider_base;
+
+	doc = "spider_white";
+	[common] { screen_name="White Spider"; }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_as-wht; }
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_spider_white_01 = 1;
+			frag_glb_spider_white_02 = 3;
+			frag_glb_spider_white_03 = 5;
+			frag_glb_spider_white_04 = 5;
+			frag_glb_spider_white_05 = 1;
+		}
+	}
+}
+
+// widow spider (spider_red_blck) with white texture and stats of stalagnid
+[t:template,n:2W_spider_white] { specializes = 2W_spider_white_base; }
+[t:template,n:2W_spider_white_base]
+{
+    specializes = 2W_base_spider_white;
+
+    // stats of 2W_spider_stalagnid
+	[actor]
+	{
+		[skills]
+		{
+			strength =  24.7, 0;
+			intelligence =  8.4, 0;
+			dexterity =  34.4, 0;
+			melee =  54,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 47311;
+		life = 1083.2;
+		max_life = 1083.2;
+		mana = 44.2;
+		max_mana = 44.2;
+	}
+	[attack]
+	{
+		damage_max = 251.3;
+		damage_min = 179.1;
+	}
+	[defend] { defense=449.5; }
+}

@@ -1,90 +1,114 @@
-[t:template,n:gpg_bush_glb_dead_01]
+[t:template,n:gpg_base_bush_glb_dead]
 {
-	category_name = "foliage";
-	doc = "grs_bush_dead_webbed_lots";
 	specializes = base_bush;
+
+	category_name = "foliage";
 	[aspect]
 	{
 		lodfi_lower = 0.3;
 		lodfi_upper = 0.6;
+	}
+}
+
+[t:template,n:gpg_bush_glb_dead_01] { specializes = gpg_bush_glb_dead_01_base; }
+[t:template,n:gpg_bush_glb_dead_01_base]
+{
+    specializes = gpg_base_bush_glb_dead;
+
+	doc = "grs_bush_dead_webbed_lots";
+	[aspect]
+	{
 		model = m_i_glb_bush-dead-01;
 		textures:0 = b_i_glb_bush-dead-01;
 	}
 }
-[t:template,n:gpg_bush_glb_dead_02]
+
+[t:template,n:gpg_bush_glb_dead_02] { specializes = gpg_bush_glb_dead_02_base; }
+[t:template,n:gpg_bush_glb_dead_02_base]
 {
-	category_name = "foliage";
+    specializes = gpg_base_bush_glb_dead;
+
 	doc = "grs_bush_dead";
-	specializes = base_bush;
 	[aspect]
 	{
-		lodfi_lower = 0.3;
-		lodfi_upper = 0.6;
 		model = m_i_glb_bush-dead-02;
 		textures:0 = b_i_glb_bush-dead-02;
 	}
 }
-[t:template,n:gpg_bush_glb_dead_03]
+
+[t:template,n:gpg_bush_glb_dead_03] { specializes = gpg_bush_glb_dead_03_base; }
+[t:template,n:gpg_bush_glb_dead_03_base]
 {
-	category_name = "foliage";
+    specializes = gpg_base_bush_glb_dead;
+
 	doc = "grs_bush_dead_webbed_some";
-	specializes = base_bush;
 	[aspect]
 	{
-		lodfi_lower = 0.3;
-		lodfi_upper = 0.6;
 		model = m_i_glb_bush-dead-03;
 		textures:0 = b_i_glb_bush-dead-03;
 	}
 }
-[t:template,n:gpg_bush_glb_rhod_dead_01]
+
+
+[t:template,n:gpg_base_bush_glb_rhod_dead]
 {
-	category_name = "foliage";
-	doc = "grs_rhod_webbed_lots";
 	specializes = base_bush;
+
+	category_name = "foliage";
 	[aspect]
 	{
 		lodfi_lower = 0.05;
 		lodfi_upper = 0.7;
+	}
+}
+
+[t:template,n:gpg_bush_glb_rhod_dead_01] { specializes = gpg_bush_glb_rhod_dead_01_base; }
+[t:template,n:gpg_bush_glb_rhod_dead_01_base]
+{
+    specializes = gpg_base_bush_glb_rhod_dead;
+
+	doc = "grs_rhod_webbed_lots";
+	[aspect]
+	{
 		model = m_i_glb_bush-rhod-dead-01;
 		textures:0 = b_i_glb_bush-rhod-dead-01;
 	}
 }
-[t:template,n:gpg_bush_glb_rhod_dead_02]
+
+[t:template,n:gpg_bush_glb_rhod_dead_02] { specializes = gpg_bush_glb_rhod_dead_02_base; }
+[t:template,n:gpg_bush_glb_rhod_dead_02_base]
 {
-	category_name = "foliage";
+    specializes = gpg_base_bush_glb_rhod_dead;
+
 	doc = "grs_rhod_webbed_some";
-	specializes = base_bush;
 	[aspect]
 	{
-		lodfi_lower = 0.05;
-		lodfi_upper = 0.7;
 		model = m_i_glb_bush-rhod-dead-02;
 		textures:0 = b_i_glb_bush-rhod-dead-02;
 	}
 }
-[t:template,n:gpg_bush_glb_rhod_dead_03]
+
+[t:template,n:gpg_bush_glb_rhod_dead_03] { specializes = gpg_bush_glb_rhod_dead_03_base; }
+[t:template,n:gpg_bush_glb_rhod_dead_03_base]
 {
-	category_name = "foliage";
+    specializes = gpg_base_bush_glb_rhod_dead;
+
 	doc = "grs_rhod_dying";
-	specializes = base_bush;
 	[aspect]
 	{
-		lodfi_lower = 0.05;
-		lodfi_upper = 0.7;
 		model = m_i_glb_bush-rhod-dead-03;
 		textures:0 = b_i_glb_bush-rhod-dead-03;
 	}
 }
-[t:template,n:gpg_bush_glb_rhod_dead_04]
+
+[t:template,n:gpg_bush_glb_rhod_dead_04] { specializes = gpg_bush_glb_rhod_dead_04_base; }
+[t:template,n:gpg_bush_glb_rhod_dead_04_base]
 {
-	category_name = "foliage";
+    specializes = gpg_base_bush_glb_rhod_dead;
+
 	doc = "grs_rhod_sick";
-	specializes = base_bush;
 	[aspect]
 	{
-		lodfi_lower = 0.05;
-		lodfi_upper = 0.7;
 		model = m_i_glb_bush-rhod-dead-04;
 		textures:0 = b_i_glb_bush-rhod-dead-04;
 	}

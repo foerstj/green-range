@@ -1,0 +1,148 @@
+[t:template,n:3W_spider_adolescent_base]  // = 3W_spider_adolescent (arakun spider)
+{
+	category_name = "3W_evil_d";
+	doc = "3W_spider_pink";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  30.1, 0;
+			intelligence =  3.5, 0;
+			dexterity =  21.2, 0;
+			melee =  90, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 608157;
+		life = 704;
+		max_life = 704;
+		mana = 62;
+		max_mana = 62;
+		model = m_c_edm_as_pos_1;
+		[voice]
+		{
+			[die]			{ * = s_e_die_spider; }
+			[enemy_spotted]	{ * = s_e_call_spider_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 249.9;
+		damage_min = 169.3;
+	}
+	[body]
+	{
+		min_move_velocity = 1.85;
+		avg_move_velocity = 2.430000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_as_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+					02 = di-03;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] { screen_name="Arakun Spider"; }
+	[defend] { defense=423.7; }
+	[mind]
+	{
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.45
+			&still							= false;
+
+		melee_engage_range = 14.0;
+		personal_space_range = 0.5;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+		sight_origin_height	= 1;
+	}
+	[physics]
+	{
+		break_effect = spider_guts_pink;
+		break_sound = ;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_adolescent_spider_01 = 1;
+			frag_glb_adolescent_spider_02 = 1;
+			frag_glb_adolescent_spider_03 = 1;
+			frag_glb_adolescent_spider_04 = 2;
+			frag_glb_adolescent_spider_05 = 1;
+		}
+	}
+}
+
+// arakun spider with white texture
+[t:template,n:3W_spider_arakun_white] { specializes = 3W_spider_arakun_white_base; }
+[t:template,n:3W_spider_arakun_white_base]
+{
+    specializes = 3W_spider_adolescent_base;
+
+	[common] { screen_name="White Spider"; }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_as-wht; }
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_adolescent_spider_white_01 = 1;
+			frag_glb_adolescent_spider_white_02 = 1;
+			frag_glb_adolescent_spider_white_03 = 1;
+			frag_glb_adolescent_spider_white_04 = 2;
+			frag_glb_adolescent_spider_white_05 = 1;
+		}
+	}
+}

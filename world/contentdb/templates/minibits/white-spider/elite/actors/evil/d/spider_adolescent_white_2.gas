@@ -1,0 +1,62 @@
+// white baby spider with stats of dsx_spider_stalagnid_island
+[t:template,n:3W_spider_adolescent_white_2] {specializes = 3W_spider_adolescent_white_2_base; }
+[t:template,n:3W_spider_adolescent_white_2_base]
+{
+	specializes = 3W_spider_adolescent_white_base;
+
+    // stats & loot from 3W_dsx_spider_stalagnid_island
+	[actor]
+	{
+		[skills]
+		{
+			strength =  43.7, 0;
+			intelligence =  12.5, 0;
+			dexterity = 21.3, 0;
+			melee =  80,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1140720;
+		life = 780;
+		max_life = 780;
+		mana = 72;
+		max_mana = 72;
+	}
+	[attack]
+	{
+		damage_max = 303.6;
+		damage_min = 216;
+	}
+	[defend] { defense=438; }
+    [inventory]
+    {
+        [pcontent]
+        {
+        /* Generated: Tue Jun 17 11:13:15 2003
+            Level 4, Medium */
+            [oneof*]
+            {
+                [gold*]
+                {
+                    chance = 0.2;
+                    min = 9672;
+                    max = 18807;
+                }
+                [oneof*]
+                {
+                    chance = 0.088888888888889;
+                    il_main = potion_mana_super;
+                    il_main = potion_health_super;
+                }
+                [oneof*]
+                {
+                    chance = 0.15;
+                    il_main = #weapon/63;
+                    il_main = #armor/12-150;
+                    il_main = #*/63;
+                }
+            }
+        }
+    }
+}

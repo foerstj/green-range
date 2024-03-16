@@ -1,70 +1,73 @@
-[t:template,n:gpg_webbing_glb_ground_01]
+[t:template,n:gpg_base_webbing_glb_ground]
 {
-	category_name = "misc";
-	doc = "cobweb_ground_01";
-	extra_doc = "Don't overlap me with other ground webs!";
 	specializes = non_interactive_nonblocking;
+
+	category_name = "misc";
+	extra_doc = "Don't overlap me with other ground webs!";
 	[aspect]
 	{
 		lodfi_lower = 0.05;
 		lodfi_upper = 0.05;
 		model = m_i_glb_webbing-ground-01;
+	}
+}
+
+[t:template,n:gpg_webbing_glb_ground_01] { specializes = gpg_webbing_glb_ground_01_base; }
+[t:template,n:gpg_webbing_glb_ground_01_base]
+{
+	specializes = gpg_base_webbing_glb_ground;
+
+	doc = "cobweb_ground_01";
+	[aspect]
+	{
 		textures:0 = b_i_glb_webbing-ground-01;
 	}
 }
-[t:template,n:gpg_webbing_glb_ground_02]
+
+[t:template,n:gpg_webbing_glb_ground_02] { specializes = gpg_webbing_glb_ground_02_base; }
+[t:template,n:gpg_webbing_glb_ground_02_base]
 {
-	category_name = "misc";
+	specializes = gpg_base_webbing_glb_ground;
+
 	doc = "cobweb_ground_02";
-	extra_doc = "Don't overlap me with other ground webs!";
-	specializes = non_interactive_nonblocking;
 	[aspect]
 	{
-		lodfi_lower = 0.05;
-		lodfi_upper = 0.05;
-		model = m_i_glb_webbing-ground-01;
 		textures:0 = b_i_glb_webbing-ground-02;
 	}
 }
-[t:template,n:gpg_webbing_glb_ground_03]
+
+[t:template,n:gpg_webbing_glb_ground_03] { specializes = gpg_webbing_glb_ground_03_base; }
+[t:template,n:gpg_webbing_glb_ground_03_base]
 {
-	category_name = "misc";
+	specializes = gpg_base_webbing_glb_ground;
+
 	doc = "cobweb_ground_03";
-	extra_doc = "Don't overlap me with other ground webs!";
-	specializes = non_interactive_nonblocking;
 	[aspect]
 	{
-		lodfi_lower = 0.05;
-		lodfi_upper = 0.05;
-		model = m_i_glb_webbing-ground-01;
 		textures:0 = b_i_glb_webbing-ground-03;
 	}
 }
-[t:template,n:gpg_webbing_glb_ground_04]
+
+[t:template,n:gpg_webbing_glb_ground_04] { specializes = gpg_webbing_glb_ground_04_base; }
+[t:template,n:gpg_webbing_glb_ground_04_base]
 {
-	category_name = "misc";
+	specializes = gpg_base_webbing_glb_ground;
+
 	doc = "cobweb_ground_04";
-	extra_doc = "Don't overlap me with other ground webs!";
-	specializes = non_interactive_nonblocking;
 	[aspect]
 	{
-		lodfi_lower = 0.05;
-		lodfi_upper = 0.05;
-		model = m_i_glb_webbing-ground-01;
 		textures:0 = b_i_glb_webbing-ground-04;
 	}
 }
-[t:template,n:gpg_webbing_glb_ground_05]
+
+[t:template,n:gpg_webbing_glb_ground_05] { specializes = gpg_webbing_glb_ground_05_base; }
+[t:template,n:gpg_webbing_glb_ground_05_base]
 {
-	category_name = "misc";
+	specializes = gpg_base_webbing_glb_ground;
+
 	doc = "cobweb_ground_05";
-	extra_doc = "Don't overlap me with other ground webs!";
-	specializes = non_interactive_nonblocking;
 	[aspect]
 	{
-		lodfi_lower = 0.05;
-		lodfi_upper = 0.05;
-		model = m_i_glb_webbing-ground-01;
 		textures:0 = b_i_glb_webbing-ground-05;
 	}
 }

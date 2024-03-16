@@ -1,90 +1,91 @@
-[t:template,n:gpg_tree_glb_pine_dead_01]
+[t:template,n:gpg_base_tree_glb_pine_dead]
 {
+    specializes = base_tree;
+
 	category_name = "trees";
-	doc = "grs_pine_9m_webbed_lots";
-	specializes = base_tree;
 	[aspect]
 	{
 		lodfi_lower = 0.1;
 		lodfi_upper = 0.75;
 		cam_fade_alpha = 50;
+		scale_base = 0.75;
+	}
+}
+
+[t:template,n:gpg_tree_glb_pine_dead_01] { specializes = gpg_tree_glb_pine_dead_01_base; }
+[t:template,n:gpg_tree_glb_pine_dead_01_base]
+{
+    specializes = gpg_base_tree_glb_pine_dead;
+
+	doc = "grs_pine_9m_webbed_lots";
+	[aspect]
+	{
 		model = m_i_glb_tree-pine-dead-01;
 		textures:0 = b_i_glb_tree-pine-dead-01;
-		scale_base = 0.75;
 	}
 }
-[t:template,n:gpg_tree_glb_pine_dead_02]
+
+[t:template,n:gpg_tree_glb_pine_dead_02] { specializes = gpg_tree_glb_pine_dead_02_base; }
+[t:template,n:gpg_tree_glb_pine_dead_02_base]
 {
-	category_name = "trees";
+    specializes = gpg_base_tree_glb_pine_dead;
+
 	doc = "grs_pine_9m_webbed_some";
-	specializes = base_tree;
 	[aspect]
 	{
-		lodfi_lower = 0.1;
-		lodfi_upper = 0.75;
-		cam_fade_alpha = 50;
 		model = m_i_glb_tree-pine-dead-02;
 		textures:0 = b_i_glb_tree-pine-dead-02;
-		scale_base = 0.75;
 	}
 }
-[t:template,n:gpg_tree_glb_pine_dead_03]
+
+[t:template,n:gpg_tree_glb_pine_dead_03] { specializes = gpg_tree_glb_pine_dead_03_base; }
+[t:template,n:gpg_tree_glb_pine_dead_03_base]
 {
-	category_name = "trees";
+    specializes = gpg_base_tree_glb_pine_dead;
+
 	doc = "grs_pine_9m_webbed_barely";
-	specializes = base_tree;
 	[aspect]
 	{
-		lodfi_lower = 0.1;
-		lodfi_upper = 0.75;
-		cam_fade_alpha = 50;
 		model = m_i_glb_tree-pine-dead-03;
 		textures:0 = b_i_glb_tree-pine-dead-03;
-		scale_base = 0.75;
 	}
 }
-[t:template,n:gpg_tree_glb_pine_dead_04]
+
+[t:template,n:gpg_tree_glb_pine_dead_04] { specializes = gpg_tree_glb_pine_dead_04_base; }
+[t:template,n:gpg_tree_glb_pine_dead_04_base]
 {
-	category_name = "trees";
+    specializes = gpg_base_tree_glb_pine_dead;
+
 	doc = "grs_pine_9m_webbed_some_green";
-	specializes = base_tree;
 	[aspect]
 	{
-		lodfi_lower = 0.1;
-		lodfi_upper = 0.75;
-		cam_fade_alpha = 50;
 		model = m_i_glb_tree-pine-dead-04;
 		textures:0 = b_i_glb_tree-pine-dead-04;
-		scale_base = 0.75;
 	}
 }
-[t:template,n:gpg_tree_glb_pine_dead_05]
+
+[t:template,n:gpg_tree_glb_pine_dead_05] { specializes = gpg_tree_glb_pine_dead_05_base; }
+[t:template,n:gpg_tree_glb_pine_dead_05_base]
 {
-	category_name = "trees";
+    specializes = gpg_base_tree_glb_pine_dead;
+
 	doc = "grs_pine_9m_dying";
-	specializes = base_tree;
 	[aspect]
 	{
-		lodfi_lower = 0.1;
-		lodfi_upper = 0.75;
-		cam_fade_alpha = 50;
 		model = m_i_glb_tree-pine-dead-05;
 		textures:0 = b_i_glb_tree-pine-dead-05;
-		scale_base = 0.75;
 	}
 }
-[t:template,n:gpg_tree_glb_pine_dead_06]
+
+[t:template,n:gpg_tree_glb_pine_dead_06] { specializes = gpg_tree_glb_pine_dead_06_base; }
+[t:template,n:gpg_tree_glb_pine_dead_06_base]
 {
-	category_name = "trees";
+    specializes = gpg_base_tree_glb_pine_dead;
+
 	doc = "grs_pine_9m_sick";
-	specializes = base_tree;
 	[aspect]
 	{
-		lodfi_lower = 0.1;
-		lodfi_upper = 0.75;
-		cam_fade_alpha = 50;
 		model = m_i_glb_tree-pine-dead-06;
 		textures:0 = b_i_glb_tree-pine-dead-06;
-		scale_base = 0.75;
 	}
 }

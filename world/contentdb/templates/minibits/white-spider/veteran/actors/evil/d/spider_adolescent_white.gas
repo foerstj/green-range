@@ -1,0 +1,160 @@
+[t:template,n:2W_spider_adolescent_yellow_base]  // = 2W_spider_adolescent_yellow
+{
+	category_name = "2W_evil_d";
+	doc = "2W_spider_sm_yllw";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  14, 0;
+			intelligence =  1.5, 0;
+			dexterity =  13.5, 0;
+			melee =  57, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 6740;
+		life = 20;
+		max_life = 20;
+		mana = 20;
+		max_mana = 20;
+		model = m_c_edm_as_pos_1;
+		scale_base = 0.5;
+		[textures] { 0=b_c_edm_as-yel; }
+		[voice]
+		{
+			[die]			{ * = s_e_die_spider; }
+			[enemy_spotted]	{ * = s_e_call_spider_small_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 11;
+		damage_min = 9;
+	}
+	[body]
+	{
+		min_move_velocity = 2.0;
+		avg_move_velocity = 4.430000;
+
+		terrain_movement_permissions = lf_dirt;
+
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_as_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+					02 = di-03;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] { screen_name="Yellow Spider"; }
+	[defend] { defense=70; }
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?social		= 0.35
+			&still		= false;
+
+		melee_engage_range = 14.0;
+		personal_space_range = 0.1;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+		sight_origin_height	= 1;
+	}
+	[physics]
+	{
+		break_effect = spider_guts_yellow;
+		break_sound = ;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_adolescent_spider_yel_01 = 1;
+			frag_glb_adolescent_spider_yel_02 = 1;
+			frag_glb_adolescent_spider_yel_03 = 1;
+			frag_glb_adolescent_spider_yel_04 = 1;
+			frag_glb_adolescent_spider_yel_05 = 2;
+		}
+	}
+}
+
+[t:template,n:2W_spider_adolescent_white] { specializes = 2W_spider_adolescent_white_base; }
+[t:template,n:2W_spider_adolescent_white_base]
+{
+	specializes = 2W_spider_adolescent_yellow_base;
+
+	[aspect]
+	{
+		scale_base = 0.4;
+		[textures] { 0=b_c_edm_as-wht; }
+	}
+	[common] { screen_name="White Spider"; }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_adolescent_spider_wht_01 = 1;
+			frag_glb_adolescent_spider_wht_02 = 1;
+			frag_glb_adolescent_spider_wht_03 = 1;
+			frag_glb_adolescent_spider_wht_04 = 1;
+			frag_glb_adolescent_spider_wht_05 = 2;
+		}
+	}
+}
+
+// just renaming to arakun_baby
+[t:template,n:2W_spider_arakun_baby_white] { specializes = 2W_spider_arakun_baby_white_base; }
+[t:template,n:2W_spider_arakun_baby_white_base]
+{
+    specializes = 2W_spider_adolescent_white_base;
+}
