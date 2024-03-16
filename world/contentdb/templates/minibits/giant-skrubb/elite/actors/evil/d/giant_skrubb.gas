@@ -1,25 +1,25 @@
-[t:template,n:skrubb_base]  // = skrubb
+[t:template,n:3W_skrubb_base]  // = 3W_skrubb
 {
-	category_name = "1W_evil_d";
-	doc = "skrubb";
-	specializes = base_skrubb;
+	category_name = "3W_evil_d";
+	doc = "3W_skrubb";
+	specializes = 3W_base_skrubb;
 	[actor]
 	{
 		[skills]
 		{
-			strength =  15, 0;
-			intelligence =  3, 0;
-			dexterity =  2, 0;
+			strength =  35.2, 0;
+			intelligence =  4.5, 0;
+			dexterity =  3.9, 0;
 		}
 	}
 	[aspect]
 	{
 		draw_shadow = false;
-		experience_value = 100;
-		life = 30;
-		max_life = 30;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 787700;
+		life = 86.3;
+		max_life = 86.3;
+		mana = 28.8;
+		max_mana = 28.8;
 		model = m_c_edm_sb_pos_1;
 		[voice]
 		{
@@ -32,11 +32,13 @@
 	[attack]
 	{
 		attack_range = 3;
-		damage_max = 1;
-		damage_min = 1;
+		damage_max = 3.2;
+		damage_min = 2.6;
 		reload_delay = 1;
+		damage_bonus_min_cmagic = 7;
+		damage_bonus_max_cmagic = 21;
 	}
-    [defend] { defense=21; }
+    [defend] { defense=62.3; }
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
@@ -65,23 +67,15 @@
 	}
 }
 
-[t:template,n:giant_skrubb] { specializes = giant_skrubb_base; }
-[t:template,n:giant_skrubb_base]
+[t:template,n:3W_giant_skrubb] { specializes = 3W_giant_skrubb_base; }
+[t:template,n:3W_giant_skrubb_base]
 {
-    specializes = skrubb_base;
+    specializes = 3W_skrubb_base;
 
 	doc = "giant_skrubb";
 	[common]
 	{
 		screen_name = "Giant Skrubb";
-	}
-	[generator_in_object]
-	{
-		child_template_name = hole_grs_giant_skrubb;
-		spawn_event = WE_ENEMY_SPOTTED;
-		spawn_chance = 1.0;
-		spawn_delay = 0.5;
-		fade_kid = true;
 	}
     [inventory]
     {

@@ -1,0 +1,12 @@
+[t:template,n:spell_pg_skrubb_spit] { specializes = spell_pg_skrubb_spit_base; }
+[t:template,n:spell_pg_skrubb_spit_base]
+{
+    specializes = spell_skrubb_spit_base;
+
+	[attack]
+	{
+        // damage from dsx_spell_rusted_scorpigun_lcannon
+		damage_max = 45;
+		damage_min = 30;
+	}
+}

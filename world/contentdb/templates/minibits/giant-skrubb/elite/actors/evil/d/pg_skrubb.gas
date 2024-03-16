@@ -1,0 +1,41 @@
+[t:template,n:3W_pg_skrubb] { specializes = 3W_pg_skrubb_base; }
+[t:template,n:3W_pg_skrubb_base]
+{
+	specializes = 3W_giant_skrubb_base;
+
+	doc = "3W_pg_skrubb";
+	[inventory]
+	{
+		[other] { il_active_primary_spell=spell_pg_skrubb_spit; }
+	}
+
+    // stats from 3W_dsx_scorpiot_ranged_rusted
+	[actor]
+	{
+		[skills]
+		{
+		  strength 		= 39.9, 0; 
+		  intelligence  =  11, 0;
+		  dexterity 	=  19.7, 0;
+		  ranged 		=  77, 0;
+		  combat_magic	=  77, 0;
+		  nature_magic	=  77, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 907920;
+		life             = 1443.3;
+		max_life         = 1443.3;
+		mana             = 243;
+		max_mana         = 243;
+	}
+	[attack]
+	{
+		damage_max = 364.5;
+		damage_min = 198.8;
+		damage_bonus_min_cmagic = 250;
+		damage_bonus_max_cmagic = 435;
+	}
+	[defend] { defense = 557.2; }
+}
