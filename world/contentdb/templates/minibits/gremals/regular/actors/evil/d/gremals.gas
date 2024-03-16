@@ -1,4 +1,5 @@
-[t:template,n:gremal_base]  // not to be confused with base_gremal
+// not to be confused with base_gremal
+[t:template,n:gremal_base]  // = gremal
 {
     // All copy&pasted for use as base template.
 	category_name = "1W_evil_d";
@@ -58,13 +59,16 @@
 		sight_range              = 12.0;
 	}
 }
+
 // gremal_killer_base already exists (for summoning).
+
 // Small gremal but as enemy:
 [t:template,n:gremal_enemy_base]
 {
+	specializes = gremal_base;
+
 	category_name = "1W_evil_d";
 	doc = "Gremal (enemy)";
-	specializes = gremal_base;
 
 	[actor]
 	{
@@ -95,12 +99,14 @@
         flee_count = 0;
 	}
 }
+
 // Big gremal but as ambient:
 [t:template,n:gremal_killer_ambient_base]
 {
+	specializes = gremal_killer_base;
+
 	category_name = "1W_evil_d";
 	doc = "Gremal Killer (ambient)";
-	specializes = gremal_killer_base;
 
 	[actor]
 	{
@@ -134,51 +140,63 @@
 	}
 }
 
-[t:template,n:gremal_beige]
+
+[t:template,n:gremal_beige] { specializes = gremal_beige_base; }
+[t:template,n:gremal_beige_base]
 {
-	doc = "Gremal beige";
 	specializes = gremal_base;
+
+	doc = "Gremal beige";
     [aspect]
     {
 		[textures] { 0=b_c_edm_gm; }
     }
 }
-[t:template,n:gremal_killer_beige]  // just renaming for sake of consistency
+[t:template,n:gremal_killer_beige] { specializes = gremal_killer_beige_base; }
+[t:template,n:gremal_killer_beige_base]  // just renaming for sake of consistency
 {
+	specializes = gremal_killer_base;
+
 	category_name = "1W_evil_d";
 	doc = "Killer Gremal";
-	specializes = gremal_killer_base;
 }
-[t:template,n:gremal_white]
+
+[t:template,n:gremal_white] { specializes = gremal_white_base; }
+[t:template,n:gremal_white_base]
 {
-	doc = "Gremal white";
 	specializes = gremal_base;
-    [common]
-    {
-        screen_name = "Snow Gremal";
-    }
-    [aspect]
-    {
-		[textures] { 0=b_c_edm_gm-white; }
-    }
-}
-[t:template,n:gremal_enemy_white]
-{
-	doc = "Gremal white (enemy)";
-	specializes = gremal_enemy_base;
-    [common]
-    {
-        screen_name = "Snow Gremal";
-    }
-    [aspect]
-    {
-		[textures] { 0=b_c_edm_gm-white; }
-    }
-}
-[t:template,n:gremal_killer_white]
-{
+
 	doc = "Gremal white";
+    [common]
+    {
+        screen_name = "Snow Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-white; }
+    }
+}
+[t:template,n:gremal_enemy_white] { specializes = gremal_enemy_white_base; }
+[t:template,n:gremal_enemy_white_base]
+{
+	specializes = gremal_enemy_base;
+
+	doc = "Gremal white (enemy)";
+    [common]
+    {
+        screen_name = "Snow Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-white; }
+    }
+}
+[t:template,n:gremal_killer_white] { specializes = gremal_killer_white_base; }
+[t:template,n:gremal_killer_white_base]
+{
 	specializes = gremal_killer_base;
+
+	doc = "Gremal white";
     [common]
     {
         screen_name = "Killer Snow Gremal";
@@ -188,52 +206,65 @@
 		[textures] { 0=b_c_edm_gm-02-white; }
     }
 }
-[t:template,n:gremal_gray]
+
+[t:template,n:gremal_gray] { specializes = gremal_gray_base; }
+[t:template,n:gremal_gray_base]
 {
-	doc = "Gremal gray";
 	specializes = gremal_base;
+
+	doc = "Gremal gray";
     [aspect]
     {
 		[textures] { 0=b_c_edm_gm-gray; }
     }
 }
-[t:template,n:gremal_killer_gray]
+[t:template,n:gremal_killer_gray] { specializes = gremal_killer_gray_base; }
+[t:template,n:gremal_killer_gray_base]
 {
-	doc = "Gremal gray";
 	specializes = gremal_killer_base;
-    [aspect]
-    {
-		[textures] { 0=b_c_edm_gm-02-gray; }
-    }
-}
-[t:template,n:gremal_killer_ambient_gray]
-{
+
 	doc = "Gremal gray";
-	specializes = gremal_killer_ambient_base;
     [aspect]
     {
 		[textures] { 0=b_c_edm_gm-02-gray; }
     }
 }
-[t:template,n:gremal_black]
+[t:template,n:gremal_killer_ambient_gray] { specializes = gremal_killer_ambient_gray_base; }
+[t:template,n:gremal_killer_ambient_gray_base]
 {
-	doc = "Gremal black";
+	specializes = gremal_killer_ambient_base;
+
+	doc = "Gremal gray";
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-gray; }
+    }
+}
+
+[t:template,n:gremal_black] { specializes = gremal_black_base; }
+[t:template,n:gremal_black_base]
+{
 	specializes = gremal_base;
+
+	doc = "Gremal black";
     [aspect]
     {
 		[textures] { 0=b_c_edm_gm-black; }
     }
 }
-[t:template,n:gremal_killer_black]
+[t:template,n:gremal_killer_black] { specializes = gremal_killer_black_base; }
+[t:template,n:gremal_killer_black_base]
 {
-	doc = "Gremal black";
 	specializes = gremal_killer_base;
+
+	doc = "Gremal black";
     [aspect]
     {
 		[textures] { 0=b_c_edm_gm-02-black; }
     }
 }
-[t:template,n:gremal_killer_ambient_black]
+[t:template,n:gremal_killer_ambient_black] { specializes = gremal_killer_ambient_black_base; }
+[t:template,n:gremal_killer_ambient_black_base]
 {
 	doc = "Gremal black";
 	specializes = gremal_killer_ambient_base;
@@ -242,31 +273,40 @@
 		[textures] { 0=b_c_edm_gm-02-black; }
     }
 }
-[t:template,n:gremal_brown]
+
+[t:template,n:gremal_brown] { specializes = gremal_brown_base; }
+[t:template,n:gremal_brown_base]
 {
-	doc = "Gremal brown";
 	specializes = gremal_base;
+
+	doc = "Gremal brown";
     [aspect]
     {
 		[textures] { 0=b_c_edm_gm-brown; }
     }
 }
-[t:template,n:gremal_killer_brown]
+[t:template,n:gremal_killer_brown] { specializes = gremal_killer_brown_base; }
+[t:template,n:gremal_killer_brown_base]
 {
-	doc = "Gremal brown";
 	specializes = gremal_killer_base;
+
+	doc = "Gremal brown";
     [aspect]
     {
 		[textures] { 0=b_c_edm_gm-02-brown; }
     }
 }
 
+
 // Up-stats
-[t:template,n:gremal_black_forest]
+
+// black gremal with stats of forest phrak
+[t:template,n:gremal_black_forest] { specializes = gremal_black_forest_base; }
+[t:template,n:gremal_black_forest_base]
 {
-	// black gremal with stats of forest phrak
-	doc = "Gremal black";
 	specializes = gremal_base;
+
+	doc = "Gremal black";
     [common]
     {
         screen_name = "Forest Gremal";
@@ -276,6 +316,7 @@
 		[textures] { 0=b_c_edm_gm-black; }
     }
 
+    // stats from phrak_forest
 	[actor]
 	{
 		[skills]
@@ -303,11 +344,14 @@
 	}
     [defend] { defense=100; }
 }
-[t:template,n:gremal_killer_black_forest]
+
+// black gremal with stats of black wolf
+[t:template,n:gremal_killer_black_forest] { specializes = gremal_killer_black_forest_base; }
+[t:template,n:gremal_killer_black_forest_base]
 {
-	// black gremal with stats of black wolf
-	doc = "Gremal black";
 	specializes = gremal_killer_base;
+
+	doc = "Gremal black";
     [common]
     {
         screen_name = "Killer Forest Gremal";
@@ -317,6 +361,7 @@
 		[textures] { 0=b_c_edm_gm-02-black; }
     }
 
+    // stats from wolf_black
 	[actor]
 	{
 		[skills]
@@ -342,41 +387,4 @@
 		damage_min = 70;
 	}
 	[defend] { defense=150; }
-}
-
-
-// Just testin'
-[t:template,n:gremal_ktest]
-{
-	doc = "Gremal beige";
-	specializes = gremal_base;
-	[actor]
-	{
-		alignment			= aa_evil;
-    }
-    [aspect]
-    {
-		[textures] { 0=b_c_edm_gm-02; }
-    }
-    [common]
-    {
-        screen_name = "Gremal as evil";
-    }
-}
-[t:template,n:gremal_ktest2]
-{
-	doc = "Gremal brown";
-	specializes = gremal_killer_base;
-	[actor]
-	{
-		alignment			= aa_neutral;
-    }
-    [aspect]
-    {
-		[textures] { 0=b_c_edm_gm; }
-    }
-    [common]
-    {
-        screen_name = "Killer Gremal as neutral/ambient";
-    }
 }
