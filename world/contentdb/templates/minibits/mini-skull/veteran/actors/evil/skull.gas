@@ -1,0 +1,83 @@
+[t:template,n:2W_dsx_possessed_skull_base]  // = 2W_dsx_possessed_skull
+{
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_possessed_skull";
+	specializes = base_rector; //from original game
+	[actor]
+	{
+		[skills]
+		{
+			strength     =	31.4, 0;
+			intelligence =	12, 0;
+			dexterity    =	16.4, 0;
+			combat_magic =	53, 0;
+			nature_magic =  53, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 50382;
+		life 		= 1552;
+		max_life 	= 1552;
+		mana 		= 56;
+		max_mana 	= 56;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 343.2;
+		damage_min = 230.4;
+		damage_bonus_min_cmagic = 173;
+		damage_bonus_max_cmagic = 257;
+	}
+	[common] { screen_name="Possessed Skull"; }
+	[defend] { defense = 388; }
+	
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_possessed_skull_burn; }
+	
+		
+	}
+
+	[mind]
+	{
+		on_enemy_entered_ocz_flee	= true;
+		on_enemy_entered_ocz_attack 	= false;
+		on_enemy_entered_icz_flee	= true;
+		on_enemy_entered_icz_attack 	= false;
+		flee_count			= 1;
+	}
+}
+
+[t:template,n:2W_gr_skull_mini] { specializes = 2W_gr_skull_mini_base; }
+[t:template,n:2W_gr_skull_mini_base]
+{
+    specializes = 2W_dsx_possessed_skull_base;
+
+    [aspect]
+    {
+        scale_base = 0.5;
+        textures:0 = b_c_edm_rt-02;  // simple white skull
+    }
+    [common]
+    {
+        [template_triggers] { /* no rector_eye_glow thx */ }
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_gr_skull_mini_01 = 1;
+			frag_gr_skull_mini_02 = 1;
+			frag_gr_skull_mini_03 = 1;
+			frag_gr_skull_mini_04 = 1;
+			frag_gr_skull_mini_05 = 1;
+		}
+	}
+	[inventory]
+	{
+		[other] { il_active_primary_spell = spell_skull_mini_fireshot; }
+	}
+}
