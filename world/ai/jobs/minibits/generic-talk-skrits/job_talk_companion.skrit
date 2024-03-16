@@ -22,6 +22,7 @@ void animate$()
 {
     if ( !StringTool.IsEmpty( talk_anim$ ) )
     {
+        // need to translate from string to FourCC
         if ( StringTool.SameNoCase( talk_anim$, "talk" ) )
         {
             TryAnim$('talk');
@@ -29,6 +30,18 @@ void animate$()
         if ( StringTool.SameNoCase( talk_anim$, "look" ) )
         {
             TryAnim$('look');
+        }
+        if ( StringTool.SameNoCase( talk_anim$, "wyme" ) )
+        {
+            TryAnim$('wyme');
+        }
+        if ( StringTool.SameNoCase( talk_anim$, "tak1" ) )
+        {
+            TryAnim$('tak1');
+        }
+        if ( StringTool.SameNoCase( talk_anim$, "tak2" ) )
+        {
+            TryAnim$('tak2');
         }
     }
     else
