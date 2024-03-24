@@ -1,15 +1,20 @@
-# green-range
+# Green Range
+
 A Dungeon Siege map based in the Green Range mountains.
 
 FOSS, CC-BY-SA.
 
-## Requirements & installation
-Requires _Dungeon Siege: Legends of Aranna_.
+## Installation & Compatibility
 
-To install, put the dsmap & dsres files into the DSLOA folder of your installation directory.\
-The custom music dsres and the German translation dsres are optional.
+- This map requires _Dungeon Siege: Legends of Aranna_.
+- To install, put the dsmap & dsres files into the DSLOA folder of your installation directory.
+- The custom music dsres and the German translation dsres are optional.
+- To uninstall, simply remove the files again :)
+- No known incompatibilities.
+- The Light spell is available via pcontent in all maps, but it occurs only rarely, and its effect is purely visual.
 
 ## About
+
 _The Green Range is a mountain range on the continent of Aranna that marks the southeastern border of the Aranoi Desert.
 The mountains dominate northern Ehb, where they collide with the imposing Frostspire Mountain.
 Many of Ehb's notable landmarks, including Glitterdelve, Glacern, Fedwyrr's Way, Fortress Kroth, and the Dark Forest,
@@ -29,6 +34,7 @@ It provides a variety of forest biomes, and lots of branching paths and side are
 Enjoy playing and don't get lost!
 
 ## Notes
+
 This map is in large parts auto-generated.
 The algorithm generates the mountain terrain and automatically places plants and enemies,
 based on Perlin noise. I then added things like bridges and caves, NPCs and minibosses.
@@ -45,12 +51,8 @@ which takes about 38 minutes (1.6 real minutes per world hour).
 So if it bothers you and hinders exploration, you can simply wait a while.\
 Alternatively, you can make use of the Light spell, which is available in shops.
 
-## Compatibility
-No known incompatibilities.
-
-The Light spell is available via pcontent in all maps, but it occurs only rarely, and its effect is purely visual.
-
 ## Attribution
+
 Textures of Fox and beta Mucosa as well as the big Klars Trail sign: courtesy of Eksevis.\
 Hi-res texture of Shrack (Floaters) and Giant Skrubb: courtesy of AntonioR.\
 Dark Sprite: courtesy of Bare Elf.\
