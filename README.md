@@ -48,11 +48,11 @@ So if it bothers you and hinders exploration, you can simply wait a while.\
 Alternatively, you can make use of the Light spell, which is available in shops.
 
 ## Attribution
-Textures of Fox and beta Mucosa as well as the big Klars Trail sign: courtesy of Eksevis.\
-Hi-res texture of Shrack (Floaters) and Giant Skrubb: courtesy of AntonioR.\
-Dark Sprite: courtesy of Bare Elf.\
-Light Spell: made with help from Starfall.\
-Chapel: courtesy of Sadowson.\
-Elfgirls: by Witness (Lisa Hui).\
-Webbed trees and bushes: from Yesterhaven.\
-Custom music: by Alexander Nakarada.
+- Textures of Fox and beta Mucosa as well as the big Klars Trail sign: courtesy of Eksevis.
+- Hi-res texture of Shrack (Floaters) and Giant Skrubb: courtesy of AntonioR.
+- Dark Sprite: courtesy of Bare Elf.
+- Light Spell: made with help from Starfall.
+- Chapel: courtesy of Sadowson.
+- Elfgirls: by Witness (Lisa Hui).
+- Webbed trees and bushes: from Yesterhaven.
+- Custom music: by Alexander Nakarada.
