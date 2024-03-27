@@ -16,6 +16,10 @@ set tc=..\TankCreator
 :: path of GasPy
 set gaspy=..\gaspy
 
+set copyright=CC-BY-SA 2024
+set title=%map_cs%
+set author=Johannes Förstner
+
 :: param
 set mode=%1
 echo %mode%
@@ -50,7 +54,7 @@ pushd %gaspy%
 venv\Scripts\python -m build.fix_start_positions_required_levels %map% "%tmp%\Bits"
 if %errorlevel% neq 0 pause
 popd
-%tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsmap" -copyright "CC-BY-SA 2023" -title "%map_cs%" -author "Johannes Förstner"
+%tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsmap" -copyright "%copyright%" -title "%title%" -author "%author%"
 if %errorlevel% neq 0 pause
 
 :: Compile main resource file
@@ -69,7 +73,7 @@ pushd %gaspy%
 venv\Scripts\python -m build.swap_music_tracks "%tmp%\Bits"
 if %errorlevel% neq 0 pause
 popd
-%tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsres" -copyright "CC-BY-SA 2023" -title "%map_cs%" -author "Johannes Förstner"
+%tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
 if %errorlevel% neq 0 pause
 
 if not "%mode%"=="light" (
