@@ -4,12 +4,13 @@
   f actor_ambient_intensity = 0.200000;
   x ambient_color = 0xFF8080FF;
   f ambient_intensity = 0.200000;
+	environment_map = b_em_sphere;
   x object_ambient_color = 0xFF8080FF;
   f object_ambient_intensity = 0.200000;
   x targetnode = 0x64E56750;
 	[t:snode,n:0x00b9ba3d]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x00B9BA3D;
 	  x mesh_guid = 0x87200A8A;
@@ -3243,7 +3244,7 @@
 	}
 	[t:snode,n:0x45699723]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x45699723;
 	  x mesh_guid = 0x87200506;
@@ -6145,7 +6146,7 @@
 	}
 	[t:snode,n:0x793ef03c]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x793EF03C;
 	  x mesh_guid = 0x87200506;
