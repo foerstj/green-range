@@ -265,7 +265,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "STARTPOS MOOD PWL FADE";
+		dev_instance_text = "STARTPOS&COMPANION MOOD PWL FADE";
 		[instance_triggers]
 		{
 			[*]
@@ -274,7 +274,7 @@
 				action* = fade_nodes(0xBEF28C5D,-1,-1,-1,"out:instant"), doc("dsc west");
 				action* = fade_nodes(0xAAA40500,-1,-1,-1,"out:instant"), doc("dsc east");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,2.000000,6.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(7.000000,2.000000,7.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -289,7 +289,7 @@
 			{
 				action* = set_player_world_location("tms");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,2.000000,6.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(7.000000,2.000000,7.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -304,8 +304,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = 1.32942,0,-1.46492,0x28464260;
+	  q orientation = 0,0.902586,0,0.430511;
+	  p position = 0.710355,0,-1.6686,0x28464260;
 	}
 }
 [t:trigger_fade_nodes_box,n:0xc7000058]
