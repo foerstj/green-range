@@ -24,11 +24,25 @@
 	}
 	[worlds]
 	{
-		[normal]
+		[regular]
 		{
 			screen_name = "Regular";
 			description = "Players of all levels can play here.";
 			required_level = 0;
+		}
+
+		[veteran]
+		{
+			screen_name = "Veteran";
+			description = "Must be level 54 or higher to accept this challenge.";
+			required_level = 54;
+		}
+
+		[elite]
+		{
+			screen_name = "Elite";
+			description = "You must be level 83 or higher to attempt this feat.";
+			required_level = 83;
 		}
 	}
 }
