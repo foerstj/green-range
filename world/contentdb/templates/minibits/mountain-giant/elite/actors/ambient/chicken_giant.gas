@@ -1,0 +1,70 @@
+[t:template,n:3W_chicken_red_base]  // = 3W_chicken_red
+{
+	category_name = "3W_ambients";
+	doc = "3W_chicken_red";
+	specializes = 3W_base_chicken;
+	[aspect]
+	{
+		[textures] { 0=b_c_na_ckn_red; }
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("feathers_flap_red");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+		}
+	}
+	[physics]
+	{
+		gib_gore_good = true;
+		break_effect = feathers_red;
+		explode_when_killed = true;
+	}
+}
+
+[t:template,n:3W_gr_chicken_red_giant] { specializes = 3W_gr_chicken_red_giant_base; }
+[t:template,n:3W_gr_chicken_red_giant_base]
+{
+    specializes = 3W_chicken_red_base;
+
+    // make big
+    aspect:scale_base = 3;
+    common:screen_name = "Giant Chicken";
+	[mind]
+	{
+		inner_comfort_zone_range = 0.5;
+		outer_comfort_zone_range = 5.0;
+		personal_space_range = 0.7;
+		sight_range = 14.0;
+	}
+
+    // make strong - values from 3W_chicken_red_super
+	[aspect]
+	{
+		life = 28075.5;
+		max_life = 28075.5;
+	}
+    [defend] { defense=3716.5; }
+
+    // make less afraid
+	[mind]
+	{
+		on_enemy_entered_ocz_flee 					= false;
+		on_friend_entered_ocz_flee 					= false;
+		on_enemy_entered_icz_flee 					= true;
+		on_friend_entered_icz_flee 					= true;
+		//flee_count									= 0;
+		jat_fidget									= world\ai\jobs\common\job_fidget.skrit
+			?still									= false;
+	}
+
+    // make readable
+    common:rollover_display = true;
+    aspect:is_selectable = true;
+
+	[common] { is_multi_player = true; }
+}

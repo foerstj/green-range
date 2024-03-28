@@ -1,0 +1,142 @@
+[t:template,n:2W_gr_base_shop_dm_armor]
+{
+    specializes = 2W_dwarf_npc_01_base;
+	category_name = "2W_shopkeep";
+
+    // basic shop stuff
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		use_range = 1;
+	}
+    [common]
+    {
+        screen_name = "Shop";
+    }
+    [mind]
+    {
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+    }
+
+    // shop content from 2W_Jeriah
+    [inventory]
+    {
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body,ro/201-603;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #body/201-246;
+					max = 7;
+					min = 7;
+				}
+				[all*]
+				{
+					il_main = #body/268-465;
+					max = 16;
+					min = 16;
+				}
+				[all*]
+				{
+					il_main = #body/469-603;
+					max = 3;
+					min = 3;
+				}
+
+
+				[all*]
+				{
+					il_main = #gloves/27-179;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/223-465;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/491-603;
+					max = 4;
+					min = 4;
+				}
+
+
+				[all*]
+				{
+					il_main = #helm/89-241;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/246-465;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/491-581;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #boots/27-179;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/223-465;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/491-603;
+					max = 4;
+					min = 4;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:2W_gr_shop_dm_armor] { specializes = 2W_gr_shop_dm_armor_base; }
+[t:template,n:2W_gr_shop_dm_armor_base]
+{
+    specializes = 2W_gr_base_shop_dm_armor;
+
+    [common]
+    {
+        screen_name = "Tailor Skraddin Umberdeep";
+    }
+    [inventory]
+    {
+        [equipment]
+        {
+            es_chest = bd_ro_m_g_c_024;
+        }
+    }
+}

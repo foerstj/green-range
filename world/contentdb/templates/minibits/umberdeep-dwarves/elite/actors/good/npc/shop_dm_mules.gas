@@ -1,0 +1,29 @@
+[t:template,n:3W_gr_shop_dm_mules]
+{
+    specializes = 3W_dwarf_npc_10_base;
+	category_name = "3W_shopkeep";
+
+	[store]
+	{
+		item_markup = 2;
+	}
+
+    [common]
+    {
+        screen_name = "Mulekeep Barin Umberdeep";
+    }
+    [inventory]
+    {
+        [equipment]
+        {
+            es_forearms = gl_gl_le_f_g_c_avg;
+            es_feet = bo_bo_le_light;
+            es_chest = bd_ro_m_g_c_034;
+            es_head = he_ca_ro_felt_04;
+        }
+    }
+    [mind]
+    {
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+}

@@ -1,0 +1,73 @@
+[t:template,n:2W_spell_swamp_witch_summon_base]  // = 2W_spell_swamp_witch_summon
+{
+	category_name = "magic";
+	doc = "2w spell_swamp_witch_summon";
+	specializes = base_spell_monster;
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.500;
+					il_main = 2w_swamp_creature_summon;
+				}
+				[all*]
+				{
+					chance = 0.500;
+					il_main = 2w_swamp_slinger_summon;
+				}
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 10;
+		cast_reload_delay = 1;
+		caster_state_name = "Controlling Monster";
+		effect_duration = 600;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+		state_name = "Controlling Monster";
+		require_state_check = true;
+	}
+	[spell_summon_random]
+	{
+		monster_summon = true;
+		spawn_radius	= 3.0;
+		effect_script = "summon";
+		end_script = "un_summon";
+		script_params = "[scale(1.75)]";
+		description = "Summoned Creature";
+		caster_description = "Controlling Summoned";
+	}
+}
+
+[t:template,n:2W_spell_gr_witch_summon]
+{
+    specializes = 2W_spell_swamp_witch_summon_base;
+
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.500;
+					il_main = 2W_gr_wind_spirit_sm_summon;
+				}
+				[all*]
+				{
+					chance = 0.500;
+					il_main = 2W_gr_water_spirit_sm_summon;
+				}
+			}
+		}
+	}
+}

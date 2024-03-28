@@ -1,0 +1,95 @@
+[t:template,n:3W_base_dwarf_npc]
+{
+    specializes = 3W_base_dwarf;
+	category_name = "3W_townsperson";
+
+	[common]
+	{
+		screen_name = "Townsperson";
+	}
+	[conversation]
+	{
+	}
+    [mind]
+    {
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+}
+
+[t:template,n:3W_dwarf_npc_01] { specializes = 3W_dwarf_npc_01_base; }
+[t:template,n:3W_dwarf_npc_01_base]
+{
+    specializes = 3W_base_dwarf_npc;
+    aspect:textures:0 = b_c_gan_df_skin_01; // blond
+    actor:portrait_icon = b_gui_ig_i_ic_c_df; // mp dwarf default
+}
+
+[t:template,n:3W_dwarf_npc_02] { specializes = 3W_dwarf_npc_02_base; }
+[t:template,n:3W_dwarf_npc_02_base]
+{
+    specializes = 3W_base_dwarf_npc;
+    aspect:textures:0 = b_c_gan_df_skin_02; // brown
+    actor:portrait_icon = b_gui_ig_i_ic_c_torg; // torg
+}
+
+[t:template,n:3W_dwarf_npc_03] { specializes = 3W_dwarf_npc_03_base; }
+[t:template,n:3W_dwarf_npc_03_base]
+{
+    specializes = 3W_base_dwarf_npc;
+    aspect:textures:0 = b_c_gan_df_skin_03; // red
+}
+
+[t:template,n:3W_dwarf_npc_04] { specializes = 3W_dwarf_npc_04_base; }
+[t:template,n:3W_dwarf_npc_04_base]
+{
+    specializes = 3W_base_dwarf_npc;
+    aspect:textures:0 = b_c_gan_df_skin_04; // light blond
+}
+
+[t:template,n:3W_dwarf_npc_05] { specializes = 3W_dwarf_npc_05_base; }
+[t:template,n:3W_dwarf_npc_05_base]
+{
+    specializes = 3W_base_dwarf_npc;
+    aspect:textures:0 = b_c_gan_df_skin_05; // gray, balding
+    actor:portrait_icon = b_gui_ig_i_ic_c_go; // lorun
+}
+
+[t:template,n:3W_dwarf_npc_06] { specializes = 3W_dwarf_npc_06_base; }
+[t:template,n:3W_dwarf_npc_06_base]
+{
+    specializes = 3W_base_dwarf_npc;
+    aspect:textures:0 = b_c_gan_df_skin_06; // dark blond
+    actor:portrait_icon = b_gui_ig_i_ic_c_orkin; // conjuror orkin umberdeep
+}
+
+[t:template,n:3W_dwarf_npc_07] { specializes = 3W_dwarf_npc_07_base; }
+[t:template,n:3W_dwarf_npc_07_base]
+{
+    specializes = 3W_base_dwarf_npc;
+    aspect:textures:0 = b_c_gan_df_skin_07; // gray
+    actor:portrait_icon = b_gui_ig_i_ic_c_gl; // gloern
+}
+
+[t:template,n:3W_dwarf_npc_08] { specializes = 3W_dwarf_npc_08_base; }
+[t:template,n:3W_dwarf_npc_08_base]
+{
+    specializes = 3W_base_dwarf_npc;
+    aspect:textures:0 = b_c_gan_df_skin_08; // gray, even balder
+    actor:portrait_icon = b_gui_ig_i_ic_c_ulfgrim; // ulfgrim
+}
+
+[t:template,n:3W_dwarf_npc_09] { specializes = 3W_dwarf_npc_09_base; }
+[t:template,n:3W_dwarf_npc_09_base]
+{
+    specializes = 3W_base_dwarf_npc;
+    aspect:textures:0 = b_c_gan_df_skin_09; // brown, old
+    actor:portrait_icon = b_gui_ig_i_ic_c_dornek; // dornek firehammer
+}
+
+[t:template,n:3W_dwarf_npc_10] { specializes = 3W_dwarf_npc_10_base; }
+[t:template,n:3W_dwarf_npc_10_base]
+{
+    specializes = 3W_base_dwarf_npc;
+    aspect:textures:0 = b_c_gan_df_skin_10; // brown-blond-gray-ish
+    actor:portrait_icon = b_gui_ig_i_ic_c_rhut; // rhut
+}

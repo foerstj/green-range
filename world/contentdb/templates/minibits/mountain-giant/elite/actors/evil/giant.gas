@@ -1,0 +1,97 @@
+[t:template,n:3W_gr_giant] { specializes = 3W_gr_giant_base; }
+[t:template,n:3W_gr_giant_base]
+{
+	specializes = 3W_cave_giant_base;
+
+    [aspect]
+    {
+        scale_base = 1.1;
+    }
+	[common]
+    {
+        screen_name = "Mountain Giant";
+    }
+    [inventory]
+    {
+		//spew_equipped_kill_count = <ignore>;
+		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
+        [equipment]
+        {
+            es_weapon_hand = cb_un_gr_giant;
+        }
+    }
+
+    // stats & loot from 3W_ice_warrior, edited
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  68.5, 0;
+			intelligence =  6.7, 0;
+			dexterity 	=  26.5, 0;
+            melee 		=  93,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2257128;  // doubled, was 1128564
+		life = 5817.6;  // tripled, was 1939.2
+        max_life = 5817.6;  // tripled, was 1939.2
+        mana = 53.9;
+		max_mana = 53.9;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 551.9;
+		damage_min = 378.1;
+	}
+    [defend] { defense=720.5; }
+    [inventory]
+    {
+        [pcontent]
+        {
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_super;
+				   il_main = potion_mana_super;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/67-94;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/39-71;
+					il_main = #armor/121-660;
+	                il_main = #weapon/233-285;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/272-382;
+	                il_main = #armor/-rare(1)/848-970;
+                    il_main = #*/-rare(1)/272-382;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/272-382;
+	                il_main = #armor/-unique(2)/848-970;
+                    il_main = #*/-unique(2)/272-382;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 269543;
+					min = 196405;
+				}
+			}
+        }
+    }
+}

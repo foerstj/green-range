@@ -1,0 +1,23 @@
+[t:template,n:2W_gr_npc_ranger_longbourne_tavern] { specializes = 2W_gr_npc_ranger_longbourne_tavern_base; }
+[t:template,n:2W_gr_npc_ranger_longbourne_tavern_base]
+{
+	specializes = 2W_gr_npc_ranger_f;
+
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_02;
+			1 = b_c_pos_a1_014;
+		}
+	}
+	[inventory]
+	{
+        custom_head = m_c_gah_fg_hlmt_head-05;
+		[equipment]
+		{
+			es_chest = gr_leather_rangers;
+			es_feet = gr_boots_rangers;
+		}
+	}
+}

@@ -1,0 +1,79 @@
+[t:template,n:3W_elfgirl_npc_h1_dk] { specializes = 3W_elfgirl_npc_h1_dk_base; }
+[t:template,n:3W_elfgirl_npc_h1_dk_base]
+{
+	specializes = 3W_base_npc_elfgirl;
+
+	doc = "Dark Elfgirl (Head 1)";
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_eg_dk-1;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_eg_skin_dark-01;
+			1 = b_c_pos_a0_dress-07-white;
+		}
+	}
+	[body] { armor_version = gah_eg_h1; }
+	[common] { screen_name = "Dark Elf"; }	
+	[inventory]
+	{
+		custom_head = m_c_gah_eg_h1_hlmt_head-01;
+	}
+}
+
+[t:template,n:3W_elfgirl_npc_h2_dk] { specializes = 3W_elfgirl_npc_h2_dk_base; }
+[t:template,n:3W_elfgirl_npc_h2_dk_base]
+{
+	specializes = 3W_base_npc_elfgirl;
+
+	doc = "Dark Elfgirl (Head 2)";
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_eg_dk-2;
+	}	
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_eg_skin_dark-01;
+			1 = b_c_pos_a0_dress-07-white;
+		}
+	}
+	[body] { armor_version = gah_eg_h2; }
+	[common] { screen_name = "Dark Elf"; }
+	[inventory]
+	{
+		custom_head = m_c_gah_eg_h2_hlmt_head-01;
+	}
+}
+
+[t:template,n:3W_elfgirl_npc_h3_dk] { specializes = 3W_elfgirl_npc_h3_dk_base; }
+[t:template,n:3W_elfgirl_npc_h3_dk_base]
+{
+	specializes = 3W_base_npc_elfgirl;
+
+	doc = "Dark Elfgirl (Head 3)";
+	[actor]
+	{
+		is_hero = false;
+		portrait_icon = b_gui_ig_i_ic_c_eg_dk-3;
+		screen_class = "Dark Elf";
+	}	
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_eg_skin_dark-01;
+			1 = b_c_pos_a0_dress-07-white;
+		}
+	}
+	[body] { armor_version = gah_eg_h3; }
+	[common] { screen_name = "Dark Elf"; }
+	[inventory]
+	{
+		custom_head = m_c_gah_eg_h3_hlmt_head-01;
+	}
+}

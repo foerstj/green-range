@@ -1,0 +1,269 @@
+[t:template,n:2W_gr_base_shop_giant_smith]
+{
+    specializes = 2W_gr_giant_base;
+	category_name = "2W_shopkeep";
+
+    // basic NPC stuff
+	[actor]
+	{
+		alignment = aa_good;
+		can_level_up = false;
+	}
+	[aspect]
+	{
+		is_collidable = false;
+		is_invincible = true;
+	}
+    [mind]
+    {
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+        jat_fidget = world\ai\jobs\common\job_fidget.skrit;  // remove extra params that make him move around
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+	[conversation]
+	{
+	}
+
+    // basic shop stuff
+	[actor] { portrait_icon = b_gui_ig_i_ic_c_animal; }
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		use_range = 1;
+	}
+    [common]
+    {
+        screen_name = "Shop";
+    }
+	[inventory]
+	{
+        [pcontent] {}  // make sure loot of base template doesn't end up for sale
+    }
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+    }
+}
+
+[t:template,n:2W_gr_shop_giant_smith] { specializes = 2W_gr_shop_giant_smith_base; }
+[t:template,n:2W_gr_shop_giant_smith_base]
+{
+    specializes = 2W_gr_base_shop_giant_smith;
+
+    [common]
+    {
+        screen_name = "Blaargh the Mountain Giant";
+    }
+    [aspect]
+    {
+        scale_base = 1.1;
+    }
+    [inventory]
+    {
+        [equipment] {}  // remove club
+    }
+
+    // shop content from 2W_jeriah, edited
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body,ro/201-603;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #body/201-246;
+					max = 7;
+					min = 7;
+				}
+				[all*]
+				{
+					il_main = #body/268-465;
+					max = 16;
+					min = 16;
+				}
+				[all*]
+				{
+					il_main = #body/469-603;
+					max = 3;
+					min = 3;
+				}
+
+
+				[all*]
+				{
+					il_main = #gloves/27-179;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/223-465;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/491-603;
+					max = 4;
+					min = 4;
+				}
+
+
+				[all*]
+				{
+					il_main = #helm/89-241;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/246-465;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/491-581;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #boots/27-179;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/223-465;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/491-603;
+					max = 4;
+					min = 4;
+				}
+			}
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/45-223;
+					max = 5;
+					min = 5;
+				}
+				[all*]
+				{
+					il_main = #shield/246-465;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #shield/491-603;
+					max = 4;
+					min = 4;
+				}
+			}
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/78-129;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #melee/138-215;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #melee/224-271;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #ranged/78-129;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #ranged/138-215;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #ranged/224-271;
+					max = 6;
+					min = 6;
+				}
+			}
+
+            // EDITED: [magic] removed
+
+			[misc]
+			{
+                // EDITED: only basic spellbooks & backpacks
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 3;
+					min = 3;
+				}
+                [all*]
+                {
+                    il_main = DSX_backpack_empty;
+                    max = 3;
+                    min = 2;
+                }
+			}
+		}
+	}
+	[store]
+	{
+		[item_restock]
+		{
+			potion_health_small = 9;
+			potion_health_medium = 9;
+			potion_mana_small = 9;
+			potion_mana_medium = 9;
+			potion_rejuvenation_small = 2;
+			potion_rejuvenation_medium = 2;
+
+			scroll_resurrect = 2;
+            spell_resurrect = 2;
+            spell_revive = 2;
+            spell_healing_hands = 2;
+
+            spell_fireshot = 2;
+            spell_zap = 2;
+
+            // EDITED: added for green-range
+            spell_light = 1;
+		}
+	}
+}

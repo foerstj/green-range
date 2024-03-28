@@ -1,0 +1,97 @@
+[t:template,n:2W_gr_giant] { specializes = 2W_gr_giant_base; }
+[t:template,n:2W_gr_giant_base]
+{
+	specializes = 2W_cave_giant_base;
+
+    [aspect]
+    {
+        scale_base = 1.1;
+    }
+	[common]
+    {
+        screen_name = "Mountain Giant";
+    }
+    [inventory]
+    {
+		//spew_equipped_kill_count = <ignore>;
+		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
+        [equipment]
+        {
+            es_weapon_hand = cb_un_gr_giant;
+        }
+    }
+
+    // stats & loot from 2W_ice_warrior, edited
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  48.6, 0;
+			intelligence =  5.6, 0;
+			dexterity 	=  20, 0;
+            melee 		=  59,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 84216;  // doubled, was 42108
+		life = 3859.2;  // tripled, was 1286.4
+        max_life = 3859.2;  // tripled, was 1286.4
+        mana = 35.7;
+		max_mana = 35.7;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 350;
+		damage_min = 237.4;
+	}
+    [defend] { defense=477.9; }
+    [inventory]
+    {
+        [pcontent]
+        {
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_large;
+				   il_main = potion_mana_large;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/45-63;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/26-47;
+					il_main = #armor/80-438;
+	                il_main = #weapon/155-190;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/181-254;
+	                il_main = #armor/-rare(1)/563-643;
+                    il_main = #*/-rare(1)/181-254;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/181-254;
+	                il_main = #armor/-unique(2)/563-643;
+                    il_main = #*/-unique(2)/181-254;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 62305;
+					min = 45399;
+				}
+			}
+        }
+    }
+}

@@ -1,0 +1,105 @@
+[t:template,n:2W_gr_witch] { specializes = 2W_gr_witch_base; }
+[t:template,n:2W_gr_witch_base]
+{
+	specializes = 2W_swamp_witch_base;
+
+	[aspect]
+	{
+		textures:0 = b_c_edm_sw-03;
+    }
+    [common]
+    {
+        screen_name = "Mist Witch";
+    }
+    [inventory]
+    {
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_gr_witch_attack;
+			il_spell_1 = 2W_spell_gr_witch_summon;
+		}
+    }
+	[mind]
+	{
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true
+			&spell_chances				= "0.5,                   0.5"
+			&spells						= "spell_gr_witch_attack, spell_gr_witch_summon";
+    }
+}
+
+[t:template,n:2W_gr_witch_boss]
+{
+	specializes = 2W_gr_witch_base;
+
+	[common]
+	{
+		screen_name="The Lost Mist Witch";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			}
+		}
+	}
+
+    // stats & loot from 2W_swamp_witch_boss_02 Lost Witch
+	[actor]
+	{
+		[skills]
+		{
+			strength =  21, 0;
+			intelligence =  34.4, 0;
+			dexterity =  18.5, 0;
+			combat_magic =  75,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 89100;
+		life = 2127.3;
+		max_life = 2127.3;
+		mana = 2801.5;
+		max_mana = 2801.5;
+	}
+	[attack]
+	{
+		damage_max = 392.4;
+		damage_min = 291.6;
+		damage_bonus_min_cmagic = 194;
+		damage_bonus_max_cmagic = 248;
+	}
+    [defend] { defense=762.5; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.994;
+				il_main = #*/243-266;
+				il_main = #armor/835-979;
+                il_main = #body,ro/600-750;
+			}
+            [oneof*]
+			{
+	        	chance = 0.004;
+	            il_main = #weapon/-rare(1)/279-317;
+	            il_main = #armor/-rare(1)/887-1077;
+                il_main = #*/-rare(1)/279-317;
+            }
+			[oneof*]
+			{
+            	chance = 0.002;
+	            il_main = #weapon/-unique(2)/279-317;
+	            il_main = #armor/-unique(2)/887-1077;
+                il_main = #*/-unique(2)/279-317;
+			}
+		}
+	}
+}

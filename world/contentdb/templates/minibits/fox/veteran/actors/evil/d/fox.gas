@@ -1,0 +1,68 @@
+[t:template,n:2W_dsx_wolf_white_punk-ass_base]  // = 2W_dsx_wolf_white_punk-ass
+{
+  category_name = "2W_evil_d";
+  doc = "2W_dsx_wolf_white_punk-ass";
+  specializes = 2W_dsx_wolf_white_base;
+
+  [body]
+    {
+      max_move_velocity = 5;
+    }
+  [actor]
+    {
+      [skills]
+				{
+					strength =  17.6, 0;
+					intelligence =  9.6, 0;
+					dexterity =  14.7, 0;
+					melee =  43,  0;
+				}
+    }
+  [aspect]
+    {
+      experience_value = 11030;
+      life = 344;
+      max_life = 344;
+      scale_base = 0.55;
+		[voice]
+		{
+			[die]
+				{ priority = high;
+					* = s_e_die_wolf_cub_01_SED;
+					* = s_e_die_wolf_cub_02_SED;
+				}
+			[enemy_spotted]
+				{ priority = high;
+					* = s_e_call_wolf_cub_01_SED;
+					* = s_e_call_wolf_cub_02_SED;
+					* = s_e_call_wolf_cub_03_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_wolf_cub_SED;  }
+			[hit_solid]	{ priority = low; * = s_e_hit_wolf_cub_SED;  }
+			[hit_critical]	{ priority = low; * = s_e_hit_wolf_cub_SED;  }
+		}  
+    }
+  [attack]
+    {
+      attack_range = 0.5;
+      damage_min = 232.2;
+      damage_max = 473;
+    }
+  [defend] { defense = 444.3; }
+  [common] { screen_name = "Varg"; }
+
+}
+
+[t:template,n:2W_gr_fox] { specializes = 2W_gr_fox_base; }
+[t:template,n:2W_gr_fox_base]
+{
+    specializes = 2W_dsx_wolf_white_punk-ass_base;
+
+    [aspect]
+    {
+        textures:0 = b_c_edm_fox;
+    }
+    [common]
+    {
+        screen_name = "Fox";
+    }
+}

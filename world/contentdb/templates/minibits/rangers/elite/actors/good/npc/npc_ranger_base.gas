@@ -1,0 +1,69 @@
+[t:template,n:3W_gr_npc_ranger_m]
+{
+	category_name = "3W_character";
+	specializes = 3W_base_npc_fb;
+
+	[aspect]
+	{
+		is_collidable = true;
+	}
+	[common]
+	{
+		screen_name = "Ranger NPC";
+	}
+	[conversation]
+	{
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = gr_boots_rangers;
+		}
+	}
+    [mind]
+    {
+		actor_may_attack = true;
+        actor_may_be_attacked = true;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
+[t:template,n:3W_gr_npc_ranger_f]
+{
+	category_name = "3W_character";
+	specializes = 3W_base_npc_fg;
+
+	[aspect]
+	{
+		is_collidable = true;
+	}
+	[common]
+	{
+		screen_name = "Ranger NPC";
+	}
+	[conversation]
+	{
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = gr_boots_rangers;
+		}
+	}
+    [mind]
+    {
+		actor_may_attack = true;
+        actor_may_be_attacked = true;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}

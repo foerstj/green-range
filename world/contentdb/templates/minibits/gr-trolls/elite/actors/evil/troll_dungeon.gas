@@ -1,0 +1,186 @@
+[t:template,n:3W_gr_troll_dgn_king] { specializes = 3W_gr_troll_dgn_king_base; }
+[t:template,n:3W_gr_troll_dgn_king_base]
+{
+	specializes = 3W_dsx_troll_masher_base;
+
+	category_name = "3W_evil_d";
+    [common] { screen_name = "Troll King"; }
+	[aspect]
+	{
+        [voice]
+		{
+			[die]			{ priority = high; * = s_e_die_troll_king_SED;		}
+			[enemy_spotted]	{ priority = high; * = s_e_call_troll_king_SED;	}
+            [hit_glance]	{ priority = low; * = s_e_hit_troll_king_SED;	}
+		}
+	}
+}
+
+
+[t:template,n:3W_dsx_troll_mountain_base]  // = 3W_dsx_troll_mountain
+{
+// Balanced for level 26, medium melee
+	category_name = "1W_evil_d";
+	doc = "dsx_troll_mountain";
+	specializes = dsx_troll;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 48.7, 0;
+			intelligence 	=  12.1, 0;
+			dexterity 		= 25.5, 0;
+			melee 			= 90, 0;
+		}
+	}
+	[aspect]
+	{
+		scale_base 		= 1.2;
+		experience_value = 1936162;
+		life 			= 1813.2;
+		max_life 		= 1813.2;
+		mana 			= 37.3;
+		max_mana 		= 37.3;
+		life_recovery_unit = 1;
+		life_recovery_period = 8;
+		scale_base = 0.7;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 704.1;
+		damage_min = 525.1;
+	}
+	[common] { screen_name = "Mountain Troll"; }
+	[defend] { defense = 164; }
+	[inventory]
+	{
+		drop_at_use_point = true;
+		spew_equipped_kill_count = <ignore>;
+		[pcontent]
+	{
+	/* Generated: Tue Jun 17 11:13:15 2003
+		Level 26, Medium */
+		[oneof*]
+		{
+			es_weapon_hand = cb_un_dsx_2h_troll;
+			[gold*]
+			{
+				chance = 0.2;
+				min = 206886;
+				max = 410687;
+			}
+			[oneof*]
+			{
+				chance = 0.088888888888889;
+				il_main = potion_mana_super;
+				il_main = potion_health_super;
+			}
+			[oneof*]
+			{
+				chance = 0.111111111111111;
+				il_main = potion_mana_super;
+				il_main = potion_health_super;
+			}
+			[oneof*]
+			{
+				chance = 0.15;
+				il_main = #weapon/201-260;
+				il_main = #armor/86-649;
+				il_main = #*/201-260;
+			}
+			[oneof*]
+			{
+				chance = 0.0075;
+				il_main = #weapon/-rare(1)/212-282;
+				il_main = #armor/-rare(1)/511-895;
+				il_main = #*/-rare(1)/212-282;
+			}
+			
+		}
+	}
+	}
+	[mind]
+	{
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+
+[t:template,n:3W_gr_troll_dgn] { specializes = 3W_gr_troll_dgn_base; }
+[t:template,n:3W_gr_troll_dgn_base]
+{
+    specializes = 3W_dsx_troll_mountain_base;
+
+    [common] { screen_name = "Troll Thug"; }
+	[aspect]
+	{
+        [voice]
+		{
+			[die]			{ priority = high; * = s_e_die_troll;		}
+			[enemy_spotted]	{ priority = high; * = s_e_call_troll_SED;	}
+            [hit_glance]	{ priority = low; * = s_e_hit_troll_SED;	}
+		}
+	}
+}
+[t:template,n:3W_gr_troll_dgn_throw]
+{
+    specializes = 3W_gr_troll_dgn_base;
+
+    [common] { screen_name = "Troll Chucker"; }
+	[inventory]
+	{
+		selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+            es_shield_hand = rock_troll_dgn;
+		}
+		[pcontent]
+        {
+            // same as base, but without es_weapon_hand
+            [oneof*]
+            {
+                //es_weapon_hand = cb_un_dsx_2h_troll;
+                [gold*]
+                {
+                    chance = 0.2;
+                    min = 206886;
+                    max = 410687;
+                }
+                [oneof*]
+                {
+                    chance = 0.088888888888889;
+                    il_main = potion_mana_super;
+                    il_main = potion_health_super;
+                }
+                [oneof*]
+                {
+                    chance = 0.111111111111111;
+                    il_main = potion_mana_super;
+                    il_main = potion_health_super;
+                }
+                [oneof*]
+                {
+                    chance = 0.15;
+                    il_main = #weapon/201-260;
+                    il_main = #armor/86-649;
+                    il_main = #*/201-260;
+                }
+                [oneof*]
+                {
+                    chance = 0.0075;
+                    il_main = #weapon/-rare(1)/212-282;
+                    il_main = #armor/-rare(1)/511-895;
+                    il_main = #*/-rare(1)/212-282;
+                }
+            }
+        }
+    }
+	[mind]
+	{
+		actor_weapon_preference			= WP_RANGED;
+		actor_auto_switches_to_ranged	= true;
+	}
+}

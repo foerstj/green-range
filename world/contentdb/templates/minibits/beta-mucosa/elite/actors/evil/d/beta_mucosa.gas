@@ -1,0 +1,316 @@
+[t:template,n:3W_beta_mucosa] { specializes = 3W_beta_mucosa_base; }
+[t:template,n:3W_beta_mucosa_base]
+{
+	specializes = 3W_mucosa_base;
+
+    aspect:textures:0 = b_c_edm_mu-beta-01;
+	[generator_in_object]
+	{
+		spawn_chance = 0.5;
+		child_template_name = body_glb_beta_mucosa;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_beta_mucosa_01 = 1;
+			frag_glb_beta_mucosa_02 = 1;
+			frag_glb_beta_mucosa_03 = 2;
+			frag_glb_beta_mucosa_04 = 3;
+			frag_glb_beta_mucosa_05 = 1;
+			frag_glb_beta_mucosa_06 = 1;
+			frag_glb_beta_mucosa_07 = 3;
+		}
+	}
+}
+
+
+[t:template,n:3W_mucosa_small_base]  // = 3W_mucosa_small
+{
+	category_name = "3W_evil_d";
+	doc = "3W_mucosa";
+	specializes = 3W_base_mucosa;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  40.6, 0;
+			intelligence =  10.5, 0;
+			dexterity =  39.6, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 718731;
+		life = 966.3;
+        max_life = 966.3;
+        mana = 156.7;
+		max_mana = 156.7;
+		scale_base = 0.80;
+		textures:0 = b_c_edm_mu-02;
+		[voice]
+		{
+			[cast]			{ * = s_e_attack_mucosa_small;		}
+			[die]			{ priority = high; * = s_e_die_mucosa;				}
+			[enemy_spotted]	{ priority = high; * = s_e_call_mucosa_small_SED;	}
+			[hit_glance]	{ priority = low; * = s_e_hit_mucosa;				}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 68.9;
+		damage_min = 28.2;
+		damage_bonus_min_cmagic = 112;
+		damage_bonus_max_cmagic = 192;
+	}
+	[common]
+	{
+		screen_name="Vile Mucosa";
+		membership = party_mucosa_boss, monster;
+	}
+	[defend] { defense=468.5; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_mucosa_poison; }
+	}
+	[generator_in_object]
+	{
+		spawn_chance = 0.5;
+		child_template_name = body_glb_mucosa_02;
+	}
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+       				chance = 0.03;
+	                il_main = #nmagic/47-125;
+	                il_main = #cmagic/47-125;
+				}
+				[oneof*]
+				{
+					chance = 0.30;
+					il_main = #*/197-282;
+                    il_main = #armor/125-642;
+				    il_main = potion_health_super;
+				    il_main = potion_mana_super;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+    			    il_main = potion_health_super;
+				    il_main = potion_mana_super;
+				}
+                [oneof*]
+				{
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/240-339;
+	                   il_main = #armor/-rare(1)/282-893;
+                       il_main = #*/-rare(1)/240-339;
+                }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 227624;
+					min = 171870;
+				}
+			}
+		}
+	}
+
+   	[mind]
+	{
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		personal_space_range = 0.75;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_mucosa_small_01 = 1;
+			frag_glb_mucosa_small_02 = 1;
+			frag_glb_mucosa_small_03 = 2;
+			frag_glb_mucosa_small_04 = 3;
+			frag_glb_mucosa_small_05 = 1;
+			frag_glb_mucosa_small_06 = 1;
+			frag_glb_mucosa_small_07 = 3;
+		}
+	}
+}
+
+[t:template,n:3W_beta_mucosa_small] { specializes = 3W_beta_mucosa_small_base; }
+[t:template,n:3W_beta_mucosa_small_base]
+{
+    specializes = 3W_mucosa_small_base;
+
+    aspect:textures:0 = b_c_edm_mu-beta-02;
+	[generator_in_object]
+	{
+		spawn_chance = 0.5;
+		child_template_name = body_glb_beta_mucosa_small;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_beta_mucosa_small_01 = 1;
+			frag_glb_beta_mucosa_small_02 = 1;
+			frag_glb_beta_mucosa_small_03 = 2;
+			frag_glb_beta_mucosa_small_04 = 3;
+			frag_glb_beta_mucosa_small_05 = 1;
+			frag_glb_beta_mucosa_small_06 = 1;
+			frag_glb_beta_mucosa_small_07 = 3;
+		}
+	}
+}
+
+
+[t:template,n:3W_mucosa_large_base]  // = 3W_mucosa_large
+{
+	category_name = "3W_evil_d";
+	doc = "3W_mucosa";
+	specializes = 3W_base_mucosa;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  68.5, 0;
+			intelligence =  7, 0;
+			dexterity =  30, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 789645;
+		life = 852.9;
+        max_life = 852.9;
+        mana = 135.7;
+		max_mana = 135.7;
+		scale_base = 1.20;
+		textures:0 = b_c_edm_mu-03;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_mucosa_large_SED;	}
+			[enemy_spotted]	{ priority = high; * = s_e_call_mucosa_big_SED;	}
+			[hit_glance]	{ priority = low; * = s_e_hit_mucosa_large_SED;	}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 591.5;
+		damage_min = 489.6;
+	}
+	[common]
+	{
+		screen_name="Dark Mucosa";
+		membership = party_mucosa_boss, monster;
+	}
+	[defend] { defense=1040; }
+	[generator_in_object]
+	{
+		spawn_chance = 0.5;
+		child_template_name = body_glb_mucosa_03;
+	}
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+       				chance = 0.03;
+	                il_main = #nmagic/41-109;
+	                il_main = #cmagic/41-109;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #*/199-273;
+                    il_main = #armor/122-692;
+				    il_main = potion_health_super;
+				    il_main = potion_mana_super;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+    			    il_main = potion_health_super;
+				    il_main = potion_mana_super;
+				}
+                [oneof*]
+				{
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/236-347;
+	                   il_main = #armor/-rare(1)/244-896;
+                       il_main = #*/-rare(1)/236-347;
+                }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 227624;
+					min = 171870;
+				}
+			}
+		}
+	}
+
+   	[mind]
+	{
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true;
+
+		personal_space_range = 1.1;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_mucosa_large_01 = 1;
+			frag_glb_mucosa_large_02 = 1;
+			frag_glb_mucosa_large_03 = 2;
+			frag_glb_mucosa_large_04 = 3;
+			frag_glb_mucosa_large_05 = 1;
+			frag_glb_mucosa_large_06 = 1;
+			frag_glb_mucosa_large_07 = 3;
+		}
+	}
+}
+
+[t:template,n:3W_beta_mucosa_large] { specializes = 3W_beta_mucosa_large_base; }
+[t:template,n:3W_beta_mucosa_large_base]
+{
+    specializes = 3W_mucosa_large_base;
+
+    aspect:textures:0 = b_c_edm_mu-beta-03;
+	[generator_in_object]
+	{
+		spawn_chance = 0.5;
+		child_template_name = body_glb_beta_mucosa_large;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_beta_mucosa_large_01 = 1;
+			frag_glb_beta_mucosa_large_02 = 1;
+			frag_glb_beta_mucosa_large_03 = 2;
+			frag_glb_beta_mucosa_large_04 = 3;
+			frag_glb_beta_mucosa_large_05 = 1;
+			frag_glb_beta_mucosa_large_06 = 1;
+			frag_glb_beta_mucosa_large_07 = 3;
+		}
+	}
+}

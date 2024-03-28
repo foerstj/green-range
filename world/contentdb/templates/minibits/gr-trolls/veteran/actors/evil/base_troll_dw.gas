@@ -1,0 +1,169 @@
+[t:template,n:2W_troll_swamp_base]  // = 2W_troll_swamp
+{
+	category_name = "2W_evil_d";
+	doc = "2W_troll_swamp";
+	specializes = 2W_troll_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  42, 0;
+			intelligence =  12.1, 0;
+			dexterity =  22.6, 0;
+			melee =  63,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 72500;
+		life = 1324.6;
+		life_recovery_period = 6;
+		life_recovery_unit	= 1;
+		max_life = 1324.6;
+		mana = 27.1;
+		max_mana = 27.1;
+		scale_base = 0.6;
+		textures:0 = b_c_edm_tl-02;
+        life_recovery_unit  = 1;
+        life_recovery_period = 5;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 249.4;
+		damage_min = 162;
+	}
+	[body]
+	{
+		min_move_velocity =2.8;
+		max_move_velocity = 5.1;
+	}
+	[common]
+	{
+		screen_name="Swamp Troll";
+		membership = party_troll_swamp_boss, monster;
+	}
+	[defend] { defense=595.8; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+            	es_weapon_hand = cb_un_2h_troll_swamp;
+			}
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #*/176-211;
+			    il_main = potion_health_large;
+			    il_main = potion_mana_large;
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.7
+			&social_limit					= 2
+			&social_limit_dist				= 3
+			&friend_template				= false
+			&friends						= party_troll_swamp_boss
+			&meander						= true
+			&still							= false;
+
+		jat_attack_object_melee 		= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+
+		actor_life_ratio_low_threshold 	= .33;
+		on_life_ratio_low_flee 			= true;
+		flee_count						= 1;
+		flee_distance					= 20;
+		melee_engage_range				= 14.0;
+		personal_space_range			= 0.7;
+		ranged_engage_range				= 14.0;
+		sight_range						= 14.0;
+	}
+}
+
+[t:template,n:2W_gr_base_troll_dw]
+{
+    specializes = 2W_troll_swamp_base;
+
+    // stats from 2W_furok
+	[actor]
+	{
+		[skills]
+		{
+			strength =  48.5, 0;
+			intelligence =  11.5, 0;
+			dexterity =  21.2, 0;
+            melee =  63,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 37932;
+		life = 1329.5;
+        max_life = 1329.5;
+        mana = 82.7;
+        max_mana = 82.7;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 442;
+		damage_min = 319.1;
+	}
+	[defend] { defense=549.5; }
+	[inventory]
+	{
+   		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_large;
+				   il_main = potion_mana_large;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/41-65;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/168-202;
+					il_main = #armor/77-431;
+	                il_main = #weapon/168-202;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	            	il_main = #weapon/-rare(1)/191-247;
+	                il_main = #armor/-rare(1)/201-691;
+                    il_main = #*/-rare(1)/191-247;
+                }
+				[oneof*]
+                {
+					chance = 0.002;
+	                il_main = #weapon/-unique(2)/191-247;
+	                il_main = #armor/-unique(2)/201-691;
+                    il_main = #*/-unique(2)/191-247;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 71565;
+					min = 43708;
+				}
+			}
+		}
+	}
+}

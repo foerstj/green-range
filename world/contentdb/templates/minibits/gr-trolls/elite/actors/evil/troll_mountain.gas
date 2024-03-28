@@ -1,0 +1,422 @@
+[t:template,n:3W_dsx_troll_forest_base]  // = 3W_dsx_troll_forest
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_troll_forest";
+	specializes = troll_forest_base;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength 		=	34.6, 0;
+			intelligence 	=	11.1, 0;
+			dexterity 		=	 17.6, 0;
+			melee 		=	 74,	 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1024320;
+		life 			= 1544.9;
+		max_life 		= 1544.9;
+		mana 			= 87.8;
+		max_mana 		= 87.8;
+		textures:0 = b_c_edm_tl-03;
+		life_recovery_unit	= 1;
+		life_recovery_period = 7;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 815;
+		damage_min = 550.4;
+	}
+	[common] { screen_name="Troll"; }
+	[defend] { defense=56; }
+	[inventory]
+	{
+		spew_equipped_kill_count = <ignore>;
+		[pcontent]
+	{
+	/* Generated: Tue Jun 17 11:13:15 2003
+		Level 9, Strong */
+		[oneof*]
+		{
+			es_weapon_hand = cb_un_2h_troll_dsx_forest;
+			[gold*]
+			{
+				chance = 0.2;
+				min = 204962;
+				max = 408094;
+			}
+			[oneof*]
+			{
+				chance = 0.088888888888889;
+				il_main = potion_mana_super;
+				il_main = potion_health_super;
+			}
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #weapon/181-230;
+				il_main = #armor/88-544;
+				il_main = #*/181-230;
+			}
+			[oneof*]
+			{
+				chance = 0.01;
+				il_main = #weapon/-rare(1)/230-295;
+				il_main = #armor/-rare(1)/298-790;
+				il_main = #*/-rare(1)/230-295;
+			}
+			[oneof*]
+			{
+				chance = 0.005;
+				il_main = #weapon/-unique(2)/230-295;
+				il_main = #armor/-unique(2)/298-790;
+				il_main = #*/-unique(2)/230-295;
+			}			
+		}
+	}
+		
+	}
+	[mind]
+		{
+			jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+				?curious							= 0.75
+				&interest							= interest
+				&meander							= false
+				&still								= false;
+
+			actor_life_ratio_low_threshold = .33;
+			on_life_ratio_low_flee = true;
+			flee_count = 1;
+			flee_distance = 20;
+			melee_engage_range = 14.0;
+			personal_space_range = 0.7;
+			ranged_engage_range = 14.0;
+			sight_range = 14.0;
+		}
+}
+
+[t:template,n:3W_gr_troll_mountain] { specializes = 3W_gr_troll_mountain_base; }
+[t:template,n:3W_gr_troll_mountain_base]
+{
+    specializes = 3W_dsx_troll_forest_base;
+
+    [aspect]
+    {
+		textures:0 = b_c_edm_tl-05;
+    }
+    [common]
+    {
+        screen_name = "Common Dumbtroll";
+    }
+}
+
+
+[t:template,n:3W_dsx_troll_boss_base]  // = 3W_dsx_troll_boss
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_troll_boss";
+	specializes = troll_forest_base;
+
+	[actor]
+	{
+		[skills]
+		{	
+			strength 		=	46.1, 0;
+			intelligence 	=	11.1, 0;
+			dexterity 		=	17.6, 0;
+			melee 			=	80,	0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1135050;
+		life = 3072.2;
+		life_recovery_period = 4;
+		life_recovery_unit	= 2;
+		max_life = 2194.4;
+		mana = 87.8;
+		max_mana = 87.8;
+		textures:0 = b_c_edm_tl-03;
+	    [voice]
+		{
+			[die]		{ priority = high; * = s_e_die_troll_boss_SED;		}
+			[enemy_spotted]	{ priority = high; * = s_e_call_gorack_SED;	}
+    		[hit_glance]	{ priority = low; * = s_e_hit_troll_SED;	}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 805.3;
+		damage_min = 542.5;
+	}
+	[common] 
+	{
+		screen_name="Troll Captain";			
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_purple"); // Placeholder
+			}
+		}
+	}
+	[defend] { defense=85; }
+	[inventory]
+	{
+		spew_equipped_kill_count = <ignore>;
+		[pcontent]
+		{
+			/* Generated: Tue Jun 17 11:13:15 2003
+			Level 9, Strong */
+			[oneof*]
+			{
+				es_weapon_hand = cb_un_2h_troll_dsx_forest;
+				[gold*]
+				{
+					chance = 0.2;
+					min = 204962;
+					max = 408094;
+				}
+				[oneof*]
+				{
+					chance = 0.088888888888889;
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/181-230;
+					il_main = #armor/88-544;
+					il_main = #*/181-230;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/230-295;
+					il_main = #armor/-rare(1)/298-790;
+					il_main = #*/-rare(1)/230-295;
+				}
+				[oneof*]
+				{
+					chance = 0.005;
+					il_main = #weapon/-unique(2)/230-295;
+					il_main = #armor/-unique(2)/298-790;
+					il_main = #*/-unique(2)/230-295;
+				}			
+			}
+		}
+	}
+}
+
+[t:template,n:3W_gr_troll_mountain_boss] { specializes = 3W_gr_troll_mountain_boss_base; }
+[t:template,n:3W_gr_troll_mountain_boss_base]
+{
+    specializes = 3W_dsx_troll_boss_base;
+
+    [aspect]
+    {
+		textures:0 = b_c_edm_tl-05;
+        scale_base = 1.2;
+    }
+    [common]
+    {
+        screen_name = "Captain of the Dumbtrolls";
+    }
+}
+
+
+[t:template,n:3W_gr_troll_mountain_large] { specializes = 3W_gr_troll_mountain_large_base; }
+[t:template,n:3W_gr_troll_mountain_large_base]
+{
+    specializes = 3W_gr_troll_mountain_base;
+
+    [aspect]
+    {
+        scale_base = 1.3;
+    }
+    [common]
+    {
+        screen_name = "Enormous Dumbtroll";
+    }
+    [inventory]
+    {
+        [equipment]
+        {
+            es_weapon_hand = cb_un_1h_troll_dsx_scrub;
+        }
+    }
+
+    // stats & loot from 3W_ice_archer, edited
+	[actor]
+	{
+		[skills]
+		{
+			strength =  49.5, 0;
+			intelligence =  8.4, 0;
+			dexterity =  42.4, 0;
+            ranged =  92,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1130913;
+		life = 3272.4;  // doubled, was 1636.2
+        max_life = 3272.4;  // doubled, was 1636.2
+        mana = 67.3;
+		max_mana = 67.3;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 614.8;
+		damage_min = 457.9;
+		damage_bonus_min_ranged = 167;
+		damage_bonus_max_ranged = 237;
+	}
+    [defend] { defense=707; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_super;
+				   il_main = potion_mana_super;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/67-94;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/39-71;
+					il_main = #armor/121-613;
+	                il_main = #weapon/233-278;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/265-330;
+	                il_main = #armor/-rare(1)/741-963;
+                    il_main = #*/-rare(1)/265-330;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/265-330;
+	                il_main = #armor/-unique(2)/741-963;
+                    il_main = #*/-unique(2)/265-330;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 327067;
+					min = 218593;
+				}
+			}
+		}
+	}
+
+}
+
+
+[t:template,n:3W_gr_troll_mountain_giant] { specializes = 3W_gr_troll_mountain_giant_base; }
+[t:template,n:3W_gr_troll_mountain_giant_base]
+{
+    specializes = 3W_gr_troll_mountain_base;
+
+    [aspect]
+    {
+        scale_base = 1.8;
+    }
+    [common]
+    {
+        screen_name = "Gigantic Dumbtroll";
+    }
+    [inventory]
+    {
+        [equipment]
+        {
+            es_weapon_hand = cb_un_1h_troll_dsx_scrub;
+        }
+    }
+
+    // stats & loot from 3W_ice_warrior_boss_01, edited
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  68.5, 0;
+			intelligence =  8.4, 0;
+			dexterity 	=  29.2, 0;
+            melee 		=  99,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1339250;
+		life = 6605.4;  // tripled, was 2201.8
+        max_life = 6605.4;  // tripled, was 2201.8
+        mana = 53.9;
+		max_mana = 53.9;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 551.9;
+		damage_min = 378.1;
+	}
+    [defend] { defense=1444.3; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.794;
+					il_main = #body,f/857-963;
+	                il_main = #weapon/285-311;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/330-382;
+	                il_main = #armor/-rare(1)/1044-1158;
+                    il_main = #*/-rare(1)/330-382;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/330-382;
+	                il_main = #armor/-unique(2)/1044-1158;
+                    il_main = #*/-unique(2)/330-382;
+	            }
+				[gold*]
+				{
+					chance = 0.2;
+					max = 397740;
+					min = 198048;
+					min_pile = 41;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
+}

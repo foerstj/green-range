@@ -1,0 +1,65 @@
+[t:template,n:2W_gr_troll_mini] { specializes = 2W_gr_troll_mini_base; }
+[t:template,n:2W_gr_troll_mini_base]
+{
+	specializes = 2W_troll_base;
+	category_name = "2W_evil_d";
+	doc = "2W_gr troll mini";
+
+	[aspect]
+	{
+        scale_base = 0.5;
+        [voice]
+		{
+			[die]			{ priority = high; * = s_e_die_troll_mini_SED;		}
+			[enemy_spotted]	{ priority = high; * = s_e_call_troll_mini_SED;	}
+            [hit_glance]	{ priority = low; * = s_e_hit_troll_mini_SED;	}
+		}
+	}
+	[common] { screen_name="Wee Troll"; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+            	es_weapon_hand = cb_g_d_r_1h_low;  // twig
+			}
+		}
+	}
+	[mind]
+	{
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+
+	[actor]
+	{
+		[skills]
+		{
+			dexterity = 8, 0;
+			intelligence = 4, 0;
+			strength = 16, 0;
+			melee = 47,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42546;
+		life = 808;
+		max_life = 831;
+		mana = 137;
+		max_mana = 140;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 228;
+		damage_min = 144;
+	}
+	[defend]
+	{
+		defense = 508;
+	}
+}

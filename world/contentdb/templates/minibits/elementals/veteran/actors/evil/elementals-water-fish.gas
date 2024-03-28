@@ -1,0 +1,117 @@
+[t:template,n:2W_dsx_elemental_water_minion_base]  // = 2W_dsx_elemental_water_minion
+{
+// Balanced to level 28, hard melee
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_elemental_water_minion";
+	specializes = 2W_dsx_angler_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =     37.7, 0;
+			intelligence = 10.5, 0;
+			dexterity =    19.9, 0;
+			melee =        63, 0;
+			nature_magic = 63, 0;
+			combat_magic = 63, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 79228;
+		life             = 2150.3;
+		max_life         = 2150.3;
+		mana             = 1011.8;
+		max_mana         = 1011.8;
+		model = m_c_edm_mn_pos_1;
+		[textures]
+		{	
+			0 = b_c_edm_mele;
+		}		
+		[voice]
+		{
+			[attack]		{	* = s_e_attack_water_elemental_SED;	}			
+			[enemy_spotted]	{ priority = high; * = s_e_call_water_elemental; }
+			[die]			{ priority = high;	* = s_e_die_water_elemental;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_elemental_water_SED;		}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 474.2; 
+		damage_min = 365.1;
+	}
+	
+	[common]
+	{
+		screen_name = "Water Elemental Minion";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
+	[defend] { defense = 725.2; }
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= true;
+		
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+
+[t:template,n:2W_gr_water_spirit_fish]
+{
+    specializes = 2W_dsx_elemental_water_minion_base;
+
+    [common] { screen_name = "Water Spirit's Pet"; }
+    [aspect]
+    {
+        // voice from mangler
+		voice:die:			* = s_e_die_mangler;
+		voice:hit_glance:	* = s_e_hit_mangler_SED;
+		voice:hit_solid:	* = s_e_hit_mangler_SED;
+		voice:hit_critical:	* = s_e_hit_mangler_SED;
+    }
+
+    // stats & loot from 2W_mangler
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		35.3, 0;
+			intelligence = 	6.8, 0;
+			dexterity = 	16.1, 0;
+			melee =  		61,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 67600;
+		life = 1065.6;
+		max_life = 1065.6;
+		mana = 29.6;
+		max_mana = 29.6;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 325.6;
+		damage_min = 239.8;
+	}
+	[defend] { defense=521; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #*/171-206;
+			}
+		}
+	}
+}

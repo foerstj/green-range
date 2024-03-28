@@ -1,0 +1,114 @@
+[t:template,n:2W_gr_base_shop_dm_magic]
+{
+    specializes = 2W_dwarf_npc_05_base;
+	category_name = "2W_shopkeep";
+
+    // basic shop stuff
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		use_range = 1;
+	}
+    [common]
+    {
+        screen_name = "Shop";
+    }
+    [mind]
+    {
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+    }
+
+    // shop content from 2W_Onoc in Glacern, +backpacks, +light-spell
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/18-72;
+					max = 40;
+					min = 40;
+				}
+				[all*]
+				{
+					il_main = #spell/0-18;
+					max = 10;
+					min = 10;
+				}
+			}
+			[misc]
+			{
+                [all*]
+				{
+					il_main = #spellbook/94-185;
+					max = 6;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 5;
+					min = 5;
+				}
+                [all*]
+                {
+                    il_main = DSX_backpack_empty;
+                    max = 3;
+                    min = 2;
+                }
+			}
+		}
+	}
+	[store]
+	{
+		item_markup = 2;
+		[item_restock]
+		{
+			potion_health_small = 20;
+			potion_health_medium = 10;
+			potion_mana_small = 20;
+			potion_mana_medium = 10;
+			potion_rejuvenation_small = 5;
+
+			scroll_resurrect = 10;
+            spell_resurrect = 10;
+            spell_revive = 10;
+            spell_healing_hands = 10;
+
+            spell_fireshot = 4;
+            spell_zap = 4;
+
+            // added for green-range
+            spell_light = 1;
+		}
+	}
+}
+
+[t:template,n:2W_gr_shop_dm_magic] { specializes = 2W_gr_shop_dm_magic_base; }
+[t:template,n:2W_gr_shop_dm_magic_base]
+{
+    specializes = 2W_gr_base_shop_dm_magic;
+
+    [common]
+    {
+        screen_name = "Conjuror Klarin Umberdeep";
+    }
+    [inventory]
+    {
+        [equipment]
+        {
+            es_chest = bd_ro_m_g_c_029;
+        }
+    }
+}

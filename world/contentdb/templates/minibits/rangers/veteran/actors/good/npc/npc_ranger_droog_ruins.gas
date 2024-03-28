@@ -1,0 +1,23 @@
+[t:template,n:2W_gr_npc_ranger_droog_ruins] { specializes = 2W_gr_npc_ranger_droog_ruins_base; }
+[t:template,n:2W_gr_npc_ranger_droog_ruins_base]
+{
+	specializes = 2W_gr_npc_ranger_m;
+
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_05;
+			1 = b_c_pos_a1_009;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = gr_leather_rangers;
+			es_feet = gr_boots_rangers;
+			es_weapon_hand = #sd_g_c_st_1h_avg:o_avg;
+		}
+	}
+}

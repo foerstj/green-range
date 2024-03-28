@@ -1,0 +1,24 @@
+[t:template,n:3W_gen_egg_mucosa-beta_mucosa]
+{
+	specializes = 3W_generator_base_exploding_mucosa_egg;
+	doc = "generator_mucosa_egg-mucosa";
+    aspect:model	= m_i_glb_cocoon-mucosa-02;
+	aspect:scale_base	= 1.5;
+
+	[generator_auto_object_exploding]
+	{
+        Child_Template_Name = 3W_beta_mucosa;
+	}
+}
+[t:template,n:3W_gen_egg_mucosa-beta_mucosa_small]
+{
+	specializes = 3W_generator_base_exploding_mucosa_egg;
+	doc = "generator_mucosa_egg-mucosa_small";
+    aspect:model	= m_i_glb_cocoon-mucosa-02;
+	aspect:scale_base	= 1.2;
+
+	[generator_auto_object_exploding]
+	{
+        Child_Template_Name = 3W_beta_mucosa_small;
+	}
+}

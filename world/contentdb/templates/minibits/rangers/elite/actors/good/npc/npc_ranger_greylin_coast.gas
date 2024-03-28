@@ -1,0 +1,24 @@
+[t:template,n:3W_gr_npc_ranger_greylin_coast] { specializes = 3W_gr_npc_ranger_greylin_coast_base; }
+[t:template,n:3W_gr_npc_ranger_greylin_coast_base]
+{
+	specializes = 3W_gr_npc_ranger_m;
+
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_36;  // merik
+			1 = b_c_pos_a1_009;
+		}
+	}
+	[inventory]
+	{
+		custom_head = m_c_gah_fb_hlmt_merik;
+		[equipment]
+		{
+			es_chest = gr_robe_rangers;
+			es_feet = gr_boots_rangers;
+			es_weapon_hand = gr_bow_rangers;
+		}
+	}
+}

@@ -1,0 +1,344 @@
+[t:template,n:2W_shard_teal_base]  // = 2W_shard_teal
+{
+	category_name = "2W_evil_d";
+	doc = "2W_shard_teal";
+	specializes = 2W_base_shard;
+  	[common] { screen_name = "Teal Shard"; }
+	[actor]
+	{
+		[skills]
+		{
+			strength =  31.1, 0;
+			intelligence =  5.6, 0;
+			dexterity =  9.8, 0;
+            nature_magic =  60,  0;
+		}
+	}
+	[aspect]
+	{
+		scale_base = 0.15;
+		[textures] { 0 = b_i_cav_gems-01-static; }
+		experience_value = 41382;
+		life = 462.7;
+        max_life = 462.7;
+        mana = 121.8;
+        max_mana = 121.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 200.9;
+		damage_min = 138.8;
+		damage_bonus_min_cmagic = 113;
+		damage_bonus_max_cmagic = 151;
+	}
+	[defend] { defense=717.1; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_shard_zap_teal; }
+	}
+}
+[t:template,n:2W_gr_shard_ice_sm]
+{
+    specializes = 2W_shard_teal_base;
+
+    [aspect]
+    {
+        textures:0 = b_c_edm_iw;
+    }
+    [common]
+    {
+        screen_name = "Small Ice Shard";
+    }
+	[inventory]
+	{
+		[other] { il_active_primary_spell = spell_gr_shard_zap_ice_sm; }
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_gr_shard_ice_sm_01 = 1;
+			frag_glb_gr_shard_ice_sm_02 = 1;
+			frag_glb_gr_shard_ice_sm_03 = 2;
+			frag_glb_gr_shard_ice_sm_04 = 3;
+			frag_glb_gr_shard_ice_sm_05 = 3;
+		}
+	}
+}
+
+[t:template,n:2W_shard_green_base]  // = 2W_shard_green
+{
+	category_name = "2W_evil_d";
+	doc = "2W_shard_green";
+	specializes = 2W_base_shard;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  32.1, 0;
+			intelligence =  5.6, 0;
+			dexterity =  11.5, 0;
+            nature_magic =  60,  0;
+		}
+	}
+	[aspect]
+	{
+		scale_base = 0.2;
+		[textures] { 0 = b_i_cav_gems-03-static; }
+		experience_value = 47311;
+		life = 508.4;
+        max_life = 508.4;
+        mana = 121.6;
+        max_mana = 121.6;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 226.9;
+		damage_min = 159.2;
+		damage_bonus_min_cmagic = 135;
+		damage_bonus_max_cmagic = 183;
+	}
+	[defend] { defense=817.9; }
+  	[common] { screen_name = "Green Shard"; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_shard_zap_green; }
+	}
+	[mind]
+	{
+		on_enemy_entered_ocz_flee 	= true;
+		on_enemy_entered_ocz_attack = false;
+		on_enemy_entered_icz_flee 	= true;
+		on_enemy_entered_icz_attack = false;
+		flee_count 					= 1;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_shard_green_01 = 1;
+			frag_glb_shard_green_02 = 1;
+			frag_glb_shard_green_03 = 2;
+			frag_glb_shard_green_04 = 3;
+			frag_glb_shard_green_05 = 3;
+		}
+	}
+}
+[t:template,n:2W_gr_shard_ice_md]
+{
+    specializes = 2W_shard_green_base;
+
+    [aspect]
+    {
+        textures:0 = b_c_edm_iw;
+    }
+    [common]
+    {
+        screen_name = "Ice Shard";
+    }
+	[inventory]
+	{
+		[other] { il_active_primary_spell = spell_gr_shard_zap_ice_md; }
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_gr_shard_ice_md_01 = 1;
+			frag_glb_gr_shard_ice_md_02 = 1;
+			frag_glb_gr_shard_ice_md_03 = 2;
+			frag_glb_gr_shard_ice_md_04 = 3;
+			frag_glb_gr_shard_ice_md_05 = 3;
+		}
+	}
+}
+
+[t:template,n:2W_shard_blue_base]  // = 2W_shard_blue
+{
+	category_name = "2W_evil_d";
+	doc = "2W_shard_blue";
+	specializes = 2W_base_shard;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  38.9, 0;
+			intelligence =  7, 0;
+			dexterity =  11.8, 0;
+            nature_magic =  63,  0;
+		}
+	}
+	[aspect]
+	{
+		scale_base = 0.3;
+		[textures] { 0 = b_i_cav_gems-04-static; }
+		experience_value = 46683;
+		life = 657.5;
+        max_life = 657.5;
+        mana = 162.4;
+        max_mana = 162.4;
+        [voice]
+		{
+			[cast]			{ * = s_e_attack_shard; }
+			[die]			{ priority = high; * = s_e_die_shard_large; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_gargoyle; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 263.4;
+		damage_min = 149.8;
+		damage_bonus_min_cmagic = 160;
+		damage_bonus_max_cmagic = 215;
+	}
+	[defend] { defense=799.6; }
+
+
+  	[common] { screen_name = "Blue Shard"; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_shard_zap_blue; }
+	}
+	[mind]
+	{
+		on_enemy_entered_ocz_flee 	= true;
+		on_enemy_entered_ocz_attack = false;
+		on_enemy_entered_icz_flee 	= true;
+		on_enemy_entered_icz_attack = false;
+		flee_count 					= 1;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_shard_blue_01 = 1;
+			frag_glb_shard_blue_02 = 1;
+			frag_glb_shard_blue_03 = 2;
+			frag_glb_shard_blue_04 = 3;
+			frag_glb_shard_blue_05 = 3;
+		}
+	}
+}
+[t:template,n:2W_gr_shard_ice_lg]
+{
+    specializes = 2W_shard_blue_base;
+
+    [aspect]
+    {
+        textures:0 = b_c_edm_iw;
+    }
+    [common]
+    {
+        screen_name = "Big Ice Shard";
+    }
+	[inventory]
+	{
+		[other] { il_active_primary_spell = spell_gr_shard_zap_ice_lg; }
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_gr_shard_ice_lg_01 = 1;
+			frag_glb_gr_shard_ice_lg_02 = 1;
+			frag_glb_gr_shard_ice_lg_03 = 2;
+			frag_glb_gr_shard_ice_lg_04 = 3;
+			frag_glb_gr_shard_ice_lg_05 = 3;
+		}
+	}
+}
+
+[t:template,n:2W_shard_purple_base]  // = 2W_shard_purple
+{
+	category_name = "2W_evil_d";
+	doc = "2W_shard_purple";
+	specializes = 2W_base_shard;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  43.8, 0;
+			intelligence =  9.7, 0;
+			dexterity =  11.4, 0;
+            nature_magic =  63,  0;
+		}
+	}
+	[aspect]
+	{
+		scale_base = 0.6;
+		[textures] { 0 = b_i_cav_gems-02-static; }
+		experience_value = 61548;
+		life = 2012.9;
+        max_life = 2012.9;
+        mana = 550.3;
+        max_mana = 550.3;
+        [voice]
+		{
+			[cast]			{ * = s_e_attack_shard; }
+			[die]			{ priority = high; * = s_e_die_shard_large; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_gargoyle; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 265.5;
+		damage_min = 172.5;
+		damage_bonus_min_cmagic = 188;
+		damage_bonus_max_cmagic = 247;
+	}
+	[defend] { defense=983.4; }
+
+  	[common] { screen_name = "Purple Shard"; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_shard_zap_purple; }
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_shard_purple_01 = 1;
+			frag_glb_shard_purple_02 = 1;
+			frag_glb_shard_purple_03 = 2;
+			frag_glb_shard_purple_04 = 3;
+			frag_glb_shard_purple_05 = 3;
+		}
+	}
+}
+[t:template,n:2W_gr_shard_ice_xl]
+{
+    specializes = 2W_shard_purple_base;
+
+    [aspect]
+    {
+        textures:0 = b_c_edm_iw;
+    }
+    [common]
+    {
+        screen_name = "Huge Ice Shard";
+    }
+	[inventory]
+	{
+		[other] { il_active_primary_spell = spell_gr_shard_zap_ice_xl; }
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_gr_shard_ice_xl_01 = 1;
+			frag_glb_gr_shard_ice_xl_02 = 1;
+			frag_glb_gr_shard_ice_xl_03 = 2;
+			frag_glb_gr_shard_ice_xl_04 = 3;
+			frag_glb_gr_shard_ice_xl_05 = 3;
+		}
+	}
+}

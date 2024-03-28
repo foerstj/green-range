@@ -1,0 +1,14 @@
+[t:template,n:2W_gen_tent_flap_glb-gr_giant]
+{
+	specializes		= 2W_generator_base_glb_tent_flap;
+	doc 			= "gen_tent_flap_glb-gr_giant";
+
+    [aspect]
+    {
+        scale_base = 1.3;  // so that the giant fits thru the door & under the canopy
+    }
+    [generator_advanced_a2]
+	{
+        child_template_name = 2W_gr_giant;
+	}
+}

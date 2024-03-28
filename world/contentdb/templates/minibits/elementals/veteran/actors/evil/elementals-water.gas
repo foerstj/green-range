@@ -1,0 +1,534 @@
+[t:template,n:2W_dsx_elemental_water_base]  // = 2W_dsx_elemental_water
+{
+// Balanced to level 28++, hard melee
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_elemental_water";
+	specializes = 2W_dsx_elemental_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =     60.9, 0;
+			intelligence = 10.6, 0;
+			dexterity =    33.8, 0;
+			melee =        78, 0;
+			nature_magic = 75, 0;
+			combat_magic = 75, 0;
+		}
+	}
+	[aspect]
+	{
+		life_recovery_period = 5;
+		life_recovery_unit   = 0;
+		experience_value = 79228;
+		life             = 3694.3;
+		max_life         = 3694.3;
+		mana             = 1040.3;
+		max_mana         = 1040.3;
+		model = m_c_edm_we;
+		textures:0 = b_c_edm_we-static;		
+		[voice]
+		{
+			[attack]		{	* = s_e_attack_water_elemental_SED;	}			
+			[enemy_spotted]	{ priority = high; * = s_e_call_water_elemental; }
+			[die]			{ priority = high;	* = s_e_die_water_elemental;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_elemental_water_SED;		}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 1376.6; 
+		damage_min = 997.2;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.5;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 1.5, 1.5, 1.5;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_la_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=mg; }
+			}		
+		}
+	}
+	[common]
+	{
+		screen_name = "Water Elemental"; //--
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode; //--
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_blue");
+			}
+		}
+	}
+	[defend] { defense = 1209.7; }
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= false;
+		
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[water_elemental_manager]
+	{
+		sphere_radius = 13.5;
+	}
+}
+
+[t:template,n:2W_gr_base_water_spirit]
+{
+    specializes = 2W_dsx_elemental_water_base;
+
+    [body]
+    {
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_la_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=mg; }  // EDITED: switched with magic
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=at; }  // EDITED: switched with attack
+			}
+            // ADDED for reveal
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+                    // using braak anims because it reveals basically instantly
+					slep = a_c_ecm_bk_fs0_dfs;
+					wake = a_c_ecm_bk_fs0_ds; 
+				}
+			}
+		}
+    }
+
+    [common]
+    {
+        [template_triggers]
+        {
+            // removed rays
+
+            // ADDED
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_water_reveal");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");
+				single_shot = true;
+			}
+        }
+        membership = monster;  // removed immune_xy
+    }
+    [guts_manager]
+    {
+        effect_name = water_explosion;
+    }
+    [mind]
+    {
+		sight_origin_height = 1;
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit?invisible=true;
+		jat_die = world\ai\jobs\common\job_die_fade.skrit;
+
+		on_enemy_entered_icz_switch_to_melee = true;
+		actor_weapon_preference		= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= true;
+		actor_auto_switches_to_melee	= true;
+		on_enemy_entered_ocz_attack = true;
+    }
+    // Start the sfx on either job_startup_reveal trigger
+    [msg_switch2]
+    {
+        trigger_msg = WE_ENEMY_SPOTTED;
+        send_msg = WE_REQ_ACTIVATE;
+        trigger_msg2 = WE_DAMAGED;
+        send_msg2 = WE_REQ_ACTIVATE;
+    }
+    [inventory]
+    {
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell = spell_gr_water_spirit_attack; }
+    }
+}
+
+[t:template,n:2W_gr_water_spirit_sm] { specializes = 2W_gr_water_spirit_sm_base; }
+[t:template,n:2W_gr_water_spirit_sm_base]
+{
+    specializes = 2W_gr_base_water_spirit;
+
+    [common]
+    {
+        screen_name = "Small Water Spirit";
+    }
+    [aspect] { scale_base = 0.6; }
+	[effect_aftereffect]
+	{
+		effect = gr_water_elem_die_sm;  // kinda splash
+		effectDelay = 0.3;
+		lifeSpan = 6;
+	}
+
+    // stats & loot from 2W_swamp_slinger
+	[actor]
+	{
+		[skills]
+		{
+			strength =  36.1, 0;
+			intelligence =  12.1, 0;
+			dexterity =  14, 0;
+			combat_magic =  57,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 78000;
+		life = 777.8;
+		max_life = 777.8;
+		mana = 44.4;
+		max_mana = 44.4;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 317.8;
+		damage_min = 225;
+		damage_bonus_min_cmagic = 104;
+		damage_bonus_max_cmagic = 131;
+	}
+   	[defend] { defense=340.7; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_large;
+				   il_main = potion_mana_large;
+				}
+				[all*]
+				{
+	   				chance = 0.02;
+	                il_main = #spell/33-50;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/164-199;
+					il_main = #armor/94-461;
+	                il_main = #weapon/164-199;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/194-227;
+	                il_main = #armor/-rare(1)/422-683;
+                    il_main = #*/-rare(1)/194-227;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/194-227;
+	                il_main = #armor/-unique(2)/422-683;
+                    il_main = #*/-unique(2)/194-227;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 100316;
+					min = 92614;
+				}
+			}
+		}
+	}
+}
+[t:template,n:2W_gr_water_spirit_sm_summon]
+{
+	specializes = 2W_gr_water_spirit_sm_base;
+	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
+}
+
+[t:template,n:2W_gr_water_spirit_lg] { specializes = 2W_gr_water_spirit_lg_base; }
+[t:template,n:2W_gr_water_spirit_lg_base]
+{
+    specializes = 2W_gr_base_water_spirit;
+
+    [common]
+    {
+        screen_name = "Water Spirit";
+    }
+    [aspect] { scale_base = 1.0; }
+	[effect_aftereffect]
+	{
+		effect = gr_water_elem_die_lg;  // kinda bigger splash
+		effectDelay = 0.6;
+		lifeSpan = 6;
+	}
+
+    // stats & loot from 2W_swamp_creature
+	[actor]
+	{
+		[skills]
+		{
+			strength =  46.8, 0;
+			intelligence =  10.8, 0;
+			dexterity =  12.2, 0;
+            melee =  	60,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 72500;
+		life = 2888.9;
+		max_life = 2888.9;
+		mana = 27.8;
+		max_mana = 27.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 443.1;
+		damage_min = 337.5;
+		reload_delay = 0;
+	}
+   	[defend] { defense=395.4; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_large;
+				   il_main = potion_mana_large;
+				}
+				[all*]
+				{
+	   				chance = 0.02;
+	                il_main = #spell/33-50;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/164-205;
+					il_main = #armor/94-478;
+	                il_main = #weapon/164-205;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/186-235;
+	                il_main = #armor/-rare(1)/544-756;
+                    il_main = #*/-rare(1)/186-235;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/186-235;
+	                il_main = #armor/-unique(2)/544-756;
+                    il_main = #*/-unique(2)/186-235;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 87628;
+					min = 73935;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:2W_gr_water_spirit_boss] { specializes = 2W_gr_water_spirit_boss_base; }
+[t:template,n:2W_gr_water_spirit_boss_base]
+{
+    specializes = 2W_gr_water_spirit_lg_base;
+
+    [common]
+    {
+        screen_name = "Great Water Spirit";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+            // re-added rays
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_blue");
+			}
+
+            // from base
+			[*]
+			{
+				action* = call_sfx_script("dsx_elemental_water_reveal");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");
+				single_shot = true;
+			}
+		}
+    }
+    [aspect] { scale_base = 1.2; }
+
+    // stats & loot from 2W_swamp_creature_boss_01
+	[actor]
+	{
+		[skills]
+		{
+			strength =  51, 0;
+			intelligence =  12.1, 0;
+			dexterity =  15.7, 0;
+            melee =  	68,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 106744;
+		life = 3200;
+		max_life = 3200;
+		mana = 27.8;
+		max_mana = 27.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 443.1;
+		damage_min = 337.5;
+		reload_delay = 0;
+	}
+   	[defend] { defense=875; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.794;
+					il_main = #*/205-219;
+					il_main = #armor/708-806;
+	                il_main = #weapon/205-219;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/224-262;
+	                il_main = #armor/-rare(1)/739-861;
+                    il_main = #*/-rare(1)/224-262;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/224-262;
+	                il_main = #armor/-unique(2)/739-861;
+                    il_main = #*/-unique(2)/224-262;
+	            }
+				[gold*]
+				{
+					chance = 0.2;
+					max = 173209;
+					min = 82270;
+					min_pile = 225;
+					piles = 5 - 7;
+				}
+			}
+		}
+	}
+}

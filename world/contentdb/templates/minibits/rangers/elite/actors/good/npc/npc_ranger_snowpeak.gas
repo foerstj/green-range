@@ -1,0 +1,24 @@
+[t:template,n:3W_gr_npc_ranger_snowpeak] { specializes = 3W_gr_npc_ranger_snowpeak_base; }
+[t:template,n:3W_gr_npc_ranger_snowpeak_base]
+{
+	specializes = 3W_gr_npc_ranger_f;
+
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_07;
+			1 = b_c_pos_a1_014;
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+			es_chest = gr_leather_rangers;
+			es_feet = gr_boots_rangers;
+			es_shield_hand = gr_bow_rangers;
+		}
+	}
+}

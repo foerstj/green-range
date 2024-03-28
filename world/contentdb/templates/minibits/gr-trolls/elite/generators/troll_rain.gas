@@ -1,0 +1,15 @@
+[t:template,n:3W_gen_bush_grass-gr_troll_rain]
+{
+	specializes = 3W_generator_base_generic_bush;
+	doc = "generator_bush_grass-gr_troll_rain";
+
+	[aspect]
+	{
+	    [textures] { 0=b_i_grs_bush-rhod; }
+	}
+
+	[generator_advanced_a2]
+	{
+        Child_Template_Name = 3W_gr_troll_rain;
+	}
+}

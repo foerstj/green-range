@@ -1,0 +1,56 @@
+[t:template,n:2W_gr_troll_mini_2] { specializes = 2W_gr_troll_mini_2_base; }
+[t:template,n:2W_gr_troll_mini_2_base]
+{
+	specializes = 2W_gr_troll_mini_base;
+
+	[common] { screen_name="Wee-Wee Troll"; }
+    [aspect] { textures:0 = b_c_edm_tl-04; }
+
+    // stats from 2W_troll_swamp
+	[actor]
+	{
+		[skills]
+		{
+			strength =  42, 0;
+			intelligence =  12.1, 0;
+			dexterity =  22.6, 0;
+			melee =  63,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 72500;
+		life = 1324.6;
+		life_recovery_period = 6;
+		life_recovery_unit	= 1;
+		max_life = 1324.6;
+		mana = 27.1;
+		max_mana = 27.1;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 249.4;
+		damage_min = 162;
+	}
+	[defend] { defense=595.8; }
+
+    // weapon & loot also from 2W_troll_swamp
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+            	es_weapon_hand = cb_un_2h_gr_troll_mini_2;  // EDITED - same club different screen_name
+			}
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #*/176-211;
+			    il_main = potion_health_large;
+			    il_main = potion_mana_large;
+			}
+		}
+	}
+}

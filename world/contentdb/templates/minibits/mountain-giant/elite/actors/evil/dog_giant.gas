@@ -1,0 +1,84 @@
+[t:template,n:3W_krug_dog_killer_base]  // = 3W_krug_dog_killer
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Krug_dog_killer";
+	specializes = 3W_base_krug_dog;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  40.8, 0;
+			intelligence =  5.2, 0;
+			dexterity =  23.1, 0;
+			melee =  91,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 847734;
+		life = 490.7;
+		max_life = 490.7;
+		mana = 64;
+		max_mana = 64;
+		model = m_c_edm_kd_pos_1;
+		scale_base = 1.25;
+		[textures] { 0=b_c_edm_kd-02; }
+	}
+	[attack]
+	{
+		damage_max = 375.5;
+		damage_min = 268.8;
+	}
+	[common] { screen_name="Krug Killer Dog"; }
+	[defend] { defense=391.1; }
+	[mind]
+	{
+		on_enemy_spotted_alert_friends = true;
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+
+[t:template,n:3W_gr_giant_dog] { specializes = 3W_gr_giant_dog_base; }
+[t:template,n:3W_gr_giant_dog_base]
+{
+    specializes = 3W_krug_dog_killer_base;
+
+    [aspect]
+    {
+        scale_base = 1.5;  // krug killer dog is 1.25
+    }
+    [common]
+    {
+        screen_name = "Mountain Giant Dog";
+    }
+
+    // stats from 3W_dsx_chitterskrag_baby
+	[actor]
+	{
+		[skills]
+		{
+			strength =     45, 0;
+			intelligence = 12.4, 0;
+			dexterity =    23.2, 0;
+			melee =        81, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1135246;
+		life             = 843.9;
+		max_life         = 843.9;
+		mana             = 268.8;
+		max_mana         = 268.8;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 313.4;
+		damage_min = 227.4;
+	}
+	[defend] { defense = 532.1; }
+}

@@ -1,0 +1,322 @@
+[t:template,n:2W_dsx_skatwyrm_base]  // = 2W_dsx_skatwyrm
+//balanced to Level 13
+{
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_skatwyrm_melee";
+	specializes = 2W_skatwyrm_base;
+	
+	[actor]
+	{
+		[skills]
+		{
+			strength 		=  33.7, 0;
+			intelligence 	=  10.6, 0;
+			dexterity 		=  21.2, 0;
+			melee 			=  58,  0;
+		}
+	}
+	[aspect]
+	{
+		[textures]	{ 0 = b_c_edm_skatwyrm_melee; }
+		experience_value = 42108;
+		life 			= 1230;
+		max_life 		= 1230;
+		mana 			= 40;
+		max_mana 		= 40;
+		[voice]
+		{
+			[enemy_spotted]	{ priority = high; * = s_e_call_skatwyrm_SED; }
+		}	
+	}
+	
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max 	= 396;
+		damage_min 	= 276;
+	}
+	
+	[common]
+	{
+		screen_name="Swarmling Drone";
+		membership = monster;
+	}
+	
+	[defend] { defense= 556.7; }
+	
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= true;
+		
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			frag_glb_skatwyrm_01 = 1;
+			frag_glb_skatwyrm_02 = 2;
+			frag_glb_skatwyrm_03 = 4;
+			frag_glb_skatwyrm_04 = 2;
+			frag_glb_skatwyrm_05 = 4;
+		}
+	}
+
+
+
+}
+
+[t:template,n:2W_gr_skatwyrm_melee]
+{
+    specializes = 2W_dsx_skatwyrm_base;
+
+    [common] { screen_name = "Skatwyrm"; }
+    aspect:scale_base = 0.9;
+
+    // stats from 2W_swamp_stinger
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		17.6, 0;
+			intelligence = 	5.4, 0;
+			dexterity = 	23.3, 0;
+			melee =  		54,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 55200;
+		life = 532.8;
+		max_life = 532.8;
+		mana = 23.7;
+		max_mana = 23.7;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 276.8;
+		damage_min = 199.8;
+	}
+	[defend] { defense=501.7; }
+}
+
+[t:template,n:2W_dsx_skatwyrm_r_base]  // = 2W_dsx_skatwyrm_r
+//balanced to Level 14
+//@@ we need to create a "spell" attack for this creature - 
+// - this ranged creature currently has no ranged attack
+{
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_skatwyrm_ranged";
+	specializes = 2W_skatwyrm_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 33.7, 0;
+			intelligence 	= 10.6, 0;
+			dexterity 		= 17.6, 0;
+			ranged 			= 56,  0;
+			melee			= 56, 0;
+			combat_magic 	= 58, 0;
+			nature_magic 	= 58, 0;
+		}    
+	}
+	[aspect]
+	{
+		
+		[textures]	{ 0 = b_c_edm_skatwyrm_ranged; }
+		experience_value = 42108;
+		life 			= 963.3;
+		max_life		= 963.3;
+		mana 			= 40;
+		max_mana 		= 40;
+		
+		[voice]
+		{
+			[enemy_spotted] { priority = high; * = s_e_call_skatwyrm_SED; }
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 2.5;
+		[bone_translator]
+		{
+			body_anterior = bone12;
+			body_mid = bone02;
+			body_posterior = bone03;
+			kill_bone = bone08;
+			shield_bone = bone02;
+			weapon_bone = bone01;
+		}
+		
+		[weapon_scales]
+		{
+			as_single_melee = 1.5, 1.5, 1.5;
+		}
+		
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_qs_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{			
+					01 = at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] 
+				{ 
+					00 = at; 
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 264;
+		damage_min = 204;
+		damage_bonus_min_cmagic = 143;
+		damage_bonus_max_cmagic = 185;
+	}
+	
+	[common]
+	{
+		screen_name="Swarmling Queen";
+		membership = monster;
+	}
+	
+	[defend] { defense = 376.7; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_skatwyrm_gas; }
+
+	}
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= true;
+		actor_auto_switches_to_melee	= true;
+
+		on_enemy_entered_icz_switch_to_melee = true;
+
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= true;
+
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+
+		jat_attack_object_melee	 		= world\ai\jobs\common\job_attack_object_melee.skrit
+			?persistence				= 0.0
+			&hit_multiple				= true;
+
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+		inner_comfort_zone_range        = 4.0;
+		outer_comfort_zone_range        = 9.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			frag_glb_skatwyrm_r_01 = 1;
+			frag_glb_skatwyrm_r_02 = 2;
+			frag_glb_skatwyrm_r_03 = 4;
+			frag_glb_skatwyrm_r_04 = 2;
+			frag_glb_skatwyrm_r_05 = 4;
+		}
+    }
+}
+
+[t:template,n:2W_gr_skatwyrm_ranged]
+{
+    specializes = 2W_dsx_skatwyrm_r_base;
+
+    [common] { screen_name = "Rainbow Skatwyrm"; }
+    aspect:scale_base = 0.8;
+	[inventory]
+	{
+		[other] { il_active_primary_spell = gr_spell_skatwyrm_gas; }
+	}
+    [mind]
+    {
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+		on_enemy_entered_icz_switch_to_melee = false;
+    }
+
+    // stats from 2W_swamp_stinger
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		17.6, 0;
+			intelligence = 	5.4, 0;
+			dexterity = 	23.3, 0;
+			melee =  		54,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 55200;
+		life = 532.8;
+		max_life = 532.8;
+		mana = 23.7;
+		max_mana = 23.7;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 276.8;
+		damage_min = 199.8;
+	}
+	[defend] { defense=501.7; }
+}

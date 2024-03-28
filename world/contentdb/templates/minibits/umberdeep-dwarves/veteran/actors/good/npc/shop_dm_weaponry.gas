@@ -1,0 +1,154 @@
+[t:template,n:2W_gr_base_shop_dm_weaponry]
+{
+    specializes = 2W_dwarf_npc_06_base;
+	category_name = "2W_shopkeep";
+
+    // basic shop stuff
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		use_range = 1;
+	}
+    [common]
+    {
+        screen_name = "Shop";
+    }
+    [mind]
+    {
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+    }
+
+    // shop content from 2W_Jeriah
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/45-223;
+					max = 5;
+					min = 5;
+				}
+				[all*]
+				{
+					il_main = #shield/246-465;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #shield/491-603;
+					max = 4;
+					min = 4;
+				}
+			}
+			[weapons]
+			{
+                // split melee 50:50 into melee and axe
+				[all*]
+				{
+					il_main = #melee/78-129;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #melee/138-215;
+					max = 9;
+					min = 9;
+				}
+				[all*]
+				{
+					il_main = #melee/224-271;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #axe/78-129;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #axe/138-215;
+					max = 9;
+					min = 9;
+				}
+				[all*]
+				{
+					il_main = #axe/224-271;
+					max = 3;
+					min = 3;
+				}
+
+                // split ranged 50:50 into ranged and minigun (=crossbow)
+				[all*]
+				{
+					il_main = #ranged/78-129;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #ranged/138-215;
+					max = 9;
+					min = 9;
+				}
+				[all*]
+				{
+					il_main = #ranged/224-271;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #minigun/78-129;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #minigun/138-215;
+					max = 9;
+					min = 9;
+				}
+				[all*]
+				{
+					il_main = #minigun/224-271;
+					max = 3;
+					min = 3;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:2W_gr_shop_dm_weaponry] { specializes = 2W_gr_shop_dm_weaponry_base; }
+[t:template,n:2W_gr_shop_dm_weaponry_base]
+{
+    specializes = 2W_gr_base_shop_dm_weaponry;
+
+    [common]
+    {
+        screen_name = "Smith Smaltin Umberdeep";
+    }
+    [inventory]
+    {
+        [equipment]
+        {
+            es_chest = bd_ro_m_g_c_026;
+        }
+    }
+}
