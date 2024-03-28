@@ -1,0 +1,100 @@
+[t:template,n:3W_dsx_spiked_dweller_base]  // = 3W_dsx_spiked_dweller
+{
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_spiked_dweller";
+	specializes = base_maw;
+	material = flesh;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		42.3, 0;
+			intelligence = 	11.1, 0;
+			dexterity = 	20.2, 0;
+			melee =         76, 0;
+			nature_magic =	77, 0;
+			combat_magic =  77, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1210560;
+		life 			= 1509.8;
+		max_life 		= 1509.8;
+		mana 			= 2291;
+		max_mana 		= 2291;
+		[voice]
+		{
+			[cast]		{	* = s_e_attack_spiker_SED;	}
+			[die]			{ priority = high; * = s_e_die_spiked_maw; }
+			[hit_critical]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_spiked_maw_SED; }
+		}
+		
+
+		textures:0 = b_c_edm_sm-03;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 579.3;
+		damage_min = 355.5;
+		damage_bonus_min_cmagic = 385;
+		damage_bonus_max_cmagic = 599;
+	}
+	[common]
+	{
+		screen_name="Jungle Spiker";
+		membership = monster, party_spiked_dweller;
+	}
+	[defend] { defense=813.4; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_spiked_dweller_spikes; }
+	}
+	[mind]
+	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true
+			&actor_creates_own_party	= true
+			&party_template				= "party_spiked_dweller";
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		[break_particulate]
+		{
+			frag_glb_spiked_dweller_01 = 1;
+			frag_glb_spiked_dweller_02 = 1;
+			frag_glb_spiked_dweller_03 = 1;
+			frag_glb_spiked_dweller_04 = 6;
+			frag_glb_spiked_dweller_05 = 8;
+		}
+	}
+}
+
+[t:template,n:3W_gr_spiker_green] { specializes = 3W_gr_spiker_green_base; }
+[t:template,n:3W_gr_spiker_green_base]
+{
+    specializes = 3W_dsx_spiked_dweller_base;
+
+	[aspect]
+	{
+		[voice]
+		{
+			[cast]		{	* = s_e_attack_spiker_SED;	}
+			[die] 			{ priority = high; * = s_e_die_spiked_maw_unmoaned_SED; }  // EDITED
+			[hit_critical]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_spiked_maw_SED; }
+		}
+    }
+    [common]
+    {
+        screen_name = "Green Spiker";
+    }
+}

@@ -1,0 +1,90 @@
+[t:template,n:3W_mangler_sea_base]  // = 3W_mangler_sea
+{
+	doc = "3W_mangler_sea";
+	specializes = 3W_base_mangler;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		45.4, 0;
+			intelligence = 	6.1, 0;
+			dexterity = 	22.8, 0;
+			melee =  		97, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 3592000;
+		life = 2304;
+		max_life = 2304;
+		mana = 12.8;
+		material = teeth;
+		max_mana = 12.8;
+		//scale_base = 0.60; // $$ What should his scale be? -CarlosN
+		[textures]	{0=b_c_edm_mn-03;}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 415.4;
+		damage_min = 299.5;
+	}
+	[common] { screen_name="Sea Mangler"; }
+	[defend] { defense=1256; }
+	[mind]
+	{
+		jat_attack_object_melee	= world\ai\jobs\common\job_attack_object_melee.skrit
+			?cautious_chance	= 0.75
+			&min_cautious_distance = 3.00
+			&cautious_approach_distance = 1.0
+			&cautious_down_time = 1.1;
+
+
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social 		= 0.35
+			&approach_dist 	= 2.00
+			&move_distance 	= 4.00
+			&min_distance 	= 2.00
+			&still 			= false;
+	}
+}
+
+[t:template,n:3W_gr_mangler_greylin_coast]
+{
+    specializes = 3W_mangler_sea_base;
+
+	[common]
+    {
+        screen_name="Greylin Mangler";
+    }
+    [aspect]
+    {
+        scale_base = 2;
+    }
+
+    // stats from 3W_dsx_angler_shadow
+	[actor]
+	{
+		[skills]
+		{
+			strength = 	45.3, 0;
+			intelligence = 	12.3, 0;
+			dexterity = 	24.7, 0;
+			melee =  	83,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2594400;  // doubled, was 1297200
+		life = 3447.6;  // quadrupled, was 861.9
+		max_life = 3447.6;  // quadrupled, was 861.9
+		mana = 46.8;
+		max_mana = 46.8;
+	}
+	[attack]
+	{
+		damage_max = 314.3;
+		damage_min = 231.9;
+	}
+	[defend] { defense=508.2; }
+}

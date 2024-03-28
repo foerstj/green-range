@@ -1,0 +1,63 @@
+[t:template,n:3W_gr_spider_white]
+{
+    specializes = 3W_spider_arakun_white_base;
+
+    // stats from 3W_spider_frostnid
+	[actor]
+	{
+		[skills]
+		{
+			strength =  39.4, 0;
+			intelligence =  6.8, 0;
+			dexterity =  40.6, 0;
+            melee =  95,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 987924;
+		life = 1276.9;
+        max_life = 1276.9;
+        mana = 57.7;
+		max_mana = 57.7;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 285.7;
+		damage_min = 194.8;
+	}
+    [defend] { defense=624; }
+}
+
+[t:template,n:3W_gr_spider_white_baby]
+{
+    specializes = 3W_spider_arakun_baby_white_base;
+
+    // stats from 3W_ice_fly
+	[actor]
+	{
+		[skills]
+		{
+			strength = 25.1,0;
+			intelligence = 1.7,0;
+			dexterity = 41.9,0;
+            melee =  91,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 905855;
+		life = 808.3;
+		max_life = 808.3;
+		mana = 16.7;
+		max_mana = 16.7;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 201.7;
+		damage_min = 105;
+	}
+    [defend] { defense=870.8; }
+}

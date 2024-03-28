@@ -1,0 +1,94 @@
+[t:template,n:3W_dsx_skrubb_jungle_base]  // = 3W_dsx_skrubb_jungle
+{
+  category_name = "3W_evil_d";
+  doc = "3W_dsx_skrubb_jungle";
+  specializes = 3W_dsx_skrubb_base;
+	  [actor]
+	    {
+	      [skills]
+			{
+			  strength 	= 38.1, 0;
+			  intelligence 	= 11.2, 0;
+			  dexterity 	= 21, 0;
+			  ranged 	= 74, 0;
+			  combat_magic	= 74, 0;
+			  nature_magic	= 74, 0;
+			}
+	    }
+	  [aspect]
+	    {
+	      experience_value = 895570;
+	      life             = 1520;
+	      max_life         = 1520;
+	      mana             = 291.3;
+	      max_mana         = 291.3;
+	    textures:0 = b_c_edm_sb-03;
+	      //    textures:0 = b_c_edm_ph_melee;
+	
+	      scale_base = 0.20;
+	
+	    }
+	  [attack]
+	    {
+	      attack_range = 0.5;
+	      damage_max = 264.7; 
+	      damage_min = 171; 
+		damage_bonus_min_cmagic = 157;
+		damage_bonus_max_cmagic = 244;
+	    }
+	  [generator_in_object]  //pop up
+	    {
+	      child_template_name = hole_grs_01;
+	      spawn_event = WE_ENEMY_SPOTTED;
+	      spawn_chance = 1.0;
+	      spawn_delay = 0.5;
+	      fade_kid = true;
+	    }
+	  [inventory]
+	    {
+	      selected_active_location = il_active_primary_spell;
+	      [other] { il_active_primary_spell=dsx_spell_skrubb_spit_farm; }
+	    }
+	  [common]
+	    {
+	      screen_name = "Jungle Skrubb"; //--
+	      membership = monster;
+	
+	      [template_triggers] //for generator
+			{
+			  [*]
+			    {
+			      action* = call_sfx_script("skrubb_goo");
+			      condition* = receive_world_message("we_anim_sfx",1);
+			    }
+			}
+	    }
+	  [defend] { defense = 477.1; }
+		
+//DO NOT MAKE ANY CHANGES TO THIS SECTION (MIND) WITHOUT CHECKING WITH NORDEE				
+	  [mind]
+	{
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 10;
+		personal_space_range = 1.2;
+		on_enemy_entered_ocz_attack = true;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		sight_origin_height	= 2;
+	}
+}
+[t:template,n:3W_gr_skrubb_brown]
+{
+    specializes = 3W_dsx_skrubb_jungle_base;
+
+    [common]
+    {
+        screen_name = "Brown Skrubb";
+    }
+}

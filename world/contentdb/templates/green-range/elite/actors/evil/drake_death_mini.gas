@@ -1,0 +1,124 @@
+[t:template,n:3W_dsx_drake_death_one_base]  // = 3W_dsx_drake_death_one
+{
+// Level 15, Hard melee
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_drake_death_one";
+	specializes = 3W_dsx_drake_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength		= 43.7, 0;
+			intelligence 	= 12.5, 0;
+			dexterity		= 23.7, 0;
+			melee			= 82, 0;
+			combat_magic	= 82, 0;
+			nature_magic	= 82, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value 	= 1258284;
+		life 			= 2532;
+		max_life 		= 2532;
+		mana 			= 270;
+		max_mana 		= 270;
+		
+		textures:0 = b_c_edm_ddk-01;
+
+	}
+	[defend] { defense = 954; }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 594;
+		damage_min = 432;
+		damage_bonus_min_cmagic = 360;
+		damage_bonus_max_cmagic = 495;
+	}
+
+	[common]
+	{
+		screen_name="Rahk";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("drake_wing");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("drake_scream");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+		}
+		membership = monster;
+	}
+	[inventory]
+	{
+   		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_drake_breath_red; }
+		[pcontent]
+		{
+			/* Generated: Tue Jun 17 11:13:15 2003
+			Level 14, Strong */
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					min = 107470;
+					max = 213866;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/173-236;
+					il_main = #armor/90-540;
+					il_main = #*/173-236;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/236-282;
+					il_main = #armor/-rare(1)/372-822;
+					il_main = #*/-rare(1)/236-282;
+				}
+				[oneof*]
+				{
+					chance = 0.005;
+					il_main = #weapon/-unique(2)/236-282;
+					il_main = #armor/-unique(2)/372-822;
+					il_main = #*/-unique(2)/236-282;
+				}			
+			}
+		}
+	}
+}
+
+[t:template,n:3W_gr_drake_death_mini_one]
+{
+    specializes = 3W_dsx_drake_death_one_base;
+
+    [aspect]
+    {
+        scale_base = 0.55;
+    }
+}
+
+[t:template,n:3W_gr_drake_death_mini_two]
+{
+    specializes = 3W_dsx_drake_death_two_base;
+
+    [aspect]
+    {
+        scale_base = 0.45;
+    }
+}

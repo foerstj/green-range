@@ -1,0 +1,161 @@
+[t:template,n:3W_soul_stinger_base]  // = 3W_soul_stinger
+{
+	category_name = "3W_evil_d";
+	doc = "3W_soul_stinger";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	20.2, 0;
+			intelligence =  5.9, 0;
+			dexterity =  	28.7, 0;
+			melee =  		91, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 3729000;
+		life = 1501.8;
+		max_life = 1501.8;
+		mana = 26.8;
+		max_mana = 26.8;
+		model = m_c_edm_ss_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_soul_stinger; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 427.8;
+		damage_min = 301.7;
+	}
+	[body]
+	{
+		avg_move_velocity = 4.990000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_ss_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=fl; }
+			}
+		}
+	}
+	[common] { screen_name="Soul Stinger"; }
+	[defend] { defense=741.5; }
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?meander	= false
+			&still		= false;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.5;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+
+		[break_particulate]
+		{
+			frag_glb_soul_stinger_01 = 1;
+			frag_glb_soul_stinger_02 = 1;
+			frag_glb_soul_stinger_03 = 3;
+			frag_glb_soul_stinger_04 = 1;
+			frag_glb_soul_stinger_05 = 1;
+		}
+	}
+}
+
+[t:template,n:3W_gr_drakeling]
+{
+    specializes = 3W_soul_stinger_base;
+
+	[common]
+	{
+		screen_name = "Feathered Drakeling";
+	}
+    [aspect]
+    {
+		model = m_c_edm_FLDRKLNG_pos_1;
+		[textures]	{ 0 = b_c_edm_feathered_drakeling; }
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_gr_drakeling_01 = 1;
+			frag_gr_drakeling_02 = 1;
+			frag_gr_drakeling_03 = 3;
+			frag_gr_drakeling_04 = 1;
+			frag_gr_drakeling_05 = 1;
+		}
+	}
+
+    // stats from 3W_dsx_wasped
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	42.7, 0;
+			intelligence =  12.4, 0;
+			dexterity =  	23.5, 0;
+			melee =  	81, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1303680;
+		life = 821.7;
+		max_life = 821.7;
+		mana = 68;
+		max_mana = 68;
+    }
+	[attack]
+	{
+		damage_max = 305.4;
+		damage_min = 219.3;
+	}
+	[defend] { defense=476; }
+}
