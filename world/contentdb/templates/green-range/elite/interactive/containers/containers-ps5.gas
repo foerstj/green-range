@@ -1,0 +1,257 @@
+[t:template,n:3W_barrel_glb_df_bandits_base]  // = 3W_barrel_glb_df_bandits
+{
+	category_name = "df_bandits";
+	doc = "3W_barrel_glb_df_bandits";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+	}
+	[attack]
+	{
+		damage_max = 286;
+		damage_min = 154;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 56984;
+					min = 22794;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_barrel;
+	}
+}
+[t:template,n:3W_gr_ctn_barrel_gr_ps5]
+{
+    specializes = 3W_barrel_glb_df_bandits_base;
+	category_name = "container";
+}
+
+[t:template,n:3W_crate_glb_df_bandits_base]  // = 3W_crate_glb_df_bandits
+{
+	category_name = "df_bandits";
+	doc = "3W_crate_glb_df_bandits";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_crate;
+	}
+	[attack]
+	{
+		damage_max = 310;
+		damage_min = 186;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 85476;
+					min = 42738;
+					min_pile = 151;
+					piles = 4 - 6;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/56-256;
+					il_main = #armor/95-740;
+					il_main = #*/56-256;
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_crate;
+	}
+}
+[t:template,n:3W_gr_ctn_crate_gr_ps5]
+{
+    specializes = 3W_crate_glb_df_bandits_base;
+	category_name = "container";
+}
+
+// Special chest from Lost Witch
+[t:template,n:3W_chest_grs_01_un_df_r1_base]  // = 3W_chest_grs_01_un_df_r1
+{
+	category_name = "df_r1";
+	doc = "3W_chest_grs_01_un_df_r1";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-03;
+		[textures]
+		{
+			0 = b_i_glb_chest-01;
+		}
+	}
+	[attack]
+	{
+		damage_max = 332;
+		damage_min = 222;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 284921;
+					min = 227937;
+					min_pile = 151;
+					piles = 4 - 5;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/113-225;
+					il_main = #armor/369-622;
+					il_main = #*/113-225;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/230-257;
+					il_main = #armor/-rare(1)/571-677;
+					il_main = #*/-rare(1)/230-257;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_flame_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+// For robbers castle
+[t:template,n:3W_gr_ctn_chest_gr_ps5_un_rc]
+{
+    specializes = 3W_chest_grs_01_un_df_r1_base;
+	category_name = "container";
+    // ornate wood
+    [aspect]
+    {
+        scale_base = 1.2;
+    }
+}
+// For troll king dungeon
+[t:template,n:3W_gr_ctn_chest_gr_ps5_un_tkd]
+{
+    specializes = 3W_chest_grs_01_un_df_r1_base;
+	category_name = "container";
+    // gold trim
+	[aspect]
+	{
+        scale_base = 1.2;
+		[textures]
+		{
+			0 = b_i_csl_chest-05;
+		}
+	}
+}
+
+// Normal chest
+[t:template,n:3W_chest_grs_02_df_bandits_base]  // = 3W_chest_grs_02_df_bandits
+{
+	category_name = "df_bandits";
+	doc = "3W_chest_grs_02_df_bandits";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-04;
+		[textures]
+		{
+			0 = b_i_glb_chest-open-02;
+		}
+	}
+	[attack]
+	{
+		damage_max = 330;
+		damage_min = 220;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 284921;
+					min = 227937;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/56-256;
+					il_main = #armor/95-740;
+					il_main = #*/56-256;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/237-284;
+					il_main = #armor/-rare(1)/697-778;
+					il_main = #*/-rare(1)/237-279;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/242-279;
+					il_main = #armor/-unique(2)/697-778;
+					il_main = #*/-unique(2)/242-284;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_flame_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:3W_gr_ctn_chest_gr_ps5]
+{
+    specializes = 3W_chest_grs_02_df_bandits_base;
+	category_name = "container";
+}

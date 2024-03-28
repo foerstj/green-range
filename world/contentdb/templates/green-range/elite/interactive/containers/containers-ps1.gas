@@ -1,0 +1,232 @@
+// Progression step 1
+
+[t:template,n:3W_barrel_glb_path2crypts_base]  // = 3W_barrel_glb_path2crypts
+{
+	category_name = "path2crypts";
+	doc = "3W_barrel_glb_path2crypts";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+	}
+	[attack]
+	{
+		damage_max = 242;
+		damage_min = 130;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.3;
+					max = 32961;
+					min = 13184;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_barrel;
+	}
+}
+[t:template,n:3W_gr_ctn_barrel_gr_ps1]
+{
+    specializes = 3W_barrel_glb_path2crypts_base;
+	category_name = "container";
+}
+
+[t:template,n:3W_crate_glb_path2crypts_base]  // = 3W_crate_glb_path2crypts
+{
+	category_name = "path2crypts";
+	doc = "3W_crate_glb_path2crypts";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_crate;
+	}
+	[attack]
+	{
+		damage_max = 263;
+		damage_min = 158;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.1;
+					max = 49441;
+					min = 24721;
+					min_pile = 1;
+					piles = 2 - 3;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/66-231;
+					il_main = #armor/89-312;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_crate;
+	}
+}
+[t:template,n:3W_gr_ctn_crate_gr_ps1]
+{
+    specializes = 3W_crate_glb_path2crypts_base;
+	category_name = "container";
+}
+
+[t:template,n:3W_chest_csl_02_fh_r3_base]  // = 3W_chest_csl_02_fh_r3
+{
+	category_name = "fh_r3";
+	doc = "3W_chest_csl_02_fh_r3";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-02;
+	}
+	[attack]
+	{
+		damage_max = 287;
+		damage_min = 191;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_close]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-02-close;
+				}
+			}
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-02-open;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/225-257;
+					il_main = #body/582-728;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/257-305;
+					il_main = #body/-rare(1)/637-837;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:3W_gr_ctn_chest_gr_ps1]
+{
+    specializes = 3W_chest_csl_02_fh_r3_base;
+	category_name = "container";
+}
+
+[t:template,n:3W_locker_glb_open_01_hc_r1_base]  // = 3W_locker_glb_open_01_hc_r1
+{
+	category_name = "hc_r1";
+	doc = "3W_locker_open hc_r1";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_locker-01;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = locker-01-open;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Locker";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[all*]
+				{
+					il_main = #weapon/366-419;
+					il_main = #body/534-1068;
+				}
+				[gold*]
+				{
+					max = 45;
+					min = 40;
+					min_pile = 5;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
+}
+[t:template,n:3W_gr_ctn_locker_gr_ps1]
+{
+    specializes = 3W_locker_glb_open_01_hc_r1_base;
+	category_name = "container";
+}
