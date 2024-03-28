@@ -1,0 +1,118 @@
+[t:template,n:2W_barrel_swp_01_ds_r1_base]  // = 2W_barrel_swp_01_ds_r1
+{
+	category_name = "ds_r1";
+	doc = "2W_barrel_swp_01_ds_r1";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_swp_barrel-01;
+		[textures]
+		{
+			0 = b_i_swp_barrel-01;
+		}
+	}
+	[attack]
+	{
+		damage_max = 203;
+		damage_min = 109;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 16421;
+					min = 6568;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_barrel;
+	}
+}
+[t:template,n:2W_gr_ctn_barrel_gr_ps6]
+{
+    specializes = 2W_barrel_swp_01_ds_r1_base;
+    category_name = "container";
+    [aspect]
+    {
+        model = m_i_glb_barrel;
+        [textures] {}  // unset swamp texture
+    }
+}
+
+[t:template,n:2W_crate_swp_01_ds_r2_base]  // = 2W_crate_swp_01_ds_r2
+{
+	category_name = "ds_r2";
+	doc = "2W_crate_swp_01_ds_r2";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_crate-krug;
+		[textures]
+		{
+			0 = b_i_swp_crate-01;
+		}
+	}
+	[attack]
+	{
+		damage_max = 223;
+		damage_min = 134;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 25917;
+					min = 12958;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/32-134;
+					il_main = #armor/54-421;
+					il_main = #*/32-134;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_fireball_crate;
+	}
+}
+[t:template,n:2W_gr_ctn_crate_gr_ps6]
+{
+    specializes = 2W_crate_swp_01_ds_r2_base;
+    category_name = "container";
+    [aspect] { [textures] {} }  // unset swamp texture
+}

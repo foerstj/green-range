@@ -1,0 +1,234 @@
+// Blackwood Gap
+
+[t:template,n:2W_crate_dsx_a4_r1-03_base]  // = 2W_crate_dsx_a4_r1-03
+{
+	category_name = "dsx_a4";
+	doc = "dsx_a4_r1-03 barrel";
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.3;
+					max = 39845;
+					min = 26563;
+				}
+				[oneof*]
+					{
+						chance = 0.2;
+						il_main = potion_mana_large;
+						il_main = potion_health_large;
+					}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/136-175;
+					il_main = #armor/66-412;
+					il_main = #*/136-175;
+					max = 1;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.03;
+					il_main = #weapon/-rare(1)/175-214;
+					il_main = #armor/-rare(1)/269-600;
+				}
+			}
+		}
+	}
+	
+	//everything from here is copied:
+	specializes		= base_container_barrel;
+	
+	
+	[aspect]
+	{
+		model	= m_i_swp_barrel-01;
+		[textures]	{0=b_i_swp_barrel-01;}
+	}
+}
+[t:template,n:2W_gr_ctn_barrel_gr_bwg]
+{
+    specializes = 2W_crate_dsx_a4_r1-03_base;
+	category_name = "container";
+}
+
+[t:template,n:2W_crate_dsx_a4_r4-02_base]  // = 2W_crate_dsx_a4_r4-02
+{
+	category_name = "dsx_a4";
+	doc = "dsx_a4_r4-02 crate";
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.4;
+					max = 37978;
+					min = 25319;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/130-178;
+					il_main = #armor/68-405;
+					il_main = #*/130-178;
+					max = 1;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #*/-rare(1)/178-212;
+				}
+			}
+		}
+	}
+	
+	//everything from here is copied:
+	specializes		= base_container_wood;
+	[aspect]
+	{
+		model	= m_i_glb_crate-krug;
+		[textures]	{0=b_i_swp_crate-01;}
+	}
+}
+[t:template,n:2W_gr_ctn_crate_gr_bwg]
+{
+    specializes = 2W_crate_dsx_a4_r4-02_base;
+	category_name = "container";
+}
+
+[t:template,n:2W_crate_dsx_a4_r2-spec_base]  // = 2W_crate_dsx_a4_r2-spec
+{
+	category_name = "dsx_a4";
+	doc = "dsx_a4_r2-0spec chest";
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 1;
+					max = 63751;
+					min = 42501;
+				}
+				[oneof*]
+				{
+					chance = 1;
+					il_main = #weapon/136-175;
+					il_main = #armor/66-412;
+					il_main = #*/136-175;
+					max = 3;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 1;
+					il_main = #*/-rare(1)/175-214;
+				}
+				[all*]
+				{
+					il_main = #spell/56-66;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
+	
+	//everything from here is copied:
+	specializes = base_chest;
+	[common] { screen_name="Chest"; }
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-04;
+		[textures]							{ 0 = b_i_glb_chest-open-02; }
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+}
+[t:template,n:2W_gr_ctn_chest_gr_bwg]
+{
+    specializes = 2W_crate_dsx_a4_r2-spec_base;
+	category_name = "container";
+}
+
+[t:template,n:2W_crate_dsx_a4_r3-spec-krakemaw_base]  // = 2W_crate_dsx_a4_r3-spec-krakemaw
+{
+	category_name = "dsx_a4";
+	doc = "dsx_a4_r3-03 krakemaw";
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+		{
+				[gold*]
+				{
+					max = 63751;
+					min = 42501;
+				}
+				[all*]
+				{
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+					il_main = #weapon/128-178;
+					il_main = #armor/62-386;
+					il_main = #*/-rare(1)/178-215;
+				}
+		}
+		}
+	}
+	
+	//everything from here is copied:
+	//	specializes = non_interactive_blocking;
+	specializes = base_chest;
+	[common] { screen_name="Chest"; }
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-03;
+textures:0 = b_i_glb_chest-01;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+}
+[t:template,n:2W_gr_ctn_chest_un_gr_bwg]
+{
+    specializes = 2W_crate_dsx_a4_r3-spec-krakemaw_base;
+	category_name = "container";
+}
