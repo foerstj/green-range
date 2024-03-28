@@ -1,0 +1,42 @@
+[t:template,n:2W_base_bodrus]  // 2W_bodrus without shop
+{
+	category_name = "2W_shopkeep";
+	doc = "2W_bodrus";
+	specializes = 2W_base_npc_bk;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_shopkeep;
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gbn_bk-04;
+		}
+	}
+	[common]
+	{
+		screen_name = "Bodrus";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+}
+
+[t:template,n:2W_gr_shop_lb_mules]
+{
+    specializes = 2W_base_bodrus;
+}

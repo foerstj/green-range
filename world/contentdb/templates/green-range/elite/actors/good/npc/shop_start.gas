@@ -1,0 +1,232 @@
+[t:template,n:3W_yadze_base]  // ~= 3W_yadze
+{
+	specializes = 3W_base_npc_fb;
+	category_name = "3W_shopkeep";
+	doc = "3W_yadze";
+
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_yadze;
+	}
+	[aspect]
+	{
+		use_range = 1.0;
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_24;
+			1 = b_c_pos_a1_055;
+		}
+	}
+	[common]
+	{
+		screen_name = "Yadze";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+        /* omitted */
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+}
+
+[t:template,n:3W_gr_starter_shop] { specializes = 3W_gr_starter_shop_base; }
+[t:template,n:3W_gr_starter_shop_base]
+{
+	specializes = 3W_yadze_base;
+	category_name = "3W_shopkeep";
+	doc = "3W_gr starter shop";
+
+	[common]
+	{
+		screen_name = "Starter Shop";
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+
+    // shop content from 3W_starter_shop_loa, extended
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+
+            // content from 3W_blacksmith_zabar_treseck
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body/210-565;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #body/566-609;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #boots/210-571;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/210-571;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/210-571;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/572-609;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #gloves/572-609;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #helm/572-609;
+					max = 4;
+					min = 4;
+				}
+			}
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/210-565;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #shield/310-571;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #shield/572-609;
+					max = 4;
+					min = 4;
+				}
+
+			}
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/50-220;
+					max = 15;
+					min = 15;
+				}
+				[all*]
+				{
+					il_main = #melee/230-285;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #ranged/50-220;
+					max = 15;
+					min = 15;
+				}
+				[all*]
+				{
+					il_main = #ranged/230-285;
+					max = 4;
+					min = 4;
+				}
+			}
+
+            // content from 3W_mage_trianna_lelaine, plus backpacks
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/70-95;
+					max = 40;
+					min = 40;
+				}
+				[all*]
+				{
+					il_main = spell_resurrect;
+					il_main = spell_revive;
+					il_main = spell_healing_hands;
+					il_main = scroll_resurrect;
+					max = 1;
+					min = 1;
+				}
+			}
+			[misc]
+			{
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 5;
+					min = 3;
+				}
+                // ADDED:
+                [all*]
+                {
+                    il_main = DSX_backpack_empty;
+                    max = 3;
+                    min = 2;
+                }
+			}
+		}
+	}
+	[store]
+	{
+        // content from 3W_mage_trianna_lelaine
+		[item_restock]
+		{
+			potion_health_super = 10;
+			potion_health_large = 15;
+			potion_health_medium = 5;
+			potion_mana_super = 10;
+			potion_mana_large = 15;
+			potion_mana_medium = 5;
+			potion_rejuvenation_small = 2;
+			potion_rejuvenation_medium = 2;
+			potion_rejuvenation_large = 3;
+
+			spell_fireshot = 8;
+			spell_zap = 8;
+
+            // added for green-range
+            spell_transmute = 1;
+            scroll_transmute = 1;
+            spell_transmute_healthpotion = 1;
+            spell_transmute_manapotion = 1;
+            spell_transmogrification = 1;
+            spell_transmuteall = 1;
+            spell_light = 1;
+		}
+	}
+}
