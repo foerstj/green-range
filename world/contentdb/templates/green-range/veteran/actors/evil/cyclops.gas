@@ -1,0 +1,107 @@
+[t:template,n:2W_gr_base_cyclops]
+{
+	specializes = 2W_base_cyclops;
+	doc = "2W_cyclops";
+
+	[common] { screen_name="Cyclops"; }
+	[mind]
+	{
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+
+[t:template,n:2W_gr_cyclops] { specializes = 2W_gr_cyclops_base; }
+[t:template,n:2W_gr_cyclops_base]
+{
+	specializes = 2W_gr_base_cyclops;
+
+    // stats & inventory from 2W_horrid
+	[actor]
+	{
+		[skills]
+		{
+			strength =  62.8, 0;
+			intelligence =  8.6, 0;
+			dexterity =  18.9, 0;
+			melee =  59,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 44394;
+		life = 2048;
+        max_life = 2048;
+        mana = 69.8;
+		max_mana = 69.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 423.4;
+		damage_min = 321.8;
+	}
+    [defend] { defense=337.5; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				  es_weapon_hand = cb_un_2h_horrid;
+			}
+
+			[oneof*]
+			{
+				[all*]
+				{
+       				chance = 0.03;
+	                il_main = #spell/41-64;
+				}
+
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/110-166;
+					il_main = #armor/76-425;
+	                il_main = #weapon/166-193;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/210-260;
+	                il_main = #armor/-rare(1)/489-617;
+                    il_main = #*/-rare(1)/210-260;
+                }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 44996;
+					min = 18635;
+					min_pile = 12;
+					piles = 2 - 3;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:2W_gr_cyclops_boss_fat] { specializes = 2W_gr_cyclops_boss_fat_base; }
+[t:template,n:2W_gr_cyclops_boss_fat_base]
+{
+    specializes = 2W_gr_cyclops_base;
+
+	[aspect]
+	{
+        scale_base = 1.4;
+
+        // values doubled
+		life = 4096;
+        max_life = 4096;
+        mana = 139.6;
+		max_mana = 139.6;
+	}
+	[common] { screen_name="Fat Cyclops"; }
+}

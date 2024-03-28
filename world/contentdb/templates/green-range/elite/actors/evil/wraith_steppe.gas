@@ -1,0 +1,164 @@
+[t:template,n:3W_wraith_lesser_base]  // = 3W_wraith_lesser
+{
+	category_name = "3W_evil_c";
+	doc = "3W_wraith_lesser";
+	specializes = 3W_base_wraith;
+	[actor]
+	{
+		[skills]
+		{
+			strength =		39.9, 0;
+			intelligence = 	13.5, 0;
+			dexterity = 	17.8, 0;
+            melee =  		108,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 3554560;
+		life = 2127.5;
+		max_life = 2127.5;
+		mana = 46;
+		max_mana = 46;
+		model = m_c_ecm_wr_pos_2;
+		[textures] { 0=b_c_ecm_wr; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 400.4;
+		damage_min = 278.4;
+	}
+	[common]
+	{
+		screen_name="Wraith";
+		membership = monster, party_wraith;
+	}
+   	[defend] { defense=1014.9; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_weapon_hand = ax_g_c_2h1b_avg;
+			}
+
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.35;
+					il_main = #*/134-285;
+					il_main = #armor/139-685;
+	                il_main = #spell/83-111;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/261-316;
+	                il_main = #armor/-rare(1)/899-1016;
+                    il_main = #*/-rare(1)/261-316;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/261-316;
+	                il_main = #armor/-unique(2)/899-1016;
+                    il_main = #*/-unique(2)/261-316;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 355950;
+					min = 300591;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party  = true;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_wraith_01 = 1;
+			frag_glb_wraith_02 = 1;
+			frag_glb_wraith_03 = 2;
+			frag_glb_wraith_04 = 1;
+			frag_glb_wraith_05 = 3;
+			frag_glb_wraith_07 = 1;
+		}
+	}
+}
+
+[t:template,n:3W_gr_wraith_steppe] { specializes = 3W_gr_wraith_steppe_base; }
+[t:template,n:3W_gr_wraith_steppe_base]
+{
+    specializes = 3W_wraith_lesser_base;
+
+    // stats & loot from 3W_dsx_acolyte_dark
+	[actor]
+	{
+		[skills]
+		{
+			strength	= 44.8, 0;
+			intelligence	= 12.5, 0;
+			dexterity	= 24, 0;
+			melee 		= 79, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1222200;
+		life		 = 1819.6;
+		max_life	 = 1819.6;
+		mana		 = 287.3;
+		max_mana	 = 287.3;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 407.3;
+		damage_min = 298.8;
+	}
+	[defend] { defense = 791.7; }
+	[inventory]
+    {
+        [pcontent]
+        {
+            [oneof*]
+            {
+                [gold*]
+                {
+                    chance = 0.2;
+                    min = 101055;
+                    max = 201449;
+                }
+                [oneof*]
+                {
+                    chance = 0.2;
+                    il_main = potion_mana_super;
+                    il_main = potion_health_super;
+                }
+                [oneof*]
+                {
+                    chance = 0.15;
+                    il_main = #weapon/153-220;
+                    il_main = #armor/57-453;
+                    il_main = #*/153-220;
+                }
+                [oneof*]
+                {
+                    chance = 0.0075;
+                    il_main = #weapon/-rare(1)/171-250;
+                    il_main = #armor/-rare(1)/338-753;
+                    il_main = #*/-rare(1)/171-250;
+                }
+            }
+        }
+    }
+}

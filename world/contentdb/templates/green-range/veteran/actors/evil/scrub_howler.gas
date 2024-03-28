@@ -1,0 +1,17 @@
+[t:template,n:2W_gr_scrub_howler]
+{
+	specializes = 2W_dsx_scrub_howler_base;
+
+	category_name = "2W_evil_d";
+    [aspect]
+    {
+		[voice]
+		{
+			[die]			{ priority = high;	* = s_e_die_ztrool;		}
+			[enemy_spotted]	{ priority = high;  * = s_e_call_ztrool_SED; }
+			[hit_critical]	{ priority = low;	* = s_e_hit_ztrool_SED;		}
+			[hit_glance]	{ priority = low;	* = s_e_hit_ztrool_SED;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_ztrool_SED;		}
+		}
+    }
+}

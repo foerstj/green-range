@@ -1,0 +1,144 @@
+[t:template,n:3W_dsx_ztrool_base]  // = 3W_dsx_ztrool
+{
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_ztrool";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+		  strength =     50.3, 0;
+		  intelligence = 12.2, 0;
+		  dexterity =    23.8, 0;
+		  melee =        90, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1461936;
+		life             = 898.5;
+		max_life         = 898.5;
+		mana             = 601.7;
+		max_mana         = 601.7;
+		model = m_c_ecm_db_pos_1;
+		textures:0 = b_c_ecm_db-03;
+		scale_base	 = 0.65;
+		material =flesh;
+		[voice]
+		{
+			[attack]		{	* = s_e_attack_chomper_SED;	}
+			[die]			{ priority = high;	* = s_e_die_ztrool;		}
+			[enemy_spotted]	{ priority = high; * = s_e_call_ztrool_SED; }
+			[hit_critical]	{ priority = low;	* = s_e_hit_ztrool_SED;		}
+			[hit_glance]	{ priority = low;	* = s_e_hit_ztrool_SED;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_ztrool_SED;		}
+		}
+
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 335.3; 
+		damage_min = 242.3; 
+	}
+	[body]
+	{
+		min_move_velocity = 4.0;
+		avg_move_velocity = 4.750000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_two_handed_melee	= 1.5, 1.5, 1.5;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_ecm_db_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,3;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,3;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0,3;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,3;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,3;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common]
+	{
+	  screen_name = "Ztrool"; //--
+	  membership = monster; //--
+	}
+    [defend] { defense = 611.6; }
+
+	[mind]
+	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true;
+
+		jat_fidget 						= world\ai\jobs\common\job_fidget.skrit;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+
+  [inventory]
+  {
+      drop_at_use_point = true;
+      
+     
+  }
+}
+
+[t:template,n:3W_gr_ztrool]
+{
+    specializes = 3W_dsx_ztrool_base;
+
+    [aspect]
+    {
+		[voice]
+		{
+			[attack]		{	* = s_e_attack_chomper_SED;	}
+			[enemy_spotted]	{ priority = high; * = s_e_call_scrub_howler_SED; }
+			[die]			{ priority = high; * = s_e_die_scrub_howler_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_scrub_howler_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_scrub_howler_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_scrub_howler_SED; }
+		}
+    }
+}
