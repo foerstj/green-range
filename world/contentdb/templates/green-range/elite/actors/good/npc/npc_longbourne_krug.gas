@@ -1,0 +1,241 @@
+[t:template,n:3W_base_npc_krug]
+{
+	specializes = npc;
+
+	doc = "Generic Krug";
+	[actor]
+	{
+		race = krug;
+	}
+	[aspect]
+	{
+		model = m_c_eam_kg_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_krug_scout;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_krug_scout_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_krug_scout_SED;  }
+			[hit_glance]	{ priority = low; * = s_e_hit_krug_scout_SED;  }
+			[hit_solid]		{ priority = low; * = s_e_hit_krug_scout_SED;  }
+		}
+	}
+	[body]
+	{
+		min_move_velocity = 1.500;
+		avg_move_velocity = 2.100;
+		max_move_velocity = 2.700;
+		[bone_translator]
+		{
+			body_anterior  = bip01_head;
+			body_mid       = Bip01_Spine3;
+			body_posterior = bip01_pelvis;
+			kill_bone      = Bip01_Spine3;
+			shield_bone    = shield_grip;
+			weapon_bone    = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_eam_kg_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,3,6;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-04;
+					02 = at-02;
+					03 = at-03;
+					qffg = dff;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,3,6;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,3,6;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+					02 = di-03;
+					03 = di-04;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,3,6;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+					01 = dsf-02;
+					02 = dsf-03;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = 1;
+				skrit = select_transition;
+				[anim_files]
+				{
+					chrg = hit;
+                    // ADDED:
+                    qffg = dff;
+                    eat1 = dff-02;
+                    poke = dff-04;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,3,6;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[water_effects] {}
+	[common]
+	{
+		//membership = monster;
+	}
+	[mind]
+	{
+		//com_channels						= dyn_party, krug;
+		com_range							= 8.0;
+		melee_engage_range					= 14.0;
+		ranged_engage_range					= 14.0;
+		sight_range							= 14.0;
+		//jat_fidget							= world\ai\jobs\common\job_fidget.skrit?still=false;
+
+        // ADDED:
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+	}
+	[physics]
+	{
+		break_sound = s_e_meat_explosion;
+		explosion_magnitude = 1.5;
+		fire_resistance = 0.0;
+        fire_burn_threshold =	20;
+		gib_gore_good = false;
+		[break_particulate]
+		{
+			frag_glb_krug_01 = 1;
+			frag_glb_krug_02 = 1;
+			frag_glb_krug_03 = 1;
+			frag_glb_krug_04 = 1;
+			frag_glb_krug_05 = 1;
+			frag_glb_krug_06 = 1;
+			frag_glb_krug_07 = 1;
+			frag_glb_krug_08 = 1;
+		}
+	}
+
+    // ADDED:
+    [conversation]
+    {
+    }
+    [mind]
+    {
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+}
+
+[t:template,n:3W_gr_npc_krug_grunt]
+{
+    specializes = 3W_base_npc_krug;
+
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_eam_ksc-03;
+		}
+	}
+    [common]
+    {
+        screen_name = "Krug Grunt NPC";
+    }
+}
+
+
+[t:template,n:3W_base_npc_krug_shaman]
+{
+    specializes = 3W_base_npc_krug;
+
+	[aspect]
+	{
+        model = m_c_eam_ks_pos_1;
+	}
+	[body]
+	{
+		min_move_velocity = 1.00;
+		avg_move_velocity = 1.16;
+		max_move_velocity = 1.50;
+
+		[bone_translator]
+		{
+			  body_anterior = bip01_head;
+			  body_mid = bip01_spine2;
+			  body_posterior = bip01_pelvis;
+			  kill_bone = bip01_spine2;
+			  shield_bone = weapon_grip;
+			  weapon_bone = shield_grip;
+		}
+	}
+	[physics]
+	{
+		break_sound = s_e_meat_explosion;
+		explosion_magnitude = 1.5;
+		[break_particulate]
+		{
+			frag_glb_krug_shaman_01 = 1;
+			frag_glb_krug_shaman_02 = 1;
+			frag_glb_krug_shaman_03 = 1;
+			frag_glb_krug_shaman_04 = 1;
+			frag_glb_krug_shaman_05 = 1;
+			frag_glb_krug_shaman_06 = 1;
+			frag_glb_krug_shaman_07 = 1;
+			frag_glb_krug_shaman_08 = 1;
+		}
+	}
+}
+
+[t:template,n:3W_gr_npc_krug_shaman]
+{
+    specializes = 3W_base_npc_krug_shaman;
+
+	[aspect]
+	{
+        textures:0 = b_c_eam_ks-02;
+	}
+    [common]
+    {
+        screen_name = "Krug Shaman NPC";
+    }
+}
