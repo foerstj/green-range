@@ -1,0 +1,124 @@
+[t:template,n:2W_shrack_base]  // = 2W_shrack
+{
+	category_name = "2W_evil_d";
+	doc = "2W_shrack";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		12.6, 0;
+			intelligence = 	3.9, 0;
+			dexterity = 	20.4, 0;
+			melee =  		51,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 88000;
+		life = 673.6;
+		max_life = 673.6;
+		mana = 21.3;
+		max_mana = 21.3;
+		model = m_c_edm_shk_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_shrack;  }
+			[hit_critical]	{ priority = low; * = s_e_hit_shrack_SED;  }
+			[hit_glance]	{ priority = low; * = s_e_hit_shrack_SED;  }
+			[hit_solid]		{ priority = low; * = s_e_hit_shrack_SED;  }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 468.9;
+		damage_min = 345.3;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.980000;
+        terrain_movement_permissions = lf_size2_mover;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_shk_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+				 	 00 = at;
+				 	 01 = at-02;
+				 }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] { screen_name="Shrack"; }
+	[defend] { defense=446.6; }
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?meander	= false
+			&still		= false;
+
+		melee_engage_range = 11;
+		personal_space_range = 0.7;
+		ranged_engage_range = 11.0;
+		sight_range = 11.0;
+        sight_origin_height	= 2.5;
+	}
+}
+
+[t:template,n:2W_gr_floater] { specializes = 2W_gr_floater_base; }
+[t:template,n:2W_gr_floater_base]
+{
+    specializes = 2W_shrack_base;
+
+    [aspect]
+    {
+        scale_base = 3;
+
+        experience_value = 43240;  // 88000 was kinda ridiculous
+		life = 336.8;  // halved, was 673.6
+		max_life = 336.8;  // halved, was 673.6
+    }
+    [common] { screen_name = "Floater"; }
+}

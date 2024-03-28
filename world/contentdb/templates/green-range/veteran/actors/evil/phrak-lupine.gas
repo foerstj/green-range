@@ -1,0 +1,114 @@
+[t:template,n:2W_gr_base_swamp_stinger]  // 2W_swamp_stinger, but derived from 2W_base_phrak
+{
+    specializes = 2W_base_phrak;
+
+	doc = "2W_swamp_stinger";
+	[common]
+	{
+		screen_name="Swamp Stinger";
+	}
+	[aspect]
+	{
+        scale_base = 1.0;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_swamp_stinger; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+		}
+	}
+	[mind]
+	{
+		melee_engage_range = 14;
+		personal_space_range = 0.5;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			frag_glb_swamp_stinger_01 = 1;
+			frag_glb_swamp_stinger_02 = 2;
+			frag_glb_swamp_stinger_03 = 2;
+			frag_glb_swamp_stinger_04 = 1;
+			frag_glb_swamp_stinger_05 = 2;
+		}
+	}
+
+    // stats from 2W_swamp_stinger
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		17.6, 0;
+			intelligence = 	5.4, 0;
+			dexterity = 	23.3, 0;
+			melee =  		54,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 55200;
+		life = 532.8;
+		max_life = 532.8;
+		mana = 23.7;
+		max_mana = 23.7;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 276.8;
+		damage_min = 199.8;
+	}
+	[defend] { defense=501.7; }
+}
+
+[t:template,n:2W_gr_phrak_lupine_base]
+{
+    specializes = 2W_gr_base_swamp_stinger;
+
+    [aspect]
+    {
+        textures:0 = b_c_edm_ph-03;
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_gr_phrak_lupine_01 = 1;
+			frag_gr_phrak_lupine_02 = 2;
+			frag_gr_phrak_lupine_03 = 2;
+			frag_gr_phrak_lupine_04 = 1;
+			frag_gr_phrak_lupine_05 = 2;
+		}
+	}
+}
+
+[t:template,n:2W_gr_phrak_lupine]
+{
+    specializes = 2W_gr_phrak_lupine_base;
+
+    [common] { screen_name = "Lupine Phrak"; }
+}
+
+[t:template,n:2W_gr_phrak_piercer_lupine]
+{
+    specializes = 2W_gr_phrak_lupine_base;
+
+    [common] { screen_name = "Lupine Phrak Piercer"; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell = gr_spell_phrak_lupine_dart; }
+    }
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+    }
+}

@@ -1,0 +1,40 @@
+[t:template,n:2W_gr_giant_skrubb]
+{
+    specializes = 2W_giant_skrubb_base;
+
+	doc = "2W_gr_giant_skrubb";
+    [inventory]
+    {
+		[other] { il_active_primary_spell = spell_gr_giant_skrubb_spit; }
+    }
+
+    // stats from 2W_rock_golem, edited
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		71, 0;
+			intelligence = 	14.6, 0;
+			dexterity = 		22.3, 0;
+            melee =         84, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 69000;
+		life = 1720.7;
+		max_life = 1720.7;
+		mana = 1638;
+        max_mana = 1638;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 418.6;
+		damage_min = 297.8;
+	}
+    [defend]
+    {
+        defense = 478.15;  // halved - was 956.3
+    }
+}
