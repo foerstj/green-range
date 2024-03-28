@@ -45,8 +45,8 @@ if not "%mode%"=="light" (
 )
 if "%mode%"=="light" (
   robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xd regions
-  for %%r in (mountains-x19z00-bridge longbourne-east longbourne-main longbourne-west longbourne-west-cellar) do (
-  ::for %%r in (dripstone-cavern-west dripstone-cavern-east glacier-cavern-bridge glacier-cavern-river glacier-cavern-north glacier-cavern-south glacier-shelter) do (
+  ::for %%r in (mountains-x19z00-bridge longbourne-east longbourne-main longbourne-west longbourne-west-cellar) do (
+  for %%r in (dream-cave-a dream-cave-b dream-cave-bottom) do (
     robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\%%r" "%tmp%\Bits\world\maps\%map%\regions\%%r" /E
   )
 )
