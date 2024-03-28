@@ -52,7 +52,7 @@ Alternatively, you can make use of the Light spell, which is available in shops.
 - Hi-res texture of Shrack (Floaters) and Giant Skrubb: courtesy of AntonioR.
 - Dark Sprite: courtesy of Bare Elf.
 - Light Spell: made with help from Starfall.
-- Chapel: courtesy of Sadowson.
+- Chapel and food items: courtesy of Sadowson.
 - Elfgirls: by Witness (Lisa Hui).
 - Webbed trees and bushes: from Yesterhaven.
 - Custom music: by Alexander Nakarada.
