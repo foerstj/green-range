@@ -1,0 +1,66 @@
+[t:template,n:3W_base_lilialaniliel]  // = 3W_lilialaniliel without shop content
+{
+	category_name = "3W_shopkeep";
+	doc = "3W_lilialaniliel (MP)";
+	specializes = 3W_base_npc_fg;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_yeldwyn;
+	}
+	[aspect]
+	{
+		use_range = 1.0;
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_23;
+			1 = b_c_pos_a1_024;
+		}
+	}
+	[common]
+	{
+		screen_name = "Loola";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_weapon_hand = st_un_tiger;
+			es_feet = bo_bo_le_light;
+		}
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+}
+
+[t:template,n:3W_gr_shop_bwg_mule] { specializes = 3W_gr_shop_bwg_mule_base; }
+[t:template,n:3W_gr_shop_bwg_mule_base]
+{
+    specializes = 3W_base_lilialaniliel;
+
+	[common]
+	{
+		screen_name = "Numa";
+	}
+	[inventory]
+	{
+        custom_head = m_c_gah_fg_hlmt_head-03;
+		[equipment]
+		{
+            es_chest = bd_ra_ro_m_g_c_065;
+		}
+	}
+    [mind]
+    {
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+}

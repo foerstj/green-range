@@ -1,8 +1,8 @@
-[t:template,n:mother_zaod_base]  // = mother_zaod
+[t:template,n:2W_mother_zaod_base]  // = 2W_mother_zaod
 {
-	category_name = "1W_character";
-	doc = "mother_zaod";
-	specializes = base_npc_ft;
+	category_name = "2W_character";
+	doc = "2W_mother_zaod";
+	specializes = 2W_base_npc_ft;
 	[actor] { portrait_icon = b_gui_ig_i_ic_c_zaod; }
 	[aspect]
 	{
@@ -21,13 +21,13 @@
 			{
 				[all*]
 				{
-					il_main = #spell/10-28;
+					il_main = #spell/34-96;
 					max = 40;
 					min = 40;
 				}
 				[all*]
 				{
-					il_main = #spell/0-9;
+					il_main = #spell/0-31;
 					max = 10;
 					min = 10;
 				}
@@ -36,7 +36,7 @@
 			{
                 [all*]
 				{
-					il_main = #spellbook/73-80;
+					il_main = #spellbook/103-201;
 					max = 6;
 					min = 4;
 				}
@@ -76,12 +76,12 @@
 	}
 }
 
-[t:template,n:gr_shop_bwg_magic] { specializes = gr_shop_bwg_magic_base; }
-[t:template,n:gr_shop_bwg_magic_base]
+[t:template,n:2W_gr_shop_bwg_magic] { specializes = 2W_gr_shop_bwg_magic_base; }
+[t:template,n:2W_gr_shop_bwg_magic_base]
 {
-    specializes = mother_zaod_base;
+    specializes = 2W_mother_zaod_base;
 
-	category_name = "1W_shopkeep";
+	category_name = "2W_shopkeep";
     [common]
     {
         screen_name="Mother Gayat";
@@ -91,7 +91,7 @@
         jat_talk = world\ai\jobs\common\job_talk.skrit;
     }
 
-    // shop content from jeriah, -smith, +backpacks, +light-spell
+    // shop content from 2W_jeriah, -smith, +backpacks, +light-spell
 	[inventory]
 	{
 		[store_pcontent]
@@ -103,13 +103,13 @@
 			{
 				[all*]
 				{
-					il_main = #spell/6-22;
+					il_main = #spell/27-98;
 					max = 25;
 					min = 25;
 				}
 				[all*]
 				{
-					il_main = #spell/0-5;
+					il_main = #spell/0-22;
 					max = 5;
 					min = 5;
 				}
@@ -118,7 +118,7 @@
 			{
                 [all*]
 				{
-					il_main = #spellbook/57-63;
+					il_main = #spellbook/94-188;
 					max = 4;
 					min = 4;
 				}

@@ -1,8 +1,8 @@
-[t:template,n:base_yadze]  // = yadze but without shop content
+[t:template,n:3W_base_yadze]  // = 3W_yadze but without shop content
 {
-	category_name = "1W_shopkeep";
-	doc = "yadze";
-	specializes = base_npc_fb;
+	category_name = "3W_shopkeep";
+	doc = "3W_yadze";
+	specializes = 3W_base_npc_fb;
 	[actor]
 	{
 		portrait_icon = b_gui_ig_i_ic_c_yadze;
@@ -37,10 +37,10 @@
 	}
 }
 
-[t:template,n:gr_shop_bwg_smith] { specializes = gr_shop_bwg_smith_base; }
-[t:template,n:gr_shop_bwg_smith_base]
+[t:template,n:3W_gr_shop_bwg_smith] { specializes = 3W_gr_shop_bwg_smith_base; }
+[t:template,n:3W_gr_shop_bwg_smith_base]
 {
-    specializes = base_yadze;
+    specializes = 3W_base_yadze;
     
     [common]
     {
@@ -51,7 +51,7 @@
         jat_talk = world\ai\jobs\common\job_talk.skrit;
     }
 
-    // shop content from jeriah, reduced
+    // shop content from 3W_jeriah, reduced
 	[inventory]
 	{
 		[store_pcontent]
@@ -62,26 +62,26 @@
 			{
 				[all*]
 				{
-					il_main = #body,ro/45-135;
+					il_main = #body,ro/303-750;
 					max = 4;
 					min = 4;
 				}
 
 				[all*]
 				{
-					il_main = #body/45-55;
+					il_main = #body/303-370;
 					max = 7;
 					min = 7;
 				}
 				[all*]
 				{
-					il_main = #body/60-104;
+					il_main = #body/404-700;
 					max = 16;
 					min = 16;
 				}
 				[all*]
 				{
-					il_main = #body/105-135;
+					il_main = #body/707-750;
 					max = 3;
 					min = 3;
 				}
@@ -89,19 +89,19 @@
 
 				[all*]
 				{
-					il_main = #gloves/6-40;
+					il_main = #gloves/40-269;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #gloves/50-104;
+					il_main = #gloves/337-700;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #gloves/110-135;
+					il_main = #gloves/741-909;
 					max = 4;
 					min = 4;
 				}
@@ -109,38 +109,38 @@
 
 				[all*]
 				{
-					il_main = #helm/20-54;
+					il_main = #helm/135-364;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #helm/55-104;
+					il_main = #helm/370-700;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #helm/110-130;
+					il_main = #helm/741-875;
 					max = 4;
 					min = 4;
 				}
 
 				[all*]
 				{
-					il_main = #boots/6-40;
+					il_main = #boots/40-269;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #boots/50-104;
+					il_main = #boots/337-700;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #boots/110-135;
+					il_main = #boots/741-909;
 					max = 4;
 					min = 4;
 				}
@@ -149,19 +149,19 @@
 			{
 				[all*]
 				{
-					il_main = #shield/10-50;
+					il_main = #shield/67-337;
 					max = 5;
 					min = 5;
 				}
 				[all*]
 				{
-					il_main = #shield/55-104;
+					il_main = #shield/370-700;
 					max = 6;
 					min = 6;
 				}
 				[all*]
 				{
-					il_main = #shield/110-135;
+					il_main = #shield/741-909;
 					max = 4;
 					min = 4;
 				}
@@ -170,37 +170,37 @@
 			{
 				[all*]
 				{
-					il_main = #melee/18-30;
+					il_main = #melee/117-194;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #melee/32-50;
+					il_main = #melee/207-324;
 					max = 18;
 					min = 18;
 				}
 				[all*]
 				{
-					il_main = #melee/52-63;
+					il_main = #melee/337-408;
 					max = 6;
 					min = 6;
 				}
 				[all*]
 				{
-					il_main = #ranged/18-30;
+					il_main = #ranged/117-194;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #ranged/32-50;
+					il_main = #ranged/207-324;
 					max = 18;
 					min = 18;
 				}
 				[all*]
 				{
-					il_main = #ranged/52-63;
+					il_main = #ranged/337-408;
 					max = 6;
 					min = 6;
 				}
