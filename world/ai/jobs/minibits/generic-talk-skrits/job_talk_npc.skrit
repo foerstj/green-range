@@ -114,6 +114,21 @@ state Talk$
 
 	event OnEnterState$
 	{
+		string red_con$ = MakeStringF( "%s_red", m_Go$.GetConversation.GetSelectedConversation );
+		string directionsBool$ = MakeStringF( "d_0x%08x", m_Go$.Scid );
+
+		if( GameAuditor.GetDb.GetBool( directionsBool$ ) )
+		{
+			GameAuditor.GetDb.SetBool( directionsBool$, false );
+			// In multiplayer world, there will be a regionally global conversation (one for each region, instead of each actor)
+			// which will give directions to nearby landmarks
+			m_Go$.Conversation.RSSelectConversation( "zconversation_directions" ); //needs to alphabetically sort after all other conversations
+		}
+		else if( GameAuditor.GetDb.GetBool( "turn_world_red" ) )
+		{
+			m_Go$.Conversation.RSSelectConversation( red_con$ );
+		}
+
 		m_Go$.GetConversation.RSActivateDialogue();
 
         animate$();
