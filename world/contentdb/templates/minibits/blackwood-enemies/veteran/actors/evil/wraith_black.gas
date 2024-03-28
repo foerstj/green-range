@@ -1,26 +1,26 @@
-[t:template,n:dsx_acolyte_dark_base]  // = dsx_acolyte_dark
+[t:template,n:2W_dsx_acolyte_dark_base]  // = 2W_dsx_acolyte_dark
 {
 // Balanced for level 13, medium melee
-	category_name = "1W_evil_d";
-	doc = "dsx_acolyte_dark";
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_acolyte_dark";
 	specializes = actor_evil;
 	[actor]
 	{
 		[skills]
 		{
-			strength	= 13, 0;
-			intelligence	= 8, 0;
-			dexterity	= 10, 0;
-			melee 		= 9, 0;
+			strength	= 32.1, 0;
+			intelligence	= 10.7, 0;
+			dexterity	= 18.4, 0;
+			melee 		= 51, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 210;
-		life		 = 285;
-		max_life	 = 285;
-		mana		 = 45;
-		max_mana	 = 45;
+		experience_value = 45780;
+		life		 = 1205.8;
+		max_life	 = 1205.8;
+		mana		 = 190.4;
+		max_mana	 = 190.4;
 
 		model = m_c_ecm_wr_pos_1;
 		textures:0 = b_c_ecm_dacolyte;
@@ -34,12 +34,12 @@
 
 		}
 	}
-	[defend] { defense = 115; }
+	[defend] { defense = 524.6; }
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 58;
-		damage_min = 52;
+		damage_max = 269.9;
+		damage_min = 198;
 	}
 	[body]
 		{
@@ -137,28 +137,28 @@
 			[gold*]
 			{
 				chance = 0.2;
-				min = 153;
-				max = 305;
+				min = 23335;
+				max = 46517;
 			}
 			[oneof*]
 			{
 				chance = 0.2;
-				il_main = potion_mana_small;
-				il_main = potion_health_small;
+				il_main = potion_mana_large;
+				il_main = potion_health_large;
 			}
 			[oneof*]
 			{
 				chance = 0.15;
-				il_main = #weapon/25-36;
-				il_main = #armor/9-71;
-				il_main = #*/25-36;
+				il_main = #weapon/102-146;
+				il_main = #armor/38-300;
+				il_main = #*/102-146;
 			}
 			[oneof*]
 			{
 				chance = 0.0075;
-				il_main = #weapon/-rare(1)/28-41;
-				il_main = #armor/-rare(1)/53-118;
-				il_main = #*/-rare(1)/28-41;
+				il_main = #weapon/-rare(1)/114-167;
+				il_main = #armor/-rare(1)/224-499;
+				il_main = #*/-rare(1)/114-167;
 			}
 			
 		}
@@ -167,18 +167,18 @@
 
 }
 
-[t:template,n:gr_wraith_black] { specializes = gr_wraith_black_base; }
-[t:template,n:gr_wraith_black_base]
+[t:template,n:2W_gr_wraith_black] { specializes = 2W_gr_wraith_black_base; }
+[t:template,n:2W_gr_wraith_black_base]
 {
-    specializes = dsx_acolyte_dark_base;
+    specializes = 2W_dsx_acolyte_dark_base;
 
     common:screen_name = "Black Wraith";
 }
 
-[t:template,n:gr_wraith_black_boss] { specializes = gr_wraith_black_boss_base; }
-[t:template,n:gr_wraith_black_boss_base]
+[t:template,n:2W_gr_wraith_black_boss] { specializes = 2W_gr_wraith_black_boss_base; }
+[t:template,n:2W_gr_wraith_black_boss_base]
 {
-    specializes = dsx_acolyte_dark_base;
+    specializes = 2W_dsx_acolyte_dark_base;
 
     [aspect]
     {
@@ -207,60 +207,62 @@
 		}
 	}
 
-    // stats & loot from furok_boss_01
+    // stats & loot from 2W_furok_boss_01
 	[actor]
 	{
 		[skills]
 		{
-			strength 	=  16, 0;
-			intelligence =  8, 0;
-			dexterity 	=  12, 0;
-            melee 		=  10,  0;
+			strength 	=  48.5, 0;
+			intelligence =  11.5, 0;
+			dexterity 	=  25.5, 0;
+            melee 		=  64,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 254;
-		life = 263;
-        max_life = 263;
-        mana = 14;
-        max_mana = 14;
+		experience_value = 41148;
+		life = 1554.1;
+        max_life = 1554.1;
+        mana = 82.7;
+        max_mana = 82.7;
 	}
 	[attack]
 	{
-		damage_max = 72;
-		damage_min = 68;
+		damage_max = 468;
+		damage_min = 361.6;
 	}
-	[defend] { defense=114; }
+	[defend] { defense=768.2; }
 	[inventory]
 	{
    		[pcontent]
 		{
-			[all*]
+			[oneof*]
 			{
 				[oneof*]
 				{
-					il_main = #armor,f/100-115;
-	                il_main = #weapon/35-38;
+					chance = 0.7;
+					il_main = #body,f/522-639;
+	                il_main = #weapon/196-213;
 				}
 				[oneof*]
 				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/41-46;
-	                il_main = #armor/-rare(1)/122-139;
-                    il_main = #*/-rare(1)/41-46;
+	                il_main = #weapon/-rare(1)/230-258;
+	                il_main = #armor/-rare(1)/721-821;
+                    il_main = #*/-rare(1)/230-258;
                 }
 				[oneof*]
 				{
                 	chance = 0.002;
-	                il_main = #weapon/-unique(2)/41-46;
-	                il_main = #armor/-unique(2)/122-139;
-                    il_main = #*/-unique(2)/41-46;
+	                il_main = #weapon/-unique(2)/230-258;
+	                il_main = #armor/-unique(2)/721-821;
+                    il_main = #*/-unique(2)/230-258;
 	            }
 				[gold*]
 				{
-					max = 374;
-					min = 211;
+					chance = 0.294;
+					max = 179634;
+					min = 101344;
 					min_pile = 35;
 					piles = 3 - 5;
 				}

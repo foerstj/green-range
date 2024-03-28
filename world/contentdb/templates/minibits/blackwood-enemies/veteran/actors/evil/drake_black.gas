@@ -1,0 +1,20 @@
+[t:template,n:2W_gr_drake_black_base]
+{
+    specializes = 2W_drake_white_base;
+	category_name = "2W_evil_d";
+
+    common:screen_name = "Black Drake";
+    aspect:textures:0 = b_c_edm_dk-04;
+}
+
+[t:template,n:2W_gr_drake_black]
+{
+	specializes = 2W_gr_drake_black_base;
+}
+
+[t:template,n:2W_gr_drake_black_reveal]
+{
+	specializes = 2W_gr_drake_black_base;
+
+	mind:jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+}

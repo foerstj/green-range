@@ -1,0 +1,54 @@
+[t:template,n:3W_wolf_white_base]  // = 3W_wolf_white
+{
+	category_name = "3W_evil_d";
+	doc = "3W_wolf_white";
+	specializes = 3W_base_wolf;
+
+	[body]
+	{
+		max_move_velocity = 4.4;
+	}
+	[actor]
+	{
+		[skills]
+		{
+			strength =  47.4, 0;
+			intelligence =  10.3, 0;
+			dexterity =  34, 0;
+            melee =  99,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 938730;
+		life = 1377;
+        max_life = 1377;
+        mana = 108;
+        max_mana = 108;
+        textures:0 = b_c_edm_wf-03;
+        scale_base = 0.75;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 366.3;
+		damage_min = 267.3;
+	}
+
+	[defend] { defense=639; }
+	[common] { screen_name="White Wolf"; }
+	[mind]
+	{
+		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+	}
+}
+
+[t:template,n:3W_gr_wolf_black] { specializes = 3W_gr_wolf_black_base; }
+[t:template,n:3W_gr_wolf_black_base]
+{
+    specializes = 3W_wolf_white_base;
+    
+    aspect:textures:0 = b_c_edm_wf-02;
+    common:screen_name = "Black Wolf";
+}

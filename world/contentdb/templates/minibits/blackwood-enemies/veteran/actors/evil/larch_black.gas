@@ -1,0 +1,86 @@
+[t:template,n:2W_gr_larch_black] { specializes = 2W_gr_larch_black_base; }
+[t:template,n:2W_gr_larch_black_base]
+{
+    specializes = 2W_larch_base;
+
+    [aspect]
+    {
+        textures:0 = b_c_edm_la-05;  // originally used by Swamp Abomination
+    }
+    [common]
+    {
+        screen_name = "Blacklarch";
+    }
+
+    // stats from 2W_dsx_barkrunner
+	[actor]
+    {
+        [skills]
+        {
+            strength =		30.2, 0;
+            intelligence =	9.4, 0;
+            dexterity =		14.9, 0;
+            melee =		50,	0;
+        }
+    }
+	[aspect]
+    {
+        experience_value = 39528;
+        life = 1480.5;
+        max_life = 1480.5;
+        mana = 45;
+        max_mana = 45;
+    }
+	[attack]
+    {
+        attack_range = 0.5;
+        damage_max = 282.2;
+        damage_min = 182.2;
+        reload_delay = 0;
+    }
+	[defend] { defense=471; }
+	[inventory]
+    {
+        [pcontent]
+        {
+        /* Generated: Tue Jun 17 11:13:15 2003
+            Level 12, Strong */
+            [oneof*]
+            {
+                [gold*]
+                {
+                    chance = 0.2;
+                    min = 27981;
+                    max = 55775;
+                }
+                [oneof*]
+                {
+                    chance = 0.2;
+                    il_main = potion_mana_large;
+                    il_main = potion_health_large;
+                }
+                [oneof*]
+                {
+                    chance = 0.2;
+                    il_main = #weapon/120-155;
+                    il_main = #armor/59-365;
+                    il_main = #*/120-155;
+                }
+                [oneof*]
+                {
+                    chance = 0.01;
+                    il_main = #weapon/-rare(1)/155-189;
+                    il_main = #armor/-rare(1)/239-531;
+                    il_main = #*/-rare(1)/155-189;
+                }
+                [oneof*]
+                {
+                    chance = 0.005;
+                    il_main = #weapon/-unique(2)/155-189;
+                    il_main = #armor/-unique(2)/239-531;
+                    il_main = #*/-unique(2)/155-189;
+                }	
+            }
+        }
+    }
+}

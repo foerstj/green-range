@@ -1,8 +1,8 @@
-[t:template,n:phrak_base]  // = phrak
+[t:template,n:2W_phrak_base]  // = 2W_phrak
 {
-	category_name = "1W_evil_d";
-	doc = "phrak";
-	specializes = base_phrak;
+	category_name = "2W_evil_d";
+	doc = "2W_phrak";
+	specializes = 2W_base_phrak;
 
 	[common]
 	{
@@ -18,10 +18,10 @@
 
 }
 
-[t:template,n:gr_phrak_black] { specializes = gr_phrak_black_base; }
-[t:template,n:gr_phrak_black_base]
+[t:template,n:2W_gr_phrak_black] { specializes = 2W_gr_phrak_black_base; }
+[t:template,n:2W_gr_phrak_black_base]
 {
-    specializes = phrak_base;
+    specializes = 2W_phrak_base;
 
     [common]
     {
@@ -43,64 +43,67 @@
 		}
 	}
 
-    // stats from dsx_leetch
+    // stats from 2W_dsx_leetch
 	[actor]
 	{
 		[skills]
 		{
-		  strength     = 12, 0;
-		  intelligence = 7, 0;
-		  dexterity    = 9, 0;
-		  melee        = 8, 0;
+		  strength     = 30.2, 0;
+		  intelligence = 9.4, 0;
+		  dexterity    = 16.7, 0;
+		  melee        = 50, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 120;
-		life             = 118;
-		max_life         = 118;
-		mana             = 45;
-		max_mana         = 45;
+		experience_value = 35280;
+		life             = 531;
+		max_life         = 531;
+		mana             = 202.5;
+		max_mana         = 202.5;
     }
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 55; 
-		damage_min = 45; 
+		damage_max = 272.3; 
+		damage_min = 182.2; 
 	}
-	[defend] { defense = 60; }
+	[defend] { defense = 283.5; }
 }
 
 
-[t:template,n:phrak_piercer_base]  // = phrak_piercer
+[t:template,n:2W_phrak_piercer_base]  // = 2W_phrak_piercer
 {
-	category_name = "1W_evil_d";
-	doc = "phrak piercer";
-	specializes = base_phrak;
+	category_name = "2W_evil_d";
+	doc = "2W_phrak piercer";
+	specializes = 2W_base_phrak;
 	[actor]
 	{
 		[skills]
 		{
-			strength =  1, 0;
-			intelligence =  1, 0;
-			dexterity =  10, 0;
+			strength =  4.2, 0;
+			intelligence =  1.5, 0;
+			dexterity =  23.9, 0;
+			ranged =  53, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 4;
-		life = 4;
-        max_life = 4;
-        mana = 2;
-		max_mana = 2;
+		experience_value = 4172;
+		life = 116;
+        max_life = 116;
+        mana = 108;
+		max_mana = 108;
 		scale_base = 0.55;
 		textures:0 = b_c_edm_ph-02;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 6;
-		damage_min = 4;
+		damage_max = 156.4;
+		damage_min = 124.4;
+		damage_bonus_min_cmagic = 122;
+		damage_bonus_max_cmagic = 162;
 	}
 	[common]
 	{
@@ -108,7 +111,7 @@
 		membership = phrak,monster;
 	}
 
-	[defend] { defense=1; }
+	[defend] { defense=540; }
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
@@ -139,10 +142,10 @@
 	}
 }
 
-[t:template,n:gr_phrak_piercer_black] { specializes = gr_phrak_piercer_black_base; }
-[t:template,n:gr_phrak_piercer_black_base]
+[t:template,n:2W_gr_phrak_piercer_black] { specializes = 2W_gr_phrak_piercer_black_base; }
+[t:template,n:2W_gr_phrak_piercer_black_base]
 {
-    specializes = phrak_piercer_base;
+    specializes = 2W_phrak_piercer_base;
 
     [common]
     {
@@ -164,7 +167,7 @@
 		}
 	}
 
-    // stats from braak_magic_base
+    // stats from 2W_braak_magic_base
 	[inventory]
 	{
 		[other] { il_active_primary_spell=gr_spell_phrak_black_dart; }
@@ -173,25 +176,27 @@
 	{
 		[skills]
 		{
-			strength =  9, 0;
-			intelligence =  10, 0;
-			dexterity =  10, 0;
-            nature_magic =  7,  0;
+			strength =  27.3, 0;
+			intelligence =  14.4, 0;
+			dexterity =  21.2, 0;
+            nature_magic =  61,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 85;
-		life = 137;
-        max_life = 137;
-		mana = 40;
-		max_mana = 40;
+		experience_value = 29665;
+		life = 809.5;
+        max_life = 809.5;
+		mana = 236.4;
+		max_mana = 236.4;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 28;
-		damage_min = 24;
+		damage_max = 182;
+		damage_min = 127.6;
+		damage_bonus_min_cmagic = 84;
+		damage_bonus_max_cmagic = 113;
 	}
-	[defend] { defense=36; }
+	[defend] { defense=265.9; }
 }

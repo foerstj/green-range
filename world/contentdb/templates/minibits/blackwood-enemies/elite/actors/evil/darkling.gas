@@ -1,0 +1,129 @@
+[t:template,n:3W_gr_darkling_base]
+{
+    specializes = 3W_darkling_base;
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				condition* = receive_world_message("we_entered_world");
+				action* = call_sfx_script("gr_darkling_eye_glow");
+			}
+		}
+	}
+    [inventory]
+    {
+		[other] { il_active_primary_spell = gr_spell_darkling_spark; }
+    }
+
+    // stats&loot from 3W_braak_magic_base
+	[actor]
+	{
+		[skills]
+		{
+			strength =  38.7, 0;
+			intelligence =  17.2, 0;
+			dexterity =  28.3, 0;
+            nature_magic =  95,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 917150;
+		life = 1233;
+        max_life = 1233;
+		mana = 360;
+		max_mana = 360;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 277.2;
+		damage_min = 194.4;
+		damage_bonus_min_cmagic = 137;
+		damage_bonus_max_cmagic = 185;
+	}
+	[defend] { defense=405; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_super;
+				   il_main = potion_mana_super;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/72-126;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/213-272;
+					il_main = #armor/117-594;
+                    il_main = #body,ro/317-594;
+	                il_main = #weapon/213-272;
+                }
+                [oneof*]
+				{
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/247-323;
+	                   il_main = #armor/-rare(1)/468-819;
+                       il_main = #*/-rare(1)/247-323;
+                }
+				[oneof*]
+				{
+                       chance = 0.002;
+	                   il_main = #weapon/-unique(2)/247-323;
+	                   il_main = #armor/-unique(2)/468-819;
+                       il_main = #*/-unique(2)/247-323;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 316782;
+					min = 189638;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:3W_gr_darkling]
+{
+    specializes = 3W_gr_darkling_base;
+}
+
+[t:template,n:3W_gr_darkling_reveal]
+{
+	specializes = 3W_gr_darkling_base;
+
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				condition* = receive_world_message("we_enemy_spotted");
+				action* = call_sfx_script("darkling_reveal");
+				action* = call_sfx_script("gr_darkling_eye_glow");
+			}
+		}
+	}
+}

@@ -1,0 +1,104 @@
+[t:template,n:3W_klaw_base]  // = 3W_klaw
+{
+	category_name = "3W_evil_d";
+	doc = "3W_klaw";
+	specializes = 3W_base_klaw;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  56, 0;
+			intelligence =  13.8, 0;
+			dexterity =  34, 0;
+            melee =  95,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1024010;
+		life = 1818;
+        max_life = 1818;
+        mana = 162;
+		max_mana = 162;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 534.6;
+		damage_min = 372.6;
+	}
+	[common]
+	{
+		screen_name="Klaw";
+		membership = party_klaw_boss, monster;
+	}
+    [defend] { defense=864; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_super;
+				   il_main = potion_mana_super;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/54-117;
+				}
+
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/221-281;
+					il_main = #armor/117-594;
+	                il_main = #weapon/221-281;
+				}
+				[oneof*]
+				{
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/289-349;
+	                   il_main = #armor/-rare(1)/720-1035;
+                       il_main = #*/-rare(1)/289-349;
+                }
+				[oneof*]
+				{
+                       chance = 0.002;
+	                   il_main = #weapon/-unique(2)/289-349;
+	                   il_main = #armor/-unique(2)/720-1035;
+                       il_main = #*/-unique(2)/289-349;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 323247;
+					min = 172399;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+	}
+}
+
+[t:template,n:3W_gr_klaw_black] { specializes = 3W_gr_klaw_black_base; }
+[t:template,n:3W_gr_klaw_black_base]
+{
+    specializes = 3W_klaw_base;
+
+    [common]
+    {
+        screen_name = "Black Klaw";
+    }
+    [aspect]
+    {
+        textures:0 = b_c_edm_kw-03;
+    }
+}

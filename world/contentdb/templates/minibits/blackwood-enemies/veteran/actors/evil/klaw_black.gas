@@ -1,0 +1,104 @@
+[t:template,n:2W_klaw_base]  // = 2W_klaw
+{
+	category_name = "2W_evil_d";
+	doc = "2W_klaw";
+	specializes = 2W_base_klaw;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  39.4, 0;
+			intelligence =  11.5, 0;
+			dexterity =  25.5, 0;
+            melee =  61,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 38220;
+		life = 1193.6;
+        max_life = 1193.6;
+        mana = 106.4;
+		max_mana = 106.4;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 351;
+		damage_min = 244.6;
+	}
+	[common]
+	{
+		screen_name="Klaw";
+		membership = party_klaw_boss, monster;
+	}
+    [defend] { defense=567.3; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_large;
+				   il_main = potion_mana_large;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/35-77;
+				}
+
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/146-185;
+					il_main = #armor/77-390;
+	                il_main = #weapon/146-185;
+				}
+				[oneof*]
+				{
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/191-230;
+	                   il_main = #armor/-rare(1)/473-680;
+                       il_main = #*/-rare(1)/191-230;
+                }
+				[oneof*]
+				{
+                       chance = 0.002;
+	                   il_main = #weapon/-unique(2)/191-230;
+	                   il_main = #armor/-unique(2)/473-680;
+                       il_main = #*/-unique(2)/191-230;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 72046;
+					min = 38424;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+	}
+}
+
+[t:template,n:2W_gr_klaw_black] { specializes = 2W_gr_klaw_black_base; }
+[t:template,n:2W_gr_klaw_black_base]
+{
+    specializes = 2W_klaw_base;
+
+    [common]
+    {
+        screen_name = "Black Klaw";
+    }
+    [aspect]
+    {
+        textures:0 = b_c_edm_kw-03;
+    }
+}

@@ -1,0 +1,40 @@
+[t:template,n:3W_gr_boar_black] { specializes = 3W_gr_boar_black_base; }
+[t:template,n:3W_gr_boar_black_base]
+{
+	specializes = 3W_hell_boar_base;
+
+    [aspect]
+    {
+        textures:0 = b_c_edm_hb-black;
+    }
+	[common]
+    {
+        screen_name = "Blackboar";
+    }
+
+    // stats from 3W_golem_frost_base
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		76.7, 0;
+			intelligence = 	8.5, 0;
+			dexterity =		19.2, 0;
+            melee =         93, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1152360;
+		life = 1500;
+		max_life = 1500;
+		mana = 76.9;
+        max_mana = 76.9;
+	}
+	[attack]
+	{
+		damage_max = 473.8;
+		damage_min = 346.2;
+	}
+    [defend] { defense=725.6; }
+}
