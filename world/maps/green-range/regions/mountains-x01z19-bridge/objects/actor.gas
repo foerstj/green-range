@@ -105,12 +105,12 @@
 	{
 		[conversations]
 		{
-			* = pm_beginner_join;
 			* = pm_beginner_accept_have_money;
-			* = pm_beginner_reject;
-			* = pm_beginner_rejoin;
 			* = pm_beginner_disband;
 			* = pm_beginner_disband_rejoin;
+			* = pm_beginner_join;
+			* = pm_beginner_reject;
+			* = pm_beginner_rejoin;
 		}
 	}
 	[mind]
@@ -170,12 +170,12 @@
 	{
 		[conversations]
 		{
-			* = pm_ranger_join;
 			* = pm_ranger_accept_have_money;
 			* = pm_ranger_disband;
+			* = pm_ranger_disband_rejoin;
+			* = pm_ranger_join;
 			* = pm_ranger_reject;
 			* = pm_ranger_rejoin;
-			* = pm_ranger_disband_rejoin;
 		}
 	}
 	[mind]
@@ -192,6 +192,7 @@
 {
 	[aspect]
 	{
+	  b is_invincible = true;
 	  f max_life = 78.4;
 	  f max_mana = 42;
 	}
