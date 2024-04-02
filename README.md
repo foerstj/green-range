@@ -56,3 +56,14 @@ Alternatively, you can make use of the Light spell, which is available in shops.
 - Elfgirls: by Witness (Lisa Hui).
 - Webbed trees and bushes: from Yesterhaven.
 - Custom music: by Alexander Nakarada.
+
+## Changelog
+Changes in 1.1:
+- Added Veteran & Elite world levels
+- Fixed weird transparency issue in the Droog Ruins
+- Fixed bug where Annemiek could initially look down into the Dripstone Caverns
+- Added miniboss quests for Brankar & Klandank in the Sweven Grotto
+- Added various food items made by Sadowson
+- Added a ground hole for the Giant Skrubb
+- Minor polishing, like camera-blocking terrain, fixed typo in translation
+- Internal updates & refactorings, standardized translation filename
