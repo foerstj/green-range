@@ -77,6 +77,14 @@
 	{
 		screen_name = "Giant Skrubb";
 	}
+	[generator_in_object]
+	{
+		child_template_name = hole_grs_giant_skrubb;
+		spawn_event = WE_ENEMY_SPOTTED;
+		spawn_chance = 1.0;
+		spawn_delay = 0.5;
+		fade_kid = true;
+	}
     [inventory]
     {
 		[other] { il_active_primary_spell = spell_giant_skrubb_spit; }
