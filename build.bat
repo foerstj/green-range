@@ -41,7 +41,7 @@ popd
 :: Compile map file
 rmdir /S /Q "%tmp%\Bits"
 if not "%mode%"=="light" (
-  robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E
+  robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xf .gitignore
 )
 if "%mode%"=="light" (
   robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xd regions
