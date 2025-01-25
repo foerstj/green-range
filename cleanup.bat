@@ -5,6 +5,7 @@ set map_cs=Green Range
 set ds=%DungeonSiege%
 
 :: Cleanup resources so as not to confuse Siege Editor
+del "%ds%\DSLOA\%map_cs%.dsmap"
 del "%ds%\DSLOA\%map_cs%.dsres"
 del "%ds%\DSLOA\%map_cs% music.dsres"
 del "%ds%\DSLOA\%map_cs%.de.dsres"

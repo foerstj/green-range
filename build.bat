@@ -12,7 +12,9 @@ set ds=%DungeonSiege%
 :: path of TankCreator
 set tc=%TankCreator%
 
-set copyright=CC-BY-SA 2024
+:: tank properties
+set year=2025
+set copyright=CC-BY-SA %year%
 set title=%map_cs%
 set author=Johannes Förstner
 
@@ -47,11 +49,11 @@ if "%mode%"=="light" (
   )
 )
 pushd %gaspy%
-venv\Scripts\python -m build.fix_start_positions_required_levels %map% "%tmp%\Bits"
+venv\Scripts\python -m build.fix_start_positions_required_levels %map% --bits "%tmp%\Bits"
 if %errorlevel% neq 0 pause
 setlocal EnableDelayedExpansion
 if "%mode%"=="release" (
-  venv\Scripts\python -m build.add_world_levels %map% "%tmp%\Bits" "%bits%"
+  venv\Scripts\python -m build.add_world_levels %map% --bits "%tmp%\Bits" --template-bits "%bits%"
   if !errorlevel! neq 0 pause
 )
 endlocal
@@ -72,7 +74,7 @@ robocopy "%bits%\world\global\moods\%res%" "%tmp%\Bits\world\global\moods\%res%"
 robocopy "%bits%\world\global\effects" "%tmp%\Bits\world\global\effects" %res%-* /S
 robocopy "%bits%\world\global\effects" "%tmp%\Bits\world\global\effects" minibits-* /S
 pushd %gaspy%
-venv\Scripts\python -m build.swap_music_tracks "%tmp%\Bits"
+venv\Scripts\python -m build.swap_music_tracks --bits "%tmp%\Bits"
 if %errorlevel% neq 0 pause
 popd
 "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
