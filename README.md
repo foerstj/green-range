@@ -55,7 +55,7 @@ Alternatively, you can make use of the Light spell, which is available in shops.
 - Chapel and food items: courtesy of Sadowson.
 - Elfgirls: by Witness (Lisa Hui).
 - Webbed trees and bushes: from Yesterhaven.
-- Custom music: by Alexander Nakarada.
+- Custom music: by Alexander Nakarada https://creatorchords.com/
 
 ## Changelog
 Changes in 1.1:
