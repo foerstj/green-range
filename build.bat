@@ -44,7 +44,7 @@ if not "%mode%"=="light" (
 if "%mode%"=="light" (
   robocopy "%bits%\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xd regions
   ::for %%r in (mountains-x19z00-bridge longbourne-east longbourne-main longbourne-west longbourne-west-cellar) do (
-  for %%r in (dream-cave-a dream-cave-b dream-cave-bottom) do (
+  for %%r in (ehb-border mountains-x00z19) do (
     robocopy "%bits%\world\maps\%map%\regions\%%r" "%tmp%\Bits\world\maps\%map%\regions\%%r" /E
   )
 )
