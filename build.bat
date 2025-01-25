@@ -80,10 +80,32 @@ popd
 "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
 if %errorlevel% neq 0 pause
 
+setlocal EnableDelayedExpansion
 if not "%mode%"=="light" (
-  call "%bits%\build-music.bat"
-  call "%bits%\build-de.bat"
+  :: Compile music resource file
+  rmdir /S /Q "%tmp%\Bits"
+  robocopy "%bits%\world\global\moods\%map%" "%tmp%\Bits\world\global\moods\%map%" /E
+  robocopy "%bits%\sound\music" "%tmp%\Bits\sound\music" /E
+  "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs% music.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
+  if !errorlevel! neq 0 pause
+
+  :: Compile German language resource file
+  rmdir /S /Q "%tmp%\Bits"
+  robocopy "%bits%\language" "%tmp%\Bits\language" %res%-* /S
+  robocopy "%bits%\language" "%tmp%\Bits\language" minibits-* /S
+  :: overwrite textures
+  robocopy "%bits%\art" "%tmp%\Bits\art" /S *.de.raw
+  pushd "%tmp%\Bits\art\bitmaps\items\grass"
+  for %%F in (*.de.raw) do (
+    set "name=%%F"
+    ren "!name!" "!name:.de=!"
+  )
+  popd
+  :: tank it
+  "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.de.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
+  if !errorlevel! neq 0 pause
 )
+endlocal
 
 :: Cleanup
 rmdir /S /Q "%tmp%\Bits"
