@@ -1,7 +1,8 @@
-[t:template,n:emt_glowworms_nightly]
+[t:template,n:emt_glowworms_nightly] { specializes = emt_glowworms_nightly_base; }
+[t:template,n:emt_glowworms_nightly_base]
 {
-	specializes		= emitter_lightweight;
-    category_name	= "emitter";
+	specializes		= emt_sfx_timed_base;
+
 	doc				= "glowworms at night";
 
 	[sfx_emitter_timed]

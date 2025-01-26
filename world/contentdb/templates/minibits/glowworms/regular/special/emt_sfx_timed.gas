@@ -1,6 +1,8 @@
-[t:template,n:emt_sfx_timed]
+[t:template,n:emt_sfx_timed] { specializes = emt_sfx_timed_base; }
+[t:template,n:emt_sfx_timed_base]
 {
 	specializes		= emitter_lightweight;
+
     category_name	= "emitter";
 	doc				= "t_emt_sfx_timed";
 	
