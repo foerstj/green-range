@@ -140,7 +140,36 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,6.02253e-007;
-	  p position = 0.0621262,-6,0.731823,0x2798c013;
+	  p position = 0.0621262,-6,0.731823,0x78e4ee26;
+	}
+}
+[t:trigger_generic,n:0x0730033e]
+{
+	[common]
+	{
+		dev_instance_text = "PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("ps2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0275308,-6,-0.416734,0x78e4ee26;
 	}
 }
 [t:trigger_change_mood_box,n:0x07300290]
@@ -170,34 +199,5 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 1.70316,-2,-0.803719,0x8244880f;
-	}
-}
-[t:trigger_generic,n:0x0730033e]
-{
-	[common]
-	{
-		dev_instance_text = "PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("ps2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.0275308,-6,-0.416734,0x2798c013;
 	}
 }
