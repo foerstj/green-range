@@ -597,7 +597,12 @@
 [t:template,n:2W_gr_wind_spirit_sm_summon]
 {
 	specializes = 2W_gr_wind_spirit_sm_base;
+
 	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
+    [inventory]
+    {
+        [pcontent] { /* REMOVED */ }
+    }
 }
 
 [t:template,n:2W_gr_wind_spirit_boss] { specializes = 2W_gr_wind_spirit_boss_base; }

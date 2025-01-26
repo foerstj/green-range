@@ -337,7 +337,12 @@
 [t:template,n:gr_water_spirit_sm_summon]
 {
 	specializes = gr_water_spirit_sm_base;
+
 	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
+    [inventory]
+    {
+        [pcontent] { /* REMOVED */ }
+    }
 }
 
 [t:template,n:gr_water_spirit_lg] { specializes = gr_water_spirit_lg_base; }
