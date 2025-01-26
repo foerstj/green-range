@@ -2,64 +2,74 @@
 {
 	name	=gr_skatwyrm_gas;
 
+	// derived from dsx_skatwyrm_gas
+	// sprays six particle streams forward, one in each color of the rainbow
+    // each stream applies the damage
 	script	=[[
-            set $vy 10;
-            set $vz 50;
-			set $accel 0,-10,-5;
+			set $vy 10;  // initial velocity upward
+			set $vz 50;  // initial velocity forward
+			set $accel 0,-10,-5;  // apply light gravity & air resistance
 
-			set $count 50;
+			set $count 50;  // num particles each stream
 
 			set $width1 10;
 			set $width2 20;
-            set $dur 3.0;
-            set $fade 0.3;
-            set $fsize 0.35;
+			set $dur 3.0;  // duration
+			set $fade 0.3;  // fade particles a bit while they get bigger - gas dissolves into the air
+			set $fsize 0.35;  // flamesize - initial particle size
 
 			sound play s_e_attack_skrubb_farm_sed at #TARGET_POSITION dist 0.5 16;
 
+			// from leftmost stream to rightmost stream (from POV of the skatwyrm)
+			// red
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
 				color0(1,0,0)cvel(1)velocity(-5,$vy,$vz)cvel(1)accel($accel)
-				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
+				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)[0]";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
+			// yellow
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
 				color0(1,1,0)cvel(1)velocity(-3,$vy,$vz)cvel(1)accel($accel)
-				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
+				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)[0]";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
+			// green
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
 				color0(0,1,0)cvel(1)velocity(-1,$vy,$vz)cvel(1)accel($accel)
-				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
+				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)[0]";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
+			// cyan
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
 				color0(0,1,1)cvel(1)velocity(1,$vy,$vz)cvel(1)accel($accel)
-				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
+				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)[0]";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
+			// blue
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
 				color0(0,0,1)cvel(1)velocity(3,$vy,$vz)cvel(1)accel($accel)
-				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
+				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)[0]";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
+			// purple
 			sfx create fireb #SOURCE 
 				"must_update()fctrl(0,1,10)flamesize($fsize)alphafade($fade)dur($dur)
 				color0(1,0,1)cvel(1)velocity(5,$vy,$vz)cvel(1)accel($accel)
-				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)";
+				lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)count($count)[0]";
 			sfx attach_point #PEEK bone02 target;
 			sfx friendly party #PEEK;
 			sfx start #POP;
 
 			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
-        ]];
+		]];
 }
