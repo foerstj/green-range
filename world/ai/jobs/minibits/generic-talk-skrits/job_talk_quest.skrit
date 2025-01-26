@@ -10,6 +10,8 @@ Goid		m_Target$;
 
 property    string  namespace$      = "quest"               doc = "Namespace for conversations and flags";
 property    string  quest$                                  doc = "Name of the quest";
+property    bool    tri_state$      = false                 doc = "Have 3 convos (inactive, active, completed) instead of default (activate, complete)";
+property    bool    numeric$        = false                 doc = "Have different convos for each quest update, as well as inactive and completed";
 property    bool    face_player$    = true                  doc = "Face player when starting to talk";
 property    string  talk_anim$      = "talk"                doc = "Animation during convo, like talk or look, or empty string";
 property    bool    face_back$      = false                 doc = "Face back when talk is finished";
@@ -116,14 +118,52 @@ state Talk$
 
 	event OnEnterState$
 	{
-		if ( Victory.IsQuestCompleted( quest$ ) )
-		{
-			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_complete", namespace$ ) );
-		}
+        string convo_suffix$;
+        if ( numeric$ )
+        {
+            if ( Victory.IsQuestCompleted( quest$ ) )
+            {
+                convo_suffix$ = "completed";
+            }
+            else if ( Victory.IsQuestActive( quest$ ) )
+            {
+                int quest_order$ = Victory.GetQuestOrder( quest$ );
+                StringTool.AssignF(convo_suffix$, "active_%d", quest_order$);
+            }
+            else
+            {
+                convo_suffix$ = "inactive";
+            }
+        }
+        else if ( tri_state$ )
+        {
+            if ( Victory.IsQuestCompleted( quest$ ) )
+            {
+                convo_suffix$ = "completed";
+            }
+            else if ( Victory.IsQuestActive( quest$ ) )
+            {
+                convo_suffix$ = "active";
+            }
+            else
+            {
+                convo_suffix$ = "inactive";
+            }
+        }
         else
         {
-			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_activate", namespace$ ) );
-		}
+            // Legacy. Useful mainly for quest givers
+            if ( Victory.IsQuestCompleted( quest$ ) )
+            {
+                convo_suffix$ = "complete";
+            }
+            else
+            {
+                convo_suffix$ = "activate";
+            }
+        }
+
+        m_Go$.GetConversation.RSSelectConversation( MakeStringF( "%s_%s", namespace$, convo_suffix$ ) );
 
 		m_Go$.GetConversation.RSActivateDialogue();
 
