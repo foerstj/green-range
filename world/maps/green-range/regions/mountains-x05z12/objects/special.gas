@@ -23,7 +23,7 @@
 	}
 	[placement]
 	{
-	  p position = -0.0346794,-6,-0.104339,0x550ec5cb;
+	  p position = -0.0346794,-6,-0.104339,0x057a000e;
 	}
 }
 [t:trigger_generic,n:0x07101105]
@@ -52,7 +52,36 @@
 	}
 	[placement]
 	{
-	  p position = 0.0520806,-6,-1.10218,0x550ec5cb;
+	  p position = 0.0520806,-6,-1.10218,0x057a000e;
+	}
+}
+[t:trigger_fade_nodes_box,n:0x07101161]
+{
+	[common]
+	{
+		dev_instance_text = "FADE LIGHTBLOCKS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000071,-1,-1,99,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(42.000000,42.000000,42.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.298396,-5.99999,3.1166,0x057a000e;
 	}
 }
 [t:trigger_change_mood_box,n:0x071010f6]
@@ -168,34 +197,5 @@
 	{
 	  q orientation = 0,0.92388,0,0.382683;
 	  p position = -0.129272,0,-0.0302162,0x015f72cb;
-	}
-}
-[t:trigger_fade_nodes_box,n:0x07101161]
-{
-	[common]
-	{
-		dev_instance_text = "FADE LIGHTBLOCKS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x00000071,-1,-1,99,"out:black");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(42.000000,42.000000,42.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = true;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.298396,-5.99999,3.1166,0x550ec5cb;
 	}
 }
