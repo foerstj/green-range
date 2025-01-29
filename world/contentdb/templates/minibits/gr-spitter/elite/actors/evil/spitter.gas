@@ -1,0 +1,94 @@
+[t:template,n:3W_spitter_base]  // = 3W_spitter
+{
+	category_name = "3W_evil_d";
+	doc = "3W_slarg";
+	specializes = 3W_base_slarg;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	41.1, 0;
+			intelligence =  7.5, 0;
+			dexterity =  	24.2, 0;
+            ranged =  		106,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 3593400;
+		life = 1305;
+        max_life = 1305;
+        mana = 24;
+		max_mana = 24;
+		scale_base = 1.20;
+		textures:0 = b_c_edm_sl-02;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 405.9;
+		damage_min = 297;
+		damage_bonus_min_cmagic = 198;
+		damage_bonus_max_cmagic = 286;
+	}
+	[common] { screen_name="Spitter"; }
+    [defend] { defense=1248; }
+    [inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_spitter_steam; }
+	}
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?meander	= false
+			&still		= false;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	}
+
+}
+
+[t:template,n:3W_gr_spitter] { specializes = 3W_gr_spitter_base; }
+[t:template,n:3W_gr_spitter_base]
+{
+	specializes = 3W_spitter_base;
+
+	[inventory]
+	{
+		[other] { il_active_primary_spell = gr_spell_spitter_steam; }
+	}
+
+	// stats from 3W_slarg, switched to combat magic, extended
+	[actor]
+	{
+		[skills]
+		{
+			strength =  29.1, 0;
+			intelligence =  6.7, 0;
+			dexterity =  20.7, 0;
+            combat_magic =  100,  0;  // was melee
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1295567;
+		life = 1654.1;
+        max_life = 1654.1;
+        mana = 48.5;
+		max_mana = 48.5;
+	}
+	[attack]
+	{
+		damage_max = 359.9;
+		damage_min = 272.6;
+
+        // extended from 3W_drake_white
+		damage_bonus_min_cmagic = 361;
+		damage_bonus_max_cmagic = 467;
+	}
+    [defend] { defense=434.2; }
+}

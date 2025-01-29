@@ -1,0 +1,88 @@
+[t:template,n:spitter_base]  // = spitter
+{
+	category_name = "1W_evil_d";
+	doc = "slarg";
+	specializes = base_slarg;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	17, 0;
+			intelligence =  5, 0;
+			dexterity =  	12, 0;
+            ranged =  		30,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 10600;
+		life = 435;
+        max_life = 435;
+        mana = 8;
+		max_mana = 8;
+		scale_base = 1.20;
+		textures:0 = b_c_edm_sl-02;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 123;
+		damage_min = 110;
+	}
+	[common] { screen_name="Spitter"; }
+    [defend] { defense=400; }
+    [inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_spitter_steam; }
+	}
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?meander	= false
+			&still		= false;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	}
+
+}
+
+[t:template,n:gr_spitter] { specializes = gr_spitter_base; }
+[t:template,n:gr_spitter_base]
+{
+	specializes = spitter_base;
+
+	[inventory]
+	{
+		[other] { il_active_primary_spell = gr_spell_spitter_steam; }
+	}
+
+	// stats from slarg, switched to combat magic
+	[actor]
+	{
+		[skills]
+		{
+			strength =  8, 0;
+			intelligence =  4, 0;
+			dexterity =  8, 0;
+			combat_magic =  14,  0;  // was melee
+		}
+	}
+	[aspect]
+	{
+		experience_value = 299;
+		life = 273;
+		max_life = 273;
+		mana = 8;
+		max_mana = 8;
+	}
+	[attack]
+	{
+		damage_max = 54;
+		damage_min = 50;
+	}
+	[defend] { defense=69; }
+}
