@@ -1,0 +1,26 @@
+[t:template,n:base_skill_runes_container]
+{
+	specializes		= base_container_barrel;
+
+	doc				= "barrel_floating_vertical";
+	category_name	= "container";
+
+	aspect:model		= m_i_glb_barrel-03;
+	aspect:textures:0	= b_i_glb_barrel;
+	[body]
+	{
+		initial_chore =	chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_default]
+			{
+				skrit =	infinite_loop;
+				[anim_files] { 00=barrel-03-float; }
+			}
+		}
+	}
+
+    aspect:does_block_path = false;
+    common:screen_name = "Skill Runes";
+}

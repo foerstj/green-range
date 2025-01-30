@@ -1,0 +1,57 @@
+////////////////////////////////////////////////////////////////////////////////
+//  Gives an experience award, using itself as the weapon passed in to
+//	Rules.AwardExperience
+////////////////////////////////////////////////////////////////////////////////
+
+property string _doc$                = "Gives an award to a person, using itself as the weapon for award type purposes";
+
+// exported properties
+property float uber_stat$ 		= 0	doc = "value player's uber level is pushed to";
+property float melee_stat$ 		= 0	doc = "value player's melee is pushed to";
+property float ranged_stat$		= 0	doc = "value player's ranged is pushed to";
+property float cmagic_stat$		= 0	doc = "value player's combat magic is pushed to";
+property float nmagic_stat$		= 0	doc = "value player's nature magic is pushed to";
+property float int_stat$		= 0	doc = "value player's intelligence is pushed to";
+property float dex_stat$		= 0	doc = "value player's dexterity is pushed to";
+property float str_stat$		= 0	doc = "value player's strength is pushed to";
+
+
+owner = GoSkritComponent;
+
+startup state Waiting$
+{
+	// look at events that this objects recieve.
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		if ( e$ == WE_PICKED_UP )
+		{
+			Goid player$ = msg$.SendFrom;
+
+			if( !player$.IsValid )
+			{
+				report.Error( "Bad player when trying to award experience.\n" );
+			}
+
+			// make sure that player is not computer controlled
+			if ( player$.Go.Player.Controller != PC_COMPUTER )
+			{
+				// set uber level
+				Rules.RSSetNaturalSkillLevel(player$, "uber", uber_stat$);
+
+				// now set the player's base statistic levels
+				player$.Go.Actor.RCSetSkillLevels(str_stat$, int_stat$, dex_stat$);
+				// set melee level
+				Rules.RSSetNaturalSkillLevel(player$, "melee", melee_stat$);
+				// set ranged level
+				Rules.RSSetNaturalSkillLevel(player$, "ranged", ranged_stat$);
+				// set nature magic level
+				Rules.RSSetNaturalSkillLevel(player$, "nature magic", nmagic_stat$);
+				// set combat magic level
+				Rules.RSSetNaturalSkillLevel(player$, "combat magic", cmagic_stat$);
+
+				// and remove myself from the world
+				GoDb.SMarkForDeletion( owner.goid );
+			}
+		}
+	}
+}

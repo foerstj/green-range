@@ -1,0 +1,117 @@
+[t:template,n:base_skill_rune]
+{
+	specializes = base_rune;
+
+	doc = "base experience giving item";
+	[aspect]
+	{
+		gold_value = 0;
+	}
+	[common]
+	{
+		screen_name = "Base Skill Rune";
+	}
+}
+
+
+[t:template,n:base_skill_rune_melee]
+{
+	specializes = base_skill_rune;
+
+	doc = "Melee Experience giving item";
+	[attack]
+	{
+		skill_class = melee;
+	}
+
+	[common]
+	{
+		screen_name = "Melee Rune";
+	}
+    // triangle
+	[aspect]
+	{
+		model = m_i_glb_key-03;
+	}
+	[gui]
+	{
+		inventory_icon = b_gui_ig_i_it_rune_003;
+	}
+}
+
+[t:template,n:base_skill_rune_ranged]
+{
+	specializes = base_skill_rune;
+
+	doc = "Ranged Experience giving item";
+	[attack]
+	{
+		skill_class = ranged;
+	}
+
+	[common]
+	{
+		screen_name = "Ranged Rune";
+	}
+    // hourglass
+	[aspect]
+	{
+		model = m_i_glb_key-01;
+	}
+	[gui]
+	{
+		inventory_icon = b_gui_ig_i_it_rune_001;
+	}
+}
+
+[t:template,n:base_skill_rune_cmagic]
+{
+	specializes = base_skill_rune;
+
+	doc = "Combat Magic Experience giving item";
+	[magic]
+	{
+		magic_class = mc_combat_magic;
+		skill_class = "Combat Magic";
+	}
+
+	[common]
+	{
+		screen_name = "Combat Magic Rune";
+	}
+    // square
+	[aspect]
+	{
+		model = m_i_glb_key-06;
+	}
+	[gui]
+	{
+		inventory_icon = b_gui_ig_i_it_rune_006;
+	}
+}
+
+[t:template,n:base_skill_rune_nmagic]
+{
+	specializes = base_skill_rune;
+
+	doc = "Ranged Experience giving item";
+	[magic]
+	{
+		magic_class = mc_nature_magic;
+		skill_class = "Nature Magic";
+	}
+
+	[common]
+	{
+		screen_name = "Nature Magic Rune";
+	}
+    // round
+	[aspect]
+	{
+		model = m_i_glb_key-04;
+	}
+	[gui]
+	{
+		inventory_icon = b_gui_ig_i_it_rune_004;
+	}
+}
