@@ -58,6 +58,13 @@ Alternatively, you can make use of the Light spell, which is available in shops.
 - Custom music: by Alexander Nakarada https://creatorchords.com/
 
 ## Changelog
+Changes in 1.2:
+- Bugfixes at the mine entrances of Umberdeep
+- Fixed rain inside buildings of Droog Ruins
+- Fixed Rainbow Skatwyrm dealing zero damage
+- Made Slargs inside Trog Mountain spit steam
+- Integrated cut DS2 lore about Elven town named Eldralith (across Lake Longbourne)
+
 Changes in 1.1:
 - Added Veteran & Elite world levels
 - Fixed weird transparency issue in the Droog Ruins
