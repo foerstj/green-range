@@ -21,7 +21,7 @@ they were driven from the region by colonists from the Empire of Stars, and forc
 
 Beyond the borders of Ehb, the Green Range extends far north-east,
 and the Klars Trail leads all the way through them to distant Longbourne.
-To the south-east side lies the Greylin Bay, to the north-west side the Aranoi Desert.\
+To the south-east side lies the Greilyn Bay, to the north-west side the Aranoi Desert.\
 Out in this rugged, forested wilderness, there's no king and no country.
 Only the hardy Rangers and the Dwarves of Umberdeep call these mountains their home.
 So do Krug, Robbers, Giants, and hordes of Trolls.
