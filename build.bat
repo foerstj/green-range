@@ -13,7 +13,7 @@ set ds=%DungeonSiege%
 set tc=%TankCreator%
 
 :: tank properties
-set year=2025
+set year=2026
 set copyright=CC-BY-SA %year%
 set title=%map_cs%
 set author=Johannes Förstner
