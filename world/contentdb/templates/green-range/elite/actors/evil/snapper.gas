@@ -1,0 +1,43 @@
+[t:template,n:3W_snapper_base]  // = 3W_snapper
+{
+	doc = "3W_snapper";
+	specializes = 3W_base_mangler;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 	23.7, 0;
+			intelligence = 	3.5, 0;
+			dexterity = 	9.7, 0;
+			melee =  		89,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 330815;
+		life = 211.5;
+		max_life = 211.5;
+		mana = 178;
+		max_mana = 178;
+		scale_base = 0.60;
+		[textures]	{0=b_c_edm_mn-02;}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 153.7;
+		damage_min = 120.2;
+	}
+	[common] { screen_name="Snapper"; }
+	[defend] { defense=528.5; }
+	[mind] 
+	{ 
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+        personal_space_range = 0.2;
+	}
+}
+
+[t:template,n:3W_gr_snapper]
+{
+	specializes = 3W_snapper_base;
+}

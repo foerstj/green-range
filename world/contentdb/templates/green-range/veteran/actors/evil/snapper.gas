@@ -1,0 +1,43 @@
+[t:template,n:2W_snapper_base]  // = 2W_snapper
+{
+	doc = "2W_snapper";
+	specializes = 2W_base_mangler;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 	15.8, 0;
+			intelligence = 	2.9, 0;
+			dexterity = 	7, 0;
+			melee =  		54,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 6740;
+		life = 109;
+		max_life = 109;
+		mana = 108;
+		max_mana = 108;
+		scale_base = 0.60;
+		[textures]	{0=b_c_edm_mn-02;}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 98.2;
+		damage_min = 72.9;
+	}
+	[common] { screen_name="Snapper"; }
+	[defend] { defense=351; }
+	[mind] 
+	{ 
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+        personal_space_range = 0.2;
+	}
+}
+
+[t:template,n:2W_gr_snapper]
+{
+	specializes = 2W_snapper_base;
+}

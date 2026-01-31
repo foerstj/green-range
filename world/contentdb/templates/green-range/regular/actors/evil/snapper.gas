@@ -1,0 +1,43 @@
+[t:template,n:snapper_base]  // = snapper
+{
+	doc = "snapper";
+	specializes = base_mangler;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 	4, 0;
+			intelligence = 	2, 0;
+			dexterity = 	3, 0;
+			melee =  		1,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 5;
+		life = 7;
+		max_life = 7;
+		mana = 4;
+		max_mana = 4;
+		scale_base = 0.60;
+		[textures]	{0=b_c_edm_mn-02;}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 6;
+		damage_min = 3;
+	}
+	[common] { screen_name="Snapper"; }
+	[defend] { defense=12; }
+	[mind] 
+	{ 
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+        personal_space_range = 0.2;
+	}
+}
+
+[t:template,n:gr_snapper]
+{
+	specializes = snapper_base;
+}
