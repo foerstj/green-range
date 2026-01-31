@@ -124,11 +124,20 @@
 	}
 }
 
-[t:template,n:3W_gr_bear_ps5]
+[t:template,n:3W_base_gr_bear]
 {
     specializes = 3W_bear_base;
-
     category_name = "3W_evil_d";
+}
+
+[t:template,n:3W_gr_bear_ps1]
+{
+	specializes = 3W_base_gr_bear;
+}
+
+[t:template,n:3W_gr_bear_ps5]
+{
+	specializes = 3W_base_gr_bear;
 
     // stats of 3W_gorack
 	[actor]

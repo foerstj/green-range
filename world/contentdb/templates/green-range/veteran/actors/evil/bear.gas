@@ -124,11 +124,20 @@
 	}
 }
 
-[t:template,n:2W_gr_bear_ps5]
+[t:template,n:2W_base_gr_bear]
 {
     specializes = 2W_bear_base;
-
     category_name = "2W_evil_d";
+}
+
+[t:template,n:2W_gr_bear_ps1]
+{
+	specializes = 2W_base_gr_bear;
+}
+
+[t:template,n:2W_gr_bear_ps5]
+{
+	specializes = 2W_base_gr_bear;
 
     // stats of 2W_gorack
 	[actor]
