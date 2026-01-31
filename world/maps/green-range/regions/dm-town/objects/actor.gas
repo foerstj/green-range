@@ -28,33 +28,6 @@
 	  p position = 3.42765,0,-1.16318,0xfe75b413;
 	}
 }
-[t:dwarf_npc_05,n:0x00400035]
-{
-	[conversation]
-	{
-		[conversations]
-		{
-			* = washery;
-		}
-	}
-	[inventory]
-	{
-		[equipment]
-		{
-			es_chest = bd_ro_m_d_c_004;
-			es_feet = bo_bo_le_light;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -0.33596,-2,0.982147,0x791c1793;
-	}
-}
 [t:gr_dwarf_guard_06,n:0x0040002d]
 {
 	[conversation]
@@ -83,6 +56,33 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 6.26762,-2,5.05119,0x5e01e1aa;
+	}
+}
+[t:dwarf_npc_05,n:0x00400035]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = washery;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_m_d_c_004;
+			es_feet = bo_bo_le_light;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -0.33596,-2,0.982147,0x791c1793;
 	}
 }
 [t:dwarf_npc_04,n:0x0040002a]
