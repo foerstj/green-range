@@ -9,6 +9,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x00400074,0f,"default","",0);
 				action* = fade_nodes_global(0x00000004,1,1,-1,"out:black");
+				action* = fade_nodes_global(0x00000004,1,20,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -25,7 +26,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.26284,-1.93042,1.72648,0xedf3e121;
+	  p position = 1.26284,-1.96621,1.72648,0xedf3e121;
 	}
 }
 [t:trigger_generic,n:0x004000a9]
@@ -113,52 +114,6 @@
 	[placement]
 	{
 	  p position = 0.0932136,-1.92899,2.52662,0xedf3e121;
-	}
-}
-[t:trigger_generic,n:0x0040000b]
-{
-	[common]
-	{
-		dev_instance_text = "STARTPOS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("gr-dm-town");
-				action* = fade_nodes_global(0x00000004,1,1,-1,"out:black"), doc("cap");
-				action* = fade_nodes(0x00000005,1,-1,-1,"out:instant"), doc("snowpeak");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("dm_town");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.11429,0,-1.96448,0xf495d822;
 	}
 }
 [t:trigger_generic,n:0x004000a0]
@@ -1207,6 +1162,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x00400075,0f,"default","",0);
 				action* = fade_nodes_global(0x00000004,1,16,-1,"out:black");
+				action* = fade_nodes_global(0x00000004,1,20,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
