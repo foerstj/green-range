@@ -171,7 +171,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x00400073,0f,"default","",0);
-				action* = fade_nodes_global(0x00000004,1,10,-1,"out:black");
+				action* = fade_nodes_global(0x00000004,1,21,-1,"out:black");
 				action* = fade_nodes_global(0x00000004,1,7,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
@@ -189,7 +189,7 @@
 	}
 	[placement]
 	{
-	  p position = -1.06424,-1.93042,-2.28767,0x7e2da377;
+	  p position = -1.06424,-1.9676,-2.28767,0x7e2da377;
 	}
 }
 [t:use_point,n:0x004001b7]
@@ -1027,7 +1027,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x0040007B,0f,"default","",0);
 				action* = fade_nodes_global(0x00000004,1,11,-1,"out:black");
-				action* = fade_nodes_global(0x00000004,1,10,-1,"out:black");
+				action* = fade_nodes_global(0x00000004,1,22,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -1044,7 +1044,7 @@
 	}
 	[placement]
 	{
-	  p position = -1.45527,-1.93042,-2.1611,0x72a08ea4;
+	  p position = -1.45527,-1.98082,-2.1611,0x72a08ea4;
 	}
 }
 [t:use_point,n:0x004001b9]
