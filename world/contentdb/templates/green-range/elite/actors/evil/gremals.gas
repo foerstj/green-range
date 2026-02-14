@@ -1,0 +1,98 @@
+[t:template,n:3W_gremal_boss_01_base]  // = 3W_gremal_boss_01
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Gremal boss 01";
+	specializes = 3W_base_gremal;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  41.7, 0;
+			intelligence =  5.2, 0;
+			dexterity =  43, 0;
+			melee =  91,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1913238;
+		life = 1124;
+		max_life = 1124;
+		mana = 73.6;
+        max_mana = 73.6;
+		megamap_icon = <none>;
+		model = m_c_edm_gm_pos_2;
+		scale_base = 0.8;
+	}
+	[attack]
+	{
+		damage_max = 341;
+		damage_min = 301;
+	}
+	[common]
+	{
+		screen_name="Hulking Gremal";
+		is_multi_player = false;
+		membership=gremal,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+		}
+	}
+    [defend] { defense=678.6; }
+	[inventory]
+	{
+		[pcontent]
+        {
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/227-260;
+					il_main = #body/534-644;
+				}
+				[gold*]
+				{
+					chance = 0.5;
+					max = 255112;
+					min = 210531;
+					min_pile =12;
+					piles = 1 - 3;
+				}
+			}
+		}
+	}
+
+	[mind]
+	{
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.45
+			&still							= false;
+		on_alert_projectile_near_missed_flee = true;
+
+		on_enemy_spotted_alert_friends       = false;
+
+
+		com_range                = 7.0;
+		melee_engage_range       = 0.5;
+		ranged_engage_range      = 1.0;
+		personal_space_range     = 1.3;
+		sight_range              = 12.0;
+	}
+}
+[t:template,n:3W_gr_gremal_boss_01]
+{
+	specializes = 3W_gremal_boss_01_base;
+}
+
+[t:template,n:3W_gr_gremal_killer]
+{
+	specializes = 3W_gremal_killer_base;
+}
