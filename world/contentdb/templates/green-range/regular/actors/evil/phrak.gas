@@ -1,0 +1,181 @@
+[t:template,n:phrak_base]  // = phrak
+{
+	category_name = "1W_evil_d";
+	doc = "phrak";
+	specializes = base_phrak;
+
+	[common]
+	{
+		membership = phrak,monster;
+	}
+	[mind]
+	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&guard							= true
+			&friends						= phrak;
+	}
+
+}
+[t:template,n:gr_phrak] { specializes = phrak_base; }
+
+[t:template,n:phrak_piercer_base]  // = phrak_piercer
+{
+	category_name = "1W_evil_d";
+	doc = "phrak piercer";
+	specializes = base_phrak;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  1, 0;
+			intelligence =  1, 0;
+			dexterity =  10, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 4;
+		life = 4;
+        max_life = 4;
+        mana = 2;
+		max_mana = 2;
+		scale_base = 0.55;
+		textures:0 = b_c_edm_ph-02;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 6;
+		damage_min = 4;
+	}
+	[common]
+	{
+		screen_name="Phrak Piercer";
+		membership = phrak,monster;
+	}
+
+	[defend] { defense=1; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_phrak_dart; }
+	}
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&guard							= true
+			&friends						= phrak;
+	}
+		[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_phrak_piercer_01 = 1;
+			frag_glb_phrak_piercer_02 = 2;
+			frag_glb_phrak_piercer_03 = 2;
+			frag_glb_phrak_piercer_04 = 1;
+			frag_glb_phrak_piercer_05 = 2;
+		}
+	}
+}
+[t:template,n:gr_phrak_piercer] { specializes = phrak_piercer_base; }
+
+[t:template,n:phrak_piercer_boss_01_base]  // = phrak_piercer_boss_01
+{
+	category_name = "1W_evil_d";
+	doc = "phrak piercer boss";
+	specializes = base_phrak;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  4, 0;
+			intelligence =  1, 0;
+			dexterity =  19, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 10;
+		life = 15;
+        max_life = 15;
+        mana = 2;
+		max_mana = 2;
+		scale_base = 0.8;
+		textures:0 = b_c_edm_ph-03;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 6;
+		damage_min = 4;
+	}
+	[common]
+	{
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name="Phrak Ballista";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+		}
+	}
+	[defend] { defense=15; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_phrak_dart; }
+
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					  max = 25;
+					  min = 12;
+				}
+                [all*]
+				{
+                	il_main = #melee/4-6;
+                }
+			}
+		}
+	}
+
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		= true
+			&party_template					= "party_phrak_boss";
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_phrak_piercer_01 = 1;
+			frag_glb_phrak_piercer_02 = 2;
+			frag_glb_phrak_piercer_03 = 2;
+			frag_glb_phrak_piercer_04 = 1;
+			frag_glb_phrak_piercer_05 = 2;
+		}
+	}
+}
+[t:template,n:gr_phrak_piercer_boss_01] { specializes = phrak_piercer_boss_01_base; }
