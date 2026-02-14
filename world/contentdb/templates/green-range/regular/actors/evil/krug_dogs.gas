@@ -1,0 +1,85 @@
+[t:template,n:krug_dog_base]  // = krug_dog
+{
+	category_name = "1W_evil_d";
+	doc = "krug_dog";
+	specializes = base_krug_dog;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  3, 0;
+			intelligence =  1, 0;
+			dexterity =  6, 0;
+			melee =  1,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 9;
+		life = 12;
+		max_life = 12;
+		mana = 2;
+		max_mana = 2;
+		model = m_c_edm_kd_pos_1;
+	}
+	[attack]
+	{
+		damage_max = 7;
+		damage_min = 4;
+	}
+	[common] { screen_name="Krug Dog"; }
+	[defend] { defense=14; }
+	[mind]
+	{
+		on_enemy_spotted_alert_friends = true;
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+[t:template,n:gr_krug_dog] { specializes = krug_dog_base; }
+
+[t:template,n:krug_dog_killer_base]  // = krug_dog_killer
+{
+	category_name = "1W_evil_d";
+	doc = "Krug_dog_killer";
+	specializes = base_krug_dog;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  9, 0;
+			intelligence =  3, 0;
+			dexterity =  8, 0;
+			melee =  4,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 46;
+		life = 46;
+		max_life = 46;
+		mana = 6;
+		max_mana = 6;
+		model = m_c_edm_kd_pos_1;
+		scale_base = 1.25;
+		[textures] { 0=b_c_edm_kd-02; }
+	}
+	[attack]
+	{
+		damage_max = 32;
+		damage_min = 28;
+	}
+	[common] { screen_name="Krug Killer Dog"; }
+	[defend] { defense=34; }
+	[mind]
+	{
+		on_enemy_spotted_alert_friends = true;
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+[t:template,n:gr_krug_dog_killer] { specializes = krug_dog_killer_base; }
