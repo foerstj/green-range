@@ -58,6 +58,12 @@ Alternatively, you can make use of the Light spell, which is available in shops.
 - Custom music: by Alexander Nakarada https://creatorchords.com/
 
 ## Changelog
+Changes in 1.3:
+- Fixed typo: Greylin -> Greilyn
+- Added miniboss quest to the Venom Fiend (Umberdeep)
+- Added some missing fade caps to Umberdeep, so you don't see beyond closed doors
+- Added a felt cap to the Ranger equipment
+
 Changes in 1.2:
 - Bugfixes at the mine entrances of Umberdeep
 - Fixed rain inside buildings of Droog Ruins
