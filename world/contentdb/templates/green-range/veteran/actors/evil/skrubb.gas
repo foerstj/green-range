@@ -1,3 +1,178 @@
+[t:template,n:2W_skrubb_small_base]  // = 2W_skrubb_small
+{
+	category_name = "2W_evil_d";
+	doc = "2W_skrubb_small";
+	specializes = 2W_base_skrubb;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  21.1, 0;
+			intelligence =  2.9, 0;
+			dexterity =  4.5, 0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 17080;
+		life = 527;
+		max_life = 527;
+		mana = 114;
+		max_mana = 114;
+		model = m_c_edm_sb_pos_1;
+		[textures] {0 = b_c_edm_sb-02;}
+		scale_base = 0.20;
+		[voice]
+		{
+			[cast]			{ * = s_e_attack_skrubb; }
+			[die]			{ priority = high; * = s_e_die_skrubb_small_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_skrubb_small_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_skrubb; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 75.2;
+		damage_min = 51.3;
+		reload_delay = 0;
+		damage_bonus_min_cmagic = 172;
+		damage_bonus_max_cmagic = 293;
+	}
+    [defend] { defense=557.4; }
+	[generator_in_object]
+	{
+		child_template_name = hole_grs_01;
+		spawn_event = WE_ENEMY_SPOTTED;
+		spawn_chance = 1.0;
+		spawn_delay = 0.5;
+		fade_kid = true;
+	}
+    [inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_skrubb_spit_small; }
+	}
+	[common]
+	{
+		screen_name="Black Skrubb";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("skrubb_goo");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 10;
+		personal_space_range = 1.2;
+		on_enemy_entered_ocz_attack = true;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		sight_origin_height	= 2;
+	}
+}
+[t:template,n:2W_gr_skrubb_small] { specializes = 2W_skrubb_small_base; }
+
+[t:template,n:2W_skrubb_farm_base]  // = 2W_skrubb_farm
+{
+	category_name = "2W_evil_d";
+	doc = "2W_skrubb_farm";
+	specializes = 2W_base_skrubb;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  25.1, 0;
+			intelligence =  2.9, 0;
+			dexterity =  4.8, 0;
+			ranged =  53, 0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 8088;
+		life = 232;
+		max_life = 232;
+		mana = 540;
+		max_mana = 540;
+		model = m_c_edm_sb_pos_1;
+		textures:0 = b_c_edm_sb-03;
+		scale_base = 0.14;
+		[voice]
+		{
+			[cast]			{ * = s_e_attack_skrubb_farm_SED; }
+			[die]			{ priority = high; * = s_e_die_skrubb_farm_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_skrubb_farm_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_skrubb_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 197;
+		damage_min = 145.8;
+		reload_delay = 0;
+		damage_bonus_min_cmagic = 140;
+		damage_bonus_max_cmagic = 180;
+	}
+    [defend] { defense=460; }
+	[generator_in_object]
+	{
+		child_template_name = hole_grs_02;
+		spawn_event = WE_ENEMY_SPOTTED;
+		spawn_chance = 1.0;
+		spawn_delay = 0.5;
+		fade_kid = true;
+	}
+    [inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_skrubb_spit_farm; }
+	}
+	[common]
+	{
+		screen_name="Farm Skrubb";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("skrubb_goo");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 10;
+		personal_space_range = 1.2;
+		on_enemy_entered_ocz_attack = true;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		sight_origin_height	= 2;
+	}
+}
+[t:template,n:2W_gr_skrubb_farm] { specializes = 2W_skrubb_farm_base; }
+
 [t:template,n:2W_dsx_skrubb_jungle_base]  // = 2W_dsx_skrubb_jungle
 {
   category_name = "2W_evil_d";

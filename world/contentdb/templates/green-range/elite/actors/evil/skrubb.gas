@@ -1,3 +1,178 @@
+[t:template,n:3W_skrubb_small_base]  // = 3W_skrubb_small
+{
+	category_name = "3W_evil_d";
+	doc = "3W_skrubb_small";
+	specializes = 3W_base_skrubb;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  31, 0;
+			intelligence =  3.5, 0;
+			dexterity =  6.1, 0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 549640;
+		life = 801;
+		max_life = 801;
+		mana = 182;
+		max_mana = 182;
+		model = m_c_edm_sb_pos_1;
+		[textures] {0 = b_c_edm_sb-02;}
+		scale_base = 0.20;
+		[voice]
+		{
+			[cast]			{ * = s_e_attack_skrubb; }
+			[die]			{ priority = high; * = s_e_die_skrubb_small_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_skrubb_small_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_skrubb; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 120.1;
+		damage_min = 81.9;
+		reload_delay = 0;
+		damage_bonus_min_cmagic = 336;
+		damage_bonus_max_cmagic = 428;
+	}
+    [defend] { defense=908.5; }
+	[generator_in_object]
+	{
+		child_template_name = hole_grs_01;
+		spawn_event = WE_ENEMY_SPOTTED;
+		spawn_chance = 1.0;
+		spawn_delay = 0.5;
+		fade_kid = true;
+	}
+    [inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_skrubb_spit_small; }
+	}
+	[common]
+	{
+		screen_name="Black Skrubb";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("skrubb_goo");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 10;
+		personal_space_range = 1.2;
+		on_enemy_entered_ocz_attack = true;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		sight_origin_height	= 2;
+	}
+}
+[t:template,n:3W_gr_skrubb_small] { specializes = 3W_skrubb_small_base; }
+
+[t:template,n:3W_skrubb_farm_base]  // = 3W_skrub_farm
+{
+	category_name = "3W_evil_d";
+	doc = "3W_skrubb_farm";
+	specializes = 3W_base_skrubb;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  37.8, 0;
+			intelligence =  3.6, 0;
+			dexterity =  6.6, 0;
+			ranged =  88, 0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 396978;
+		life = 342;
+		max_life = 342;
+		mana = 890;
+		max_mana = 890;
+		model = m_c_edm_sb_pos_1;
+		textures:0 = b_c_edm_sb-03;
+		scale_base = 0.14;
+		[voice]
+		{
+			[cast]			{ * = s_e_attack_skrubb_farm_SED; }
+			[die]			{ priority = high; * = s_e_die_skrubb_farm_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_skrubb_farm_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_skrubb_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 289.5;
+		damage_min = 240.3;
+		reload_delay = 0;
+		damage_bonus_min_cmagic = 241;
+		damage_bonus_max_cmagic = 281;
+	}
+    [defend] { defense=723.3; }
+	[generator_in_object]
+	{
+		child_template_name = hole_grs_02;
+		spawn_event = WE_ENEMY_SPOTTED;
+		spawn_chance = 1.0;
+		spawn_delay = 0.5;
+		fade_kid = true;
+	}
+    [inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_skrubb_spit_farm; }
+	}
+	[common]
+	{
+		screen_name="Farm Skrubb";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("skrubb_goo");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 10;
+		personal_space_range = 1.2;
+		on_enemy_entered_ocz_attack = true;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		sight_origin_height	= 2;
+	}
+}
+[t:template,n:3W_gr_skrubb_farm] { specializes = 3W_skrubb_farm_base; }
+
 [t:template,n:3W_dsx_skrubb_jungle_base]  // = 3W_dsx_skrubb_jungle
 {
   category_name = "3W_evil_d";
