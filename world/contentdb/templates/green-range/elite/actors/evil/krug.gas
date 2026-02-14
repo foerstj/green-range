@@ -1,0 +1,1757 @@
+[t:template,n:3W_krug_commander_base]  // = 3W_krug_commander
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug commander";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 33.7, 0;
+			  intelligence = 15.4, 0;
+			  melee = 93,  0;
+			  strength = 68.3, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 1189427;
+		  life = 1692.7;
+		  mana = 160.4;
+		  material = steel;
+		  max_life = 1692.7;
+		  max_mana = 160.4;
+		  model = m_c_eam_kc_pos_1;
+		  scale_base = 1.2;
+		  selection_indicator_scale = 0.85;
+		[textures]
+		{
+			  0 = b_c_eam_kc;
+		}
+	}
+	[attack]
+	{
+		  damage_max = 773.2;
+		  damage_min = 521.3;
+	}
+	[body]
+	{
+		min_move_velocity = 1.75;
+		avg_move_velocity = 2;
+	}
+	[common]
+	{
+		  screen_name = "Krug Commander";
+		  membership = krug, monster;
+	}
+	[defend]
+	{
+		  defense = 908.7;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				  es_weapon_hand = ax_d_d_2h1b_avg;
+			}
+    		[oneof*]
+			{
+				[all*]
+				{
+					[gold*]
+					{
+						  chance = 0.2;
+						  max = 301338;
+						  min = 228601;
+					}
+				}
+				[oneof*]
+				{
+					[all*]
+					{
+        				chance = 0.01;
+    	        	    il_main = #spell/18-36;
+					}
+					[all*]
+					{
+        				chance = 0.02;
+    	        	    il_main = #spell/45-89;
+					}
+					[all*]
+					{
+					    chance = 0.20;
+		           	    il_main = #weapon/219-278;
+		                il_main = #armor/116-650;
+		    			il_main = potion_mana_super;
+						il_main = potion_health_super;
+                    }
+                    [oneof*]
+					{
+	                   	chance = 0.004;
+	                   	il_main = #weapon/-rare(1)/270-371;
+	                   	il_main = #armor/-rare(1)/490-882;
+                       	il_main = #*/-rare(1)/270-371;
+                	}
+					[oneof*]
+					{
+                       	chance = 0.002;
+	                   	il_main = #weapon/-unique(2)/270-371;
+	                   	il_main = #armor/-unique(2)/490-882;
+                       	il_main = #*/-unique(2)/270-371;
+                    }
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.35
+			&still							= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&form_party_on_friend_entered_ICZ	= true
+			&form_party_on_friend_entered_OCZ	= true
+			&party_template						= "party_krug_commander";
+		on_enemy_spotted_alert_friends			= true;
+	}
+	[physics]
+	{
+		  break_sound = s_e_meat_explosion;
+		  explosion_magnitude = 1.5;
+		[break_particulate]
+		{
+			  frag_glb_krug_commander_01 = 1;
+			  frag_glb_krug_commander_02 = 1;
+			  frag_glb_krug_commander_03 = 1;
+			  frag_glb_krug_commander_04 = 1;
+			  frag_glb_krug_commander_05 = 1;
+			  frag_glb_krug_commander_06 = 1;
+			  frag_glb_krug_commander_07 = 1;
+			  frag_glb_krug_commander_08 = 1;
+		}
+	}
+}
+[t:template,n:3W_gr_krug_commander] { specializes = 3W_krug_commander_base; }
+
+[t:template,n:3W_krug_grouse_base]  // = 3W_krug_grouse
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug grouse";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 13.3, 0;
+			  intelligence = 5.4, 0;
+			  strength = 31.5, 0;
+			  melee = 89, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 396978;
+		  life = 568;
+		  mana = 534;
+		  max_life = 568;
+		  max_mana = 534;
+		  scale_base = 0.9;
+		  selection_indicator_scale = 0.85;
+		[textures]
+		{
+			  0 = b_c_eam_ksc;
+		}
+	}
+	[attack]
+	{
+		  damage_max = 350.4;
+		  damage_min = 260.3;
+	}
+	[body]
+	{
+		min_move_velocity = 2.500;
+		avg_move_velocity = 3.10;
+		max_move_velocity = 4.8;
+		[bone_translator]
+		{
+			  body_anterior  = bip01_head;
+			  body_mid       = Bip01_Spine3;
+			  body_posterior = bip01_pelvis;
+			  kill_bone      = Bip01_Spine3;
+			  shield_bone    = shield_grip;
+			  weapon_bone    = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			  chore_prefix = a_c_eam_kg_fs;
+			[chore_attack]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_attack;
+				[anim_files]
+				{
+					  00 = at;
+					  01 = at-04;
+					  02 = at-02;
+					  03 = at-03;
+					  qffg = dff;
+				}
+			}
+			[chore_default]
+			{
+				  chore_stances = 0,1;
+				  skrit = infinite_loop;
+				[anim_files]
+				{
+					  00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_transition;
+				[anim_files]
+				{
+					  00 = di;
+					  01 = di-02;
+					  02 = di-03;
+					  03 = di-04;
+				}
+			}
+			[chore_fidget]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_fidget;
+				[anim_files]
+				{
+					  00 = dsf;
+					  01 = dsf-02;
+					  02 = dsf-03;
+				}
+			}
+			[chore_magic]
+			{
+				  chore_stances = 0;
+				  skrit = select_attack;
+				[anim_files]
+				{
+					  00 = mg;
+				}
+			}
+			[chore_misc]
+			{
+				  chore_stances = 1;
+				  skrit = select_transition;
+				[anim_files]
+				{
+					  chrg = hit;
+				}
+			}
+			[chore_walk]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_walk;
+				[anim_files]
+				{
+					  00 = rl;
+				}
+			}
+		}
+	}
+
+	[common]
+	{
+		  screen_name = "Krug Scout";
+		  membership = krug, party_krug_shaman, party_krug_scout_boss, monster;
+	}
+	[defend]
+	{
+		  defense = 1019.7;
+	}
+
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				  es_weapon_hand = dg_g_c_1h_fun;
+			}
+    		[oneof*]
+			{
+				[all*]
+				{
+					[gold*]
+					{
+						  chance = 0.15;
+						  max = 216536;
+						  min = 118957;
+					}
+				}
+				[oneof*]
+				{
+					[all*]
+					{
+        				chance = 0.05;
+    	        	    il_main = #spell/88-90;
+					}
+					[all*]
+					{
+        				chance = 0.02;
+	        	   	    il_main = #bow/204-250;
+					}
+					[oneof*]
+					{
+        				chance = 0.12;
+	        	   	    il_main = #melee/204-250;
+       				    il_main = potion_health_super;
+					    il_main = potion_mana_super;
+    				}
+					[all*]
+					{
+        				chance = 0.03;
+	            	    il_main = #armor/210-559;
+					}
+				}
+
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true;
+
+		actor_life_ratio_low_threshold = 0.5;
+		on_life_ratio_low_flee = true;
+		flee_distance = 21.0;
+	}
+}
+[t:template,n:3W_gr_krug_grouse] { specializes = 3W_krug_grouse_base; }
+
+[t:template,n:3W_krug_grunt_base]  // = 3W_krug_grunt
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug grunt";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 18.3, 0;
+			  intelligence = 7, 0;
+			  melee = 90,  0;
+			  strength = 46.5, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 622158;
+		  life = 409.6;
+		  mana = 145.6;
+		  max_life = 409.6;
+		  max_mana = 145.6;
+		  selection_indicator_scale = 0.85;
+		[textures]
+		{
+			  0 = b_c_eam_kg;
+		}
+	}
+	[attack]
+	{
+		  damage_max = 330.5;
+		  damage_min = 251.8;
+	}
+	[common]
+	{
+		  screen_name = "Krug Grunt";
+		  membership = krug, party_krug_grunt_boss, monster;
+	}
+	[defend]
+	{
+		  defense = 582.4;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				  es_weapon_hand = ax_d_d_1h1b_avg;
+			}
+    		[oneof*]
+			{
+				[gold*]
+				{
+					  chance = 0.2;
+					  max = 177270;
+					  min = 151102;
+				}
+				[all*]
+				{
+       				chance = 0.05;
+   	        	    il_main = #spell/36-91;
+				}
+				[oneof*]
+				{
+	    		    chance = 0.15;
+       		   	    il_main = #weapon/193-273;
+           		    il_main = #armor/109-528;
+   					il_main = potion_mana_super;
+					il_main = potion_health_super;
+                }
+			}
+		}
+	}
+	[mind]
+	{
+		on_enemy_spotted_alert_friends 		= true;
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+			?social								= 0.35
+			&still								= false;
+	}
+}
+[t:template,n:3W_gr_krug_grunt] { specializes = 3W_krug_grunt_base; }
+
+[t:template,n:3W_krug_grunt_boss_01_base]  // = 3W_krug_grunt_boss_01
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug grunt boss 01";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 24.4, 0;
+			  intelligence = 10.4, 0;
+			  melee = 90,  0;
+			  strength = 51.7, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 971100;
+		  life = 819.2;
+		  mana = 145.6;
+		  max_life = 819.2;
+		  max_mana = 145.6;
+		  selection_indicator_scale = 1.15;
+		[textures]
+		{
+			  0 = b_c_eam_ksc-03;
+		}
+	}
+	[attack]
+	{
+		  damage_max = 343.5;
+		  damage_min = 251.8;
+	}
+	[common]
+	{
+		  screen_name = "Futak the Trainer";
+		  membership = krug,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits=true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+
+			}
+
+		}
+
+	}
+	[defend]
+	{
+		  defense = 1586.5;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				  es_weapon_hand = ax_d_d_1h1b_avg;
+			}
+    		[all*]
+			{
+				[gold*]
+				{
+					max = 210372;
+					min = 186186;
+					min_pile = 7;
+					piles = 1 - 2;
+				}
+				[all*]
+				{
+       		   	    il_main = sh_w_g_c_r_s_krohar;
+                }
+			}
+		}
+	}
+	[mind]
+	{
+		on_enemy_spotted_alert_friends		= true;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_krug_grunt_boss";
+	}
+}
+[t:template,n:3W_gr_krug_grunt_boss_01] { specializes = 3W_krug_grunt_boss_01_base; }
+
+[t:template,n:3W_krug_guard_base]  // = 3W_krug_guard
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug guard";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 31.8,  0;
+			  intelligence = 12.1,  0;
+			  melee = 91,  0;
+			  strength = 58.9, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 789645;
+		  life = 586.7;
+		  mana = 149.3;
+		  material = steel;
+		  max_life = 586.7;
+		  max_mana = 149.3;
+		  selection_indicator_scale = 0.85;
+		[textures]
+		{
+			  0 = b_c_eam_kr;
+		}
+	}
+	[attack]
+	{
+		  damage_max = 487.5;
+		  damage_min = 331.6;
+	}
+	[common]
+	{
+		  screen_name = "Krug Guard";
+		  membership = krug, krug_guard, party_krug_commander, party_krug_shaman, monster;
+	}
+	[defend]
+	{
+		  defense = 741.3;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				  es_weapon_hand = ax_d_c_1h1b_avg;
+			}
+    		[oneof*]
+			{
+				[all*]
+				{
+					[gold*]
+					{
+						  chance = 0.2;
+						  max = 275261;
+						  min = 128455;
+					}
+				}
+				[all*]
+				{
+       				chance = 0.03;
+   	        	    il_main = #spell/32-85;
+				}
+				[oneof*]
+				{
+	    		    chance = 0.22;
+        	   	    il_main = #weapon/149-249;
+        	   	    il_main = #*/149-249;
+            	    il_main = #armor/117-640;
+    				il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/219-348;
+	                il_main = #armor/-rare(1)/299-853;
+                    il_main = #*/-rare(1)/219-348;
+                }
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget					= world\ai\jobs\common\job_fidget.skrit
+			?social						= 0.35
+			&still						= false;
+
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true;
+
+		on_enemy_spotted_alert_friends	= true;
+	}
+}
+[t:template,n:3W_gr_krug_guard] { specializes = 3W_krug_guard_base; }
+
+[t:template,n:3W_krug_raider_base]  // = 3W_krug_raider
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug raider";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 24.4,  0;
+			  intelligence = 10.4,  0;
+			  melee = 89,  0;
+			  strength = 56.9, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 663444;
+		  life = 446;
+		  mana = 218.4;
+		  max_life = 446;
+		  max_mana = 18.2;
+		  model = m_c_eam_kr_pos_1;
+		  selection_indicator_scale = 0.85;
+		[textures]
+		{
+			  0 = b_c_eam_kr;
+		}
+	}
+	[attack]
+	{
+		  damage_max = 643.7;
+		  damage_min = 411.9;
+	}
+	[common]
+	{
+		  screen_name = "Krug Raider";
+	}
+	[defend]
+	{
+		  defense = 812.9;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[gold*]
+			{
+				  chance = 0.1;
+				  max = 200316;
+				  min = 151112;
+			}
+			[oneof*]
+			{
+				  es_weapon_hand = ax_d_c_1h1b_avg;
+			}
+    		[oneof*]
+			{
+				[all*]
+				{
+					[gold*]
+					{
+						  chance = 0.2;
+						  max = 209372;
+						  min = 140056;
+					}
+				}
+				[all*]
+				{
+       				chance = 0.03;
+   	        	    il_main = #spell/73-120;
+				}
+				[oneof*]
+				{
+                    chance = 0.002;
+                    il_main = #weapon/-rare(1)/241-289;
+                    il_main = #armor/-rare(1)/546-728;
+                }
+				[oneof*]
+				{
+	    		    chance = 0.22;
+	           	    il_main = #weapon/225-273;
+	                il_main = #armor/109-637;
+	                il_main = #*/225-273;
+	    			il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		on_enemy_spotted_alert_friends	= true;
+	}
+	[physics]
+	{
+		  break_sound = s_e_meat_explosion;
+		  explosion_magnitude = 1.5;
+		[break_particulate]
+		{
+			  frag_glb_krug_raider_01 = 1;
+			  frag_glb_krug_raider_02 = 1;
+			  frag_glb_krug_raider_03 = 1;
+			  frag_glb_krug_raider_04 = 1;
+			  frag_glb_krug_raider_05 = 1;
+			  frag_glb_krug_raider_06 = 1;
+			  frag_glb_krug_raider_07 = 1;
+			  frag_glb_krug_raider_08 = 1;
+		}
+	}
+}
+[t:template,n:3W_gr_krug_raider] { specializes = 3W_krug_raider_base; }
+
+[t:template,n:3W_krug_scavenger_base]  // = 3W_krug_scavenger
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug scavenger";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 13.3, 0;
+			  intelligence = 5.4, 0;
+			  strength = 31.5, 0;
+			  melee = 88, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 422840;
+		  life = 412;
+		  mana = 534;
+		  max_life = 412;
+		  max_mana = 534;
+		  scale_base = 0.9;
+		  selection_indicator_scale = 0.85;
+		[textures]
+		{
+			  0 = b_c_eam_ksv;
+		}
+	}
+	[attack]
+	{
+		  damage_max = 280.1;
+		  damage_min = 200.9;
+	}
+
+	[common]
+	{
+		  screen_name = "Krug Scavenger";
+		  membership = krug, party_krug_shaman, monster;
+	}
+	[defend]
+	{
+		  defense = 401.2;
+	}
+
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				  es_weapon_hand = #club/2-3;
+			}
+    		[oneof*]
+			{
+				[all*]
+				{
+					[gold*]
+					{
+						  chance = 0.15;
+						  max = 208957;
+						  min = 92342;
+					}
+				}
+				[oneof*]
+				{
+					[all*]
+					{
+        				chance = 0.05;
+    	        	    il_main = #spell/88-90;
+					}
+					[all*]
+					{
+        				chance = 0.02;
+	        	   	    il_main = #bow/50-175;
+					}
+					[oneof*]
+					{
+        				chance = 0.12;
+	        	   	    il_main = #melee/50-175;
+       				    il_main = potion_health_super;
+					    il_main = potion_mana_super;
+					}
+					[all*]
+					{
+        				chance = 0.03;
+	            	    il_main = #body/210-559;
+					}
+				}
+
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?destructive					= 0.29
+			&still							= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true;
+
+		on_enemy_spotted_alert_friends = true;
+	}
+	[physics]
+	{
+		break_sound = s_e_meat_explosion;
+		explosion_magnitude = 1.5;
+		[break_particulate]
+		{
+			  frag_glb_krug_scavenger_01 = 1;
+			  frag_glb_krug_scavenger_02 = 1;
+			  frag_glb_krug_scavenger_03 = 1;
+			  frag_glb_krug_scavenger_04 = 1;
+			  frag_glb_krug_scavenger_05 = 1;
+			  frag_glb_krug_scavenger_06 = 1;
+			  frag_glb_krug_scavenger_07 = 1;
+			  frag_glb_krug_scavenger_08 = 1;
+		}
+	}
+}
+[t:template,n:3W_gr_krug_scavenger] { specializes = 3W_krug_scavenger_base; }
+
+[t:template,n:3W_krug_scavenger_boss_01_base]  // = 3W_krug_scavenger_boss_01
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug scavenger boss 01";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 19.9, 0;
+			  intelligence = 5.4, 0;
+			  strength = 37.8, 0;
+			  melee = 90, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 448030;
+		  life = 916;
+		  mana = 534;
+		  max_life = 916;
+		  max_mana = 534;
+		  scale_base = 1.1;
+		  selection_indicator_scale = 0.85;
+		[textures]
+		{
+			  0 = b_c_eam_ksv-02;
+		}
+	}
+	[attack]
+	{
+		  damage_max = 333.9;
+		  damage_min = 238.1;
+	}
+
+	[common]
+	{
+		  screen_name = "Brankar the Scavenger";
+		  membership = krug,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits=true;				
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+
+			}
+
+		}
+
+	}
+	[defend]
+	{
+		  defense = 926;
+	}
+
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				  es_weapon_hand = #club/2-3;
+			}
+    		[oneof*]
+			{
+				[all*]
+				{
+					[gold*]
+					{
+						chance = 0.5;
+						max = 255112;
+						min = 225697;
+						min_pile = 7;
+						piles = 2 - 3;
+					}
+				}
+				[oneof*]
+				{
+					[all*]
+					{
+        				chance = 0.25;
+	        	   	    il_main = #bow/180-205;
+					}
+					[all*]
+					{
+        				chance = 0.25;
+	            	    il_main = #body/350-430;
+					}
+				}
+
+			}
+		}
+	}
+	[mind]
+	{
+		on_enemy_spotted_alert_friends 		= true;
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		= true
+			&party_template					= "party_krug_scavenger_boss";
+	}
+	[physics]
+	{
+		break_sound = s_e_meat_explosion;
+		explosion_magnitude = 1.5;
+		[break_particulate]
+		{
+			  frag_glb_krug_scavenger_01 = 1;
+			  frag_glb_krug_scavenger_02 = 1;
+			  frag_glb_krug_scavenger_03 = 1;
+			  frag_glb_krug_scavenger_04 = 1;
+			  frag_glb_krug_scavenger_05 = 1;
+			  frag_glb_krug_scavenger_06 = 1;
+			  frag_glb_krug_scavenger_07 = 1;
+			  frag_glb_krug_scavenger_08 = 1;
+		}
+	}
+}
+[t:template,n:3W_gr_krug_scavenger_boss_01] { specializes = 3W_krug_scavenger_boss_01_base; }
+
+[t:template,n:3W_krug_scout_base]  // = 3W_krug_scout
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug scout";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 13.3, 0;
+			  intelligence = 5.4, 0;
+			  strength = 31.5, 0;
+			  melee = 89, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 396978;
+		  life = 568;
+		  mana = 534;
+		  max_life = 568;
+		  max_mana = 534;
+		  scale_base = 0.9;
+		  selection_indicator_scale = 0.85;
+		[textures]
+		{
+			  0 = b_c_eam_ksc;
+		}
+	}
+	[attack]
+	{
+		  damage_max = 350.4;
+		  damage_min = 260.3;
+	}
+
+	[body]
+	{
+		min_move_velocity = 2.500;
+		avg_move_velocity = 3.10;
+		max_move_velocity = 4.8;
+		[bone_translator]
+		{
+			  body_anterior  = bip01_head;
+			  body_mid       = Bip01_Spine3;
+			  body_posterior = bip01_pelvis;
+			  kill_bone      = Bip01_Spine3;
+			  shield_bone    = shield_grip;
+			  weapon_bone    = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			  chore_prefix = a_c_eam_kg_fs;
+			[chore_attack]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_attack;
+				[anim_files]
+				{
+					  00 = at;
+					  01 = at-04;
+					  02 = at-02;
+					  03 = at-03;
+					  qffg = dff;
+				}
+			}
+			[chore_default]
+			{
+				  chore_stances = 0,1;
+				  skrit = infinite_loop;
+				[anim_files]
+				{
+					  00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_transition;
+				[anim_files]
+				{
+					  00 = di;
+					  01 = di-02;
+					  02 = di-03;
+					  03 = di-04;
+				}
+			}
+			[chore_fidget]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_fidget;
+				[anim_files]
+				{
+					  00 = dsf;
+					  01 = dsf-02;
+					  02 = dsf-03;
+				}
+			}
+			[chore_magic]
+			{
+				  chore_stances = 0;
+				  skrit = select_attack;
+				[anim_files]
+				{
+					  00 = mg;
+				}
+			}
+			[chore_walk]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_walk;
+				[anim_files]
+				{
+					  00 = wl;
+					  01 = rl;
+				}
+			}
+		}
+	}
+
+	[common]
+	{
+		  screen_name = "Krug Scout";
+		  membership = krug, party_krug_shaman, party_krug_scavenger_boss, party_krug_grunt_boss, monster;
+	}
+	[defend]
+	{
+		  defense = 1019.7;
+	}
+
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				  es_weapon_hand = dg_g_c_1h_fun;
+			}
+    		[oneof*]
+			{
+				[all*]
+				{
+					[gold*]
+					{
+						  chance = 0.15;
+						  max = 216536;
+						  min = 118957;
+					}
+				}
+				[oneof*]
+				{
+					[all*]
+					{
+        				chance = 0.05;
+    	        	    il_main = #spell/88-90;
+					}
+					[all*]
+					{
+        				chance = 0.02;
+	        	   	    il_main = #bow/204-250;
+					}
+					[oneof*]
+					{
+        				chance = 0.12;
+	        	   	    il_main = #melee/204-250;
+       				    il_main = potion_health_super;
+					    il_main = potion_mana_super;
+					}
+					[all*]
+					{
+        				chance = 0.03;
+	            	    il_main = #armor/210-559;
+					}
+				}
+
+			}
+		}
+	}
+	[mind]
+	{
+		on_enemy_spotted_alert_friends 		= true;
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+			?curious							= 0.75
+			&interest							= interest
+			&still								= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+
+		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 						= 1.0;
+	}
+
+	[physics]
+	{
+		  break_sound = s_e_meat_explosion;
+		  explosion_magnitude = 1.5;
+		[break_particulate]
+		{
+			  frag_glb_krug_scout_01 = 1;
+			  frag_glb_krug_scout_02 = 1;
+			  frag_glb_krug_scout_03 = 1;
+			  frag_glb_krug_scout_04 = 1;
+			  frag_glb_krug_scout_05 = 1;
+			  frag_glb_krug_scout_06 = 1;
+			  frag_glb_krug_scout_07 = 1;
+			  frag_glb_krug_scout_08 = 1;
+		}
+	}
+}
+[t:template,n:3W_gr_krug_scout] { specializes = 3W_krug_scout_base; }
+
+[t:template,n:3W_krug_scout_boss_01_base]  // = 3W_krug_scout_boss_01
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug scout boss 01";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 16.1, 0;
+			  intelligence = 7.1, 0;
+			  strength = 47.5, 0;
+			  melee = 90, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 549640;
+		  life = 1246;
+		  mana = 267;
+		  max_life = 1246;
+		  max_mana = 267;
+		  scale_base = 1.15;
+		  selection_indicator_scale = 0.85;
+		[textures]
+		{
+			  0 = b_c_eam_ksc-02;
+		}
+	}
+	[attack]
+	{
+		  damage_max = 533.5;
+		  damage_min = 238.3;
+	}
+
+	[body]
+	{
+		min_move_velocity = 2.500;
+		avg_move_velocity = 3.10;
+		max_move_velocity = 4.8;
+		[bone_translator]
+		{
+			  body_anterior  = bip01_head;
+			  body_mid       = Bip01_Spine3;
+			  body_posterior = bip01_pelvis;
+			  kill_bone      = Bip01_Spine3;
+			  shield_bone    = shield_grip;
+			  weapon_bone    = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			  chore_prefix = a_c_eam_kg_fs;
+			[chore_attack]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_attack;
+				[anim_files]
+				{
+					  00 = at;
+					  01 = at-04;
+					  02 = at-02;
+					  03 = at-03;
+					  qffg = dff;
+				}
+			}
+			[chore_default]
+			{
+				  chore_stances = 0,1;
+				  skrit = infinite_loop;
+				[anim_files]
+				{
+					  00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_transition;
+				[anim_files]
+				{
+					  00 = di;
+					  01 = di-02;
+					  02 = di-03;
+					  03 = di-04;
+				}
+			}
+			[chore_fidget]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_fidget;
+				[anim_files]
+				{
+					  00 = dsf;
+					  01 = dsf-02;
+					  02 = dsf-03;
+				}
+			}
+			[chore_magic]
+			{
+				  chore_stances = 0;
+				  skrit = select_attack;
+				[anim_files]
+				{
+					  00 = mg;
+				}
+			}
+			[chore_misc]
+			{
+				  chore_stances = 1;
+				  skrit = select_transition;
+				[anim_files]
+				{
+					  chrg = hit;
+				}
+			}
+			[chore_walk]
+			{
+				  chore_stances = 0,1;
+				  skrit = select_walk;
+				[anim_files]
+				{
+					  00 = rl;
+				}
+			}
+		}
+	}
+
+	[common]
+	{
+		  screen_name = "Klandank the Krug";
+		  membership = krug,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits=true;
+				action* = call_sfx_script("unique_ray_green(sgx)");
+
+			}
+
+		}
+
+	}
+	[defend]
+	{
+		  defense = 2076.7;
+	}
+
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				  es_weapon_hand = dg_g_c_1h_fun;
+			}
+    		[all*]
+			{
+				[all*]
+				{
+					[gold*]
+					{
+                		max = 274719;
+						min = 264785;
+						min_pile = 11;
+						piles = 3 - 4;
+					}
+				}
+				[all*]
+				{
+                    il_main = #bow/220-250;
+            	    il_main = #body,f/559-578;
+				}
+
+			}
+		}
+	}
+	[mind]
+	{
+		on_enemy_spotted_alert_friends 		= true;
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		= true
+			&party_template					= "party_krug_scout_boss";
+		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+	}
+	[physics]
+	{
+		  break_sound = s_e_meat_explosion;
+		  explosion_magnitude = 1.5;
+		[break_particulate]
+		{
+			  frag_glb_krug_scout_01 = 1;
+			  frag_glb_krug_scout_02 = 1;
+			  frag_glb_krug_scout_03 = 1;
+			  frag_glb_krug_scout_04 = 1;
+			  frag_glb_krug_scout_05 = 1;
+			  frag_glb_krug_scout_06 = 1;
+			  frag_glb_krug_scout_07 = 1;
+			  frag_glb_krug_scout_08 = 1;
+		}
+	}
+}
+[t:template,n:3W_gr_krug_scout_boss_01] { specializes = 3W_krug_scout_boss_01_base; }
+
+[t:template,n:3W_krug_shaman_base]  // = 3W_krug_shaman
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug shaman";
+	  specializes = 3W_krug_shaman_base;
+	[actor]
+	{
+		[skills]
+		{
+			  combat_magic = 90, 0;
+			  dexterity = 12.9, 0;
+			  intelligence = 14.2, 0;
+			  melee = 91, 0;
+			  strength = 47.5, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 716848;
+		  life = 486.5;
+		  mana = 3604.5;
+		  max_life = 486.5;
+		  max_mana = 3604.5;
+	}
+	[attack]
+	{
+		  damage_max = 342.4;
+		  damage_min = 306.4;
+		damage_bonus_min_cmagic = 264;
+		damage_bonus_max_cmagic = 300;
+	}
+	[common]
+	{
+		  screen_name = "Krug Shaman";
+	}
+	[defend]
+	{
+		  defense = 908.3;
+	}
+	[inventory]
+	{
+		  selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			  il_active_primary_spell   = spell_fireshot;
+			  il_active_secondary_spell = spell_resurrect_monster;
+		}
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					  chance = 0.3;
+					  max = 205112;
+					  min = 186697;
+				}
+				[oneof*]
+				{
+					  il_main = potion_mana_super;
+					  il_main = potion_health_super;
+					  max = 2;
+					  min = 1;
+                      chance = 0.3;
+				}
+				[all*]
+				{
+					  chance = 0.3;
+					  il_main = spell_fireshot;
+				}
+				[oneof*]
+				{
+					  chance = 0.1;
+					  il_main = book_glb_magic_01;
+                      il_main = #body,ro/390-480;
+				}
+             }
+		}
+	}
+}
+[t:template,n:3W_gr_krug_shaman] { specializes = 3W_krug_shaman_base; }
+
+[t:template,n:3W_krug_shaman_boss_01_base]  // = 3W_krug_shaman_boss_01
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug shaman boss 01";
+	  specializes = 3W_krug_shaman_base;
+	[actor]
+	{
+		[skills]
+		{
+			  combat_magic = 90, 0;
+			  dexterity = 18.3, 0;
+			  intelligence = 17.4, 0;
+			  melee = 88, 0;
+			  strength = 51.7, 0;
+		}
+	}
+	[aspect]
+	{
+		textures:0 = b_c_eam_ks-02;
+		  experience_value = 917150;
+		  life = 800.8;
+		  mana = 9100;
+		  max_life = 800.8;
+		  max_mana = 9100;
+	      selection_indicator_scale = 1.2;
+	}
+	[attack]
+	{
+		  damage_max = 240.2;
+		  damage_min = 131;
+		damage_bonus_min_cmagic = 204;
+		damage_bonus_max_cmagic = 305;
+	}
+	[common]
+	{
+		  screen_name = "Huskar the Shaman";
+		  membership = krug,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits=true;
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+
+			}
+
+		}
+
+	}
+	[defend]
+	{
+		  defense = 1310.4;
+	}
+	[inventory]
+	{
+		  selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			  il_active_primary_spell   = spell_fireshot;
+			  il_active_secondary_spell = spell_resurrect_monster;
+		}
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.5;
+					max = 1816125;
+					min = 1260781;
+					min_pile = 10;
+					piles = 4 - 6;
+				}
+				[all*]
+				{
+					chance = 0.5;
+					il_main = #weapon/225-257;
+					il_main = #body/528-637;
+                    il_main = #body,ro/528-637;
+					  max = 2;
+					  min = 1;
+				}
+             }
+		}
+	}
+	[mind]
+	{
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&form_party_on_friend_entered_ICZ	= true
+			&form_party_on_friend_entered_OCZ	= true
+			&party_template						= "party_krug_shaman";
+	}
+}
+[t:template,n:3W_gr_krug_shaman_boss_01] { specializes = 3W_krug_shaman_boss_01_base; }
+
+[t:template,n:3W_krug_apprentice_base]  // = 3W_krug_apprentice
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug Apprentice";
+	  specializes = 3W_krug_shaman_base;
+	[actor]
+	{
+		[skills]
+		{
+			  combat_magic = 89, 0;
+			  dexterity = 13.3, 0;
+			  intelligence = 14.3, 0;
+			  melee = 89, 0;
+			  strength = 50.3, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 537636;
+		  life = 668;
+		  mana = 7209;
+		  max_life = 668;
+		  max_mana = 7209;
+	}
+	[attack]
+	{
+		  damage_max = 685.3;
+		  damage_min = 320.4;
+		damage_bonus_min_cmagic = 0;
+		damage_bonus_max_cmagic = 0;
+	}
+	[common]
+	{
+		  screen_name = "Krug Apprentice";
+	}
+	[defend]
+	{
+		  defense = 1486.7;
+	}
+	[inventory]
+	{
+		  selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			  il_active_primary_spell   = spell_apprentice_zap;
+		}
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					  chance = 0.3;
+					  max = 196536;
+					  min = 137624;
+				}
+				[oneof*]
+				{
+					  il_main = potion_mana_super;
+					  il_main = potion_health_super;
+					  max = 2;
+					  min = 1;
+                      chance = 0.3;
+				}
+				[oneof*]
+				{
+					  chance = 0.1;
+					  il_main = book_glb_magic_01;
+                      il_main = #body,ro/390-480;
+				}
+             }
+		}
+	}
+	[mind]
+	{
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit;
+	}
+}
+[t:template,n:3W_gr_krug_apprentice] { specializes = 3W_krug_apprentice_base; }
+
+[t:template,n:3W_krug_throw_base]  // = 3W_krug_throw
+{
+	  category_name = "3W_evil_a";
+	  doc = "3W_krug, rock thrower";
+	  specializes = 3W_base_krug;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 30.7, 0;
+			  intelligence = 12.2, 0;
+			  ranged = 89,  0;
+			  strength = 36.5, 0;
+		}
+	}
+	[aspect]
+	{
+		  experience_value = 742014;
+		  life = 323.2;
+		  mana = 110.4;
+		  max_life = 323.2;
+		  max_mana = 110.4;
+		  selection_indicator_scale = 0.85;
+		[textures]
+		{
+			  0 = b_c_eam_kg;
+		}
+		[voice]
+		{
+			[attack]		{	* = s_e_attack_krug_throw;	}
+			[die]			{ priority = high;	* = s_e_die_krug_scout;		}
+			[hit_critical]	{ priority = low;	* = s_e_hit_krug_scout_SED;		}
+			[hit_glance]	{ priority = low;	* = s_e_hit_krug_scout_SED;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_krug_scout_SED;		}
+		}
+	}
+	[attack]
+	{
+		  attack_range = 0.5;
+		  damage_bonus_min_ranged = 126;
+		  damage_bonus_max_ranged = 172;
+		  damage_max = 413;
+		  damage_min = 287.1;
+		  reload_delay = 1;
+	}
+	[common]
+	{
+		  screen_name = "Krug Chucker";
+		  membership = monster, krug;
+	}
+	[defend]
+	{
+		  defense = 470.4;
+	}
+	[inventory]
+	{
+		  selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+			  es_shield_hand = rock_krug;
+		}
+		[pcontent]
+		{
+			[gold*]
+			{
+				  chance = 0.12;
+				  max = 203273;
+				  min = 156068;
+			}
+			[oneof*]
+			{
+				  chance = 0.15;
+				  il_main = potion_health_super;
+			}
+			[all*]
+			{
+    				chance = 0.03;
+   	        	    il_main = #spell/37-110;
+			}
+			[oneof*]
+			{
+                   chance = 0.002;
+                   il_main = #weapon/-rare(1)/243-292;
+                   il_main = #armor/-rare(1)/552-736;
+            }
+			[oneof*]
+			{
+				  chance = 0.10;
+				  il_main = #weapon/227-276;
+				  il_main = #*/227-276;
+				  il_main = #armor/129-644;
+				  il_main = potion_mana_super;
+				  il_main = potion_health_super;
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?social		= 0.35
+			&still		= false;
+
+		actor_weapon_preference			= WP_RANGED;
+
+		actor_auto_switches_to_ranged	= true;
+		on_enemy_spotted_alert_friends	= true;
+
+	}
+}
+[t:template,n:3W_gr_krug_throw] { specializes = 3W_krug_throw_base; }
